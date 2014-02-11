@@ -8,14 +8,22 @@
 #ifndef NODE_H_
 #define NODE_H_
 
+#include "../Headers/Elements.h"
+
+using namespace Base;
+
 namespace Tree {
 
 class Node {
-public:
-	Node();
-	virtual ~Node();
-private:
-
+ public:
+  Node(Element& elem);
+  virtual ~Node();
+  virtual Node addSon(Node n);
+  Element elem() {
+    return elem_;
+  }
+ private:
+  const Element elem_;
 };
 
 } /* namespace Tree */

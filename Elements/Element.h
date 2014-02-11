@@ -17,6 +17,7 @@ class Element;
 // Class containing user's data
 class Element {
  public:
+  // id - Element Identifier
   Element(int id);
   virtual ~Element();
   // Compare element's content

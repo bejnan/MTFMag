@@ -9,13 +9,14 @@
 
 namespace Tree {
 
-Node::Node() {
-	// TODO Auto-generated constructor stub
+Node::Node(Element& elem)
+    : elem_(elem) {
+}
 
+Node Node::addSon(Node n) {
 }
 
 Node::~Node() {
-	// TODO Auto-generated destructor stub
 }
 
 } /* namespace Tree */
