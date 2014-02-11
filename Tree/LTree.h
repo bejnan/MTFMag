@@ -12,13 +12,18 @@
 
 namespace Tree {
 
-class LTree : public Node {
+class LTree : Node {
  public:
-  LTree(Node n, Element left_elem);
+  LTree(explicit Leaf leaf, shared_ptr<Element> elem);
   virtual ~LTree();
-  virtual Node addSon(Node n);
- private :
-  Node left_son_;
+  virtual shared_ptr<Node> AddSon(shared_ptr<Element> son_content);
+
+  virtual shared_ptr<Node> left_son() { return left_son_; }
+  using elem;
+  using right_son;
+  using content;
+ private:
+  shared_ptr<Node> left_son_;
 };
 
 } /* namespace Tools */

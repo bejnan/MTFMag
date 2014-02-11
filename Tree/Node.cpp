@@ -9,13 +9,10 @@
 
 namespace Tree {
 
-Node::Node(Element& elem)
-    : elem_(elem) {
-}
+Node::Node(shared_ptr<Element> content)
+    : content_(content) {
 
-Node Node::addSon(Node n) {
 }
-
 Node::~Node() {
 }
 
