@@ -37,11 +37,17 @@ class Node {
 
  protected:
   // content is node value
-  Node(shared_ptr<Element> content);
+  Node(shared_ptr<Element> content, int tree_position=0);
+  // position in tree
+  int tree_position() {return tree_position_;}
 
  private:
   //Tree node content
   shared_ptr<Element> content_;
+  // Place in tree hierarchy. Father have position div 2,
+  // Sons have position *2 and *2+1.
+  // Root have number 1.
+  int tree_position_;
 };
 
 } /* namespace Tree */

@@ -10,8 +10,8 @@
 
 namespace Tree {
 
-Leaf::Leaf(shared_ptr<Element> elem)
-    : Node(elem) {
+Leaf::Leaf(shared_ptr<Element> elem, int tree_position)
+    : Node(elem, tree_position) {
 }
 
 Leaf::~Leaf() {

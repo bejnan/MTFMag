@@ -27,6 +27,10 @@ class FTree : public Node {
   virtual int children_count() {
     return (2 + left_son_childer_count_ + right_son_childer_count_);
   }
+
+ protected:
+   using Node::tree_position;
+
  private :
   shared_ptr<Node> left_son_;
   shared_ptr<Node> right_son_;

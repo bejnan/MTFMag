@@ -16,7 +16,7 @@ namespace Tree {
 // As left or right son returns empty pointer.
 class Leaf : public Node {
  public:
-  Leaf(shared_ptr<Element> elem);
+  Leaf(shared_ptr<Element> elem, int tree_position);
   virtual ~Leaf();
   //Return new node in place of this one. New node would be LTree instance.
   virtual shared_ptr<Node> AddSon(shared_ptr<Element> son_content);
@@ -25,6 +25,9 @@ class Leaf : public Node {
   using Node::right_son;
   using Node::content;
   using Node::children_count;
+
+ protected:
+  using Node::tree_position;
 };
 
 } /* namespace Tree */

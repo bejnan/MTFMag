@@ -10,11 +10,11 @@
 namespace Tree {
 
 FTree::FTree(LTree& tree, shared_ptr<Element> new_right_son_content)
-    : Node(tree.content()),
+    : Node(tree.content(), tree.tree_position()),
       left_son_(tree.left_son()),
       left_son_childer_count_(tree.left_son()->children_count()),
       right_son_childer_count_(0) {
-  Leaf* new_right_son = new Leaf(new_right_son_content);
+  Leaf* new_right_son = new Leaf(new_right_son_content,tree_position()*2+1);
   right_son_ = shared_ptr<Node>(new_right_son);
 }
 

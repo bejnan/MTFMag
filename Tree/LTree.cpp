@@ -10,8 +10,8 @@
 namespace Tree {
 
 LTree::LTree(Leaf& leaf, shared_ptr<Element> elem)
-    : Node(leaf.content()) {
-  Leaf* new_left_son = new Leaf(elem);
+    : Node(leaf.content(), leaf.tree_position()) {
+  Leaf* new_left_son = new Leaf(elem, tree_position()*2);
   left_son_ = shared_ptr<Node>(new_left_son);
 }
 LTree::~LTree() {

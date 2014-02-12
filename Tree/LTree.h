@@ -28,6 +28,10 @@ class LTree : public Node {
   using Node::right_son;
   using Node::content;
   virtual int children_count() { return (1 + left_son_->children_count()); }
+
+ protected:
+   using Node::tree_position;
+
  private:
   shared_ptr<Node> left_son_;
 };

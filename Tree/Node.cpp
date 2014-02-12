@@ -10,8 +10,9 @@
 namespace Tree {
 
 // Used by derived classes
-Node::Node(shared_ptr<Element> content)
-    : content_(content) {
+Node::Node(shared_ptr<Element> content, int tree_position)
+    : content_(content),
+      tree_position_(tree_position) {
 
 }
 Node::~Node() {
