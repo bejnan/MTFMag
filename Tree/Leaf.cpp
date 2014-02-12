@@ -17,7 +17,7 @@ Leaf::Leaf(shared_ptr<Element> elem)
 Leaf::~Leaf() {
 }
 
-shared_ptr<Node> Leaf::addSon(shared_ptr<Element> son_content) {
+shared_ptr<Node> Leaf::AddSon(shared_ptr<Element> son_content) {
   LTree* leaf_replacement = new LTree(*this,son_content);
   shared_ptr<Node> leaf_replacament_ptr = shared_ptr<Node>(leaf_replacement);
   return leaf_replacament_ptr;

@@ -9,7 +9,7 @@
 #include "FTree.h"
 namespace Tree {
 
-LTree::LTree(Leaf leaf, shared_ptr<Element> elem)
+LTree::LTree(Leaf& leaf, shared_ptr<Element> elem)
     : Node(leaf.content()) {
   Leaf* new_left_son = new Leaf(elem);
   left_son_ = shared_ptr<Element>(new_left_son);

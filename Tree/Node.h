@@ -15,29 +15,33 @@ using namespace Base;
 
 namespace Tree {
 
-//base class for tree nodes
+/*
+ * Base class for tree nodes.
+ * It's a common part of every tree state implementation
+ * Nodes are implemented to be part of full binary tree
+ */
 class Node {
  public:
-  // content is node hearth
-  Node(shared_ptr<Element> content);
   virtual ~Node();
   // Function to implement in delivery classes. In this class returning null class
-  virtual shared_ptr<Node> AddSon(shared_ptr<Element> son_content) { return Node(); }
+  virtual shared_ptr<Node> AddSon(shared_ptr<Element> son_content) { return shared_ptr<Node>(); }
   // Function to implement in delivery classes. In this class returning null pointer
   virtual shared_ptr<Node> left_son() { return shared_ptr<Node>(); }
   // As above
   virtual shared_ptr<Node> right_son() { return shared_ptr<Node>(); }
 
-  shared_ptr<Element>& content() { return content_; }
+  shared_ptr<Element> content() { return content_; }
 
   // Virtual for case of tree with sons
   virtual int children_count() { return 0; }
 
+ protected:
+  // content is node value
+  Node(shared_ptr<Element> content);
+
  private:
   //Tree node content
   shared_ptr<Element> content_;
-  //Number of tree children
-  Node();
 };
 
 } /* namespace Tree */

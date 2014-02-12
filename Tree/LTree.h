@@ -9,19 +9,24 @@
 #define LTREE_H_
 
 #include "Node.h"
+#include "Leaf.h"
 
 namespace Tree {
 
-class LTree : Node {
+//Element of binary tree with only left son present.
+//Right son is empty.
+class LTree : public Node {
  public:
-  LTree(explicit Leaf leaf, shared_ptr<Element> elem);
+  // Leaf is old version of tree before adding element (elem).
+  LTree(Leaf& leaf, shared_ptr<Element> elem);
   virtual ~LTree();
+  // Methods return new instance of this element (FTree) with new
+  // content added in his right son (son_content).
   virtual shared_ptr<Node> AddSon(shared_ptr<Element> son_content);
 
   virtual shared_ptr<Node> left_son() { return left_son_; }
-  using elem;
-  using right_son;
-  using content;
+  using Node::right_son;
+  using Node::content;
   virtual int children_count() { return (1 + left_son_->children_count()); }
  private:
   shared_ptr<Node> left_son_;
