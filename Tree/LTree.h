@@ -22,6 +22,7 @@ class LTree : Node {
   using elem;
   using right_son;
   using content;
+  virtual int children_count() { return (1 + left_son_->children_count()); }
  private:
   shared_ptr<Node> left_son_;
 };
