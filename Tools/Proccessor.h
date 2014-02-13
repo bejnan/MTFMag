@@ -23,7 +23,7 @@ class Proccessor {
   virtual void proceed(int id);
  private:
   TreeRoot root_;
-  TreeFactory<Base::Element> tree_element_generator_;
+  TreeFactory tree_element_generator_;
   Tester penalty_counter_;
 };
 

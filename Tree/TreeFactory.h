@@ -14,11 +14,11 @@
 using Base::Element;
 namespace Tree {
 
-template<>
-class TreeFactory<Element> {
+class TreeFactory {
  public:
   TreeFactory(TreeRoot& root);
   virtual ~TreeFactory();
+  template<class T>
   void AddElement(int id);
   void DeleteElement(int id);
  private :

@@ -16,15 +16,15 @@ Element::Element(int id)
 Element::~Element() {
 }
 
-int Element::compare(const Element& elem) {
+int Element::Compare(const Element& elem) {
   if (id_ == elem.id_)
     return 0;
   else
     return -1;
 }
 
-int Element::difference(const Element& elem) {
-  return compare(elem);
+int Element::Difference(const Element& elem) {
+  return Compare(elem);
 }
 
 } /* namespace Base */

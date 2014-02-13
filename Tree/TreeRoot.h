@@ -19,19 +19,21 @@ using std::shared_ptr;
 
 namespace Tree {
 
-template<class Elem>
 class TreeFactory;
 
 class TreeRoot {
-  friend class TreeFactory<Base::Element>;
+  friend class TreeFactory;
  public:
   TreeRoot();
   virtual ~TreeRoot();
   void NotifyContent(int id);
   int GetContentPosition(int id);
+ protected:
+  void MoveElement(int position);
+  void SortElements();
  private:
   vector<shared_ptr<Base::Element> > tree_list_;
-  vector<shared_ptr<Base::Element> > sorted_content_list_;
+  vector<int> sorted_content_list_;
   map<int, int> id_position_;
 };
 

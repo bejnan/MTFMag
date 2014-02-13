@@ -17,9 +17,11 @@ class Element {
   Element(int id);
   virtual ~Element();
   // Compare element's content
-  virtual int compare(const Element& elem);
+  virtual int Compare(const Element& elem);
   // Difference between elements
-  virtual int difference(const Element& elem);
+  virtual int Difference(const Element& elem);
+  // Notify user choice
+  virtual void Notify() { };
  private:
   // user identifier
   const int id_;

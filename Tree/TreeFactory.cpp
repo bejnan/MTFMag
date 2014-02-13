@@ -12,22 +12,23 @@ using std::shared_ptr;
 
 namespace Tree {
 
-TreeFactory<Element>::TreeFactory(TreeRoot& root) : root_(root) {
+TreeFactory::TreeFactory(TreeRoot& root)
+    : root_(root) {
 }
 
-
-TreeFactory<Element>::~TreeFactory() {
+TreeFactory::~TreeFactory() {
 }
 
-
-void TreeFactory<Element>::AddElement(int id) {
+template<>
+void TreeFactory::AddElement<Element>(int id) {
   Element* elem = new Element(id);
   shared_ptr<Element> elem_ptr(elem);
+  int position = root_.tree_list_.size();
   root_.tree_list_.push_back(elem_ptr);
+  root_.id_position_[position] = id;
 }
 
-
-void TreeFactory<Element>::DeleteElement(int id) {
+void TreeFactory::DeleteElement(int id) {
 
 }
 
