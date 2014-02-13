@@ -1,11 +1,11 @@
 /*
- * Node_test.cpp
+ * TreeRoot_test.cpp
  *
- *  Created on: Feb 11, 2014
+ *  Created on: Feb 13, 2014
  *      Author: kuba
  */
 
-#include "Node.h"
+#include "TreeRoot.h"
 
 namespace Tree {
 

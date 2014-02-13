@@ -8,9 +8,7 @@
 #ifndef TOOLS_H_
 #define TOOLS_H_
 
-#include<memory>
-#include<vector>
-
-using namespace std;
+#include "../Tools/Proccessor.h"
+#include "../Tools/Tester.h"
 
 #endif /* TOOLS_H_ */

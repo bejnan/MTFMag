@@ -1,11 +1,11 @@
 /*
- * Leaf_test.cpp
+ * Tester_test.cpp
  *
- *  Created on: Feb 11, 2014
+ *  Created on: Feb 13, 2014
  *      Author: kuba
  */
 
-#include "Leaf.h"
+#include "Tester.h"
 
 namespace Tree {
 
