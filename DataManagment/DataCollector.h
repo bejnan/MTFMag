@@ -8,12 +8,18 @@
 #ifndef DATACOLLECTOR_H_
 #define DATACOLLECTOR_H_
 
-namespace Tree {
+#include "DataProvider.h"
+#include "Database.h"
+
+namespace Base {
 
 class DataCollector {
  public:
-  DataCollector();
+  DataCollector(DataProvider& data_input);
   virtual ~DataCollector();
+ private:
+  DataProvider& data_input_;
+  Database proccessors_base;
 };
 
 } /* namespace Tree */

@@ -9,7 +9,8 @@
 #define PROCCESSOR_H_
 
 #include "../Headers/Tree.h"
-#include "../Headers/Tools.h"
+#include "../Headers/Elements.h"
+#include "Tester.h"
 
 using namespace Tree;
 
@@ -21,9 +22,9 @@ class Proccessor {
   virtual ~Proccessor();
   virtual void proceed(int id);
  private:
-  TreeFactory& tree_element_generator_;
-  TreeRoot& root_;
-  Tester& penalty_counter_;
+  TreeRoot root_;
+  TreeFactory<Base::Element> tree_element_generator_;
+  Tester penalty_counter_;
 };
 
 } /* namespace Tree */

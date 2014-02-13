@@ -7,7 +7,7 @@
 
 #include "FileDataProvider.h"
 
-namespace Tree {
+namespace Base {
 
 FileDataProvider::FileDataProvider(string file_path)
     : file_path_(file_path),

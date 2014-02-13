@@ -7,7 +7,7 @@
 
 #include "Tester.h"
 
-namespace Tree {
+namespace Tools {
 
 Tester::Tester(int first_page_list_size, int second_page_list_size)
     : first_page_list_size_(first_page_list_size),

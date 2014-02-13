@@ -8,7 +8,7 @@
 #ifndef TESTER_H_
 #define TESTER_H_
 
-namespace Tree {
+namespace Tools {
 
 class Tester {
  public:

@@ -12,9 +12,9 @@
 #include<cstdio>
 #include<cstring>
 
-namespace Tree {
+namespace Base {
 
-class FileDataProvider : public Base::DataProvider {
+class FileDataProvider : public DataProvider {
  public:
   FileDataProvider(string file_path);
   virtual ~FileDataProvider();

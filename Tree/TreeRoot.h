@@ -9,26 +9,29 @@
 #define TREEROOT_H_
 
 #include "../Headers/Elements.h"
-#include "Classes.h"
 #include <vector>
 #include <map>
+#include <memory>
 
-using Base::Element;
 using std::vector;
 using std::map;
+using std::shared_ptr;
 
 namespace Tree {
 
+template<class Elem>
+class TreeFactory;
+
 class TreeRoot {
-  friend class TreeFactory;
+  friend class TreeFactory<Base::Element>;
  public:
   TreeRoot();
   virtual ~TreeRoot();
   void NotifyContent(int id);
   int GetContentPosition(int id);
  private:
-  vector<Element> tree_list_;
-  vector<Element> sorted_content_list_;
+  vector<shared_ptr<Base::Element> > tree_list_;
+  vector<shared_ptr<Base::Element> > sorted_content_list_;
   map<int, int> id_position_;
 };
 

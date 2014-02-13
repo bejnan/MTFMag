@@ -8,11 +8,14 @@
 #ifndef TREEFACTORY_H_
 #define TREEFACTORY_H_
 
-#include "Classes.h"
+#include "../Headers/Elements.h"
+#include "TreeRoot.h"
 
+using Base::Element;
 namespace Tree {
 
-class TreeFactory {
+template<>
+class TreeFactory<Element> {
  public:
   TreeFactory(TreeRoot& root);
   virtual ~TreeFactory();

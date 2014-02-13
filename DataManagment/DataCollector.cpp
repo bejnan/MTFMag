@@ -7,15 +7,13 @@
 
 #include "DataCollector.h"
 
-namespace Tree {
+namespace Base {
 
-DataCollector::DataCollector() {
-  // TODO Auto-generated constructor stub
-
+DataCollector::DataCollector(DataProvider& data_input)
+    : data_input_(data_input) {
 }
 
 DataCollector::~DataCollector() {
-  // TODO Auto-generated destructor stub
 }
 
 } /* namespace Tree */

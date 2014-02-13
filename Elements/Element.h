@@ -8,11 +8,7 @@
 #ifndef ELEMENT_H_
 #define ELEMENT_H_
 
-#include "../Headers/Tools.h"
-
 namespace Base {
-
-class Element;
 
 // Class containing user's data
 class Element {
@@ -21,7 +17,9 @@ class Element {
   Element(int id);
   virtual ~Element();
   // Compare element's content
-  virtual int compare(const Element& elem1, const Element& elem2);
+  virtual int compare(const Element& elem);
+  // Difference between elements
+  virtual int difference(const Element& elem);
  private:
   // user identifier
   const int id_;

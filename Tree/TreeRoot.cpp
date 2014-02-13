@@ -18,6 +18,7 @@ TreeRoot::~TreeRoot() {
 void TreeRoot::NotifyContent(int id) {
 
 }
+
 int TreeRoot::GetContentPosition(int id) {
 
 }

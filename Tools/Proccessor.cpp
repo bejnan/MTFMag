@@ -7,15 +7,19 @@
 
 #include "Proccessor.h"
 
-namespace Tree {
+namespace Tools {
 
-Proccessor::Proccessor() {
-  // TODO Auto-generated constructor stub
-
+Proccessor::Proccessor()
+    : root_(TreeRoot()),
+      tree_element_generator_(root_),
+      penalty_counter_(Tester(20, 20)) {
 }
 
 Proccessor::~Proccessor() {
-  // TODO Auto-generated destructor stub
+}
+
+void Proccessor::proceed(int id) {
+
 }
 
 } /* namespace Tree */
