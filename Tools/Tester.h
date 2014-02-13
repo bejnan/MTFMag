@@ -14,7 +14,7 @@ class Tester {
  public:
   Tester(int first_page_list_size, int second_page_list_size);
   virtual ~Tester();
-
+//TODO Penalty Count!
  private:
   unsigned int first_page_list_size_;
   unsigned int second_page_list_size_;

@@ -18,10 +18,11 @@ namespace Tools {
 
 class Proccessor {
  public:
-  Proccessor();
+  Proccessor(int userId);
   virtual ~Proccessor();
   virtual void proceed(int id);
  private:
+  const int user_id_;
   TreeRoot root_;
   TreeFactory tree_element_generator_;
   Tester penalty_counter_;

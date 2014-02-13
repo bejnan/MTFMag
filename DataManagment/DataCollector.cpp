@@ -16,4 +16,13 @@ DataCollector::DataCollector(DataProvider& data_input)
 DataCollector::~DataCollector() {
 }
 
+//TODO
+
+void DataCollector::AddProccessor(Tools::Proccessor proc) {
+
+}
+void DataCollector::RunTurns(int turn_amount) {
+
+}
+
 } /* namespace Tree */
