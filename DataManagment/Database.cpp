@@ -10,12 +10,11 @@
 namespace Base {
 
 Database::Database() {
-  // TODO Auto-generated constructor stub
 
 }
 
 Database::~Database() {
-  // TODO Auto-generated destructor stub
+
 }
 
 } /* namespace Base */

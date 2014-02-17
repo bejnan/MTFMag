@@ -16,14 +16,14 @@ Element::Element(int id)
 Element::~Element() {
 }
 
-int Element::Compare(const Element& elem) {
+int Element::Compare(Element& elem) {
   if (id_ == elem.id_)
     return 0;
   else
     return -1;
 }
 
-int Element::Difference(const Element& elem) {
+double Element::Difference(Element& elem) {
   return Compare(elem);
 }
 
