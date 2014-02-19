@@ -9,19 +9,20 @@
 
 namespace Tools {
 
-Proccessor::Proccessor(int user_id)
+Processor::Processor(int user_id, string identifier)
     : user_id_(user_id),
+      identifier_(identifier),
       root_(TreeRoot()),
       tree_element_generator_(root_),
       penalty_counter_(Tester(20, 20)) {
 }
 
-Proccessor::~Proccessor() {
+Processor::~Processor() {
 }
 
-//TODO
-void Proccessor::proceed(int id) {
-
+void Processor::proceed(int id) {
+  int position = root_.GetContentPosition(id);
+  //TODO
 }
 
 } /* namespace Tree */

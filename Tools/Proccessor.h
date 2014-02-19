@@ -13,16 +13,19 @@
 #include "Tester.h"
 
 using namespace Tree;
+using std::string;
 
 namespace Tools {
 
-class Proccessor {
+class Processor {
  public:
-  Proccessor(int userId);
-  virtual ~Proccessor();
+  Processor(int userId, string identifier = string());
+  virtual ~Processor();
   virtual void proceed(int id);
+  int user_id() {return user_id_;}
  private:
   const int user_id_;
+  const string identifier_;
   TreeRoot root_;
   TreeFactory tree_element_generator_;
   Tester penalty_counter_;

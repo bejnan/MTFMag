@@ -12,17 +12,24 @@
 #include "Database.h"
 #include "../Headers/Tools.h"
 
+#include <memory>
+
+using std::shared_ptr;
+
 namespace Base {
-//TODO
+
 class DataCollector {
  public:
   DataCollector(DataProvider& data_input);
   virtual ~DataCollector();
-  virtual void AddProccessor(Tools::Proccessor proc);
+  virtual void AddProccessor(shared_ptr<Tools::Processor> proc);
   virtual void RunTurns(int turn_amount);
+  virtual int getResult(int userId);
+  virtual int getResultsSum();
  private:
+  void RunProcessor(int id, int receiver_id);
   DataProvider& data_input_;
-  Database proccessors_base;
+  Database processors_base;
 };
 
 } /* namespace Tree */

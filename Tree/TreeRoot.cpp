@@ -43,6 +43,11 @@ void TreeRoot::MoveElement(int position) {
   }
 }
 
+inline bool CompareElementPointers(shared_ptr<Base::Element> elem1,
+                                   shared_ptr<Base::Element> elem2) {
+  return (elem1->Compare(*elem2) < 0);
+}
+
 void TreeRoot::SortElements() {
   vector<shared_ptr<Base::Element> > tmp_list_to_sort;
   vector<shared_ptr<Base::Element> >::iterator tree_iterator, sort_iterator;
@@ -57,7 +62,8 @@ void TreeRoot::SortElements() {
             && tree_iterator != tree_list_.end(); tree_iterator++) {
       tmp_list_to_sort.push_back(*tree_iterator);
     }
-    sort(tmp_list_to_sort.begin(), tmp_list_to_sort.end());  //TODO Compare method
+    sort(tmp_list_to_sort.begin(), tmp_list_to_sort.end(),
+         CompareElementPointers);
     for (sort_iterator = tmp_list_to_sort.begin();
         sort_iterator != tmp_list_to_sort.end(); sort_iterator++) {
       sorted_content_list_.push_back((*sort_iterator)->id());

@@ -14,10 +14,11 @@ class Tester {
  public:
   Tester(int first_page_list_size, int second_page_list_size);
   virtual ~Tester();
-//TODO Penalty Count!
+  virtual void CountPenalty(int element_position);
  private:
   unsigned int first_page_list_size_;
   unsigned int second_page_list_size_;
+  unsigned const int MAX_PENALTY;
   unsigned long penalty;
 };
 

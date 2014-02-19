@@ -8,6 +8,10 @@
 #ifndef ELEMENT_H_
 #define ELEMENT_H_
 
+#include <memory>
+
+using std::shared_ptr;
+
 namespace Base {
 
 // Class containing user's data
@@ -16,14 +20,20 @@ class Element {
   // id - Element Identifier
   Element(int id);
   virtual ~Element();
+  // Compare pointer's content
+  static int ComparePoiters(shared_ptr<Element> elem1,
+                            shared_ptr<Element> elem2);
   // Compare element's content
   virtual int Compare(Element& elem);
   // Difference between elements
   virtual double Difference(Element& elem);
   // Notify user choice
-  virtual void Notify(int update_counter = 0) { }
+  virtual void Notify(int update_counter = 0) {
+  }
   // Id getter
-  int id() { return id_; }
+  int id() {
+    return id_;
+  }
  private:
   // user identifier
   const int id_;
