@@ -11,18 +11,22 @@
 #include <exception>
 
 using std::exception;
+using std::string;
 
-namespace Exception  {
+namespace Exception {
 
-class InvalidIndexException : public exception{
+class InvalidIndexException : public exception {
  public:
-  InvalidIndexException();
+  InvalidIndexException(int id = -1);
   virtual ~InvalidIndexException();
 
-  const char * what () const throw ()
-   {
-     return "No element with that index";
-   }
+  const char * what() const throw () {
+    return message_.c_str();
+  }
+
+ private :
+  const int id_;
+  string message_;
 };
 
 } /* namespace Exception */

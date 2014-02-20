@@ -6,7 +6,7 @@
  */
 
 #include "Database.h"
-
+#include "../Headers/Exceptions.h"
 namespace Base {
 
 Database::Database() {
@@ -27,13 +27,13 @@ void Database::AddToBase(shared_ptr<Tools::Processor> processor) {
 vector<shared_ptr<Tools::Processor> >& Database::Query(int id) {
   if (id_table_.find(id) != id_table_.end())
     return id_table_.at(id);
-  throw "Wrong id";
+  throw Exception::InvalidIndexException(id);
 }
 
 vector<shared_ptr<Tools::Processor> >& Database::Query(string algorithm_name) {
   if (name_table_.find(algorithm_name) != name_table_.end())
     return name_table_.at(algorithm_name);
-  throw "Wrong name";
+  throw Exception::InvalidIndexException();
 }
 
 vector<shared_ptr<Tools::Processor> >& Database::Query() {

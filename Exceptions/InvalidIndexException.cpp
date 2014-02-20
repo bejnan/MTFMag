@@ -9,7 +9,11 @@
 
 namespace Exception {
 
-InvalidIndexException::InvalidIndexException() {
+InvalidIndexException::InvalidIndexException(int id)
+    : id_(id),
+      message_("No element with that index") {
+  if (id >= 0)
+    message_+= " " + std::to_string(id);
 }
 
 InvalidIndexException::~InvalidIndexException() {
