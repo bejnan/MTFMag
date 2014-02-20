@@ -9,6 +9,7 @@
 #define INVALIDINDEXEXCEPTION_H_
 
 #include <exception>
+#include <string>
 
 using std::exception;
 using std::string;
