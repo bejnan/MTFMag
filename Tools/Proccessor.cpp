@@ -20,9 +20,14 @@ Processor::Processor(int user_id, string identifier)
 Processor::~Processor() {
 }
 
-void Processor::proceed(int id) {
+void Processor::Proceed(int id) {
   int position = root_.GetContentPosition(id);
-  //TODO
+  penalty_counter_.CountPenalty(position);
+  root_.NotifyContent(id);
+}
+
+int Processor::GetPenalty() {
+  return penalty_counter_.penalty();
 }
 
 } /* namespace Tree */
