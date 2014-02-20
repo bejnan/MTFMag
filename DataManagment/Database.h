@@ -24,8 +24,13 @@ class Database {
   virtual ~Database();
   void AddToBase(shared_ptr<Tools::Processor> processor);
   vector<shared_ptr<Tools::Processor> >& Query(int id);
+  vector<shared_ptr<Tools::Processor> >& Query(string algorithm_name);
+  vector<shared_ptr<Tools::Processor> >& Query();
+  vector<string> QueryKeys();
  private:
-  map<int, vector<shared_ptr<Tools::Processor> > > table;
+  vector<shared_ptr<Tools::Processor> > table_;
+  map<int, vector<shared_ptr<Tools::Processor> > > id_table_;
+  map<string, vector<shared_ptr<Tools::Processor> > > name_table_;
 };
 
 } /* namespace Base */

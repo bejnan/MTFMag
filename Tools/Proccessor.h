@@ -21,7 +21,9 @@ class Processor {
  public:
   Processor(int userId, string identifier = string());
   virtual ~Processor();
-  virtual void proceed(int id);
+  virtual void Proceed(int id);
+  virtual int GetPenalty();
+  string identifier() { return identifier_; }
   int user_id() {return user_id_;}
  private:
   const int user_id_;

@@ -13,9 +13,11 @@
 #include "../Headers/Tools.h"
 
 #include <memory>
+#include <vector>
 
+using std::vector;
 using std::shared_ptr;
-
+using std::pair;
 namespace Base {
 
 class DataCollector {
@@ -24,12 +26,12 @@ class DataCollector {
   virtual ~DataCollector();
   virtual void AddProccessor(shared_ptr<Tools::Processor> proc);
   virtual void RunTurns(int turn_amount);
-  virtual int getResult(int userId);
-  virtual int getResultsSum();
+  virtual vector<pair<string,int> > getResult(int userId);
+  virtual vector<pair<string,int> > getResultsSum();
  private:
   void RunProcessor(int id, int receiver_id);
   DataProvider& data_input_;
-  Database processors_base;
+  Database processors_base_;
 };
 
 } /* namespace Tree */
