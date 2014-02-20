@@ -18,6 +18,7 @@ Database::~Database() {
 }
 
 void Database::AddToBase(shared_ptr<Tools::Processor> processor) {
+  //TODO warning. This will work?
   id_table_[processor->user_id()].push_back(processor);
   name_table_[processor->identifier()].push_back(processor);
   table_.push_back(processor);
