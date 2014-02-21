@@ -33,7 +33,7 @@ vector<shared_ptr<Tools::Processor> >& Database::Query(int id) {
 vector<shared_ptr<Tools::Processor> >& Database::Query(string algorithm_name) {
   if (name_table_.find(algorithm_name) != name_table_.end())
     return name_table_.at(algorithm_name);
-  throw Exception::InvalidIndexException();
+  throw Exception::InvalidNameException(algorithm_name);
 }
 
 vector<shared_ptr<Tools::Processor> >& Database::Query() {
