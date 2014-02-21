@@ -6,6 +6,7 @@
  */
 
 #include "FileDataProvider.h"
+#include "../Headers/Exceptions.h"
 
 namespace Base {
 
@@ -14,6 +15,8 @@ FileDataProvider::FileDataProvider(string file_path)
       actual_line_(""),
       line_before_("") {
   input_file_ = fopen(file_path_.c_str(), "rt");
+  if (!input_file_ )
+    throw Exception::FilepathException(file_path);
 }
 
 FileDataProvider::~FileDataProvider() {
@@ -34,7 +37,7 @@ void FileDataProvider::GoToNextLine() {
     line_before_ = actual_line_;
     actual_line_ = string(new_actual_line);
   } else {
-    throw "End of File";
+    throw Exception::EndOfFileException();
   }
 }
 

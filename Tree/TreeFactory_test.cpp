@@ -23,4 +23,21 @@ BOOST_AUTO_TEST_CASE(AddingTest) {
   tree_factory.AddElement<Base::Element>(3);
 }
 
+BOOST_AUTO_TEST_CASE(RootTest) {
+
+  Tree::TreeRoot root;
+  Tree::TreeFactory tree_factory(root);
+
+  tree_factory.AddElement<Base::SimpleElement>(1);
+  tree_factory.AddElement<Base::SimpleElement>(2);
+  tree_factory.AddElement<Base::SimpleElement>(3);
+
+  BOOST_CHECK_EQUAL(root.GetContentPosition(1), 1);
+  BOOST_CHECK_EQUAL(root.GetContentPosition(3), 3);
+
+  root.NotifyContent(3);
+  BOOST_CHECK_EQUAL(root.GetContentPosition(1), 3);
+  BOOST_CHECK_EQUAL(root.GetContentPosition(3), 1);
+}
+
 BOOST_AUTO_TEST_SUITE_END()

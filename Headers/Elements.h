@@ -9,5 +9,6 @@
 #define ELEMENTS_H_
 
 #include "../Elements/Element.h"
+#include "../Elements/SimpleElement.h"
 
 #endif /* ELEMENTS_H_ */

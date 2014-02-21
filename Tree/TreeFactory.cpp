@@ -6,6 +6,7 @@
  */
 
 #include "TreeFactory.h"
+#include "../Headers/Elements.h"
 #include <memory>
 
 using std::shared_ptr;
@@ -20,12 +21,23 @@ TreeFactory::~TreeFactory() {
 }
 
 template<>
-void TreeFactory::AddElement<Element>(int id) {
+void TreeFactory::AddElement<Base::SimpleElement>(int id) {
+  Base::SimpleElement* elem = new Base::SimpleElement(id);
+  shared_ptr<Element> elem_ptr(elem);
+  int position = root_.tree_list_.size();
+  root_.tree_list_.push_back(elem_ptr);
+  root_.id_position_[position] = id;
+  root_.SortElements();
+}
+
+template<>
+void TreeFactory::AddElement<Base::Element>(int id) {
   Element* elem = new Element(id);
   shared_ptr<Element> elem_ptr(elem);
   int position = root_.tree_list_.size();
   root_.tree_list_.push_back(elem_ptr);
   root_.id_position_[position] = id;
+  root_.SortElements();
 }
 
 void TreeFactory::DeleteElement(int id) {

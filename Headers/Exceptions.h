@@ -11,5 +11,8 @@
 #include "../Exceptions/InvalidIndexException.h"
 #include "../Exceptions/InvalidNameException.h"
 #include "../Exceptions/DatabaseException.h"
+#include "../Exceptions/DataProviderException.h"
+#include "../Exceptions/FilepathException.h"
+#include "../Exceptions/EndOfFileException.h"
 
 #endif /* EXCEPTIONS_H_ */
