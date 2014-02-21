@@ -14,7 +14,7 @@ class Tester {
  public:
   Tester(int first_page_list_size, int second_page_list_size);
   virtual ~Tester();
-  virtual void CountPenalty(int element_position);
+  virtual void CountPenalty(unsigned int element_position);
   virtual int penalty() { return penalty_; }
  private:
   unsigned int first_page_list_size_;

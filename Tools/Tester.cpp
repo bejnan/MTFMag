@@ -19,13 +19,13 @@ Tester::Tester(int first_page_list_size, int second_page_list_size)
 Tester::~Tester() {
 }
 
-void Tester::CountPenalty(int element_position)
+void Tester::CountPenalty(unsigned int element_position)
 {
   if (element_position < first_page_list_size_)
     return;
   element_position -= first_page_list_size_;
   if (element_position < second_page_list_size_)
-    penalty_ += element_position - first_page_list_size_+1;
+    penalty_ += element_position +1;
   else
     penalty_ += MAX_PENALTY;
 }

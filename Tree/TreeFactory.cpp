@@ -29,7 +29,7 @@ void TreeFactory::AddElement<Element>(int id) {
 }
 
 void TreeFactory::DeleteElement(int id) {
-
+  //TODO
 }
 
 } /* namespace Tree */

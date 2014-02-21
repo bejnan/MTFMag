@@ -16,10 +16,6 @@
 
 using std::shared_ptr;
 
-bool always_true() {
-  return true;
-}
-
 BOOST_AUTO_TEST_SUITE(Database)
 
 BOOST_AUTO_TEST_CASE(AddToBase) {
