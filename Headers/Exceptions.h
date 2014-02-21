@@ -9,8 +9,7 @@
 #define EXCEPTIONS_H_
 
 #include "../Exceptions/InvalidIndexException.h"
-
-
-
+#include "../Exceptions/InvalidNameException.h"
+#include "../Exceptions/DatabaseException.h"
 
 #endif /* EXCEPTIONS_H_ */

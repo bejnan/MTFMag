@@ -9,15 +9,23 @@
 #define DATABASEEXCEPTION_H_
 
 #include <exception>
+#include <string>
 
-namespace Base {
+using std::string;
+using std::exception;
 
-class DatabaseException : public std::exception {
+namespace Exception {
+
+class DatabaseException : public exception {
  public:
   DatabaseException();
   virtual ~DatabaseException();
 
+  const char * what() const throw() {
+	  return message_.c_str();
+  }
  private:
+  string message_;
 
 };
 

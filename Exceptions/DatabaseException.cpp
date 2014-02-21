@@ -7,15 +7,13 @@
 
 #include "DatabaseException.h"
 
-namespace Base {
+namespace Exception {
 
-DatabaseException::DatabaseException() {
-  // TODO Auto-generated constructor stub
-
+DatabaseException::DatabaseException() :
+		message_("Database exception") {
 }
 
 DatabaseException::~DatabaseException() {
-  // TODO Auto-generated destructor stub
 }
 
 } /* namespace Base */

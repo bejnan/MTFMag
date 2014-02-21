@@ -8,6 +8,8 @@
 #ifndef INVALIDINDEXEXCEPTION_H_
 #define INVALIDINDEXEXCEPTION_H_
 
+#include "DatabaseException.h"
+
 #include <exception>
 #include <string>
 
@@ -16,7 +18,7 @@ using std::string;
 
 namespace Exception {
 
-class InvalidIndexException : public exception {
+class InvalidIndexException : public DatabaseException{
  public:
   InvalidIndexException(int id = -1);
   virtual ~InvalidIndexException();
