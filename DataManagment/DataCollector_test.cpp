@@ -19,6 +19,7 @@ using std::shared_ptr;
 BOOST_AUTO_TEST_SUITE(DataCollector)
 
 BOOST_AUTO_TEST_CASE(Hmm) {
-  }
+  //TODO
+}
 
 BOOST_AUTO_TEST_SUITE_END()
