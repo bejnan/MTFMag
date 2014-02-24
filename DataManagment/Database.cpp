@@ -7,6 +7,10 @@
 
 #include "Database.h"
 #include "../Headers/Exceptions.h"
+
+using std::pair;
+using std::make_pair;
+
 namespace Base {
 
 Database::Database() {
@@ -18,8 +22,18 @@ Database::~Database() {
 }
 
 void Database::AddToBase(shared_ptr<Tools::Processor> processor) {
-  //TODO warning. This will work?
+  if (id_table_.find(processor->user_id()) == id_table_.end()) {
+    id_table_.insert(
+        make_pair(processor->user_id(),
+                  vector<shared_ptr<Tools::Processor> >()));
+  }
   id_table_[processor->user_id()].push_back(processor);
+
+  if (name_table_.find(processor->identifier()) == name_table_.end()) {
+    name_table_.insert(
+        make_pair(processor->identifier(),
+                  vector<shared_ptr<Tools::Processor> >()));
+  }
   name_table_[processor->identifier()].push_back(processor);
   table_.push_back(processor);
 }

@@ -16,11 +16,11 @@ BOOST_AUTO_TEST_CASE(SimpleFile) {
   Base::FileDataProvider fdata("test_input.txt");
   Base::DataProvider& data = fdata;
   data.GoToNextLine();
-  BOOST_CHECK_EQUAL(data.GetActualLine(),"18 1000000 1 10\n");
+  BOOST_CHECK_EQUAL(data.GetActualLine(),"18 1000000 0 1\n");
   BOOST_CHECK_EQUAL(data.GetLineBefore(),"");
   data.GoToNextLine();
-  BOOST_CHECK_EQUAL(data.GetActualLine(),"18 1000000 2 10\n");
-  BOOST_CHECK_EQUAL(data.GetLineBefore(),"18 1000000 1 10\n");
+  BOOST_CHECK_EQUAL(data.GetActualLine(),"18 1000000 0 2\n");
+  BOOST_CHECK_EQUAL(data.GetLineBefore(),"18 1000000 0 1\n");
 
 }
 

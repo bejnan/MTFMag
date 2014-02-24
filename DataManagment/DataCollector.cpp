@@ -32,6 +32,7 @@ void DataCollector::RunTurns(int turn_amount) {
   stringstream input_line;
   unsigned int interaction, timestamp, sender_id, receiver_id;
   for (int turn_iter = 0; turn_iter < turn_amount; turn_iter++) {
+    data_input_.GoToNextLine();
     line = data_input_.GetActualLine();
     input_line.str(line);
     input_line >> interaction >> timestamp >> sender_id >> receiver_id;
@@ -49,7 +50,7 @@ void DataCollector::RunProcessor(int id, int receiver_id) {
   }
 }
 
-vector<pair<string, int> > DataCollector::getResult(int userId) {
+vector<pair<string, int> > DataCollector::GetResult(int userId) {
   vector<shared_ptr<Tools::Processor> >& processors = processors_base_.Query(
       userId);
   vector<shared_ptr<Tools::Processor> >::const_iterator processor_iterator;
@@ -67,7 +68,7 @@ int SumPenalties(int acc, shared_ptr<Tools::Processor> processor) {
   return acc + processor->GetPenalty();
 }
 
-vector<pair<string, int> > DataCollector::getResultsSum() {
+vector<pair<string, int> > DataCollector::GetResultsSum() {
   vector<string> names = processors_base_.QueryKeys();
   vector<shared_ptr<Tools::Processor> > results;
   vector<pair<string, int> > resultsSum;

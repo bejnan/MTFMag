@@ -13,6 +13,7 @@ using std::sort;
 namespace Tree {
 
 TreeRoot::TreeRoot() {
+  tree_list_.push_back(shared_ptr<Base::Element>());
 }
 
 TreeRoot::~TreeRoot() {
@@ -48,16 +49,15 @@ void TreeRoot::MoveElement(int position) {
 
 inline bool CompareElementPointers(shared_ptr<Base::Element> elem1,
                                    shared_ptr<Base::Element> elem2) {
-  return (elem1->Compare(*elem2) < 0);
+  return (elem1->Compare(*elem2) > 0);
 }
 
 void TreeRoot::SortElements() {
   vector<shared_ptr<Base::Element> > tmp_list_to_sort;
   vector<shared_ptr<Base::Element> >::iterator tree_iterator, sort_iterator;
   sorted_content_list_.clear();
-  unsigned int start = 0;
-  unsigned int end = 1;
-  unsigned int range = 1;
+  unsigned int start = 1;
+  unsigned int end = 2;
   while (start < tree_list_.size()) {
     tmp_list_to_sort.clear();
     for (tree_iterator = tree_list_.begin() + start;
@@ -72,8 +72,7 @@ void TreeRoot::SortElements() {
       sorted_content_list_.push_back((*sort_iterator)->id());
     }
     start = end;
-    range <<= 1;
-    end = end + range;
+    end <<= 1;
   }
 }
 

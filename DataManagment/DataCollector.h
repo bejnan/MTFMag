@@ -26,8 +26,8 @@ class DataCollector {
   virtual ~DataCollector();
   virtual void AddProccessor(shared_ptr<Tools::Processor> proc);
   virtual void RunTurns(int turn_amount);
-  virtual vector<pair<string,int> > getResult(int userId);
-  virtual vector<pair<string,int> > getResultsSum();
+  virtual vector<pair<string,int> > GetResult(int userId);
+  virtual vector<pair<string,int> > GetResultsSum();
  private:
   void RunProcessor(int id, int receiver_id);
   DataProvider& data_input_;
