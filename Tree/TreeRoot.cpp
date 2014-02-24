@@ -39,6 +39,9 @@ void TreeRoot::MoveElement(int position) {
     tmp_elem = tree_list_[position];
     tree_list_[position] = tree_list_[position / 2];
     tree_list_[position / 2] = tmp_elem;
+
+    id_position_[tree_list_[position]->id()] = position;
+    id_position_[tree_list_[position/2]->id()] = position/2;
     position /= 2;
   }
 }

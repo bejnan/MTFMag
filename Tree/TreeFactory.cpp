@@ -26,7 +26,7 @@ void TreeFactory::AddElement<Base::SimpleElement>(int id) {
   shared_ptr<Element> elem_ptr(elem);
   int position = root_.tree_list_.size();
   root_.tree_list_.push_back(elem_ptr);
-  root_.id_position_[position] = id;
+  root_.id_position_[id] = position;
   root_.SortElements();
 }
 
@@ -36,7 +36,7 @@ void TreeFactory::AddElement<Base::Element>(int id) {
   shared_ptr<Element> elem_ptr(elem);
   int position = root_.tree_list_.size();
   root_.tree_list_.push_back(elem_ptr);
-  root_.id_position_[position] = id;
+  root_.id_position_[id] = position;
   root_.SortElements();
 }
 
