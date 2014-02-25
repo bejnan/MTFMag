@@ -43,9 +43,11 @@ class TreeRoot {
   // Method used to refresh sorted_content_list.
   void SortElements();
  private:
-  // Tree implemented by array (parent is on position child div 2)
+  // Tree implemented by array (parent is on child's position div 2)
   vector<shared_ptr<Base::Element> > tree_list_;
+  // List of elements in order (level priority, then value)
   vector<int> sorted_content_list_;
+  // Map to get position of element in tree
   map<int, int> id_position_;
 };
 

@@ -6,7 +6,16 @@
 using std::string;
 
 namespace Base {
-
+/**
+ * Interface for data providers. Data provider should
+ * return single line of input containing all elements :
+ * - type of interaction
+ * - timestamp
+ * - sender id
+ * - receiver id
+ *
+ * It is important to give access to single line multiple times
+ */
 class DataProvider {
  public :
   virtual ~DataProvider() {}

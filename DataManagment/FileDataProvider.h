@@ -13,9 +13,12 @@
 #include<cstring>
 
 namespace Base {
-
+/*
+ * Class provides data read from input file
+ */
 class FileDataProvider : public DataProvider {
  public:
+  // file_path - path to input file
   FileDataProvider(string file_path);
   virtual ~FileDataProvider();
   virtual string GetActualLine();

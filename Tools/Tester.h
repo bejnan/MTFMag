@@ -9,7 +9,9 @@
 #define TESTER_H_
 
 namespace Tools {
-
+/**
+ * Class counts penalty
+ */
 class Tester {
  public:
   Tester(int first_page_list_size, int second_page_list_size);
