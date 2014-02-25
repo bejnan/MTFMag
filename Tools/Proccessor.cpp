@@ -20,13 +20,15 @@ Processor::Processor(int user_id, string identifier)
 Processor::~Processor() {
 }
 
-void Processor::Proceed(int id) {
+void Processor::Proceed(int id, bool learn) {
   int position = root_.GetContentPosition(id);
   if (position < 0) {
     tree_element_generator_.AddElement<Base::SimpleElement>(id);
     position = 0;
   }
-  penalty_counter_.CountPenalty(position);
+  if (!learn) {
+    penalty_counter_.CountPenalty(position);
+  }
   root_.NotifyContent(id);
 }
 

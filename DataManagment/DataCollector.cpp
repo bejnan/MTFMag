@@ -27,7 +27,7 @@ void DataCollector::AddProccessor(shared_ptr<Tools::Processor> proc) {
   processors_base_.AddToBase(proc);
 }
 
-void DataCollector::RunTurns(int turn_amount) {
+void DataCollector::RunTurns(int turn_amount, bool learn) {
   string line;
   stringstream input_line;
   unsigned int interaction, timestamp, sender_id, receiver_id;
@@ -36,17 +36,17 @@ void DataCollector::RunTurns(int turn_amount) {
     line = data_input_.GetActualLine();
     input_line.str(line);
     input_line >> interaction >> timestamp >> sender_id >> receiver_id;
-    RunProcessor(sender_id, receiver_id);
+    RunProcessor(sender_id, receiver_id, learn);
   }
 }
 
-void DataCollector::RunProcessor(int id, int receiver_id) {
+void DataCollector::RunProcessor(int id, int receiver_id, bool learn) {
   vector<shared_ptr<Tools::Processor> >& processors = processors_base_.Query(
       id);
   vector<shared_ptr<Tools::Processor> >::const_iterator processor_iterator;
   for (processor_iterator = processors.begin();
       processor_iterator != processors.end(); processor_iterator++) {
-    (*processor_iterator)->Proceed(receiver_id);
+    (*processor_iterator)->Proceed(receiver_id, learn);
   }
 }
 
