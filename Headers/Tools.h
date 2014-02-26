@@ -8,7 +8,8 @@
 #ifndef TOOLS_H_
 #define TOOLS_H_
 
-#include "../Tools/Proccessor.h"
+#include "../Tools/Processor.h"
+#include "../Tools/TreeProccessor.h"
 #include "../Tools/Tester.h"
 
 #endif /* TOOLS_H_ */

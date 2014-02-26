@@ -23,7 +23,7 @@ DataCollector::DataCollector(DataProvider& data_input)
 DataCollector::~DataCollector() {
 }
 
-void DataCollector::AddProccessor(shared_ptr<Tools::Processor> proc) {
+void DataCollector::AddProccessor(shared_ptr<Tools::TreeProcessor> proc) {
   processors_base_.AddToBase(proc);
 }
 
@@ -41,9 +41,9 @@ void DataCollector::RunTurns(int turn_amount, bool learn) {
 }
 
 void DataCollector::RunProcessor(int id, int receiver_id, bool learn) {
-  vector<shared_ptr<Tools::Processor> >& processors = processors_base_.Query(
+  vector<shared_ptr<Tools::TreeProcessor> >& processors = processors_base_.Query(
       id);
-  vector<shared_ptr<Tools::Processor> >::const_iterator processor_iterator;
+  vector<shared_ptr<Tools::TreeProcessor> >::const_iterator processor_iterator;
   for (processor_iterator = processors.begin();
       processor_iterator != processors.end(); processor_iterator++) {
     (*processor_iterator)->Proceed(receiver_id, learn);
@@ -51,9 +51,9 @@ void DataCollector::RunProcessor(int id, int receiver_id, bool learn) {
 }
 
 vector<pair<string, int> > DataCollector::GetResult(int userId) {
-  vector<shared_ptr<Tools::Processor> >& processors = processors_base_.Query(
+  vector<shared_ptr<Tools::TreeProcessor> >& processors = processors_base_.Query(
       userId);
-  vector<shared_ptr<Tools::Processor> >::const_iterator processor_iterator;
+  vector<shared_ptr<Tools::TreeProcessor> >::const_iterator processor_iterator;
   vector<pair<string, int> > results;
   for (processor_iterator = processors.begin();
       processor_iterator != processors.end(); processor_iterator++) {
@@ -64,13 +64,13 @@ vector<pair<string, int> > DataCollector::GetResult(int userId) {
   return results;
 }
 
-int SumPenalties(int acc, shared_ptr<Tools::Processor> processor) {
+int SumPenalties(int acc, shared_ptr<Tools::TreeProcessor> processor) {
   return acc + processor->GetPenalty();
 }
 
 vector<pair<string, int> > DataCollector::GetResultsSum() {
   vector<string> names = processors_base_.QueryKeys();
-  vector<shared_ptr<Tools::Processor> > results;
+  vector<shared_ptr<Tools::TreeProcessor> > results;
   vector<pair<string, int> > resultsSum;
   int algorithms_sum = 0;
   for (vector<string>::const_iterator names_iterator = names.begin();

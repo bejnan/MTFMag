@@ -21,42 +21,42 @@ Database::~Database() {
 
 }
 
-void Database::AddToBase(shared_ptr<Tools::Processor> processor) {
+void Database::AddToBase(shared_ptr<Tools::TreeProcessor> processor) {
   if (id_table_.find(processor->user_id()) == id_table_.end()) {
     id_table_.insert(
         make_pair(processor->user_id(),
-                  vector<shared_ptr<Tools::Processor> >()));
+                  vector<shared_ptr<Tools::TreeProcessor> >()));
   }
   id_table_[processor->user_id()].push_back(processor);
 
   if (name_table_.find(processor->identifier()) == name_table_.end()) {
     name_table_.insert(
         make_pair(processor->identifier(),
-                  vector<shared_ptr<Tools::Processor> >()));
+                  vector<shared_ptr<Tools::TreeProcessor> >()));
   }
   name_table_[processor->identifier()].push_back(processor);
   table_.push_back(processor);
 }
 
-vector<shared_ptr<Tools::Processor> >& Database::Query(int id) {
+vector<shared_ptr<Tools::TreeProcessor> >& Database::Query(int id) {
   if (id_table_.find(id) != id_table_.end())
     return id_table_.at(id);
   throw Exception::InvalidIndexException(id);
 }
 
-vector<shared_ptr<Tools::Processor> >& Database::Query(string algorithm_name) {
+vector<shared_ptr<Tools::TreeProcessor> >& Database::Query(string algorithm_name) {
   if (name_table_.find(algorithm_name) != name_table_.end())
     return name_table_.at(algorithm_name);
   throw Exception::InvalidNameException(algorithm_name);
 }
 
-vector<shared_ptr<Tools::Processor> >& Database::Query() {
+vector<shared_ptr<Tools::TreeProcessor> >& Database::Query() {
   return table_;
 }
 
 vector<string> Database::QueryKeys() {
   vector<string> names;
-  map<string, vector<shared_ptr<Tools::Processor> > >::iterator name_iterator;
+  map<string, vector<shared_ptr<Tools::TreeProcessor> > >::iterator name_iterator;
   for (name_iterator = name_table_.begin(); name_iterator != name_table_.end();
       name_iterator++) {
     names.push_back(name_iterator->first);

@@ -5,22 +5,21 @@
  *      Author: kuba
  */
 
-#include "Proccessor.h"
+#include "TreeProccessor.h"
 
 namespace Tools {
 
-Processor::Processor(int user_id, string identifier)
-    : user_id_(user_id),
-      identifier_(identifier),
+TreeProcessor::TreeProcessor(int user_id, string identifier)
+    : Processor(user_id,identifier),
       root_(TreeRoot()),
       tree_element_generator_(root_),
       penalty_counter_(Tester(20, 20)) {
 }
 
-Processor::~Processor() {
+TreeProcessor::~TreeProcessor() {
 }
 
-void Processor::Proceed(int id, bool learn) {
+void TreeProcessor::Proceed(int id, bool learn) {
   int position = root_.GetContentPosition(id);
   if (position < 0) {
     tree_element_generator_.AddElement<Base::SimpleElement>(id);
@@ -32,7 +31,7 @@ void Processor::Proceed(int id, bool learn) {
   root_.NotifyContent(id);
 }
 
-int Processor::GetPenalty() {
+int TreeProcessor::GetPenalty() {
   return penalty_counter_.penalty();
 }
 

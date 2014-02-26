@@ -5,37 +5,32 @@
  *      Author: kuba
  */
 
-#ifndef PROCCESSOR_H_
-#define PROCCESSOR_H_
+#ifndef TREEPROCCESSOR_H_
+#define TREEPROCCESSOR_H_
 
 #include "../Headers/Tree.h"
 #include "../Headers/Elements.h"
 #include "Tester.h"
-
+#include "Processor.h"
 using namespace Tree;
 using std::string;
 
 namespace Tools {
-/**
- * Class which runs notifications of actions
- * Every user have its own Processor.
- */
-class Processor {
+
+class TreeProcessor : Processor{
  public:
   // userId - Id of user
   // identifier - name of algorithms
-  Processor(int userId, string identifier = string());
-  virtual ~Processor();
+  TreeProcessor(int userId, string identifier = string());
+  virtual ~TreeProcessor();
   // id - Receiver id
   // learn - if true no penalty is added
   virtual void Proceed(int id, bool learn = false);
   // return penalty counted by tester
   virtual int GetPenalty();
-  string identifier() { return identifier_; }
-  int user_id() {return user_id_;}
+  using Processor::identifier;
+  using Processor::user_id;
  private:
-  const int user_id_;
-  const string identifier_;
   // algorithms elements
   TreeRoot root_;
   TreeFactory tree_element_generator_;
@@ -45,4 +40,4 @@ class Processor {
 
 } /* namespace Tree */
 
-#endif /* PROCCESSOR_H_ */
+#endif /* TREEPROCCESSOR_H_ */

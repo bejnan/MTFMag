@@ -20,13 +20,13 @@ BOOST_AUTO_TEST_SUITE(Database)
 
 BOOST_AUTO_TEST_CASE(AddToBase) {
   Base::Database base;
-  Tools::Processor* new_processor = new Tools::Processor(1, "Test");
-  shared_ptr<Tools::Processor> processor_ptr(new_processor);
+  Tools::TreeProcessor* new_processor = new Tools::TreeProcessor(1, "Test");
+  shared_ptr<Tools::TreeProcessor> processor_ptr(new_processor);
   base.AddToBase(processor_ptr);
 
   BOOST_CHECK_EQUAL(base.Query(1).front(), processor_ptr);
 
-  new_processor = new Tools::Processor(2, "Test2");
+  new_processor = new Tools::TreeProcessor(2, "Test2");
   processor_ptr.reset(new_processor);
   base.AddToBase(processor_ptr);
 
