@@ -28,6 +28,8 @@ int main(int argc, char** argv) {
   }
   FileDataProvider fdp(path);
   DataCollector dc(fdp);
+  Tools::ProcessorFactory* proc_fact = new Tools::TreeProcessorFactory();
+  dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
 
   dc.RunTurns(learn_runs, true);
   vector<pair<string, int> > results;

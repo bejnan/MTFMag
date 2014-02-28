@@ -18,10 +18,8 @@ namespace Tools {
 
 class ProcessorFactory {
  public:
-  ProcessorFactory();
-  virtual ~ProcessorFactory();
-  template <typename T>
-  shared_ptr<Processor> GenerateProcessor(int id);
+  virtual ~ProcessorFactory() {   }
+  virtual shared_ptr<Processor> GenerateProcessor(int id) = 0;
 };
 
 } /* namespace Tools */

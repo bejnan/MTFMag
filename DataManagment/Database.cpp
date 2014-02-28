@@ -64,4 +64,8 @@ vector<string> Database::QueryKeys() {
   return names;
 }
 
+bool Database::Exists(int id){
+  return (id_table_.find(id) != id_table_.end());
+}
+
 } /* namespace Base */

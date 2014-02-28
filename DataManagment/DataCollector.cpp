@@ -23,8 +23,9 @@ DataCollector::DataCollector(DataProvider& data_input)
 DataCollector::~DataCollector() {
 }
 
-void DataCollector::AddProccessor(shared_ptr<Tools::Processor> proc) {
-  processors_base_.AddToBase(proc);
+void DataCollector::AddProccessorFactory(
+    shared_ptr<Tools::ProcessorFactory> proc) {
+  processor_factories_.push_back(proc);
 }
 
 void DataCollector::RunTurns(int turn_amount, bool learn) {
@@ -37,16 +38,6 @@ void DataCollector::RunTurns(int turn_amount, bool learn) {
     input_line.str(line);
     input_line >> interaction >> timestamp >> sender_id >> receiver_id;
     RunProcessor(sender_id, receiver_id, learn);
-  }
-}
-
-void DataCollector::RunProcessor(int id, int receiver_id, bool learn) {
-  vector<shared_ptr<Tools::Processor> >& processors = processors_base_.Query(
-      id);
-  vector<shared_ptr<Tools::Processor> >::const_iterator processor_iterator;
-  for (processor_iterator = processors.begin();
-      processor_iterator != processors.end(); processor_iterator++) {
-    (*processor_iterator)->Proceed(receiver_id, learn);
   }
 }
 
@@ -81,6 +72,29 @@ vector<pair<string, int> > DataCollector::GetResultsSum() {
     resultsSum.push_back(make_pair(*names_iterator, algorithms_sum));
   }
   return resultsSum;
+}
+
+void DataCollector::RunProcessor(int id, int receiver_id, bool learn) {
+  if (!processors_base_.Exists(id)) {
+    AddProcessorsFromFactories(id);
+  }
+  vector<shared_ptr<Tools::Processor> >& processors = processors_base_.Query(
+      id);
+  vector<shared_ptr<Tools::Processor> >::const_iterator processor_iterator;
+  for (processor_iterator = processors.begin();
+      processor_iterator != processors.end(); processor_iterator++) {
+    (*processor_iterator)->Proceed(receiver_id, learn);
+  }
+}
+
+void DataCollector::AddProcessorsFromFactories(int id) {
+  vector<shared_ptr<Tools::ProcessorFactory> >::iterator factory_iterator;
+  shared_ptr<Tools::Processor> new_processor;
+  for (factory_iterator = processor_factories_.begin();
+      factory_iterator != processor_factories_.end(); factory_iterator++) {
+    new_processor = (*factory_iterator)->GenerateProcessor(id);
+    processors_base_.AddToBase(new_processor);
+  }
 }
 
 } /* namespace Tree */

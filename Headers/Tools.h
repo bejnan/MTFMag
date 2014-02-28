@@ -9,6 +9,8 @@
 #define TOOLS_H_
 
 #include "../Tools/Processor.h"
+#include "../Tools/ProcessorFactory.h"
+#include "../Tools/TreeProcessorFactory.h"
 #include "../Tools/TreeProccessor.h"
 #include "../Tools/Tester.h"
 

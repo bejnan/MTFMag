@@ -35,6 +35,8 @@ class Database {
   vector<shared_ptr<Tools::Processor> >& Query();
   // Get all algorithm names
   vector<string> QueryKeys();
+  // Returns true if database contains id
+  bool Exists(int id);
  private:
   // Table of all Processors
   vector<shared_ptr<Tools::Processor> > table_;

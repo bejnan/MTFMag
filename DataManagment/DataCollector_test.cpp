@@ -23,8 +23,8 @@ BOOST_AUTO_TEST_SUITE(DataCollector)
 BOOST_AUTO_TEST_CASE(DataCollectorBasic) {
   Base::FileDataProvider fdp("test_input.txt");
   Base::DataCollector dc(fdp);
-  Tools::Processor* processor = new Tools::Processor(0,"TestAlg");
-  dc.AddProccessor(shared_ptr<Tools::Processor>(processor));
+  Tools::ProcessorFactory* processor = new Tools::TreeProcessorFactory();
+  dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(processor));
   dc.RunTurns(11);
   vector<pair<string, int> > results = dc.GetResult(0);
   vector<pair<string, int> >::iterator result_iter;
