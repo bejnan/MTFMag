@@ -13,5 +13,8 @@ Processor::Processor(int id, string identifier)
       identifier_(identifier) {
 }
 
+Processor::~Processor() {
+}
+
 }
 

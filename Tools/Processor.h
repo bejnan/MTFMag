@@ -23,9 +23,9 @@ class Processor {
   virtual ~Processor();
   // id - Receiver id
   // learn - if true no penalty is added
-  virtual void Proceed(int id, bool learn = false) = 0;
+  virtual void Proceed(int id, bool learn = false) {};
   // return penalty counted by tester
-  virtual int GetPenalty() = 0;
+  virtual int GetPenalty() {return 0;};
   string identifier() {
     return identifier_;
   }

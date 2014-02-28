@@ -26,22 +26,22 @@ class Database {
   Database();
   virtual ~Database();
   //Add Processor to collection
-  void AddToBase(shared_ptr<Tools::TreeProcessor> processor);
+  void AddToBase(shared_ptr<Tools::Processor> processor);
   // Get all Processors with given id
-  vector<shared_ptr<Tools::TreeProcessor> >& Query(int id);
+  vector<shared_ptr<Tools::Processor> >& Query(int id);
   // Get all Processors with given algorithm name
-  vector<shared_ptr<Tools::TreeProcessor> >& Query(string algorithm_name);
+  vector<shared_ptr<Tools::Processor> >& Query(string algorithm_name);
   // Get all Processors
-  vector<shared_ptr<Tools::TreeProcessor> >& Query();
+  vector<shared_ptr<Tools::Processor> >& Query();
   // Get all algorithm names
   vector<string> QueryKeys();
  private:
   // Table of all Processors
-  vector<shared_ptr<Tools::TreeProcessor> > table_;
+  vector<shared_ptr<Tools::Processor> > table_;
   // Map between id and Processors
-  map<int, vector<shared_ptr<Tools::TreeProcessor> > > id_table_;
+  map<int, vector<shared_ptr<Tools::Processor> > > id_table_;
   // Map between algorithm names and Processors
-  map<string, vector<shared_ptr<Tools::TreeProcessor> > > name_table_;
+  map<string, vector<shared_ptr<Tools::Processor> > > name_table_;
 };
 
 } /* namespace Base */

@@ -17,7 +17,7 @@ using std::string;
 
 namespace Tools {
 
-class TreeProcessor : Processor{
+class TreeProcessor : public Processor{
  public:
   // userId - Id of user
   // identifier - name of algorithms

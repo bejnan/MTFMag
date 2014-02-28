@@ -28,7 +28,7 @@ class DataCollector {
   DataCollector(DataProvider& data_input);
   virtual ~DataCollector();
   // Add processor to database.
-  virtual void AddProccessor(shared_ptr<Tools::TreeProcessor> proc);
+  virtual void AddProccessor(shared_ptr<Tools::Processor> proc);
   // turn_amount describes how many lines of input will be used.
   // learn - count no penalty (learn about user)
   virtual void RunTurns(int turn_amount, bool learn = false);

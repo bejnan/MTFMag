@@ -5,7 +5,8 @@
  *      Author: kuba
  */
 
-#include "Proccessor.h"
+#include "Processor.h"
+#include "TreeProccessor.h"
 #include "../Headers/Exceptions.h"
 
 #define BOOST_TEST_DYN_LINK
@@ -18,7 +19,7 @@ using std::shared_ptr;
 BOOST_AUTO_TEST_SUITE(Proccessor)
 
 BOOST_AUTO_TEST_CASE(ProceedTest1) {
-  Tools::Processor processor(0, "Test");
+  Tools::TreeProcessor processor(0, "Test");
   for (int i = 0; i < 21; i++) {
     processor.Proceed(i);
   }
