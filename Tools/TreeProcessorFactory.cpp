@@ -6,7 +6,6 @@
  */
 
 #include "TreeProcessorFactory.h"
-#include "TreeProccessor.h"
 
 namespace Tools {
 
@@ -22,4 +21,4 @@ shared_ptr<Processor> TreeProcessorFactory::GenerateProcessor(int id)
   return shared_ptr<Processor> (new_tree_proc);
 }
 
-} /* namespace Exception */
+} /* namespace Tools */

@@ -9,6 +9,7 @@
 #define TREEPROCESSORFACTORY_H_
 
 #include "ProcessorFactory.h"
+#include "TreeProccessor.h"
 
 namespace Tools {
 
@@ -21,6 +22,6 @@ class TreeProcessorFactory : public Tools::ProcessorFactory {
   const string algorithm_name_;
 };
 
-} /* namespace Exception */
+} /* namespace Tools */
 
 #endif /* TREEPROCESSORFACTORY_H_ */

@@ -32,4 +32,4 @@ void Tester::CountPenalty(unsigned int element_position)
 
 
 
-} /* namespace Tree */
+} /* namespace Tools */

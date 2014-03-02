@@ -17,11 +17,11 @@ using std::string;
 
 namespace Tools {
 
-class TreeProcessor : public Processor{
+class TreeProcessorFactory;
+
+class TreeProcessor : public Processor {
+  friend class TreeProcessorFactory;
  public:
-  // userId - Id of user
-  // identifier - name of algorithms
-  TreeProcessor(int userId, string identifier = string());
   virtual ~TreeProcessor();
   // id - Receiver id
   // learn - if true no penalty is added
@@ -30,7 +30,12 @@ class TreeProcessor : public Processor{
   virtual int GetPenalty();
   using Processor::identifier;
   using Processor::user_id;
+
  private:
+  // userId - Id of user
+  // identifier - name of algorithms
+  TreeProcessor(int userId, string identifier = string());
+
   // algorithms elements
   TreeRoot root_;
   TreeFactory tree_element_generator_;
@@ -38,6 +43,6 @@ class TreeProcessor : public Processor{
   Tester penalty_counter_;
 };
 
-} /* namespace Tree */
+} /* namespace Tools */
 
 #endif /* TREEPROCCESSOR_H_ */

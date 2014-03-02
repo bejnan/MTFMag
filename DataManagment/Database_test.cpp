@@ -20,23 +20,21 @@ BOOST_AUTO_TEST_SUITE(Database)
 
 BOOST_AUTO_TEST_CASE(AddToBase) {
   Base::Database base;
-  Tools::Processor* new_processor = new Tools::TreeProcessor(1, "Test");
-  shared_ptr<Tools::Processor> processor_ptr(new_processor);
+  Tools::TreeProcessorFactory factory;
+
+  shared_ptr<Tools::Processor> processor_ptr = factory.GenerateProcessor(1);
   base.AddToBase(processor_ptr);
 
   BOOST_CHECK_EQUAL(base.Query(1).front(), processor_ptr);
 
-  new_processor = new Tools::TreeProcessor(2, "Test2");
-  processor_ptr.reset(new_processor);
+  processor_ptr = factory.GenerateProcessor(2);
   base.AddToBase(processor_ptr);
 
-  BOOST_CHECK_EQUAL(base.Query("Test2").front(), processor_ptr);
+  BOOST_CHECK_EQUAL(base.Query("TreeMTF").front(), processor_ptr);
 
   BOOST_CHECK_THROW(base.Query(3), Exception::InvalidIndexException);
 
   BOOST_CHECK_THROW(base.Query("Tester"), Exception::InvalidNameException);
-
-
 
 }
 
