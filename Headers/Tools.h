@@ -8,12 +8,14 @@
 #ifndef TOOLS_H_
 #define TOOLS_H_
 
-#include "../Tools/Processor.h"
-#include "../Tools/ProcessorFactory.h"
-#include "../Tools/TreeProcessorFactory.h"
-#include "../Tools/TreeProccessor.h"
 #include "../Tools/MTFProcessor.h"
 #include "../Tools/MTFProcessorFactory.h"
+#include "../Tools/Processor.h"
+#include "../Tools/ProcessorFactory.h"
+#include "../Tools/RandomTreeProcessor.h"
+#include "../Tools/RandomTreeProcessorFactory.h"
 #include "../Tools/Tester.h"
+#include "../Tools/TreeProcessorFactory.h"
+#include "../Tools/TreeProccessor.h"
 
 #endif /* TOOLS_H_ */
