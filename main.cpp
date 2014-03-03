@@ -31,6 +31,9 @@ int main(int argc, char** argv) {
   Tools::ProcessorFactory* proc_fact = new Tools::TreeProcessorFactory();
   dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
 
+  proc_fact = new Tools::MTFProcessorFactory();
+  dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
+
   dc.RunTurns(learn_runs, true);
   vector<pair<string, int> > results;
   for (int i = 0; i < test_runs / step_size; i++) {

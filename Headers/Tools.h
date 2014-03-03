@@ -12,6 +12,8 @@
 #include "../Tools/ProcessorFactory.h"
 #include "../Tools/TreeProcessorFactory.h"
 #include "../Tools/TreeProccessor.h"
+#include "../Tools/MTFProcessor.h"
+#include "../Tools/MTFProcessorFactory.h"
 #include "../Tools/Tester.h"
 
 #endif /* TOOLS_H_ */

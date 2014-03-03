@@ -21,16 +21,17 @@ BOOST_AUTO_TEST_SUITE(Database)
 BOOST_AUTO_TEST_CASE(AddToBase) {
   Base::Database base;
   Tools::TreeProcessorFactory factory;
+  Tools::MTFProcessorFactory mtf_factory;
 
   shared_ptr<Tools::Processor> processor_ptr = factory.GenerateProcessor(1);
   base.AddToBase(processor_ptr);
 
   BOOST_CHECK_EQUAL(base.Query(1).front(), processor_ptr);
 
-  processor_ptr = factory.GenerateProcessor(2);
+  processor_ptr = mtf_factory.GenerateProcessor(2);
   base.AddToBase(processor_ptr);
 
-  BOOST_CHECK_EQUAL(base.Query("TreeMTF").front(), processor_ptr);
+  BOOST_CHECK_EQUAL(base.Query("SimpleMTF").front(), processor_ptr);
 
   BOOST_CHECK_THROW(base.Query(3), Exception::InvalidIndexException);
 
