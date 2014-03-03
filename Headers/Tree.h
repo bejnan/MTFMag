@@ -10,7 +10,7 @@
 
 #include  "../Tree/TreeFactory.h"
 #include  "../Tree/TreeRoot.h"
-
+#include "../Tree/RandomTreeRoot.h"
 
 
 #endif /* TREE_H_ */

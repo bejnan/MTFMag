@@ -35,16 +35,26 @@ int TreeRoot::GetContentPosition(int id) {
 }
 
 void TreeRoot::MoveElement(int position) {
-  shared_ptr<Base::Element> tmp_elem;
   while (position > 1) {
-    tmp_elem = tree_list_[position];
-    tree_list_[position] = tree_list_[position / 2];
-    tree_list_[position / 2] = tmp_elem;
-
-    id_position_[tree_list_[position]->id()] = position;
-    id_position_[tree_list_[position/2]->id()] = position/2;
+    SwapElements(position, position / 2);
     position /= 2;
   }
+}
+
+void TreeRoot::SwapElements(int position1, int position2) {
+  shared_ptr<Base::Element> tmp_elem;
+  tmp_elem = tree_list_[position1];
+  tree_list_[position1] = tree_list_[position2];
+  tree_list_[position2] = tmp_elem;
+
+  id_position_[tree_list_[position1]->id()] = position1;
+  id_position_[tree_list_[position2]->id()] = position2;
+
+}
+
+shared_ptr<Base::Element> TreeRoot::GetElement(int position)
+{
+  return tree_list_[position];
 }
 
 inline bool CompareElementPointers(shared_ptr<Base::Element> elem1,

@@ -8,8 +8,10 @@
 #include "SimpleElement.h"
 
 #include <typeinfo>
+#include <algorithm>
 
 using std::bad_cast;
+using std::max;
 
 namespace Base {
 
@@ -54,8 +56,9 @@ int SimpleElement::Compare(const SimpleElement& elem) {
 }
 
 double SimpleElement::Difference(const SimpleElement& elem) {
-  double diff = notification_counter_ - elem.notification_counter_;
-  diff += ((last_update_ - elem.last_update_) / UPDATE_VALUE);
+  double diff = (double)(notification_counter_ - elem.notification_counter_) / (double)(notification_counter_ + elem.notification_counter_);
+  diff += ((double)(last_update_ - elem.last_update_) /
+      (double)(max(last_update_,elem.last_update_)) * UPDATE_VALUE);
   return diff;
 }
 

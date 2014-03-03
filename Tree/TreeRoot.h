@@ -38,7 +38,11 @@ class TreeRoot {
   int GetContentPosition(int id);
  protected:
   // Moves element to top of the tree.
-  void MoveElement(int position);
+  virtual void MoveElement(int position);
+  // Swap elements on positions.
+  virtual void SwapElements(int position1, int position2);
+  // Getter of element on position in tree
+  shared_ptr<Base::Element> GetElement(int position);
   // Sort elements in each level by its value.
   // Method used to refresh sorted_content_list.
   void SortElements();
