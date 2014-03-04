@@ -25,14 +25,9 @@ BOOST_AUTO_TEST_CASE(DataCollectorTreeProcessor) {
   Base::DataCollector dc(fdp);
   Tools::ProcessorFactory* processor = new Tools::TreeProcessorFactory();
   dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(processor));
-  dc.RunTurns(22);
-  vector<pair<string, int> > results = dc.GetResult(0);
-  vector<pair<string, int> >::iterator result_iter;
-  for (result_iter = results.begin(); result_iter != results.end();
-      result_iter++) {
-    BOOST_TEST_MESSAGE((*result_iter).first << " " << (*result_iter).second);
-  }
-  results = dc.GetResultsSum();
+  dc.RunTurns(23);
+  vector<pair<string, int> > results = dc.GetResultsSum();
+  BOOST_CHECK_EQUAL(results.front().second, 1);
 }
 
 BOOST_AUTO_TEST_CASE(DataCollectorTreeProcessor2) {
@@ -40,16 +35,27 @@ BOOST_AUTO_TEST_CASE(DataCollectorTreeProcessor2) {
   Base::DataCollector dc(fdp);
   Tools::ProcessorFactory* processor = new Tools::TreeProcessorFactory();
   dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(processor));
-  dc.RunTurns(44);
+  dc.RunTurns(46);
   vector<pair<string, int> > results;
   vector<pair<string, int> >::iterator result_iter;
   for (int i = 0; i < 13; i++) {
     results = dc.GetResult(i);
     for (result_iter = results.begin(); result_iter != results.end();
         result_iter++) {
-      BOOST_TEST_MESSAGE(i << " " << (*result_iter).first << " " << (*result_iter).second);
+      BOOST_TEST_MESSAGE(
+          i << " " << (*result_iter).first << " " << (*result_iter).second);
     }
   }
+}
+
+BOOST_AUTO_TEST_CASE(DataCollectorMTFProcessor) {
+  Base::FileDataProvider fdp("test_input.txt");
+  Base::DataCollector dc(fdp);
+  Tools::ProcessorFactory* processor = new Tools::MTFProcessorFactory();
+  dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(processor));
+  dc.RunTurns(24);
+  vector<pair<string, int> > results = dc.GetResultsSum();
+  BOOST_CHECK_EQUAL(results.front().second, 1);
 }
 
 BOOST_AUTO_TEST_SUITE_END()

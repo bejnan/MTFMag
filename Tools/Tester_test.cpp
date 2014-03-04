@@ -17,11 +17,11 @@ BOOST_AUTO_TEST_CASE(SimpleTest) {
   tester.CountPenalty(1);
   BOOST_CHECK_EQUAL(tester.penalty(), 0);
   tester.CountPenalty(2);
-  BOOST_CHECK_EQUAL(tester.penalty(), 1);
+  BOOST_CHECK_EQUAL(tester.penalty(), 0);
   tester.CountPenalty(3);
-  BOOST_CHECK_EQUAL(tester.penalty(), 3);
+  BOOST_CHECK_EQUAL(tester.penalty(), 1);
   tester.CountPenalty(5);
-  BOOST_CHECK_EQUAL(tester.penalty(), 11);
+  BOOST_CHECK_EQUAL(tester.penalty(), 9);
 }
 
 BOOST_AUTO_TEST_SUITE_END()

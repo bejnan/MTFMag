@@ -25,7 +25,7 @@ void Tester::CountPenalty(unsigned int element_position)
     return;
   element_position -= first_page_list_size_;
   if (element_position < second_page_list_size_)
-    penalty_ += element_position +1;
+    penalty_ += element_position;
   else
     penalty_ += MAX_PENALTY;
 }
