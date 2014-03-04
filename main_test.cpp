@@ -16,6 +16,7 @@
 #include "Headers/Tools.h"
 
 using std::string;
+using std::stringstream;
 using std::cout;
 
 using namespace Base;
@@ -43,24 +44,25 @@ BOOST_AUTO_TEST_CASE(True_test) {
 
   dc.RunTurns(learn_runs, true);
   vector<pair<string, int> > results;
+  stringstream ss;
   for (int i = 0; i < test_runs / step_size; i++) {
     dc.RunTurns(step_size);
     results = dc.GetResultsSum();
-    cout << i * step_size << " ";
+    ss << i * step_size << " ";
     for (vector<pair<string, int> >::iterator results_iter = results.begin();
         results_iter != results.end(); results_iter++) {
-      cout << (*results_iter).first << " " << (*results_iter).second << " ";
+      ss << (*results_iter).first << " " << (*results_iter).second << " ";
     }
-    cout << "\n";
+    BOOST_TEST_MESSAGE(ss.str());
   }
   int rest = test_runs - (test_runs / step_size) * step_size;
   if (rest > 0) {
     dc.RunTurns(rest);
     for (vector<pair<string, int> >::iterator results_iter = results.begin();
         results_iter != results.end(); results_iter++) {
-      cout << (*results_iter).first << " " << (*results_iter).second << " ";
+      BOOST_TEST_MESSAGE((*results_iter).first << " " << (*results_iter).second << " ");
     }
-    cout << "\n";
+    //cout << "\n";
   }
 }
 
