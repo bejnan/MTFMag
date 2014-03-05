@@ -27,7 +27,14 @@ BOOST_AUTO_TEST_SUITE(mainSuite)
 BOOST_AUTO_TEST_CASE(True_test) {
   int step_size = 10;
 
-  string path = "/dane/dane0.18.sort"; //ABSOLUTE PATH!!
+  int argc = boost::unit_test::framework::master_test_suite().argc;
+  char ** argv = boost::unit_test::framework::master_test_suite().argv;
+  string path;
+  if (argc > 1) {
+    path = argv[1];
+  } else {
+    path = "/dane/dane0.18.sort";  //ABSOLUTE PATH!!
+  }
   int learn_runs = 0;
   int test_runs = 1000;
 
@@ -60,7 +67,8 @@ BOOST_AUTO_TEST_CASE(True_test) {
     dc.RunTurns(rest);
     for (vector<pair<string, int> >::iterator results_iter = results.begin();
         results_iter != results.end(); results_iter++) {
-      BOOST_TEST_MESSAGE((*results_iter).first << " " << (*results_iter).second << " ");
+      BOOST_TEST_MESSAGE(
+          (*results_iter).first << " " << (*results_iter).second << " ");
     }
     //cout << "\n";
   }
