@@ -15,10 +15,14 @@
 using std::shared_ptr;
 
 namespace Tools {
-
+/**
+ * Interface to create Processors independently.
+ * It provides prepared processors for DataCollectors
+ */
 class ProcessorFactory {
  public:
   virtual ~ProcessorFactory() {   }
+  // Method generating processor for user with specific Id
   virtual shared_ptr<Processor> GenerateProcessor(int id) = 0;
 };
 

@@ -12,12 +12,15 @@
 #include "RandomTreeProcessor.h"
 
 namespace Tools {
-
+/*
+ * Factory for RandomTreeProcessor
+ */
 class RandomTreeProcessorFactory : public ProcessorFactory {
  public:
   RandomTreeProcessorFactory();
   virtual ~RandomTreeProcessorFactory();
   virtual shared_ptr<Processor> GenerateProcessor(int id);
+
  private:
   string algorithm_name_;
 };

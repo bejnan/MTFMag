@@ -17,8 +17,17 @@ using std::string;
 
 namespace Tools {
 
+// class that generates TreeProcessors
 class TreeProcessorFactory;
 
+/**
+ * Processor based on tree structure.
+ * It works like Move To Front, but Move To Top Of Tree is
+ * the best words to describe how it works.
+ *
+ * It uses TreeRoot as data structure with
+ * TreeFactory to generate new elements
+ */
 class TreeProcessor : public Processor {
   friend class TreeProcessorFactory;
  public:

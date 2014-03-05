@@ -14,14 +14,18 @@
 #include <string>
 
 using std::string;
-namespace Tools {
 
+namespace Tools {
+/*
+ * Factory for MTFProcessor class.
+ */
 class MTFProcessorFactory : public Tools::ProcessorFactory {
  public:
   MTFProcessorFactory();
   virtual ~MTFProcessorFactory();
   virtual shared_ptr<Processor> GenerateProcessor(int id);
- private :
+
+ private:
   string algorithm_name_;
 };
 

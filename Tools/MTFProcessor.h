@@ -18,10 +18,17 @@ using std::string;
 using std::list;
 namespace Tools {
 
+// Forward definition of MTFProcessor factory
 class MTFProcessorFactory;
 
+/*
+ * MTFProcessor is Processor based on simple MTF (Move To Front) algorithm.
+ * It uses simples penalty counter, that is Tester class.
+ */
 class MTFProcessor : Processor {
+
   friend class MTFProcessorFactory;
+
  public:
   virtual ~MTFProcessor();
   virtual void Proceed(int id, bool learn = false);

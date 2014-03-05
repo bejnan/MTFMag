@@ -18,8 +18,14 @@ using std::string;
 
 namespace Tools {
 
+// Generator of RandomTreeProcessor instances
 class RandomTreeProcessorFactory;
 
+/**
+ * It is processor similar to TreeProcessor.
+ * The difference is to add random decisions how high element is push
+ * in tree during notification.
+ */
 class RandomTreeProcessor : public Processor {
   friend class RandomTreeProcessorFactory;
  public:
@@ -29,12 +35,13 @@ class RandomTreeProcessor : public Processor {
   using Processor::identifier;
   using Processor::user_id;
  private:
-   RandomTreeProcessor(int user_id, string identifier);
-   // algorithms elements
-    RandomTreeRoot root_;
-    TreeFactory tree_element_generator_;
-    // Penalty counter
-    Tester penalty_counter_;
+  // only RandomTreeProcessorFactory can create this object
+  RandomTreeProcessor(int user_id, string identifier);
+  // algorithms elements
+  RandomTreeRoot root_;
+  TreeFactory tree_element_generator_;
+  // Penalty counter
+  Tester penalty_counter_;
 };
 
 } /* namespace Tools */
