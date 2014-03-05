@@ -13,6 +13,7 @@
 #include <vector>
 #include <algorithm>
 #include <random>
+#include <exception>
 
 using std::default_random_engine;
 using std::uniform_int_distribution;
@@ -107,16 +108,17 @@ BOOST_AUTO_TEST_CASE(TreeTest) {
   Tree::TreeRoot root;
   Tree::TreeFactory tree_factory(root);
   default_random_engine generator;
-  uniform_int_distribution<int> distribution(1, TEST_LIMIT);
+  uniform_int_distribution<int> distribution(1, TEST_LIMIT - 1);
   for (int i = 1; i < TEST_LIMIT; i++)
     tree_factory.AddElement<Base::SimpleElement>(i);
 
   BOOST_CHECK_EQUAL(root.GetContentPosition(1), 1);
   BOOST_CHECK_EQUAL(root.GetContentPosition(3), 3);
 
-  for (int i = 0; i < TEST_LIMIT*TEST_LIMIT; i++) {
+  for (int i = 0; i < TEST_LIMIT * TEST_LIMIT; i++) {
     root.NotifyContent(distribution(generator));
   }
+
   vector<int> positions;
 
   for (int i = 1; i < TEST_LIMIT; i++) {
@@ -133,14 +135,14 @@ BOOST_AUTO_TEST_CASE(RandomTreeTest2) {
   Tree::RandomTreeRoot root;
   Tree::TreeFactory tree_factory(root);
   default_random_engine generator;
-  uniform_int_distribution<int> distribution(1, TEST_LIMIT);
+  uniform_int_distribution<int> distribution(1, TEST_LIMIT - 1);
   for (int i = 1; i < TEST_LIMIT; i++)
     tree_factory.AddElement<Base::SimpleElement>(i);
 
   BOOST_CHECK_EQUAL(root.GetContentPosition(1), 1);
   BOOST_CHECK_EQUAL(root.GetContentPosition(3), 3);
 
-  for (int i = 0; i < TEST_LIMIT*TEST_LIMIT; i++) {
+  for (int i = 0; i < TEST_LIMIT * TEST_LIMIT; i++) {
     root.NotifyContent(distribution(generator));
   }
   vector<int> positions;

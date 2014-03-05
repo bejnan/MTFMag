@@ -25,7 +25,7 @@ using namespace std;
 BOOST_AUTO_TEST_SUITE(mainSuite)
 
 BOOST_AUTO_TEST_CASE(True_test) {
-  int step_size = 10;
+  int step_size = 100;
 
   int argc = boost::unit_test::framework::master_test_suite().argc;
   char ** argv = boost::unit_test::framework::master_test_suite().argv;
@@ -36,7 +36,7 @@ BOOST_AUTO_TEST_CASE(True_test) {
     path = "/dane/dane0.18.sort";  //ABSOLUTE PATH!!
   }
   int learn_runs = 0;
-  int test_runs = 1000;
+  int test_runs = 10000;
 
   FileDataProvider fdp(path);
   DataCollector dc(fdp);
@@ -52,6 +52,7 @@ BOOST_AUTO_TEST_CASE(True_test) {
   dc.RunTurns(learn_runs, true);
   vector<pair<string, int> > results;
   stringstream ss;
+  //TODO!!!
   for (int i = 0; i < test_runs / step_size; i++) {
     dc.RunTurns(step_size);
     results = dc.GetResultsSum();
@@ -61,16 +62,16 @@ BOOST_AUTO_TEST_CASE(True_test) {
       ss << (*results_iter).first << " " << (*results_iter).second << " ";
     }
     BOOST_TEST_MESSAGE(ss.str());
+    ss.str("");
   }
   int rest = test_runs - (test_runs / step_size) * step_size;
   if (rest > 0) {
     dc.RunTurns(rest);
     for (vector<pair<string, int> >::iterator results_iter = results.begin();
         results_iter != results.end(); results_iter++) {
-      BOOST_TEST_MESSAGE(
-          (*results_iter).first << " " << (*results_iter).second << " ");
+      ss << (*results_iter).first << " " << (*results_iter).second << " ";
     }
-    //cout << "\n";
+    BOOST_TEST_MESSAGE(ss.str());
   }
 }
 
