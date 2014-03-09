@@ -36,7 +36,7 @@ BOOST_AUTO_TEST_CASE(True_test) {
     path = "/dane/dane0.18.sort";  //ABSOLUTE PATH!!
   }
   int learn_runs = 0;
-  int test_runs = 10000;
+  int test_runs = 1000;
 
   FileDataProvider fdp(path);
   DataCollector dc(fdp);
