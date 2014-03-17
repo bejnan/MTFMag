@@ -47,8 +47,8 @@ void TreeRoot::SwapElements(int position1, int position2) {
   tree_list_[position1] = tree_list_[position2];
   tree_list_[position2] = tmp_elem;
 
-  id_position_[tree_list_[position1]->id()] = position1;
-  id_position_[tree_list_[position2]->id()] = position2;
+  id_position_[tree_list_[position1]->user_id()] = position1;
+  id_position_[tree_list_[position2]->user_id()] = position2;
 
 }
 
@@ -79,7 +79,7 @@ void TreeRoot::SortElements() {
          CompareElementPointers);
     for (sort_iterator = tmp_list_to_sort.begin();
         sort_iterator != tmp_list_to_sort.end(); sort_iterator++) {
-      sorted_content_list_.push_back((*sort_iterator)->id());
+      sorted_content_list_.push_back((*sort_iterator)->user_id());
     }
     start = end;
     end <<= 1;

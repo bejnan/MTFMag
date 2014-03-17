@@ -18,25 +18,22 @@ namespace Base {
 class Element {
  public:
   // id - Element Identifier
-  Element(int id);
+  Element(int user_id);
   virtual ~Element();
-  // Compare pointer's content
-  static int ComparePoiters(shared_ptr<Element> elem1,
-                            shared_ptr<Element> elem2);
+
   // Compare element's content
   virtual int Compare(Element& elem);
   // Difference between elements
   virtual double Difference(Element& elem);
   // Notify user choice
-  virtual void Notify(int update_counter = 0) {
-  }
+  virtual void Notify(int update_counter = 0) { }
   // Id getter
-  int id() {
-    return id_;
+  int user_id() {
+    return user_id_;
   }
  private:
   // user identifier
-  const int id_;
+  const int user_id_;
 };
 
 } /* namespace Base */

@@ -23,7 +23,7 @@ void MTFProcessor::Proceed(int id, bool learn) {
   for (element_iter = element_list.begin(); element_iter != element_list.end();
       element_iter++) {
     ++old_position;
-    if ((*element_iter)->id() == id) {
+    if ((*element_iter)->user_id() == id) {
       break;
     }
   }

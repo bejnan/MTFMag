@@ -24,7 +24,7 @@ class SimpleElement : public Element {
   virtual int Compare(Element& elem);
   virtual double Difference(Element& elem);
   virtual void Notify(int update_counter = 0);
-  using Element::id;
+  using Element::user_id;
 
  private:
   int Compare(const SimpleElement& elem);

@@ -55,7 +55,7 @@
 						<entry excluding="Element_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Elements"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Exceptions"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Headers"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Matrix"/>
+						<entry excluding="MTFMatrix_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Matrix"/>
 						<entry excluding="Tester_test.cpp|Proccessor_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Tools"/>
 						<entry excluding="TreeRoot_test.cpp|TreeFactory_test.cpp|Root_test.cpp|Node_test.cpp|LTree_test.cpp|FTree_test.cpp|TreeFaktory_test.cpp|Leaf_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Tree"/>
 					</sourceEntries>
@@ -110,7 +110,7 @@
 						<entry excluding="Element_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Elements"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Exceptions"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Headers"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Matrix"/>
+						<entry excluding="MTFMatrix_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Matrix"/>
 						<entry excluding="Processors|Proccessor_test.cpp|Tester_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Tools"/>
 						<entry excluding="TreeRoot_test.cpp|TreeFactory_test.cpp|TreeFaktory_test.cpp|Root_test.cpp|FTree_test.cpp|Leaf_test.cpp|LTree_test.cpp|Node_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Tree"/>
 					</sourceEntries>

@@ -11,16 +11,18 @@
 #include <memory>
 
 #include "MTFMatrix.h"
+#include "../Headers/Elements.h"
 
 using std::shared_ptr;
 
 namespace Matrix {
 
 class MatrixBuilder {
+
  public:
   virtual ~MatrixBuilder();
 
-  shared_ptr<MatrixBuilder> GetInstance();
+  static shared_ptr<MatrixBuilder> GetInstance();
   shared_ptr<MatrixBuilder> WithMatrixWidth(int width);
   shared_ptr<MatrixBuilder> WithRandomAdding();
   shared_ptr<MatrixBuilder> ResetSetting();
@@ -36,5 +38,4 @@ class MatrixBuilder {
 };
 
 } /* namespace Matrix */
-
 #endif /* MATRIXBUILDER_H_ */

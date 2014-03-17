@@ -9,15 +9,15 @@
 
 namespace Base {
 
-Element::Element(int id)
-    : id_(id) {
+Element::Element(int user_id)
+    : user_id_(user_id) {
 }
 
 Element::~Element() {
 }
 
 int Element::Compare(Element& elem) {
-  if (id_ == elem.id_)
+  if (user_id_ == elem.user_id_)
     return 0;
   else
     return -1;
