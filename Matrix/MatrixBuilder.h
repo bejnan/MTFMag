@@ -23,9 +23,9 @@ class MatrixBuilder {
   virtual ~MatrixBuilder();
 
   static shared_ptr<MatrixBuilder> GetInstance();
-  shared_ptr<MatrixBuilder> WithMatrixWidth(int width);
-  shared_ptr<MatrixBuilder> WithRandomAdding();
-  shared_ptr<MatrixBuilder> ResetSetting();
+  MatrixBuilder& WithMatrixWidth(int width);
+  MatrixBuilder& WithRandomAdding();
+  MatrixBuilder& ResetSetting();
 
   shared_ptr<MTFMatrix> Generate();
 

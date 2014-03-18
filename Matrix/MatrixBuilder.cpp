@@ -5,11 +5,9 @@
  *      Author: kuba
  */
 
-
 #include "MatrixBuilder.h"
 
 namespace Matrix {
-
 
 MatrixBuilder::MatrixBuilder()
     : matrix_width_(1),
@@ -23,25 +21,22 @@ shared_ptr<MatrixBuilder> MatrixBuilder::GetInstance() {
   return shared_ptr<MatrixBuilder>(new MatrixBuilder());
 }
 
-
-shared_ptr<MatrixBuilder> MatrixBuilder::WithMatrixWidth(int width) {
+MatrixBuilder& MatrixBuilder::WithMatrixWidth(int width) {
   matrix_width_ = width;
-  return shared_ptr<MatrixBuilder>(this);
+  return *this;
 }
-shared_ptr<MatrixBuilder> MatrixBuilder::WithRandomAdding() {
+MatrixBuilder& MatrixBuilder::WithRandomAdding() {
   with_random_ = true;
-  return shared_ptr<MatrixBuilder>(this);
+  return *this;
 }
-shared_ptr<MatrixBuilder> MatrixBuilder::ResetSetting() {
+MatrixBuilder& MatrixBuilder::ResetSetting() {
   matrix_width_ = 1;
   with_random_ = false;
-  return shared_ptr<MatrixBuilder>(this);
+  return *this;
 }
-
 
 shared_ptr<MTFMatrix> MatrixBuilder::Generate() {
   return shared_ptr<MTFMatrix>(new MTFMatrix(matrix_width_));
 }
-
 
 } /* namespace Matrix */

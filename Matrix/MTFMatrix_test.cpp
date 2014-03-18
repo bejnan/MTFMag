@@ -16,7 +16,7 @@ BOOST_AUTO_TEST_CASE(MTFMatrixBuilder) {
   shared_ptr<Matrix::MatrixBuilder> builder =
       Matrix::MatrixBuilder::GetInstance();
   shared_ptr<Matrix::MTFMatrix> matrix =
-      builder->WithMatrixWidth(2)->Generate();
+      builder->WithMatrixWidth(2).Generate();
 
   shared_ptr<Base::Element> element;
   for (int i = 1; i < 6; i++) {
@@ -32,7 +32,7 @@ BOOST_AUTO_TEST_CASE(MTFMatrixNotifiaction1) {
   shared_ptr<Matrix::MatrixBuilder> builder =
       Matrix::MatrixBuilder::GetInstance();
   shared_ptr<Matrix::MTFMatrix> matrix =
-      builder->WithMatrixWidth(2)->Generate();
+      builder->WithMatrixWidth(2).Generate();
 
   shared_ptr<Base::Element> element;
   for (int i = 1; i < 6; i++) {

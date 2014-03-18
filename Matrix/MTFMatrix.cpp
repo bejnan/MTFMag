@@ -71,16 +71,20 @@ inline bool CompareElementPointers(shared_ptr<Base::Element> elem1,
 }
 
 void MTFMatrix::SortElementToList() {
+  // TODO BUG
   vector<shared_ptr<Base::Element> > tmp_sort_row;
   vector<shared_ptr<Base::Element> >::iterator tmp_sort_row_iterator;
   shared_ptr<Base::Element> actual_element;
 
   sorted_element_list_.clear();
-  for (unsigned int row = 0; row <= (element_list_.size() - 1) / row_size_; row++) {
+  for (unsigned int row = 0; row <= (element_list_.size() - 1) / row_size_;
+      row++) {
     for (int position_in_row = 0; position_in_row < row_size_;
         position_in_row++) {
-      actual_element = element_list_[position_in_row + row * row_size_];
-      tmp_sort_row.push_back(actual_element);
+      if (position_in_row + row * row_size_ < element_list_.size()) {
+        actual_element = element_list_[position_in_row + row * row_size_];
+        tmp_sort_row.push_back(actual_element);
+      }
     }
 
     sort(tmp_sort_row.begin(), tmp_sort_row.end(), CompareElementPointers);
