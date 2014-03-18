@@ -33,6 +33,7 @@ int MTFMatrix::GetContentPosition(int id) {
 }
 
 void MTFMatrix::MoveFromPositionToFront(int position) {
+  //TODO avoid non existing elements!!
   int min_position;
   int actual_position;
   for (int row = position / row_size_; row >= 0; row--) {
@@ -51,7 +52,7 @@ void MTFMatrix::MoveFromPositionToFront(int position) {
     SwitchElementsOnPositions(position, min_position);
     position = min_position;
   }
-  SortElementToList();
+  //SortElementToList();
 }
 
 void MTFMatrix::SwitchElementsOnPositions(int position1, int position2) {
