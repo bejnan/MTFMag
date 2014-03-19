@@ -33,10 +33,9 @@ int MTFMatrix::GetContentPosition(int id) {
 }
 
 void MTFMatrix::MoveFromPositionToFront(int position) {
-  //TODO avoid non existing elements!!
   int min_position;
   unsigned int actual_position;
-  for (int row = position / row_size_; row >= 0; row--) {
+  for (int row = position / row_size_ - 1; row >= 0; row--) {
     min_position = -1;
     for (int position_in_row = 0; position_in_row < row_size_;
         position_in_row++) {
@@ -44,9 +43,6 @@ void MTFMatrix::MoveFromPositionToFront(int position) {
         min_position = position_in_row + row * row_size_;
       } else {
         actual_position = position_in_row + row * row_size_;
-        if (actual_position >= ElementCount()) {
-          break;
-        }
         if (CompareElementsOnPositions(min_position, actual_position) > 0) {
           min_position = actual_position;
         }
@@ -59,6 +55,9 @@ void MTFMatrix::MoveFromPositionToFront(int position) {
 }
 
 void MTFMatrix::SwitchElementsOnPositions(int position1, int position2) {
+  if (position1 == position2)
+    return;
+
   shared_ptr<Base::Element> tmp_element = element_list_[position1];
   element_list_[position1] = element_list_[position2];
   element_list_[position2] = tmp_element;

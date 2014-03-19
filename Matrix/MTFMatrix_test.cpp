@@ -48,6 +48,4 @@ BOOST_AUTO_TEST_CASE(MTFMatrixNotifiaction1) {
   BOOST_CHECK_EQUAL(1,matrix->GetContentPosition(5));
 }
 
-
-
 BOOST_AUTO_TEST_SUITE_END()
