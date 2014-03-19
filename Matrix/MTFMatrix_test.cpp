@@ -40,12 +40,12 @@ BOOST_AUTO_TEST_CASE(MTFMatrixNotifiaction1) {
     matrix->AddElement(element);
   }
 
-  matrix->NotifyContent(3);
+  matrix->NotifyContent(2);
   for (int i = 1; i < 6; i++) {
       BOOST_CHECK_EQUAL(i,matrix->GetContentPosition(i));
     }
   matrix->NotifyContent(5);
-  BOOST_CHECK_EQUAL(0,matrix->GetContentPosition(5));
+  BOOST_CHECK_EQUAL(1,matrix->GetContentPosition(5));
 }
 
 

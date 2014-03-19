@@ -35,7 +35,7 @@ int MTFMatrix::GetContentPosition(int id) {
 void MTFMatrix::MoveFromPositionToFront(int position) {
   //TODO avoid non existing elements!!
   int min_position;
-  int actual_position;
+  unsigned int actual_position;
   for (int row = position / row_size_; row >= 0; row--) {
     min_position = -1;
     for (int position_in_row = 0; position_in_row < row_size_;
@@ -44,6 +44,9 @@ void MTFMatrix::MoveFromPositionToFront(int position) {
         min_position = position_in_row + row * row_size_;
       } else {
         actual_position = position_in_row + row * row_size_;
+        if (actual_position >= ElementCount()) {
+          break;
+        }
         if (CompareElementsOnPositions(min_position, actual_position) > 0) {
           min_position = actual_position;
         }
@@ -52,7 +55,7 @@ void MTFMatrix::MoveFromPositionToFront(int position) {
     SwitchElementsOnPositions(position, min_position);
     position = min_position;
   }
-  //SortElementToList();
+  SortElementToList();
 }
 
 void MTFMatrix::SwitchElementsOnPositions(int position1, int position2) {
@@ -72,7 +75,6 @@ inline bool CompareElementPointers(shared_ptr<Base::Element> elem1,
 }
 
 void MTFMatrix::SortElementToList() {
-  // TODO BUG
   vector<shared_ptr<Base::Element> > tmp_sort_row;
   vector<shared_ptr<Base::Element> >::iterator tmp_sort_row_iterator;
   shared_ptr<Base::Element> actual_element;
@@ -100,6 +102,10 @@ void MTFMatrix::SortElementToList() {
 
 int MTFMatrix::CompareElementsOnPositions(int position1, int position2) {
   return element_list_[position1]->Compare(*element_list_[position2]);
+}
+
+unsigned int MTFMatrix::ElementCount() {
+  return element_list_.size();
 }
 
 } /* namespace Matrix */

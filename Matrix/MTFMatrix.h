@@ -42,6 +42,7 @@ class MTFMatrix {
   void SwitchElementsOnPositions(int position1, int position2);
   void SortElementToList();
   int CompareElementsOnPositions(int position1,int position2);
+  unsigned int ElementCount();
  private:
   int row_size_;
   vector<shared_ptr<Base::Element> > element_list_;
