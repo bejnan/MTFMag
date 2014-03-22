@@ -34,6 +34,10 @@ int main(int argc, char** argv) {
   proc_fact = new Tools::MTFProcessorFactory();
   dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
 
+  //TODO Matrix is not working!!
+  proc_fact = new Tools::MatrixMTFProcessorFactory();
+  dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
+
   proc_fact = new Tools::RandomTreeProcessorFactory();
   dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
 

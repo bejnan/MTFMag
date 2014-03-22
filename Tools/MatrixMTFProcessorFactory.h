@@ -15,11 +15,12 @@ namespace Tools {
 
 class MatrixMTFProcessorFactory : public Tools::ProcessorFactory{
  public:
-  MatrixMTFProcessorFactory();
+  MatrixMTFProcessorFactory(int matrix_width = 2);
   virtual ~MatrixMTFProcessorFactory();
   virtual shared_ptr<Processor> GenerateProcessor(int user_id);
  private:
    string algorithm_name_;
+   int matrix_width_;
 };
 
 } /* namespace Tools */

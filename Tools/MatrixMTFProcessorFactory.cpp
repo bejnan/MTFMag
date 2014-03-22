@@ -9,15 +9,19 @@
 
 namespace Tools {
 
-MatrixMTFProcessorFactory::MatrixMTFProcessorFactory() :
-  algorithm_name_("MTF_Matrix"){
+MatrixMTFProcessorFactory::MatrixMTFProcessorFactory(int matrix_width)
+    : algorithm_name_("MTF_Matrix"),
+      matrix_width_(matrix_width) {
 }
 
 MatrixMTFProcessorFactory::~MatrixMTFProcessorFactory() {
 }
 
-shared_ptr<Processor> MatrixMTFProcessorFactory::GenerateProcessor(int user_id) {
-  MatrixMTFProcessor* new_processor = new MatrixMTFProcessor(user_id, algorithm_name_);
+shared_ptr<Processor> MatrixMTFProcessorFactory::GenerateProcessor(
+    int user_id) {
+  MatrixMTFProcessor* new_processor = new MatrixMTFProcessor(user_id,
+                                                             algorithm_name_,
+                                                             matrix_width_);
   return shared_ptr<Processor>(new_processor);
 }
 

@@ -29,7 +29,7 @@ void MatrixMTFProcessor::Proceed(int user_id, bool learn) {
   if (!matrix_->HaveElement(user_id)) {
     AddUser(user_id);
   }
-  if (learn) {
+  if (!learn) {
     int position = matrix_->GetContentPosition(user_id);
     penalty_counter_.CountPenalty(position);
   }

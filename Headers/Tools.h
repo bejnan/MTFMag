@@ -17,5 +17,7 @@
 #include "../Tools/Tester.h"
 #include "../Tools/TreeProcessorFactory.h"
 #include "../Tools/TreeProccessor.h"
+#include "../Tools/MatrixMTFProcessorFactory.h"
+#include "../Tools/MatrixMTFProcessor.h"
 
 #endif /* TOOLS_H_ */
