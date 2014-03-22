@@ -19,20 +19,23 @@ using std::shared_ptr;
 
 namespace Tools {
 
-class MatrixMTXProcessor : public Tools::Processor {
+class MatrixMTFProcessor : public Tools::Processor {
  public:
-  MatrixMTXProcessor(int user_id, string identifier, int width = 2,
+  MatrixMTFProcessor(int user_id, string identifier, int width = 2,
                      bool random = false);
-  virtual ~MatrixMTXProcessor();
+  virtual ~MatrixMTFProcessor();
 
-  virtual void Proceed(int id, bool learn = false);
+  virtual void Proceed(int user_id, bool learn = false);
 
   virtual int GetPenalty();
 
+ protected :
+  virtual void AddUser(int user_id);
  private:
   Tester penalty_counter_;
   shared_ptr<Matrix::MatrixBuilder> matrix_builder_;
   shared_ptr<Matrix::MTFMatrix> matrix_;
+  shared_ptr<Base::Element> user_container_prototype;
 };
 
 } /* namespace Tools */

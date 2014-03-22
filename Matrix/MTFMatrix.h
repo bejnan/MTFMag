@@ -30,13 +30,13 @@ class MTFMatrix {
   MTFMatrix(int row_size);
   virtual ~MTFMatrix();
 
-  virtual bool HaveElement(int id);
+  virtual bool HaveElement(int user_id);
   virtual void AddElement(shared_ptr<Base::Element> element);
   //Notify element with given id.
   // After notification it is moved up to top of the tree.
-  void NotifyContent(int id);
+  void NotifyContent(int user_id);
   // Gives current position of element in hierarchy.
-  int GetContentPosition(int id);
+  int GetContentPosition(int user_id);
 
  protected:
   void MoveFromPositionToFront(int position);

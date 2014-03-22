@@ -15,8 +15,8 @@ MTFProcessorFactory::MTFProcessorFactory() : algorithm_name_("SimpleMTF") {
 MTFProcessorFactory::~MTFProcessorFactory() {
 }
 
-shared_ptr<Processor> MTFProcessorFactory::GenerateProcessor(int id) {
-  Processor* new_mtf_proc = new MTFProcessor(id,algorithm_name_);
+shared_ptr<Processor> MTFProcessorFactory::GenerateProcessor(int user_id) {
+  Processor* new_mtf_proc = new MTFProcessor(user_id,algorithm_name_);
   return shared_ptr<Processor>(new_mtf_proc);
 }
 

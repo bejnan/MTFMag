@@ -17,8 +17,8 @@ MTFMatrix::MTFMatrix(int row_size)
 MTFMatrix::~MTFMatrix() {
 }
 
-bool MTFMatrix::HaveElement(int id) {
-  return (id_position_.find(id) != id_position_.end());
+bool MTFMatrix::HaveElement(int user_id) {
+  return (id_position_.find(user_id) != id_position_.end());
 }
 
 void MTFMatrix::AddElement(shared_ptr<Base::Element> element) {
@@ -27,13 +27,13 @@ void MTFMatrix::AddElement(shared_ptr<Base::Element> element) {
   id_position_[element->user_id()] = element_list_.size() - 1;
 }
 
-void MTFMatrix::NotifyContent(int id) {
-  int position = id_position_.at(id);
+void MTFMatrix::NotifyContent(int user_id) {
+  int position = id_position_.at(user_id);
   MoveFromPositionToFront(position);
 }
 
-int MTFMatrix::GetContentPosition(int id) {
-  return (id_position_.at(id) + 1);
+int MTFMatrix::GetContentPosition(int user_id) {
+  return (id_position_.at(user_id) + 1);
 }
 
 void MTFMatrix::MoveFromPositionToFront(int position) {

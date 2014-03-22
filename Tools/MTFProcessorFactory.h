@@ -23,7 +23,7 @@ class MTFProcessorFactory : public Tools::ProcessorFactory {
  public:
   MTFProcessorFactory();
   virtual ~MTFProcessorFactory();
-  virtual shared_ptr<Processor> GenerateProcessor(int id);
+  virtual shared_ptr<Processor> GenerateProcessor(int user_id);
 
  private:
   string algorithm_name_;
