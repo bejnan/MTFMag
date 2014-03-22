@@ -8,8 +8,8 @@
 #include "Processor.h"
 namespace Tools {
 
-Processor::Processor(int id, string identifier)
-    : user_id_(id),
+Processor::Processor(int user_id, string identifier)
+    : user_id_(user_id),
       identifier_(identifier) {
 }
 

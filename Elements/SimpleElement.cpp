@@ -24,6 +24,11 @@ SimpleElement::SimpleElement(int id)
 SimpleElement::~SimpleElement() {
 }
 
+shared_ptr<Base::Element> SimpleElement::GetPrototype() {
+  Element* prototype_element = new SimpleElement(0);
+  return shared_ptr<Base::Element>(prototype_element);
+}
+
 int SimpleElement::Compare(Element& elem) {
   try {
     SimpleElement& simple_elem = dynamic_cast<SimpleElement&>(elem);
@@ -45,6 +50,11 @@ double SimpleElement::Difference(Element& elem) {
 void SimpleElement::Notify(int update_counter) {
   ++notification_counter_;
   last_update_ = update_counter;
+}
+
+shared_ptr<Element> SimpleElement::Clone(int user_id) {
+  Element* new_element = new SimpleElement(user_id);
+  return shared_ptr<Element>(new_element);
 }
 
 int SimpleElement::Compare(const SimpleElement& elem) {

@@ -19,7 +19,7 @@ namespace Tools {
  */
 class Processor {
  public:
-  Processor(int id, string identifier);
+  Processor(int user_id, string identifier);
   virtual ~Processor();
   // id - Receiver id
   // learn - if true no penalty is added

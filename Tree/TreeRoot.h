@@ -19,9 +19,6 @@ using std::shared_ptr;
 
 namespace Tree {
 
-// Documentation and implementation in files TreeFactory.h and TreeFactory.cpp
-class TreeFactory;
-
 /*
  * Class to manage tree of elements.
  */
@@ -29,13 +26,16 @@ class TreeRoot {
   // Give access to private field to add elements.
   friend class TreeFactory;
  public:
-  TreeRoot();
+  TreeRoot(shared_ptr<Base::Element> node_core_prototype);
   virtual ~TreeRoot();
   // Notify element with given id.
   // After notification it is moved up to top of the tree.
-  void NotifyContent(int id);
+  void NotifyContent(int user_id);
   // Gives current position of element in hierarchy.
-  int GetContentPosition(int id);
+  int GetContentPosition(int user_id);
+  // Adds new node with given id
+  void AddElement(int user_id);
+
  protected:
   // Moves element to top of the tree.
   virtual void MoveElement(int position);
@@ -53,6 +53,8 @@ class TreeRoot {
   vector<int> sorted_content_list_;
   // Map to get position of element in tree
   map<int, int> id_position_;
+  // Prototype element, which is a core of node
+  shared_ptr<Base::Element> node_core_prototype;
 };
 
 } /* namespace Tree */

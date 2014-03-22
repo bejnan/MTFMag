@@ -20,13 +20,15 @@ class Element {
   // id - Element Identifier
   Element(int user_id);
   virtual ~Element();
-
+  static shared_ptr<Base::Element> GetPrototype();
   // Compare element's content
   virtual int Compare(Element& elem);
   // Difference between elements
   virtual double Difference(Element& elem);
   // Notify user choice
   virtual void Notify(int update_counter = 0) { }
+  // Clone method for Prototype pattern
+  virtual shared_ptr<Element> Clone(int user_id);
   // Id getter
   int user_id() {
     return user_id_;

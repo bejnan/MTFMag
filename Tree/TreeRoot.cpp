@@ -12,7 +12,8 @@ using std::sort;
 
 namespace Tree {
 
-TreeRoot::TreeRoot() {
+TreeRoot::TreeRoot(shared_ptr<Base::Element> node_core_prototype)
+    : node_core_prototype(node_core_prototype) {
   tree_list_.push_back(shared_ptr<Base::Element>());
 }
 
@@ -34,6 +35,13 @@ int TreeRoot::GetContentPosition(int id) {
   return -1;
 }
 
+void TreeRoot::AddElement(int user_id) {
+  shared_ptr<Base::Element> new_node = node_core_prototype->Clone(user_id);
+  tree_list_.push_back(new_node);
+  sorted_content_list_.push_back(user_id);
+  id_position_[user_id] = tree_list_.size() - 1;
+}
+
 void TreeRoot::MoveElement(int position) {
   while (position > 1) {
     SwapElements(position, position / 2);
@@ -52,8 +60,7 @@ void TreeRoot::SwapElements(int position1, int position2) {
 
 }
 
-shared_ptr<Base::Element> TreeRoot::GetElement(int position)
-{
+shared_ptr<Base::Element> TreeRoot::GetElement(int position) {
   return tree_list_[position];
 }
 

@@ -9,8 +9,9 @@
 
 namespace Tree {
 
-RandomTreeRoot::RandomTreeRoot()
-    : generator_(default_random_engine()),
+RandomTreeRoot::RandomTreeRoot(shared_ptr<Base::Element> node_core_prototype)
+    : TreeRoot(node_core_prototype),
+      generator_(default_random_engine()),
       distribution_(uniform_real_distribution<double>(0, 1)) {
 }
 

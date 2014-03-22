@@ -10,9 +10,8 @@
 namespace Tools {
 
 TreeProcessor::TreeProcessor(int user_id, string identifier)
-    : Processor(user_id,identifier),
-      root_(TreeRoot()),
-      tree_element_generator_(root_),
+    : Processor(user_id, identifier),
+      root_(Base::SimpleElement::GetPrototype()),
       penalty_counter_(Tester(20, 20)) {
 }
 
@@ -22,7 +21,7 @@ TreeProcessor::~TreeProcessor() {
 void TreeProcessor::Proceed(int id, bool learn) {
   int position = root_.GetContentPosition(id);
   if (position < 0) {
-    tree_element_generator_.AddElement<Base::SimpleElement>(id);
+    root_.AddElement(id);
     position = 0;
   }
   if (!learn) {

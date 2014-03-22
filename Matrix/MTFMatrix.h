@@ -30,6 +30,7 @@ class MTFMatrix {
   MTFMatrix(int row_size);
   virtual ~MTFMatrix();
 
+  virtual bool HaveElement(int id);
   virtual void AddElement(shared_ptr<Base::Element> element);
   //Notify element with given id.
   // After notification it is moved up to top of the tree.

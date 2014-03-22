@@ -17,6 +17,10 @@ MTFMatrix::MTFMatrix(int row_size)
 MTFMatrix::~MTFMatrix() {
 }
 
+bool MTFMatrix::HaveElement(int id) {
+  return (id_position_.find(id) != id_position_.end());
+}
+
 void MTFMatrix::AddElement(shared_ptr<Base::Element> element) {
   element_list_.push_back(element);
   sorted_element_list_.push_back(element->user_id());

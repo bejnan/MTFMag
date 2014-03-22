@@ -39,7 +39,6 @@ class RandomTreeProcessor : public Processor {
   RandomTreeProcessor(int user_id, string identifier);
   // algorithms elements
   RandomTreeRoot root_;
-  TreeFactory tree_element_generator_;
   // Penalty counter
   Tester penalty_counter_;
 };

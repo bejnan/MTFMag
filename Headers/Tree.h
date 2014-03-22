@@ -8,7 +8,6 @@
 #ifndef TREE_H_
 #define TREE_H_
 
-#include  "../Tree/TreeFactory.h"
 #include  "../Tree/TreeRoot.h"
 #include "../Tree/RandomTreeRoot.h"
 

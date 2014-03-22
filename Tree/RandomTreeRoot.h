@@ -30,10 +30,11 @@ namespace Tree {
 class RandomTreeRoot : public TreeRoot {
   friend class TreeFactory;
  public:
-  RandomTreeRoot();
+  RandomTreeRoot(shared_ptr<Base::Element> node_core_prototype);
   virtual ~RandomTreeRoot();
   using TreeRoot::GetContentPosition;
   using TreeRoot::NotifyContent;
+  using TreeRoot::AddElement;
  protected:
   virtual void MoveElement(int position);
   using TreeRoot::SwapElements;

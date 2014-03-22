@@ -5,7 +5,6 @@
  *      Author: kuba
  */
 
-#include "TreeFactory.h"
 #include "TreeRoot.h"
 #include "RandomTreeRoot.h"
 #include "../Headers/Elements.h"
@@ -27,22 +26,20 @@ BOOST_AUTO_TEST_SUITE(TreeFactory)
 
 BOOST_AUTO_TEST_CASE(AddingTest) {
 
-  Tree::TreeRoot root;
-  Tree::TreeFactory tree_factory(root);
+  Tree::TreeRoot root(Base::SimpleElement::GetPrototype());
 
-  tree_factory.AddElement<Base::Element>(1);
-  tree_factory.AddElement<Base::Element>(2);
-  tree_factory.AddElement<Base::Element>(3);
+  root.AddElement(1);
+  root.AddElement(2);
+  root.AddElement(3);
 }
 
 BOOST_AUTO_TEST_CASE(RootTest) {
 
-  Tree::TreeRoot root;
-  Tree::TreeFactory tree_factory(root);
+  Tree::TreeRoot root(Base::SimpleElement::GetPrototype());
 
-  tree_factory.AddElement<Base::SimpleElement>(1);
-  tree_factory.AddElement<Base::SimpleElement>(2);
-  tree_factory.AddElement<Base::SimpleElement>(3);
+  root.AddElement(1);
+  root.AddElement(2);
+  root.AddElement(3);
 
   BOOST_CHECK_EQUAL(root.GetContentPosition(1), 1);
   BOOST_CHECK_EQUAL(root.GetContentPosition(3), 3);
@@ -54,12 +51,11 @@ BOOST_AUTO_TEST_CASE(RootTest) {
 
 BOOST_AUTO_TEST_CASE(NotifyTest) {
 
-  Tree::TreeRoot root;
-  Tree::TreeFactory tree_factory(root);
+  Tree::TreeRoot root(Base::SimpleElement::GetPrototype());
 
-  tree_factory.AddElement<Base::SimpleElement>(1);
-  tree_factory.AddElement<Base::SimpleElement>(2);
-  tree_factory.AddElement<Base::SimpleElement>(3);
+  root.AddElement(1);
+  root.AddElement(2);
+  root.AddElement(3);
 
   BOOST_CHECK_EQUAL(root.GetContentPosition(1), 1);
   BOOST_CHECK_EQUAL(root.GetContentPosition(3), 3);
@@ -68,7 +64,7 @@ BOOST_AUTO_TEST_CASE(NotifyTest) {
   BOOST_CHECK_EQUAL(root.GetContentPosition(1), 3);
   BOOST_CHECK_EQUAL(root.GetContentPosition(3), 1);
 
-  tree_factory.AddElement<Base::SimpleElement>(4);
+  root.AddElement(4);
   root.NotifyContent(4);
   BOOST_CHECK_EQUAL(root.GetContentPosition(3), 2);
   BOOST_CHECK_EQUAL(root.GetContentPosition(4), 1);
@@ -77,11 +73,10 @@ BOOST_AUTO_TEST_CASE(NotifyTest) {
 }
 
 BOOST_AUTO_TEST_CASE(RandomTreeTest) {
-  Tree::RandomTreeRoot r_root;
-  Tree::TreeFactory tree_factory(r_root);
+  Tree::RandomTreeRoot r_root(Base::SimpleElement::GetPrototype());
 
   for (int i = 1; i < 10; i++)
-    tree_factory.AddElement<Base::SimpleElement>(i);
+    r_root.AddElement(i);
 
   BOOST_CHECK_EQUAL(r_root.GetContentPosition(1), 1);
   BOOST_CHECK_EQUAL(r_root.GetContentPosition(3), 3);
@@ -105,12 +100,11 @@ BOOST_AUTO_TEST_CASE(RandomTreeTest) {
 
 BOOST_AUTO_TEST_CASE(TreeTest) {
   const int TEST_LIMIT = 20;
-  Tree::TreeRoot root;
-  Tree::TreeFactory tree_factory(root);
+  Tree::TreeRoot root(Base::SimpleElement::GetPrototype());
   default_random_engine generator;
   uniform_int_distribution<int> distribution(1, TEST_LIMIT - 1);
   for (int i = 1; i < TEST_LIMIT; i++)
-    tree_factory.AddElement<Base::SimpleElement>(i);
+    root.AddElement(i);
 
   BOOST_CHECK_EQUAL(root.GetContentPosition(1), 1);
   BOOST_CHECK_EQUAL(root.GetContentPosition(3), 3);
@@ -132,12 +126,11 @@ BOOST_AUTO_TEST_CASE(TreeTest) {
 }
 BOOST_AUTO_TEST_CASE(RandomTreeTest2) {
   const int TEST_LIMIT = 20;
-  Tree::RandomTreeRoot root;
-  Tree::TreeFactory tree_factory(root);
+  Tree::RandomTreeRoot root(Base::SimpleElement::GetPrototype());
   default_random_engine generator;
   uniform_int_distribution<int> distribution(1, TEST_LIMIT - 1);
   for (int i = 1; i < TEST_LIMIT; i++)
-    tree_factory.AddElement<Base::SimpleElement>(i);
+    root.AddElement(i);
 
   BOOST_CHECK_EQUAL(root.GetContentPosition(1), 1);
   BOOST_CHECK_EQUAL(root.GetContentPosition(3), 3);

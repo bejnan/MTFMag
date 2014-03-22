@@ -21,9 +21,11 @@ class SimpleElement : public Element {
   SimpleElement(int id);
   ~SimpleElement();
 
+  static shared_ptr<Base::Element> GetPrototype();
   virtual int Compare(Element& elem);
   virtual double Difference(Element& elem);
   virtual void Notify(int update_counter = 0);
+  virtual shared_ptr<Element> Clone(int user_id);
   using Element::user_id;
 
  private:

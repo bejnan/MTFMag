@@ -47,7 +47,6 @@ class TreeProcessor : public Processor {
 
   // algorithms elements
   TreeRoot root_;
-  TreeFactory tree_element_generator_;
   // Penalty counter
   Tester penalty_counter_;
 };
