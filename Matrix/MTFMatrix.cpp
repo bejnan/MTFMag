@@ -77,6 +77,10 @@ inline bool CompareElementPointers(shared_ptr<Base::Element> elem1,
   return (elem1->Compare(*elem2) > 0);
 }
 
+/*
+ * In this method every row is sorted independently,
+ * Order is decided first by row in which is element, secondly by order between elements
+ */
 void MTFMatrix::SortElementToList() {
   vector<shared_ptr<Base::Element> > tmp_sort_row;
   vector<shared_ptr<Base::Element> >::iterator tmp_sort_row_iterator;
@@ -103,6 +107,7 @@ void MTFMatrix::SortElementToList() {
   }
 }
 
+// Method is using comparison from Element class and derived classed
 int MTFMatrix::CompareElementsOnPositions(int position1, int position2) {
   return element_list_[position1]->Compare(*element_list_[position2]);
 }

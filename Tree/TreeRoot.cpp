@@ -20,16 +20,23 @@ TreeRoot::TreeRoot(shared_ptr<Base::Element> node_core_prototype)
 TreeRoot::~TreeRoot() {
 }
 
-void TreeRoot::NotifyContent(int id) {
-  int position = id_position_.at(id);
+void TreeRoot::NotifyContent(int user_id) {
+  int position = id_position_.at(user_id);
   tree_list_[position]->Notify();
   MoveElement(position);
   SortElements();
 }
 
-int TreeRoot::GetContentPosition(int id) {
+void TreeRoot::NotifyContent(int user_id, int notification_counter) {
+  int position = id_position_.at(user_id);
+  tree_list_[position]->Notify(notification_counter);
+  MoveElement(position);
+  SortElements();
+}
+
+int TreeRoot::GetContentPosition(int user_id) {
   for (unsigned int i = 0; i < sorted_content_list_.size(); i++) {
-    if (sorted_content_list_[i] == id)
+    if (sorted_content_list_[i] == user_id)
       return (i + 1);
   }
   return -1;

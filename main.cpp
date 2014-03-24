@@ -34,7 +34,13 @@ int main(int argc, char** argv) {
   proc_fact = new Tools::MTFProcessorFactory();
   dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
 
-  proc_fact = new Tools::MatrixMTFProcessorFactory();
+  proc_fact = new Tools::MatrixMTFProcessorFactory(2);
+  dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
+
+  proc_fact = new Tools::MatrixMTFProcessorFactory(3);
+  dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
+
+  proc_fact = new Tools::MatrixMTFProcessorFactory(5);
   dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
 
   proc_fact = new Tools::RandomTreeProcessorFactory();

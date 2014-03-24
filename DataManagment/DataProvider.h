@@ -14,7 +14,7 @@ namespace Base {
  * - sender id
  * - receiver id
  *
- * It is important to give access to single line multiple times
+ * It is important to give access to single line multiple times (for multiple objects)
  */
 class DataProvider {
  public :

@@ -10,7 +10,7 @@
 namespace Tools {
 
 MatrixMTFProcessorFactory::MatrixMTFProcessorFactory(int matrix_width)
-    : algorithm_name_("MTF_Matrix"),
+    : algorithm_name_(to_string(matrix_width) + "-MTF_Matrix"),
       matrix_width_(matrix_width) {
 }
 

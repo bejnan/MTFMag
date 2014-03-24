@@ -11,6 +11,9 @@
 #include "ProcessorFactory.h"
 #include "MatrixMTFProcessor.h"
 
+#include <string>
+using std::to_string;
+
 namespace Tools {
 
 class MatrixMTFProcessorFactory : public Tools::ProcessorFactory{

@@ -30,7 +30,9 @@ class TreeRoot {
   virtual ~TreeRoot();
   // Notify element with given id.
   // After notification it is moved up to top of the tree.
-  void NotifyContent(int user_id);
+  virtual void NotifyContent(int user_id);
+  // Notify element with information of number of all notifications
+  void NotifyContent(int user_id, int notification_counter);
   // Gives current position of element in hierarchy.
   int GetContentPosition(int user_id);
   // Adds new node with given id

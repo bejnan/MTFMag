@@ -30,20 +30,20 @@ void DataCollector::AddProccessorFactory(
 
 void DataCollector::RunTurns(int turn_amount, bool learn) {
   string line;
-  stringstream input_line;
+  stringstream input_line_stream;
   unsigned int interaction, timestamp, sender_id, receiver_id;
   for (int turn_iter = 0; turn_iter < turn_amount; turn_iter++) {
     data_input_.GoToNextLine();
     line = data_input_.GetActualLine();
-    input_line.str(line);
-    input_line >> interaction >> timestamp >> sender_id >> receiver_id;
+    input_line_stream.str(line);
+    input_line_stream >> interaction >> timestamp >> sender_id >> receiver_id;
     RunProcessor(sender_id, receiver_id, learn);
   }
 }
 
-vector<pair<string, int> > DataCollector::GetResult(int userId) {
+vector<pair<string, int> > DataCollector::GetResult(int user_id) {
   vector<shared_ptr<Tools::Processor> >& processors = processors_base_.Query(
-      userId);
+      user_id);
   vector<shared_ptr<Tools::Processor> >::const_iterator processor_iterator;
   vector<pair<string, int> > results;
   for (processor_iterator = processors.begin();
@@ -74,25 +74,25 @@ vector<pair<string, int> > DataCollector::GetResultsSum() {
   return resultsSum;
 }
 
-void DataCollector::RunProcessor(int id, int receiver_id, bool learn) {
-  if (!processors_base_.Exists(id)) {
-    AddProcessorsFromFactories(id);
+void DataCollector::RunProcessor(int user_sender_id, int user_receiver_id, bool learn) {
+  if (!processors_base_.Exists(user_sender_id)) {
+    AddProcessorsFromFactories(user_sender_id);
   }
   vector<shared_ptr<Tools::Processor> >& processors = processors_base_.Query(
-      id);
+      user_sender_id);
   vector<shared_ptr<Tools::Processor> >::const_iterator processor_iterator;
   for (processor_iterator = processors.begin();
       processor_iterator != processors.end(); processor_iterator++) {
-    (*processor_iterator)->Proceed(receiver_id, learn);
+    (*processor_iterator)->Proceed(user_receiver_id, learn);
   }
 }
 
-void DataCollector::AddProcessorsFromFactories(int id) {
+void DataCollector::AddProcessorsFromFactories(int user_id) {
   vector<shared_ptr<Tools::ProcessorFactory> >::iterator factory_iterator;
   shared_ptr<Tools::Processor> new_processor;
   for (factory_iterator = processor_factories_.begin();
       factory_iterator != processor_factories_.end(); factory_iterator++) {
-    new_processor = (*factory_iterator)->GenerateProcessor(id);
+    new_processor = (*factory_iterator)->GenerateProcessor(user_id);
     processors_base_.AddToBase(new_processor);
   }
 }

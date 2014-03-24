@@ -18,8 +18,8 @@ using std::shared_ptr;
 
 namespace Base {
 /**
- * Container of class Processor elements.
- * Point is to collect Processors by id or algorithms
+ * Container of Processor elements.
+ * Collect Processors by id or algorithms
  */
 class Database {
  public:

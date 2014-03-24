@@ -35,7 +35,7 @@ class SimpleElement : public Element {
   int last_update_;
   // how many times element was notificated
   int notification_counter_;
-  // how important is update counter (bigger value => more important update)
+  // how important is update counter (bigger value => more important recent update)
   static constexpr double UPDATE_VALUE = 0.1;
 };
 

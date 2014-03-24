@@ -32,8 +32,9 @@ class RandomTreeRoot : public TreeRoot {
  public:
   RandomTreeRoot(shared_ptr<Base::Element> node_core_prototype);
   virtual ~RandomTreeRoot();
-  using TreeRoot::GetContentPosition;
+  virtual void NotifyContent(int user_id);
   using TreeRoot::NotifyContent;
+  using TreeRoot::GetContentPosition;
   using TreeRoot::AddElement;
  protected:
   virtual void MoveElement(int position);
@@ -43,6 +44,8 @@ class RandomTreeRoot : public TreeRoot {
   // Random utilities
   default_random_engine generator_;
   uniform_real_distribution<double> distribution_;
+  int notification_counter_;
+  const double MOVING_UP_PROPABILITY;
 };
 
 } /* namespace Tree */
