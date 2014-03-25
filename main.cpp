@@ -34,13 +34,13 @@ int main(int argc, char** argv) {
   proc_fact = new Tools::RandomTreeProcessorFactory();
   dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
 
-  proc_fact = new Tools::RandomTreeProcessorFactory(0.9,0.1);
+  proc_fact = new Tools::RandomTreeProcessorFactory(0, 0);
   dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
 
-  proc_fact = new Tools::RandomTreeProcessorFactory(0.8,0.5);
+  proc_fact = new Tools::RandomTreeProcessorFactory(0.25, 1);
   dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
 
-  proc_fact = new Tools::RandomTreeProcessorFactory(0.9, 1);
+  proc_fact = new Tools::TreeProcessorFactory();
   dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
 
   dc.RunTurns(learn_runs, true);
