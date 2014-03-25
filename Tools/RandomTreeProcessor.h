@@ -36,7 +36,9 @@ class RandomTreeProcessor : public Processor {
   using Processor::user_id;
  private:
   // only RandomTreeProcessorFactory can create this object
-  RandomTreeProcessor(int user_id, string identifier);
+  RandomTreeProcessor(int user_id, string identifier,
+                      const double moving_up_propability = 0.75,
+                      const double diff_influence = 0.5);
   // algorithms elements
   RandomTreeRoot root_;
   // Penalty counter

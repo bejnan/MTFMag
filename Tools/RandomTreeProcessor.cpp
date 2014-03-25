@@ -9,9 +9,13 @@
 
 namespace Tools {
 
-RandomTreeProcessor::RandomTreeProcessor(int user_id, string identifier)
+RandomTreeProcessor::RandomTreeProcessor(int user_id, string identifier,
+                                         const double moving_up_propability,
+                                         const double diff_influence)
     : Processor(user_id, identifier),
-      root_(RandomTreeRoot(Base::SimpleElement::GetPrototype())),
+      root_(
+          RandomTreeRoot(Base::SimpleElement::GetPrototype(),
+                         moving_up_propability, diff_influence)),
       penalty_counter_(Tester(20, 20)) {
 
 }
@@ -34,6 +38,5 @@ void RandomTreeProcessor::Proceed(int id, bool learn) {
 int RandomTreeProcessor::GetPenalty() {
   return penalty_counter_.penalty();
 }
-
 
 } /* namespace Tools */

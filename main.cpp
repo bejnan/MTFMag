@@ -28,22 +28,19 @@ int main(int argc, char** argv) {
   }
   FileDataProvider fdp(path);
   DataCollector dc(fdp);
-  Tools::ProcessorFactory* proc_fact = new Tools::TreeProcessorFactory();
-  dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
-
-  proc_fact = new Tools::MTFProcessorFactory();
-  dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
-
-  proc_fact = new Tools::MatrixMTFProcessorFactory(2);
-  dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
-
-  proc_fact = new Tools::MatrixMTFProcessorFactory(3);
-  dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
-
-  proc_fact = new Tools::MatrixMTFProcessorFactory(5);
+  Tools::ProcessorFactory* proc_fact = new Tools::MTFProcessorFactory();
   dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
 
   proc_fact = new Tools::RandomTreeProcessorFactory();
+  dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
+
+  proc_fact = new Tools::RandomTreeProcessorFactory(0.9,0.1);
+  dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
+
+  proc_fact = new Tools::RandomTreeProcessorFactory(0.8,0.5);
+  dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
+
+  proc_fact = new Tools::RandomTreeProcessorFactory(0.9, 1);
   dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
 
   dc.RunTurns(learn_runs, true);

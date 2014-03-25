@@ -30,7 +30,9 @@ namespace Tree {
 class RandomTreeRoot : public TreeRoot {
   friend class TreeFactory;
  public:
-  RandomTreeRoot(shared_ptr<Base::Element> node_core_prototype);
+  RandomTreeRoot(shared_ptr<Base::Element> node_core_prototype,
+                 const double moving_up_propability = 0.75,
+                 const double diff_influence = 0.5);
   virtual ~RandomTreeRoot();
   virtual void NotifyContent(int user_id);
   using TreeRoot::NotifyContent;
@@ -46,6 +48,7 @@ class RandomTreeRoot : public TreeRoot {
   uniform_real_distribution<double> distribution_;
   int notification_counter_;
   const double MOVING_UP_PROPABILITY;
+  const double DIFF_INFLUENCE;
 };
 
 } /* namespace Tree */
