@@ -34,8 +34,10 @@ void RandomTreeRoot::MoveElement(int position) {
     if (diff * DIFF_INFLUENCE + distribution_(generator_)
         > MOVING_UP_PROPABILITY) {
       SwapElements(position, position / 2);
-    } else
+      position /= 2;
+    } else {
       break;
+    }
   }
 }
 
