@@ -1,14 +1,14 @@
 /*
- * main.cpp
- *
- *  Created on: 25 lut 2014
- *      Author: kuba
- */
+* main.cpp
+*
+* Created on: 25 lut 2014
+* Author: kuba
+*/
 #include <string>
 #include <cstdlib>
 #include <iostream>
-#include "Headers/DataManagment.h"
-#include "Headers/Tools.h"
+#include "headers/data_managment.h"
+#include "headers/tools.h"
 
 using std::string;
 using std::cout;
@@ -28,13 +28,13 @@ int main(int argc, char** argv) {
   }
   FileDataProvider fdp(path);
   DataCollector dc(fdp);
-  Tools::ProcessorFactory* proc_fact = new Tools::RandomTreeProcessorFactory(0.1, 0.1);
+  Tools::ProcessorFactory* proc_fact = new Tools::TreeProcessorFactory();
   dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
 
-  proc_fact = new Tools::RandomTreeProcessorFactory(0, 0.1);
+  proc_fact = new Tools::RandomTreeProcessorFactory(0.1, 10);
   dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
 
-  proc_fact = new Tools::RandomTreeProcessorFactory(0.1, 1);
+  proc_fact = new Tools::RandomTreeProcessorFactory(0.33, 0.5);
   dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
 
   dc.RunTurns(learn_runs, true);

@@ -12,8 +12,8 @@
 #include <string>
 #include <cstdlib>
 #include <iostream>
-#include "Headers/DataManagment.h"
-#include "Headers/Tools.h"
+#include "headers/data_managment.h"
+#include "headers/tools.h"
 
 using std::string;
 using std::stringstream;
