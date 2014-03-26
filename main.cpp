@@ -28,19 +28,13 @@ int main(int argc, char** argv) {
   }
   FileDataProvider fdp(path);
   DataCollector dc(fdp);
-  Tools::ProcessorFactory* proc_fact = new Tools::MTFProcessorFactory();
+  Tools::ProcessorFactory* proc_fact = new Tools::TreeProcessorFactory();
   dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
 
-  proc_fact = new Tools::RandomTreeProcessorFactory();
+  proc_fact = new Tools::RandomTreeProcessorFactory(0.1, 10);
   dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
 
-  proc_fact = new Tools::RandomTreeProcessorFactory(0, 0);
-  dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
-
-  proc_fact = new Tools::RandomTreeProcessorFactory(0.25, 1);
-  dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
-
-  proc_fact = new Tools::TreeProcessorFactory();
+  proc_fact = new Tools::RandomTreeProcessorFactory(0.33, 0.5);
   dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
 
   dc.RunTurns(learn_runs, true);
