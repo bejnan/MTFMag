@@ -24,7 +24,7 @@ RandomTreeRoot::~RandomTreeRoot() {
 }
 
 void RandomTreeRoot::NotifyContent(int user_id) {
-  TreeRoot::NotifyContent(user_id, ++notification_counter_);
+  TreeRoot::NotifyContent(user_id);
 }
 
 void RandomTreeRoot::MoveElement(int position) {
