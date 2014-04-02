@@ -29,6 +29,17 @@ BOOST_AUTO_TEST_CASE(AddToBase) {
   base.AddToBase(processor_ptr);
 
   BOOST_CHECK_EQUAL(base.Query(1).front(), processor_ptr);
+}
+
+BOOST_AUTO_TEST_CASE(AddToBaseControl) {
+  Base::Database base;
+  Tools::TreeProcessorFactory factory;
+  Tools::MTFProcessorFactory mtf_factory;
+
+  shared_ptr<Tools::Processor> processor_ptr = factory.GenerateProcessor(1);
+  base.AddToBase(processor_ptr);
+
+  BOOST_CHECK_EQUAL(base.Query(1).front(), processor_ptr);
 
   processor_ptr = mtf_factory.GenerateProcessor(2);
   base.AddToBase(processor_ptr);
