@@ -2,7 +2,7 @@
  * DataProviderException.cpp
  *
  *  Created on: Feb 21, 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #include "data_provider_exception.h"

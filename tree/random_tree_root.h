@@ -2,7 +2,7 @@
  * RandomTreeRoot.h
  *
  *  Created on: 3 mar 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #ifndef RANDOMTREEROOT_H_

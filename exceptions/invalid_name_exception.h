@@ -2,7 +2,7 @@
  * InvalidNameException.h
  *
  *  Created on: 21 lut 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #ifndef INVALIDNAMEEXCEPTION_H_

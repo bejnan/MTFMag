@@ -2,7 +2,7 @@
  * SimpleElement.h
  *
  *  Created on: 13 gru 2013
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #ifndef SIMPLEELEMENT_H_

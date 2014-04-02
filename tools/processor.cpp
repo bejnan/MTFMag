@@ -2,7 +2,7 @@
  * Processor.cpp
  *
  *  Created on: Feb 26, 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #include "processor.h"

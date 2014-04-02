@@ -2,7 +2,7 @@
  * DataCollector.h
  *
  *  Created on: Feb 13, 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #ifndef DATACOLLECTOR_H_

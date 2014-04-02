@@ -2,7 +2,7 @@
  * Element.h
  *
  *  Created on: Feb 11, 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #ifndef ELEMENT_H_

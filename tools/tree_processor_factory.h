@@ -2,7 +2,7 @@
  * TreeProcessorFactory.h
  *
  *  Created on: 28 lut 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #ifndef TREEPROCESSORFACTORY_H_

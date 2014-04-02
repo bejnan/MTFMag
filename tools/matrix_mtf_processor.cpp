@@ -2,7 +2,7 @@
  * MatrixMTXProcessor.cpp
  *
  *  Created on: Mar 20, 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #include "matrix_mtf_processor.h"

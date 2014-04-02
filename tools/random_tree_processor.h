@@ -2,7 +2,7 @@
  * RandomTreeProcessor.h
  *
  *  Created on: 3 mar 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #ifndef RANDOMTREEPROCESSOR_H_

@@ -2,7 +2,7 @@
  * MTFProcessor.h
  *
  *  Created on: Mar 2, 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #ifndef MTFPROCESSOR_H_

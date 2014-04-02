@@ -2,7 +2,7 @@
  * MatrixMTXProcessor.h
  *
  *  Created on: Mar 20, 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #ifndef MATRIXMTXPROCESSOR_H_

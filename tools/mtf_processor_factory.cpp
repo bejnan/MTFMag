@@ -2,7 +2,7 @@
  * MTFProcessorFactory.cpp
  *
  *  Created on: Mar 3, 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #include "mtf_processor_factory.h"

@@ -2,7 +2,7 @@
  * ProcessorFactory.h
  *
  *  Created on: Feb 28, 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #ifndef PROCESSORFACTORY_H_

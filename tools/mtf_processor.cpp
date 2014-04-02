@@ -2,7 +2,7 @@
  * MTFProcessor.cpp
  *
  *  Created on: Mar 2, 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #include "mtf_processor.h"

@@ -2,7 +2,7 @@
  * Element.cpp
  *
  *  Created on: Feb 11, 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #include "element.h"

@@ -2,7 +2,7 @@
  * element_test.cpp
  *
  *  Created on: Mar 26, 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #include "simple_element.h"

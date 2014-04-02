@@ -2,7 +2,7 @@
  * InvalidNameException.cpp
  *
  *  Created on: 21 lut 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #include "invalid_name_exception.h"

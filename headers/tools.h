@@ -2,7 +2,7 @@
  * Tools.h
  *
  *  Created on: Feb 11, 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #ifndef TOOLS_H_

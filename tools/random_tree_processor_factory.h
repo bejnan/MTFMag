@@ -2,7 +2,7 @@
  * RandomTreeProcessorFactory.h
  *
  *  Created on: 3 mar 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #ifndef RANDOMTREEPROCESSORFACTORY_H_

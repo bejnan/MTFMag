@@ -2,7 +2,7 @@
  * RandomTreeProcessor.cpp
  *
  *  Created on: 3 mar 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #include "random_tree_processor.h"

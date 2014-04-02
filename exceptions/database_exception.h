@@ -2,7 +2,7 @@
  * DatabaseException.h
  *
  *  Created on: Feb 20, 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #ifndef DATABASEEXCEPTION_H_

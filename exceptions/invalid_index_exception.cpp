@@ -2,7 +2,7 @@
  * InvalidIndexException.cpp
  *
  *  Created on: Feb 20, 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #include "invalid_index_exception.h"

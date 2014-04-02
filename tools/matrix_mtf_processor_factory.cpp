@@ -2,7 +2,7 @@
  * MatrixMTFProcessorFactory.cpp
  *
  *  Created on: Mar 22, 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #include "matrix_mtf_processor_factory.h"

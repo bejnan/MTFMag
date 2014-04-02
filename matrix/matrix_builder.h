@@ -2,7 +2,7 @@
  * MatrixBuilder.h
  *
  *  Created on: Mar 13, 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #ifndef MATRIXBUILDER_H_

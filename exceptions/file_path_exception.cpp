@@ -2,7 +2,7 @@
  * FilepathException.cpp
  *
  *  Created on: Feb 21, 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #include "file_path_exception.h"

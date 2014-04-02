@@ -2,7 +2,7 @@
  * Proccessor.cpp
  *
  *  Created on: Feb 13, 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #include "tree_proccessor.h"

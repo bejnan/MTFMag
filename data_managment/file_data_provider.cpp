@@ -2,7 +2,7 @@
  * FileDataProvider.cpp
  *
  *  Created on: Feb 13, 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #include "file_data_provider.h"

@@ -2,7 +2,7 @@
  * MTFMatrix_test.cpp
  *
  *  Created on: Mar 17, 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 #define BOOST_TEST_DYN_LINK
 

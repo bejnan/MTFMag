@@ -2,7 +2,7 @@
  * main_test.cpp
  *
  *  Created on: 16 gru 2013
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 #define BOOST_TEST_DYN_LINK
 #define BOOST_TEST_MODULE Main

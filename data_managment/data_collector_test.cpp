@@ -2,7 +2,7 @@
  * DataCollector_test.cpp
  *
  *  Created on: Feb 13, 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #include "data_collector.h"
@@ -18,44 +18,54 @@
 
 using std::shared_ptr;
 
+int RunTurnsAndReturnPenalty(int turns, Base::DataCollector& data_collector) {
+  data_collector.RunTurns(turns);
+  vector<pair<string, int> > results = data_collector.GetResultsSum();
+  int result = results.front().second;
+  return result;
+}
+
 BOOST_AUTO_TEST_SUITE(DataCollector)
 
+//Test cooperation between DataCollector object and TreeProcessor
 BOOST_AUTO_TEST_CASE(DataCollectorTreeProcessor) {
-  Base::FileDataProvider fdp("test_input.txt");
-  Base::DataCollector dc(fdp);
+  //initialization
+  Base::FileDataProvider file_data_provider("test_input.txt");
+  Base::DataCollector data_collector(file_data_provider);
   Tools::ProcessorFactory* processor = new Tools::TreeProcessorFactory();
-  dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(processor));
-  dc.RunTurns(23);
-  vector<pair<string, int> > results = dc.GetResultsSum();
-  BOOST_CHECK_EQUAL(results.front().second, 1);
+  shared_ptr<Tools::ProcessorFactory> processors_shared_ptr(processor);
+  data_collector.AddProccessorFactory(processors_shared_ptr);
+  //test
+  int result = RunTurnsAndReturnPenalty(23, data_collector);
+  BOOST_CHECK_EQUAL(result, 1);
 }
 
-BOOST_AUTO_TEST_CASE(DataCollectorTreeProcessor2) {
-  Base::FileDataProvider fdp("test_input.txt");
-  Base::DataCollector dc(fdp);
-  Tools::ProcessorFactory* processor = new Tools::TreeProcessorFactory();
-  dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(processor));
-  dc.RunTurns(46);
-  vector<pair<string, int> > results;
-  vector<pair<string, int> >::iterator result_iter;
-  for (int i = 0; i < 13; i++) {
-    results = dc.GetResult(i);
-    for (result_iter = results.begin(); result_iter != results.end();
-        result_iter++) {
-      BOOST_TEST_MESSAGE(
-          i << " " << (*result_iter).first << " " << (*result_iter).second);
-    }
-  }
-}
-
+//Test cooperation between DataCollector object and MTFProcessor
 BOOST_AUTO_TEST_CASE(DataCollectorMTFProcessor) {
-  Base::FileDataProvider fdp("test_input.txt");
-  Base::DataCollector dc(fdp);
+  //initialization
+  Base::FileDataProvider file_data_provider("test_input.txt");
+  Base::DataCollector data_collector(file_data_provider);
   Tools::ProcessorFactory* processor = new Tools::MTFProcessorFactory();
-  dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(processor));
-  dc.RunTurns(24);
-  vector<pair<string, int> > results = dc.GetResultsSum();
-  BOOST_CHECK_EQUAL(results.front().second, 1);
+  shared_ptr<Tools::ProcessorFactory> processors_shared_ptr(processor);
+  data_collector.AddProccessorFactory(processors_shared_ptr);
+
+  //test
+  int result = RunTurnsAndReturnPenalty(24, data_collector);
+  BOOST_CHECK_EQUAL(result, 1);
+}
+
+//Test cooperation between DataCollector object and MTFMatrixProcessor
+BOOST_AUTO_TEST_CASE(DataCollectorMTFMatrixProcessor) {
+  //initialization
+  Base::FileDataProvider file_data_provider("test_input.txt");
+  Base::DataCollector data_collector(file_data_provider);
+  Tools::ProcessorFactory* processor = new Tools::MatrixMTFProcessorFactory(2);
+  shared_ptr<Tools::ProcessorFactory> processors_shared_ptr(processor);
+  data_collector.AddProccessorFactory(processors_shared_ptr);
+
+  //test
+  int result = RunTurnsAndReturnPenalty(23, data_collector);
+  BOOST_CHECK_EQUAL(result, 1);
 }
 
 BOOST_AUTO_TEST_SUITE_END()

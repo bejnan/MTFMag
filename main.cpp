@@ -2,7 +2,7 @@
 * main.cpp
 *
 * Created on: 25 lut 2014
-* Author: kuba
+* Author: Jakub Banaszewski
 */
 #include <string>
 #include <cstdlib>

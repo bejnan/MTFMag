@@ -2,7 +2,7 @@
  * DatabaseException.cpp
  *
  *  Created on: Feb 20, 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #include "database_exception.h"

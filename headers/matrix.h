@@ -2,7 +2,7 @@
  * Matrix.h
  *
  *  Created on: Mar 17, 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #ifndef MATRIX_H_

@@ -2,7 +2,7 @@
  * MTFProcessorFactory.h
  *
  *  Created on: Mar 3, 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #ifndef MTFPROCESSORFACTORY_H_

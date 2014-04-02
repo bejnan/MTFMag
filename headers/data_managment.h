@@ -2,7 +2,7 @@
  * DataManagment.h
  *
  *  Created on: 25 lut 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #ifndef DATAMANAGMENT_H_

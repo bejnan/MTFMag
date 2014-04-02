@@ -2,7 +2,7 @@
  * MatrixMTFProcessorFactory.h
  *
  *  Created on: Mar 22, 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #ifndef MATRIXMTFPROCESSORFACTORY_H_

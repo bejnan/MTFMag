@@ -2,7 +2,7 @@
  * MatrixBuilder.cpp
  *
  *  Created on: Mar 13, 2014
- *      Author: kuba
+ *      Author: Jakub Banaszewski
  */
 
 #include "matrix_builder.h"
