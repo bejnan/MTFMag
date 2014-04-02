@@ -33,7 +33,7 @@ BOOST_AUTO_TEST_CASE(AddingTest) {
   root.AddElement(3);
 }
 
-BOOST_AUTO_TEST_CASE(RootTest) {
+BOOST_AUTO_TEST_CASE(NotifySimpleRotationTest) {
 
   Tree::TreeRoot root(Base::SimpleElement::GetPrototype());
 
@@ -49,7 +49,7 @@ BOOST_AUTO_TEST_CASE(RootTest) {
   BOOST_CHECK_EQUAL(root.GetContentPosition(3), 1);
 }
 
-BOOST_AUTO_TEST_CASE(NotifyTest) {
+BOOST_AUTO_TEST_CASE(NotifyDoubleRotationTest) {
 
   Tree::TreeRoot root(Base::SimpleElement::GetPrototype());
 
@@ -72,7 +72,8 @@ BOOST_AUTO_TEST_CASE(NotifyTest) {
 
 }
 
-BOOST_AUTO_TEST_CASE(RandomTreeTest) {
+//Test checks if RandomTreeRoot doent's lose elements
+BOOST_AUTO_TEST_CASE(RandomTreeAddAndNotificationTest) {
   Tree::RandomTreeRoot r_root(Base::SimpleElement::GetPrototype());
 
   for (int i = 1; i < 10; i++)
@@ -98,11 +99,14 @@ BOOST_AUTO_TEST_CASE(RandomTreeTest) {
 
 }
 
-BOOST_AUTO_TEST_CASE(TreeTest) {
+//Test checks if TreeRoot doent's lose elements on longer distance
+BOOST_AUTO_TEST_CASE(TreeCompleteTest) {
   const int TEST_LIMIT = 20;
+
   Tree::TreeRoot root(Base::SimpleElement::GetPrototype());
   default_random_engine generator;
   uniform_int_distribution<int> distribution(1, TEST_LIMIT - 1);
+
   for (int i = 1; i < TEST_LIMIT; i++)
     root.AddElement(i);
 
@@ -124,11 +128,15 @@ BOOST_AUTO_TEST_CASE(TreeTest) {
   }
 
 }
-BOOST_AUTO_TEST_CASE(RandomTreeTest2) {
+
+//Test checks if RandomTreeRoot doesn't lose elements on longer distance
+BOOST_AUTO_TEST_CASE(RandomTreeComplete) {
   const int TEST_LIMIT = 20;
+
   Tree::RandomTreeRoot root(Base::SimpleElement::GetPrototype());
   default_random_engine generator;
   uniform_int_distribution<int> distribution(1, TEST_LIMIT - 1);
+
   for (int i = 1; i < TEST_LIMIT; i++)
     root.AddElement(i);
 

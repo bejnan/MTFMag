@@ -20,13 +20,17 @@ using std::shared_ptr;
 //TODO test more processors
 BOOST_AUTO_TEST_SUITE(Proccessor)
 
-BOOST_AUTO_TEST_CASE(ProceedTest1) {
+//Test to check TreeProcessor correctness
+BOOST_AUTO_TEST_CASE(TreeProcessorProceedTest) {
   Tools::TreeProcessorFactory factory;
   shared_ptr<Tools::Processor>  processor = factory.GenerateProcessor(0);
   for (int i = 0; i < 21; i++) {
     processor->Proceed(i);
   }
+  // all elements should fill first 20 positions
   BOOST_CHECK_EQUAL(processor->GetPenalty(), 0);
+
+  // shows increase of penalty
   for (int i = 20; i >= 0; i--) {
     processor->Proceed(i);
     BOOST_TEST_MESSAGE(i << " " << processor->GetPenalty() );
