@@ -41,16 +41,14 @@ void DataCollector::RunTurns(int turn_amount, bool learn) {
   }
 }
 
-vector<pair<string, int> > DataCollector::GetResult(int user_id) {
+vector<int> DataCollector::GetResult(int user_id) {
   vector<shared_ptr<Tools::Processor> >& processors = processors_base_.Query(
       user_id);
   vector<shared_ptr<Tools::Processor> >::const_iterator processor_iterator;
-  vector<pair<string, int> > results;
+  vector<int> results;
   for (processor_iterator = processors.begin();
       processor_iterator != processors.end(); processor_iterator++) {
-    results.push_back(
-        make_pair((*processor_iterator)->identifier(),
-                  (*processor_iterator)->GetPenalty()));
+    results.push_back((*processor_iterator)->GetPenalty());
   }
   return results;
 }
@@ -59,22 +57,27 @@ int SumPenalties(int acc, shared_ptr<Tools::Processor> processor) {
   return acc + processor->GetPenalty();
 }
 
-vector<pair<string, int> > DataCollector::GetResultsSum() {
+vector<int> DataCollector::GetResultsSum() {
   vector<string> names = processors_base_.QueryKeys();
   vector<shared_ptr<Tools::Processor> > results;
-  vector<pair<string, int> > resultsSum;
+  vector<int> resultsSum;
   int algorithms_sum = 0;
   for (vector<string>::const_iterator names_iterator = names.begin();
       names_iterator != names.end(); names_iterator++) {
     results = processors_base_.Query(*names_iterator);
     algorithms_sum = accumulate(results.begin(), results.end(), 0,
                                 SumPenalties);
-    resultsSum.push_back(make_pair(*names_iterator, algorithms_sum));
+    resultsSum.push_back(algorithms_sum);
   }
   return resultsSum;
 }
 
-void DataCollector::RunProcessor(int user_sender_id, int user_receiver_id, bool learn) {
+vector<string> DataCollector::GetAlgorithmsNames() {
+  return processors_base_.QueryKeys();
+}
+
+void DataCollector::RunProcessor(int user_sender_id, int user_receiver_id,
+                                 bool learn) {
   if (!processors_base_.Exists(user_sender_id)) {
     AddProcessorsFromFactories(user_sender_id);
   }

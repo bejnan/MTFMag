@@ -33,9 +33,12 @@ class DataCollector {
   // learn - count no penalty (learn about user)
   virtual void RunTurns(int turn_amount, bool learn = false);
   // Return list of algorithms with their results for defined user
-  virtual vector<pair<string, int> > GetResult(int userId);
+  virtual vector<int> GetResult(int userId);
   // Return overall result of algorithms
-  virtual vector<pair<string, int> > GetResultsSum();
+  virtual vector<int> GetResultsSum();
+  // Return algorithms names
+  virtual vector<string> GetAlgorithmsNames();
+
  private:
   // Run processor with given id and signal to receiver_id
   void RunProcessor(int id, int receiver_id, bool learn = false);
