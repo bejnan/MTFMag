@@ -8,6 +8,10 @@
 #ifndef DATA_OUTPUT_H_
 #define DATA_OUTPUT_H_
 
+#include <vector>
+
+using std::vector;
+
 namespace Base {
 
 /**
@@ -15,8 +19,11 @@ namespace Base {
  */
 class DataOutput {
  public:
-  virtual ~DataOutput() {}
-  virtual void PrintLine() = 0;
+  virtual ~DataOutput() {
+  }
+  // print verse of results
+  virtual void PrintLine(vector<int>& results) = 0;
+  // print titles of columns
   virtual void PrintTitles() = 0;
 };
 
