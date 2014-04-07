@@ -9,8 +9,11 @@
 #define DATA_OUTPUT_H_
 
 #include <vector>
+#include <iostream>
 
+using std::ostream;
 using std::vector;
+using std::cout;
 
 namespace Base {
 
@@ -19,12 +22,16 @@ namespace Base {
  */
 class DataOutput {
  public:
-  virtual ~DataOutput() {
-  }
+  virtual ~DataOutput() { }
   // print verse of results
   virtual void PrintLine(vector<int>& results) = 0;
   // print titles of columns
   virtual void PrintTitles() = 0;
+
+ protected:
+  // method return stream to write to
+  virtual ostream& GetOutputStream() { return cout; }
+  ;
 };
 
 } /* namespace Base */

@@ -20,8 +20,8 @@ using std::shared_ptr;
 
 int RunTurnsAndReturnPenalty(int turns, Base::DataCollector& data_collector) {
   data_collector.RunTurns(turns);
-  vector<pair<string, int> > results = data_collector.GetResultsSum();
-  int result = results.front().second;
+  vector<int> results = data_collector.GetResultsSum();
+  int result = results.front();
   return result;
 }
 

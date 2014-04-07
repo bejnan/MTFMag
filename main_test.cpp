@@ -50,16 +50,16 @@ BOOST_AUTO_TEST_CASE(True_test) {
   dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
 
   dc.RunTurns(learn_runs, true);
-  vector<pair<string, int> > results;
+  vector<int> results;
   stringstream ss;
   //TODO!!!
   for (int i = 0; i < test_runs / step_size; i++) {
     dc.RunTurns(step_size);
     results = dc.GetResultsSum();
     ss << i * step_size << " ";
-    for (vector<pair<string, int> >::iterator results_iter = results.begin();
+    for (vector<int>::iterator results_iter = results.begin();
         results_iter != results.end(); results_iter++) {
-      ss << (*results_iter).first << " " << (*results_iter).second << " ";
+      ss << (*results_iter) << "  ";
     }
     BOOST_TEST_MESSAGE(ss.str());
     ss.str("");
@@ -67,9 +67,9 @@ BOOST_AUTO_TEST_CASE(True_test) {
   int rest = test_runs - (test_runs / step_size) * step_size;
   if (rest > 0) {
     dc.RunTurns(rest);
-    for (vector<pair<string, int> >::iterator results_iter = results.begin();
+    for (vector<int>::iterator results_iter = results.begin();
         results_iter != results.end(); results_iter++) {
-      ss << (*results_iter).first << " " << (*results_iter).second << " ";
+      ss << (*results_iter) << " ";
     }
     BOOST_TEST_MESSAGE(ss.str());
   }
