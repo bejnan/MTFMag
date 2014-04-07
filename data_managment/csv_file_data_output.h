@@ -16,7 +16,7 @@ namespace Base {
 class CsvFileDataOutput : public Base::FileDataOutput,
     public Base::CsvDataOutput {
  public:
-  CsvFileDataOutput(string file_path);
+  CsvFileDataOutput(string file_path, char seperator='|');
   ~CsvFileDataOutput();
   using CsvDataOutput::PrintLine;
   using CsvDataOutput::PrintTitles;

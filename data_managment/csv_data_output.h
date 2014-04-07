@@ -26,7 +26,7 @@ namespace Base {
  */
 class CsvDataOutput : public virtual DataOutput {
  public:
-  CsvDataOutput();
+  CsvDataOutput(char seperator = '|');
   virtual ~CsvDataOutput();
   virtual void PrintLine(vector<int>& results);
   virtual void PrintTitles();

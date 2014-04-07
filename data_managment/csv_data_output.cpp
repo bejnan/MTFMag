@@ -9,8 +9,8 @@
 
 namespace Base {
 
-CsvDataOutput::CsvDataOutput()
-    : SEPERATOR('|') {
+CsvDataOutput::CsvDataOutput(char seperator)
+    : SEPERATOR(seperator) {
 }
 
 void CsvDataOutput::PrintLine(vector<int>& results) {
