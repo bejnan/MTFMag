@@ -7,6 +7,7 @@
 
 #include "data_collector.h"
 #include "file_data_provider.h"
+#include "data_output_builder.h"
 
 #include "../headers/tools.h"
 #include "../headers/exceptions.h"
@@ -31,7 +32,11 @@ BOOST_AUTO_TEST_SUITE(DataCollector)
 BOOST_AUTO_TEST_CASE(DataCollectorTreeProcessor) {
   //initialization
   Base::FileDataProvider file_data_provider("test_input.txt");
-  Base::DataCollector data_collector(file_data_provider);
+  shared_ptr<Base::DataOutputBuilder> data_output_builder =
+      Base::DataOutputBuilder::GetInstance();
+  data_output_builder->SetCsvOutputFormat('|');
+  Base::DataCollector data_collector(file_data_provider,
+                                     data_output_builder->Generate());
   Tools::ProcessorFactory* processor = new Tools::TreeProcessorFactory();
   shared_ptr<Tools::ProcessorFactory> processors_shared_ptr(processor);
   data_collector.AddProccessorFactory(processors_shared_ptr);
@@ -44,7 +49,11 @@ BOOST_AUTO_TEST_CASE(DataCollectorTreeProcessor) {
 BOOST_AUTO_TEST_CASE(DataCollectorMTFProcessor) {
   //initialization
   Base::FileDataProvider file_data_provider("test_input.txt");
-  Base::DataCollector data_collector(file_data_provider);
+  shared_ptr<Base::DataOutputBuilder> data_output_builder =
+      Base::DataOutputBuilder::GetInstance();
+  data_output_builder->SetCsvOutputFormat('|');
+  Base::DataCollector data_collector(file_data_provider,
+                                     data_output_builder->Generate());
   Tools::ProcessorFactory* processor = new Tools::MTFProcessorFactory();
   shared_ptr<Tools::ProcessorFactory> processors_shared_ptr(processor);
   data_collector.AddProccessorFactory(processors_shared_ptr);
@@ -58,7 +67,12 @@ BOOST_AUTO_TEST_CASE(DataCollectorMTFProcessor) {
 BOOST_AUTO_TEST_CASE(DataCollectorMTFMatrixProcessor) {
   //initialization
   Base::FileDataProvider file_data_provider("test_input.txt");
-  Base::DataCollector data_collector(file_data_provider);
+  shared_ptr<Base::DataOutputBuilder> data_output_builder =
+      Base::DataOutputBuilder::GetInstance();
+  data_output_builder->SetCsvOutputFormat('|');
+  Base::DataCollector data_collector(file_data_provider,
+                                     data_output_builder->Generate());
+
   Tools::ProcessorFactory* processor = new Tools::MatrixMTFProcessorFactory(2);
   shared_ptr<Tools::ProcessorFactory> processors_shared_ptr(processor);
   data_collector.AddProccessorFactory(processors_shared_ptr);

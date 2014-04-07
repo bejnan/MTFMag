@@ -7,17 +7,11 @@
 
 #include "data_collector.h"
 
-#include <sstream>
-#include <algorithm>
-
-using std::accumulate;
-using std::stringstream;
-using std::make_pair;
-
 namespace Base {
 
-DataCollector::DataCollector(DataProvider& data_input)
-    : data_input_(data_input) {
+DataCollector::DataCollector(DataProvider& data_input, shared_ptr<DataOutput> data_output)
+    : data_input_(data_input),
+      data_output_(data_output) {
 }
 
 DataCollector::~DataCollector() {
@@ -39,6 +33,15 @@ void DataCollector::RunTurns(int turn_amount, bool learn) {
     input_line_stream >> interaction >> timestamp >> sender_id >> receiver_id;
     RunProcessor(sender_id, receiver_id, learn);
   }
+}
+
+void DataCollector::PrintActualResults() {
+  if (!data_output_->AreTitlesPrinted())
+  {
+    data_output_->SetColumnTitles(GetAlgorithmsNames());
+    data_output_->PrintColumnTitles();
+  }
+  data_output_->PrintLine(GetResultsSum());
 }
 
 vector<int> DataCollector::GetResult(int user_id) {

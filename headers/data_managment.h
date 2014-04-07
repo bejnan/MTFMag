@@ -12,5 +12,6 @@
 #include "../data_managment/data_provider.h"
 #include "../data_managment/database.h"
 #include "../data_managment/file_data_provider.h"
+#include "../data_managment/data_output_builder.h"
 
 #endif /* DATAMANAGMENT_H_ */

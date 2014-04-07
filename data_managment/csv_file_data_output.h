@@ -19,7 +19,9 @@ class CsvFileDataOutput : public Base::FileDataOutput,
   CsvFileDataOutput(string file_path, char seperator='|');
   ~CsvFileDataOutput();
   using CsvDataOutput::PrintLine;
-  using CsvDataOutput::PrintTitles;
+  using CsvDataOutput::PrintColumnTitles;
+  using CsvDataOutput::SetColumnTitles;
+  using CsvDataOutput::AreTitlesPrinted;
 
  protected:
   using FileDataOutput::GetOutputStream;

@@ -10,14 +10,21 @@
 
 #include "data_provider.h"
 #include "database.h"
+#include "data_output.h"
 #include "../headers/tools.h"
 
+#include <sstream>
+#include <algorithm>
 #include <memory>
 #include <vector>
 
+using std::accumulate;
+using std::stringstream;
 using std::vector;
 using std::shared_ptr;
 using std::pair;
+using std::make_pair;
+
 namespace Base {
 /*
  * Class to connect all elements.
@@ -25,13 +32,16 @@ namespace Base {
  */
 class DataCollector {
  public:
-  DataCollector(DataProvider& data_input);
+  DataCollector(DataProvider& data_input, shared_ptr<DataOutput> data_output);
   virtual ~DataCollector();
   // Add processor factory to list
   virtual void AddProccessorFactory(shared_ptr<Tools::ProcessorFactory> proc);
   // turn_amount describes how many lines of input will be used.
   // learn - count no penalty (learn about user)
   virtual void RunTurns(int turn_amount, bool learn = false);
+  // Puts actual results using DataOutput instance
+  virtual void PrintActualResults();
+
   // Return list of algorithms with their results for defined user
   virtual vector<int> GetResult(int userId);
   // Return overall result of algorithms
@@ -43,9 +53,11 @@ class DataCollector {
   // Run processor with given id and signal to receiver_id
   void RunProcessor(int id, int receiver_id, bool learn = false);
   void AddProcessorsFromFactories(int id);
+
   DataProvider& data_input_;
+  shared_ptr<DataOutput> data_output_;
   Database processors_base_;
-  vector< shared_ptr<Tools::ProcessorFactory> > processor_factories_;
+  vector<shared_ptr<Tools::ProcessorFactory> > processor_factories_;
 };
 
 } /* namespace Tree */

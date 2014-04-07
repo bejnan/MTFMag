@@ -8,7 +8,7 @@
 #define BOOST_TEST_MODULE Main
 
 #include <boost/test/unit_test.hpp>
-#include<memory>
+#include <memory>
 #include <string>
 #include <cstdlib>
 #include <iostream>
@@ -18,6 +18,7 @@
 using std::string;
 using std::stringstream;
 using std::cout;
+using std::shared_ptr;
 
 using namespace Base;
 using namespace std;
@@ -38,8 +39,11 @@ BOOST_AUTO_TEST_CASE(True_test) {
   int learn_runs = 0;
   int test_runs = 1000;
 
-  FileDataProvider fdp(path);
-  DataCollector dc(fdp);
+  Base::FileDataProvider file_data_provider(path);
+  shared_ptr<Base::DataOutputBuilder> data_output_builder =
+      Base::DataOutputBuilder::GetInstance();
+  data_output_builder->SetCsvOutputFormat('|');
+  Base::DataCollector dc(file_data_provider, data_output_builder->Generate());
   Tools::ProcessorFactory* proc_fact = new Tools::TreeProcessorFactory();
   dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
 

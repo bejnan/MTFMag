@@ -10,10 +10,11 @@
 namespace Base {
 
 CsvDataOutput::CsvDataOutput(char seperator)
-    : SEPERATOR(seperator) {
+    : are_titles_printed_(false),
+      SEPERATOR(seperator) {
 }
 
-void CsvDataOutput::PrintLine(vector<int>& results) {
+void CsvDataOutput::PrintLine(vector<int> results) {
   vector<int>::iterator result_iterator;
 
   for (result_iterator = results.begin(); result_iterator != results.end();
@@ -23,7 +24,7 @@ void CsvDataOutput::PrintLine(vector<int>& results) {
   GetOutputStream() << "\n";
 }
 
-void CsvDataOutput::PrintTitles() {
+void CsvDataOutput::PrintColumnTitles() {
   vector<string>::iterator titles_iterator;
 
   for (titles_iterator = titles_names_.begin();
@@ -32,6 +33,11 @@ void CsvDataOutput::PrintTitles() {
 
   }
   GetOutputStream() << "\n";
+  are_titles_printed_ = true;
+}
+
+void CsvDataOutput::SetColumnTitles(vector<string> titles) {
+  titles_names_ = titles;
 }
 
 CsvDataOutput::~CsvDataOutput() {

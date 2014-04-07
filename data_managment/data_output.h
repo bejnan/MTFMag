@@ -10,10 +10,12 @@
 
 #include <vector>
 #include <iostream>
+#include <string>
 
 using std::ostream;
 using std::vector;
 using std::cout;
+using std::string;
 
 namespace Base {
 
@@ -24,9 +26,13 @@ class DataOutput {
  public:
   virtual ~DataOutput() { }
   // print verse of results
-  virtual void PrintLine(vector<int>& results) = 0;
+  virtual void PrintLine(vector<int> results) = 0;
   // print titles of columns
-  virtual void PrintTitles() = 0;
+  virtual void PrintColumnTitles() = 0;
+  // set titles of columns
+  virtual void SetColumnTitles(vector<string> titles) = 0;
+  // check if column titles are printed
+  virtual bool AreTitlesPrinted() = 0;
 
  protected:
   // method return stream to write to
