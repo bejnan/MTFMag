@@ -1,9 +1,9 @@
 /*
-* main.cpp
-*
-* Created on: 25 lut 2014
-* Author: Jakub Banaszewski
-*/
+ * main.cpp
+ *
+ * Created on: 25 lut 2014
+ * Author: Jakub Banaszewski
+ */
 #include <string>
 #include <cstdlib>
 #include <iostream>
@@ -26,8 +26,11 @@ int main(int argc, char** argv) {
   if (argc > 4) {
     step_size = atoi(argv[4]);
   }
-  FileDataProvider fdp(path);
-  DataCollector dc(fdp);
+  Base::FileDataProvider file_data_provider(path);
+  shared_ptr<Base::DataOutputBuilder> data_output_builder =
+      Base::DataOutputBuilder::GetInstance();
+  data_output_builder->SetCsvOutputFormat('|');
+  Base::DataCollector dc(file_data_provider, data_output_builder->Generate());
   Tools::ProcessorFactory* proc_fact = new Tools::TreeProcessorFactory();
   dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
 
@@ -35,25 +38,15 @@ int main(int argc, char** argv) {
   dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
 
   dc.RunTurns(learn_runs, true);
-  vector<pair<string, int> > results;
+
   for (int i = 0; i < test_runs / step_size; i++) {
     dc.RunTurns(step_size);
-    results = dc.GetResultsSum();
-    cout << i * step_size << " ";
-    for (vector<pair<string, int> >::iterator results_iter = results.begin();
-        results_iter != results.end(); results_iter++) {
-      cout << (*results_iter).first << " " << (*results_iter).second << " ";
-    }
-    cout << "\n";
+    dc.PrintActualResults(step_size * (i + 1));
   }
   int rest = test_runs - (test_runs / step_size) * step_size;
   if (rest > 0) {
     dc.RunTurns(rest);
-    for (vector<pair<string, int> >::iterator results_iter = results.begin();
-        results_iter != results.end(); results_iter++) {
-      cout << (*results_iter).first << " " << (*results_iter).second << " ";
-    }
-    cout << "\n";
+    dc.PrintActualResults(test_runs);
   }
   return 0;
 }

@@ -35,13 +35,13 @@ void DataCollector::RunTurns(int turn_amount, bool learn) {
   }
 }
 
-void DataCollector::PrintActualResults() {
+void DataCollector::PrintActualResults(int turns) {
   if (!data_output_->AreTitlesPrinted())
   {
     data_output_->SetColumnTitles(GetAlgorithmsNames());
     data_output_->PrintColumnTitles();
   }
-  data_output_->PrintLine(GetResultsSum());
+  data_output_->PrintLine(turns, GetResultsSum());
 }
 
 vector<int> DataCollector::GetResult(int user_id) {

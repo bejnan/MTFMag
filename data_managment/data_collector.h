@@ -40,7 +40,7 @@ class DataCollector {
   // learn - count no penalty (learn about user)
   virtual void RunTurns(int turn_amount, bool learn = false);
   // Puts actual results using DataOutput instance
-  virtual void PrintActualResults();
+  virtual void PrintActualResults(int turns);
 
   // Return list of algorithms with their results for defined user
   virtual vector<int> GetResult(int userId);

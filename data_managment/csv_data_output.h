@@ -28,7 +28,7 @@ class CsvDataOutput : public virtual DataOutput {
  public:
   CsvDataOutput(char seperator = '|');
   virtual ~CsvDataOutput();
-  virtual void PrintLine(vector<int> results);
+  virtual void PrintLine(int turns_count, vector<int> results);
   virtual void PrintColumnTitles();
   virtual void SetColumnTitles(vector<string> titles);
   virtual bool AreTitlesPrinted() { return are_titles_printed_; }

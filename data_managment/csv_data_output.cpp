@@ -14,8 +14,9 @@ CsvDataOutput::CsvDataOutput(char seperator)
       SEPERATOR(seperator) {
 }
 
-void CsvDataOutput::PrintLine(vector<int> results) {
+void CsvDataOutput::PrintLine(int turns_count, vector<int> results) {
   vector<int>::iterator result_iterator;
+  GetOutputStream() << turns_count << SEPERATOR;
 
   for (result_iterator = results.begin(); result_iterator != results.end();
       result_iterator++) {
@@ -26,6 +27,7 @@ void CsvDataOutput::PrintLine(vector<int> results) {
 
 void CsvDataOutput::PrintColumnTitles() {
   vector<string>::iterator titles_iterator;
+  GetOutputStream() << "Turns" << SEPERATOR;
 
   for (titles_iterator = titles_names_.begin();
       titles_iterator != titles_names_.end(); titles_iterator++) {

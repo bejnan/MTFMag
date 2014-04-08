@@ -26,7 +26,7 @@ class DataOutput {
  public:
   virtual ~DataOutput() { }
   // print verse of results
-  virtual void PrintLine(vector<int> results) = 0;
+  virtual void PrintLine(int turns_count, vector<int> results) = 0;
   // print titles of columns
   virtual void PrintColumnTitles() = 0;
   // set titles of columns
