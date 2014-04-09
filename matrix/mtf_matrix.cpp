@@ -31,7 +31,7 @@ void MTFMatrix::NotifyContent(int user_id) {
   int position = id_position_.at(user_id);
   MoveFromPositionToFront(position);
 }
-
+//TODO use sorted element list!!
 int MTFMatrix::GetContentPosition(int user_id) {
   return (id_position_.at(user_id) + 1);
 }
