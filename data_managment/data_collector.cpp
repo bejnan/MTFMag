@@ -9,9 +9,11 @@
 
 namespace Base {
 
-DataCollector::DataCollector(DataProvider& data_input, shared_ptr<DataOutput> data_output)
+DataCollector::DataCollector(DataProvider& data_input,
+                             shared_ptr<DataOutput> data_output)
     : data_input_(data_input),
-      data_output_(data_output) {
+      data_output_(data_output),
+      turns_already_proceed(0) {
 }
 
 DataCollector::~DataCollector() {
@@ -33,15 +35,17 @@ void DataCollector::RunTurns(int turn_amount, bool learn) {
     input_line_stream >> interaction >> timestamp >> sender_id >> receiver_id;
     RunProcessor(sender_id, receiver_id, learn);
   }
+  if (!learn) {
+    turns_already_proceed += turn_amount;
+  }
 }
 
-void DataCollector::PrintActualResults(int turns) {
-  if (!data_output_->AreTitlesPrinted())
-  {
+void DataCollector::PrintActualResults() {
+  if (!data_output_->AreTitlesPrinted()) {
     data_output_->SetColumnTitles(GetAlgorithmsNames());
     data_output_->PrintColumnTitles();
   }
-  data_output_->PrintLine(turns, GetResultsSum());
+  data_output_->PrintLine(turns_already_proceed, GetResultsSum());
 }
 
 vector<int> DataCollector::GetResult(int user_id) {

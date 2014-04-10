@@ -21,41 +21,76 @@ using std::make_pair;
 namespace Base {
 /**
  * Class to connect all parts of algorithms.
- *  *\dot
+ *\dot
  * digraph G {
  * DataCollector -> Database;
  * DataCollector -> DataProvider;
  * DataCollector -> DataOutput;
  * DataCollector -> ProcessorFactory;
  *
- * Database -> Processor;
+ * Database         -> Processor;
  * ProcessorFactory -> Processor;
  *
  * DataProvider -> FileDataProvider;
- * DataOutput -> CsvDataOutput;
- * DataOuptut -> CsvFileDataOutput;
+ * DataOutput   -> CsvDataOutput;
+ * DataOutput   -> CsvFileDataOutput;
  *
  * Processor -> Tester;
- *
+ * Processor -> Algorithms;
  * }
  *\enddot
  * It provides data to Processors and print penalties.
+ * It also generates Processors for every user, object, contact (id) that comes
+ * from DataProvider.
+ *\dot
+ * digraph H {
+ * DataProvider      -> DataCollector [label = " New user_id"] ;
+ * DataCollector     -> ProcessorFactory [label = " New user_id"];
+ * ProcessorFactory  -> Database [label = " New Processor with given user_id"];
+ * }
+ *\enddot
+ * ProcessorFactiories are needed to generate Processors for
+ * every user (user_id) that comes from DataProvider.
+ * Every ProcessorFactiory represents one algorithm.
  *
  */
 class DataCollector {
  public:
-  DataCollector(DataProvider& data_input, shared_ptr<DataOutput> data_output);
-  virtual ~DataCollector();
   /**
-   *
-   * @param proc
+   * Constructor responsible for initialization all connected objects except
+   * objects given as parameters
+   * @param data_input  Data input to proceed
+   * @param data_output Output for results
    */
-  virtual void AddProccessorFactory(shared_ptr<Tools::ProcessorFactory> proc);
-  // turn_amount describes how many lines of input will be used.
-  // learn - count no penalty (learn about user)
+  DataCollector(DataProvider& data_input, shared_ptr<DataOutput> data_output);
+
+  /**
+   * Default destructor. No object need to be deleted or handled in special way.
+   */
+  virtual ~DataCollector();
+
+  /**
+   * Method to add ProcessorFactory to generate new Processors
+   * @see ProcessorFactory
+   * @see Processor
+   * @param procesor_factory_ptr Pointer to ProcessorFactory which will be
+   * added to processor_factories_ vector
+   */
+  virtual void AddProccessorFactory(shared_ptr<Tools::ProcessorFactory> procesor_factory_ptr);
+
+  /**
+   * Method to run Processors. Every turn means one line of input is read
+   * and proceed by Processors.
+   * @param turn_amount   Number of input line to proceed
+   * @param learn         If true then no penalty is added.
+   */
   virtual void RunTurns(int turn_amount, bool learn = false);
-  // Puts actual results using DataOutput instance
-  virtual void PrintActualResults(int turns);
+
+  /**
+   * Method prints one line of results using DataOutput instance
+   * @see DataOutput
+   */
+  virtual void PrintActualResults();
 
   // Return list of algorithms with their results for defined user
   virtual vector<int> GetResult(int user_id);
@@ -73,6 +108,7 @@ class DataCollector {
   shared_ptr<DataOutput> data_output_;
   Database processors_base_;
   vector<shared_ptr<Tools::ProcessorFactory> > processor_factories_;
+  int turns_already_proceed;
 };
 
 } /* namespace Tree */
