@@ -1,10 +1,3 @@
-/*
- * data_output.h
- *
- *  Created on: Apr 3, 2014
- *      Author: kuba
- */
-
 #ifndef DATA_OUTPUT_H_
 #define DATA_OUTPUT_H_
 
@@ -20,24 +13,49 @@ using std::string;
 namespace Base {
 
 /**
- * Interface for printing results
+ * Interface for printing results. Used in DataCollector for
+ * creating output of tested algorithms.
  */
 class DataOutput {
  public:
-  virtual ~DataOutput() { }
-  // print verse of results
+
+  /**
+   * Empty destructor
+   */
+  virtual ~DataOutput() {  }
+
+  /**
+   * Print single line of results.
+   * @param turns_count   First column of output, number of passed turns(tests)
+   * @param results       Vector of
+   */
   virtual void PrintLine(int turns_count, vector<int> results) = 0;
-  // print titles of columns
+
+  /**
+   * Print titles of columns
+   */
   virtual void PrintColumnTitles() = 0;
-  // set titles of columns
+
+  /**
+   * Setter for titles_names_
+   * @param titles Titles which replaces titles_names_
+   */
   virtual void SetColumnTitles(vector<string> titles) = 0;
-  // check if column titles are printed
+
+  /**
+   * Getter for are_titles_printed
+   * @return True if method PrintColumnTitles() was used before, false otherwise
+   */
   virtual bool AreTitlesPrinted() = 0;
 
  protected:
-  // method return stream to write to
-  virtual ostream& GetOutputStream() { return cout; }
-  ;
+  /**
+   * Method to get stream for output. It is used only by delivery classes.
+   * @return Default stream is standard output stream
+   */
+  virtual ostream& GetOutputStream() {
+    return cout;
+  }
 };
 
 } /* namespace Base */

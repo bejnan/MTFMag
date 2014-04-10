@@ -1,10 +1,3 @@
-/*
- * DataCollector.h
- *
- *  Created on: Feb 13, 2014
- *      Author: Jakub Banaszewski
- */
-
 #ifndef DATACOLLECTOR_H_
 #define DATACOLLECTOR_H_
 
@@ -26,15 +19,37 @@ using std::pair;
 using std::make_pair;
 
 namespace Base {
-/*
- * Class to connect all elements.
- * It provides data to Processors and check penalties
+/**
+ * Class to connect all parts of algorithms.
+ *  *\dot
+ * digraph G {
+ * DataCollector -> Database;
+ * DataCollector -> DataProvider;
+ * DataCollector -> DataOutput;
+ * DataCollector -> ProcessorFactory;
+ *
+ * Database -> Processor;
+ * ProcessorFactory -> Processor;
+ *
+ * DataProvider -> FileDataProvider;
+ * DataOutput -> CsvDataOutput;
+ * DataOuptut -> CsvFileDataOutput;
+ *
+ * Processor -> Tester;
+ *
+ * }
+ *\enddot
+ * It provides data to Processors and print penalties.
+ *
  */
 class DataCollector {
  public:
   DataCollector(DataProvider& data_input, shared_ptr<DataOutput> data_output);
   virtual ~DataCollector();
-  // Add processor factory to list
+  /**
+   *
+   * @param proc
+   */
   virtual void AddProccessorFactory(shared_ptr<Tools::ProcessorFactory> proc);
   // turn_amount describes how many lines of input will be used.
   // learn - count no penalty (learn about user)
@@ -43,7 +58,7 @@ class DataCollector {
   virtual void PrintActualResults(int turns);
 
   // Return list of algorithms with their results for defined user
-  virtual vector<int> GetResult(int userId);
+  virtual vector<int> GetResult(int user_id);
   // Return overall result of algorithms
   virtual vector<int> GetResultsSum();
   // Return algorithms names

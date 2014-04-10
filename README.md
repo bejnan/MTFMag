@@ -6,9 +6,10 @@ algorithm with original one.
 
 1. Problem :
 
-Let take single mobile phone. Every one of as uses contacts do call our friends. But which contacts
+Lets take single mobile phone. Every one of as uses contacts do call our friends. But which contacts
 should be available at hand? Move To Front is one of the best algorithms in this subject, but can it works better?  
 Aim of project is to create MTF modifications, which can be better than MTF itself.
+Another example are contacts in GMail, Facebook and so on.
 
 2. Common names : (* means part of class name)
 
@@ -20,6 +21,7 @@ Every file has similar name as class inside (data_output -> DataOutput)
 	*DataProvider 		- Classes to read input data
 	*Element			- Classes to represent single object (user, id, contact)
 	  
+	user_id				- It is identifier of contact, user, object which should be on list
 
 Classes with Data prefix are responsible for data deliver (DataProvider), handle data (DataCollector)
 and prepare data output (DataOutput).

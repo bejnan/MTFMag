@@ -17,7 +17,7 @@ using std::shared_ptr;
 
 namespace Matrix {
 /**
- * Class to build MTFMatrix using Builder pattern.
+ * Class to build MTFMatrix with appropriate parameters.
  */
 class MatrixBuilder {
 

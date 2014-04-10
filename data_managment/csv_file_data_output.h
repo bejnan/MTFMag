@@ -1,10 +1,3 @@
-/*
- * CsvFileDataOutput.h
- *
- *  Created on: Apr 7, 2014
- *      Author: kuba
- */
-
 #ifndef CSVFILEDATAOUTPUT_H_
 #define CSVFILEDATAOUTPUT_H_
 
@@ -13,10 +6,20 @@
 
 namespace Base {
 
+/**
+ * Class to produce output in output file in format CSV.
+ * It has two parent class from which it uses methods.
+ * It doesn't have any own method except from contructor.
+ */
 class CsvFileDataOutput : public Base::FileDataOutput,
     public Base::CsvDataOutput {
  public:
-  CsvFileDataOutput(string file_path, char seperator='|');
+  /**
+   * Constructor with parameters for parent classes.
+   * @param file_path Needed for FileDataOutput
+   * @param separator Needed for CsvDataOutput
+   */
+  CsvFileDataOutput(string file_path, char separator='|');
   ~CsvFileDataOutput();
   using CsvDataOutput::PrintLine;
   using CsvDataOutput::PrintColumnTitles;

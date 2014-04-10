@@ -1,10 +1,3 @@
-/*
- * CsvDataOutput.h
- *
- *  Created on: Apr 3, 2014
- *      Author: kuba
- */
-
 #ifndef CSVDATAOUTPUT_H_
 #define CSVDATAOUTPUT_H_
 
@@ -22,26 +15,44 @@ using std::shared_ptr;
 namespace Base {
 
 /**
- * Tool to write output data as csv file
+ * Printer of output in CSV format.
+ * Virtual inheritance used to enable multiple inheritance
+ * by child classes @see CsvFileDataOutput
+ * @author Jakub Banaszewski
  */
 class CsvDataOutput : public virtual DataOutput {
  public:
-  CsvDataOutput(char seperator = '|');
+
+  /**
+   * Constructor setting default values of class values
+   * @param separator Char to separate columns of data
+   */
+  CsvDataOutput(char separator = '|');
+
+  /**
+   * Default destructor
+   */
   virtual ~CsvDataOutput();
+
   virtual void PrintLine(int turns_count, vector<int> results);
+
   virtual void PrintColumnTitles();
+
   virtual void SetColumnTitles(vector<string> titles);
-  virtual bool AreTitlesPrinted() { return are_titles_printed_; }
+
+  virtual bool AreTitlesPrinted() {
+    return are_titles_printed_;
+  }
 
  protected:
   using DataOutput::GetOutputStream;
 
  private:
-  // names of titles of columns (algorithm names)
-  vector<string> titles_names_;
-  bool are_titles_printed_;
-  // separator of elements in file
-  const char SEPERATOR;
+  vector<string> titles_names_; /**< names of titles of columns
+                                   (algorithm names) */
+  bool are_titles_printed_; /**< Bool to remember decision
+                                 if PrintColumnTitles was used*/
+  const char SEPARATOR;     /**< Separator of result columns */
 };
 
 } /* namespace Base */

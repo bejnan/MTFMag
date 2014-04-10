@@ -9,9 +9,9 @@
 
 namespace Base {
 
-CsvFileDataOutput::CsvFileDataOutput(string file_path, char seperator)
+CsvFileDataOutput::CsvFileDataOutput(string file_path, char separator)
     : FileDataOutput(file_path),
-      CsvDataOutput(seperator) {
+      CsvDataOutput(separator) {
 }
 
 CsvFileDataOutput::~CsvFileDataOutput() {
