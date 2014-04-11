@@ -144,20 +144,22 @@ $(document).ready(function(){initNavTree('data__collector_8h_source.html','');})
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keyword">virtual</span> vector&lt;string&gt; <a class="code" href="classBase_1_1DataCollector.html#a52bf3c7c4a610191acd56fa8628ac758">GetAlgorithmsNames</a>();</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="comment">// Run processor with given id and signal to receiver_id</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordtype">void</span> RunProcessor(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">int</span> receiver_id, <span class="keywordtype">bool</span> learn = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordtype">void</span> AddProcessorsFromFactories(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <a class="code" href="classBase_1_1DataProvider.html">DataProvider</a>&amp; data_input_;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  shared_ptr&lt;DataOutput&gt; data_output_;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <a class="code" href="classBase_1_1Database.html">Database</a> processors_base_;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  vector&lt;shared_ptr&lt;Tools::ProcessorFactory&gt; &gt; processor_factories_;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="keywordtype">int</span> turns_already_proceed;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;};</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keywordtype">void</span> RunProcessor(<span class="keywordtype">int</span> user_id, <span class="keywordtype">int</span> receiver_id, <span class="keywordtype">bool</span> learn = <span class="keyword">false</span>);</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;} <span class="comment">/* namespace Tree */</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DATACOLLECTOR_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordtype">void</span> AddProcessorsFromFactories(<span class="keywordtype">int</span> user_id);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <a class="code" href="classBase_1_1DataProvider.html">DataProvider</a>&amp; data_input_;                  </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  shared_ptr&lt;DataOutput&gt; data_output_;        </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <a class="code" href="classBase_1_1Database.html">Database</a> processors_base_;                  </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  vector&lt;shared_ptr&lt;Tools::ProcessorFactory&gt; &gt;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                        processor_factories_; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <span class="keywordtype">int</span> turns_already_proceed;                  </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;};</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;} <span class="comment">/* namespace Tree */</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DATACOLLECTOR_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="classBase_1_1DataCollector_html_aa882730336c5d171acfaab053698fe7f"><div class="ttname"><a href="classBase_1_1DataCollector.html#aa882730336c5d171acfaab053698fe7f">Base::DataCollector::AddProccessorFactory</a></div><div class="ttdeci">virtual void AddProccessorFactory(shared_ptr&lt; Tools::ProcessorFactory &gt; procesor_factory_ptr)</div><div class="ttdef"><b>Definition:</b> data_collector.cpp:22</div></div>
 <div class="ttc" id="classBase_1_1DataCollector_html_a3f64da07dd97a418061c7f6e24dd422c"><div class="ttname"><a href="classBase_1_1DataCollector.html#a3f64da07dd97a418061c7f6e24dd422c">Base::DataCollector::DataCollector</a></div><div class="ttdeci">DataCollector(DataProvider &amp;data_input, shared_ptr&lt; DataOutput &gt; data_output)</div><div class="ttdef"><b>Definition:</b> data_collector.cpp:12</div></div>
 <div class="ttc" id="classBase_1_1DataCollector_html_afb1d46273c24e3e1fdefba6b730ebf28"><div class="ttname"><a href="classBase_1_1DataCollector.html#afb1d46273c24e3e1fdefba6b730ebf28">Base::DataCollector::PrintActualResults</a></div><div class="ttdeci">virtual void PrintActualResults()</div><div class="ttdef"><b>Definition:</b> data_collector.cpp:43</div></div>
@@ -175,7 +177,7 @@ $(document).ready(function(){initNavTree('data__collector_8h_source.html','');})
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_f0e6881722a589d71e14e9eaa0b61330.html">data_managment</a></li><li class="navelem"><b>data_collector.h</b></li>
-    <li class="footer">Generated on Fri Apr 11 2014 11:54:54 for MTFthesisstudies by
+    <li class="footer">Generated on Fri Apr 11 2014 19:48:46 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

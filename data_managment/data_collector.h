@@ -28,13 +28,13 @@ namespace Base {
  * DataCollector -> DataOutput;
  * DataCollector -> ProcessorFactory;
  *
- * Database         -> Processor;
  * ProcessorFactory -> Processor;
  *
  * DataProvider -> FileDataProvider;
  * DataOutput   -> CsvDataOutput;
  * DataOutput   -> CsvFileDataOutput;
  *
+ * Processor -> Database;
  * Processor -> Tester;
  * Processor -> Algorithms;
  * }
@@ -114,15 +114,37 @@ class DataCollector {
   virtual vector<string> GetAlgorithmsNames();
 
  private:
-  // Run processor with given id and signal to receiver_id
-  void RunProcessor(int id, int receiver_id, bool learn = false);
-  void AddProcessorsFromFactories(int id);
 
-  DataProvider& data_input_;
-  shared_ptr<DataOutput> data_output_;
-  Database processors_base_;
-  vector<shared_ptr<Tools::ProcessorFactory> > processor_factories_;
-  int turns_already_proceed;
+  /**
+   * Method used by RunTurns to run Processors from Database
+   * @param user_id       Id of contact which sends message
+   * @param receiver_id   Id of receiver of message
+   * @param learn         If learn is true no penalty is counted
+   * @see Processor
+   * @see Database
+   */
+  void RunProcessor(int user_id, int receiver_id, bool learn = false);
+
+  /**
+   * If sender of massage is new then DataCollector have to create new
+   * Processors for this user using ProcessorFactories from
+   * processor_factories_ vector;
+   * @param user_id Id of user to create
+   */
+  void AddProcessorsFromFactories(int user_id);
+
+  DataProvider& data_input_;                  /**< Source of data to proceed */
+  shared_ptr<DataOutput> data_output_;        /**< Pointer to result printer */
+  Database processors_base_;                  /**< Collector of Processors   */
+
+  vector<shared_ptr<Tools::ProcessorFactory> >
+                        processor_factories_; /**< Container with
+                        ProcessorFactories used to create new
+                        Processors for new users                 */
+
+  int turns_already_proceed;                  /**< Counter of turns
+                        (lines of input) already proceed without learn
+                        parameter set true                       */
 };
 
 } /* namespace Tree */

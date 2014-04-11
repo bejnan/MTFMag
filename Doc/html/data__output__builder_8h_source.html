@@ -126,37 +126,44 @@ $(document).ready(function(){initNavTree('data__output__builder_8h_source.html',
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">namespace </span>Base {</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classBase_1_1DataOutputBuilder.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBase_1_1DataOutputBuilder.html">DataOutputBuilder</a> {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classBase_1_1DataOutputBuilder.html">DataOutputBuilder</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classBase_1_1DataOutputBuilder.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBase_1_1DataOutputBuilder.html">DataOutputBuilder</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">static</span> shared_ptr&lt;DataOutputBuilder&gt; GetInstance();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="comment">// Set builder to generate data output with file output</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <a class="code" href="classBase_1_1DataOutputBuilder.html">DataOutputBuilder</a>&amp; UseFile(<span class="keywordtype">string</span> file_path);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="comment">// Set builder to generate data output in csv format</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="classBase_1_1DataOutputBuilder.html">DataOutputBuilder</a>&amp; SetCsvOutputFormat(<span class="keywordtype">char</span> seperator);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="comment">// Method to generate appropriate instance of DataOutput</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  shared_ptr&lt;DataOutput&gt; Generate();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="classBase_1_1DataOutputBuilder.html">DataOutputBuilder</a>();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordtype">string</span> file_path_;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordtype">bool</span> use_file_;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">char</span> seperator_;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">bool</span> use_csv_format_;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;} <span class="comment">/* namespace Base */</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DATA_OUTPUT_BUILDER_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="classBase_1_1DataOutputBuilder_html"><div class="ttname"><a href="classBase_1_1DataOutputBuilder.html">Base::DataOutputBuilder</a></div><div class="ttdef"><b>Definition:</b> data_output_builder.h:26</div></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classBase_1_1DataOutputBuilder.html#a1547e921dd1d6edb45cc7731e26bc149">~DataOutputBuilder</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">static</span> shared_ptr&lt;DataOutputBuilder&gt; <a class="code" href="classBase_1_1DataOutputBuilder.html#ac539cb418e81584a12c261604996e41e">GetInstance</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <a class="code" href="classBase_1_1DataOutputBuilder.html">DataOutputBuilder</a>&amp; <a class="code" href="classBase_1_1DataOutputBuilder.html#ac5ed5b644a72572f094cf1d5fc1c87f0">UseFile</a>(<span class="keywordtype">string</span> file_path);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <a class="code" href="classBase_1_1DataOutputBuilder.html">DataOutputBuilder</a>&amp; <a class="code" href="classBase_1_1DataOutputBuilder.html#aa810b27e23dee1c035e61947c96ef628">SetCsvOutputFormat</a>(<span class="keywordtype">char</span> separator);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  shared_ptr&lt;DataOutput&gt; <a class="code" href="classBase_1_1DataOutputBuilder.html#a00f565346533b666eb3fa74c155370e6">Generate</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <a class="code" href="classBase_1_1DataOutputBuilder.html">DataOutputBuilder</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordtype">string</span> file_path_;    </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordtype">bool</span> use_file_;       </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">char</span> separator_;      </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">bool</span> use_csv_format_; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;} <span class="comment">/* namespace Base */</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DATA_OUTPUT_BUILDER_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="classBase_1_1DataOutputBuilder_html_ac5ed5b644a72572f094cf1d5fc1c87f0"><div class="ttname"><a href="classBase_1_1DataOutputBuilder.html#ac5ed5b644a72572f094cf1d5fc1c87f0">Base::DataOutputBuilder::UseFile</a></div><div class="ttdeci">DataOutputBuilder &amp; UseFile(string file_path)</div><div class="ttdef"><b>Definition:</b> data_output_builder.cpp:27</div></div>
+<div class="ttc" id="classBase_1_1DataOutputBuilder_html"><div class="ttname"><a href="classBase_1_1DataOutputBuilder.html">Base::DataOutputBuilder</a></div><div class="ttdef"><b>Definition:</b> data_output_builder.h:27</div></div>
+<div class="ttc" id="classBase_1_1DataOutputBuilder_html_a1547e921dd1d6edb45cc7731e26bc149"><div class="ttname"><a href="classBase_1_1DataOutputBuilder.html#a1547e921dd1d6edb45cc7731e26bc149">Base::DataOutputBuilder::~DataOutputBuilder</a></div><div class="ttdeci">virtual ~DataOutputBuilder()</div><div class="ttdef"><b>Definition:</b> data_output_builder.cpp:19</div></div>
+<div class="ttc" id="classBase_1_1DataOutputBuilder_html_aa810b27e23dee1c035e61947c96ef628"><div class="ttname"><a href="classBase_1_1DataOutputBuilder.html#aa810b27e23dee1c035e61947c96ef628">Base::DataOutputBuilder::SetCsvOutputFormat</a></div><div class="ttdeci">DataOutputBuilder &amp; SetCsvOutputFormat(char separator)</div><div class="ttdef"><b>Definition:</b> data_output_builder.cpp:33</div></div>
+<div class="ttc" id="classBase_1_1DataOutputBuilder_html_a00f565346533b666eb3fa74c155370e6"><div class="ttname"><a href="classBase_1_1DataOutputBuilder.html#a00f565346533b666eb3fa74c155370e6">Base::DataOutputBuilder::Generate</a></div><div class="ttdeci">shared_ptr&lt; DataOutput &gt; Generate()</div><div class="ttdef"><b>Definition:</b> data_output_builder.cpp:39</div></div>
+<div class="ttc" id="classBase_1_1DataOutputBuilder_html_ac539cb418e81584a12c261604996e41e"><div class="ttname"><a href="classBase_1_1DataOutputBuilder.html#ac539cb418e81584a12c261604996e41e">Base::DataOutputBuilder::GetInstance</a></div><div class="ttdeci">static shared_ptr&lt; DataOutputBuilder &gt; GetInstance()</div><div class="ttdef"><b>Definition:</b> data_output_builder.cpp:22</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_f0e6881722a589d71e14e9eaa0b61330.html">data_managment</a></li><li class="navelem"><b>data_output_builder.h</b></li>
-    <li class="footer">Generated on Fri Apr 11 2014 11:54:54 for MTFthesisstudies by
+    <li class="footer">Generated on Fri Apr 11 2014 19:48:46 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

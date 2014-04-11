@@ -104,6 +104,8 @@ $(document).ready(function(){initNavTree('classBase_1_1DataOutputBuilder.html','
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classBase_1_1DataOutputBuilder-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Base::DataOutputBuilder Class Reference</div>  </div>
@@ -111,9 +113,150 @@ $(document).ready(function(){initNavTree('classBase_1_1DataOutputBuilder.html','
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="data__output__builder_8h_source.html">data_output_builder.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a1547e921dd1d6edb45cc7731e26bc149"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1DataOutputBuilder.html#a1547e921dd1d6edb45cc7731e26bc149">~DataOutputBuilder</a> ()</td></tr>
+<tr class="separator:a1547e921dd1d6edb45cc7731e26bc149"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5ed5b644a72572f094cf1d5fc1c87f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBase_1_1DataOutputBuilder.html">DataOutputBuilder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1DataOutputBuilder.html#ac5ed5b644a72572f094cf1d5fc1c87f0">UseFile</a> (string file_path)</td></tr>
+<tr class="separator:ac5ed5b644a72572f094cf1d5fc1c87f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa810b27e23dee1c035e61947c96ef628"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBase_1_1DataOutputBuilder.html">DataOutputBuilder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1DataOutputBuilder.html#aa810b27e23dee1c035e61947c96ef628">SetCsvOutputFormat</a> (char separator)</td></tr>
+<tr class="separator:aa810b27e23dee1c035e61947c96ef628"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00f565346533b666eb3fa74c155370e6"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classBase_1_1DataOutput.html">DataOutput</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1DataOutputBuilder.html#a00f565346533b666eb3fa74c155370e6">Generate</a> ()</td></tr>
+<tr class="separator:a00f565346533b666eb3fa74c155370e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ac539cb418e81584a12c261604996e41e"><td class="memItemLeft" align="right" valign="top">static shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="classBase_1_1DataOutputBuilder.html">DataOutputBuilder</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1DataOutputBuilder.html#ac539cb418e81584a12c261604996e41e">GetInstance</a> ()</td></tr>
+<tr class="separator:ac539cb418e81584a12c261604996e41e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class generating <a class="el" href="classBase_1_1DataOutput.html">DataOutput</a> instances using Build pattern. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<div class="textblock"><p>Generates <a class="el" href="classBase_1_1DataOutput.html">DataOutput</a> instances. This class should be replace by another mechanism. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a1547e921dd1d6edb45cc7731e26bc149"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Base::DataOutputBuilder::~DataOutputBuilder </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Default destructor (nothing to handle) </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a00f565346533b666eb3fa74c155370e6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">shared_ptr&lt; <a class="el" href="classBase_1_1DataOutput.html">DataOutput</a> &gt; Base::DataOutputBuilder::Generate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Generates <a class="el" href="classBase_1_1DataOutput.html">DataOutput</a> with chosen features </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classBase_1_1DataOutput.html">DataOutput</a> pointer. Instance of <a class="el" href="classBase_1_1DataOutput.html">DataOutput</a> depends of class setting. </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classBase_1_1DataOutput.html">DataOutput</a> </dd>
+<dd>
+<a class="el" href="classBase_1_1CsvDataOutput.html">CsvDataOutput</a> </dd>
+<dd>
+<a class="el" href="classBase_1_1CsvFileDataOutput.html">CsvFileDataOutput</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac539cb418e81584a12c261604996e41e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">shared_ptr&lt; <a class="el" href="classBase_1_1DataOutputBuilder.html">DataOutputBuilder</a> &gt; Base::DataOutputBuilder::GetInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates pointer to <a class="el" href="classBase_1_1DataOutputBuilder.html">DataOutputBuilder</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>Fresh instance of <a class="el" href="classBase_1_1DataOutputBuilder.html">DataOutputBuilder</a> with default settings </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa810b27e23dee1c035e61947c96ef628"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classBase_1_1DataOutputBuilder.html">DataOutputBuilder</a> &amp; Base::DataOutputBuilder::SetCsvOutputFormat </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>separator</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Generated <a class="el" href="classBase_1_1DataOutput.html">DataOutput</a> will use CSV output format (be instance if <a class="el" href="classBase_1_1CsvDataOutput.html">CsvDataOutput</a> class) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">separator</td><td>Separator between columns </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to <a class="el" href="classBase_1_1DataOutputBuilder.html">DataOutputBuilder</a> </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classBase_1_1CsvDataOutput.html">CsvDataOutput</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac5ed5b644a72572f094cf1d5fc1c87f0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classBase_1_1DataOutputBuilder.html">DataOutputBuilder</a> &amp; Base::DataOutputBuilder::UseFile </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>file_path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Generated <a class="el" href="classBase_1_1DataOutput.html">DataOutput</a> will use file as output (be instance of FileDataOuput class) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file_path</td><td>Path to file </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference used to <a class="el" href="classBase_1_1DataOutputBuilder.html">DataOutputBuilder</a> </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classBase_1_1FileDataOutput.html">FileDataOutput</a> </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>data_managment/<a class="el" href="data__output__builder_8h_source.html">data_output_builder.h</a></li>
 <li>data_managment/data_output_builder.cpp</li>
 </ul>
@@ -123,7 +266,7 @@ $(document).ready(function(){initNavTree('classBase_1_1DataOutputBuilder.html','
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>Base</b></li><li class="navelem"><a class="el" href="classBase_1_1DataOutputBuilder.html">DataOutputBuilder</a></li>
-    <li class="footer">Generated on Fri Apr 11 2014 11:54:55 for MTFthesisstudies by
+    <li class="footer">Generated on Fri Apr 11 2014 19:48:47 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

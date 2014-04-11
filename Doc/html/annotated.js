@@ -5,7 +5,7 @@ var annotated =
       [ "CsvFileDataOutput", "classBase_1_1CsvFileDataOutput.html", "classBase_1_1CsvFileDataOutput" ],
       [ "DataCollector", "classBase_1_1DataCollector.html", "classBase_1_1DataCollector" ],
       [ "DataOutput", "classBase_1_1DataOutput.html", "classBase_1_1DataOutput" ],
-      [ "DataOutputBuilder", "classBase_1_1DataOutputBuilder.html", null ],
+      [ "DataOutputBuilder", "classBase_1_1DataOutputBuilder.html", "classBase_1_1DataOutputBuilder" ],
       [ "DataProvider", "classBase_1_1DataProvider.html", null ],
       [ "Database", "classBase_1_1Database.html", null ],
       [ "FileDataOutput", "classBase_1_1FileDataOutput.html", "classBase_1_1FileDataOutput" ]
