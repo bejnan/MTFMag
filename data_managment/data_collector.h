@@ -92,11 +92,25 @@ class DataCollector {
    */
   virtual void PrintActualResults();
 
-  // Return list of algorithms with their results for defined user
+  /**
+   * Method to get penalty for one user. Every position on vector represents penalty
+   * counted for corresponding algorithm
+   * @param user_id Choosen user
+   * @return Vector of results for given algorithms
+   */
   virtual vector<int> GetResult(int user_id);
-  // Return overall result of algorithms
+
+  /**
+   * Method to get penalty sum of every user for every algorithm. Every position on vector represents penalty
+   * counted for corresponding algorithm.
+   * @return Vector of sum results for given algorithms
+   */
   virtual vector<int> GetResultsSum();
-  // Return algorithms names
+
+  /**
+   * Method to get names of algorithms put by ProcessorFatories to processor_factories_ vector;
+   * @return Algorithm names placed in DataCollector
+   */
   virtual vector<string> GetAlgorithmsNames();
 
  private:

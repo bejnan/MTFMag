@@ -1,0 +1,163 @@
+\hypertarget{classBase_1_1CsvDataOutput}{\section{Base\-:\-:Csv\-Data\-Output Class Reference}
+\label{classBase_1_1CsvDataOutput}\index{Base\-::\-Csv\-Data\-Output@{Base\-::\-Csv\-Data\-Output}}
+}
+
+
+{\ttfamily \#include $<$csv\-\_\-data\-\_\-output.\-h$>$}
+
+
+
+Inheritance diagram for Base\-:\-:Csv\-Data\-Output\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classBase_1_1CsvDataOutput__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Base\-:\-:Csv\-Data\-Output\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{classBase_1_1CsvDataOutput__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBase_1_1CsvDataOutput_acbedd47083f64caaafc2a33336bef869}{Csv\-Data\-Output} (char separator= '$\vert$')
+\item 
+virtual \hyperlink{classBase_1_1CsvDataOutput_ac1fbaa916fb293fea40e772397450b5f}{$\sim$\-Csv\-Data\-Output} ()
+\item 
+virtual void \hyperlink{classBase_1_1CsvDataOutput_a88994527237735d1d6a05cec3b222ba7}{Print\-Line} (int turns\-\_\-count, vector$<$ int $>$ results)
+\item 
+virtual void \hyperlink{classBase_1_1CsvDataOutput_aa54484865cd138cf49b5aa5b9ef813d5}{Print\-Column\-Titles} ()
+\item 
+virtual void \hyperlink{classBase_1_1CsvDataOutput_a9302a89524b164d440280bc1c90c90d3}{Set\-Column\-Titles} (vector$<$ string $>$ titles)
+\item 
+virtual bool \hyperlink{classBase_1_1CsvDataOutput_aaa4e604ce1d06ee002889b2604faf4e4}{Are\-Titles\-Printed} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Printer of output in C\-S\-V format. Virtual inheritance used to enable multiple inheritance by child classes \begin{DoxySeeAlso}{See Also}
+\hyperlink{classBase_1_1CsvFileDataOutput}{Csv\-File\-Data\-Output} 
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Jakub Banaszewski 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBase_1_1CsvDataOutput_acbedd47083f64caaafc2a33336bef869}{\index{Base\-::\-Csv\-Data\-Output@{Base\-::\-Csv\-Data\-Output}!Csv\-Data\-Output@{Csv\-Data\-Output}}
+\index{Csv\-Data\-Output@{Csv\-Data\-Output}!Base::CsvDataOutput@{Base\-::\-Csv\-Data\-Output}}
+\subsubsection[{Csv\-Data\-Output}]{\setlength{\rightskip}{0pt plus 5cm}Base\-::\-Csv\-Data\-Output\-::\-Csv\-Data\-Output (
+\begin{DoxyParamCaption}
+\item[{char}]{separator = {\ttfamily '$\vert$'}}
+\end{DoxyParamCaption}
+)}}\label{classBase_1_1CsvDataOutput_acbedd47083f64caaafc2a33336bef869}
+Constructor setting default values of class values 
+\begin{DoxyParams}{Parameters}
+{\em separator} & Char to separate columns of data \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBase_1_1CsvDataOutput_ac1fbaa916fb293fea40e772397450b5f}{\index{Base\-::\-Csv\-Data\-Output@{Base\-::\-Csv\-Data\-Output}!$\sim$\-Csv\-Data\-Output@{$\sim$\-Csv\-Data\-Output}}
+\index{$\sim$\-Csv\-Data\-Output@{$\sim$\-Csv\-Data\-Output}!Base::CsvDataOutput@{Base\-::\-Csv\-Data\-Output}}
+\subsubsection[{$\sim$\-Csv\-Data\-Output}]{\setlength{\rightskip}{0pt plus 5cm}Base\-::\-Csv\-Data\-Output\-::$\sim$\-Csv\-Data\-Output (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBase_1_1CsvDataOutput_ac1fbaa916fb293fea40e772397450b5f}
+Default destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBase_1_1CsvDataOutput_aaa4e604ce1d06ee002889b2604faf4e4}{\index{Base\-::\-Csv\-Data\-Output@{Base\-::\-Csv\-Data\-Output}!Are\-Titles\-Printed@{Are\-Titles\-Printed}}
+\index{Are\-Titles\-Printed@{Are\-Titles\-Printed}!Base::CsvDataOutput@{Base\-::\-Csv\-Data\-Output}}
+\subsubsection[{Are\-Titles\-Printed}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Base\-::\-Csv\-Data\-Output\-::\-Are\-Titles\-Printed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBase_1_1CsvDataOutput_aaa4e604ce1d06ee002889b2604faf4e4}
+Getter for are\-\_\-titles\-\_\-printed \begin{DoxyReturn}{Returns}
+True if method \hyperlink{classBase_1_1CsvDataOutput_aa54484865cd138cf49b5aa5b9ef813d5}{Print\-Column\-Titles()} was used before, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBase_1_1DataOutput_aa201a3a18e148803cc3384af60acda60}{Base\-::\-Data\-Output}.
+
+\hypertarget{classBase_1_1CsvDataOutput_aa54484865cd138cf49b5aa5b9ef813d5}{\index{Base\-::\-Csv\-Data\-Output@{Base\-::\-Csv\-Data\-Output}!Print\-Column\-Titles@{Print\-Column\-Titles}}
+\index{Print\-Column\-Titles@{Print\-Column\-Titles}!Base::CsvDataOutput@{Base\-::\-Csv\-Data\-Output}}
+\subsubsection[{Print\-Column\-Titles}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-::\-Csv\-Data\-Output\-::\-Print\-Column\-Titles (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBase_1_1CsvDataOutput_aa54484865cd138cf49b5aa5b9ef813d5}
+Print titles of columns 
+
+Implements \hyperlink{classBase_1_1DataOutput_a0f1a6127945492d692629120575e7f82}{Base\-::\-Data\-Output}.
+
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBase_1_1CsvDataOutput_aa54484865cd138cf49b5aa5b9ef813d5_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classBase_1_1CsvDataOutput_a88994527237735d1d6a05cec3b222ba7}{\index{Base\-::\-Csv\-Data\-Output@{Base\-::\-Csv\-Data\-Output}!Print\-Line@{Print\-Line}}
+\index{Print\-Line@{Print\-Line}!Base::CsvDataOutput@{Base\-::\-Csv\-Data\-Output}}
+\subsubsection[{Print\-Line}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-::\-Csv\-Data\-Output\-::\-Print\-Line (
+\begin{DoxyParamCaption}
+\item[{int}]{turns\-\_\-count, }
+\item[{vector$<$ int $>$}]{results}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBase_1_1CsvDataOutput_a88994527237735d1d6a05cec3b222ba7}
+Print single line of results. 
+\begin{DoxyParams}{Parameters}
+{\em turns\-\_\-count} & First column of output, number of passed turns(tests) \\
+\hline
+{\em results} & Vector of \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBase_1_1DataOutput_afdb91464e7559dedf69c56c1b862a216}{Base\-::\-Data\-Output}.
+
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBase_1_1CsvDataOutput_a88994527237735d1d6a05cec3b222ba7_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classBase_1_1CsvDataOutput_a9302a89524b164d440280bc1c90c90d3}{\index{Base\-::\-Csv\-Data\-Output@{Base\-::\-Csv\-Data\-Output}!Set\-Column\-Titles@{Set\-Column\-Titles}}
+\index{Set\-Column\-Titles@{Set\-Column\-Titles}!Base::CsvDataOutput@{Base\-::\-Csv\-Data\-Output}}
+\subsubsection[{Set\-Column\-Titles}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-::\-Csv\-Data\-Output\-::\-Set\-Column\-Titles (
+\begin{DoxyParamCaption}
+\item[{vector$<$ string $>$}]{titles}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBase_1_1CsvDataOutput_a9302a89524b164d440280bc1c90c90d3}
+Setter for titles\-\_\-names\-\_\- 
+\begin{DoxyParams}{Parameters}
+{\em titles} & Titles which replaces titles\-\_\-names\-\_\- \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBase_1_1DataOutput_a368f0c022e828cd3f29085e10e70b113}{Base\-::\-Data\-Output}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+data\-\_\-managment/csv\-\_\-data\-\_\-output.\-h\item 
+data\-\_\-managment/csv\-\_\-data\-\_\-output.\-cpp\end{DoxyCompactItemize}
