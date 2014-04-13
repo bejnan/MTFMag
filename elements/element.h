@@ -42,10 +42,16 @@ class Element {
    * Method to Compare two elements. Used to order
    * elements between themselves
    * @param elem Element to compare
-   * @return 0 if elements are equal
+   * @return 0 if elements are equal, negative value if given element have
+   * bigger value, positive otherwise
    */
   virtual int Compare(Element& elem);
-  // Difference between elements
+
+  /**
+   *
+   * @param elem
+   * @return
+   */
   virtual double Difference(Element& elem);
   // Notify user choice
   virtual void Notify(int update_counter = 0) { }
