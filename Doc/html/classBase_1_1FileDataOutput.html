@@ -104,6 +104,7 @@ $(document).ready(function(){initNavTree('classBase_1_1FileDataOutput.html','');
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classBase_1_1FileDataOutput-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -127,13 +128,12 @@ Collaboration diagram for Base::FileDataOutput:</div>
 <area shape="rect" id="node2" href="classBase_1_1DataOutput.html" title="Base::DataOutput" alt="" coords="16,5,145,32"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:ae541a6775f2a1641b85e47f610618cd0"><td class="memItemLeft" align="right" valign="top">virtual ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1FileDataOutput.html#ae541a6775f2a1641b85e47f610618cd0">GetOutputStream</a> ()</td></tr>
-<tr class="separator:ae541a6775f2a1641b85e47f610618cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:afa8434a2e291803e4081b3b86d753784"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1FileDataOutput.html#afa8434a2e291803e4081b3b86d753784">FileDataOutput</a> (string file_path)</td></tr>
+<tr class="separator:afa8434a2e291803e4081b3b86d753784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1e66d4e025d8cab70b8cfda9ba0f981"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1FileDataOutput.html#ab1e66d4e025d8cab70b8cfda9ba0f981">~FileDataOutput</a> ()</td></tr>
+<tr class="separator:ab1e66d4e025d8cab70b8cfda9ba0f981"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classBase_1_1DataOutput"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classBase_1_1DataOutput')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classBase_1_1DataOutput.html">Base::DataOutput</a></td></tr>
 <tr class="memitem:afbf4de9aafb25ccc5a9a1565b29565ec inherit pub_methods_classBase_1_1DataOutput"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1DataOutput.html#afbf4de9aafb25ccc5a9a1565b29565ec">~DataOutput</a> ()</td></tr>
 <tr class="separator:afbf4de9aafb25ccc5a9a1565b29565ec inherit pub_methods_classBase_1_1DataOutput"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,10 +145,64 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a368f0c022e828cd3f29085e10e70b113 inherit pub_methods_classBase_1_1DataOutput"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa201a3a18e148803cc3384af60acda60 inherit pub_methods_classBase_1_1DataOutput"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1DataOutput.html#aa201a3a18e148803cc3384af60acda60">AreTitlesPrinted</a> ()=0</td></tr>
 <tr class="separator:aa201a3a18e148803cc3384af60acda60 inherit pub_methods_classBase_1_1DataOutput"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:ae541a6775f2a1641b85e47f610618cd0"><td class="memItemLeft" align="right" valign="top">virtual ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1FileDataOutput.html#ae541a6775f2a1641b85e47f610618cd0">GetOutputStream</a> ()</td></tr>
+<tr class="separator:ae541a6775f2a1641b85e47f610618cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Role of this class is to provide output stream which write to file and take care of it. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><p>Role of this class (partly interface) is to provide output stream which write to file and take care of it. It doesn't provide implementation for print methods from <a class="el" href="classBase_1_1DataOutput.html">DataOutput</a> </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classBase_1_1DataOutput.html">DataOutput</a> </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="afa8434a2e291803e4081b3b86d753784"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Base::FileDataOutput::FileDataOutput </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>file_path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Contructor opens file and stream for output. Parameter is needed to point file to open or create. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file_path</td><td>Path to output file </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab1e66d4e025d8cab70b8cfda9ba0f981"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Base::FileDataOutput::~FileDataOutput </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Destructor closes stream and file. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="ae541a6775f2a1641b85e47f610618cd0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -169,8 +223,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Method to get stream for output. It is used only by delivery classes. </p>
-<dl class="section return"><dt>Returns</dt><dd>Default stream is standard output stream </dd></dl>
+<p>The only implemented method in this class. It provides every child class ready stream to write to file. </p>
+<dl class="section return"><dt>Returns</dt><dd>Stream which put output in file from given path. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classBase_1_1DataOutput.html#adea8f6af278e2e8ace25ba64d9bf9a57">Base::DataOutput</a>.</p>
 
@@ -186,7 +240,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>Base</b></li><li class="navelem"><a class="el" href="classBase_1_1FileDataOutput.html">FileDataOutput</a></li>
-    <li class="footer">Generated on Fri Apr 11 2014 19:48:47 for MTFthesisstudies by
+    <li class="footer">Generated on Sun Apr 13 2014 16:05:16 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

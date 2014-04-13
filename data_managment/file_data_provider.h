@@ -13,22 +13,36 @@
 #include<cstring>
 
 namespace Base {
-/*
- * Class provides data read from input file
+/**
+ * Class provides data read from input file.
+ * It implements DataProvider interface.
+ * It reads input file given by path in constructor
+ * line by line.
  */
 class FileDataProvider : public DataProvider {
  public:
-  // file_path - path to input file
+
+  /**
+   * Constructor opens file pointed by given path.
+   * Important note! Read lines are empty after initialization.
+   * To read first line method GoToNextLine have to be called.
+   * @param file_path Absolute path to source file
+   */
   FileDataProvider(string file_path);
+
+  /**
+   * Default destructor closes file.
+   */
   virtual ~FileDataProvider();
   virtual string GetActualLine();
   virtual string GetLineBefore();
   virtual void GoToNextLine();
+
  private :
-  const string file_path_;
-  string actual_line_;
-  string line_before_;
-  FILE* input_file_;
+  const string file_path_; /**< Path to source file    */
+  string actual_line_;     /**< Last read line         */
+  string line_before_;     /**< Line read before       */
+  FILE* input_file_;       /**< Pointer to opened file */
 };
 
 } /* namespace Tree */

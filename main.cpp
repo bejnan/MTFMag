@@ -41,12 +41,12 @@ int main(int argc, char** argv) {
 
   for (int i = 0; i < test_runs / step_size; i++) {
     dc.RunTurns(step_size);
-    dc.PrintActualResults(step_size * (i + 1));
+    dc.PrintActualResults();
   }
   int rest = test_runs - (test_runs / step_size) * step_size;
   if (rest > 0) {
     dc.RunTurns(rest);
-    dc.PrintActualResults(test_runs);
+    dc.PrintActualResults();
   }
   return 0;
 }

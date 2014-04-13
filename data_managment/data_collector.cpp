@@ -65,7 +65,7 @@ int SumPenalties(int acc, shared_ptr<Tools::Processor> processor) {
 }
 
 vector<int> DataCollector::GetResultsSum() {
-  vector<string> names = processors_base_.QueryKeys();
+  vector<string> names = processors_base_.QueryAlgorithmNames();
   vector<shared_ptr<Tools::Processor> > results;
   vector<int> resultsSum;
   int algorithms_sum = 0;
@@ -80,7 +80,7 @@ vector<int> DataCollector::GetResultsSum() {
 }
 
 vector<string> DataCollector::GetAlgorithmsNames() {
-  return processors_base_.QueryKeys();
+  return processors_base_.QueryAlgorithmNames();
 }
 
 void DataCollector::RunProcessor(int user_sender_id, int user_receiver_id,

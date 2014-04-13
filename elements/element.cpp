@@ -22,10 +22,8 @@ shared_ptr<Base::Element> Element::GetPrototype() {
 }
 
 int Element::Compare(Element& elem) {
-  if (user_id_ == elem.user_id_)
-    return 0;
-  else
-    return -1;
+  return user_id_ - elem.user_id_; // only
+
 }
 
 double Element::Difference(Element& elem) {

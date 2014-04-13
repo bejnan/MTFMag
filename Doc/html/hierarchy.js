@@ -11,7 +11,9 @@ var hierarchy =
       ] ]
     ] ],
     [ "Base::DataOutputBuilder", "classBase_1_1DataOutputBuilder.html", null ],
-    [ "Base::DataProvider", "classBase_1_1DataProvider.html", null ],
+    [ "Base::DataProvider", "classBase_1_1DataProvider.html", [
+      [ "Base::FileDataProvider", "classBase_1_1FileDataProvider.html", null ]
+    ] ],
     [ "Matrix::MatrixBuilder", "classMatrix_1_1MatrixBuilder.html", null ],
     [ "Matrix::MTFMatrix", "classMatrix_1_1MTFMatrix.html", null ],
     [ "Tools::Processor", "classTools_1_1Processor.html", [

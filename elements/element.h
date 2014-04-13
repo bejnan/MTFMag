@@ -14,14 +14,36 @@ using std::shared_ptr;
 
 namespace Base {
 
-// Class containing user's data
+/**
+ * Class (more like interface) which is basic container of user friends, contacts.
+ * This implementation doesn't provide meaningful order between elements.
+ */
 class Element {
  public:
-  // id - Element Identifier
+  /**
+   * Constructor with only one responsibility to initialize identifier field.
+   * @param user_id Identifier of user(friend).
+   */
   Element(int user_id);
+
+  /**
+   * Default destructor. Nothing to handle
+   */
   virtual ~Element();
+
+  /**
+   * Return prototype of Element class to generate instances of class
+   * by Close method.
+   * @return Pointer to instance with identifier
+   */
   static shared_ptr<Base::Element> GetPrototype();
-  // Compare element's content
+
+  /**
+   * Method to Compare two elements. Used to order
+   * elements between themselves
+   * @param elem Element to compare
+   * @return 0 if elements are equal
+   */
   virtual int Compare(Element& elem);
   // Difference between elements
   virtual double Difference(Element& elem);

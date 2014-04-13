@@ -54,7 +54,7 @@ vector<shared_ptr<Tools::Processor> >& Database::Query() {
   return table_;
 }
 
-vector<string> Database::QueryKeys() {
+vector<string> Database::QueryAlgorithmNames() {
   vector<string> names;
   map<string, vector<shared_ptr<Tools::Processor> > >::iterator name_iterator;
   for (name_iterator = name_table_.begin(); name_iterator != name_table_.end();
