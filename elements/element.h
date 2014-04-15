@@ -17,6 +17,8 @@ namespace Base {
 /**
  * Class (more like interface) which is basic container of user friends, contacts.
  * This implementation doesn't provide meaningful order between elements.
+ * Element class and it's deriving classes support cloning to be part of Prototype
+ * pattern.
  */
 class Element {
  public:
@@ -48,14 +50,25 @@ class Element {
   virtual int Compare(Element& elem);
 
   /**
-   *
-   * @param elem
-   * @return
+   * Measure how much Elements are different between each other.
+   * Used to define order between elements.
+   * @param elem Element to compare
+   * @return Value represents difference between element. Details depends on child class.
    */
   virtual double Difference(Element& elem);
-  // Notify user choice
+
+
+  /**
+   * Gives element change to save last use of it.
+   * @param update_counter Counter on which update was element last notified
+   */
   virtual void Notify(int update_counter = 0) { }
-  // Clone method for Prototype pattern
+
+  /**
+   * Method to use Prototype pattern in
+   * @param user_id
+   * @return
+   */
   virtual shared_ptr<Element> Clone(int user_id);
   // Id getter
   int user_id() {
