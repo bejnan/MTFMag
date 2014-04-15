@@ -65,18 +65,24 @@ class Element {
   virtual void Notify(int update_counter = 0) { }
 
   /**
-   * Method to use Prototype pattern in
-   * @param user_id
-   * @return
+   * Method to use Prototype pattern in algorithms.
+   * Creates clone of class instance. It should be
+   * implemented in every child class to return the
+   * same instance.
+   * @param user_id Identifier of user for new element, that will be created
+   * @return The same instance of Element that called class with given identifier
    */
   virtual shared_ptr<Element> Clone(int user_id);
-  // Id getter
+
+  /**
+   * Getter of identifier
+   * @return Identifier of Element (user,friend)
+   */
   int user_id() {
     return user_id_;
   }
  private:
-  // user identifier
-  const int user_id_;
+  const int user_id_; /**< Identifier of user */
 };
 
 } /* namespace Base */
