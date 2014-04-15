@@ -6,5 +6,6 @@ var searchData=
   ['datacollector',['DataCollector',['../classBase_1_1DataCollector.html#a3f64da07dd97a418061c7f6e24dd422c',1,'Base::DataCollector']]],
   ['dataoutput',['DataOutput',['../classBase_1_1DataOutput.html',1,'Base']]],
   ['dataoutputbuilder',['DataOutputBuilder',['../classBase_1_1DataOutputBuilder.html',1,'Base']]],
-  ['dataprovider',['DataProvider',['../classBase_1_1DataProvider.html',1,'Base']]]
+  ['dataprovider',['DataProvider',['../classBase_1_1DataProvider.html',1,'Base']]],
+  ['difference',['Difference',['../classBase_1_1Element.html#aa4469ee3158e1fc2302a022581153dda',1,'Base::Element']]]
 ];
