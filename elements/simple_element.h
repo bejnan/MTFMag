@@ -29,8 +29,8 @@ class SimpleElement : public Element {
   using Element::user_id;
 
  private:
-  int Compare(const SimpleElement& elem);
-  double Difference(const SimpleElement& elem);
+  int SimpleElementCompare(SimpleElement& elem);
+  double SimpleElementDifference(SimpleElement& elem);
   // how many times element was notificated
   int notification_counter_;
   // how important is update counter (bigger value => more important recent update)

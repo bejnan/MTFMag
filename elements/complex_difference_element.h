@@ -29,8 +29,8 @@ class ComplexDifferenceElement : public Base::SimpleElement {
   using Element::user_id;
 
  private:
-  int Compare(const ComplexDifferenceElement& elem);
-  double Difference(ComplexDifferenceElement& elem);
+  int ComplexDifferenceCompare(ComplexDifferenceElement& elem);
+  double ComplexDifference(ComplexDifferenceElement& elem);
   // last_update counter (bigger is newer)
   int last_update_;
   // how important is update counter (bigger value => more important recent update)

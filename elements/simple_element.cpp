@@ -31,16 +31,16 @@ shared_ptr<Base::Element> SimpleElement::GetPrototype() {
 int SimpleElement::Compare(Element& elem) {
   try {
     SimpleElement& simple_elem = dynamic_cast<SimpleElement&>(elem);
-    return Compare(simple_elem);
+    return SimpleElementCompare(simple_elem);
   } catch (bad_cast& e) {
-    return elem.Compare(*this);
+    return Element::Compare(elem);
   }
 }
 
 double SimpleElement::Difference(Element& elem) {
   try {
     SimpleElement& simple_elem = dynamic_cast<SimpleElement&>(elem);
-    return Difference(simple_elem);
+    return SimpleElementDifference(simple_elem);
   } catch (bad_cast& e) {
     return elem.Difference(*this);
   }
@@ -55,11 +55,11 @@ shared_ptr<Element> SimpleElement::Clone(int user_id) {
   return shared_ptr<Element>(new_element);
 }
 
-int SimpleElement::Compare(const SimpleElement& elem) {
+int SimpleElement::SimpleElementCompare(SimpleElement& elem) {
   return (notification_counter_ - elem.notification_counter_);
 }
 
-double SimpleElement::Difference(const SimpleElement& elem) {
+double SimpleElement::SimpleElementDifference(SimpleElement& elem) {
   double diff = (double) (notification_counter_ - elem.notification_counter_)
       / (double) (notification_counter_ + elem.notification_counter_);
   return diff;
