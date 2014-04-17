@@ -12,27 +12,25 @@
 
 namespace Base {
 
-/*
+/**
  * Development of Element class to count frequency of
  * notification
  */
 class SimpleElement : public Element {
  public:
-  SimpleElement(int id);
+  SimpleElement(int user_id);
   ~SimpleElement();
 
   static shared_ptr<Base::Element> GetPrototype();
   virtual int Compare(Element& elem);
   virtual double Difference(Element& elem);
-  virtual void Notify(int update_counter = 0);
+  virtual void Notify();
   virtual shared_ptr<Element> Clone(int user_id);
   using Element::user_id;
 
  private:
   int Compare(const SimpleElement& elem);
   double Difference(const SimpleElement& elem);
-  // last_update counter (bigger is newer)
-  int last_update_;
   // how many times element was notificated
   int notification_counter_;
   // how important is update counter (bigger value => more important recent update)

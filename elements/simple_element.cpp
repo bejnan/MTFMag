@@ -17,7 +17,6 @@ namespace Base {
 
 SimpleElement::SimpleElement(int id)
     : Element(id),
-      last_update_(0),
       notification_counter_(0) {
 }
 
@@ -47,9 +46,8 @@ double SimpleElement::Difference(Element& elem) {
   }
 }
 
-void SimpleElement::Notify(int update_counter) {
+void SimpleElement::Notify() {
   ++notification_counter_;
-  last_update_ = update_counter;
 }
 
 shared_ptr<Element> SimpleElement::Clone(int user_id) {
@@ -58,20 +56,12 @@ shared_ptr<Element> SimpleElement::Clone(int user_id) {
 }
 
 int SimpleElement::Compare(const SimpleElement& elem) {
-  if (notification_counter_ == elem.notification_counter_) {
-    return (last_update_ - elem.last_update_);
-  } else {
-    return (notification_counter_ - elem.notification_counter_);
-  }
+  return (notification_counter_ - elem.notification_counter_);
 }
 
 double SimpleElement::Difference(const SimpleElement& elem) {
   double diff = (double) (notification_counter_ - elem.notification_counter_)
       / (double) (notification_counter_ + elem.notification_counter_);
-  double nominator = (double) (last_update_ - elem.last_update_);
-  double denominator = ((double) (max(last_update_, elem.last_update_)))
-      * UPDATE_VALUE;
-  diff += nominator / ((denominator == 0 ) ? 1 : denominator);
   return diff;
 }
 
