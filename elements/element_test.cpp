@@ -5,7 +5,7 @@
  *      Author: Jakub Banaszewski
  */
 
-#include "simple_element.h"
+#include "complex_difference_element.h"
 
 #define BOOST_TEST_DYN_LINK
 #include <boost/test/unit_test.hpp>
@@ -13,9 +13,9 @@
 BOOST_AUTO_TEST_SUITE(elements_test)
 
 // Test to check if difference of SimpleElement objects is measured correctly
-BOOST_AUTO_TEST_CASE(SimpleElement_diff) {
+BOOST_AUTO_TEST_CASE(Complex_difference_element_difference_test) {
 
-  Base::SimpleElement s_element1(1), s_element2(2);
+  Base::ComplexDifferenceElement s_element1(1), s_element2(2);
 
   Base::Element& element1 = s_element1;
   Base::Element& element2 = s_element2;

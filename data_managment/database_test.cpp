@@ -83,7 +83,7 @@ BOOST_AUTO_TEST_CASE(QueryKeys) {
   base.AddToBase(processor_ptr);
   expected_processors.push_front(processor_ptr->identifier());
 
-  queried_processors = base.QueryKeys();
+  queried_processors = base.QueryAlgorithmNames();
 
   BOOST_CHECK_EQUAL_COLLECTIONS(expected_processors.begin(),
                                 expected_processors.end(),
@@ -114,7 +114,7 @@ BOOST_AUTO_TEST_CASE(QueryKeys2) {
   processor_ptr = factory.GenerateProcessor(2);
   base.AddToBase(processor_ptr);
 
-  queried_processors = base.QueryKeys();
+  queried_processors = base.QueryAlgorithmNames();
 
   BOOST_CHECK_EQUAL_COLLECTIONS(expected_processors.begin(),
                                 expected_processors.end(),
@@ -165,8 +165,8 @@ BOOST_AUTO_TEST_CASE(QueryByName) {
   list<shared_ptr<Tools::Processor> > expected_processors;
   vector<shared_ptr<Tools::Processor> > queried_processors;
 
-  shared_ptr<Tools::Processor> processor_ptr =
-      tree_factory.GenerateProcessor(1);
+  shared_ptr<Tools::Processor> processor_ptr = tree_factory.GenerateProcessor(
+      1);
   base.AddToBase(processor_ptr);
   expected_processors.push_back(processor_ptr);
 
