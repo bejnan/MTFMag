@@ -118,44 +118,51 @@ $(document).ready(function(){initNavTree('simple__element_8h_source.html','');})
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span>Base {</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * Development of Element class to count frequency of</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * notification</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">class </span>SimpleElement : <span class="keyword">public</span> Element {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  SimpleElement(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  ~SimpleElement();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">static</span> shared_ptr&lt;Base::Element&gt; GetPrototype();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> Compare(Element&amp; elem);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">double</span> Difference(Element&amp; elem);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> Notify(<span class="keywordtype">int</span> update_counter = 0);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">virtual</span> shared_ptr&lt;Element&gt; Clone(<span class="keywordtype">int</span> user_id);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">using</span> <a class="code" href="classBase_1_1Element.html#a42070f7874b9235210c7263afd6b71f4">Element::user_id</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classBase_1_1SimpleElement.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBase_1_1SimpleElement.html">SimpleElement</a> : <span class="keyword">public</span> <a class="code" href="classBase_1_1Element.html">Element</a> {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <a class="code" href="classBase_1_1SimpleElement.html#a90848472a91d3827f2e32e04b345500b">SimpleElement</a>(<span class="keywordtype">int</span> <a class="code" href="classBase_1_1Element.html#a42070f7874b9235210c7263afd6b71f4">user_id</a>);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordtype">int</span> Compare(<span class="keyword">const</span> SimpleElement&amp; elem);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">double</span> Difference(<span class="keyword">const</span> SimpleElement&amp; elem);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="comment">// last_update counter (bigger is newer)</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">int</span> last_update_;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="comment">// how many times element was notificated</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordtype">int</span> notification_counter_;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="comment">// how important is update counter (bigger value =&gt; more important recent update)</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">static</span> constexpr <span class="keywordtype">double</span> UPDATE_VALUE = 0.1;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;} <span class="comment">/* namespace Devel */</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SIMPLEELEMENT_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="classBase_1_1Element_html_a42070f7874b9235210c7263afd6b71f4"><div class="ttname"><a href="classBase_1_1Element.html#a42070f7874b9235210c7263afd6b71f4">Base::Element::user_id</a></div><div class="ttdeci">int user_id()</div><div class="ttdef"><b>Definition:</b> element.h:81</div></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classBase_1_1SimpleElement.html#a4580b6f8e363c12459a2947749c26226">~SimpleElement</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">static</span> shared_ptr&lt;Base::Element&gt; <a class="code" href="classBase_1_1SimpleElement.html#a3c77bcd528f49dab6b2c776550c279e5">GetPrototype</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classBase_1_1SimpleElement.html#ae798ef9d47ac065392dea25d07f6970e">Compare</a>(<a class="code" href="classBase_1_1Element.html">Element</a>&amp; elem);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classBase_1_1SimpleElement.html#a8f7d8fc5d5604f3253ff2e314dfd1cf5">Difference</a>(<a class="code" href="classBase_1_1Element.html">Element</a>&amp; elem);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classBase_1_1SimpleElement.html#aca55505bef5c6aa5b9b36051a3930ba0">Notify</a>(<span class="keywordtype">int</span> update_counter = 0);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">virtual</span> shared_ptr&lt;Element&gt; <a class="code" href="classBase_1_1SimpleElement.html#a37f8f62ac37af39a0fcde45f67c92ee0">Clone</a>(<span class="keywordtype">int</span> user_id);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keyword">using</span> <a class="code" href="classBase_1_1Element.html#a42070f7874b9235210c7263afd6b71f4">Element::user_id</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordtype">int</span> SimpleElementCompare(<a class="code" href="classBase_1_1SimpleElement.html">SimpleElement</a>&amp; elem);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordtype">double</span> SimpleElementDifference(<a class="code" href="classBase_1_1SimpleElement.html">SimpleElement</a>&amp; elem);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordtype">int</span> notification_counter_; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;};</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;} <span class="comment">/* namespace Devel */</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SIMPLEELEMENT_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="classBase_1_1SimpleElement_html_a37f8f62ac37af39a0fcde45f67c92ee0"><div class="ttname"><a href="classBase_1_1SimpleElement.html#a37f8f62ac37af39a0fcde45f67c92ee0">Base::SimpleElement::Clone</a></div><div class="ttdeci">virtual shared_ptr&lt; Element &gt; Clone(int user_id)</div><div class="ttdef"><b>Definition:</b> simple_element.cpp:53</div></div>
+<div class="ttc" id="classBase_1_1SimpleElement_html_aca55505bef5c6aa5b9b36051a3930ba0"><div class="ttname"><a href="classBase_1_1SimpleElement.html#aca55505bef5c6aa5b9b36051a3930ba0">Base::SimpleElement::Notify</a></div><div class="ttdeci">virtual void Notify(int update_counter=0)</div><div class="ttdef"><b>Definition:</b> simple_element.cpp:49</div></div>
+<div class="ttc" id="classBase_1_1Element_html"><div class="ttname"><a href="classBase_1_1Element.html">Base::Element</a></div><div class="ttdef"><b>Definition:</b> element.h:23</div></div>
+<div class="ttc" id="classBase_1_1SimpleElement_html"><div class="ttname"><a href="classBase_1_1SimpleElement.html">Base::SimpleElement</a></div><div class="ttdef"><b>Definition:</b> simple_element.h:22</div></div>
+<div class="ttc" id="classBase_1_1SimpleElement_html_a8f7d8fc5d5604f3253ff2e314dfd1cf5"><div class="ttname"><a href="classBase_1_1SimpleElement.html#a8f7d8fc5d5604f3253ff2e314dfd1cf5">Base::SimpleElement::Difference</a></div><div class="ttdeci">virtual double Difference(Element &amp;elem)</div><div class="ttdef"><b>Definition:</b> simple_element.cpp:40</div></div>
+<div class="ttc" id="classBase_1_1SimpleElement_html_a3c77bcd528f49dab6b2c776550c279e5"><div class="ttname"><a href="classBase_1_1SimpleElement.html#a3c77bcd528f49dab6b2c776550c279e5">Base::SimpleElement::GetPrototype</a></div><div class="ttdeci">static shared_ptr&lt; Base::Element &gt; GetPrototype()</div><div class="ttdef"><b>Definition:</b> simple_element.cpp:26</div></div>
+<div class="ttc" id="classBase_1_1Element_html_a42070f7874b9235210c7263afd6b71f4"><div class="ttname"><a href="classBase_1_1Element.html#a42070f7874b9235210c7263afd6b71f4">Base::Element::user_id</a></div><div class="ttdeci">int user_id()</div><div class="ttdef"><b>Definition:</b> element.h:87</div></div>
+<div class="ttc" id="classBase_1_1SimpleElement_html_a4580b6f8e363c12459a2947749c26226"><div class="ttname"><a href="classBase_1_1SimpleElement.html#a4580b6f8e363c12459a2947749c26226">Base::SimpleElement::~SimpleElement</a></div><div class="ttdeci">virtual ~SimpleElement()</div><div class="ttdef"><b>Definition:</b> simple_element.cpp:23</div></div>
+<div class="ttc" id="classBase_1_1SimpleElement_html_a90848472a91d3827f2e32e04b345500b"><div class="ttname"><a href="classBase_1_1SimpleElement.html#a90848472a91d3827f2e32e04b345500b">Base::SimpleElement::SimpleElement</a></div><div class="ttdeci">SimpleElement(int user_id)</div><div class="ttdef"><b>Definition:</b> simple_element.cpp:18</div></div>
+<div class="ttc" id="classBase_1_1SimpleElement_html_ae798ef9d47ac065392dea25d07f6970e"><div class="ttname"><a href="classBase_1_1SimpleElement.html#ae798ef9d47ac065392dea25d07f6970e">Base::SimpleElement::Compare</a></div><div class="ttdeci">virtual int Compare(Element &amp;elem)</div><div class="ttdef"><b>Definition:</b> simple_element.cpp:31</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_a4fd64009d3b76a85ae2b8eb325672fb.html">elements</a></li><li class="navelem"><b>simple_element.h</b></li>
-    <li class="footer">Generated on Wed Apr 16 2014 17:21:43 for MTFthesisstudies by
+    <li class="footer">Generated on Sun Apr 20 2014 01:10:17 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

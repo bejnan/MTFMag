@@ -10,7 +10,9 @@ var annotated =
       [ "Database", "classBase_1_1Database.html", "classBase_1_1Database" ],
       [ "FileDataOutput", "classBase_1_1FileDataOutput.html", "classBase_1_1FileDataOutput" ],
       [ "FileDataProvider", "classBase_1_1FileDataProvider.html", "classBase_1_1FileDataProvider" ],
-      [ "Element", "classBase_1_1Element.html", "classBase_1_1Element" ]
+      [ "ComplexDifferenceElement", "classBase_1_1ComplexDifferenceElement.html", "classBase_1_1ComplexDifferenceElement" ],
+      [ "Element", "classBase_1_1Element.html", "classBase_1_1Element" ],
+      [ "SimpleElement", "classBase_1_1SimpleElement.html", "classBase_1_1SimpleElement" ]
     ] ],
     [ "Matrix", null, [
       [ "MatrixBuilder", "classMatrix_1_1MatrixBuilder.html", null ],

@@ -113,8 +113,13 @@ $(document).ready(function(){initNavTree('classBase_1_1Element.html','');});
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="element_8h_source.html">element.h</a>&gt;</code></p>
-
-<p>Inherited by Base::SimpleElement.</p>
+<div class="dynheader">
+Inheritance diagram for Base::Element:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBase_1_1Element__inherit__graph.png" border="0" usemap="#Base_1_1Element_inherit__map" alt="Inheritance graph"/></div>
+<map name="Base_1_1Element_inherit__map" id="Base_1_1Element_inherit__map">
+<area shape="rect" id="node2" href="classBase_1_1SimpleElement.html" title="Base::SimpleElement" alt="" coords="43,80,196,107"/><area shape="rect" id="node3" href="classBase_1_1ComplexDifferenceElement.html" title="Base::ComplexDifferenceElement" alt="" coords="5,155,235,181"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -219,6 +224,8 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The same instance of <a class="el" href="classBase_1_1Element.html">Element</a> that called class with given identifier </dd></dl>
 
+<p>Reimplemented in <a class="el" href="classBase_1_1ComplexDifferenceElement.html#a6aeeb7eac0b145c8a000aa59369254cd">Base::ComplexDifferenceElement</a>, and <a class="el" href="classBase_1_1SimpleElement.html#a37f8f62ac37af39a0fcde45f67c92ee0">Base::SimpleElement</a>.</p>
+
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -260,6 +267,8 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if elements are equal, negative value if given element have bigger value, positive otherwise </dd></dl>
 
+<p>Reimplemented in <a class="el" href="classBase_1_1ComplexDifferenceElement.html#a31787b2362f6970a6cdb4ff21cf3e01e">Base::ComplexDifferenceElement</a>, and <a class="el" href="classBase_1_1SimpleElement.html#ae798ef9d47ac065392dea25d07f6970e">Base::SimpleElement</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="aa4469ee3158e1fc2302a022581153dda"></a>
@@ -291,6 +300,8 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Value represents difference between element. Details depends on child class. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classBase_1_1ComplexDifferenceElement.html#a0587d9e21c012c8c424f5ac5c5a5328f">Base::ComplexDifferenceElement</a>, and <a class="el" href="classBase_1_1SimpleElement.html#a8f7d8fc5d5604f3253ff2e314dfd1cf5">Base::SimpleElement</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -325,6 +336,9 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>Return prototype of <a class="el" href="classBase_1_1Element.html">Element</a> class to generate instances of class by Close method. </p>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to instance with identifier </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd>TreeProcessor </dd>
+<dd>
+MatrixMTFProcessor </dd></dl>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -358,13 +372,15 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Gives element change to save last use of it. </p>
+<p>To define order between elements every element have to know when and how many times it was notified. So every time element is notified this function is used. Different classes uses this function in different way. In <a class="el" href="classBase_1_1Element.html">Element</a> class Notify has no influence on elements order. In every child class it has. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">update_counter</td><td>Counter on which update was element last notified </td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Reimplemented in <a class="el" href="classBase_1_1ComplexDifferenceElement.html#a172e4e7223c50f84b5f2f8fdd52ea8d0">Base::ComplexDifferenceElement</a>, and <a class="el" href="classBase_1_1SimpleElement.html#aca55505bef5c6aa5b9b36051a3930ba0">Base::SimpleElement</a>.</p>
 
 </div>
 </div>
@@ -403,7 +419,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>Base</b></li><li class="navelem"><a class="el" href="classBase_1_1Element.html">Element</a></li>
-    <li class="footer">Generated on Wed Apr 16 2014 17:21:44 for MTFthesisstudies by
+    <li class="footer">Generated on Sun Apr 20 2014 01:10:18 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

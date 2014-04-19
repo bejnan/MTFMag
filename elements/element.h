@@ -37,6 +37,8 @@ class Element {
    * Return prototype of Element class to generate instances of class
    * by Close method.
    * @return Pointer to instance with identifier
+   * @see TreeProcessor
+   * @see MatrixMTFProcessor
    */
   static shared_ptr<Base::Element> GetPrototype();
 
@@ -59,7 +61,11 @@ class Element {
 
 
   /**
-   * Gives element change to save last use of it.
+   * To define order between elements every element have to know when
+   * and how many times it was notified. So every time element is notified
+   * this function is used. Different classes uses this function in different
+   * way. In Element class Notify has no influence on elements order.
+   * In every child class it has.
    * @param update_counter Counter on which update was element last notified
    */
   virtual void Notify(int update_counter = 0) { }

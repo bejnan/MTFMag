@@ -46,7 +46,7 @@ double SimpleElement::Difference(Element& elem) {
   }
 }
 
-void SimpleElement::Notify() {
+void SimpleElement::Notify(int update_counter) {
   ++notification_counter_;
 }
 
