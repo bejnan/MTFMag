@@ -30,8 +30,8 @@ var annotated =
       [ "Processor", "classTools_1_1Processor.html", null ],
       [ "ProcessorFactory", "classTools_1_1ProcessorFactory.html", null ],
       [ "RandomTreeProcessor", "classTools_1_1RandomTreeProcessor.html", null ],
-      [ "Tester", "classTools_1_1Tester.html", null ],
-      [ "TreeProcessor", "classTools_1_1TreeProcessor.html", null ]
+      [ "TreeProcessor", "classTools_1_1TreeProcessor.html", null ],
+      [ "Tester", "classTools_1_1Tester.html", null ]
     ] ],
     [ "Tree", null, [
       [ "RandomTreeRoot", "classTree_1_1RandomTreeRoot.html", null ]
