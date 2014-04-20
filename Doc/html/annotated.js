@@ -14,6 +14,13 @@ var annotated =
       [ "Element", "classBase_1_1Element.html", "classBase_1_1Element" ],
       [ "SimpleElement", "classBase_1_1SimpleElement.html", "classBase_1_1SimpleElement" ]
     ] ],
+    [ "Exception", null, [
+      [ "DataProviderException", "classException_1_1DataProviderException.html", null ],
+      [ "DatabaseException", "classException_1_1DatabaseException.html", null ],
+      [ "EndOfFileException", "classException_1_1EndOfFileException.html", null ],
+      [ "FilePathException", "classException_1_1FilePathException.html", "classException_1_1FilePathException" ],
+      [ "InvalidIndexException", "classException_1_1InvalidIndexException.html", "classException_1_1InvalidIndexException" ]
+    ] ],
     [ "Matrix", null, [
       [ "MatrixBuilder", "classMatrix_1_1MatrixBuilder.html", null ],
       [ "MTFMatrix", "classMatrix_1_1MTFMatrix.html", null ]

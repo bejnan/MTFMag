@@ -1,6 +1,9 @@
 var hierarchy =
 [
     [ "Base::Database", "classBase_1_1Database.html", null ],
+    [ "Exception::DatabaseException", "classException_1_1DatabaseException.html", [
+      [ "Exception::InvalidIndexException", "classException_1_1InvalidIndexException.html", null ]
+    ] ],
     [ "Base::DataCollector", "classBase_1_1DataCollector.html", null ],
     [ "Base::DataOutput", "classBase_1_1DataOutput.html", [
       [ "Base::CsvDataOutput", "classBase_1_1CsvDataOutput.html", [
@@ -13,6 +16,10 @@ var hierarchy =
     [ "Base::DataOutputBuilder", "classBase_1_1DataOutputBuilder.html", null ],
     [ "Base::DataProvider", "classBase_1_1DataProvider.html", [
       [ "Base::FileDataProvider", "classBase_1_1FileDataProvider.html", null ]
+    ] ],
+    [ "Exception::DataProviderException", "classException_1_1DataProviderException.html", [
+      [ "Exception::EndOfFileException", "classException_1_1EndOfFileException.html", null ],
+      [ "Exception::FilePathException", "classException_1_1FilePathException.html", null ]
     ] ],
     [ "Base::Element", "classBase_1_1Element.html", [
       [ "Base::SimpleElement", "classBase_1_1SimpleElement.html", [

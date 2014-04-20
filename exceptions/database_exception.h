@@ -16,13 +16,18 @@ using std::exception;
 
 namespace Exception {
 
+/**
+ * Base class for exceptions that occurs when using
+ * Database class methods.
+ * @see Database
+ */
 class DatabaseException : public exception {
  public:
   DatabaseException();
   virtual ~DatabaseException();
 
-  const char * what() const throw() {
-	  return message_.c_str();
+  const char * what() const throw () {
+    return message_.c_str();
   }
  private:
   string message_;

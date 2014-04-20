@@ -1,10 +1,3 @@
-/*
- * EndOfFileException.h
- *
- *  Created on: Feb 21, 2014
- *      Author: Jakub Banaszewski
- */
-
 #ifndef ENDOFFILEEXCEPTION_H_
 #define ENDOFFILEEXCEPTION_H_
 
@@ -12,6 +5,11 @@
 
 namespace Exception {
 
+/**
+ * Exception is thrown when DataProvider meets end of input
+ * and program is trying to get next line of data.
+ * @see DataProvider::GoToNextLine
+ */
 class EndOfFileException : public Exception::DataProviderException {
  public:
   EndOfFileException();

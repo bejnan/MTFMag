@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['query',['Query',['../classBase_1_1Database.html#addb40ac264523f60e4fbcd3797803221',1,'Base::Database::Query(int id)'],['../classBase_1_1Database.html#a7bce7a9611612614195a5bea2ebcd2ae',1,'Base::Database::Query(string algorithm_name)'],['../classBase_1_1Database.html#a73adc4520286deee33179d45edadd065',1,'Base::Database::Query()']]],
-  ['queryalgorithmnames',['QueryAlgorithmNames',['../classBase_1_1Database.html#a8e7191f1c4c56db540cc3787a51fb0bc',1,'Base::Database']]]
+  ['printactualresults',['PrintActualResults',['../classBase_1_1DataCollector.html#afb1d46273c24e3e1fdefba6b730ebf28',1,'Base::DataCollector']]],
+  ['printcolumntitles',['PrintColumnTitles',['../classBase_1_1CsvDataOutput.html#aa54484865cd138cf49b5aa5b9ef813d5',1,'Base::CsvDataOutput::PrintColumnTitles()'],['../classBase_1_1DataOutput.html#a0f1a6127945492d692629120575e7f82',1,'Base::DataOutput::PrintColumnTitles()']]],
+  ['printline',['PrintLine',['../classBase_1_1CsvDataOutput.html#a88994527237735d1d6a05cec3b222ba7',1,'Base::CsvDataOutput::PrintLine()'],['../classBase_1_1DataOutput.html#afdb91464e7559dedf69c56c1b862a216',1,'Base::DataOutput::PrintLine()']]]
 ];

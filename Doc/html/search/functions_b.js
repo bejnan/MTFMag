@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['usefile',['UseFile',['../classBase_1_1DataOutputBuilder.html#ac5ed5b644a72572f094cf1d5fc1c87f0',1,'Base::DataOutputBuilder']]],
-  ['user_5fid',['user_id',['../classBase_1_1Element.html#a42070f7874b9235210c7263afd6b71f4',1,'Base::Element']]]
+  ['setcolumntitles',['SetColumnTitles',['../classBase_1_1CsvDataOutput.html#a9302a89524b164d440280bc1c90c90d3',1,'Base::CsvDataOutput::SetColumnTitles()'],['../classBase_1_1DataOutput.html#a368f0c022e828cd3f29085e10e70b113',1,'Base::DataOutput::SetColumnTitles()']]],
+  ['setcsvoutputformat',['SetCsvOutputFormat',['../classBase_1_1DataOutputBuilder.html#aa810b27e23dee1c035e61947c96ef628',1,'Base::DataOutputBuilder']]],
+  ['simpleelement',['SimpleElement',['../classBase_1_1SimpleElement.html#a90848472a91d3827f2e32e04b345500b',1,'Base::SimpleElement']]]
 ];

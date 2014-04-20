@@ -1,10 +1,3 @@
-/*
- * DataProviderException.h
- *
- *  Created on: Feb 21, 2014
- *      Author: Jakub Banaszewski
- */
-
 #ifndef DATAPROVIDEREXCEPTION_H_
 #define DATAPROVIDEREXCEPTION_H_
 
@@ -14,6 +7,11 @@
 using std::string;
 namespace Exception {
 
+/**
+ * Base class for exceptions which occurs during providing data
+ * from DataProvider to DataCollector
+ * @see DataCollector
+ */
 class DataProviderException : public std::exception {
  public:
   DataProviderException();

@@ -124,30 +124,33 @@ $(document).ready(function(){initNavTree('invalid__index__exception_8h_source.ht
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span>Exception {</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">class </span>InvalidIndexException : <span class="keyword">public</span> DatabaseException{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  InvalidIndexException(<span class="keywordtype">int</span> <span class="keywordtype">id</span> = -1);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">virtual</span> ~InvalidIndexException();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> * what() <span class="keyword">const</span> throw () {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> message_.c_str();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  }</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; <span class="keyword">private</span> :</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> id_;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordtype">string</span> message_;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;} <span class="comment">/* namespace Exception */</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classException_1_1InvalidIndexException.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="classException_1_1InvalidIndexException.html">InvalidIndexException</a> : <span class="keyword">public</span> <a class="code" href="classException_1_1DatabaseException.html">DatabaseException</a>{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="classException_1_1InvalidIndexException.html#a030263af21cc7290559a2aae447f16e4">InvalidIndexException</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span> = -1);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classException_1_1InvalidIndexException.html">InvalidIndexException</a>();</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* INVALIDINDEXEXCEPTION_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> * what() <span class="keyword">const</span> <span class="keywordflow">throw</span> () {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> message_.c_str();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; <span class="keyword">private</span> :</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> id_;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">string</span> message_;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;} <span class="comment">/* namespace Exception */</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* INVALIDINDEXEXCEPTION_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="classException_1_1InvalidIndexException_html_a030263af21cc7290559a2aae447f16e4"><div class="ttname"><a href="classException_1_1InvalidIndexException.html#a030263af21cc7290559a2aae447f16e4">Exception::InvalidIndexException::InvalidIndexException</a></div><div class="ttdeci">InvalidIndexException(int id=-1)</div><div class="ttdef"><b>Definition:</b> invalid_index_exception.cpp:12</div></div>
+<div class="ttc" id="classException_1_1DatabaseException_html"><div class="ttname"><a href="classException_1_1DatabaseException.html">Exception::DatabaseException</a></div><div class="ttdef"><b>Definition:</b> database_exception.h:24</div></div>
+<div class="ttc" id="classException_1_1InvalidIndexException_html"><div class="ttname"><a href="classException_1_1InvalidIndexException.html">Exception::InvalidIndexException</a></div><div class="ttdef"><b>Definition:</b> invalid_index_exception.h:26</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_fceced95d8215eeebebd9df6aa39e1a5.html">exceptions</a></li><li class="navelem"><b>invalid_index_exception.h</b></li>
-    <li class="footer">Generated on Sun Apr 20 2014 01:51:30 for MTFthesisstudies by
+    <li class="footer">Generated on Sun Apr 20 2014 13:16:33 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

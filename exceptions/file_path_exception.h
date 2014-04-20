@@ -16,9 +16,17 @@ using std::string;
 
 namespace Exception {
 
+/**
+ * Exception is thrown when bad file path is given to DataProvider instance.
+ * @see FileDataProvider
+ */
 class FilePathException : public Exception::DataProviderException {
  public:
-  FilePathException(string path="");
+  /**
+   * In constructor bad file path should be given to get better exception message.
+   * @param path Path to non-existing file, that cause exception
+   */
+  FilePathException(string path = "");
   virtual ~FilePathException();
   const char * what() const throw () {
     return message_.c_str();

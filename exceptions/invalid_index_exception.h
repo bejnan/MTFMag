@@ -18,8 +18,19 @@ using std::string;
 
 namespace Exception {
 
+/**
+ * Exception thrown when query to Database contains non-existing
+ * identifier.
+ * @see Database::Query
+ */
 class InvalidIndexException : public DatabaseException{
  public:
+  /**
+   * Constructor initialize exception message.
+   * With given identifier message is more clear and
+   * useful for debug.
+   * @param id Non-existing identifier
+   */
   InvalidIndexException(int id = -1);
   virtual ~InvalidIndexException();
 
