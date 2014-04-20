@@ -8,8 +8,8 @@
 #ifndef TREEPROCESSORFACTORY_H_
 #define TREEPROCESSORFACTORY_H_
 
-#include "processor_factory.h"
-#include "tree_proccessor.h"
+#include "../processor_factory.h"
+#include "../processors/tree_proccessor.h"
 
 namespace Tools {
 /*

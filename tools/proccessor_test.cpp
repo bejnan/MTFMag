@@ -5,9 +5,8 @@
  *      Author: Jakub Banaszewski
  */
 
-#include "processor.h"
-#include "tree_proccessor.h"
-#include "tree_processor_factory.h"
+#include "processors.h"
+#include "processor_factories.h"
 #include "../headers/exceptions.h"
 
 #define BOOST_TEST_DYN_LINK

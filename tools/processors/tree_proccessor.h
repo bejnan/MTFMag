@@ -8,10 +8,11 @@
 #ifndef TREEPROCCESSOR_H_
 #define TREEPROCCESSOR_H_
 
-#include "../headers/tree.h"
-#include "../headers/elements.h"
-#include "tester.h"
-#include "processor.h"
+#include "../../headers/tree.h"
+#include "../../headers/elements.h"
+#include "../processor.h"
+#include "../tester.h"
+
 using namespace Tree;
 using std::string;
 

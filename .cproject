@@ -50,13 +50,13 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="Processors|matrix|tools|tree|elements|main_test.cpp|headers|data_managment|exceptions" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
-						<entry excluding="csv_data_output_test.cpp|data_collector_test.cpp|file_data_provider_test.cpp|Database_test.cpp|DataCollector_test.cpp|database_test.cpp|FileDataProvider_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="data_managment"/>
+						<entry excluding="Processors|matrix|tools|tree|elements|main_test.cpp|processor_factories|headers|processors|data_managment|exceptions" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="data_collector_test.cpp|csv_data_output_test.cpp|file_data_provider_test.cpp|DataCollector_test.cpp|database_test.cpp|FileDataProvider_test.cpp|Database_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="data_managment"/>
 						<entry excluding="element_test.cpp|Element_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="elements"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="exceptions"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="headers"/>
 						<entry excluding="mtf_matrix_test.cpp|MTFMatrix_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="matrix"/>
-						<entry excluding="proccessor_test.cpp|tester_test.cpp|Proccessor_test.cpp|Tester_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="tools"/>
+						<entry excluding="Tester_test.cpp|tester_test.cpp|Proccessor_test.cpp|proccessor_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="tools"/>
 						<entry excluding="tree_root_test.cpp|TreeRoot_test.cpp|Root_test.cpp|TreeFactory_test.cpp|Node_test.cpp|LTree_test.cpp|FTree_test.cpp|Leaf_test.cpp|TreeFaktory_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="tree"/>
 					</sourceEntries>
 				</configuration>
@@ -105,13 +105,15 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="Processors|matrix|tools|tree|elements|main_test.cpp|headers|data_managment|exceptions" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="processor_factories|processors|Processors|matrix|tools|tree|elements|main_test.cpp|headers|data_managment|exceptions" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 						<entry excluding="csv_data_output_test.cpp|data_collector_test.cpp|file_data_provider_test.cpp|Database_test.cpp|DataCollector_test.cpp|database_test.cpp|FileDataProvider_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="data_managment"/>
 						<entry excluding="element_test.cpp|Element_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="elements"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="exceptions"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="headers"/>
 						<entry excluding="mtf_matrix_test.cpp|MTFMatrix_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="matrix"/>
-						<entry excluding="proccessor_test.cpp|tester_test.cpp|Processors|Proccessor_test.cpp|Tester_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="tools"/>
+						<entry excluding="processor_factories|processors|proccessor_test.cpp|tester_test.cpp|Processors|Proccessor_test.cpp|Tester_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="tools"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="tools/processor_factories"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="tools/processors"/>
 						<entry excluding="tree_root_test.cpp|TreeRoot_test.cpp|Root_test.cpp|TreeFactory_test.cpp|Node_test.cpp|LTree_test.cpp|FTree_test.cpp|Leaf_test.cpp|TreeFaktory_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="tree"/>
 					</sourceEntries>
 				</configuration>
@@ -177,7 +179,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="Processors|matrix|tools|Algorithms|tree|elements|PenaltyAlgorithms|main.cpp|headers|User|data_managment|exceptions" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="processor_factories|processors|Processors|matrix|tools|Algorithms|tree|elements|PenaltyAlgorithms|main.cpp|headers|User|data_managment|exceptions" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Algorithms"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="PenaltyAlgorithms"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="User"/>
@@ -186,7 +188,9 @@
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="exceptions"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="headers"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="matrix"/>
-						<entry excluding="Processors" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="tools"/>
+						<entry excluding="processor_factories|processors|Processors" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="tools"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="tools/processor_factories"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="tools/processors"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="tree"/>
 					</sourceEntries>
 				</configuration>

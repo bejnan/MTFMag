@@ -8,8 +8,8 @@
 #ifndef MATRIXMTFPROCESSORFACTORY_H_
 #define MATRIXMTFPROCESSORFACTORY_H_
 
-#include "processor_factory.h"
-#include "matrix_mtf_processor.h"
+#include "../processor_factory.h"
+#include "../processors/matrix_mtf_processor.h"
 
 #include <string>
 using std::to_string;

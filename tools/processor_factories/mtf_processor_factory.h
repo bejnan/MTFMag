@@ -8,8 +8,8 @@
 #ifndef MTFPROCESSORFACTORY_H_
 #define MTFPROCESSORFACTORY_H_
 
-#include "processor_factory.h"
-#include "mtf_processor.h"
+#include "../processor_factory.h"
+#include "../processors/mtf_processor.h"
 
 #include <string>
 

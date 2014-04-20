@@ -8,10 +8,10 @@
 #ifndef RANDOMTREEPROCESSOR_H_
 #define RANDOMTREEPROCESSOR_H_
 
-#include "../headers/tree.h"
-#include "../headers/elements.h"
-#include "tester.h"
-#include "processor.h"
+#include "../../headers/tree.h"
+#include "../../headers/elements.h"
+#include "../tester.h"
+#include "../processor.h"
 
 using namespace Tree;
 using std::string;

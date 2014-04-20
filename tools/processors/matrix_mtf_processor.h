@@ -8,9 +8,9 @@
 #ifndef MATRIXMTXPROCESSOR_H_
 #define MATRIXMTXPROCESSOR_H_
 
-#include "processor.h"
-#include "../headers/matrix.h"
-#include "tester.h"
+#include "../processor.h"
+#include "../../headers/matrix.h"
+#include "../tester.h"
 
 #include <memory>
 

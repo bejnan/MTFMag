@@ -8,9 +8,9 @@
 #ifndef MTFPROCESSOR_H_
 #define MTFPROCESSOR_H_
 
-#include "processor.h"
-#include "tester.h"
-#include "../headers/elements.h"
+#include "../../headers/elements.h"
+#include "../processor.h"
+#include "../tester.h"
 
 #include <string>
 #include <list>

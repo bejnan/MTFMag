@@ -8,8 +8,8 @@
 #ifndef RANDOMTREEPROCESSORFACTORY_H_
 #define RANDOMTREEPROCESSORFACTORY_H_
 
-#include "processor_factory.h"
-#include "random_tree_processor.h"
+#include "../processor_factory.h"
+#include "../processors/random_tree_processor.h"
 
 #include <string>
 
