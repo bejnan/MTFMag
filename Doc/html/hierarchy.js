@@ -2,7 +2,8 @@ var hierarchy =
 [
     [ "Base::Database", "classBase_1_1Database.html", null ],
     [ "Exception::DatabaseException", "classException_1_1DatabaseException.html", [
-      [ "Exception::InvalidIndexException", "classException_1_1InvalidIndexException.html", null ]
+      [ "Exception::InvalidIndexException", "classException_1_1InvalidIndexException.html", null ],
+      [ "Exception::InvalidNameException", "classException_1_1InvalidNameException.html", null ]
     ] ],
     [ "Base::DataCollector", "classBase_1_1DataCollector.html", null ],
     [ "Base::DataOutput", "classBase_1_1DataOutput.html", [

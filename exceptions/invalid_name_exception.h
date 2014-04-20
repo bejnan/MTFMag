@@ -1,10 +1,3 @@
-/*
- * InvalidNameException.h
- *
- *  Created on: 21 lut 2014
- *      Author: Jakub Banaszewski
- */
-
 #ifndef INVALIDNAMEEXCEPTION_H_
 #define INVALIDNAMEEXCEPTION_H_
 
@@ -16,16 +9,27 @@ using std::string;
 
 namespace Exception {
 
-class InvalidNameException: public DatabaseException {
-public:
-	InvalidNameException(string search_name = "");
-	virtual ~InvalidNameException();
+/**
+ * Exception thrown when query to Database contains non-existing
+ * name as parameter.
+ * @see Database::Query
+ */
+class InvalidNameException : public DatabaseException {
+ public:
+  /**
+   * Constructor initialize exception message.
+   * With given identifier message is more clear and
+   * useful for debug.
+   * @param search_name Non-existing name
+   */
+  InvalidNameException(string search_name = "");
+  virtual ~InvalidNameException();
 
-	const char * what() const throw() {
-	    return message_.c_str();
-	  }
-private:
-	string message_;
+  const char * what() const throw () {
+    return message_.c_str();
+  }
+ private:
+  string message_;
 };
 
 } /* namespace Exception */

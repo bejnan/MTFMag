@@ -1,10 +1,3 @@
-/*
- * InvalidIndexException.h
- *
- *  Created on: Feb 20, 2014
- *      Author: Jakub Banaszewski
- */
-
 #ifndef INVALIDINDEXEXCEPTION_H_
 #define INVALIDINDEXEXCEPTION_H_
 

@@ -89,6 +89,8 @@ var NAVTREEINDEX0 =
 "classException_1_1FilePathException.html#ae7d3097fb66b2c38a5d19432178453a6":[0,0,1,3,0],
 "classException_1_1InvalidIndexException.html":[0,0,1,4],
 "classException_1_1InvalidIndexException.html#a030263af21cc7290559a2aae447f16e4":[0,0,1,4,0],
+"classException_1_1InvalidNameException.html":[0,0,1,5],
+"classException_1_1InvalidNameException.html#af30d08c14cb694dbe471e73c0509eb48":[0,0,1,5,0],
 "classMatrix_1_1MTFMatrix.html":[0,0,2,1],
 "classMatrix_1_1MatrixBuilder.html":[0,0,2,0],
 "classTools_1_1Processor.html":[0,0,3,0],
