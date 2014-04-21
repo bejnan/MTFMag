@@ -20,15 +20,14 @@ namespace Tools {
 
 class MatrixMTFProcessor : public Tools::Processor {
  public:
-  MatrixMTFProcessor(int user_id, string identifier, int width = 2,
-                     bool random = false);
+  MatrixMTFProcessor(int user_id, string identifier, int width = 2);
   virtual ~MatrixMTFProcessor();
 
   virtual void Proceed(int user_id, bool learn = false);
 
   virtual int GetPenalty();
 
- protected :
+ protected:
   virtual void AddUser(int user_id);
  private:
   Tester penalty_counter_;

@@ -1,10 +1,3 @@
-/*
- * MTFMatrix.h
- *
- *  Created on: Mar 13, 2014
- *      Author: Jakub Banaszewski
- */
-
 #ifndef MTFMATRIX_H_
 #define MTFMATRIX_H_
 
@@ -24,7 +17,9 @@ using std::sort;
 namespace Matrix {
 
 /**
- * Class contains nodes in matrix with constant size rows.
+ * Class implements algorithm similar to MTF (Move to front), but elements are
+ * organized in rows. When element is notified it is moved to front row moving by path
+ * of smallest elements.
  */
 class MTFMatrix {
 

@@ -10,16 +10,12 @@
 namespace Tools {
 
 MatrixMTFProcessor::MatrixMTFProcessor(int user_id, string identifier,
-                                       int width, bool random)
+                                       int width)
     : Processor(user_id, identifier),
       penalty_counter_(Tester(20, 20)),
       matrix_builder_(Matrix::MatrixBuilder::GetInstance()),
       user_container_prototype(Base::SimpleElement::GetPrototype()) {
-  matrix_ = (
-      (random) ?
-          (matrix_builder_->WithMatrixWidth(width).WithRandomAdding()) :
-          (matrix_builder_->WithMatrixWidth(width))).Generate();
-
+  matrix_ = (matrix_builder_->WithMatrixWidth(width)).Generate();
 }
 
 MatrixMTFProcessor::~MatrixMTFProcessor() {

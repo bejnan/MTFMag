@@ -23,7 +23,7 @@ var annotated =
       [ "InvalidNameException", "classException_1_1InvalidNameException.html", "classException_1_1InvalidNameException" ]
     ] ],
     [ "Matrix", null, [
-      [ "MatrixBuilder", "classMatrix_1_1MatrixBuilder.html", null ],
+      [ "MatrixBuilder", "classMatrix_1_1MatrixBuilder.html", "classMatrix_1_1MatrixBuilder" ],
       [ "MTFMatrix", "classMatrix_1_1MTFMatrix.html", null ]
     ] ],
     [ "Tools", null, [

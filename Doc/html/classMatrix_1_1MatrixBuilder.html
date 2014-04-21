@@ -104,6 +104,8 @@ $(document).ready(function(){initNavTree('classMatrix_1_1MatrixBuilder.html','')
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classMatrix_1_1MatrixBuilder-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Matrix::MatrixBuilder Class Reference</div>  </div>
@@ -111,9 +113,135 @@ $(document).ready(function(){initNavTree('classMatrix_1_1MatrixBuilder.html','')
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="matrix__builder_8h_source.html">matrix_builder.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a01de919b8cad6ba9688ff53ece236a7c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix_1_1MatrixBuilder.html#a01de919b8cad6ba9688ff53ece236a7c">~MatrixBuilder</a> ()</td></tr>
+<tr class="separator:a01de919b8cad6ba9688ff53ece236a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aff9412e086c596cdb3d311d0e52f14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMatrix_1_1MatrixBuilder.html">MatrixBuilder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix_1_1MatrixBuilder.html#a5aff9412e086c596cdb3d311d0e52f14">WithMatrixWidth</a> (int width)</td></tr>
+<tr class="separator:a5aff9412e086c596cdb3d311d0e52f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46cbb751112db0910fedea05b62cd66a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMatrix_1_1MatrixBuilder.html">MatrixBuilder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix_1_1MatrixBuilder.html#a46cbb751112db0910fedea05b62cd66a">ResetSetting</a> ()</td></tr>
+<tr class="separator:a46cbb751112db0910fedea05b62cd66a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9106bc17080a6206198b8719202a274c"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classMatrix_1_1MTFMatrix.html">MTFMatrix</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix_1_1MatrixBuilder.html#a9106bc17080a6206198b8719202a274c">Generate</a> ()</td></tr>
+<tr class="separator:a9106bc17080a6206198b8719202a274c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a616620b47102d64ed470357bea1f8822"><td class="memItemLeft" align="right" valign="top">static shared_ptr&lt; <a class="el" href="classMatrix_1_1MatrixBuilder.html">MatrixBuilder</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix_1_1MatrixBuilder.html#a616620b47102d64ed470357bea1f8822">GetInstance</a> ()</td></tr>
+<tr class="separator:a616620b47102d64ed470357bea1f8822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class to build <a class="el" href="classMatrix_1_1MTFMatrix.html">MTFMatrix</a> with appropriate parameters. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a01de919b8cad6ba9688ff53ece236a7c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matrix::MatrixBuilder::~MatrixBuilder </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Empty destructor, nothing to handle </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a9106bc17080a6206198b8719202a274c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">shared_ptr&lt; <a class="el" href="classMatrix_1_1MTFMatrix.html">MTFMatrix</a> &gt; Matrix::MatrixBuilder::Generate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Generates <a class="el" href="classMatrix_1_1MTFMatrix.html">MTFMatrix</a> using <a class="el" href="classMatrix_1_1MatrixBuilder.html">MatrixBuilder</a> configuration </p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to new instance of <a class="el" href="classMatrix_1_1MTFMatrix.html">MTFMatrix</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a616620b47102d64ed470357bea1f8822"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">shared_ptr&lt; <a class="el" href="classMatrix_1_1MatrixBuilder.html">MatrixBuilder</a> &gt; Matrix::MatrixBuilder::GetInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Static method to get instance of builder with default set of settings </p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to fresh instance <a class="el" href="classMatrix_1_1MatrixBuilder.html">MatrixBuilder</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a46cbb751112db0910fedea05b62cd66a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMatrix_1_1MatrixBuilder.html">MatrixBuilder</a> &amp; Matrix::MatrixBuilder::ResetSetting </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets setting of builder to defaults (the same as after GetInstance method) </p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to <a class="el" href="classMatrix_1_1MatrixBuilder.html">MatrixBuilder</a> with default settings </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5aff9412e086c596cdb3d311d0e52f14"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMatrix_1_1MatrixBuilder.html">MatrixBuilder</a> &amp; Matrix::MatrixBuilder::WithMatrixWidth </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Method sets width of row in <a class="el" href="classMatrix_1_1MTFMatrix.html">MTFMatrix</a> to generate </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>Width of MTFMatrixs row </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to <a class="el" href="classMatrix_1_1MatrixBuilder.html">MatrixBuilder</a> with changed settings </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>matrix/<a class="el" href="matrix__builder_8h_source.html">matrix_builder.h</a></li>
 <li>matrix/matrix_builder.cpp</li>
 </ul>
@@ -123,7 +251,7 @@ $(document).ready(function(){initNavTree('classMatrix_1_1MatrixBuilder.html','')
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>Matrix</b></li><li class="navelem"><a class="el" href="classMatrix_1_1MatrixBuilder.html">MatrixBuilder</a></li>
-    <li class="footer">Generated on Mon Apr 21 2014 01:23:06 for MTFthesisstudies by
+    <li class="footer">Generated on Mon Apr 21 2014 23:08:58 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -10,8 +10,7 @@
 namespace Matrix {
 
 MatrixBuilder::MatrixBuilder()
-    : matrix_width_(1),
-      with_random_(false) {
+    : matrix_width_(1) {
 }
 
 MatrixBuilder::~MatrixBuilder() {
@@ -25,13 +24,9 @@ MatrixBuilder& MatrixBuilder::WithMatrixWidth(int width) {
   matrix_width_ = width;
   return *this;
 }
-MatrixBuilder& MatrixBuilder::WithRandomAdding() {
-  with_random_ = true;
-  return *this;
-}
+
 MatrixBuilder& MatrixBuilder::ResetSetting() {
   matrix_width_ = 1;
-  with_random_ = false;
   return *this;
 }
 

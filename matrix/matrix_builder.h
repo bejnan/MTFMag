@@ -16,23 +16,42 @@
 using std::shared_ptr;
 
 namespace Matrix {
+
 /**
  * Class to build MTFMatrix with appropriate parameters.
  */
 class MatrixBuilder {
 
  public:
+  /**
+   * Empty destructor, nothing to handle
+   */
   virtual ~MatrixBuilder();
 
+  /**
+   * Static method to get instance of builder with default
+   * set of settings
+   * @return Pointer to fresh instance MatrixBuilder
+   */
   static shared_ptr<MatrixBuilder> GetInstance();
-  // Set width of MTFMatrix
+
+  /**
+   * Method sets width of row in MTFMatrix to generate
+   * @param width Width of MTFMatrixs row
+   * @return Reference to MatrixBuilder with changed settings
+   */
   MatrixBuilder& WithMatrixWidth(int width);
-  // Set if random factor should be added (not implemented yet)
-  MatrixBuilder& WithRandomAdding();
-  // Reset setting of builder to default
+
+  /**
+   * Sets setting of builder to defaults (the same as after GetInstance method)
+   * @return Reference to MatrixBuilder with default settings
+   */
   MatrixBuilder& ResetSetting();
 
-  //Generate MTFMatrix
+  /**
+   * Generates MTFMatrix using MatrixBuilder configuration
+   * @return Pointer to new instance of MTFMatrix
+   */
   shared_ptr<MTFMatrix> Generate();
 
  protected:
@@ -40,8 +59,6 @@ class MatrixBuilder {
  private:
   // Width of matrix to build
   int matrix_width_;
-  // Remember decision to add random factor
-  bool with_random_;
 };
 
 } /* namespace Matrix */
