@@ -24,7 +24,7 @@ var annotated =
     ] ],
     [ "Matrix", null, [
       [ "MatrixBuilder", "classMatrix_1_1MatrixBuilder.html", "classMatrix_1_1MatrixBuilder" ],
-      [ "MTFMatrix", "classMatrix_1_1MTFMatrix.html", null ]
+      [ "MTFMatrix", "classMatrix_1_1MTFMatrix.html", "classMatrix_1_1MTFMatrix" ]
     ] ],
     [ "Tools", null, [
       [ "Processor", "classTools_1_1Processor.html", null ],

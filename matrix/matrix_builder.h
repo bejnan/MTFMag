@@ -1,10 +1,3 @@
-/*
- * MatrixBuilder.h
- *
- *  Created on: Mar 13, 2014
- *      Author: Jakub Banaszewski
- */
-
 #ifndef MATRIXBUILDER_H_
 #define MATRIXBUILDER_H_
 
@@ -18,7 +11,7 @@ using std::shared_ptr;
 namespace Matrix {
 
 /**
- * Class to build MTFMatrix with appropriate parameters.
+ * Builder of MTFMatrix with appropriate parameters.
  */
 class MatrixBuilder {
 
@@ -55,10 +48,14 @@ class MatrixBuilder {
   shared_ptr<MTFMatrix> Generate();
 
  protected:
+  /**
+   * Constructor is protected to use static GetInstance method
+   */
   MatrixBuilder();
+
  private:
-  // Width of matrix to build
-  int matrix_width_;
+  int matrix_width_; /**<  Saves WithMatrixWidth function argument. Part of
+                           configuration for MTXMatrix creation             */
 };
 
 } /* namespace Matrix */

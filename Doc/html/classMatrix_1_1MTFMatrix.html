@@ -104,6 +104,8 @@ $(document).ready(function(){initNavTree('classMatrix_1_1MTFMatrix.html','');});
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classMatrix_1_1MTFMatrix-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Matrix::MTFMatrix Class Reference</div>  </div>
@@ -111,9 +113,398 @@ $(document).ready(function(){initNavTree('classMatrix_1_1MTFMatrix.html','');});
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="mtf__matrix_8h_source.html">mtf_matrix.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a5aab84f1c1108016c2f7b6d10b941314"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix_1_1MTFMatrix.html#a5aab84f1c1108016c2f7b6d10b941314">MTFMatrix</a> (int row_size)</td></tr>
+<tr class="separator:a5aab84f1c1108016c2f7b6d10b941314"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c06a7c5efe39afb8fb246ffe9411373"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix_1_1MTFMatrix.html#a8c06a7c5efe39afb8fb246ffe9411373">~MTFMatrix</a> ()</td></tr>
+<tr class="separator:a8c06a7c5efe39afb8fb246ffe9411373"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e9ba07fa5d6fbd42d6c8a42f8693201"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix_1_1MTFMatrix.html#a9e9ba07fa5d6fbd42d6c8a42f8693201">HaveElement</a> (int user_id)</td></tr>
+<tr class="separator:a9e9ba07fa5d6fbd42d6c8a42f8693201"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7acd53d1874d7039a79d3fa1f37a8402"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix_1_1MTFMatrix.html#a7acd53d1874d7039a79d3fa1f37a8402">AddElement</a> (shared_ptr&lt; <a class="el" href="classBase_1_1Element.html">Base::Element</a> &gt; element)</td></tr>
+<tr class="separator:a7acd53d1874d7039a79d3fa1f37a8402"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f1546a63e034976fc1c56aec84e95eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix_1_1MTFMatrix.html#a2f1546a63e034976fc1c56aec84e95eb">NotifyContent</a> (int user_id)</td></tr>
+<tr class="separator:a2f1546a63e034976fc1c56aec84e95eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c075433df7391b0994a3db3bd78dbc8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix_1_1MTFMatrix.html#a4c075433df7391b0994a3db3bd78dbc8">GetContentPosition</a> (int user_id)</td></tr>
+<tr class="separator:a4c075433df7391b0994a3db3bd78dbc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a0d1980103644f7738bdc7e7f81033ccb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix_1_1MTFMatrix.html#a0d1980103644f7738bdc7e7f81033ccb">MoveFromPositionToFront</a> (int position)</td></tr>
+<tr class="separator:a0d1980103644f7738bdc7e7f81033ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a125284133e7996984a1991e4db91b3d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix_1_1MTFMatrix.html#a125284133e7996984a1991e4db91b3d9">SwitchElementsOnPositions</a> (int position1, int position2)</td></tr>
+<tr class="separator:a125284133e7996984a1991e4db91b3d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5689f23dcd0875aec01119132b462857"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix_1_1MTFMatrix.html#a5689f23dcd0875aec01119132b462857">SortElementToList</a> ()</td></tr>
+<tr class="separator:a5689f23dcd0875aec01119132b462857"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c6b60bea26c17730c100a4f492f7047"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix_1_1MTFMatrix.html#a5c6b60bea26c17730c100a4f492f7047">CompareElementsOnPositions</a> (int position1, int position2)</td></tr>
+<tr class="separator:a5c6b60bea26c17730c100a4f492f7047"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89cf87374003367fc317410d9fae3cde"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix_1_1MTFMatrix.html#a89cf87374003367fc317410d9fae3cde">ElementCount</a> ()</td></tr>
+<tr class="separator:a89cf87374003367fc317410d9fae3cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class implements algorithm similar to MTF (Move to front), but elements are organized in rows. When element is notified it is moved to front row moving by path of smallest elements. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<div class="textblock"><p>Aim of class is to organize elements in linear order. Class implements algorithm similar to MTF (Move to front), but elements are organized in rows with constant width and creates matrix. When element is notified it is moved to first row moving by path of smallest elements (using Element::Compare method) . For example (let row size be 3) :</p>
+<p>Before notification (elements identifier) : 1 2 3 (let elements be in order 1 &lt; 2 &lt; 3) 4 5 6 (let elements be in order 4 &lt; 5 &lt; 6) 7 8 9 (let elements be in order 7 &lt; 8 &lt; 9)</p>
+<p>After notification of 9 : 9 2 3 1 5 6 8 9 4</p>
+<p>Another example (let order between elements be the same as order between their id's) : 1 3 2 8 5 6 9 4 7</p>
+<p>After notification of 4 : 4 3 2 8 1 6 9 5 7</p>
+<p>To have linear order between elements they are sorted by number of row and order in row. In short way, order is by pair (#row_number,#element_compare_value) in alphabetic way. For example (let order between elements be the same as order between their id's) : 1 3 2 8 5 6 9 4 7</p>
+<p>Gives order : 3 2 1 8 6 5 9 7 4</p>
+<p>Position of element in ordered way can be read by MTFMatrix::GetContentPosiotion method</p>
+<dl class="section see"><dt>See Also</dt><dd>Element::Compare to understand order between elements in row </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a5aab84f1c1108016c2f7b6d10b941314"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matrix::MTFMatrix::MTFMatrix </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>row_size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets row size of class matrix and initialize all containers. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">row_size</td><td>size of row to store elements </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8c06a7c5efe39afb8fb246ffe9411373"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matrix::MTFMatrix::~MTFMatrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Default destructor. Nothing to handle. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a7acd53d1874d7039a79d3fa1f37a8402"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::MTFMatrix::AddElement </td>
+          <td>(</td>
+          <td class="paramtype">shared_ptr&lt; <a class="el" href="classBase_1_1Element.html">Base::Element</a> &gt;&#160;</td>
+          <td class="paramname"><em>element</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds new element to matrix if no element with given id exists in class instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">element</td><td>Pointer to new element. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMatrix_1_1MTFMatrix_a7acd53d1874d7039a79d3fa1f37a8402_cgraph.png" border="0" usemap="#classMatrix_1_1MTFMatrix_a7acd53d1874d7039a79d3fa1f37a8402_cgraph" alt=""/></div>
+<map name="classMatrix_1_1MTFMatrix_a7acd53d1874d7039a79d3fa1f37a8402_cgraph" id="classMatrix_1_1MTFMatrix_a7acd53d1874d7039a79d3fa1f37a8402_cgraph">
+<area shape="rect" id="node2" href="classMatrix_1_1MTFMatrix.html#a9e9ba07fa5d6fbd42d6c8a42f8693201" title="Matrix::MTFMatrix::\lHaveElement" alt="" coords="195,5,336,46"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a5c6b60bea26c17730c100a4f492f7047"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Matrix::MTFMatrix::CompareElementsOnPositions </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compares elements by Element::Compare method Element from position1 is "source" of method. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position1</td><td>Position of first element to compare. </td></tr>
+    <tr><td class="paramname">position2</td><td>Position of second element to compare with. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Result of Element::Compare method </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd>Element::Compare </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a89cf87374003367fc317410d9fae3cde"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Matrix::MTFMatrix::ElementCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns count of elements stored in class instance </p>
+<dl class="section return"><dt>Returns</dt><dd>Count of elements stored in class instance </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4c075433df7391b0994a3db3bd78dbc8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Matrix::MTFMatrix::GetContentPosition </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>user_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gives current position of element in prepared algorithm order. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user_id</td><td>Identifier of element </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Position of element in linear order </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9e9ba07fa5d6fbd42d6c8a42f8693201"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Matrix::MTFMatrix::HaveElement </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>user_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Check if element with given identifier is stored in class instance </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user_id</td><td>Identifier of element </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if element with given identifier was added to class instance, false otherwise </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0d1980103644f7738bdc7e7f81033ccb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::MTFMatrix::MoveFromPositionToFront </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Method to move element from given position to first row (happens after notification). This method uses row_size_ property to move element correctly. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>Position of element to move </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMatrix_1_1MTFMatrix_a0d1980103644f7738bdc7e7f81033ccb_cgraph.png" border="0" usemap="#classMatrix_1_1MTFMatrix_a0d1980103644f7738bdc7e7f81033ccb_cgraph" alt=""/></div>
+<map name="classMatrix_1_1MTFMatrix_a0d1980103644f7738bdc7e7f81033ccb_cgraph" id="classMatrix_1_1MTFMatrix_a0d1980103644f7738bdc7e7f81033ccb_cgraph">
+<area shape="rect" id="node2" href="classMatrix_1_1MTFMatrix.html#a5c6b60bea26c17730c100a4f492f7047" title="Matrix::MTFMatrix::\lCompareElementsOnPositions" alt="" coords="243,5,458,46"/><area shape="rect" id="node3" href="classMatrix_1_1MTFMatrix.html#a125284133e7996984a1991e4db91b3d9" title="Matrix::MTFMatrix::\lSwitchElementsOnPositions" alt="" coords="252,70,449,111"/><area shape="rect" id="node4" href="classMatrix_1_1MTFMatrix.html#a5689f23dcd0875aec01119132b462857" title="Matrix::MTFMatrix::\lSortElementToList" alt="" coords="280,135,421,177"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2f1546a63e034976fc1c56aec84e95eb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::MTFMatrix::NotifyContent </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>user_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Main method of class. Notify element with given id. After notification of element (Element::Notify method) it moves element to front row as shown in class description. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user_id</td><td>Identifier of element to notify </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMatrix_1_1MTFMatrix_a2f1546a63e034976fc1c56aec84e95eb_cgraph.png" border="0" usemap="#classMatrix_1_1MTFMatrix_a2f1546a63e034976fc1c56aec84e95eb_cgraph" alt=""/></div>
+<map name="classMatrix_1_1MTFMatrix_a2f1546a63e034976fc1c56aec84e95eb_cgraph" id="classMatrix_1_1MTFMatrix_a2f1546a63e034976fc1c56aec84e95eb_cgraph">
+<area shape="rect" id="node2" href="classMatrix_1_1MTFMatrix.html#a0d1980103644f7738bdc7e7f81033ccb" title="Matrix::MTFMatrix::\lMoveFromPositionToFront" alt="" coords="195,70,384,111"/><area shape="rect" id="node3" href="classMatrix_1_1MTFMatrix.html#a5c6b60bea26c17730c100a4f492f7047" title="Matrix::MTFMatrix::\lCompareElementsOnPositions" alt="" coords="433,5,647,46"/><area shape="rect" id="node4" href="classMatrix_1_1MTFMatrix.html#a125284133e7996984a1991e4db91b3d9" title="Matrix::MTFMatrix::\lSwitchElementsOnPositions" alt="" coords="441,70,639,111"/><area shape="rect" id="node5" href="classMatrix_1_1MTFMatrix.html#a5689f23dcd0875aec01119132b462857" title="Matrix::MTFMatrix::\lSortElementToList" alt="" coords="469,135,611,177"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a5689f23dcd0875aec01119132b462857"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::MTFMatrix::SortElementToList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sorts elements in row to restore linear order. Used after notification </p>
+
+</div>
+</div>
+<a class="anchor" id="a125284133e7996984a1991e4db91b3d9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::MTFMatrix::SwitchElementsOnPositions </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Method to switch pointers to elements stored in class. Using this method guarantees fast access to elements </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position1</td><td>Position of first element </td></tr>
+    <tr><td class="paramname">position2</td><td>Position of second element </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>matrix/<a class="el" href="mtf__matrix_8h_source.html">mtf_matrix.h</a></li>
 <li>matrix/mtf_matrix.cpp</li>
 </ul>
@@ -123,7 +514,7 @@ $(document).ready(function(){initNavTree('classMatrix_1_1MTFMatrix.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>Matrix</b></li><li class="navelem"><a class="el" href="classMatrix_1_1MTFMatrix.html">MTFMatrix</a></li>
-    <li class="footer">Generated on Mon Apr 21 2014 23:08:58 for MTFthesisstudies by
+    <li class="footer">Generated on Tue Apr 22 2014 01:54:12 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

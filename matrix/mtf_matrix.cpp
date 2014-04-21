@@ -22,9 +22,11 @@ bool MTFMatrix::HaveElement(int user_id) {
 }
 
 void MTFMatrix::AddElement(shared_ptr<Base::Element> element) {
-  element_list_.push_back(element);
-  sorted_element_list_.push_back(element->user_id());
-  id_position_[element->user_id()] = element_list_.size() - 1;
+  if (!HaveElement(element->user_id())) {
+    element_list_.push_back(element);
+    sorted_element_list_.push_back(element->user_id());
+    id_position_[element->user_id()] = element_list_.size() - 1;
+  }
 }
 
 void MTFMatrix::NotifyContent(int user_id) {

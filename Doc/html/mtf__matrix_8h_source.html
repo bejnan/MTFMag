@@ -109,63 +109,72 @@ $(document).ready(function(){initNavTree('mtf__matrix_8h_source.html','');});
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../headers/elements.h&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using</span> std::vector;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">using</span> std::map;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using</span> std::shared_ptr;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">using</span> std::sort;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>Matrix {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classMatrix_1_1MTFMatrix.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMatrix_1_1MTFMatrix.html">MTFMatrix</a> {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <a class="code" href="classMatrix_1_1MTFMatrix.html">MTFMatrix</a>(<span class="keywordtype">int</span> row_size);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classMatrix_1_1MTFMatrix.html">MTFMatrix</a>();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="comment">// Check if there is node with given user_id</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> HaveElement(<span class="keywordtype">int</span> user_id);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="comment">// Adds new element to matrix</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> AddElement(shared_ptr&lt;Base::Element&gt; element);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="comment">//Notify element with given id.</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="comment">// After notification it is moved up to top of the tree.</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordtype">void</span> NotifyContent(<span class="keywordtype">int</span> user_id);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="comment">// Gives current position of element in hierarchy.</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">int</span> GetContentPosition(<span class="keywordtype">int</span> user_id);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="comment">// moves element from position to first row</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">void</span> MoveFromPositionToFront(<span class="keywordtype">int</span> position);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">void</span> SwitchElementsOnPositions(<span class="keywordtype">int</span> position1, <span class="keywordtype">int</span> position2);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="comment">// sorts elements from element_list to sorder_element_list</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordtype">void</span> SortElementToList();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">int</span> CompareElementsOnPositions(<span class="keywordtype">int</span> position1,<span class="keywordtype">int</span> position2);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ElementCount();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordtype">int</span> row_size_;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  vector&lt;shared_ptr&lt;Base::Element&gt; &gt; element_list_;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  vector&lt;int&gt; sorted_element_list_;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="comment">// map to show position of node with given id</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  map&lt;int, int&gt; id_position_;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;} <span class="comment">/* namespace Matrix */</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* MTFMATRIX_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="classMatrix_1_1MTFMatrix_html"><div class="ttname"><a href="classMatrix_1_1MTFMatrix.html">Matrix::MTFMatrix</a></div><div class="ttdef"><b>Definition:</b> mtf_matrix.h:24</div></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using</span> std::vector;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using</span> std::map;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">using</span> std::shared_ptr;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using</span> std::sort;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>Matrix {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classMatrix_1_1MTFMatrix.html">   63</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMatrix_1_1MTFMatrix.html">MTFMatrix</a> {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <a class="code" href="classMatrix_1_1MTFMatrix.html#a5aab84f1c1108016c2f7b6d10b941314">MTFMatrix</a>(<span class="keywordtype">int</span> row_size);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classMatrix_1_1MTFMatrix.html#a8c06a7c5efe39afb8fb246ffe9411373">~MTFMatrix</a>();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classMatrix_1_1MTFMatrix.html#a9e9ba07fa5d6fbd42d6c8a42f8693201">HaveElement</a>(<span class="keywordtype">int</span> user_id);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classMatrix_1_1MTFMatrix.html#a7acd53d1874d7039a79d3fa1f37a8402">AddElement</a>(shared_ptr&lt;Base::Element&gt; element);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classMatrix_1_1MTFMatrix.html#a2f1546a63e034976fc1c56aec84e95eb">NotifyContent</a>(<span class="keywordtype">int</span> user_id);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classMatrix_1_1MTFMatrix.html#a4c075433df7391b0994a3db3bd78dbc8">GetContentPosition</a>(<span class="keywordtype">int</span> user_id);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classMatrix_1_1MTFMatrix.html#a0d1980103644f7738bdc7e7f81033ccb">MoveFromPositionToFront</a>(<span class="keywordtype">int</span> position);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classMatrix_1_1MTFMatrix.html#a125284133e7996984a1991e4db91b3d9">SwitchElementsOnPositions</a>(<span class="keywordtype">int</span> position1, <span class="keywordtype">int</span> position2);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classMatrix_1_1MTFMatrix.html#a5689f23dcd0875aec01119132b462857">SortElementToList</a>();</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classMatrix_1_1MTFMatrix.html#a5c6b60bea26c17730c100a4f492f7047">CompareElementsOnPositions</a>(<span class="keywordtype">int</span> position1, <span class="keywordtype">int</span> position2);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classMatrix_1_1MTFMatrix.html#a89cf87374003367fc317410d9fae3cde">ElementCount</a>();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <span class="keywordtype">int</span> row_size_;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  vector&lt;shared_ptr&lt;Base::Element&gt; &gt; element_list_;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  vector&lt;int&gt; sorted_element_list_;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  map&lt;int, int&gt; id_position_; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;};</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;} <span class="comment">/* namespace Matrix */</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* MTFMATRIX_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="classMatrix_1_1MTFMatrix_html_a9e9ba07fa5d6fbd42d6c8a42f8693201"><div class="ttname"><a href="classMatrix_1_1MTFMatrix.html#a9e9ba07fa5d6fbd42d6c8a42f8693201">Matrix::MTFMatrix::HaveElement</a></div><div class="ttdeci">virtual bool HaveElement(int user_id)</div><div class="ttdef"><b>Definition:</b> mtf_matrix.cpp:20</div></div>
+<div class="ttc" id="classMatrix_1_1MTFMatrix_html_a7acd53d1874d7039a79d3fa1f37a8402"><div class="ttname"><a href="classMatrix_1_1MTFMatrix.html#a7acd53d1874d7039a79d3fa1f37a8402">Matrix::MTFMatrix::AddElement</a></div><div class="ttdeci">virtual void AddElement(shared_ptr&lt; Base::Element &gt; element)</div><div class="ttdef"><b>Definition:</b> mtf_matrix.cpp:24</div></div>
+<div class="ttc" id="classMatrix_1_1MTFMatrix_html_a8c06a7c5efe39afb8fb246ffe9411373"><div class="ttname"><a href="classMatrix_1_1MTFMatrix.html#a8c06a7c5efe39afb8fb246ffe9411373">Matrix::MTFMatrix::~MTFMatrix</a></div><div class="ttdeci">virtual ~MTFMatrix()</div><div class="ttdef"><b>Definition:</b> mtf_matrix.cpp:17</div></div>
+<div class="ttc" id="classMatrix_1_1MTFMatrix_html_a89cf87374003367fc317410d9fae3cde"><div class="ttname"><a href="classMatrix_1_1MTFMatrix.html#a89cf87374003367fc317410d9fae3cde">Matrix::MTFMatrix::ElementCount</a></div><div class="ttdeci">unsigned int ElementCount()</div><div class="ttdef"><b>Definition:</b> mtf_matrix.cpp:117</div></div>
+<div class="ttc" id="classMatrix_1_1MTFMatrix_html_a2f1546a63e034976fc1c56aec84e95eb"><div class="ttname"><a href="classMatrix_1_1MTFMatrix.html#a2f1546a63e034976fc1c56aec84e95eb">Matrix::MTFMatrix::NotifyContent</a></div><div class="ttdeci">void NotifyContent(int user_id)</div><div class="ttdef"><b>Definition:</b> mtf_matrix.cpp:32</div></div>
+<div class="ttc" id="classMatrix_1_1MTFMatrix_html"><div class="ttname"><a href="classMatrix_1_1MTFMatrix.html">Matrix::MTFMatrix</a></div><div class="ttdef"><b>Definition:</b> mtf_matrix.h:63</div></div>
+<div class="ttc" id="classMatrix_1_1MTFMatrix_html_a5689f23dcd0875aec01119132b462857"><div class="ttname"><a href="classMatrix_1_1MTFMatrix.html#a5689f23dcd0875aec01119132b462857">Matrix::MTFMatrix::SortElementToList</a></div><div class="ttdeci">void SortElementToList()</div><div class="ttdef"><b>Definition:</b> mtf_matrix.cpp:86</div></div>
+<div class="ttc" id="classMatrix_1_1MTFMatrix_html_a5c6b60bea26c17730c100a4f492f7047"><div class="ttname"><a href="classMatrix_1_1MTFMatrix.html#a5c6b60bea26c17730c100a4f492f7047">Matrix::MTFMatrix::CompareElementsOnPositions</a></div><div class="ttdeci">int CompareElementsOnPositions(int position1, int position2)</div><div class="ttdef"><b>Definition:</b> mtf_matrix.cpp:113</div></div>
+<div class="ttc" id="classMatrix_1_1MTFMatrix_html_a0d1980103644f7738bdc7e7f81033ccb"><div class="ttname"><a href="classMatrix_1_1MTFMatrix.html#a0d1980103644f7738bdc7e7f81033ccb">Matrix::MTFMatrix::MoveFromPositionToFront</a></div><div class="ttdeci">void MoveFromPositionToFront(int position)</div><div class="ttdef"><b>Definition:</b> mtf_matrix.cpp:41</div></div>
+<div class="ttc" id="classMatrix_1_1MTFMatrix_html_a4c075433df7391b0994a3db3bd78dbc8"><div class="ttname"><a href="classMatrix_1_1MTFMatrix.html#a4c075433df7391b0994a3db3bd78dbc8">Matrix::MTFMatrix::GetContentPosition</a></div><div class="ttdeci">int GetContentPosition(int user_id)</div><div class="ttdef"><b>Definition:</b> mtf_matrix.cpp:37</div></div>
+<div class="ttc" id="classMatrix_1_1MTFMatrix_html_a125284133e7996984a1991e4db91b3d9"><div class="ttname"><a href="classMatrix_1_1MTFMatrix.html#a125284133e7996984a1991e4db91b3d9">Matrix::MTFMatrix::SwitchElementsOnPositions</a></div><div class="ttdeci">void SwitchElementsOnPositions(int position1, int position2)</div><div class="ttdef"><b>Definition:</b> mtf_matrix.cpp:63</div></div>
+<div class="ttc" id="classMatrix_1_1MTFMatrix_html_a5aab84f1c1108016c2f7b6d10b941314"><div class="ttname"><a href="classMatrix_1_1MTFMatrix.html#a5aab84f1c1108016c2f7b6d10b941314">Matrix::MTFMatrix::MTFMatrix</a></div><div class="ttdeci">MTFMatrix(int row_size)</div><div class="ttdef"><b>Definition:</b> mtf_matrix.cpp:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_109f68d84cef4a133396a0be144fa9b1.html">matrix</a></li><li class="navelem"><b>mtf_matrix.h</b></li>
-    <li class="footer">Generated on Mon Apr 21 2014 23:08:57 for MTFthesisstudies by
+    <li class="footer">Generated on Tue Apr 22 2014 01:54:11 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

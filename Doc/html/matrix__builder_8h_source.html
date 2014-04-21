@@ -104,53 +104,47 @@ $(document).ready(function(){initNavTree('matrix__builder_8h_source.html','');})
 <div class="title">matrix_builder.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * MatrixBuilder.h</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *  Created on: Mar 13, 2014</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *      Author: Jakub Banaszewski</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef MATRIXBUILDER_H_</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MATRIXBUILDER_H_</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef MATRIXBUILDER_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MATRIXBUILDER_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;mtf_matrix.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../headers/elements.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using</span> std::shared_ptr;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span>Matrix {</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;mtf_matrix.h&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;../headers/elements.h&quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using</span> std::shared_ptr;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classMatrix_1_1MatrixBuilder.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMatrix_1_1MatrixBuilder.html">MatrixBuilder</a> {</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span>Matrix {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classMatrix_1_1MatrixBuilder.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMatrix_1_1MatrixBuilder.html">MatrixBuilder</a> {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classMatrix_1_1MatrixBuilder.html#a01de919b8cad6ba9688ff53ece236a7c">~MatrixBuilder</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classMatrix_1_1MatrixBuilder.html#a01de919b8cad6ba9688ff53ece236a7c">~MatrixBuilder</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">static</span> shared_ptr&lt;MatrixBuilder&gt; <a class="code" href="classMatrix_1_1MatrixBuilder.html#a616620b47102d64ed470357bea1f8822">GetInstance</a>();</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">static</span> shared_ptr&lt;MatrixBuilder&gt; <a class="code" href="classMatrix_1_1MatrixBuilder.html#a616620b47102d64ed470357bea1f8822">GetInstance</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="classMatrix_1_1MatrixBuilder.html">MatrixBuilder</a>&amp; <a class="code" href="classMatrix_1_1MatrixBuilder.html#a5aff9412e086c596cdb3d311d0e52f14">WithMatrixWidth</a>(<span class="keywordtype">int</span> width);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <a class="code" href="classMatrix_1_1MatrixBuilder.html">MatrixBuilder</a>&amp; <a class="code" href="classMatrix_1_1MatrixBuilder.html#a5aff9412e086c596cdb3d311d0e52f14">WithMatrixWidth</a>(<span class="keywordtype">int</span> width);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <a class="code" href="classMatrix_1_1MatrixBuilder.html">MatrixBuilder</a>&amp; <a class="code" href="classMatrix_1_1MatrixBuilder.html#a46cbb751112db0910fedea05b62cd66a">ResetSetting</a>();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  shared_ptr&lt;MTFMatrix&gt; <a class="code" href="classMatrix_1_1MatrixBuilder.html#a9106bc17080a6206198b8719202a274c">Generate</a>();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <a class="code" href="classMatrix_1_1MatrixBuilder.html">MatrixBuilder</a>();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="comment">// Width of matrix to build</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordtype">int</span> matrix_width_;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;} <span class="comment">/* namespace Matrix */</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* MATRIXBUILDER_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <a class="code" href="classMatrix_1_1MatrixBuilder.html">MatrixBuilder</a>&amp; <a class="code" href="classMatrix_1_1MatrixBuilder.html#a46cbb751112db0910fedea05b62cd66a">ResetSetting</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  shared_ptr&lt;MTFMatrix&gt; <a class="code" href="classMatrix_1_1MatrixBuilder.html#a9106bc17080a6206198b8719202a274c">Generate</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <a class="code" href="classMatrix_1_1MatrixBuilder.html#a594e69c0eb00331dac2fdcb707c0667b">MatrixBuilder</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordtype">int</span> matrix_width_; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;} <span class="comment">/* namespace Matrix */</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* MATRIXBUILDER_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="classMatrix_1_1MatrixBuilder_html_a46cbb751112db0910fedea05b62cd66a"><div class="ttname"><a href="classMatrix_1_1MatrixBuilder.html#a46cbb751112db0910fedea05b62cd66a">Matrix::MatrixBuilder::ResetSetting</a></div><div class="ttdeci">MatrixBuilder &amp; ResetSetting()</div><div class="ttdef"><b>Definition:</b> matrix_builder.cpp:28</div></div>
 <div class="ttc" id="classMatrix_1_1MatrixBuilder_html_a01de919b8cad6ba9688ff53ece236a7c"><div class="ttname"><a href="classMatrix_1_1MatrixBuilder.html#a01de919b8cad6ba9688ff53ece236a7c">Matrix::MatrixBuilder::~MatrixBuilder</a></div><div class="ttdeci">virtual ~MatrixBuilder()</div><div class="ttdef"><b>Definition:</b> matrix_builder.cpp:16</div></div>
+<div class="ttc" id="classMatrix_1_1MatrixBuilder_html_a594e69c0eb00331dac2fdcb707c0667b"><div class="ttname"><a href="classMatrix_1_1MatrixBuilder.html#a594e69c0eb00331dac2fdcb707c0667b">Matrix::MatrixBuilder::MatrixBuilder</a></div><div class="ttdeci">MatrixBuilder()</div><div class="ttdef"><b>Definition:</b> matrix_builder.cpp:12</div></div>
 <div class="ttc" id="classMatrix_1_1MatrixBuilder_html_a9106bc17080a6206198b8719202a274c"><div class="ttname"><a href="classMatrix_1_1MatrixBuilder.html#a9106bc17080a6206198b8719202a274c">Matrix::MatrixBuilder::Generate</a></div><div class="ttdeci">shared_ptr&lt; MTFMatrix &gt; Generate()</div><div class="ttdef"><b>Definition:</b> matrix_builder.cpp:33</div></div>
 <div class="ttc" id="classMatrix_1_1MatrixBuilder_html_a616620b47102d64ed470357bea1f8822"><div class="ttname"><a href="classMatrix_1_1MatrixBuilder.html#a616620b47102d64ed470357bea1f8822">Matrix::MatrixBuilder::GetInstance</a></div><div class="ttdeci">static shared_ptr&lt; MatrixBuilder &gt; GetInstance()</div><div class="ttdef"><b>Definition:</b> matrix_builder.cpp:19</div></div>
-<div class="ttc" id="classMatrix_1_1MatrixBuilder_html"><div class="ttname"><a href="classMatrix_1_1MatrixBuilder.html">Matrix::MatrixBuilder</a></div><div class="ttdef"><b>Definition:</b> matrix_builder.h:23</div></div>
+<div class="ttc" id="classMatrix_1_1MatrixBuilder_html"><div class="ttname"><a href="classMatrix_1_1MatrixBuilder.html">Matrix::MatrixBuilder</a></div><div class="ttdef"><b>Definition:</b> matrix_builder.h:16</div></div>
 <div class="ttc" id="classMatrix_1_1MatrixBuilder_html_a5aff9412e086c596cdb3d311d0e52f14"><div class="ttname"><a href="classMatrix_1_1MatrixBuilder.html#a5aff9412e086c596cdb3d311d0e52f14">Matrix::MatrixBuilder::WithMatrixWidth</a></div><div class="ttdeci">MatrixBuilder &amp; WithMatrixWidth(int width)</div><div class="ttdef"><b>Definition:</b> matrix_builder.cpp:23</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -158,7 +152,7 @@ $(document).ready(function(){initNavTree('matrix__builder_8h_source.html','');})
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_109f68d84cef4a133396a0be144fa9b1.html">matrix</a></li><li class="navelem"><b>matrix_builder.h</b></li>
-    <li class="footer">Generated on Mon Apr 21 2014 23:08:57 for MTFthesisstudies by
+    <li class="footer">Generated on Tue Apr 22 2014 01:54:11 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

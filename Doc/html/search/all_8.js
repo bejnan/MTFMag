@@ -1,4 +1,8 @@
 var searchData=
 [
-  ['notify',['Notify',['../classBase_1_1ComplexDifferenceElement.html#a172e4e7223c50f84b5f2f8fdd52ea8d0',1,'Base::ComplexDifferenceElement::Notify()'],['../classBase_1_1Element.html#afbf18a93271bdeba8a5ced434b518711',1,'Base::Element::Notify()'],['../classBase_1_1SimpleElement.html#aca55505bef5c6aa5b9b36051a3930ba0',1,'Base::SimpleElement::Notify()']]]
+  ['matrixbuilder',['MatrixBuilder',['../classMatrix_1_1MatrixBuilder.html',1,'Matrix']]],
+  ['matrixbuilder',['MatrixBuilder',['../classMatrix_1_1MatrixBuilder.html#a594e69c0eb00331dac2fdcb707c0667b',1,'Matrix::MatrixBuilder']]],
+  ['movefrompositiontofront',['MoveFromPositionToFront',['../classMatrix_1_1MTFMatrix.html#a0d1980103644f7738bdc7e7f81033ccb',1,'Matrix::MTFMatrix']]],
+  ['mtfmatrix',['MTFMatrix',['../classMatrix_1_1MTFMatrix.html#a5aab84f1c1108016c2f7b6d10b941314',1,'Matrix::MTFMatrix']]],
+  ['mtfmatrix',['MTFMatrix',['../classMatrix_1_1MTFMatrix.html',1,'Matrix']]]
 ];
