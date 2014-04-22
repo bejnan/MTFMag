@@ -13,9 +13,10 @@ MatrixMTFProcessor::MatrixMTFProcessor(int user_id, string identifier,
                                        int width)
     : Processor(user_id, identifier),
       penalty_counter_(Tester(20, 20)),
-      matrix_builder_(Matrix::MatrixBuilder::GetInstance()),
       user_container_prototype(Base::SimpleElement::GetPrototype()) {
-  matrix_ = (matrix_builder_->WithMatrixWidth(width)).Generate();
+  shared_ptr<Matrix::MatrixBuilder> matrix_builder =
+      Matrix::MatrixBuilder::GetInstance();
+  matrix_ = matrix_builder->WithMatrixWidth(width).Generate();
 }
 
 MatrixMTFProcessor::~MatrixMTFProcessor() {

@@ -97,10 +97,8 @@ class MTFMatrix : public Base::Algorithm {
   virtual void AddElement(int user_id);
 
   /**
-   * Main method of class. Notify element with given id.
    * After notification of element (Element::Notify method)
    * it moves element to front row as shown in class description.
-   * @param user_id Identifier of element to notify
    */
   void NotifyContent(int user_id);
 

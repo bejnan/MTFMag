@@ -31,7 +31,6 @@ class MatrixMTFProcessor : public Tools::Processor {
   virtual void AddUser(int user_id);
  private:
   Tester penalty_counter_;
-  shared_ptr<Matrix::MatrixBuilder> matrix_builder_;
   shared_ptr<Matrix::MTFMatrix> matrix_;
   shared_ptr<Base::Element> user_container_prototype;
 };
