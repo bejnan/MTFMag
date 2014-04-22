@@ -1,7 +1,9 @@
 #ifndef MTFMATRIX_H_
 #define MTFMATRIX_H_
 
-#include "../headers/elements.h"
+#include "../../headers/elements.h"
+#include "../../headers/exceptions.h"
+#include "../algorithm.h"
 
 #include <vector>
 #include <map>
@@ -26,35 +28,35 @@ namespace Matrix {
  * of smallest elements (using Element::Compare method) . For example
  * (let row size be 3) :
  *
- * Before notification (elements identifier) :
- * 1 2 3 (let elements be in order 1 < 2 < 3)
- * 4 5 6 (let elements be in order 4 < 5 < 6)
- * 7 8 9 (let elements be in order 7 < 8 < 9)
+ * Before notification (elements identifier) : <br>
+ * 1 2 3 (let elements be in order 1 < 2 < 3) <br>
+ * 4 5 6 (let elements be in order 4 < 5 < 6) <br>
+ * 7 8 9 (let elements be in order 7 < 8 < 9) <br>
  *
- * After notification of 9 :
- * 9 2 3
- * 1 5 6
- * 8 9 4
+ * After notification of 9 : <br>
+ * 9 2 3 <br>
+ * 1 5 6 <br>
+ * 8 9 4 <br>
  *
  * Another example (let order between elements be
- * the same as order between their id's) :
- * 1 3 2
- * 8 5 6
- * 9 4 7
+ * the same as order between their id's) : <br>
+ * 1 3 2 <br>
+ * 8 5 6 <br>
+ * 9 4 7 <br>
  *
- * After notification of 4 :
- * 4 3 2
- * 8 1 6
- * 9 5 7
+ * After notification of 4 : <br>
+ * 4 3 2 <br>
+ * 8 1 6 <br>
+ * 9 5 7 <br>
  *
  * To have linear order between elements they are sorted by
  * number of row and order in row. In short way, order is
- * by pair (#row_number,#element_compare_value) in alphabetic way.
+ * by pair (row number, element compare value) in alphabetic way.
  * For example (let order between elements be
- * the same as order between their id's) :
- * 1 3 2
- * 8 5 6
- * 9 4 7
+ * the same as order between their id's) : <br>
+ * 1 3 2 <br>
+ * 8 5 6 <br>
+ * 9 4 7 <br>
  *
  * Gives order : 3 2 1 8 6 5 9 7 4
  *
@@ -63,7 +65,7 @@ namespace Matrix {
  *
  * @see Element::Compare to understand order between elements in row
  */
-class MTFMatrix {
+class MTFMatrix : public Base::Algorithm {
 
  public:
   /**
@@ -90,9 +92,9 @@ class MTFMatrix {
   /**
    * Adds new element to matrix if no element with given id exists in class
    * instance.
-   * @param element Pointer to new element.
+   * @param user_id Identifier of new element.
    */
-  virtual void AddElement(shared_ptr<Base::Element> element);
+  virtual void AddElement(int user_id);
 
   /**
    * Main method of class. Notify element with given id.
@@ -101,6 +103,17 @@ class MTFMatrix {
    * @param user_id Identifier of element to notify
    */
   void NotifyContent(int user_id);
+
+  /**
+   * Notify element and move to front in the some way
+   * as one parameter NotifyContent. Notification count
+   * is used to notify element with this parameter
+   * @param user_id Identifier of element to notify
+   * @param notification_count Mark, timestamp or
+   * counter to decide order in time of notifications
+   * @see Element::Notify
+   */
+  void NotifyContent(int user_id, int notification_count);
 
   /**
    * Gives current position of element in prepared algorithm order.

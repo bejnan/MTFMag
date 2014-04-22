@@ -8,7 +8,7 @@
 #ifndef TREEPROCCESSOR_H_
 #define TREEPROCCESSOR_H_
 
-#include "../../headers/tree.h"
+#include "../../headers/algorithms.h"
 #include "../../headers/elements.h"
 #include "../processor.h"
 #include "../tester.h"

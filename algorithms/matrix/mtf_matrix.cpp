@@ -6,7 +6,6 @@
  */
 
 #include "mtf_matrix.h"
-#include "../headers/exceptions.h"
 
 namespace Matrix {
 
@@ -31,17 +30,24 @@ void MTFMatrix::AddElement(shared_ptr<Base::Element> element) {
 
 void MTFMatrix::NotifyContent(int user_id) {
   int position = id_position_.at(user_id);
+  element_list_[position]->Notify();
+  MoveFromPositionToFront(position);
+}
+
+void MTFMatrix::NotifyContent(int user_id, int notification_count) {
+  int position = id_position_.at(user_id);
+  element_list_[position]->Notify(notification_count);
   MoveFromPositionToFront(position);
 }
 
 int MTFMatrix::GetContentPosition(int user_id) {
-  int search_begin =max(0,id_position_.at(user_id) - row_size_);
-  int search_end = min( ((int) ElementCount()),id_position_.at(user_id) + row_size_);
+  int search_begin = max(0, id_position_.at(user_id) - row_size_);
+  int search_end = min(((int) ElementCount()),
+                       id_position_.at(user_id) + row_size_);
 
-  for (int iterator = search_begin; iterator < search_end; iterator++)
-  {
+  for (int iterator = search_begin; iterator < search_end; iterator++) {
     if (sorted_element_list_[iterator] == user_id)
-      return iterator+1;
+      return iterator + 1;
   }
   return -1;
 }

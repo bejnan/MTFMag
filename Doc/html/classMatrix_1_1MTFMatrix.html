@@ -144,11 +144,31 @@ Protected Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Aim of class is to organize elements in linear order. Class implements algorithm similar to MTF (Move to front), but elements are organized in rows with constant width and creates matrix. When element is notified it is moved to first row moving by path of smallest elements (using Element::Compare method) . For example (let row size be 3) :</p>
-<p>Before notification (elements identifier) : 1 2 3 (let elements be in order 1 &lt; 2 &lt; 3) 4 5 6 (let elements be in order 4 &lt; 5 &lt; 6) 7 8 9 (let elements be in order 7 &lt; 8 &lt; 9)</p>
-<p>After notification of 9 : 9 2 3 1 5 6 8 9 4</p>
-<p>Another example (let order between elements be the same as order between their id's) : 1 3 2 8 5 6 9 4 7</p>
-<p>After notification of 4 : 4 3 2 8 1 6 9 5 7</p>
-<p>To have linear order between elements they are sorted by number of row and order in row. In short way, order is by pair (#row_number,#element_compare_value) in alphabetic way. For example (let order between elements be the same as order between their id's) : 1 3 2 8 5 6 9 4 7</p>
+<p>Before notification (elements identifier) : <br/>
+ 1 2 3 (let elements be in order 1 &lt; 2 &lt; 3) <br/>
+ 4 5 6 (let elements be in order 4 &lt; 5 &lt; 6) <br/>
+ 7 8 9 (let elements be in order 7 &lt; 8 &lt; 9) <br/>
+</p>
+<p>After notification of 9 : <br/>
+ 9 2 3 <br/>
+ 1 5 6 <br/>
+ 8 9 4 <br/>
+</p>
+<p>Another example (let order between elements be the same as order between their id's) : <br/>
+ 1 3 2 <br/>
+ 8 5 6 <br/>
+ 9 4 7 <br/>
+</p>
+<p>After notification of 4 : <br/>
+ 4 3 2 <br/>
+ 8 1 6 <br/>
+ 9 5 7 <br/>
+</p>
+<p>To have linear order between elements they are sorted by number of row and order in row. In short way, order is by pair (#row_number,#element_compare_value) in alphabetic way. For example (let order between elements be the same as order between their id's) : <br/>
+ 1 3 2 <br/>
+ 8 5 6 <br/>
+ 9 4 7 <br/>
+</p>
 <p>Gives order : 3 2 1 8 6 5 9 7 4</p>
 <p>Position of element in ordered way can be read by MTFMatrix::GetContentPosiotion method</p>
 <dl class="section see"><dt>See Also</dt><dd>Element::Compare to understand order between elements in row </dd></dl>
@@ -524,7 +544,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>Matrix</b></li><li class="navelem"><a class="el" href="classMatrix_1_1MTFMatrix.html">MTFMatrix</a></li>
-    <li class="footer">Generated on Tue Apr 22 2014 12:04:39 for MTFthesisstudies by
+    <li class="footer">Generated on Tue Apr 22 2014 12:10:47 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

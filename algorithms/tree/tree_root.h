@@ -8,7 +8,8 @@
 #ifndef TREEROOT_H_
 #define TREEROOT_H_
 
-#include "../headers/elements.h"
+#include "../../headers/elements.h"
+#include "../algorithm.h"
 #include <vector>
 #include <map>
 #include <memory>
@@ -22,9 +23,8 @@ namespace Tree {
 /*
  * Class to manage tree of elements.
  */
-class TreeRoot {
-  // Give access to private field to add elements.
-  friend class TreeFactory;
+class TreeRoot : public Base::Algorithm  {
+
  public:
   TreeRoot(shared_ptr<Base::Element> node_core_prototype);
   virtual ~TreeRoot();
