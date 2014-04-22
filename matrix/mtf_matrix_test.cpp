@@ -43,7 +43,7 @@ BOOST_AUTO_TEST_CASE(MTFMatrixNotifiaction) {
     matrix->AddElement(element);
   }
 
-  // Element with id = 2 is in first row, so it doesn't change position
+  //Todo sort changes order
   matrix->NotifyContent(2);
   for (int i = 1; i < 6; i++) {
     BOOST_CHECK_EQUAL(i, matrix->GetContentPosition(i));
@@ -62,7 +62,7 @@ BOOST_AUTO_TEST_CASE(MTFMatrixTwoNotifiactions) {
     matrix->AddElement(element);
   }
 
-  //as above, no position change
+  //Todo sort changes order
   matrix->NotifyContent(2);
   for (int i = 1; i < 6; i++) {
     BOOST_CHECK_EQUAL(i, matrix->GetContentPosition(i));

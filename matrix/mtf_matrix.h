@@ -12,6 +12,9 @@ using std::vector;
 using std::map;
 using std::shared_ptr;
 using std::sort;
+using std::min;
+using std::max;
+
 
 namespace Matrix {
 
@@ -145,9 +148,10 @@ class MTFMatrix {
    */
   unsigned int ElementCount();
  private:
-  int row_size_;
+  const int row_size_;     /**<  size of row in matrix  */
   vector<shared_ptr<Base::Element> > element_list_;
-  vector<int> sorted_element_list_;
+                           /**< List of elements row after row (all together) */
+  vector<int> sorted_element_list_; /**< List of elements in linear order     */
   map<int, int> id_position_; /**< map to show position of node with given id */
 };
 

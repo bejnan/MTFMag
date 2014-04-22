@@ -33,9 +33,17 @@ void MTFMatrix::NotifyContent(int user_id) {
   int position = id_position_.at(user_id);
   MoveFromPositionToFront(position);
 }
-//TODO use sorted element list!!
+
 int MTFMatrix::GetContentPosition(int user_id) {
-  return (id_position_.at(user_id) + 1);
+  int search_begin =max(0,id_position_.at(user_id) - row_size_);
+  int search_end = min( ((int) ElementCount()),id_position_.at(user_id) + row_size_);
+
+  for (int iterator = search_begin; iterator < search_end; iterator++)
+  {
+    if (sorted_element_list_[iterator] == user_id)
+      return iterator+1;
+  }
+  return -1;
 }
 
 void MTFMatrix::MoveFromPositionToFront(int position) {
@@ -79,7 +87,7 @@ inline bool CompareElementPointers(shared_ptr<Base::Element> elem1,
   return (elem1->Compare(*elem2) > 0);
 }
 
-/*
+/**
  * In this method every row is sorted independently,
  * Order is decided first by row in which is element, secondly by order between elements
  */
@@ -109,7 +117,6 @@ void MTFMatrix::SortElementToList() {
   }
 }
 
-// Method is using comparison from Element class and derived classed
 int MTFMatrix::CompareElementsOnPositions(int position1, int position2) {
   return element_list_[position1]->Compare(*element_list_[position2]);
 }
