@@ -33,7 +33,7 @@ var hierarchy =
         [ "Base::ComplexDifferenceElement", "classBase_1_1ComplexDifferenceElement.html", null ]
       ] ]
     ] ],
-    [ "Matrix::MatrixBuilder", "classMatrix_1_1MatrixBuilder.html", null ],
+    [ "Algorithms::MatrixBuilder", "classAlgorithms_1_1MatrixBuilder.html", null ],
     [ "Tools::Processor", "classTools_1_1Processor.html", [
       [ "Tools::RandomTreeProcessor", "classTools_1_1RandomTreeProcessor.html", null ],
       [ "Tools::TreeProcessor", "classTools_1_1TreeProcessor.html", null ]

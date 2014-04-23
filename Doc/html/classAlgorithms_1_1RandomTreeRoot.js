@@ -1,5 +1,5 @@
 var classAlgorithms_1_1RandomTreeRoot =
 [
-    [ "MoveFromPositionToFront", "classAlgorithms_1_1RandomTreeRoot.html#ade3bcf6616c3d0831ed77bf7c7d3e923", null ],
-    [ "NotifyContent", "classAlgorithms_1_1RandomTreeRoot.html#a18b858550b9e4508f3ab373fe4fe0168", null ]
+    [ "MoveFromPositionToFront", "classAlgorithms_1_1RandomTreeRoot.html#ad58df5655e1890e486e44124b4e12a8e", null ],
+    [ "NotifyContent", "classAlgorithms_1_1RandomTreeRoot.html#a74a1bcac23e7bed45308e76e017ff7da", null ]
 ];

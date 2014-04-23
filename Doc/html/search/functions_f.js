@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['withmatrixwidth',['WithMatrixWidth',['../classMatrix_1_1MatrixBuilder.html#a5aff9412e086c596cdb3d311d0e52f14',1,'Matrix::MatrixBuilder']]]
+  ['withmatrixwidth',['WithMatrixWidth',['../classAlgorithms_1_1MatrixBuilder.html#adc10d2e16ac38e9fb1c9088fab6c6d32',1,'Algorithms::MatrixBuilder']]]
 ];

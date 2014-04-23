@@ -10,7 +10,7 @@ var searchData=
   ['_7eelement',['~Element',['../classBase_1_1Element.html#ae3461b9f481577903bb144562b7dce93',1,'Base::Element']]],
   ['_7efiledataoutput',['~FileDataOutput',['../classBase_1_1FileDataOutput.html#ab1e66d4e025d8cab70b8cfda9ba0f981',1,'Base::FileDataOutput']]],
   ['_7efiledataprovider',['~FileDataProvider',['../classBase_1_1FileDataProvider.html#a8f1429534fee53b169c21f8e49300bf5',1,'Base::FileDataProvider']]],
-  ['_7ematrixbuilder',['~MatrixBuilder',['../classMatrix_1_1MatrixBuilder.html#a01de919b8cad6ba9688ff53ece236a7c',1,'Matrix::MatrixBuilder']]],
-  ['_7emtfmatrix',['~MTFMatrix',['../classAlgorithms_1_1MTFMatrix.html#a8c06a7c5efe39afb8fb246ffe9411373',1,'Algorithms::MTFMatrix']]],
+  ['_7ematrixbuilder',['~MatrixBuilder',['../classAlgorithms_1_1MatrixBuilder.html#a110a018848b449fbf3dffd53dde7a928',1,'Algorithms::MatrixBuilder']]],
+  ['_7emtfmatrix',['~MTFMatrix',['../classAlgorithms_1_1MTFMatrix.html#a47bf4d6b94bf5c14b05fae08e5eb59b5',1,'Algorithms::MTFMatrix']]],
   ['_7esimpleelement',['~SimpleElement',['../classBase_1_1SimpleElement.html#a4580b6f8e363c12459a2947749c26226',1,'Base::SimpleElement']]]
 ];
