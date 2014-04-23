@@ -28,15 +28,30 @@ class Algorithm {
   ;
 
   /**
-   * Main method of class. Notify element with given id.
+   * Main method of algorithm. Notify element with given id.
    * After notification of element (Element::Notify method)
    * it moves element to front. Details of movement depends on algorithm.
    * @param user_id Identifier of element to notify
    */
   virtual void NotifyContent(int user_id) = 0;
 
+  /**
+   * As version with one parameter notify element with given id.
+   * After notification of element (Element::Notify method)
+   * it moves element to front. Details of movement depends on algorithm.
+   * notification_count can be used in Element::Notify method to
+   * measure actuality of element.
+   * @param user_id Identifier of element to notify
+   * @param notification_count Timestamp or notification_count, measure to determine
+   * moment in time of element notification.
+   */
   virtual void NotifyContent(int user_id, int notification_count) = 0;
 
+  /**
+   * Gives current position of element in prepared algorithm order.
+   * @param user_id Identifier of element
+   * @return Position of element in linear order
+   */
   virtual int GetContentPosition(int user_id) = 0;
 
   /**
@@ -45,6 +60,46 @@ class Algorithm {
    * @param user_id Identifier of new element.
    */
   virtual void AddElement(int user_id) = 0;
+
+  /**
+   * Check if element with given identifier is stored
+   * in algorithm collection.
+   * @param user_id Identifier of element
+   * @return True if element with given identifier was added to algorithm,
+   * false otherwise
+   */
+  virtual bool HaveElement(int user_id) = 0;
+
+ protected:
+  /**
+   * Method to move element from given position to front (depends on algorithm).
+   * @param position Position of element to move
+   */
+  void MoveFromPositionToFront(int position) = 0;
+
+  /**
+   * Method to switch pointers of elements stored in algorithm.
+   * @param position1 Position of first element
+   * @param position2 Position of second element
+   */
+  void SwapElementsOnPositions(int position1, int position2) = 0;
+
+  /**
+   * Sorts elements in row to restore linear order.
+   * Used after notification
+   */
+  void SortElementToList() = 0 ;
+
+  /**
+   * Compares elements by Element::Compare method
+   * Element from position1 is "source" of method.
+   * @param position1 Position of first element to compare.
+   * @param position2 Position of second element to compare with.
+   * @return Result of Element::Compare method
+   * @see Element::Compare
+   */
+  int CompareElementsOnPositions(int position1, int position2) = 0;
+
 };
 
 }

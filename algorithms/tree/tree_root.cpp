@@ -24,14 +24,14 @@ void TreeRoot::NotifyContent(int user_id) {
   int position = id_position_.at(user_id);
   tree_list_[position]->Notify();
   MoveElement(position);
-  SortElements();
+  SortElementToList();
 }
 
 void TreeRoot::NotifyContent(int user_id, int notification_counter) {
   int position = id_position_.at(user_id);
   tree_list_[position]->Notify(notification_counter);
   MoveElement(position);
-  SortElements();
+  SortElementToList();
 }
 
 int TreeRoot::GetContentPosition(int user_id) {
@@ -51,12 +51,12 @@ void TreeRoot::AddElement(int user_id) {
 
 void TreeRoot::MoveElement(int position) {
   while (position > 1) {
-    SwapElements(position, position / 2);
+    SwitchElementsOnPositions(position, position / 2);
     position /= 2;
   }
 }
 
-void TreeRoot::SwapElements(int position1, int position2) {
+void TreeRoot::SwitchElementsOnPositions(int position1, int position2) {
   shared_ptr<Base::Element> tmp_elem;
   tmp_elem = tree_list_[position1];
   tree_list_[position1] = tree_list_[position2];
@@ -76,7 +76,7 @@ inline bool CompareElementPointers(shared_ptr<Base::Element> elem1,
   return (elem1->Compare(*elem2) > 0);
 }
 
-void TreeRoot::SortElements() {
+void TreeRoot::SortElementToList() {
   vector<shared_ptr<Base::Element> > tmp_list_to_sort;
   vector<shared_ptr<Base::Element> >::iterator tree_iterator, sort_iterator;
   sorted_content_list_.clear();

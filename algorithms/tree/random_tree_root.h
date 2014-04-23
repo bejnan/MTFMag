@@ -38,10 +38,11 @@ class RandomTreeRoot : public TreeRoot {
   using TreeRoot::NotifyContent;
   using TreeRoot::GetContentPosition;
   using TreeRoot::AddElement;
+  using TreeRoot::HaveElement;
  protected:
-  virtual void MoveElement(int position);
-  using TreeRoot::SwapElements;
-  using TreeRoot::SortElements;
+  virtual void MoveFromPositionToFront(int position);
+  using TreeRoot::SwapElementsOnPositions;
+  using TreeRoot::SortElementToList;
  private :
   // Random utilities
   default_random_engine generator_;

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['resetsetting',['ResetSetting',['../classMatrix_1_1MatrixBuilder.html#a46cbb751112db0910fedea05b62cd66a',1,'Matrix::MatrixBuilder']]],
-  ['runturns',['RunTurns',['../classBase_1_1DataCollector.html#a5f82cf1aa48981c36cb2e0eba944c148',1,'Base::DataCollector']]]
+  ['usefile',['UseFile',['../classBase_1_1DataOutputBuilder.html#ac5ed5b644a72572f094cf1d5fc1c87f0',1,'Base::DataOutputBuilder']]],
+  ['user_5fid',['user_id',['../classBase_1_1Element.html#a42070f7874b9235210c7263afd6b71f4',1,'Base::Element']]]
 ];
