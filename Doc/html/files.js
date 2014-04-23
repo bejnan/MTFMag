@@ -1,5 +1,6 @@
 var files =
 [
+    [ "algorithms", "dir_c0ce462e37efe0a8d60c01d75f78f8a0.html", "dir_c0ce462e37efe0a8d60c01d75f78f8a0" ],
     [ "data_managment", "dir_f0e6881722a589d71e14e9eaa0b61330.html", "dir_f0e6881722a589d71e14e9eaa0b61330" ],
     [ "elements", "dir_a4fd64009d3b76a85ae2b8eb325672fb.html", "dir_a4fd64009d3b76a85ae2b8eb325672fb" ],
     [ "exceptions", "dir_fceced95d8215eeebebd9df6aa39e1a5.html", "dir_fceced95d8215eeebebd9df6aa39e1a5" ],

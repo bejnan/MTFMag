@@ -1,5 +1,11 @@
 var hierarchy =
 [
+    [ "Algorithms::Algorithm", "classAlgorithms_1_1Algorithm.html", [
+      [ "Algorithms::MTFMatrix", "classAlgorithms_1_1MTFMatrix.html", null ],
+      [ "Algorithms::TreeRoot", "classAlgorithms_1_1TreeRoot.html", [
+        [ "Algorithms::RandomTreeRoot", "classAlgorithms_1_1RandomTreeRoot.html", null ]
+      ] ]
+    ] ],
     [ "Base::Database", "classBase_1_1Database.html", null ],
     [ "Exception::DatabaseException", "classException_1_1DatabaseException.html", [
       [ "Exception::InvalidIndexException", "classException_1_1InvalidIndexException.html", null ],
@@ -27,6 +33,7 @@ var hierarchy =
         [ "Base::ComplexDifferenceElement", "classBase_1_1ComplexDifferenceElement.html", null ]
       ] ]
     ] ],
+    [ "Matrix::MatrixBuilder", "classMatrix_1_1MatrixBuilder.html", null ],
     [ "Tools::Processor", "classTools_1_1Processor.html", [
       [ "Tools::RandomTreeProcessor", "classTools_1_1RandomTreeProcessor.html", null ],
       [ "Tools::TreeProcessor", "classTools_1_1TreeProcessor.html", null ]

@@ -14,7 +14,7 @@
 
 using std::shared_ptr;
 
-namespace Base {
+namespace Algorithms {
 
 /**
  * Interface for all algorithms.

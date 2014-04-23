@@ -1,10 +1,3 @@
-/*
- * TreeRoot.h
- *
- *  Created on: Feb 13, 2014
- *      Author: Jakub Banaszewski
- */
-
 #ifndef TREEROOT_H_
 #define TREEROOT_H_
 
@@ -18,7 +11,7 @@ using std::vector;
 using std::map;
 using std::shared_ptr;
 
-namespace Tree {
+namespace Algorithms {
 
 /**
  * This algorithm similar as Move To Front moves chosen element
@@ -38,7 +31,7 @@ namespace Tree {
  * </pre>
  *
  */
-class TreeRoot : public Base::Algorithm  {
+class TreeRoot : public Algorithm  {
 
  public:
   TreeRoot(shared_ptr<Base::Element> node_core_prototype);
@@ -77,6 +70,6 @@ class TreeRoot : public Base::Algorithm  {
   shared_ptr<Base::Element> node_core_prototype;
 };
 
-} /* namespace Tree */
+} /* namespace Algorithms */
 
 #endif /* TREEROOT_H_ */

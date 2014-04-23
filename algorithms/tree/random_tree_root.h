@@ -15,7 +15,7 @@
 using std::default_random_engine;
 using std::uniform_real_distribution;
 
-namespace Tree {
+namespace Algorithms {
 /**
  * Class very similar to TreeRoot.
  * Only difference is MoveElement method.
@@ -52,6 +52,6 @@ class RandomTreeRoot : public TreeRoot {
   const double DIFF_INFLUENCE;
 };
 
-} /* namespace Tree */
+} /* namespace Algorithms */
 
 #endif /* RANDOMTREEROOT_H_ */

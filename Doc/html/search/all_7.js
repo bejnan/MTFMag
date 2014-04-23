@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['notify',['Notify',['../classBase_1_1ComplexDifferenceElement.html#a172e4e7223c50f84b5f2f8fdd52ea8d0',1,'Base::ComplexDifferenceElement::Notify()'],['../classBase_1_1Element.html#afbf18a93271bdeba8a5ced434b518711',1,'Base::Element::Notify()'],['../classBase_1_1SimpleElement.html#aca55505bef5c6aa5b9b36051a3930ba0',1,'Base::SimpleElement::Notify()']]]
+  ['invalidindexexception',['InvalidIndexException',['../classException_1_1InvalidIndexException.html',1,'Exception']]],
+  ['invalidindexexception',['InvalidIndexException',['../classException_1_1InvalidIndexException.html#a030263af21cc7290559a2aae447f16e4',1,'Exception::InvalidIndexException']]],
+  ['invalidnameexception',['InvalidNameException',['../classException_1_1InvalidNameException.html#af30d08c14cb694dbe471e73c0509eb48',1,'Exception::InvalidNameException']]],
+  ['invalidnameexception',['InvalidNameException',['../classException_1_1InvalidNameException.html',1,'Exception']]]
 ];

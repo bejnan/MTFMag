@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['printactualresults',['PrintActualResults',['../classBase_1_1DataCollector.html#afb1d46273c24e3e1fdefba6b730ebf28',1,'Base::DataCollector']]],
-  ['printcolumntitles',['PrintColumnTitles',['../classBase_1_1CsvDataOutput.html#aa54484865cd138cf49b5aa5b9ef813d5',1,'Base::CsvDataOutput::PrintColumnTitles()'],['../classBase_1_1DataOutput.html#a0f1a6127945492d692629120575e7f82',1,'Base::DataOutput::PrintColumnTitles()']]],
-  ['printline',['PrintLine',['../classBase_1_1CsvDataOutput.html#a88994527237735d1d6a05cec3b222ba7',1,'Base::CsvDataOutput::PrintLine()'],['../classBase_1_1DataOutput.html#afdb91464e7559dedf69c56c1b862a216',1,'Base::DataOutput::PrintLine()']]],
-  ['processor',['Processor',['../classTools_1_1Processor.html',1,'Tools']]],
-  ['processorfactory',['ProcessorFactory',['../classTools_1_1ProcessorFactory.html',1,'Tools']]]
+  ['matrixbuilder',['MatrixBuilder',['../classMatrix_1_1MatrixBuilder.html',1,'Matrix']]],
+  ['matrixbuilder',['MatrixBuilder',['../classMatrix_1_1MatrixBuilder.html#a594e69c0eb00331dac2fdcb707c0667b',1,'Matrix::MatrixBuilder']]],
+  ['movefrompositiontofront',['MoveFromPositionToFront',['../classAlgorithms_1_1Algorithm.html#ad3c7b63ee28d21ae4d83194470b56759',1,'Algorithms::Algorithm::MoveFromPositionToFront()'],['../classAlgorithms_1_1MTFMatrix.html#a0d1980103644f7738bdc7e7f81033ccb',1,'Algorithms::MTFMatrix::MoveFromPositionToFront()'],['../classAlgorithms_1_1RandomTreeRoot.html#ade3bcf6616c3d0831ed77bf7c7d3e923',1,'Algorithms::RandomTreeRoot::MoveFromPositionToFront()'],['../classAlgorithms_1_1TreeRoot.html#af30d6231e4aa0b39b2ca59575870d108',1,'Algorithms::TreeRoot::MoveFromPositionToFront()']]],
+  ['mtfmatrix',['MTFMatrix',['../classAlgorithms_1_1MTFMatrix.html#a5aab84f1c1108016c2f7b6d10b941314',1,'Algorithms::MTFMatrix']]],
+  ['mtfmatrix',['MTFMatrix',['../classAlgorithms_1_1MTFMatrix.html',1,'Algorithms']]]
 ];

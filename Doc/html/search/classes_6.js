@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['randomtreeprocessor',['RandomTreeProcessor',['../classTools_1_1RandomTreeProcessor.html',1,'Tools']]]
+  ['matrixbuilder',['MatrixBuilder',['../classMatrix_1_1MatrixBuilder.html',1,'Matrix']]],
+  ['mtfmatrix',['MTFMatrix',['../classAlgorithms_1_1MTFMatrix.html',1,'Algorithms']]]
 ];

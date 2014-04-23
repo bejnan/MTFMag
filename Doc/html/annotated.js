@@ -1,5 +1,11 @@
 var annotated =
 [
+    [ "Algorithms", null, [
+      [ "Algorithm", "classAlgorithms_1_1Algorithm.html", "classAlgorithms_1_1Algorithm" ],
+      [ "MTFMatrix", "classAlgorithms_1_1MTFMatrix.html", "classAlgorithms_1_1MTFMatrix" ],
+      [ "RandomTreeRoot", "classAlgorithms_1_1RandomTreeRoot.html", "classAlgorithms_1_1RandomTreeRoot" ],
+      [ "TreeRoot", "classAlgorithms_1_1TreeRoot.html", "classAlgorithms_1_1TreeRoot" ]
+    ] ],
     [ "Base", null, [
       [ "ComplexDifferenceElement", "classBase_1_1ComplexDifferenceElement.html", "classBase_1_1ComplexDifferenceElement" ],
       [ "CsvDataOutput", "classBase_1_1CsvDataOutput.html", "classBase_1_1CsvDataOutput" ],
@@ -21,6 +27,9 @@ var annotated =
       [ "FilePathException", "classException_1_1FilePathException.html", "classException_1_1FilePathException" ],
       [ "InvalidIndexException", "classException_1_1InvalidIndexException.html", "classException_1_1InvalidIndexException" ],
       [ "InvalidNameException", "classException_1_1InvalidNameException.html", "classException_1_1InvalidNameException" ]
+    ] ],
+    [ "Matrix", null, [
+      [ "MatrixBuilder", "classMatrix_1_1MatrixBuilder.html", "classMatrix_1_1MatrixBuilder" ]
     ] ],
     [ "Tools", null, [
       [ "Processor", "classTools_1_1Processor.html", null ],

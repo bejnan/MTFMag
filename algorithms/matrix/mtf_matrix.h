@@ -17,7 +17,7 @@ using std::sort;
 using std::min;
 using std::max;
 
-namespace Matrix {
+namespace Algorithms {
 
 /**
  * Aim of class is to organize elements in linear order.
@@ -64,7 +64,7 @@ namespace Matrix {
  *
  * @see Element::Compare to understand order between elements in row
  */
-class MTFMatrix : public Base::Algorithm {
+class MTFMatrix : public Algorithm {
 
  public:
   /**
@@ -129,6 +129,6 @@ class MTFMatrix : public Base::Algorithm {
   map<int, int> id_position_;
 };
 
-} /* namespace Matrix */
+} /* namespace Algorithms */
 
 #endif /* MTFMATRIX_H_ */
