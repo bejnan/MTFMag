@@ -1,5 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classException_1_1DatabaseException.html" title="Exception::DatabaseException" alt="" coords="6,31,218,57"/>
-<area shape="rect" id="node2" href="$classException_1_1InvalidIndexException.html" title="Exception::InvalidIndexException" alt="" coords="269,5,497,32"/>
-<area shape="rect" id="node3" href="$classException_1_1InvalidNameException.html" title="Exception::InvalidNameException" alt="" coords="267,56,498,83"/>
+<area shape="rect" id="node1" href="$classBase_1_1Element.html" title="Base::Element" alt="" coords="6,5,117,32"/>
+<area shape="rect" id="node2" href="$classBase_1_1SimpleElement.html" title="Base::SimpleElement" alt="" coords="166,5,319,32"/>
+<area shape="rect" id="node3" href="$classBase_1_1ComplexDifferenceElement.html" title="Base::ComplexDifferenceElement" alt="" coords="369,5,599,32"/>
 </map>

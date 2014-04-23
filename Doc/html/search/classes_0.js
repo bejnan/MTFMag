@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['complexdifferenceelement',['ComplexDifferenceElement',['../classBase_1_1ComplexDifferenceElement.html',1,'Base']]],
-  ['csvdataoutput',['CsvDataOutput',['../classBase_1_1CsvDataOutput.html',1,'Base']]],
-  ['csvfiledataoutput',['CsvFileDataOutput',['../classBase_1_1CsvFileDataOutput.html',1,'Base']]]
+  ['algorithm',['Algorithm',['../classAlgorithms_1_1Algorithm.html',1,'Algorithms']]]
 ];

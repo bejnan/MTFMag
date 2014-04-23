@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['matrixbuilder',['MatrixBuilder',['../classMatrix_1_1MatrixBuilder.html',1,'Matrix']]],
-  ['mtfmatrix',['MTFMatrix',['../classMatrix_1_1MTFMatrix.html',1,'Matrix']]]
+  ['invalidindexexception',['InvalidIndexException',['../classException_1_1InvalidIndexException.html',1,'Exception']]],
+  ['invalidnameexception',['InvalidNameException',['../classException_1_1InvalidNameException.html',1,'Exception']]]
 ];

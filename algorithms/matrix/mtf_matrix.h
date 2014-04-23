@@ -17,8 +17,7 @@ using std::sort;
 using std::min;
 using std::max;
 
-
-namespace Matrix {
+namespace Algorithms {
 
 /**
  * Aim of class is to organize elements in linear order.
@@ -65,7 +64,7 @@ namespace Matrix {
  *
  * @see Element::Compare to understand order between elements in row
  */
-class MTFMatrix : public Base::Algorithm {
+class MTFMatrix : public Algorithm {
 
  public:
   /**
@@ -80,44 +79,14 @@ class MTFMatrix : public Base::Algorithm {
    */
   virtual ~MTFMatrix();
 
-  /**
-   * Check if element with given identifier is stored
-   * in class instance
-   * @param user_id Identifier of element
-   * @return True if element with given identifier was added to class instance,
-   * false otherwise
-   */
   virtual bool HaveElement(int user_id);
 
-  /**
-   * Adds new element to matrix if no element with given id exists in class
-   * instance.
-   * @param user_id Identifier of new element.
-   */
   virtual void AddElement(int user_id);
 
-  /**
-   * After notification of element (Element::Notify method)
-   * it moves element to front row as shown in class description.
-   */
   void NotifyContent(int user_id);
 
-  /**
-   * Notify element and move to front in the some way
-   * as one parameter NotifyContent. Notification count
-   * is used to notify element with this parameter
-   * @param user_id Identifier of element to notify
-   * @param notification_count Mark, timestamp or
-   * counter to decide order in time of notifications
-   * @see Element::Notify
-   */
   void NotifyContent(int user_id, int notification_count);
 
-  /**
-   * Gives current position of element in prepared algorithm order.
-   * @param user_id Identifier of element
-   * @return Position of element in linear order
-   */
   int GetContentPosition(int user_id);
 
  protected:
@@ -130,27 +99,14 @@ class MTFMatrix : public Base::Algorithm {
   void MoveFromPositionToFront(int position);
 
   /**
-   * Method to switch pointers to elements stored in class.
-   * Using this method guarantees fast access to elements
+   * Guarantees switch control and fast access to elements after switch.
    * @param position1 Position of first element
    * @param position2 Position of second element
    */
-  void SwitchElementsOnPositions(int position1, int position2);
+  void SwapElementsOnPositions(int position1, int position2);
 
-  /**
-   * Sorts elements in row to restore linear order.
-   * Used after notification
-   */
   void SortElementToList();
 
-  /**
-   * Compares elements by Element::Compare method
-   * Element from position1 is "source" of method.
-   * @param position1 Position of first element to compare.
-   * @param position2 Position of second element to compare with.
-   * @return Result of Element::Compare method
-   * @see Element::Compare
-   */
   int CompareElementsOnPositions(int position1, int position2);
 
   /**
@@ -159,13 +115,20 @@ class MTFMatrix : public Base::Algorithm {
    */
   unsigned int ElementCount();
  private:
-  const int row_size_;     /**<  size of row in matrix  */
+
+  /**  size of row in matrix  */
+  const int row_size_;
+
+  /** List of elements row after row (all together) */
   vector<shared_ptr<Base::Element> > element_list_;
-                           /**< List of elements row after row (all together) */
-  vector<int> sorted_element_list_; /**< List of elements in linear order     */
-  map<int, int> id_position_; /**< map to show position of node with given id */
+
+  /** List of elements in linear order */
+  vector<int> sorted_element_list_;
+
+  /** map to show position of node with given id */
+  map<int, int> id_position_;
 };
 
-} /* namespace Matrix */
+} /* namespace Algorithms */
 
 #endif /* MTFMATRIX_H_ */

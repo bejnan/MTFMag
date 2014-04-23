@@ -68,13 +68,13 @@ void MTFMatrix::MoveFromPositionToFront(int position) {
         }
       }
     }
-    SwitchElementsOnPositions(position, min_position);
+    SwapElementsOnPositions(position, min_position);
     position = min_position;
   }
   SortElementToList();
 }
 
-void MTFMatrix::SwitchElementsOnPositions(int position1, int position2) {
+void MTFMatrix::SwapElementsOnPositions(int position1, int position2) {
   if (position1 == position2)
     return;
 

@@ -27,13 +27,13 @@ void RandomTreeRoot::NotifyContent(int user_id) {
   TreeRoot::NotifyContent(user_id);
 }
 
-void RandomTreeRoot::MoveElement(int position) {
+void RandomTreeRoot::MoveFromPositionToFront(int position) {
   shared_ptr<Base::Element> tmp_elem;
   while (position > 1) {
     double diff = GetElement(position)->Difference(*GetElement(position / 2));
     if (diff * DIFF_INFLUENCE + distribution_(generator_)
         > MOVING_UP_PROPABILITY) {
-      SwapElements(position, position / 2);
+      SwitchElementsOnPositions(position, position / 2);
       position /= 2;
     } else {
       break;
