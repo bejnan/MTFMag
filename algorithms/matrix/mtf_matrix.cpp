@@ -9,8 +9,9 @@
 
 namespace Algorithms {
 
-MTFMatrix::MTFMatrix(int row_size)
-    : row_size_(row_size) {
+MTFMatrix::MTFMatrix(int row_size, shared_ptr<Base::Element> element_prototype)
+    : row_size_(row_size),
+      element_prototype_(element_prototype) {
 }
 
 MTFMatrix::~MTFMatrix() {
@@ -126,6 +127,11 @@ void MTFMatrix::SortElementToList() {
 
 int MTFMatrix::CompareElementsOnPositions(int position1, int position2) {
   return element_list_[position1]->Compare(*element_list_[position2]);
+}
+
+double MTFMatrix::DifferenceBetweenElementsOnPosition(int position1,
+                                                      int position2) {
+  return element_list_[position1]->Difference(*element_list_[position2]);
 }
 
 unsigned int MTFMatrix::ElementCount() {

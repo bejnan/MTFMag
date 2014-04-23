@@ -10,18 +10,20 @@
 #include "matrix_builder.h"
 #include "mtf_matrix.h"
 
-BOOST_AUTO_TEST_SUITE(MTFMatrix)
+using Algorithms::MatrixBuilder;
+using Algorithms::MTFMatrix;
+
+BOOST_AUTO_TEST_SUITE(MTFMatrix_Test)
 
 //check correctness of adding elements to MTFMatrix
 BOOST_AUTO_TEST_CASE(AddingElement) {
   //initialization
-  shared_ptr<Matrix::MatrixBuilder> builder =
-      Matrix::MatrixBuilder::GetInstance();
-  shared_ptr<Matrix::MTFMatrix> matrix = builder->WithMatrixWidth(2).Generate();
+  shared_ptr<MatrixBuilder> builder =
+      MatrixBuilder::GetInstance();
+  shared_ptr<MTFMatrix> matrix = builder->WithMatrixWidth(2).Generate();
   shared_ptr<Base::Element> element;
   for (int i = 1; i < 6; i++) {
-    element = shared_ptr<Base::Element>(new Base::Element(i));
-    matrix->AddElement(element);
+    matrix->AddElement(i);
   }
 
   //check element order
@@ -33,14 +35,13 @@ BOOST_AUTO_TEST_CASE(AddingElement) {
 //check correctness of adding elements to MTFMatrix with simple notification
 BOOST_AUTO_TEST_CASE(MTFMatrixNotifiaction) {
   //initialization
-  shared_ptr<Matrix::MatrixBuilder> builder =
-      Matrix::MatrixBuilder::GetInstance();
-  shared_ptr<Matrix::MTFMatrix> matrix = builder->WithMatrixWidth(2).Generate();
+  shared_ptr<MatrixBuilder> builder =
+      MatrixBuilder::GetInstance();
+  shared_ptr<MTFMatrix> matrix = builder->WithMatrixWidth(2).Generate();
 
   shared_ptr<Base::Element> element;
   for (int i = 1; i < 6; i++) {
-    element = shared_ptr<Base::Element>(new Base::Element(i));
-    matrix->AddElement(element);
+    matrix->AddElement(i);
   }
 
   //Todo sort changes order
@@ -52,14 +53,13 @@ BOOST_AUTO_TEST_CASE(MTFMatrixNotifiaction) {
 
 BOOST_AUTO_TEST_CASE(MTFMatrixTwoNotifiactions) {
   //initialization
-  shared_ptr<Matrix::MatrixBuilder> builder =
-      Matrix::MatrixBuilder::GetInstance();
-  shared_ptr<Matrix::MTFMatrix> matrix = builder->WithMatrixWidth(2).Generate();
+  shared_ptr<MatrixBuilder> builder =
+      MatrixBuilder::GetInstance();
+  shared_ptr<MTFMatrix> matrix = builder->WithMatrixWidth(2).Generate();
 
   shared_ptr<Base::Element> element;
   for (int i = 1; i < 6; i++) {
-    element = shared_ptr<Base::Element>(new Base::Element(i));
-    matrix->AddElement(element);
+    matrix->AddElement(i);
   }
 
   //Todo sort changes order

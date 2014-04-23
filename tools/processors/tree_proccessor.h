@@ -13,7 +13,7 @@
 #include "../processor.h"
 #include "../tester.h"
 
-using namespace Tree;
+using namespace Algorithms;
 using std::string;
 
 namespace Tools {
@@ -47,7 +47,7 @@ class TreeProcessor : public Processor {
   TreeProcessor(int userId, string identifier = string());
 
   // algorithms elements
-  Algorithms::TreeRoot root_;
+  TreeRoot root_;
   // Penalty counter
   Tester penalty_counter_;
 };

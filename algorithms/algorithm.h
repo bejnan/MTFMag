@@ -88,7 +88,7 @@ class Algorithm {
    * Sorts elements in row to restore linear order.
    * Used after notification
    */
-  virtual void SortElementToList() = 0 ;
+  virtual void SortElementToList() = 0;
 
   /**
    * Compares elements by Element::Compare method
@@ -100,6 +100,16 @@ class Algorithm {
    */
   virtual int CompareElementsOnPositions(int position1, int position2) = 0;
 
+  /**
+   * Compares elements by Element::Difference method
+   * Element from position1 is "source" of method.
+   * @param position1 Position of first element to compare.
+   * @param position2 Position of second element to compare with.
+   * @return Result of Element::Difference method
+   * @see Element::Difference
+   */
+  virtual double DifferenceBetweenElementsOnPosition(int position1,
+                                                     int position2) = 0;
 };
 
 }

@@ -7,7 +7,7 @@
 
 #include "random_tree_root.h"
 
-namespace Tree {
+namespace Algorithms {
 
 RandomTreeRoot::RandomTreeRoot(shared_ptr<Base::Element> node_core_prototype,
                                const double moving_up_propability,
@@ -30,10 +30,10 @@ void RandomTreeRoot::NotifyContent(int user_id) {
 void RandomTreeRoot::MoveFromPositionToFront(int position) {
   shared_ptr<Base::Element> tmp_elem;
   while (position > 1) {
-    double diff = GetElement(position)->Difference(*GetElement(position / 2));
+    double diff = TreeRoot::DifferenceBetweenElementsOnPosition(position,position / 2);
     if (diff * DIFF_INFLUENCE + distribution_(generator_)
         > MOVING_UP_PROPABILITY) {
-      SwitchElementsOnPositions(position, position / 2);
+      SwapElementsOnPositions(position, position / 2);
       position /= 2;
     } else {
       break;

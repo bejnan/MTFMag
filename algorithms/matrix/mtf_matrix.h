@@ -68,12 +68,12 @@ class MTFMatrix : public Algorithm {
 
  public:
   /**
-   * Sets row size of class matrix and
+   * Sets row size of class matrix, prototype to create Element instances and
    * initialize all containers.
    * @param row_size size of row to store elements
-   * @param node_core_prototype Prototype to generate new elements
+   * @param element_prototype Prototype to generate new elements
    */
-  MTFMatrix(int row_size, shared_ptr<Base::Element> node_core_prototype);
+  MTFMatrix(int row_size, shared_ptr<Base::Element> element_prototype);
 
   /**
    * Default destructor. Nothing to handle.
@@ -109,6 +109,8 @@ class MTFMatrix : public Algorithm {
   void SortElementToList();
 
   int CompareElementsOnPositions(int position1, int position2);
+
+  double DifferenceBetweenElementsOnPosition(int position1, int position2);
 
   /**
    * Returns count of elements stored in class instance

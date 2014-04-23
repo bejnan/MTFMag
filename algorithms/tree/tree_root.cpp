@@ -106,4 +106,9 @@ int TreeRoot::CompareElementsOnPositions(int position1, int position2) {
   return tree_list_[position1]->Compare(*tree_list_[position2]);
 }
 
+double TreeRoot::DifferenceBetweenElementsOnPosition(int position1,
+                                                      int position2) {
+  return tree_list_[position1]->Difference(*tree_list_[position2]);
+}
+
 } /* namespace Tree */

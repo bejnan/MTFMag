@@ -7,10 +7,11 @@
 
 #include "matrix_builder.h"
 
-namespace Matrix {
+namespace Algorithms {
 
 MatrixBuilder::MatrixBuilder()
-    : matrix_width_(1) {
+    : matrix_width_(1),
+      element_prototype_(Base::Element::GetPrototype()) {
 }
 
 MatrixBuilder::~MatrixBuilder() {
@@ -25,13 +26,19 @@ MatrixBuilder& MatrixBuilder::WithMatrixWidth(int width) {
   return *this;
 }
 
+MatrixBuilder& MatrixBuilder::SetElementPrototype(
+    shared_ptr<Base::Element> element_prototype) {
+  element_prototype_ = element_prototype;
+  return *this;
+}
+
 MatrixBuilder& MatrixBuilder::ResetSetting() {
   matrix_width_ = 1;
   return *this;
 }
 
 shared_ptr<MTFMatrix> MatrixBuilder::Generate() {
-  return shared_ptr<MTFMatrix>(new MTFMatrix(matrix_width_));
+  return shared_ptr<MTFMatrix>(new MTFMatrix(matrix_width_, element_prototype_));
 }
 
 } /* namespace Matrix */

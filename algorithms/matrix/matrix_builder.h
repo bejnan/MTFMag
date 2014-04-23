@@ -43,10 +43,7 @@ class MatrixBuilder {
    * @return Reference to MatrixBuilder with changed settings
    */
   MatrixBuilder& SetElementPrototype(
-      shared_ptr<Base::Element> element_prototype) {
-    element_prototype_ = element_prototype;
-    return *this;
-  }
+      shared_ptr<Base::Element> element_prototype);
 
   /**
    * Sets setting of builder to defaults (the same as after GetInstance method)

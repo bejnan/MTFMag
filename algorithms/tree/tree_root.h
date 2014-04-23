@@ -49,7 +49,7 @@ class TreeRoot : public Algorithm {
 
   virtual void AddElement(int user_id);
 
-  virtual bool HaveElement(int user_id) = 0;
+  virtual bool HaveElement(int user_id);
 
  protected:
   /**
@@ -65,6 +65,8 @@ class TreeRoot : public Algorithm {
   void SortElementToList();
 
   int CompareElementsOnPositions(int position1, int position2);
+
+  double DifferenceBetweenElementsOnPosition(int position1, int position2);
  private:
   /** Tree implemented by array (parent is on child's position div 2) */
   vector<shared_ptr<Base::Element> > tree_list_;

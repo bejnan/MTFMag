@@ -19,6 +19,8 @@ using std::uniform_int_distribution;
 using std::find;
 using std::vector;
 
+using namespace Algorithms;
+
 #define BOOST_TEST_DYN_LINK
 #include <boost/test/unit_test.hpp>
 
@@ -26,7 +28,7 @@ BOOST_AUTO_TEST_SUITE(TreeFactory)
 
 BOOST_AUTO_TEST_CASE(AddingTest) {
 
-  Tree::TreeRoot root(Base::SimpleElement::GetPrototype());
+  TreeRoot root(Base::SimpleElement::GetPrototype());
 
   root.AddElement(1);
   root.AddElement(2);
@@ -35,7 +37,7 @@ BOOST_AUTO_TEST_CASE(AddingTest) {
 
 BOOST_AUTO_TEST_CASE(NotifySimpleRotationTest) {
 
-  Tree::TreeRoot root(Base::SimpleElement::GetPrototype());
+  TreeRoot root(Base::SimpleElement::GetPrototype());
 
   root.AddElement(1);
   root.AddElement(2);
@@ -51,7 +53,7 @@ BOOST_AUTO_TEST_CASE(NotifySimpleRotationTest) {
 
 BOOST_AUTO_TEST_CASE(NotifyDoubleRotationTest) {
 
-  Tree::TreeRoot root(Base::SimpleElement::GetPrototype());
+  TreeRoot root(Base::SimpleElement::GetPrototype());
 
   root.AddElement(1);
   root.AddElement(2);
@@ -74,7 +76,7 @@ BOOST_AUTO_TEST_CASE(NotifyDoubleRotationTest) {
 
 //Test checks if RandomTreeRoot doent's lose elements
 BOOST_AUTO_TEST_CASE(RandomTreeAddAndNotificationTest) {
-  Tree::RandomTreeRoot r_root(Base::SimpleElement::GetPrototype());
+  RandomTreeRoot r_root(Base::SimpleElement::GetPrototype());
 
   for (int i = 1; i < 10; i++)
     r_root.AddElement(i);
@@ -103,7 +105,7 @@ BOOST_AUTO_TEST_CASE(RandomTreeAddAndNotificationTest) {
 BOOST_AUTO_TEST_CASE(TreeCompleteTest) {
   const int TEST_LIMIT = 20;
 
-  Tree::TreeRoot root(Base::SimpleElement::GetPrototype());
+  TreeRoot root(Base::SimpleElement::GetPrototype());
   default_random_engine generator;
   uniform_int_distribution<int> distribution(1, TEST_LIMIT - 1);
 
@@ -133,7 +135,7 @@ BOOST_AUTO_TEST_CASE(TreeCompleteTest) {
 BOOST_AUTO_TEST_CASE(RandomTreeComplete) {
   const int TEST_LIMIT = 20;
 
-  Tree::RandomTreeRoot root(Base::SimpleElement::GetPrototype());
+  RandomTreeRoot root(Base::SimpleElement::GetPrototype());
   default_random_engine generator;
   uniform_int_distribution<int> distribution(1, TEST_LIMIT - 1);
 
