@@ -12,11 +12,11 @@ namespace Tools {
 MatrixMTFProcessor::MatrixMTFProcessor(int user_id, string identifier,
                                        int width)
     : Processor(user_id, identifier),
-      penalty_counter_(Tester(20, 20)),
-      user_container_prototype(Base::SimpleElement::GetPrototype()) {
-  shared_ptr<Matrix::MatrixBuilder> matrix_builder =
-      Matrix::MatrixBuilder::GetInstance();
-  matrix_ = matrix_builder->WithMatrixWidth(width).Generate();
+      penalty_counter_(Tester(20, 20)) {
+  shared_ptr<Algorithms::MatrixBuilder> matrix_builder =
+      Algorithms::MatrixBuilder::GetInstance();
+  matrix_ = matrix_builder->WithMatrixWidth(width).SetElementPrototype(
+      Base::SimpleElement::GetPrototype()).Generate();
 }
 
 MatrixMTFProcessor::~MatrixMTFProcessor() {
@@ -38,7 +38,7 @@ int MatrixMTFProcessor::GetPenalty() {
 }
 
 void MatrixMTFProcessor::AddUser(int user_id) {
-  matrix_->AddElement(user_container_prototype->Clone(user_id));
+  matrix_->AddElement(user_id);
 }
 
 } /* namespace Tools */

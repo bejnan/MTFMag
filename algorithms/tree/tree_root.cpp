@@ -10,10 +10,10 @@
 
 using std::sort;
 
-namespace Tree {
+namespace Algorithms {
 
 TreeRoot::TreeRoot(shared_ptr<Base::Element> node_core_prototype)
-    : node_core_prototype(node_core_prototype) {
+    : element_prototype_(node_core_prototype) {
   tree_list_.push_back(shared_ptr<Base::Element>());
 }
 
@@ -23,14 +23,14 @@ TreeRoot::~TreeRoot() {
 void TreeRoot::NotifyContent(int user_id) {
   int position = id_position_.at(user_id);
   tree_list_[position]->Notify();
-  MoveElement(position);
+  MoveFromPositionToFront(position);
   SortElementToList();
 }
 
 void TreeRoot::NotifyContent(int user_id, int notification_counter) {
   int position = id_position_.at(user_id);
   tree_list_[position]->Notify(notification_counter);
-  MoveElement(position);
+  MoveFromPositionToFront(position);
   SortElementToList();
 }
 
@@ -43,20 +43,26 @@ int TreeRoot::GetContentPosition(int user_id) {
 }
 
 void TreeRoot::AddElement(int user_id) {
-  shared_ptr<Base::Element> new_node = node_core_prototype->Clone(user_id);
-  tree_list_.push_back(new_node);
-  sorted_content_list_.push_back(user_id);
-  id_position_[user_id] = tree_list_.size() - 1;
+  if (!HaveElement(user_id)) {
+    shared_ptr<Base::Element> new_element = element_prototype_->Clone(user_id);
+    tree_list_.push_back(new_element);
+    sorted_content_list_.push_back(user_id);
+    id_position_[user_id] = tree_list_.size() - 1;
+  }
 }
 
-void TreeRoot::MoveElement(int position) {
+bool TreeRoot::HaveElement(int user_id) {
+  return (id_position_.find(user_id) != id_position_.end());
+}
+
+void TreeRoot::MoveFromPositionToFront(int position) {
   while (position > 1) {
-    SwitchElementsOnPositions(position, position / 2);
+    SwapElementsOnPositions(position, position / 2);
     position /= 2;
   }
 }
 
-void TreeRoot::SwitchElementsOnPositions(int position1, int position2) {
+void TreeRoot::SwapElementsOnPositions(int position1, int position2) {
   shared_ptr<Base::Element> tmp_elem;
   tmp_elem = tree_list_[position1];
   tree_list_[position1] = tree_list_[position2];
@@ -65,10 +71,6 @@ void TreeRoot::SwitchElementsOnPositions(int position1, int position2) {
   id_position_[tree_list_[position1]->user_id()] = position1;
   id_position_[tree_list_[position2]->user_id()] = position2;
 
-}
-
-shared_ptr<Base::Element> TreeRoot::GetElement(int position) {
-  return tree_list_[position];
 }
 
 inline bool CompareElementPointers(shared_ptr<Base::Element> elem1,
@@ -98,6 +100,10 @@ void TreeRoot::SortElementToList() {
     start = end;
     end <<= 1;
   }
+}
+
+int TreeRoot::CompareElementsOnPositions(int position1, int position2) {
+  return tree_list_[position1]->Compare(*tree_list_[position2]);
 }
 
 } /* namespace Tree */

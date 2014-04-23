@@ -28,7 +28,6 @@ namespace Algorithms {
  * If element looses, its parent tries to go up.
  */
 class RandomTreeRoot : public TreeRoot {
-  friend class TreeFactory;
  public:
   RandomTreeRoot(shared_ptr<Base::Element> node_core_prototype,
                  const double moving_up_propability = 0.75,
@@ -43,6 +42,7 @@ class RandomTreeRoot : public TreeRoot {
   virtual void MoveFromPositionToFront(int position);
   using TreeRoot::SwapElementsOnPositions;
   using TreeRoot::SortElementToList;
+  using TreeRoot::CompareElementsOnPositions;
  private :
   // Random utilities
   default_random_engine generator_;

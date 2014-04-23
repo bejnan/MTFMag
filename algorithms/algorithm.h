@@ -75,20 +75,20 @@ class Algorithm {
    * Method to move element from given position to front (depends on algorithm).
    * @param position Position of element to move
    */
-  void MoveFromPositionToFront(int position) = 0;
+  virtual void MoveFromPositionToFront(int position) = 0;
 
   /**
    * Method to switch pointers of elements stored in algorithm.
    * @param position1 Position of first element
    * @param position2 Position of second element
    */
-  void SwapElementsOnPositions(int position1, int position2) = 0;
+  virtual void SwapElementsOnPositions(int position1, int position2) = 0;
 
   /**
    * Sorts elements in row to restore linear order.
    * Used after notification
    */
-  void SortElementToList() = 0 ;
+  virtual void SortElementToList() = 0 ;
 
   /**
    * Compares elements by Element::Compare method
@@ -98,7 +98,7 @@ class Algorithm {
    * @return Result of Element::Compare method
    * @see Element::Compare
    */
-  int CompareElementsOnPositions(int position1, int position2) = 0;
+  virtual int CompareElementsOnPositions(int position1, int position2) = 0;
 
 };
 

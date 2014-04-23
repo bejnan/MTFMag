@@ -71,8 +71,9 @@ class MTFMatrix : public Algorithm {
    * Sets row size of class matrix and
    * initialize all containers.
    * @param row_size size of row to store elements
+   * @param node_core_prototype Prototype to generate new elements
    */
-  MTFMatrix(int row_size);
+  MTFMatrix(int row_size, shared_ptr<Base::Element> node_core_prototype);
 
   /**
    * Default destructor. Nothing to handle.
@@ -127,6 +128,8 @@ class MTFMatrix : public Algorithm {
 
   /** map to show position of node with given id */
   map<int, int> id_position_;
+
+  shared_ptr<Base::Element> element_prototype_;
 };
 
 } /* namespace Algorithms */

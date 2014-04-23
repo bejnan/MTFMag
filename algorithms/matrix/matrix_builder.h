@@ -8,7 +8,7 @@
 
 using std::shared_ptr;
 
-namespace Matrix {
+namespace Algorithms {
 
 /**
  * Builder of MTFMatrix with appropriate parameters.
@@ -36,6 +36,19 @@ class MatrixBuilder {
   MatrixBuilder& WithMatrixWidth(int width);
 
   /**
+   * Sets prototype for MTFMatrix instance to
+   * generate new elements
+   * @param element_prototype Pointer to instance of
+   * Element class (or it's child class)
+   * @return Reference to MatrixBuilder with changed settings
+   */
+  MatrixBuilder& SetElementPrototype(
+      shared_ptr<Base::Element> element_prototype) {
+    element_prototype_ = element_prototype;
+    return *this;
+  }
+
+  /**
    * Sets setting of builder to defaults (the same as after GetInstance method)
    * @return Reference to MatrixBuilder with default settings
    */
@@ -54,8 +67,12 @@ class MatrixBuilder {
   MatrixBuilder();
 
  private:
-  int matrix_width_; /**<  Saves WithMatrixWidth function argument. Part of
-                           configuration for MTXMatrix creation             */
+  /** Saves WithMatrixWidth function argument. Part of
+   configuration for MTXMatrix creation */
+  int matrix_width_;
+
+  /** prototype for MTFMatrix to create new elements */
+  shared_ptr<Base::Element> element_prototype_;
 };
 
 } /* namespace Matrix */

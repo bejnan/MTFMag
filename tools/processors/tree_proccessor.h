@@ -47,7 +47,7 @@ class TreeProcessor : public Processor {
   TreeProcessor(int userId, string identifier = string());
 
   // algorithms elements
-  TreeRoot root_;
+  Algorithms::TreeRoot root_;
   // Penalty counter
   Tester penalty_counter_;
 };

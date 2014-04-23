@@ -23,6 +23,8 @@ namespace Algorithms {
  *   2   3
  *  4 5 6 7
  * </pre>
+ * Linear order of elements is : <br>
+ * 1 3 2 7 6 5 4 <br>
  *
  * After notify element with identifier 5 tree will look : <pre>
  *     5
@@ -30,8 +32,10 @@ namespace Algorithms {
  *  4 2 6 7
  * </pre>
  *
+ * After moving element to front linear order is : <br>
+ * 5 3 1 7 6 4 2 <br>
  */
-class TreeRoot : public Algorithm  {
+class TreeRoot : public Algorithm {
 
  public:
   TreeRoot(shared_ptr<Base::Element> node_core_prototype);
@@ -48,26 +52,33 @@ class TreeRoot : public Algorithm  {
   virtual bool HaveElement(int user_id) = 0;
 
  protected:
-  // Moves element to top of the tree.
+  /**
+   * Moves element to root of the tree in the was shown
+   * in class description.
+   * @param position Start position of element in tree
+   * structure
+   */
   virtual void MoveFromPositionToFront(int position);
-  // Swap elements on positions.
+
   virtual void SwapElementsOnPositions(int position1, int position2);
-  // Getter of element on position in tree
-  shared_ptr<Base::Element> GetElement(int position);
-  // Sort elements in each level by its value.
-  // Method used to refresh sorted_content_list.
+
   void SortElementToList();
-  //todo
+
   int CompareElementsOnPositions(int position1, int position2);
  private:
-  // Tree implemented by array (parent is on child's position div 2)
+  /** Tree implemented by array (parent is on child's position div 2) */
   vector<shared_ptr<Base::Element> > tree_list_;
-  // List of elements in order (level priority, then value)
+
+  /** List of elements in order (level priority, then value) */
   vector<int> sorted_content_list_;
-  // Map to get position of element in tree
+
+  /** Map of elements to get position of element in tree. Identifier
+   * is key, value represent position in tree_list_;         */
   map<int, int> id_position_;
-  // Prototype element, which is a core of node
-  shared_ptr<Base::Element> node_core_prototype;
+
+  /** Prototype for elements used in AddElement method
+   * @see TreeRoot::AddElement                               */
+  shared_ptr<Base::Element> element_prototype_;
 };
 
 } /* namespace Algorithms */

@@ -13,7 +13,7 @@
 #include "../tester.h"
 #include "../processor.h"
 
-using namespace Tree;
+using namespace Algorithms;
 using std::string;
 
 namespace Tools {

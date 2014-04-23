@@ -7,7 +7,7 @@
 
 #include "mtf_matrix.h"
 
-namespace Matrix {
+namespace Algorithms {
 
 MTFMatrix::MTFMatrix(int row_size)
     : row_size_(row_size) {
@@ -20,11 +20,12 @@ bool MTFMatrix::HaveElement(int user_id) {
   return (id_position_.find(user_id) != id_position_.end());
 }
 
-void MTFMatrix::AddElement(shared_ptr<Base::Element> element) {
-  if (!HaveElement(element->user_id())) {
-    element_list_.push_back(element);
-    sorted_element_list_.push_back(element->user_id());
-    id_position_[element->user_id()] = element_list_.size() - 1;
+void MTFMatrix::AddElement(int user_id) {
+  if (!HaveElement(user_id)) {
+    shared_ptr<Base::Element> new_element = element_prototype_->Clone(user_id);
+    element_list_.push_back(new_element);
+    sorted_element_list_.push_back(user_id);
+    id_position_[user_id] = element_list_.size() - 1;
   }
 }
 
