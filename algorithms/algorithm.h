@@ -29,7 +29,7 @@ class Algorithm {
 
   /**
    * Main method of algorithm. Notify element with given id.
-   * After notification of element (Element::Notify method)
+   * After notification of element (Base::Element::Notify method)
    * it moves element to front. Details of movement depends on algorithm.
    * @param user_id Identifier of element to notify
    */
@@ -37,7 +37,7 @@ class Algorithm {
 
   /**
    * As version with one parameter notify element with given id.
-   * After notification of element (Element::Notify method)
+   * After notification of element (Base::Element::Notify method)
    * it moves element to front. Details of movement depends on algorithm.
    * notification_count can be used in Element::Notify method to
    * measure actuality of element.
@@ -96,7 +96,7 @@ class Algorithm {
    * @param position1 Position of first element to compare.
    * @param position2 Position of second element to compare with.
    * @return Result of Element::Compare method
-   * @see Element::Compare
+   * @see Base::Element::Compare
    */
   virtual int CompareElementsOnPositions(int position1, int position2) = 0;
 
@@ -106,7 +106,7 @@ class Algorithm {
    * @param position1 Position of first element to compare.
    * @param position2 Position of second element to compare with.
    * @return Result of Element::Difference method
-   * @see Element::Difference
+   * @see Base::Element::Difference
    */
   virtual double DifferenceBetweenElementsOnPosition(int position1,
                                                      int position2) = 0;

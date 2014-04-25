@@ -71,8 +71,8 @@ class DataCollector {
 
   /**
    * Method to add ProcessorFactory to generate new Processors
-   * @see ProcessorFactory
-   * @see Processor
+   * @see Tools::ProcessorFactory
+   * @see Tools::Processor
    * @param procesor_factory_ptr Pointer to ProcessorFactory which will be
    * added to processor_factories_ vector
    */
@@ -120,7 +120,7 @@ class DataCollector {
    * @param user_id       Id of contact which sends message
    * @param receiver_id   Id of receiver of message
    * @param learn         If learn is true no penalty is counted
-   * @see Processor
+   * @see Tools::Processor
    * @see Database
    */
   void RunProcessor(int user_id, int receiver_id, bool learn = false);

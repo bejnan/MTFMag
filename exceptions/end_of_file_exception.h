@@ -8,7 +8,7 @@ namespace Exception {
 /**
  * Exception is thrown when DataProvider meets end of input
  * and program is trying to get next line of data.
- * @see DataProvider::GoToNextLine
+ * @see Base::DataProvider::GoToNextLine
  */
 class EndOfFileException : public Exception::DataProviderException {
  public:

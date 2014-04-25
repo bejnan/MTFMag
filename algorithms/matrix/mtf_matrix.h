@@ -62,7 +62,7 @@ namespace Algorithms {
  * Position of element in ordered way can be read by
  * MTFMatrix::GetContentPosiotion method
  *
- * @see Element::Compare to understand order between elements in row
+ * @see Base::Element::Compare to understand order between elements in row
  */
 class MTFMatrix : public Algorithm {
 

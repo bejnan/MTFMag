@@ -21,7 +21,7 @@ namespace Tools {
  * Processor and ProcessorFactory creates that Processors.
  * It is used in DataCollector when user from input data doesn't
  * have Processor representation.
- * @see DataCollector
+ * @see Base::DataCollector
  */
 class ProcessorFactory {
  public:

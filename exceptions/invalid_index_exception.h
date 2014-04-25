@@ -14,7 +14,7 @@ namespace Exception {
 /**
  * Exception thrown when query to Database contains non-existing
  * identifier.
- * @see Database::Query
+ * @see Base::Database::Query
  */
 class InvalidIndexException : public DatabaseException{
  public:

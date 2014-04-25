@@ -18,7 +18,7 @@ namespace Exception {
 
 /**
  * Exception is thrown when bad file path is given to DataProvider instance.
- * @see FileDataProvider
+ * @see Base::FileDataProvider
  */
 class FilePathException : public Exception::DataProviderException {
  public:

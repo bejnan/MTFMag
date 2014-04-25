@@ -12,7 +12,7 @@ namespace Exception {
 /**
  * Exception thrown when query to Database contains non-existing
  * name as parameter.
- * @see Database::Query
+ * @see Base::Database::Query
  */
 class InvalidNameException : public DatabaseException {
  public:

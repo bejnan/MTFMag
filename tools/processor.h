@@ -17,7 +17,7 @@ namespace Tools {
  * Wrapper of algorithm to use it in real problem.
  * Processor is kind of adapter for DataCollector to
  * make algorithm useful to process notifications coded in data input.
- * @see DataCollector
+ * @see Base::DataCollector
  */
 class Processor {
  public:
@@ -48,7 +48,7 @@ class Processor {
    * Returns penalty "earned" by algorithm. Details depends on penalty counter, but
    * main idea is that penalty is as big as far is user on friend list (algorithm ordered list of elements).
    * @see Tester
-   * @see Algorithm
+   * @see Algorithms::Algorithm
    * @return Sum of all penalties given to algorithm
    */
   virtual int GetPenalty() {

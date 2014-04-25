@@ -10,7 +10,7 @@ namespace Exception {
 /**
  * Base class for exceptions which occurs during providing data
  * from DataProvider to DataCollector
- * @see DataCollector
+ * @see Base::DataCollector
  */
 class DataProviderException : public std::exception {
  public:
