@@ -16,6 +16,9 @@ using std::to_string;
 
 namespace Tools {
 
+/**
+ * Generator of MatrixMTFProcessors
+ */
 class MatrixMTFProcessorFactory : public Tools::ProcessorFactory{
  public:
   MatrixMTFProcessorFactory(int matrix_width = 2);

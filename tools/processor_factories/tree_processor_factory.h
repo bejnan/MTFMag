@@ -12,7 +12,8 @@
 #include "../processors/tree_proccessor.h"
 
 namespace Tools {
-/*
+
+/**
  * Class to generate TreeProcessor instances
  */
 class TreeProcessorFactory : public Tools::ProcessorFactory {

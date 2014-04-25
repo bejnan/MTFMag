@@ -38,7 +38,7 @@ class TreeProcessor : public Processor {
   virtual void Proceed(int id, bool learn = false);
   // return penalty counted by tester
   virtual int GetPenalty();
-  using Processor::identifier;
+  using Processor::algorithm_identifier;
   using Processor::user_id;
 
  private:

@@ -18,9 +18,14 @@ using std::shared_ptr;
 
 namespace Tools {
 
+/**
+ * Processor for MTFMatrix algorithm
+ */
 class MatrixMTFProcessor : public Tools::Processor {
  public:
-  MatrixMTFProcessor(int user_id, string identifier, int width = 2);
+  MatrixMTFProcessor(int user_id, string identifier, int width = 2,
+                     shared_ptr<Base::Element> element_prototype =
+                         Base::SimpleElement::GetPrototype());
   virtual ~MatrixMTFProcessor();
 
   virtual void Proceed(int user_id, bool learn = false);

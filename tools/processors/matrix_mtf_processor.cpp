@@ -9,14 +9,15 @@
 
 namespace Tools {
 
-MatrixMTFProcessor::MatrixMTFProcessor(int user_id, string identifier,
-                                       int width)
+MatrixMTFProcessor::MatrixMTFProcessor(
+    int user_id, string identifier, int width,
+    shared_ptr<Base::Element> element_prototype)
     : Processor(user_id, identifier),
       penalty_counter_(Tester(20, 20)) {
   shared_ptr<Algorithms::MatrixBuilder> matrix_builder =
       Algorithms::MatrixBuilder::GetInstance();
   matrix_ = matrix_builder->WithMatrixWidth(width).SetElementPrototype(
-      Base::SimpleElement::GetPrototype()).Generate();
+      element_prototype).Generate();
 }
 
 MatrixMTFProcessor::~MatrixMTFProcessor() {

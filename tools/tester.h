@@ -10,26 +10,52 @@
 
 namespace Tools {
 /**
- * Class counts penalty
+ * Counter of penalties. This class assume that user used
+ * screen with scroll and searching. If notified friend (element)
+ * is on first page user can find it in no time. If element is on
+ * second page user have to scroll to find it. If element is further
+ * user uses search which finds element in constant time (MAX_PENALTY), but bigger than
+ * searching on first two screens (because user have to do it anyway to know,
+ * that element isn't there).
  */
 class Tester {
  public:
-  // first_page_list_size - list of elements with no penalty
-  // second_page_list_size - list of elements with counted penalty
+  /**
+   * Initialize penalty parameters
+   * @param first_page_list_size Size of first page. Notification of elements that are located there
+   * costs nothing in this model.
+   * @param second_page_list_size Size of second page.Notification of elements that are located there
+   * costs (position - first_page_size).
+   */
   Tester(int first_page_list_size, int second_page_list_size);
+
+  /**
+   * Default destructor. Nothing to handle
+   */
   virtual ~Tester();
-  // As written before, if element_position is less then first_page_list_size, no penalty is added.
-  // If element is on second_page_list_size, penalty is position - first_page_list_size.
-  // If element_position is more than two pages then MAX_PENALTY is added.
+
+  /**
+   * Main method of counter. Check position of notified element and compare it
+   * with set parameters. After that adds adequate penalty to penalty_sum_ property.
+   * @param element_position Position on which element was found before notification.
+   */
   virtual void CountPenalty(unsigned int element_position);
-  virtual int penalty() { return penalty_; }
+
+  /**
+   * Getter of overall penalty
+   * @return Sum of all counted penalties
+   */
+  virtual int penalty() { return penalty_sum_; }
+
  private:
-  unsigned int first_page_list_size_;
-  unsigned int second_page_list_size_;
-  // Const penalty for elements more distant than first and second page list
-  unsigned const int MAX_PENALTY;
-  // Sum of penalties
-  unsigned long penalty_;
+  unsigned int first_page_list_size_;  /**< Size of first page
+                                            (with no penalty)      */
+  unsigned int second_page_list_size_; /**< Size of second page
+                                            (with counted penalty) */
+
+  unsigned const int MAX_PENALTY; /**< Penalty for elements founded
+                                   further than on first two pages */
+  unsigned long penalty_sum_;     /**< Sum of all penalties        */
 };
 
 } /* namespace Tree */

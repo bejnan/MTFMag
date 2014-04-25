@@ -95,6 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_q"><span>q</span></a></li>
       <li><a href="#index_r"><span>r</span></a></li>
       <li><a href="#index_s"><span>s</span></a></li>
+      <li><a href="#index_t"><span>t</span></a></li>
       <li><a href="#index_u"><span>u</span></a></li>
       <li><a href="#index_w"><span>w</span></a></li>
       <li class="current"><a href="#index_~"><span>~</span></a></li>
@@ -144,6 +145,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>AddToBase()
 : <a class="el" href="classBase_1_1Database.html#a97279bf88fcd1a60fe35afe473557032">Base::Database</a>
 </li>
+<li>algorithm_identifier()
+: <a class="el" href="classTools_1_1Processor.html#a6b4a19788d7c80d43905b8e733cde9f6">Tools::Processor</a>
+</li>
 <li>AreTitlesPrinted()
 : <a class="el" href="classBase_1_1CsvDataOutput.html#aaa4e604ce1d06ee002889b2604faf4e4">Base::CsvDataOutput</a>
 , <a class="el" href="classBase_1_1DataOutput.html#aa201a3a18e148803cc3384af60acda60">Base::DataOutput</a>
@@ -169,6 +173,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 </li>
 <li>ComplexDifferenceElement()
 : <a class="el" href="classBase_1_1ComplexDifferenceElement.html#ad8b835528b8b5a6051c6405af99e48f3">Base::ComplexDifferenceElement</a>
+</li>
+<li>CountPenalty()
+: <a class="el" href="classTools_1_1Tester.html#a56bd9ab5b4b86a9c1d693b91076ac411">Tools::Tester</a>
 </li>
 <li>CsvDataOutput()
 : <a class="el" href="classBase_1_1CsvDataOutput.html#acbedd47083f64caaafc2a33336bef869">Base::CsvDataOutput</a>
@@ -230,6 +237,13 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="classAlgorithms_1_1MatrixBuilder.html#a438490ef5cb21f215ff0b465e84131ad">Algorithms::MatrixBuilder</a>
 , <a class="el" href="classBase_1_1DataOutputBuilder.html#a00f565346533b666eb3fa74c155370e6">Base::DataOutputBuilder</a>
 </li>
+<li>GenerateProcessor()
+: <a class="el" href="classTools_1_1MatrixMTFProcessorFactory.html#a5ddc563317ede13d07f506af24c18e1b">Tools::MatrixMTFProcessorFactory</a>
+, <a class="el" href="classTools_1_1MTFProcessorFactory.html#aec59257db73a0fbd943db2e191bfed29">Tools::MTFProcessorFactory</a>
+, <a class="el" href="classTools_1_1ProcessorFactory.html#a56008a0558473aa5ace05bc2b23202d5">Tools::ProcessorFactory</a>
+, <a class="el" href="classTools_1_1RandomTreeProcessorFactory.html#a7c9621404aa9431bd6b8336e6bac88f8">Tools::RandomTreeProcessorFactory</a>
+, <a class="el" href="classTools_1_1TreeProcessorFactory.html#a24b9e0978e1b36504de31f8ffaeb384b">Tools::TreeProcessorFactory</a>
+</li>
 <li>GetActualLine()
 : <a class="el" href="classBase_1_1DataProvider.html#aa0732191de813f04ef15e71dc38a2a2a">Base::DataProvider</a>
 , <a class="el" href="classBase_1_1FileDataProvider.html#a8b00f1577294defc0cca9fbe97aae3ec">Base::FileDataProvider</a>
@@ -253,6 +267,13 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>GetOutputStream()
 : <a class="el" href="classBase_1_1DataOutput.html#adea8f6af278e2e8ace25ba64d9bf9a57">Base::DataOutput</a>
 , <a class="el" href="classBase_1_1FileDataOutput.html#ae541a6775f2a1641b85e47f610618cd0">Base::FileDataOutput</a>
+</li>
+<li>GetPenalty()
+: <a class="el" href="classTools_1_1MatrixMTFProcessor.html#a530e160a30c1aedbebaf2705a30157fd">Tools::MatrixMTFProcessor</a>
+, <a class="el" href="classTools_1_1MTFProcessor.html#a70cc8a3ab3957a880b831b6b28045b6f">Tools::MTFProcessor</a>
+, <a class="el" href="classTools_1_1Processor.html#ab2189614234fd7670b6bd3d4da9898c8">Tools::Processor</a>
+, <a class="el" href="classTools_1_1RandomTreeProcessor.html#a46ebdf4f6778a36389d0d3d4bbd392e9">Tools::RandomTreeProcessor</a>
+, <a class="el" href="classTools_1_1TreeProcessor.html#abdef8e5bde40fcb816da1af2b2d22e75">Tools::TreeProcessor</a>
 </li>
 <li>GetPrototype()
 : <a class="el" href="classBase_1_1ComplexDifferenceElement.html#a35687b61e32355d4c6e90d7ec42cea2d">Base::ComplexDifferenceElement</a>
@@ -315,14 +336,17 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 </li>
 <li>NotifyContent()
 : <a class="el" href="classAlgorithms_1_1Algorithm.html#a7518f25c52360dbc9da868a48b528716">Algorithms::Algorithm</a>
-, <a class="el" href="classAlgorithms_1_1MTFMatrix.html#ae55b9b0b8d6057d989099f8c315da140">Algorithms::MTFMatrix</a>
+, <a class="el" href="classAlgorithms_1_1MTFMatrix.html#a181a83000b34c24930dae329ccb61480">Algorithms::MTFMatrix</a>
 , <a class="el" href="classAlgorithms_1_1RandomTreeRoot.html#a74a1bcac23e7bed45308e76e017ff7da">Algorithms::RandomTreeRoot</a>
-, <a class="el" href="classAlgorithms_1_1TreeRoot.html#a5461cb3168d66319a8008b818db16dfe">Algorithms::TreeRoot</a>
+, <a class="el" href="classAlgorithms_1_1TreeRoot.html#a533a6da1910783760115e22444972870">Algorithms::TreeRoot</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
+<li>penalty()
+: <a class="el" href="classTools_1_1Tester.html#ab8141970e4a78b9b75d2fb9279d58d00">Tools::Tester</a>
+</li>
 <li>PrintActualResults()
 : <a class="el" href="classBase_1_1DataCollector.html#afb1d46273c24e3e1fdefba6b730ebf28">Base::DataCollector</a>
 </li>
@@ -333,6 +357,16 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>PrintLine()
 : <a class="el" href="classBase_1_1CsvDataOutput.html#a88994527237735d1d6a05cec3b222ba7">Base::CsvDataOutput</a>
 , <a class="el" href="classBase_1_1DataOutput.html#afdb91464e7559dedf69c56c1b862a216">Base::DataOutput</a>
+</li>
+<li>Proceed()
+: <a class="el" href="classTools_1_1MatrixMTFProcessor.html#a40d0b0044c745d7a1df7d9d518708fb5">Tools::MatrixMTFProcessor</a>
+, <a class="el" href="classTools_1_1MTFProcessor.html#a247b4db13c062cb3fe63cd05ca4b0ebc">Tools::MTFProcessor</a>
+, <a class="el" href="classTools_1_1Processor.html#a1ab01d55982af6ef1bc22be8505f409a">Tools::Processor</a>
+, <a class="el" href="classTools_1_1RandomTreeProcessor.html#a3a0f8189028e122890b7ba64d551ff01">Tools::RandomTreeProcessor</a>
+, <a class="el" href="classTools_1_1TreeProcessor.html#a0d12306c41c23e0a45564aca9107b891">Tools::TreeProcessor</a>
+</li>
+<li>Processor()
+: <a class="el" href="classTools_1_1Processor.html#a2d3e696f962f44bb7890b76e1da37129">Tools::Processor</a>
 </li>
 </ul>
 
@@ -384,12 +418,20 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 </ul>
 
 
+<h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
+<li>Tester()
+: <a class="el" href="classTools_1_1Tester.html#ab8eccea02f6dc5713a57b90c13a207df">Tools::Tester</a>
+</li>
+</ul>
+
+
 <h3><a class="anchor" id="index_u"></a>- u -</h3><ul>
 <li>UseFile()
 : <a class="el" href="classBase_1_1DataOutputBuilder.html#ac5ed5b644a72572f094cf1d5fc1c87f0">Base::DataOutputBuilder</a>
 </li>
 <li>user_id()
 : <a class="el" href="classBase_1_1Element.html#a42070f7874b9235210c7263afd6b71f4">Base::Element</a>
+, <a class="el" href="classTools_1_1Processor.html#ae84109b1fd7e48786903b30f4316b9a7">Tools::Processor</a>
 </li>
 </ul>
 
@@ -438,8 +480,14 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>~MTFMatrix()
 : <a class="el" href="classAlgorithms_1_1MTFMatrix.html#a47bf4d6b94bf5c14b05fae08e5eb59b5">Algorithms::MTFMatrix</a>
 </li>
+<li>~Processor()
+: <a class="el" href="classTools_1_1Processor.html#a57b9849b5dfe7a239d67588d2ebf1ff2">Tools::Processor</a>
+</li>
 <li>~SimpleElement()
 : <a class="el" href="classBase_1_1SimpleElement.html#a4580b6f8e363c12459a2947749c26226">Base::SimpleElement</a>
+</li>
+<li>~Tester()
+: <a class="el" href="classTools_1_1Tester.html#a228a5897294f0d6ba8fd59ab33e7188b">Tools::Tester</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -447,7 +495,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 24 2014 01:01:47 for MTFthesisstudies by
+    <li class="footer">Generated on Fri Apr 25 2014 04:02:40 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

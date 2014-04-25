@@ -15,7 +15,8 @@
 
 using std::to_string;
 namespace Tools {
-/*
+
+/**
  * Factory for RandomTreeProcessor
  */
 class RandomTreeProcessorFactory : public ProcessorFactory {

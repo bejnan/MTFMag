@@ -19,9 +19,9 @@ MatrixMTFProcessorFactory::~MatrixMTFProcessorFactory() {
 
 shared_ptr<Processor> MatrixMTFProcessorFactory::GenerateProcessor(
     int user_id) {
-  MatrixMTFProcessor* new_processor = new MatrixMTFProcessor(user_id,
-                                                             algorithm_name_,
-                                                             matrix_width_);
+  MatrixMTFProcessor* new_processor = new MatrixMTFProcessor(
+      user_id, algorithm_name_, matrix_width_,
+      Base::SimpleElement::GetPrototype());
   return shared_ptr<Processor>(new_processor);
 }
 

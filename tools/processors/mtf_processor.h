@@ -21,7 +21,7 @@ namespace Tools {
 // Forward definition of MTFProcessor factory
 class MTFProcessorFactory;
 
-/*
+/**
  * MTFProcessor is Processor based on simple MTF (Move To Front) algorithm.
  * It uses simples penalty counter, that is Tester class.
  */
@@ -33,7 +33,7 @@ class MTFProcessor : Processor {
   virtual ~MTFProcessor();
   virtual void Proceed(int id, bool learn = false);
   virtual int GetPenalty();
-  using Processor::identifier;
+  using Processor::algorithm_identifier;
   using Processor::user_id;
 
  private:

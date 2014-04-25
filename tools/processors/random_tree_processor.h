@@ -32,7 +32,7 @@ class RandomTreeProcessor : public Processor {
   virtual ~RandomTreeProcessor();
   virtual void Proceed(int id, bool learn = false);
   virtual int GetPenalty();
-  using Processor::identifier;
+  using Processor::algorithm_identifier;
   using Processor::user_id;
  private:
   // only RandomTreeProcessorFactory can create this object

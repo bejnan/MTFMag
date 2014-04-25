@@ -30,10 +30,16 @@ var annotated =
       [ "InvalidNameException", "classException_1_1InvalidNameException.html", "classException_1_1InvalidNameException" ]
     ] ],
     [ "Tools", null, [
-      [ "Processor", "classTools_1_1Processor.html", null ],
-      [ "ProcessorFactory", "classTools_1_1ProcessorFactory.html", null ],
-      [ "RandomTreeProcessor", "classTools_1_1RandomTreeProcessor.html", null ],
-      [ "TreeProcessor", "classTools_1_1TreeProcessor.html", null ],
-      [ "Tester", "classTools_1_1Tester.html", null ]
+      [ "Processor", "classTools_1_1Processor.html", "classTools_1_1Processor" ],
+      [ "MatrixMTFProcessorFactory", "classTools_1_1MatrixMTFProcessorFactory.html", "classTools_1_1MatrixMTFProcessorFactory" ],
+      [ "MTFProcessorFactory", "classTools_1_1MTFProcessorFactory.html", "classTools_1_1MTFProcessorFactory" ],
+      [ "RandomTreeProcessorFactory", "classTools_1_1RandomTreeProcessorFactory.html", "classTools_1_1RandomTreeProcessorFactory" ],
+      [ "TreeProcessorFactory", "classTools_1_1TreeProcessorFactory.html", "classTools_1_1TreeProcessorFactory" ],
+      [ "ProcessorFactory", "classTools_1_1ProcessorFactory.html", "classTools_1_1ProcessorFactory" ],
+      [ "MatrixMTFProcessor", "classTools_1_1MatrixMTFProcessor.html", "classTools_1_1MatrixMTFProcessor" ],
+      [ "MTFProcessor", "classTools_1_1MTFProcessor.html", "classTools_1_1MTFProcessor" ],
+      [ "RandomTreeProcessor", "classTools_1_1RandomTreeProcessor.html", "classTools_1_1RandomTreeProcessor" ],
+      [ "TreeProcessor", "classTools_1_1TreeProcessor.html", "classTools_1_1TreeProcessor" ],
+      [ "Tester", "classTools_1_1Tester.html", "classTools_1_1Tester" ]
     ] ]
 ];

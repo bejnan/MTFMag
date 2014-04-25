@@ -119,37 +119,48 @@ $(document).ready(function(){initNavTree('processor_8h_source.html','');});
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">using</span> std::string;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>Tools {</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classTools_1_1Processor.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTools_1_1Processor.html">Processor</a> {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="classTools_1_1Processor.html">Processor</a>(<span class="keywordtype">int</span> user_id, <span class="keywordtype">string</span> identifier);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classTools_1_1Processor.html">Processor</a>();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="comment">// id - Receiver id</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="comment">// learn - if true no penalty is added</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> Proceed(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">bool</span> learn = <span class="keyword">false</span>) {};</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="comment">// return penalty counted by tester</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> GetPenalty() { <span class="keywordflow">return</span> 0; }</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordtype">string</span> identifier() { <span class="keywordflow">return</span> identifier_;  }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">int</span> user_id() { <span class="keywordflow">return</span> user_id_; }</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="comment">// id of user that processor operates</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> user_id_;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="comment">// identifier of algorithms that processor uses</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">string</span> identifier_;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;} <span class="comment">/* namespace Tools */</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* ABSTRACTPROCESSOR_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="classTools_1_1Processor_html"><div class="ttname"><a href="classTools_1_1Processor.html">Tools::Processor</a></div><div class="ttdef"><b>Definition:</b> processor.h:20</div></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classTools_1_1Processor.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTools_1_1Processor.html">Processor</a> {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="classTools_1_1Processor.html#a2d3e696f962f44bb7890b76e1da37129">Processor</a>(<span class="keywordtype">int</span> <a class="code" href="classTools_1_1Processor.html#ae84109b1fd7e48786903b30f4316b9a7">user_id</a>, <span class="keywordtype">string</span> <a class="code" href="classTools_1_1Processor.html#a6b4a19788d7c80d43905b8e733cde9f6">algorithm_identifier</a>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classTools_1_1Processor.html#a57b9849b5dfe7a239d67588d2ebf1ff2">~Processor</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classTools_1_1Processor.html#a1ab01d55982af6ef1bc22be8505f409a">   45</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classTools_1_1Processor.html#a1ab01d55982af6ef1bc22be8505f409a">Proceed</a>(<span class="keywordtype">int</span> user_id, <span class="keywordtype">bool</span> learn = <span class="keyword">false</span>) {  } ;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classTools_1_1Processor.html#ab2189614234fd7670b6bd3d4da9898c8">   54</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classTools_1_1Processor.html#ab2189614234fd7670b6bd3d4da9898c8">GetPenalty</a>() {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classTools_1_1Processor.html#a6b4a19788d7c80d43905b8e733cde9f6">   62</a></span>&#160;  <span class="keywordtype">string</span> <a class="code" href="classTools_1_1Processor.html#a6b4a19788d7c80d43905b8e733cde9f6">algorithm_identifier</a>() {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span> algorithm_identifier_;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classTools_1_1Processor.html#ae84109b1fd7e48786903b30f4316b9a7">   70</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classTools_1_1Processor.html#ae84109b1fd7e48786903b30f4316b9a7">user_id</a>() {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">return</span> user_id_;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> user_id_;         </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">string</span> algorithm_identifier_; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;};</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;} <span class="comment">/* namespace Tools */</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* ABSTRACTPROCESSOR_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="classTools_1_1Processor_html"><div class="ttname"><a href="classTools_1_1Processor.html">Tools::Processor</a></div><div class="ttdef"><b>Definition:</b> processor.h:22</div></div>
+<div class="ttc" id="classTools_1_1Processor_html_a1ab01d55982af6ef1bc22be8505f409a"><div class="ttname"><a href="classTools_1_1Processor.html#a1ab01d55982af6ef1bc22be8505f409a">Tools::Processor::Proceed</a></div><div class="ttdeci">virtual void Proceed(int user_id, bool learn=false)</div><div class="ttdef"><b>Definition:</b> processor.h:45</div></div>
+<div class="ttc" id="classTools_1_1Processor_html_a57b9849b5dfe7a239d67588d2ebf1ff2"><div class="ttname"><a href="classTools_1_1Processor.html#a57b9849b5dfe7a239d67588d2ebf1ff2">Tools::Processor::~Processor</a></div><div class="ttdeci">virtual ~Processor()</div><div class="ttdef"><b>Definition:</b> processor.cpp:16</div></div>
+<div class="ttc" id="classTools_1_1Processor_html_a2d3e696f962f44bb7890b76e1da37129"><div class="ttname"><a href="classTools_1_1Processor.html#a2d3e696f962f44bb7890b76e1da37129">Tools::Processor::Processor</a></div><div class="ttdeci">Processor(int user_id, string algorithm_identifier)</div><div class="ttdef"><b>Definition:</b> processor.cpp:11</div></div>
+<div class="ttc" id="classTools_1_1Processor_html_a6b4a19788d7c80d43905b8e733cde9f6"><div class="ttname"><a href="classTools_1_1Processor.html#a6b4a19788d7c80d43905b8e733cde9f6">Tools::Processor::algorithm_identifier</a></div><div class="ttdeci">string algorithm_identifier()</div><div class="ttdef"><b>Definition:</b> processor.h:62</div></div>
+<div class="ttc" id="classTools_1_1Processor_html_ae84109b1fd7e48786903b30f4316b9a7"><div class="ttname"><a href="classTools_1_1Processor.html#ae84109b1fd7e48786903b30f4316b9a7">Tools::Processor::user_id</a></div><div class="ttdeci">int user_id()</div><div class="ttdef"><b>Definition:</b> processor.h:70</div></div>
+<div class="ttc" id="classTools_1_1Processor_html_ab2189614234fd7670b6bd3d4da9898c8"><div class="ttname"><a href="classTools_1_1Processor.html#ab2189614234fd7670b6bd3d4da9898c8">Tools::Processor::GetPenalty</a></div><div class="ttdeci">virtual int GetPenalty()</div><div class="ttdef"><b>Definition:</b> processor.h:54</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4eeb864c4eec08c7d6b9d3b0352cfdde.html">tools</a></li><li class="navelem"><b>processor.h</b></li>
-    <li class="footer">Generated on Thu Apr 24 2014 01:01:45 for MTFthesisstudies by
+    <li class="footer">Generated on Fri Apr 25 2014 04:02:39 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -5,8 +5,9 @@ var searchData=
   ['compareelementsonpositions',['CompareElementsOnPositions',['../classAlgorithms_1_1Algorithm.html#a5caa6b3806833aae4e8350aa6a0cd076',1,'Algorithms::Algorithm::CompareElementsOnPositions()'],['../classAlgorithms_1_1MTFMatrix.html#afc6cba6439a616cc32763be120064fbc',1,'Algorithms::MTFMatrix::CompareElementsOnPositions()'],['../classAlgorithms_1_1TreeRoot.html#acc3339facfca0b8f0e98c48fededb783',1,'Algorithms::TreeRoot::CompareElementsOnPositions()']]],
   ['complexdifferenceelement',['ComplexDifferenceElement',['../classBase_1_1ComplexDifferenceElement.html',1,'Base']]],
   ['complexdifferenceelement',['ComplexDifferenceElement',['../classBase_1_1ComplexDifferenceElement.html#ad8b835528b8b5a6051c6405af99e48f3',1,'Base::ComplexDifferenceElement']]],
-  ['csvdataoutput',['CsvDataOutput',['../classBase_1_1CsvDataOutput.html#acbedd47083f64caaafc2a33336bef869',1,'Base::CsvDataOutput']]],
+  ['countpenalty',['CountPenalty',['../classTools_1_1Tester.html#a56bd9ab5b4b86a9c1d693b91076ac411',1,'Tools::Tester']]],
   ['csvdataoutput',['CsvDataOutput',['../classBase_1_1CsvDataOutput.html',1,'Base']]],
+  ['csvdataoutput',['CsvDataOutput',['../classBase_1_1CsvDataOutput.html#acbedd47083f64caaafc2a33336bef869',1,'Base::CsvDataOutput']]],
   ['csvfiledataoutput',['CsvFileDataOutput',['../classBase_1_1CsvFileDataOutput.html',1,'Base']]],
   ['csvfiledataoutput',['CsvFileDataOutput',['../classBase_1_1CsvFileDataOutput.html#ac25017da168deaae88ea92dcc5a63611',1,'Base::CsvFileDataOutput']]]
 ];

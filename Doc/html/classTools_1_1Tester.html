@@ -104,6 +104,7 @@ $(document).ready(function(){initNavTree('classTools_1_1Tester.html','');});
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classTools_1_1Tester-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Tools::Tester Class Reference</div>  </div>
@@ -111,9 +112,137 @@ $(document).ready(function(){initNavTree('classTools_1_1Tester.html','');});
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="tester_8h_source.html">tester.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ab8eccea02f6dc5713a57b90c13a207df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTools_1_1Tester.html#ab8eccea02f6dc5713a57b90c13a207df">Tester</a> (int first_page_list_size, int second_page_list_size)</td></tr>
+<tr class="separator:ab8eccea02f6dc5713a57b90c13a207df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a228a5897294f0d6ba8fd59ab33e7188b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTools_1_1Tester.html#a228a5897294f0d6ba8fd59ab33e7188b">~Tester</a> ()</td></tr>
+<tr class="separator:a228a5897294f0d6ba8fd59ab33e7188b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56bd9ab5b4b86a9c1d693b91076ac411"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTools_1_1Tester.html#a56bd9ab5b4b86a9c1d693b91076ac411">CountPenalty</a> (unsigned int element_position)</td></tr>
+<tr class="separator:a56bd9ab5b4b86a9c1d693b91076ac411"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8141970e4a78b9b75d2fb9279d58d00"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTools_1_1Tester.html#ab8141970e4a78b9b75d2fb9279d58d00">penalty</a> ()</td></tr>
+<tr class="separator:ab8141970e4a78b9b75d2fb9279d58d00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class counts penalty </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<div class="textblock"><p>Counter of penalties. This class assume that user used screen with scroll and searching. If notified friend (element) is on first page user can find it in no time. If element is on second page user have to scroll to find it. If element is further user uses search which finds element in constant time (MAX_PENALTY), but bigger than searching on first two screens (because user have to do it anyway to know, that element isn't there). </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ab8eccea02f6dc5713a57b90c13a207df"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tools::Tester::Tester </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>first_page_list_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>second_page_list_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialize penalty parameters </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">first_page_list_size</td><td>Size of first page. Notification of elements that are located there costs nothing in this model. </td></tr>
+    <tr><td class="paramname">second_page_list_size</td><td>Size of second page.Notification of elements that are located there costs (position - first_page_size). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a228a5897294f0d6ba8fd59ab33e7188b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tools::Tester::~Tester </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Default destructor. Nothing to handle </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a56bd9ab5b4b86a9c1d693b91076ac411"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tools::Tester::CountPenalty </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>element_position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Main method of counter. Check position of notified element and compare it with set parameters. After that adds adequate penalty to penalty_sum_ property. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">element_position</td><td>Position on which element was found before notification. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab8141970e4a78b9b75d2fb9279d58d00"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Tools::Tester::penalty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Getter of overall penalty </p>
+<dl class="section return"><dt>Returns</dt><dd>Sum of all counted penalties </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>tools/<a class="el" href="tester_8h_source.html">tester.h</a></li>
 <li>tools/tester.cpp</li>
 </ul>
@@ -123,7 +252,7 @@ $(document).ready(function(){initNavTree('classTools_1_1Tester.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>Tools</b></li><li class="navelem"><a class="el" href="classTools_1_1Tester.html">Tester</a></li>
-    <li class="footer">Generated on Thu Apr 24 2014 01:01:46 for MTFthesisstudies by
+    <li class="footer">Generated on Fri Apr 25 2014 04:02:40 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

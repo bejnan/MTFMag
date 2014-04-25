@@ -10,7 +10,7 @@ namespace Tools {
 
 Processor::Processor(int user_id, string identifier)
     : user_id_(user_id),
-      identifier_(identifier) {
+      algorithm_identifier_(identifier) {
 }
 
 Processor::~Processor() {

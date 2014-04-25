@@ -16,8 +16,8 @@
 using std::string;
 
 namespace Tools {
-/*
- * Factory for MTFProcessor class.
+/**
+ * Factory for MTFProcessor class that uses classic Move To Front algorithm.
  */
 class MTFProcessorFactory : public Tools::ProcessorFactory {
  public:

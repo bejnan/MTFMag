@@ -104,6 +104,7 @@ $(document).ready(function(){initNavTree('classTools_1_1Processor.html','');});
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classTools_1_1Processor-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Tools::Processor Class Reference</div>  </div>
@@ -116,11 +117,212 @@ Inheritance diagram for Tools::Processor:</div>
 <div class="dyncontent">
 <div class="center"><img src="classTools_1_1Processor__inherit__graph.png" border="0" usemap="#Tools_1_1Processor_inherit__map" alt="Inheritance graph"/></div>
 <map name="Tools_1_1Processor_inherit__map" id="Tools_1_1Processor_inherit__map">
-<area shape="rect" id="node2" href="classTools_1_1RandomTreeProcessor.html" title="Tools::RandomTreeProcessor" alt="" coords="5,80,215,107"/><area shape="rect" id="node3" href="classTools_1_1TreeProcessor.html" title="Tools::TreeProcessor" alt="" coords="240,80,397,107"/></map>
+<area shape="rect" id="node2" href="classTools_1_1MatrixMTFProcessor.html" title="Tools::MatrixMTFProcessor" alt="" coords="189,5,384,32"/><area shape="rect" id="node3" href="classTools_1_1MTFProcessor.html" title="Tools::MTFProcessor" alt="" coords="209,56,365,83"/><area shape="rect" id="node4" href="classTools_1_1RandomTreeProcessor.html" title="Tools::RandomTreeProcessor" alt="" coords="181,107,392,133"/><area shape="rect" id="node5" href="classTools_1_1TreeProcessor.html" title="Tools::TreeProcessor" alt="" coords="208,157,365,184"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a2d3e696f962f44bb7890b76e1da37129"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTools_1_1Processor.html#a2d3e696f962f44bb7890b76e1da37129">Processor</a> (int <a class="el" href="classTools_1_1Processor.html#ae84109b1fd7e48786903b30f4316b9a7">user_id</a>, string <a class="el" href="classTools_1_1Processor.html#a6b4a19788d7c80d43905b8e733cde9f6">algorithm_identifier</a>)</td></tr>
+<tr class="separator:a2d3e696f962f44bb7890b76e1da37129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57b9849b5dfe7a239d67588d2ebf1ff2"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTools_1_1Processor.html#a57b9849b5dfe7a239d67588d2ebf1ff2">~Processor</a> ()</td></tr>
+<tr class="separator:a57b9849b5dfe7a239d67588d2ebf1ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ab01d55982af6ef1bc22be8505f409a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTools_1_1Processor.html#a1ab01d55982af6ef1bc22be8505f409a">Proceed</a> (int <a class="el" href="classTools_1_1Processor.html#ae84109b1fd7e48786903b30f4316b9a7">user_id</a>, bool learn=false)</td></tr>
+<tr class="separator:a1ab01d55982af6ef1bc22be8505f409a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2189614234fd7670b6bd3d4da9898c8"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTools_1_1Processor.html#ab2189614234fd7670b6bd3d4da9898c8">GetPenalty</a> ()</td></tr>
+<tr class="separator:ab2189614234fd7670b6bd3d4da9898c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b4a19788d7c80d43905b8e733cde9f6"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTools_1_1Processor.html#a6b4a19788d7c80d43905b8e733cde9f6">algorithm_identifier</a> ()</td></tr>
+<tr class="separator:a6b4a19788d7c80d43905b8e733cde9f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae84109b1fd7e48786903b30f4316b9a7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTools_1_1Processor.html#ae84109b1fd7e48786903b30f4316b9a7">user_id</a> ()</td></tr>
+<tr class="separator:ae84109b1fd7e48786903b30f4316b9a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class which runs notifications of actions for one user. Subclasses can use different algorithms and penalty counters </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<div class="textblock"><p>Wrapper of algorithm to use it in real problem. <a class="el" href="classTools_1_1Processor.html">Processor</a> is kind of adapter for DataCollector to make algorithm useful to process notifications coded in data input. </p>
+<dl class="section see"><dt>See Also</dt><dd>DataCollector </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a2d3e696f962f44bb7890b76e1da37129"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tools::Processor::Processor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>user_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>algorithm_identifier</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialize user identifier (source of notifications) and algorithm identifier (algorithm name) for data output </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user_id</td><td>Identifier of user who uses contact list (source of notifications) </td></tr>
+    <tr><td class="paramname">algorithm_identifier</td><td>Name of algorithm <a class="el" href="classTools_1_1Processor.html">Processor</a> is containing </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a57b9849b5dfe7a239d67588d2ebf1ff2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tools::Processor::~Processor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Default destructor. Nothing to handle </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a6b4a19788d7c80d43905b8e733cde9f6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Tools::Processor::algorithm_identifier </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Getter of algorithm name </p>
+<dl class="section return"><dt>Returns</dt><dd>Name of algorithm <a class="el" href="classTools_1_1Processor.html">Processor</a> represents </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab2189614234fd7670b6bd3d4da9898c8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Tools::Processor::GetPenalty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns penalty "earned" by algorithm. Details depends on penalty counter, but main idea is that penalty is as big as far is user on friend list (algorithm ordered list of elements). </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classTools_1_1Tester.html">Tester</a> </dd>
+<dd>
+Algorithm </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Sum of all penalties given to algorithm </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classTools_1_1TreeProcessor.html#abdef8e5bde40fcb816da1af2b2d22e75">Tools::TreeProcessor</a>, <a class="el" href="classTools_1_1MTFProcessor.html#a70cc8a3ab3957a880b831b6b28045b6f">Tools::MTFProcessor</a>, <a class="el" href="classTools_1_1RandomTreeProcessor.html#a46ebdf4f6778a36389d0d3d4bbd392e9">Tools::RandomTreeProcessor</a>, and <a class="el" href="classTools_1_1MatrixMTFProcessor.html#a530e160a30c1aedbebaf2705a30157fd">Tools::MatrixMTFProcessor</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1ab01d55982af6ef1bc22be8505f409a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Tools::Processor::Proceed </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>user_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>learn</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Main method of <a class="el" href="classTools_1_1Processor.html">Processor</a> and all project. By this method DataCollector uses algorithms and examines their efficiency </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user_id</td><td>Identifier of friend chosen by user (source of notification). Method should be used for source of notification the same as <a class="el" href="classTools_1_1Processor.html">Processor</a> represent. </td></tr>
+    <tr><td class="paramname">learn</td><td>Flag for penalty counter. Algorithm could have time to "learn" user choices and then no penalty is given. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="classTools_1_1TreeProcessor.html#a0d12306c41c23e0a45564aca9107b891">Tools::TreeProcessor</a>, <a class="el" href="classTools_1_1MTFProcessor.html#a247b4db13c062cb3fe63cd05ca4b0ebc">Tools::MTFProcessor</a>, <a class="el" href="classTools_1_1RandomTreeProcessor.html#a3a0f8189028e122890b7ba64d551ff01">Tools::RandomTreeProcessor</a>, and <a class="el" href="classTools_1_1MatrixMTFProcessor.html#a40d0b0044c745d7a1df7d9d518708fb5">Tools::MatrixMTFProcessor</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae84109b1fd7e48786903b30f4316b9a7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Tools::Processor::user_id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Getter of user identifier whose choices <a class="el" href="classTools_1_1Processor.html">Processor</a> "analyze" </p>
+<dl class="section return"><dt>Returns</dt><dd>Identifier of user (source of notifications) </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>tools/<a class="el" href="processor_8h_source.html">processor.h</a></li>
 <li>tools/processor.cpp</li>
 </ul>
@@ -130,7 +332,7 @@ Inheritance diagram for Tools::Processor:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>Tools</b></li><li class="navelem"><a class="el" href="classTools_1_1Processor.html">Processor</a></li>
-    <li class="footer">Generated on Thu Apr 24 2014 01:01:46 for MTFthesisstudies by
+    <li class="footer">Generated on Fri Apr 25 2014 04:02:40 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
