@@ -135,47 +135,52 @@ $(document).ready(function(){initNavTree('tree__root_8h_source.html','');});
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classAlgorithms_1_1TreeRoot.html#a838986d4c05be2712ae7239d2a7eb678">HaveElement</a>(<span class="keywordtype">int</span> user_id);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classAlgorithms_1_1TreeRoot.html#afbfe5cd43e8007c598b006efd881f710">MoveFromPositionToFront</a>(<span class="keywordtype">int</span> position);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classAlgorithms_1_1TreeRoot.html#ab4e31292b12dcac9992f11446513499a">SwapElementsOnPositions</a>(<span class="keywordtype">int</span> position1, <span class="keywordtype">int</span> position2);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">string</span> <a class="code" href="classAlgorithms_1_1TreeRoot.html#a0553b76a871d2c125e4dbe677c598e9b">AlgorithmName</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classAlgorithms_1_1TreeRoot.html#afbfe5cd43e8007c598b006efd881f710">MoveFromPositionToFront</a>(<span class="keywordtype">int</span> position);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classAlgorithms_1_1TreeRoot.html#a9c6ca52000c858de064b48a8c0e0c46b">SortElementToList</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classAlgorithms_1_1TreeRoot.html#ab4e31292b12dcac9992f11446513499a">SwapElementsOnPositions</a>(<span class="keywordtype">int</span> position1, <span class="keywordtype">int</span> position2);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classAlgorithms_1_1TreeRoot.html#acc3339facfca0b8f0e98c48fededb783">CompareElementsOnPositions</a>(<span class="keywordtype">int</span> position1, <span class="keywordtype">int</span> position2);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classAlgorithms_1_1TreeRoot.html#a9c6ca52000c858de064b48a8c0e0c46b">SortElementToList</a>();</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classAlgorithms_1_1TreeRoot.html#ad4991dc069bc3e7499c568edfc8698e1">DifferenceBetweenElementsOnPosition</a>(<span class="keywordtype">int</span> position1, <span class="keywordtype">int</span> position2);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  vector&lt;shared_ptr&lt;Base::Element&gt; &gt; tree_list_;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  vector&lt;int&gt; sorted_content_list_;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  map&lt;int, int&gt; id_position_;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  shared_ptr&lt;Base::Element&gt; element_prototype_;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;};</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;} <span class="comment">/* namespace Algorithms */</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* TREEROOT_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classAlgorithms_1_1TreeRoot.html#acc3339facfca0b8f0e98c48fededb783">CompareElementsOnPositions</a>(<span class="keywordtype">int</span> position1, <span class="keywordtype">int</span> position2);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classAlgorithms_1_1TreeRoot.html#ad4991dc069bc3e7499c568edfc8698e1">DifferenceBetweenElementsOnPosition</a>(<span class="keywordtype">int</span> position1, <span class="keywordtype">int</span> position2);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  vector&lt;shared_ptr&lt;Base::Element&gt; &gt; tree_list_;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  vector&lt;int&gt; sorted_content_list_;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  map&lt;int, int&gt; id_position_;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  shared_ptr&lt;Base::Element&gt; element_prototype_;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">string</span> ALGORITHM_NAME;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;};</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;} <span class="comment">/* namespace Algorithms */</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* TREEROOT_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="classAlgorithms_1_1TreeRoot_html_ac6021c5b3b8f486519a47363fcebc64e"><div class="ttname"><a href="classAlgorithms_1_1TreeRoot.html#ac6021c5b3b8f486519a47363fcebc64e">Algorithms::TreeRoot::GetContentPosition</a></div><div class="ttdeci">virtual int GetContentPosition(int user_id)</div><div class="ttdef"><b>Definition:</b> tree_root.cpp:37</div></div>
 <div class="ttc" id="classAlgorithms_1_1TreeRoot_html_a03e7442127a0fd46d07f5f6181d4c54c"><div class="ttname"><a href="classAlgorithms_1_1TreeRoot.html#a03e7442127a0fd46d07f5f6181d4c54c">Algorithms::TreeRoot::AddElement</a></div><div class="ttdeci">virtual void AddElement(int user_id)</div><div class="ttdef"><b>Definition:</b> tree_root.cpp:45</div></div>
 <div class="ttc" id="classAlgorithms_1_1TreeRoot_html_a533a6da1910783760115e22444972870"><div class="ttname"><a href="classAlgorithms_1_1TreeRoot.html#a533a6da1910783760115e22444972870">Algorithms::TreeRoot::NotifyContent</a></div><div class="ttdeci">virtual void NotifyContent(int user_id)</div><div class="ttdef"><b>Definition:</b> tree_root.cpp:23</div></div>
-<div class="ttc" id="classAlgorithms_1_1TreeRoot_html_a9c6ca52000c858de064b48a8c0e0c46b"><div class="ttname"><a href="classAlgorithms_1_1TreeRoot.html#a9c6ca52000c858de064b48a8c0e0c46b">Algorithms::TreeRoot::SortElementToList</a></div><div class="ttdeci">void SortElementToList()</div><div class="ttdef"><b>Definition:</b> tree_root.cpp:81</div></div>
-<div class="ttc" id="classAlgorithms_1_1TreeRoot_html_ab4e31292b12dcac9992f11446513499a"><div class="ttname"><a href="classAlgorithms_1_1TreeRoot.html#ab4e31292b12dcac9992f11446513499a">Algorithms::TreeRoot::SwapElementsOnPositions</a></div><div class="ttdeci">virtual void SwapElementsOnPositions(int position1, int position2)</div><div class="ttdef"><b>Definition:</b> tree_root.cpp:65</div></div>
-<div class="ttc" id="classAlgorithms_1_1TreeRoot_html_ad4991dc069bc3e7499c568edfc8698e1"><div class="ttname"><a href="classAlgorithms_1_1TreeRoot.html#ad4991dc069bc3e7499c568edfc8698e1">Algorithms::TreeRoot::DifferenceBetweenElementsOnPosition</a></div><div class="ttdeci">double DifferenceBetweenElementsOnPosition(int position1, int position2)</div><div class="ttdef"><b>Definition:</b> tree_root.cpp:109</div></div>
-<div class="ttc" id="classAlgorithms_1_1TreeRoot_html_acc3339facfca0b8f0e98c48fededb783"><div class="ttname"><a href="classAlgorithms_1_1TreeRoot.html#acc3339facfca0b8f0e98c48fededb783">Algorithms::TreeRoot::CompareElementsOnPositions</a></div><div class="ttdeci">int CompareElementsOnPositions(int position1, int position2)</div><div class="ttdef"><b>Definition:</b> tree_root.cpp:105</div></div>
+<div class="ttc" id="classAlgorithms_1_1TreeRoot_html_a9c6ca52000c858de064b48a8c0e0c46b"><div class="ttname"><a href="classAlgorithms_1_1TreeRoot.html#a9c6ca52000c858de064b48a8c0e0c46b">Algorithms::TreeRoot::SortElementToList</a></div><div class="ttdeci">void SortElementToList()</div><div class="ttdef"><b>Definition:</b> tree_root.cpp:85</div></div>
+<div class="ttc" id="classAlgorithms_1_1TreeRoot_html_ab4e31292b12dcac9992f11446513499a"><div class="ttname"><a href="classAlgorithms_1_1TreeRoot.html#ab4e31292b12dcac9992f11446513499a">Algorithms::TreeRoot::SwapElementsOnPositions</a></div><div class="ttdeci">virtual void SwapElementsOnPositions(int position1, int position2)</div><div class="ttdef"><b>Definition:</b> tree_root.cpp:69</div></div>
+<div class="ttc" id="classAlgorithms_1_1TreeRoot_html_ad4991dc069bc3e7499c568edfc8698e1"><div class="ttname"><a href="classAlgorithms_1_1TreeRoot.html#ad4991dc069bc3e7499c568edfc8698e1">Algorithms::TreeRoot::DifferenceBetweenElementsOnPosition</a></div><div class="ttdeci">double DifferenceBetweenElementsOnPosition(int position1, int position2)</div><div class="ttdef"><b>Definition:</b> tree_root.cpp:113</div></div>
+<div class="ttc" id="classAlgorithms_1_1TreeRoot_html_acc3339facfca0b8f0e98c48fededb783"><div class="ttname"><a href="classAlgorithms_1_1TreeRoot.html#acc3339facfca0b8f0e98c48fededb783">Algorithms::TreeRoot::CompareElementsOnPositions</a></div><div class="ttdeci">int CompareElementsOnPositions(int position1, int position2)</div><div class="ttdef"><b>Definition:</b> tree_root.cpp:109</div></div>
 <div class="ttc" id="classAlgorithms_1_1TreeRoot_html_a838986d4c05be2712ae7239d2a7eb678"><div class="ttname"><a href="classAlgorithms_1_1TreeRoot.html#a838986d4c05be2712ae7239d2a7eb678">Algorithms::TreeRoot::HaveElement</a></div><div class="ttdeci">virtual bool HaveElement(int user_id)</div><div class="ttdef"><b>Definition:</b> tree_root.cpp:54</div></div>
 <div class="ttc" id="classAlgorithms_1_1TreeRoot_html"><div class="ttname"><a href="classAlgorithms_1_1TreeRoot.html">Algorithms::TreeRoot</a></div><div class="ttdef"><b>Definition:</b> tree_root.h:38</div></div>
-<div class="ttc" id="classAlgorithms_1_1Algorithm_html"><div class="ttname"><a href="classAlgorithms_1_1Algorithm.html">Algorithms::Algorithm</a></div><div class="ttdef"><b>Definition:</b> algorithm.h:24</div></div>
-<div class="ttc" id="classAlgorithms_1_1TreeRoot_html_afbfe5cd43e8007c598b006efd881f710"><div class="ttname"><a href="classAlgorithms_1_1TreeRoot.html#afbfe5cd43e8007c598b006efd881f710">Algorithms::TreeRoot::MoveFromPositionToFront</a></div><div class="ttdeci">virtual void MoveFromPositionToFront(int position)</div><div class="ttdef"><b>Definition:</b> tree_root.cpp:58</div></div>
+<div class="ttc" id="classAlgorithms_1_1Algorithm_html"><div class="ttname"><a href="classAlgorithms_1_1Algorithm.html">Algorithms::Algorithm</a></div><div class="ttdef"><b>Definition:</b> algorithm.h:25</div></div>
+<div class="ttc" id="classAlgorithms_1_1TreeRoot_html_afbfe5cd43e8007c598b006efd881f710"><div class="ttname"><a href="classAlgorithms_1_1TreeRoot.html#afbfe5cd43e8007c598b006efd881f710">Algorithms::TreeRoot::MoveFromPositionToFront</a></div><div class="ttdeci">virtual void MoveFromPositionToFront(int position)</div><div class="ttdef"><b>Definition:</b> tree_root.cpp:62</div></div>
+<div class="ttc" id="classAlgorithms_1_1TreeRoot_html_a0553b76a871d2c125e4dbe677c598e9b"><div class="ttname"><a href="classAlgorithms_1_1TreeRoot.html#a0553b76a871d2c125e4dbe677c598e9b">Algorithms::TreeRoot::AlgorithmName</a></div><div class="ttdeci">virtual string AlgorithmName()</div><div class="ttdef"><b>Definition:</b> tree_root.cpp:58</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_c0ce462e37efe0a8d60c01d75f78f8a0.html">algorithms</a></li><li class="navelem"><a class="el" href="dir_28569356594ebf783e456e8bf5451db1.html">tree</a></li><li class="navelem"><b>tree_root.h</b></li>
-    <li class="footer">Generated on Sat Apr 26 2014 17:50:59 for MTFthesisstudies by
+    <li class="footer">Generated on Sat Apr 26 2014 21:30:58 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

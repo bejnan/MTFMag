@@ -3,6 +3,7 @@ var classAlgorithms_1_1MTFMatrix =
     [ "MTFMatrix", "classAlgorithms_1_1MTFMatrix.html#af224fd4c95d2d9ed77bb885de511123f", null ],
     [ "~MTFMatrix", "classAlgorithms_1_1MTFMatrix.html#a47bf4d6b94bf5c14b05fae08e5eb59b5", null ],
     [ "AddElement", "classAlgorithms_1_1MTFMatrix.html#a07ac80442af79b9875b12817a6863482", null ],
+    [ "AlgorithmName", "classAlgorithms_1_1MTFMatrix.html#a4517d2d4bd0327090ddeb1faa1047e44", null ],
     [ "CompareElementsOnPositions", "classAlgorithms_1_1MTFMatrix.html#afc6cba6439a616cc32763be120064fbc", null ],
     [ "DifferenceBetweenElementsOnPosition", "classAlgorithms_1_1MTFMatrix.html#ad0dcc88ac1091d56bbbdfdf7c853102a", null ],
     [ "ElementCount", "classAlgorithms_1_1MTFMatrix.html#a5a804095ad78fc55b3a7c016ae94c433", null ],

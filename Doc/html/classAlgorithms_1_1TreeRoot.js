@@ -1,6 +1,7 @@
 var classAlgorithms_1_1TreeRoot =
 [
     [ "AddElement", "classAlgorithms_1_1TreeRoot.html#a03e7442127a0fd46d07f5f6181d4c54c", null ],
+    [ "AlgorithmName", "classAlgorithms_1_1TreeRoot.html#a0553b76a871d2c125e4dbe677c598e9b", null ],
     [ "CompareElementsOnPositions", "classAlgorithms_1_1TreeRoot.html#acc3339facfca0b8f0e98c48fededb783", null ],
     [ "DifferenceBetweenElementsOnPosition", "classAlgorithms_1_1TreeRoot.html#ad4991dc069bc3e7499c568edfc8698e1", null ],
     [ "GetContentPosition", "classAlgorithms_1_1TreeRoot.html#ac6021c5b3b8f486519a47363fcebc64e", null ],

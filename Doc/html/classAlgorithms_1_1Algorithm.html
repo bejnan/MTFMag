@@ -133,6 +133,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa448cae80d174538afa5c422f03314c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac60df21001af13442bdcabe7a585f2dc"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithms_1_1Algorithm.html#ac60df21001af13442bdcabe7a585f2dc">HaveElement</a> (int user_id)=0</td></tr>
 <tr class="separator:ac60df21001af13442bdcabe7a585f2dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f2643c496bf2db3c623abd04372ae9e"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithms_1_1Algorithm.html#a3f2643c496bf2db3c623abd04372ae9e">AlgorithmName</a> ()=0</td></tr>
+<tr class="separator:a3f2643c496bf2db3c623abd04372ae9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -183,6 +185,33 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a3f2643c496bf2db3c623abd04372ae9e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual string Algorithms::Algorithm::AlgorithmName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return name of algorithm to identify method. </p>
+<dl class="section return"><dt>Returns</dt><dd>Name of method used as algorithm </dd></dl>
+
+<p>Implemented in <a class="el" href="classAlgorithms_1_1MTFMatrix.html#a4517d2d4bd0327090ddeb1faa1047e44">Algorithms::MTFMatrix</a>, <a class="el" href="classAlgorithms_1_1TreeRoot.html#a0553b76a871d2c125e4dbe677c598e9b">Algorithms::TreeRoot</a>, and <a class="el" href="classAlgorithms_1_1RandomTreeRoot.html#a2406eb96b18e1d6b1e811eb0a0e26906">Algorithms::RandomTreeRoot</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a5caa6b3806833aae4e8350aa6a0cd076"></a>
 <div class="memitem">
 <div class="memproto">
@@ -214,7 +243,7 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Compares elements by Element::Compare method Element from position1 is "source" of method. </p>
+<p>Compares elements by Element::Compare method. Element from position1 is "source" of method. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">position1</td><td>Position of first element to compare. </td></tr>
@@ -405,7 +434,7 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classAlgorithms_1_1MTFMatrix.html#a181a83000b34c24930dae329ccb61480">Algorithms::MTFMatrix</a>, <a class="el" href="classAlgorithms_1_1TreeRoot.html#a533a6da1910783760115e22444972870">Algorithms::TreeRoot</a>, and <a class="el" href="classAlgorithms_1_1RandomTreeRoot.html#a74a1bcac23e7bed45308e76e017ff7da">Algorithms::RandomTreeRoot</a>.</p>
+<p>Implemented in <a class="el" href="classAlgorithms_1_1MTFMatrix.html#a181a83000b34c24930dae329ccb61480">Algorithms::MTFMatrix</a>, and <a class="el" href="classAlgorithms_1_1TreeRoot.html#a533a6da1910783760115e22444972870">Algorithms::TreeRoot</a>.</p>
 
 </div>
 </div>
@@ -532,7 +561,7 @@ Protected Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>Algorithms</b></li><li class="navelem"><a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithm</a></li>
-    <li class="footer">Generated on Sat Apr 26 2014 17:50:59 for MTFthesisstudies by
+    <li class="footer">Generated on Sat Apr 26 2014 21:30:58 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

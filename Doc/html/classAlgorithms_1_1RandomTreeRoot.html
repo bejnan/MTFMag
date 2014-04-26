@@ -130,9 +130,11 @@ Collaboration diagram for Algorithms::RandomTreeRoot:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a74a1bcac23e7bed45308e76e017ff7da"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithms_1_1RandomTreeRoot.html#a74a1bcac23e7bed45308e76e017ff7da">NotifyContent</a> (int user_id)</td></tr>
-<tr class="separator:a74a1bcac23e7bed45308e76e017ff7da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2406eb96b18e1d6b1e811eb0a0e26906"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithms_1_1RandomTreeRoot.html#a2406eb96b18e1d6b1e811eb0a0e26906">AlgorithmName</a> ()</td></tr>
+<tr class="separator:a2406eb96b18e1d6b1e811eb0a0e26906"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classAlgorithms_1_1TreeRoot"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAlgorithms_1_1TreeRoot')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAlgorithms_1_1TreeRoot.html">Algorithms::TreeRoot</a></td></tr>
+<tr class="memitem:a533a6da1910783760115e22444972870 inherit pub_methods_classAlgorithms_1_1TreeRoot"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithms_1_1TreeRoot.html#a533a6da1910783760115e22444972870">NotifyContent</a> (int user_id)</td></tr>
+<tr class="separator:a533a6da1910783760115e22444972870 inherit pub_methods_classAlgorithms_1_1TreeRoot"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5461cb3168d66319a8008b818db16dfe inherit pub_methods_classAlgorithms_1_1TreeRoot"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithms_1_1TreeRoot.html#a5461cb3168d66319a8008b818db16dfe">NotifyContent</a> (int user_id, int notification_counter)</td></tr>
 <tr class="separator:a5461cb3168d66319a8008b818db16dfe inherit pub_methods_classAlgorithms_1_1TreeRoot"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6021c5b3b8f486519a47363fcebc64e inherit pub_methods_classAlgorithms_1_1TreeRoot"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithms_1_1TreeRoot.html#ac6021c5b3b8f486519a47363fcebc64e">GetContentPosition</a> (int user_id)</td></tr>
@@ -160,6 +162,33 @@ Protected Member Functions</h2></td></tr>
 <div class="textblock"><p>Class very similar to <a class="el" href="classAlgorithms_1_1TreeRoot.html">TreeRoot</a>. Only difference is MoveElement method. It uses random factor influenced by different between elements to swap during moving element up.</p>
 <p>Base algorithm is the same. If there is notification of element, algorithm tries to put it to top. During way up there is competition with elements to swap. If element looses, its parent tries to go up. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a2406eb96b18e1d6b1e811eb0a0e26906"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Algorithms::RandomTreeRoot::AlgorithmName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return name of algorithm to identify method. </p>
+<dl class="section return"><dt>Returns</dt><dd>Name of method used as algorithm </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classAlgorithms_1_1TreeRoot.html#a0553b76a871d2c125e4dbe677c598e9b">Algorithms::TreeRoot</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ad58df5655e1890e486e44124b4e12a8e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -202,48 +231,6 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="a74a1bcac23e7bed45308e76e017ff7da"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Algorithms::RandomTreeRoot::NotifyContent </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>user_id</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Main method of algorithm. Notify element with given id. After notification of element (<a class="el" href="classBase_1_1Element.html#afbf18a93271bdeba8a5ced434b518711">Base::Element::Notify</a> method) it moves element to front. Details of movement depends on algorithm. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">user_id</td><td>Identifier of element to notify </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented from <a class="el" href="classAlgorithms_1_1TreeRoot.html#a533a6da1910783760115e22444972870">Algorithms::TreeRoot</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classAlgorithms_1_1RandomTreeRoot_a74a1bcac23e7bed45308e76e017ff7da_cgraph.png" border="0" usemap="#classAlgorithms_1_1RandomTreeRoot_a74a1bcac23e7bed45308e76e017ff7da_cgraph" alt=""/></div>
-<map name="classAlgorithms_1_1RandomTreeRoot_a74a1bcac23e7bed45308e76e017ff7da_cgraph" id="classAlgorithms_1_1RandomTreeRoot_a74a1bcac23e7bed45308e76e017ff7da_cgraph">
-<area shape="rect" id="node2" href="classAlgorithms_1_1TreeRoot.html#a533a6da1910783760115e22444972870" title="Algorithms::TreeRoot\l::NotifyContent" alt="" coords="261,38,416,79"/><area shape="rect" id="node3" href="classAlgorithms_1_1TreeRoot.html#afbfe5cd43e8007c598b006efd881f710" title="Algorithms::TreeRoot\l::MoveFromPositionToFront" alt="" coords="464,5,659,46"/><area shape="rect" id="node5" href="classAlgorithms_1_1TreeRoot.html#a9c6ca52000c858de064b48a8c0e0c46b" title="Algorithms::TreeRoot\l::SortElementToList" alt="" coords="484,70,639,111"/><area shape="rect" id="node4" href="classAlgorithms_1_1TreeRoot.html#ab4e31292b12dcac9992f11446513499a" title="Algorithms::TreeRoot\l::SwapElementsOnPositions" alt="" coords="707,5,904,46"/></map>
-</div>
-</p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>algorithms/tree/<a class="el" href="random__tree__root_8h_source.html">random_tree_root.h</a></li>
 <li>algorithms/tree/random_tree_root.cpp</li>
@@ -254,7 +241,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>Algorithms</b></li><li class="navelem"><a class="el" href="classAlgorithms_1_1RandomTreeRoot.html">RandomTreeRoot</a></li>
-    <li class="footer">Generated on Sat Apr 26 2014 17:50:59 for MTFthesisstudies by
+    <li class="footer">Generated on Sat Apr 26 2014 21:30:58 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
