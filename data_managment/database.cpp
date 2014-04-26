@@ -29,12 +29,12 @@ void Database::AddToBase(shared_ptr<Tools::Processor> processor) {
   }
   id_table_[processor->user_id()].push_back(processor);
 
-  if (name_table_.find(processor->algorithm_identifier()) == name_table_.end()) {
+  if (name_table_.find(processor->AlgorithmName()) == name_table_.end()) {
     name_table_.insert(
-        make_pair(processor->algorithm_identifier(),
+        make_pair(processor->AlgorithmName(),
                   vector<shared_ptr<Tools::Processor> >()));
   }
-  name_table_[processor->algorithm_identifier()].push_back(processor);
+  name_table_[processor->AlgorithmName()].push_back(processor);
   table_.push_back(processor);
 }
 

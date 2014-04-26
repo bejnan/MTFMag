@@ -1,9 +1,17 @@
 #ifndef PROCESSOR_H_
 #define PROCESSOR_H_
 
-#include <string>
+#include "judges.h"
+#include "../algorithms/algorithm.h"
+#include "../headers/elements.h"
+
+#include <memory>
+#include <algorithm>
+#include <list>
 
 using std::string;
+using std::shared_ptr;
+using std::list;
 
 namespace Tools {
 /**
@@ -15,12 +23,15 @@ namespace Tools {
 class Processor {
  public:
   /**
-   * Initialize user identifier (source of notifications) and algorithm identifier (algorithm name)
+   * Initialize user identifier (source of notifications) and algorithm
+   * identifier (algorithm name)
    * for data output
-   * @param user_id Identifier of user who uses contact list (source of notifications)
-   * @param algorithm_identifier Name of algorithm Processor is containing
+   * @param user_id Identifier of user who uses contact list
+   * (source of notifications)
+   * @param AlgorithmName Name of algorithm Processor is containing
    */
-  Processor(int user_id, string algorithm_identifier);
+  Processor(int user_id, shared_ptr<Judge> judge,
+            shared_ptr<Algorithms::Algorithm> algorithm);
 
   /**
    * Default destructor. Nothing to handle
@@ -31,30 +42,29 @@ class Processor {
    * Main method of Processor and all project.
    * By this method DataCollector uses algorithms and
    * examines their efficiency
-   * @param user_id Identifier of friend chosen by user (source of notification). Method should be used for
+   * @param user_id Identifier of friend chosen by user
+   * (source of notification). Method should be used for
    * source of notification the same as Processor represent.
-   * @param learn Flag for penalty counter. Algorithm could have time to "learn" user choices and then no penalty is given.
+   * @param learn Flag for penalty counter. Algorithm could have time to
+   * "learn" user choices and then no penalty is given.
    */
-  virtual void Proceed(int user_id, bool learn = false) {  } ;
+  virtual void Proceed(int user_id, bool learn = false);
 
   /**
-   * Returns penalty "earned" by algorithm. Details depends on penalty counter, but
-   * main idea is that penalty is as big as far is user on friend list (algorithm ordered list of elements).
+   * Returns penalty "earned" by algorithm. Details depends on penalty
+   * counter, but main idea is that penalty is as big as far is user
+   * on friend list (algorithm ordered list of elements).
    * @see Tester
    * @see Algorithms::Algorithm
    * @return Sum of all penalties given to algorithm
    */
-  virtual int GetPenalty() {
-    return 0;
-  }
+  virtual int GetPenalty();
 
   /**
    * Getter of algorithm name
    * @return Name of algorithm Processor represents
    */
-  string algorithm_identifier() {
-    return algorithm_identifier_;
-  }
+  string AlgorithmName();
 
   /**
    * Getter of user identifier whose choices Processor "analyze"
@@ -65,9 +75,12 @@ class Processor {
   }
 
  private:
-  const int user_id_;         /**< Identifier of user */
+  /** Identifier of user */
+  const int user_id_;
+  /** Judge of algorithm efficiency */
   const shared_ptr<Judge> penalty_judge_;
-  const shared_ptr<Algorithms::Algorithm> algorithms;
+  /** Algorithm to test */
+  const shared_ptr<Algorithms::Algorithm> algorithm_;
 };
 
 } /* namespace Tools */

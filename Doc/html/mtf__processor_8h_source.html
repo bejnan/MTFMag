@@ -135,7 +135,7 @@ $(document).ready(function(){initNavTree('mtf__processor_8h_source.html','');});
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classTools_1_1MTFProcessor.html">MTFProcessor</a>();</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classTools_1_1MTFProcessor.html#a247b4db13c062cb3fe63cd05ca4b0ebc">Proceed</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">bool</span> learn = <span class="keyword">false</span>);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classTools_1_1MTFProcessor.html#a70cc8a3ab3957a880b831b6b28045b6f">GetPenalty</a>();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">using</span> <a class="code" href="classTools_1_1Processor.html#a6b4a19788d7c80d43905b8e733cde9f6">Processor::algorithm_identifier</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">using</span> Processor::algorithm_identifier;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">using</span> <a class="code" href="classTools_1_1Processor.html#ae84109b1fd7e48786903b30f4316b9a7">Processor::user_id</a>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; <span class="keyword">private</span>:</div>
@@ -150,12 +150,11 @@ $(document).ready(function(){initNavTree('mtf__processor_8h_source.html','');});
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* MTFPROCESSOR_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="classTools_1_1MTFProcessor_html_a247b4db13c062cb3fe63cd05ca4b0ebc"><div class="ttname"><a href="classTools_1_1MTFProcessor.html#a247b4db13c062cb3fe63cd05ca4b0ebc">Tools::MTFProcessor::Proceed</a></div><div class="ttdeci">virtual void Proceed(int id, bool learn=false)</div><div class="ttdef"><b>Definition:</b> mtf_processor.cpp:20</div></div>
-<div class="ttc" id="classTools_1_1Processor_html"><div class="ttname"><a href="classTools_1_1Processor.html">Tools::Processor</a></div><div class="ttdef"><b>Definition:</b> processor.h:15</div></div>
+<div class="ttc" id="classTools_1_1Processor_html"><div class="ttname"><a href="classTools_1_1Processor.html">Tools::Processor</a></div><div class="ttdef"><b>Definition:</b> processor.h:23</div></div>
 <div class="ttc" id="classTools_1_1MTFProcessor_html_a70cc8a3ab3957a880b831b6b28045b6f"><div class="ttname"><a href="classTools_1_1MTFProcessor.html#a70cc8a3ab3957a880b831b6b28045b6f">Tools::MTFProcessor::GetPenalty</a></div><div class="ttdeci">virtual int GetPenalty()</div><div class="ttdef"><b>Definition:</b> mtf_processor.cpp:40</div></div>
 <div class="ttc" id="classTools_1_1MTFProcessorFactory_html"><div class="ttname"><a href="classTools_1_1MTFProcessorFactory.html">Tools::MTFProcessorFactory</a></div><div class="ttdef"><b>Definition:</b> mtf_processor_factory.h:22</div></div>
 <div class="ttc" id="classTools_1_1MTFProcessor_html"><div class="ttname"><a href="classTools_1_1MTFProcessor.html">Tools::MTFProcessor</a></div><div class="ttdef"><b>Definition:</b> mtf_processor.h:28</div></div>
-<div class="ttc" id="classTools_1_1Processor_html_a6b4a19788d7c80d43905b8e733cde9f6"><div class="ttname"><a href="classTools_1_1Processor.html#a6b4a19788d7c80d43905b8e733cde9f6">Tools::Processor::algorithm_identifier</a></div><div class="ttdeci">string algorithm_identifier()</div><div class="ttdef"><b>Definition:</b> processor.h:55</div></div>
-<div class="ttc" id="classTools_1_1Processor_html_ae84109b1fd7e48786903b30f4316b9a7"><div class="ttname"><a href="classTools_1_1Processor.html#ae84109b1fd7e48786903b30f4316b9a7">Tools::Processor::user_id</a></div><div class="ttdeci">int user_id()</div><div class="ttdef"><b>Definition:</b> processor.h:63</div></div>
+<div class="ttc" id="classTools_1_1Processor_html_ae84109b1fd7e48786903b30f4316b9a7"><div class="ttname"><a href="classTools_1_1Processor.html#ae84109b1fd7e48786903b30f4316b9a7">Tools::Processor::user_id</a></div><div class="ttdeci">int user_id()</div><div class="ttdef"><b>Definition:</b> processor.h:73</div></div>
 <div class="ttc" id="classTools_1_1Tester_html"><div class="ttname"><a href="classTools_1_1Tester.html">Tools::Tester</a></div><div class="ttdef"><b>Definition:</b> tester.h:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -163,7 +162,7 @@ $(document).ready(function(){initNavTree('mtf__processor_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4eeb864c4eec08c7d6b9d3b0352cfdde.html">tools</a></li><li class="navelem"><a class="el" href="dir_ccf35422c36035b820529ce0bd260cc4.html">processors</a></li><li class="navelem"><b>mtf_processor.h</b></li>
-    <li class="footer">Generated on Sat Apr 26 2014 21:30:58 for MTFthesisstudies by
+    <li class="footer">Generated on Sun Apr 27 2014 00:09:33 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

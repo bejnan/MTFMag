@@ -38,9 +38,6 @@ var annotated =
       [ "RandomTreeProcessorFactory", "classTools_1_1RandomTreeProcessorFactory.html", "classTools_1_1RandomTreeProcessorFactory" ],
       [ "TreeProcessorFactory", "classTools_1_1TreeProcessorFactory.html", "classTools_1_1TreeProcessorFactory" ],
       [ "ProcessorFactory", "classTools_1_1ProcessorFactory.html", "classTools_1_1ProcessorFactory" ],
-      [ "MatrixMTFProcessor", "classTools_1_1MatrixMTFProcessor.html", "classTools_1_1MatrixMTFProcessor" ],
-      [ "MTFProcessor", "classTools_1_1MTFProcessor.html", "classTools_1_1MTFProcessor" ],
-      [ "RandomTreeProcessor", "classTools_1_1RandomTreeProcessor.html", "classTools_1_1RandomTreeProcessor" ],
-      [ "TreeProcessor", "classTools_1_1TreeProcessor.html", "classTools_1_1TreeProcessor" ]
+      [ "MTFProcessor", "classTools_1_1MTFProcessor.html", "classTools_1_1MTFProcessor" ]
     ] ]
 ];

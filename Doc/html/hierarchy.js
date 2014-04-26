@@ -38,10 +38,7 @@ var hierarchy =
     ] ],
     [ "Algorithms::MatrixBuilder", "classAlgorithms_1_1MatrixBuilder.html", null ],
     [ "Tools::Processor", "classTools_1_1Processor.html", [
-      [ "Tools::MatrixMTFProcessor", "classTools_1_1MatrixMTFProcessor.html", null ],
-      [ "Tools::MTFProcessor", "classTools_1_1MTFProcessor.html", null ],
-      [ "Tools::RandomTreeProcessor", "classTools_1_1RandomTreeProcessor.html", null ],
-      [ "Tools::TreeProcessor", "classTools_1_1TreeProcessor.html", null ]
+      [ "Tools::MTFProcessor", "classTools_1_1MTFProcessor.html", null ]
     ] ],
     [ "Tools::ProcessorFactory", "classTools_1_1ProcessorFactory.html", [
       [ "Tools::MatrixMTFProcessorFactory", "classTools_1_1MatrixMTFProcessorFactory.html", null ],
