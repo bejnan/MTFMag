@@ -66,8 +66,8 @@ class Processor {
 
  private:
   const int user_id_;         /**< Identifier of user */
-  const string algorithm_identifier_; /**< Name (identifier)
-                          of algorithm Processor uses */
+  const shared_ptr<Judge> penalty_judge_;
+  const shared_ptr<Algorithms::Algorithm> algorithms;
 };
 
 } /* namespace Tools */

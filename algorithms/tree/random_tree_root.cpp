@@ -23,14 +23,16 @@ RandomTreeRoot::RandomTreeRoot(shared_ptr<Base::Element> node_core_prototype,
 RandomTreeRoot::~RandomTreeRoot() {
 }
 
-void RandomTreeRoot::NotifyContent(int user_id) {
-  TreeRoot::NotifyContent(user_id);
+string RandomTreeRoot::AlgorithmName() {
+  return RandomTreeRoot::ALGORITHM_NAME + " " + to_string(MOVING_UP_PROPABILITY) + " "
+      + to_string(DIFF_INFLUENCE);
 }
 
 void RandomTreeRoot::MoveFromPositionToFront(int position) {
   shared_ptr<Base::Element> tmp_elem;
   while (position > 1) {
-    double diff = TreeRoot::DifferenceBetweenElementsOnPosition(position,position / 2);
+    double diff = TreeRoot::DifferenceBetweenElementsOnPosition(position,
+                                                                position / 2);
     if (diff * DIFF_INFLUENCE + distribution_(generator_)
         > MOVING_UP_PROPABILITY) {
       SwapElementsOnPositions(position, position / 2);
@@ -40,5 +42,7 @@ void RandomTreeRoot::MoveFromPositionToFront(int position) {
     }
   }
 }
+
+const string RandomTreeRoot::ALGORITHM_NAME = "RandomTreeMTF";
 
 } /* namespace Tree */

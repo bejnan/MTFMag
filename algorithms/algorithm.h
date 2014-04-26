@@ -13,6 +13,7 @@
 #include <memory>
 
 using std::shared_ptr;
+using std::string;
 
 namespace Algorithms {
 
@@ -70,6 +71,12 @@ class Algorithm {
    */
   virtual bool HaveElement(int user_id) = 0;
 
+  /**
+   * Return name of algorithm to identify method.
+   * @return Name of method used as algorithm
+   */
+  virtual string AlgorithmName() = 0;
+
  protected:
   /**
    * Method to move element from given position to front (depends on algorithm).
@@ -91,7 +98,7 @@ class Algorithm {
   virtual void SortElementToList() = 0;
 
   /**
-   * Compares elements by Element::Compare method
+   * Compares elements by Element::Compare method.
    * Element from position1 is "source" of method.
    * @param position1 Position of first element to compare.
    * @param position2 Position of second element to compare with.
@@ -110,6 +117,7 @@ class Algorithm {
    */
   virtual double DifferenceBetweenElementsOnPosition(int position1,
                                                      int position2) = 0;
+
 };
 
 }

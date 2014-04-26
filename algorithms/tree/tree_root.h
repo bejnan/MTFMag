@@ -51,6 +51,8 @@ class TreeRoot : public Algorithm {
 
   virtual bool HaveElement(int user_id);
 
+  virtual string AlgorithmName();
+
  protected:
   /**
    * Moves element to root of the tree in the was shown
@@ -81,6 +83,9 @@ class TreeRoot : public Algorithm {
   /** Prototype for elements used in AddElement method
    * @see TreeRoot::AddElement                               */
   shared_ptr<Base::Element> element_prototype_;
+
+  /** Name identifier for algorithm */
+  static const string ALGORITHM_NAME;
 };
 
 } /* namespace Algorithms */

@@ -90,6 +90,8 @@ class MTFMatrix : public Algorithm {
 
   int GetContentPosition(int user_id);
 
+  string AlgorithmName();
+
  protected:
   /**
    * Method to move element from given position to first row (happens
@@ -132,6 +134,9 @@ class MTFMatrix : public Algorithm {
   map<int, int> id_position_;
 
   shared_ptr<Base::Element> element_prototype_;
+
+  /** Name identifier for algorithm */
+  static const string ALGORITHM_NAME;
 };
 
 } /* namespace Algorithms */

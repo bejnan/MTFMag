@@ -1,10 +1,3 @@
-/*
- * MTFMatrix.cpp
- *
- *  Created on: Mar 13, 2014
- *      Author: Jakub Banaszewski
- */
-
 #include "mtf_matrix.h"
 
 namespace Algorithms {
@@ -52,6 +45,10 @@ int MTFMatrix::GetContentPosition(int user_id) {
       return iterator + 1;
   }
   return -1;
+}
+
+string MTFMatrix::AlgorithmName() {
+  return ALGORITHM_NAME;
 }
 
 void MTFMatrix::MoveFromPositionToFront(int position) {
@@ -137,5 +134,7 @@ double MTFMatrix::DifferenceBetweenElementsOnPosition(int position1,
 unsigned int MTFMatrix::ElementCount() {
   return element_list_.size();
 }
+
+const string MTFMatrix::ALGORITHM_NAME = "MTFMatrix";
 
 } /* namespace Matrix */

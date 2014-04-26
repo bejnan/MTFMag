@@ -14,6 +14,7 @@
 
 using std::default_random_engine;
 using std::uniform_real_distribution;
+using std::to_string;
 
 namespace Algorithms {
 /**
@@ -33,17 +34,21 @@ class RandomTreeRoot : public TreeRoot {
                  const double moving_up_propability = 0.75,
                  const double diff_influence = 0.5);
   virtual ~RandomTreeRoot();
-  virtual void NotifyContent(int user_id);
+
   using TreeRoot::NotifyContent;
   using TreeRoot::GetContentPosition;
   using TreeRoot::AddElement;
   using TreeRoot::HaveElement;
+  virtual string AlgorithmName();
  protected:
   virtual void MoveFromPositionToFront(int position);
   using TreeRoot::SwapElementsOnPositions;
   using TreeRoot::SortElementToList;
   using TreeRoot::CompareElementsOnPositions;
  private :
+  /** Name identifier for algorithm */
+  static const string ALGORITHM_NAME;
+
   // Random utilities
   default_random_engine generator_;
   uniform_real_distribution<double> distribution_;

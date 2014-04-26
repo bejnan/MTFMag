@@ -55,6 +55,10 @@ bool TreeRoot::HaveElement(int user_id) {
   return (id_position_.find(user_id) != id_position_.end());
 }
 
+string TreeRoot::AlgorithmName() {
+  return TreeRoot::ALGORITHM_NAME;
+}
+
 void TreeRoot::MoveFromPositionToFront(int position) {
   while (position > 1) {
     SwapElementsOnPositions(position, position / 2);
@@ -110,5 +114,7 @@ double TreeRoot::DifferenceBetweenElementsOnPosition(int position1,
                                                       int position2) {
   return tree_list_[position1]->Difference(*tree_list_[position2]);
 }
+
+const string TreeRoot::ALGORITHM_NAME = "TreeMTF";
 
 } /* namespace Tree */
