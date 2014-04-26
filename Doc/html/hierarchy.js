@@ -33,6 +33,9 @@ var hierarchy =
         [ "Base::ComplexDifferenceElement", "classBase_1_1ComplexDifferenceElement.html", null ]
       ] ]
     ] ],
+    [ "Tools::Judge", "classTools_1_1Judge.html", [
+      [ "Tools::Tester", "classTools_1_1Tester.html", null ]
+    ] ],
     [ "Algorithms::MatrixBuilder", "classAlgorithms_1_1MatrixBuilder.html", null ],
     [ "Tools::Processor", "classTools_1_1Processor.html", [
       [ "Tools::MatrixMTFProcessor", "classTools_1_1MatrixMTFProcessor.html", null ],
@@ -45,6 +48,5 @@ var hierarchy =
       [ "Tools::MTFProcessorFactory", "classTools_1_1MTFProcessorFactory.html", null ],
       [ "Tools::RandomTreeProcessorFactory", "classTools_1_1RandomTreeProcessorFactory.html", null ],
       [ "Tools::TreeProcessorFactory", "classTools_1_1TreeProcessorFactory.html", null ]
-    ] ],
-    [ "Tools::Tester", "classTools_1_1Tester.html", null ]
+    ] ]
 ];

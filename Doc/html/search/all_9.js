@@ -1,5 +1,12 @@
 var searchData=
 [
-  ['notify',['Notify',['../classBase_1_1ComplexDifferenceElement.html#a172e4e7223c50f84b5f2f8fdd52ea8d0',1,'Base::ComplexDifferenceElement::Notify()'],['../classBase_1_1Element.html#afbf18a93271bdeba8a5ced434b518711',1,'Base::Element::Notify()'],['../classBase_1_1SimpleElement.html#aca55505bef5c6aa5b9b36051a3930ba0',1,'Base::SimpleElement::Notify()']]],
-  ['notifycontent',['NotifyContent',['../classAlgorithms_1_1Algorithm.html#a7518f25c52360dbc9da868a48b528716',1,'Algorithms::Algorithm::NotifyContent(int user_id)=0'],['../classAlgorithms_1_1Algorithm.html#acfdf044361edd64601bc5d681a960dd9',1,'Algorithms::Algorithm::NotifyContent(int user_id, int notification_count)=0'],['../classAlgorithms_1_1MTFMatrix.html#a181a83000b34c24930dae329ccb61480',1,'Algorithms::MTFMatrix::NotifyContent(int user_id)'],['../classAlgorithms_1_1MTFMatrix.html#ae55b9b0b8d6057d989099f8c315da140',1,'Algorithms::MTFMatrix::NotifyContent(int user_id, int notification_count)'],['../classAlgorithms_1_1RandomTreeRoot.html#a74a1bcac23e7bed45308e76e017ff7da',1,'Algorithms::RandomTreeRoot::NotifyContent()'],['../classAlgorithms_1_1TreeRoot.html#a533a6da1910783760115e22444972870',1,'Algorithms::TreeRoot::NotifyContent(int user_id)'],['../classAlgorithms_1_1TreeRoot.html#a5461cb3168d66319a8008b818db16dfe',1,'Algorithms::TreeRoot::NotifyContent(int user_id, int notification_counter)']]]
+  ['matrixbuilder',['MatrixBuilder',['../classAlgorithms_1_1MatrixBuilder.html',1,'Algorithms']]],
+  ['matrixbuilder',['MatrixBuilder',['../classAlgorithms_1_1MatrixBuilder.html#a0e68391811fdb1c27227103fd6010d4f',1,'Algorithms::MatrixBuilder']]],
+  ['matrixmtfprocessor',['MatrixMTFProcessor',['../classTools_1_1MatrixMTFProcessor.html',1,'Tools']]],
+  ['matrixmtfprocessorfactory',['MatrixMTFProcessorFactory',['../classTools_1_1MatrixMTFProcessorFactory.html',1,'Tools']]],
+  ['movefrompositiontofront',['MoveFromPositionToFront',['../classAlgorithms_1_1Algorithm.html#ae2f19a59bbf94e645e437e5af1b1a3ed',1,'Algorithms::Algorithm::MoveFromPositionToFront()'],['../classAlgorithms_1_1MTFMatrix.html#ac4d4285a5c07d075ae0a2968aa838b9d',1,'Algorithms::MTFMatrix::MoveFromPositionToFront()'],['../classAlgorithms_1_1RandomTreeRoot.html#ad58df5655e1890e486e44124b4e12a8e',1,'Algorithms::RandomTreeRoot::MoveFromPositionToFront()'],['../classAlgorithms_1_1TreeRoot.html#afbfe5cd43e8007c598b006efd881f710',1,'Algorithms::TreeRoot::MoveFromPositionToFront()']]],
+  ['mtfmatrix',['MTFMatrix',['../classAlgorithms_1_1MTFMatrix.html',1,'Algorithms']]],
+  ['mtfmatrix',['MTFMatrix',['../classAlgorithms_1_1MTFMatrix.html#af224fd4c95d2d9ed77bb885de511123f',1,'Algorithms::MTFMatrix']]],
+  ['mtfprocessor',['MTFProcessor',['../classTools_1_1MTFProcessor.html',1,'Tools']]],
+  ['mtfprocessorfactory',['MTFProcessorFactory',['../classTools_1_1MTFProcessorFactory.html',1,'Tools']]]
 ];

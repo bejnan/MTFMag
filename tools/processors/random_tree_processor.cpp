@@ -36,7 +36,7 @@ void RandomTreeProcessor::Proceed(int id, bool learn) {
 }
 
 int RandomTreeProcessor::GetPenalty() {
-  return penalty_counter_.penalty();
+  return penalty_counter_.OveralPenalty();
 }
 
 } /* namespace Tools */

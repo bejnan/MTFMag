@@ -31,7 +31,7 @@ void TreeProcessor::Proceed(int id, bool learn) {
 }
 
 int TreeProcessor::GetPenalty() {
-  return penalty_counter_.penalty();
+  return penalty_counter_.OveralPenalty();
 }
 
 } /* namespace Tree */

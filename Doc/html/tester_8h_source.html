@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>MTFthesisstudies: tools/tester.h Source File</title>
+<title>MTFthesisstudies: tools/judges/tester.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -104,49 +104,54 @@ $(document).ready(function(){initNavTree('tester_8h_source.html','');});
 <div class="title">tester.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Tester.h</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *  Created on: Feb 13, 2014</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *      Author: Jakub Banaszewski</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> */</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef TESTER_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define TESTER_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;judge.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> std::make_pair;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef TESTER_H_</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define TESTER_H_</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span>Tools {</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classTools_1_1Tester.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTools_1_1Tester.html">Tester</a> {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="classTools_1_1Tester.html#ab8eccea02f6dc5713a57b90c13a207df">Tester</a>(<span class="keywordtype">int</span> first_page_list_size, <span class="keywordtype">int</span> second_page_list_size);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classTools_1_1Tester.html#a228a5897294f0d6ba8fd59ab33e7188b">~Tester</a>();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classTools_1_1Tester.html#a56bd9ab5b4b86a9c1d693b91076ac411">CountPenalty</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> element_position);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classTools_1_1Tester.html#ab8141970e4a78b9b75d2fb9279d58d00">   48</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classTools_1_1Tester.html#ab8141970e4a78b9b75d2fb9279d58d00">penalty</a>() { <span class="keywordflow">return</span> penalty_sum_; }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> first_page_list_size_;  </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> second_page_list_size_; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keyword">const</span> <span class="keywordtype">int</span> MAX_PENALTY; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> penalty_sum_;     </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;} <span class="comment">/* namespace Tree */</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* TESTER_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="classTools_1_1Tester_html_a56bd9ab5b4b86a9c1d693b91076ac411"><div class="ttname"><a href="classTools_1_1Tester.html#a56bd9ab5b4b86a9c1d693b91076ac411">Tools::Tester::CountPenalty</a></div><div class="ttdeci">virtual void CountPenalty(unsigned int element_position)</div><div class="ttdef"><b>Definition:</b> tester.cpp:22</div></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span>Tools {</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classTools_1_1Tester.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTools_1_1Tester.html">Tester</a> : <span class="keyword">public</span> <a class="code" href="classTools_1_1Judge.html">Judge</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <a class="code" href="classTools_1_1Tester.html#ab8eccea02f6dc5713a57b90c13a207df">Tester</a>(<span class="keywordtype">int</span> first_page_list_size, <span class="keywordtype">int</span> second_page_list_size);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classTools_1_1Tester.html#a228a5897294f0d6ba8fd59ab33e7188b">~Tester</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classTools_1_1Tester.html#a56bd9ab5b4b86a9c1d693b91076ac411">CountPenalty</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> element_position);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classTools_1_1Tester.html#abacca0e056906e25e16b008b091a4f85">   45</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classTools_1_1Tester.html#abacca0e056906e25e16b008b091a4f85">OveralPenalty</a>() {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> penalty_sum_;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keyword">virtual</span> list&lt;pair&lt;int, int&gt; &gt; <a class="code" href="classTools_1_1Tester.html#af06a42e0ef1ba97f00a257ec69f1a79b">PenaltyDetails</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> first_page_list_size_; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> second_page_list_size_; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keyword">const</span> <span class="keywordtype">int</span> MAX_PENALTY; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordtype">int</span> turn_counter; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> penalty_sum_;        </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  list&lt;pair &lt;int, int&gt; &gt; penalties_; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;} <span class="comment">/* namespace Tree */</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* TESTER_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="classTools_1_1Tester_html_a56bd9ab5b4b86a9c1d693b91076ac411"><div class="ttname"><a href="classTools_1_1Tester.html#a56bd9ab5b4b86a9c1d693b91076ac411">Tools::Tester::CountPenalty</a></div><div class="ttdeci">virtual void CountPenalty(unsigned int element_position)</div><div class="ttdef"><b>Definition:</b> tester.cpp:23</div></div>
 <div class="ttc" id="classTools_1_1Tester_html_ab8eccea02f6dc5713a57b90c13a207df"><div class="ttname"><a href="classTools_1_1Tester.html#ab8eccea02f6dc5713a57b90c13a207df">Tools::Tester::Tester</a></div><div class="ttdeci">Tester(int first_page_list_size, int second_page_list_size)</div><div class="ttdef"><b>Definition:</b> tester.cpp:12</div></div>
-<div class="ttc" id="classTools_1_1Tester_html_a228a5897294f0d6ba8fd59ab33e7188b"><div class="ttname"><a href="classTools_1_1Tester.html#a228a5897294f0d6ba8fd59ab33e7188b">Tools::Tester::~Tester</a></div><div class="ttdeci">virtual ~Tester()</div><div class="ttdef"><b>Definition:</b> tester.cpp:19</div></div>
-<div class="ttc" id="classTools_1_1Tester_html_ab8141970e4a78b9b75d2fb9279d58d00"><div class="ttname"><a href="classTools_1_1Tester.html#ab8141970e4a78b9b75d2fb9279d58d00">Tools::Tester::penalty</a></div><div class="ttdeci">virtual int penalty()</div><div class="ttdef"><b>Definition:</b> tester.h:48</div></div>
-<div class="ttc" id="classTools_1_1Tester_html"><div class="ttname"><a href="classTools_1_1Tester.html">Tools::Tester</a></div><div class="ttdef"><b>Definition:</b> tester.h:21</div></div>
+<div class="ttc" id="classTools_1_1Judge_html"><div class="ttname"><a href="classTools_1_1Judge.html">Tools::Judge</a></div><div class="ttdef"><b>Definition:</b> judge.h:21</div></div>
+<div class="ttc" id="classTools_1_1Tester_html_af06a42e0ef1ba97f00a257ec69f1a79b"><div class="ttname"><a href="classTools_1_1Tester.html#af06a42e0ef1ba97f00a257ec69f1a79b">Tools::Tester::PenaltyDetails</a></div><div class="ttdeci">virtual list&lt; pair&lt; int, int &gt; &gt; PenaltyDetails()</div><div class="ttdef"><b>Definition:</b> tester.cpp:39</div></div>
+<div class="ttc" id="classTools_1_1Tester_html_abacca0e056906e25e16b008b091a4f85"><div class="ttname"><a href="classTools_1_1Tester.html#abacca0e056906e25e16b008b091a4f85">Tools::Tester::OveralPenalty</a></div><div class="ttdeci">virtual int OveralPenalty()</div><div class="ttdef"><b>Definition:</b> tester.h:45</div></div>
+<div class="ttc" id="classTools_1_1Tester_html_a228a5897294f0d6ba8fd59ab33e7188b"><div class="ttname"><a href="classTools_1_1Tester.html#a228a5897294f0d6ba8fd59ab33e7188b">Tools::Tester::~Tester</a></div><div class="ttdeci">virtual ~Tester()</div><div class="ttdef"><b>Definition:</b> tester.cpp:20</div></div>
+<div class="ttc" id="classTools_1_1Tester_html"><div class="ttname"><a href="classTools_1_1Tester.html">Tools::Tester</a></div><div class="ttdef"><b>Definition:</b> tester.h:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_4eeb864c4eec08c7d6b9d3b0352cfdde.html">tools</a></li><li class="navelem"><b>tester.h</b></li>
-    <li class="footer">Generated on Fri Apr 25 2014 04:14:58 for MTFthesisstudies by
+    <li class="navelem"><a class="el" href="dir_4eeb864c4eec08c7d6b9d3b0352cfdde.html">tools</a></li><li class="navelem"><a class="el" href="dir_fe3de19395950321da226a8185892ad6.html">judges</a></li><li class="navelem"><b>tester.h</b></li>
+    <li class="footer">Generated on Sat Apr 26 2014 17:50:59 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

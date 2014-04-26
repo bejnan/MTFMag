@@ -12,6 +12,6 @@
 #include "../tools/processor_factories.h"
 #include "../tools/processor.h"
 #include "../tools/processor_factory.h"
-#include "../tools/tester.h"
+#include "../tools/judges.h"
 
 #endif /* TOOLS_H_ */

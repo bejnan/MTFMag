@@ -1,12 +1,9 @@
-/*
- * Tester.h
- *
- *  Created on: Feb 13, 2014
- *      Author: Jakub Banaszewski
- */
-
 #ifndef TESTER_H_
 #define TESTER_H_
+
+#include "judge.h"
+
+using std::make_pair;
 
 namespace Tools {
 /**
@@ -18,7 +15,7 @@ namespace Tools {
  * searching on first two screens (because user have to do it anyway to know,
  * that element isn't there).
  */
-class Tester {
+class Tester : public Judge {
  public:
   /**
    * Initialize penalty parameters
@@ -35,7 +32,7 @@ class Tester {
   virtual ~Tester();
 
   /**
-   * Main method of counter. Check position of notified element and compare it
+   * Checks position of notified element and compare it
    * with set parameters. After that adds adequate penalty to penalty_sum_ property.
    * @param element_position Position on which element was found before notification.
    */
@@ -45,17 +42,31 @@ class Tester {
    * Getter of overall penalty
    * @return Sum of all counted penalties
    */
-  virtual int penalty() { return penalty_sum_; }
+  virtual int OveralPenalty() {
+    return penalty_sum_;
+  }
+
+  /**
+   * Returns all given penalties on FIFO order.
+   * @return List with pairs of penalties and counter of CountPenalties calls.
+   */
+  virtual list<pair<int, int> > PenaltyDetails();
 
  private:
-  unsigned int first_page_list_size_;  /**< Size of first page
-                                            (with no penalty)      */
+  unsigned int first_page_list_size_; /**< Size of first page
+   (with no penalty)      */
+
   unsigned int second_page_list_size_; /**< Size of second page
-                                            (with counted penalty) */
+   (with counted penalty) */
 
   unsigned const int MAX_PENALTY; /**< Penalty for elements founded
-                                   further than on first two pages */
-  unsigned long penalty_sum_;     /**< Sum of all penalties        */
+   further than on first two pages */
+
+  int turn_counter; /**< Count numbers of CountPenalty calls   */
+
+  unsigned long penalty_sum_;        /**< Sum of all penalties */
+
+  list<pair <int, int> > penalties_; /**< List of all penaties */
 };
 
 } /* namespace Tree */

@@ -11,7 +11,7 @@
 #include "../../headers/algorithms.h"
 #include "../../headers/elements.h"
 #include "../processor.h"
-#include "../tester.h"
+#include "../judges.h"
 
 using namespace Algorithms;
 using std::string;

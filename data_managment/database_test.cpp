@@ -77,11 +77,11 @@ BOOST_AUTO_TEST_CASE(QueryKeys) {
   shared_ptr<Tools::Processor> processor_ptr = tree_factory.GenerateProcessor(
       1);
   base.AddToBase(processor_ptr);
-  expected_processors.push_front(processor_ptr->identifier());
+  expected_processors.push_front(processor_ptr->algorithm_identifier());
 
   processor_ptr = mtf_factory.GenerateProcessor(1);
   base.AddToBase(processor_ptr);
-  expected_processors.push_front(processor_ptr->identifier());
+  expected_processors.push_front(processor_ptr->algorithm_identifier());
 
   queried_processors = base.QueryAlgorithmNames();
 
@@ -102,11 +102,11 @@ BOOST_AUTO_TEST_CASE(QueryKeys2) {
 
   shared_ptr<Tools::Processor> processor_ptr = factory.GenerateProcessor(1);
   base.AddToBase(processor_ptr);
-  expected_processors.push_front(processor_ptr->identifier());
+  expected_processors.push_front(processor_ptr->algorithm_identifier());
 
   processor_ptr = mtf_factory.GenerateProcessor(1);
   base.AddToBase(processor_ptr);
-  expected_processors.push_front(processor_ptr->identifier());
+  expected_processors.push_front(processor_ptr->algorithm_identifier());
 
   processor_ptr = mtf_factory.GenerateProcessor(2);
   base.AddToBase(processor_ptr);

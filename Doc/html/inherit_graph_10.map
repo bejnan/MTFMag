@@ -1,7 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classTools_1_1Processor.html" title="Tools::Processor" alt="" coords="6,81,133,108"/>
-<area shape="rect" id="node2" href="$classTools_1_1MatrixMTFProcessor.html" title="Tools::MatrixMTFProcessor" alt="" coords="189,5,384,32"/>
-<area shape="rect" id="node3" href="$classTools_1_1MTFProcessor.html" title="Tools::MTFProcessor" alt="" coords="209,56,365,83"/>
-<area shape="rect" id="node4" href="$classTools_1_1RandomTreeProcessor.html" title="Tools::RandomTreeProcessor" alt="" coords="181,107,392,133"/>
-<area shape="rect" id="node5" href="$classTools_1_1TreeProcessor.html" title="Tools::TreeProcessor" alt="" coords="208,157,365,184"/>
+<area shape="rect" id="node1" href="$classTools_1_1Judge.html" title="Tools::Judge" alt="" coords="5,5,107,32"/>
+<area shape="rect" id="node2" href="$classTools_1_1Tester.html" title="Tools::Tester" alt="" coords="155,5,259,32"/>
 </map>

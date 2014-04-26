@@ -13,23 +13,31 @@ Tester::Tester(int first_page_list_size, int second_page_list_size)
     : first_page_list_size_(first_page_list_size),
       second_page_list_size_(second_page_list_size),
       MAX_PENALTY((first_page_list_size + second_page_list_size) * 2),
+      turn_counter(0),
       penalty_sum_(0) {
 }
 
 Tester::~Tester() {
 }
 
-void Tester::CountPenalty(unsigned int element_position)
-{
-  if (element_position < first_page_list_size_)
+void Tester::CountPenalty(unsigned int element_position) {
+  ++turn_counter;
+  if (element_position <= first_page_list_size_)
     return;
+  int penalty = 0;
   element_position -= first_page_list_size_;
-  if (element_position < second_page_list_size_)
-    penalty_sum_ += element_position;
-  else
-    penalty_sum_ += MAX_PENALTY;
+  if (element_position < second_page_list_size_) {
+    penalty = element_position;
+  } else {
+    penalty += MAX_PENALTY;
+  }
+  penalty_sum_ += penalty;
+  pair<int, int> penalty_pair(penalty, turn_counter);
+  penalties_.push_back(penalty_pair);
 }
 
-
+list<pair<int, int> > Tester::PenaltyDetails() {
+  return penalties_;
+}
 
 } /* namespace Tools */

@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['tester',['Tester',['../classTools_1_1Tester.html',1,'Tools']]],
-  ['tester',['Tester',['../classTools_1_1Tester.html#ab8eccea02f6dc5713a57b90c13a207df',1,'Tools::Tester']]],
-  ['treeprocessor',['TreeProcessor',['../classTools_1_1TreeProcessor.html',1,'Tools']]],
-  ['treeprocessorfactory',['TreeProcessorFactory',['../classTools_1_1TreeProcessorFactory.html',1,'Tools']]],
-  ['treeroot',['TreeRoot',['../classAlgorithms_1_1TreeRoot.html',1,'Algorithms']]]
+  ['randomtreeprocessor',['RandomTreeProcessor',['../classTools_1_1RandomTreeProcessor.html',1,'Tools']]],
+  ['randomtreeprocessorfactory',['RandomTreeProcessorFactory',['../classTools_1_1RandomTreeProcessorFactory.html',1,'Tools']]],
+  ['randomtreeroot',['RandomTreeRoot',['../classAlgorithms_1_1RandomTreeRoot.html',1,'Algorithms']]],
+  ['resetsetting',['ResetSetting',['../classAlgorithms_1_1MatrixBuilder.html#aad18a9829406492da82b39d8abe036ab',1,'Algorithms::MatrixBuilder']]],
+  ['runturns',['RunTurns',['../classBase_1_1DataCollector.html#a5f82cf1aa48981c36cb2e0eba944c148',1,'Base::DataCollector']]]
 ];

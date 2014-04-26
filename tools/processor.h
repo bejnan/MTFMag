@@ -1,10 +1,3 @@
-/*
- * AbstractProcessor.h
- *
- *  Created on: Feb 26, 2014
- *      Author: Jakub Banaszewski
- */
-
 #ifndef PROCESSOR_H_
 #define PROCESSOR_H_
 

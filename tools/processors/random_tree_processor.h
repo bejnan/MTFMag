@@ -10,7 +10,7 @@
 
 #include "../../headers/algorithms.h"
 #include "../../headers/elements.h"
-#include "../tester.h"
+#include "../judges.h"
 #include "../processor.h"
 
 using namespace Algorithms;

@@ -35,7 +35,7 @@ void MatrixMTFProcessor::Proceed(int user_id, bool learn) {
 }
 
 int MatrixMTFProcessor::GetPenalty() {
-  return penalty_counter_.penalty();
+  return penalty_counter_.OveralPenalty();
 }
 
 void MatrixMTFProcessor::AddUser(int user_id) {

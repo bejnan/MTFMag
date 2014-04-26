@@ -10,7 +10,7 @@
 
 #include "../processor.h"
 #include "../../headers/algorithms.h"
-#include "../tester.h"
+#include "../judges.h"
 
 #include <memory>
 

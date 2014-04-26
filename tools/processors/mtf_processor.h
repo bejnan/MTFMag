@@ -10,7 +10,7 @@
 
 #include "../../headers/elements.h"
 #include "../processor.h"
-#include "../tester.h"
+#include "../judges.h"
 
 #include <string>
 #include <list>
