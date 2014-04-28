@@ -50,15 +50,16 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="matrix|Processors|tools|algorithms|elements|tree|processor_factories|main_test.cpp|headers|processors|judges|data_managment|exceptions" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
-						<entry excluding="matrix|tree" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms"/>
+						<entry excluding="elements|data_managment|move_to_front|matrix|Processors|tools|algorithms|tree|processor_factories|main_test.cpp|headers|processors|judges|exceptions" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="move_to_front|matrix|tree" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms"/>
 						<entry excluding="mtf_matrix_test.cpp|MTFMatrix_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms/matrix"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms/move_to_front"/>
 						<entry excluding="tree_root_test.cpp|TreeRoot_test.cpp|TreeFactory_test.cpp|Root_test.cpp|Node_test.cpp|LTree_test.cpp|FTree_test.cpp|TreeFaktory_test.cpp|Leaf_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms/tree"/>
-						<entry excluding="data_collector_test.cpp|file_data_provider_test.cpp|csv_data_output_test.cpp|Database_test.cpp|database_test.cpp|DataCollector_test.cpp|FileDataProvider_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="data_managment"/>
-						<entry excluding="Element_test.cpp|element_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="elements"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="data_managment"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="elements"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="exceptions"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="headers"/>
-						<entry excluding="tester_test.cpp|proccessor_test.cpp|Proccessor_test.cpp|Tester_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="tools"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="tools"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -106,18 +107,14 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="Processors|matrix|tools|algorithms|tree|elements|processor_factories|main_test.cpp|headers|processors|judges|data_managment|exceptions" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
-						<entry excluding="matrix|tree" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms"/>
+						<entry excluding="move_to_front|Processors|matrix|tools|algorithms|tree|processor_factories|main_test.cpp|headers|processors|judges|exceptions" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="move_to_front|matrix|tree" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms"/>
 						<entry excluding="mtf_matrix_test.cpp|MTFMatrix_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms/matrix"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms/move_to_front"/>
 						<entry excluding="tree_root_test.cpp|TreeRoot_test.cpp|Root_test.cpp|TreeFactory_test.cpp|Node_test.cpp|LTree_test.cpp|FTree_test.cpp|Leaf_test.cpp|TreeFaktory_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms/tree"/>
-						<entry excluding="data_collector_test.cpp|csv_data_output_test.cpp|file_data_provider_test.cpp|Database_test.cpp|DataCollector_test.cpp|database_test.cpp|FileDataProvider_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="data_managment"/>
-						<entry excluding="Element_test.cpp|element_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="elements"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="exceptions"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="headers"/>
-						<entry excluding="Processors|tester_test.cpp|processor_factories|proccessor_test.cpp|Proccessor_test.cpp|Tester_test.cpp|processors|judges" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="tools"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="tools/judges"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="tools/processor_factories"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="tools/processors"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -182,21 +179,17 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="Processors|matrix|elements|PenaltyAlgorithms|main.cpp|processors|judges|data_managment|tools|Algorithms|algorithms|tree|processor_factories|headers|User|exceptions" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Algorithms"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="PenaltyAlgorithms"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="User"/>
-						<entry excluding="matrix|tree" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms"/>
+						<entry excluding="elements|data_managment|move_to_front|Processors|matrix|PenaltyAlgorithms|main.cpp|processors|judges|tools|Algorithms|algorithms|tree|processor_factories|headers|User|exceptions" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="move_to_front|matrix|tree" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms/matrix"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms/move_to_front"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms/tree"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="data_managment"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="elements"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="data_managment"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="elements"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="exceptions"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="headers"/>
-						<entry excluding="Processors|processor_factories|processors|judges" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="tools"/>
+						<entry excluding="judges" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="tools"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="tools/judges"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="tools/processor_factories"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="tools/processors"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -205,21 +198,6 @@
 	</storageModule>
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
 		<project id="MTFMag.cdt.managedbuild.target.gnu.exe.836651279" name="Executable" projectType="cdt.managedbuild.target.gnu.exe"/>
-	</storageModule>
-	<storageModule moduleId="scannerConfiguration">
-		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.release.1284499043;cdt.managedbuild.config.gnu.exe.release.1284499043.;cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.269382824;cdt.managedbuild.tool.gnu.cpp.compiler.input.2047378772">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.1109083971;cdt.managedbuild.config.gnu.exe.debug.1109083971.;cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1696965066;cdt.managedbuild.tool.gnu.c.compiler.input.1137773587">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.1109083971;cdt.managedbuild.config.gnu.exe.debug.1109083971.;cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.2086307032;cdt.managedbuild.tool.gnu.cpp.compiler.input.1315812608">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.release.1284499043;cdt.managedbuild.config.gnu.exe.release.1284499043.;cdt.managedbuild.tool.gnu.c.compiler.exe.release.356796323;cdt.managedbuild.tool.gnu.c.compiler.input.1734054684">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="refreshScope" versionNumber="2">
@@ -230,5 +208,26 @@
 		<configuration configurationName="Debug">
 			<resource resourceType="PROJECT" workspacePath="/MTFMag"/>
 		</configuration>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.1333794659.1876274775.562707040;cdt.managedbuild.config.gnu.exe.debug.1333794659.1876274775.562707040.;cdt.managedbuild.tool.gnu.c.compiler.exe.debug.815904297;cdt.managedbuild.tool.gnu.c.compiler.input.315908049">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.release.1284499043;cdt.managedbuild.config.gnu.exe.release.1284499043.;cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.269382824;cdt.managedbuild.tool.gnu.cpp.compiler.input.2047378772">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.1109083971;cdt.managedbuild.config.gnu.exe.debug.1109083971.;cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1696965066;cdt.managedbuild.tool.gnu.c.compiler.input.1137773587">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.1333794659.1876274775.562707040;cdt.managedbuild.config.gnu.exe.debug.1333794659.1876274775.562707040.;cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.398635550;cdt.managedbuild.tool.gnu.cpp.compiler.input.2000149676">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.1109083971;cdt.managedbuild.config.gnu.exe.debug.1109083971.;cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.2086307032;cdt.managedbuild.tool.gnu.cpp.compiler.input.1315812608">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.release.1284499043;cdt.managedbuild.config.gnu.exe.release.1284499043.;cdt.managedbuild.tool.gnu.c.compiler.exe.release.356796323;cdt.managedbuild.tool.gnu.c.compiler.input.1734054684">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
 	</storageModule>
 </cproject>

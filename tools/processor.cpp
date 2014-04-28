@@ -11,7 +11,7 @@ Processor::Processor(int user_id, shared_ptr<Judge> judge,
 Processor::~Processor() {
 }
 
-void Processor::Proceed(int user_id, bool learn = false) {
+void Processor::Proceed(int user_id, bool learn) {
   if (!(algorithm_)->HaveElement(user_id)) {
     (algorithm_)->AddElement(user_id);
   }

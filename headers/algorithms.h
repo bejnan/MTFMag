@@ -10,5 +10,6 @@
 
 #include "../algorithms/tree.h"
 #include "../algorithms/matrix.h"
+#include "../algorithms/move_to_front/move_to_front.h"
 
 #endif /* ALGORITHMS_H_ */
