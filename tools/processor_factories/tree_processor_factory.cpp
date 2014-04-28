@@ -9,7 +9,7 @@
 
 namespace Tools {
 
-TreeProcessorFactory::TreeProcessorFactory() : algorithm_name_("TreeMTF") {
+TreeProcessorFactory::TreeProcessorFactory(){
 }
 
 TreeProcessorFactory::~TreeProcessorFactory() {

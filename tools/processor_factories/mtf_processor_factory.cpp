@@ -9,14 +9,21 @@
 
 namespace Tools {
 
-MTFProcessorFactory::MTFProcessorFactory() : algorithm_name_("SimpleMTF") {
+MTFProcessorFactory::MTFProcessorFactory() {
 }
 
 MTFProcessorFactory::~MTFProcessorFactory() {
 }
 
 shared_ptr<Processor> MTFProcessorFactory::GenerateProcessor(int user_id) {
-  Processor* new_mtf_proc = new MTFProcessor(user_id,algorithm_name_);
+  Judge* new_judge = new Tester(20, 20);
+  shared_ptr<Judge> judge_ptr(new_judge);
+  Algorithms::Algorithm* new_algorithm = new Algorithms::MoveToFront(
+      Base::SimpleElement::GetPrototype());
+  shared_ptr<Algorithms::Algorithm> algorithm_ptr(new_algorithm);
+  Processor* new_processor = new Processor(user_id, judge_ptr, algorithm_ptr);
+  return shared_ptr<Processor>(new_processor);
+  Processor* new_mtf_proc = new Processor(user_id, judge_ptr, algorithm_ptr);
   return shared_ptr<Processor>(new_mtf_proc);
 }
 

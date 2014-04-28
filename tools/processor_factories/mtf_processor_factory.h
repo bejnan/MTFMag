@@ -9,11 +9,9 @@
 #define MTFPROCESSORFACTORY_H_
 
 #include "../processor_factory.h"
-#include "../processors/mtf_processor.h"
-
-#include <string>
-
-using std::string;
+#include "../../headers/algorithms.h"
+#include "../../headers/elements.h"
+#include "../judges.h"
 
 namespace Tools {
 /**
@@ -24,9 +22,6 @@ class MTFProcessorFactory : public Tools::ProcessorFactory {
   MTFProcessorFactory();
   virtual ~MTFProcessorFactory();
   virtual shared_ptr<Processor> GenerateProcessor(int user_id);
-
- private:
-  string algorithm_name_;
 };
 
 } /* namespace Tools */

@@ -9,10 +9,9 @@
 #define MATRIXMTFPROCESSORFACTORY_H_
 
 #include "../processor_factory.h"
-#include "../processors/matrix_mtf_processor.h"
-
-#include <string>
-using std::to_string;
+#include "../../headers/algorithms.h"
+#include "../../headers/elements.h"
+#include "../judges.h"
 
 namespace Tools {
 
@@ -25,7 +24,6 @@ class MatrixMTFProcessorFactory : public Tools::ProcessorFactory{
   virtual ~MatrixMTFProcessorFactory();
   virtual shared_ptr<Processor> GenerateProcessor(int user_id);
  private:
-   string algorithm_name_;
    int matrix_width_;
 };
 
