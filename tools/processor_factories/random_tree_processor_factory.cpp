@@ -23,10 +23,13 @@ RandomTreeProcessorFactory::~RandomTreeProcessorFactory() {
 
 shared_ptr<Processor> RandomTreeProcessorFactory::GenerateProcessor(
     int user_id) {
-  Processor* new_tree_proc = new RandomTreeProcessor(user_id, algorithm_name_,
-                                                     MOVING_UP_PROPABILITY,
-                                                     DIFF_INFLUENCE);
-  return shared_ptr<Processor>(new_tree_proc);
+  Judge* new_judge = new Tester(20, 20);
+  shared_ptr<Judge> judge_ptr(new_judge);
+  Algorithms::Algorithm* new_algorithm = new Algorithms::RandomTreeRoot(
+      Base::SimpleElement::GetPrototype(), MOVING_UP_PROPABILITY, DIFF_INFLUENCE);
+  shared_ptr<Algorithms::Algorithm> algorithm_ptr(new_algorithm);
+  Processor* new_processor = new Processor(user_id, judge_ptr, algorithm_ptr);
+  return shared_ptr<Processor>(new_processor);
 }
 
 } /* namespace Tools */

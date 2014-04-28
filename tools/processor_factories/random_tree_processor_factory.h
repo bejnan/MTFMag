@@ -9,7 +9,9 @@
 #define RANDOMTREEPROCESSORFACTORY_H_
 
 #include "../processor_factory.h"
-#include "../processors/random_tree_processor.h"
+#include "../../headers/algorithms.h"
+#include "../../headers/elements.h"
+#include "../judges.h"
 
 #include <string>
 

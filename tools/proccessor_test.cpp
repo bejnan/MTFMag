@@ -5,7 +5,7 @@
  *      Author: Jakub Banaszewski
  */
 
-#include "processors.h"
+#include "processor.h"
 #include "processor_factories.h"
 #include "../headers/exceptions.h"
 

@@ -45,7 +45,7 @@ bool MoveToFront::HaveElement(int user_id) {
 }
 
 string MoveToFront::AlgorithmName() {
-  return ALGORITHM_NAME;
+  return MoveToFront::ALGORITHM_NAME;
 }
 
 void MoveToFront::MoveFromPositionToFront(int position) {
@@ -83,6 +83,6 @@ double MoveToFront::DifferenceBetweenElementsOnPosition(int position1,
       *algorithm_elements_[position2]);
 }
 
-const string ALGORITHM_NAME = "MoveToFront";
+const string MoveToFront::ALGORITHM_NAME = "MoveToFront";
 
 } /* namespace Base */

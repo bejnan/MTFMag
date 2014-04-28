@@ -46,7 +46,6 @@ class MoveToFront : public Algorithm {
   map<int, int> element_postion_;
   shared_ptr<Base::Element> element_prototype_;
   static const string ALGORITHM_NAME;
-
 };
 
 } /* namespace Base */

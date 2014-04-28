@@ -9,7 +9,9 @@
 #define TREEPROCESSORFACTORY_H_
 
 #include "../processor_factory.h"
-#include "../processors/tree_proccessor.h"
+#include "../../headers/algorithms.h"
+#include "../../headers/elements.h"
+#include "../judges.h"
 
 namespace Tools {
 
@@ -20,7 +22,7 @@ class TreeProcessorFactory : public Tools::ProcessorFactory {
  public:
   TreeProcessorFactory();
   virtual ~TreeProcessorFactory();
-  virtual shared_ptr<Processor> GenerateProcessor(int id);
+  virtual shared_ptr<Processor> GenerateProcessor(int user_id);
 };
 
 } /* namespace Tools */
