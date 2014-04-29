@@ -51,9 +51,7 @@ string MoveToFront::AlgorithmName() {
 void MoveToFront::MoveFromPositionToFront(int position) {
   shared_ptr<Base::Element> tmp_element;
   for (int iterator = position - 1; iterator > 0; iterator--) {
-    tmp_element = algorithm_elements_[iterator - 1];
-    algorithm_elements_[iterator - 1] = algorithm_elements_[iterator];
-    algorithm_elements_[iterator] = tmp_element;
+    SwapElementsOnPositions(iterator, iterator - 1);
   }
 }
 
@@ -63,7 +61,9 @@ void MoveToFront::SwapElementsOnPositions(int position1, int position2) {
   shared_ptr<Base::Element> element_on_position2 =
       algorithm_elements_[position2];
   algorithm_elements_[position1] = element_on_position2;
+  element_postion_[position1] = position2;
   algorithm_elements_[position2] = element_on_position1;
+  element_postion_[position2] = position1;
 }
 
 /**

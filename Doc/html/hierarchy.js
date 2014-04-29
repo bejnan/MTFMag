@@ -1,6 +1,7 @@
 var hierarchy =
 [
     [ "Algorithms::Algorithm", "classAlgorithms_1_1Algorithm.html", [
+      [ "Algorithms::MoveToFront", "classAlgorithms_1_1MoveToFront.html", null ],
       [ "Algorithms::MTFMatrix", "classAlgorithms_1_1MTFMatrix.html", null ],
       [ "Algorithms::TreeRoot", "classAlgorithms_1_1TreeRoot.html", [
         [ "Algorithms::RandomTreeRoot", "classAlgorithms_1_1RandomTreeRoot.html", null ]
@@ -37,9 +38,7 @@ var hierarchy =
       [ "Tools::Tester", "classTools_1_1Tester.html", null ]
     ] ],
     [ "Algorithms::MatrixBuilder", "classAlgorithms_1_1MatrixBuilder.html", null ],
-    [ "Tools::Processor", "classTools_1_1Processor.html", [
-      [ "Tools::MTFProcessor", "classTools_1_1MTFProcessor.html", null ]
-    ] ],
+    [ "Tools::Processor", "classTools_1_1Processor.html", null ],
     [ "Tools::ProcessorFactory", "classTools_1_1ProcessorFactory.html", [
       [ "Tools::MatrixMTFProcessorFactory", "classTools_1_1MatrixMTFProcessorFactory.html", null ],
       [ "Tools::MTFProcessorFactory", "classTools_1_1MTFProcessorFactory.html", null ],

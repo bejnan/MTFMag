@@ -4,6 +4,7 @@ var annotated =
       [ "Algorithm", "classAlgorithms_1_1Algorithm.html", "classAlgorithms_1_1Algorithm" ],
       [ "MatrixBuilder", "classAlgorithms_1_1MatrixBuilder.html", "classAlgorithms_1_1MatrixBuilder" ],
       [ "MTFMatrix", "classAlgorithms_1_1MTFMatrix.html", "classAlgorithms_1_1MTFMatrix" ],
+      [ "MoveToFront", "classAlgorithms_1_1MoveToFront.html", "classAlgorithms_1_1MoveToFront" ],
       [ "RandomTreeRoot", "classAlgorithms_1_1RandomTreeRoot.html", "classAlgorithms_1_1RandomTreeRoot" ],
       [ "TreeRoot", "classAlgorithms_1_1TreeRoot.html", "classAlgorithms_1_1TreeRoot" ]
     ] ],
@@ -37,7 +38,6 @@ var annotated =
       [ "MTFProcessorFactory", "classTools_1_1MTFProcessorFactory.html", "classTools_1_1MTFProcessorFactory" ],
       [ "RandomTreeProcessorFactory", "classTools_1_1RandomTreeProcessorFactory.html", "classTools_1_1RandomTreeProcessorFactory" ],
       [ "TreeProcessorFactory", "classTools_1_1TreeProcessorFactory.html", "classTools_1_1TreeProcessorFactory" ],
-      [ "ProcessorFactory", "classTools_1_1ProcessorFactory.html", "classTools_1_1ProcessorFactory" ],
-      [ "MTFProcessor", "classTools_1_1MTFProcessor.html", "classTools_1_1MTFProcessor" ]
+      [ "ProcessorFactory", "classTools_1_1ProcessorFactory.html", "classTools_1_1ProcessorFactory" ]
     ] ]
 ];

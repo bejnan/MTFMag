@@ -1,10 +1,3 @@
-/*
- * TreeProcessorFactory.cpp
- *
- *  Created on: 28 lut 2014
- *      Author: Jakub Banaszewski
- */
-
 #include "tree_processor_factory.h"
 
 namespace Tools {

@@ -129,12 +129,41 @@ Collaboration diagram for Tools::MatrixMTFProcessorFactory:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a3f78b095660bdc56b8a8fb4ccfb864ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTools_1_1MatrixMTFProcessorFactory.html#a3f78b095660bdc56b8a8fb4ccfb864ad">MatrixMTFProcessorFactory</a> (int matrix_width=2)</td></tr>
+<tr class="separator:a3f78b095660bdc56b8a8fb4ccfb864ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ddc563317ede13d07f506af24c18e1b"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classTools_1_1Processor.html">Processor</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTools_1_1MatrixMTFProcessorFactory.html#a5ddc563317ede13d07f506af24c18e1b">GenerateProcessor</a> (int user_id)</td></tr>
 <tr class="separator:a5ddc563317ede13d07f506af24c18e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Generator of MatrixMTFProcessors </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><p>Generates TreeProcessor using <a class="el" href="classTools_1_1Tester.html">Tester</a> judge and MTFMatrix algorithm. </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classAlgorithms_1_1MTFMatrix.html">Algorithms::MTFMatrix</a> </dd>
+<dd>
+<a class="el" href="classTools_1_1Tester.html">Tools::Tester</a> </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a3f78b095660bdc56b8a8fb4ccfb864ad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tools::MatrixMTFProcessorFactory::MatrixMTFProcessorFactory </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>matrix_width</em> = <code>2</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets parameters to create MTFMatrix processor instance </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">matrix_width</td><td>Width of matrix rows in MTFMatrix algorithm </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a5ddc563317ede13d07f506af24c18e1b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -156,7 +185,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Generates <a class="el" href="classTools_1_1Processor.html">Processor</a> for given user by its identifier </p>
+<p>Generates <a class="el" href="classTools_1_1Processor.html">Processor</a> for given user by its identifier. Child classes defines details about what algorithm and judge to use </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">user_id</td><td>Identifier of user </td></tr>
@@ -188,7 +217,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>Tools</b></li><li class="navelem"><a class="el" href="classTools_1_1MatrixMTFProcessorFactory.html">MatrixMTFProcessorFactory</a></li>
-    <li class="footer">Generated on Sun Apr 27 2014 00:09:34 for MTFthesisstudies by
+    <li class="footer">Generated on Tue Apr 29 2014 02:24:00 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

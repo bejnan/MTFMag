@@ -27,7 +27,8 @@ class ProcessorFactory {
  public:
   virtual ~ProcessorFactory() {   }
   /**
-   * Generates Processor for given user by its identifier
+   * Generates Processor for given user by its identifier.
+   * Child classes defines details about what algorithm and judge to use
    * @param user_id Identifier of user
    * @return Instance of Processor for given user
    */

@@ -129,12 +129,53 @@ Collaboration diagram for Tools::RandomTreeProcessorFactory:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:aa50b51e813c7c4d262b5ead54e0c4451"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTools_1_1RandomTreeProcessorFactory.html#aa50b51e813c7c4d262b5ead54e0c4451">RandomTreeProcessorFactory</a> (const double moving_up_propability=0.75, const double diff_influence=0.5)</td></tr>
+<tr class="separator:aa50b51e813c7c4d262b5ead54e0c4451"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c9621404aa9431bd6b8336e6bac88f8"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classTools_1_1Processor.html">Processor</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTools_1_1RandomTreeProcessorFactory.html#a7c9621404aa9431bd6b8336e6bac88f8">GenerateProcessor</a> (int user_id)</td></tr>
 <tr class="separator:a7c9621404aa9431bd6b8336e6bac88f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Factory for RandomTreeProcessor </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><p>Generates RandomTreeProcessor using <a class="el" href="classTools_1_1Tester.html">Tester</a> judge and RandomTree algorithm. </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classAlgorithms_1_1RandomTreeRoot.html">Algorithms::RandomTreeRoot</a> </dd>
+<dd>
+<a class="el" href="classTools_1_1Tester.html">Tools::Tester</a> </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="aa50b51e813c7c4d262b5ead54e0c4451"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tools::RandomTreeProcessorFactory::RandomTreeProcessorFactory </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>moving_up_propability</em> = <code>0.75</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>diff_influence</em> = <code>0.5</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets parameter to create instance of RandomTreeProcessor, especially parameters for RandomTree algorithm. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">moving_up_propability</td><td>Probability of moving element every one level up in the tree when notified. </td></tr>
+    <tr><td class="paramname">diff_influence</td><td>Influence of difference between elements on decision to move element up. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classAlgorithms_1_1RandomTreeRoot.html">Algorithms::RandomTreeRoot</a> </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a7c9621404aa9431bd6b8336e6bac88f8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -156,7 +197,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Generates <a class="el" href="classTools_1_1Processor.html">Processor</a> for given user by its identifier </p>
+<p>Generates <a class="el" href="classTools_1_1Processor.html">Processor</a> for given user by its identifier. Child classes defines details about what algorithm and judge to use </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">user_id</td><td>Identifier of user </td></tr>
@@ -166,6 +207,15 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Instance of <a class="el" href="classTools_1_1Processor.html">Processor</a> for given user </dd></dl>
 
 <p>Implements <a class="el" href="classTools_1_1ProcessorFactory.html#a56008a0558473aa5ace05bc2b23202d5">Tools::ProcessorFactory</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTools_1_1RandomTreeProcessorFactory_a7c9621404aa9431bd6b8336e6bac88f8_cgraph.png" border="0" usemap="#classTools_1_1RandomTreeProcessorFactory_a7c9621404aa9431bd6b8336e6bac88f8_cgraph" alt=""/></div>
+<map name="classTools_1_1RandomTreeProcessorFactory_a7c9621404aa9431bd6b8336e6bac88f8_cgraph" id="classTools_1_1RandomTreeProcessorFactory_a7c9621404aa9431bd6b8336e6bac88f8_cgraph">
+<area shape="rect" id="node2" href="classBase_1_1SimpleElement.html#a3c77bcd528f49dab6b2c776550c279e5" title="Base::SimpleElement\l::GetPrototype" alt="" coords="265,5,418,46"/><area shape="rect" id="node3" href="classBase_1_1SimpleElement.html#a90848472a91d3827f2e32e04b345500b" title="Base::SimpleElement\l::SimpleElement" alt="" coords="467,5,621,46"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -179,7 +229,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>Tools</b></li><li class="navelem"><a class="el" href="classTools_1_1RandomTreeProcessorFactory.html">RandomTreeProcessorFactory</a></li>
-    <li class="footer">Generated on Sun Apr 27 2014 00:09:35 for MTFthesisstudies by
+    <li class="footer">Generated on Tue Apr 29 2014 02:24:00 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

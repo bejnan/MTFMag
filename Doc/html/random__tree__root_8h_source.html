@@ -104,65 +104,61 @@ $(document).ready(function(){initNavTree('random__tree__root_8h_source.html','')
 <div class="title">random_tree_root.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * RandomTreeRoot.h</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *  Created on: 3 mar 2014</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *      Author: Jakub Banaszewski</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> */</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RANDOMTREEROOT_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define RANDOMTREEROOT_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;tree_root.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;random&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef RANDOMTREEROOT_H_</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define RANDOMTREEROOT_H_</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;tree_root.h&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;random&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">using</span> std::default_random_engine;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using</span> std::uniform_real_distribution;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">using</span> std::to_string;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span>Algorithms {</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1RandomTreeRoot.html">   31</a></span>&#160;<span class="keyword">class </span><a class="code" href="classAlgorithms_1_1RandomTreeRoot.html">RandomTreeRoot</a> : <span class="keyword">public</span> <a class="code" href="classAlgorithms_1_1TreeRoot.html">TreeRoot</a> {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="classAlgorithms_1_1RandomTreeRoot.html">RandomTreeRoot</a>(shared_ptr&lt;Base::Element&gt; node_core_prototype,</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                 <span class="keyword">const</span> <span class="keywordtype">double</span> moving_up_propability = 0.75,</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                 <span class="keyword">const</span> <span class="keywordtype">double</span> diff_influence = 0.5);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classAlgorithms_1_1RandomTreeRoot.html">RandomTreeRoot</a>();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keyword">using</span> <a class="code" href="classAlgorithms_1_1TreeRoot.html#a533a6da1910783760115e22444972870">TreeRoot::NotifyContent</a>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">using</span> <a class="code" href="classAlgorithms_1_1TreeRoot.html#ac6021c5b3b8f486519a47363fcebc64e">TreeRoot::GetContentPosition</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">using</span> <a class="code" href="classAlgorithms_1_1TreeRoot.html#a03e7442127a0fd46d07f5f6181d4c54c">TreeRoot::AddElement</a>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">using</span> <a class="code" href="classAlgorithms_1_1TreeRoot.html#a838986d4c05be2712ae7239d2a7eb678">TreeRoot::HaveElement</a>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">string</span> <a class="code" href="classAlgorithms_1_1RandomTreeRoot.html#a2406eb96b18e1d6b1e811eb0a0e26906">AlgorithmName</a>();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classAlgorithms_1_1RandomTreeRoot.html#ad58df5655e1890e486e44124b4e12a8e">MoveFromPositionToFront</a>(<span class="keywordtype">int</span> position);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">using</span> <a class="code" href="classAlgorithms_1_1TreeRoot.html#ab4e31292b12dcac9992f11446513499a">TreeRoot::SwapElementsOnPositions</a>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keyword">using</span> <a class="code" href="classAlgorithms_1_1TreeRoot.html#a9c6ca52000c858de064b48a8c0e0c46b">TreeRoot::SortElementToList</a>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keyword">using</span> <a class="code" href="classAlgorithms_1_1TreeRoot.html#acc3339facfca0b8f0e98c48fededb783">TreeRoot::CompareElementsOnPositions</a>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; <span class="keyword">private</span> :</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">string</span> ALGORITHM_NAME;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="comment">// Random utilities</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  default_random_engine generator_;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  uniform_real_distribution&lt;double&gt; distribution_;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">int</span> notification_counter_;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">double</span> MOVING_UP_PROPABILITY;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">double</span> DIFF_INFLUENCE;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;} <span class="comment">/* namespace Algorithms */</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* RANDOMTREEROOT_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using</span> std::default_random_engine;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using</span> std::uniform_real_distribution;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">using</span> std::to_string;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span>Algorithms {</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1RandomTreeRoot.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="classAlgorithms_1_1RandomTreeRoot.html">RandomTreeRoot</a> : <span class="keyword">public</span> <a class="code" href="classAlgorithms_1_1TreeRoot.html">TreeRoot</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <a class="code" href="classAlgorithms_1_1RandomTreeRoot.html">RandomTreeRoot</a>(shared_ptr&lt;Base::Element&gt; node_core_prototype,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                 <span class="keyword">const</span> <span class="keywordtype">double</span> moving_up_propability = 0.75,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                 <span class="keyword">const</span> <span class="keywordtype">double</span> diff_influence = 0.5);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classAlgorithms_1_1RandomTreeRoot.html">RandomTreeRoot</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keyword">using</span> <a class="code" href="classAlgorithms_1_1TreeRoot.html#a533a6da1910783760115e22444972870">TreeRoot::NotifyContent</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">using</span> <a class="code" href="classAlgorithms_1_1TreeRoot.html#ac6021c5b3b8f486519a47363fcebc64e">TreeRoot::GetContentPosition</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">using</span> <a class="code" href="classAlgorithms_1_1TreeRoot.html#a03e7442127a0fd46d07f5f6181d4c54c">TreeRoot::AddElement</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">using</span> <a class="code" href="classAlgorithms_1_1TreeRoot.html#a838986d4c05be2712ae7239d2a7eb678">TreeRoot::HaveElement</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">string</span> <a class="code" href="classAlgorithms_1_1RandomTreeRoot.html#a2406eb96b18e1d6b1e811eb0a0e26906">AlgorithmName</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classAlgorithms_1_1RandomTreeRoot.html#ad58df5655e1890e486e44124b4e12a8e">MoveFromPositionToFront</a>(<span class="keywordtype">int</span> position);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">using</span> <a class="code" href="classAlgorithms_1_1TreeRoot.html#ab4e31292b12dcac9992f11446513499a">TreeRoot::SwapElementsOnPositions</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keyword">using</span> <a class="code" href="classAlgorithms_1_1TreeRoot.html#a9c6ca52000c858de064b48a8c0e0c46b">TreeRoot::SortElementToList</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">using</span> <a class="code" href="classAlgorithms_1_1TreeRoot.html#acc3339facfca0b8f0e98c48fededb783">TreeRoot::CompareElementsOnPositions</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; <span class="keyword">private</span> :</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">string</span> ALGORITHM_NAME;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  default_random_engine generator_;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  uniform_real_distribution&lt;double&gt; distribution_;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordtype">int</span> notification_counter_;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">double</span> MOVING_UP_PROBABILITY;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">double</span> DIFF_INFLUENCE;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;} <span class="comment">/* namespace Algorithms */</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* RANDOMTREEROOT_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="classAlgorithms_1_1TreeRoot_html_ac6021c5b3b8f486519a47363fcebc64e"><div class="ttname"><a href="classAlgorithms_1_1TreeRoot.html#ac6021c5b3b8f486519a47363fcebc64e">Algorithms::TreeRoot::GetContentPosition</a></div><div class="ttdeci">virtual int GetContentPosition(int user_id)</div><div class="ttdef"><b>Definition:</b> tree_root.cpp:37</div></div>
-<div class="ttc" id="classAlgorithms_1_1RandomTreeRoot_html_ad58df5655e1890e486e44124b4e12a8e"><div class="ttname"><a href="classAlgorithms_1_1RandomTreeRoot.html#ad58df5655e1890e486e44124b4e12a8e">Algorithms::RandomTreeRoot::MoveFromPositionToFront</a></div><div class="ttdeci">virtual void MoveFromPositionToFront(int position)</div><div class="ttdef"><b>Definition:</b> random_tree_root.cpp:31</div></div>
+<div class="ttc" id="classAlgorithms_1_1RandomTreeRoot_html_ad58df5655e1890e486e44124b4e12a8e"><div class="ttname"><a href="classAlgorithms_1_1RandomTreeRoot.html#ad58df5655e1890e486e44124b4e12a8e">Algorithms::RandomTreeRoot::MoveFromPositionToFront</a></div><div class="ttdeci">virtual void MoveFromPositionToFront(int position)</div><div class="ttdef"><b>Definition:</b> random_tree_root.cpp:24</div></div>
 <div class="ttc" id="classAlgorithms_1_1TreeRoot_html_a03e7442127a0fd46d07f5f6181d4c54c"><div class="ttname"><a href="classAlgorithms_1_1TreeRoot.html#a03e7442127a0fd46d07f5f6181d4c54c">Algorithms::TreeRoot::AddElement</a></div><div class="ttdeci">virtual void AddElement(int user_id)</div><div class="ttdef"><b>Definition:</b> tree_root.cpp:45</div></div>
 <div class="ttc" id="classAlgorithms_1_1TreeRoot_html_a533a6da1910783760115e22444972870"><div class="ttname"><a href="classAlgorithms_1_1TreeRoot.html#a533a6da1910783760115e22444972870">Algorithms::TreeRoot::NotifyContent</a></div><div class="ttdeci">virtual void NotifyContent(int user_id)</div><div class="ttdef"><b>Definition:</b> tree_root.cpp:23</div></div>
 <div class="ttc" id="classAlgorithms_1_1TreeRoot_html_a9c6ca52000c858de064b48a8c0e0c46b"><div class="ttname"><a href="classAlgorithms_1_1TreeRoot.html#a9c6ca52000c858de064b48a8c0e0c46b">Algorithms::TreeRoot::SortElementToList</a></div><div class="ttdeci">void SortElementToList()</div><div class="ttdef"><b>Definition:</b> tree_root.cpp:85</div></div>
 <div class="ttc" id="classAlgorithms_1_1TreeRoot_html_ab4e31292b12dcac9992f11446513499a"><div class="ttname"><a href="classAlgorithms_1_1TreeRoot.html#ab4e31292b12dcac9992f11446513499a">Algorithms::TreeRoot::SwapElementsOnPositions</a></div><div class="ttdeci">virtual void SwapElementsOnPositions(int position1, int position2)</div><div class="ttdef"><b>Definition:</b> tree_root.cpp:69</div></div>
-<div class="ttc" id="classAlgorithms_1_1RandomTreeRoot_html_a2406eb96b18e1d6b1e811eb0a0e26906"><div class="ttname"><a href="classAlgorithms_1_1RandomTreeRoot.html#a2406eb96b18e1d6b1e811eb0a0e26906">Algorithms::RandomTreeRoot::AlgorithmName</a></div><div class="ttdeci">virtual string AlgorithmName()</div><div class="ttdef"><b>Definition:</b> random_tree_root.cpp:26</div></div>
+<div class="ttc" id="classAlgorithms_1_1RandomTreeRoot_html_a2406eb96b18e1d6b1e811eb0a0e26906"><div class="ttname"><a href="classAlgorithms_1_1RandomTreeRoot.html#a2406eb96b18e1d6b1e811eb0a0e26906">Algorithms::RandomTreeRoot::AlgorithmName</a></div><div class="ttdeci">virtual string AlgorithmName()</div><div class="ttdef"><b>Definition:</b> random_tree_root.cpp:19</div></div>
 <div class="ttc" id="classAlgorithms_1_1TreeRoot_html_acc3339facfca0b8f0e98c48fededb783"><div class="ttname"><a href="classAlgorithms_1_1TreeRoot.html#acc3339facfca0b8f0e98c48fededb783">Algorithms::TreeRoot::CompareElementsOnPositions</a></div><div class="ttdeci">int CompareElementsOnPositions(int position1, int position2)</div><div class="ttdef"><b>Definition:</b> tree_root.cpp:109</div></div>
-<div class="ttc" id="classAlgorithms_1_1RandomTreeRoot_html"><div class="ttname"><a href="classAlgorithms_1_1RandomTreeRoot.html">Algorithms::RandomTreeRoot</a></div><div class="ttdef"><b>Definition:</b> random_tree_root.h:31</div></div>
+<div class="ttc" id="classAlgorithms_1_1RandomTreeRoot_html"><div class="ttname"><a href="classAlgorithms_1_1RandomTreeRoot.html">Algorithms::RandomTreeRoot</a></div><div class="ttdef"><b>Definition:</b> random_tree_root.h:24</div></div>
 <div class="ttc" id="classAlgorithms_1_1TreeRoot_html_a838986d4c05be2712ae7239d2a7eb678"><div class="ttname"><a href="classAlgorithms_1_1TreeRoot.html#a838986d4c05be2712ae7239d2a7eb678">Algorithms::TreeRoot::HaveElement</a></div><div class="ttdeci">virtual bool HaveElement(int user_id)</div><div class="ttdef"><b>Definition:</b> tree_root.cpp:54</div></div>
 <div class="ttc" id="classAlgorithms_1_1TreeRoot_html"><div class="ttname"><a href="classAlgorithms_1_1TreeRoot.html">Algorithms::TreeRoot</a></div><div class="ttdef"><b>Definition:</b> tree_root.h:38</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -171,7 +167,7 @@ $(document).ready(function(){initNavTree('random__tree__root_8h_source.html','')
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_c0ce462e37efe0a8d60c01d75f78f8a0.html">algorithms</a></li><li class="navelem"><a class="el" href="dir_28569356594ebf783e456e8bf5451db1.html">tree</a></li><li class="navelem"><b>random_tree_root.h</b></li>
-    <li class="footer">Generated on Sun Apr 27 2014 00:09:33 for MTFthesisstudies by
+    <li class="footer">Generated on Tue Apr 29 2014 02:24:00 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

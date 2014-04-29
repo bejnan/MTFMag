@@ -16,7 +16,9 @@
 namespace Tools {
 
 /**
- * Class to generate TreeProcessor instances
+ * Generates TreeProcessor using Tester judge and Tree algorithm.
+ * @see Algorithms::TreeRoot
+ * @see Tools::Tester
  */
 class TreeProcessorFactory : public Tools::ProcessorFactory {
  public:

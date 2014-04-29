@@ -104,47 +104,39 @@ $(document).ready(function(){initNavTree('matrix__mtf__processor__factory_8h_sou
 <div class="title">matrix_mtf_processor_factory.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * MatrixMTFProcessorFactory.h</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *  Created on: Mar 22, 2014</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *      Author: Jakub Banaszewski</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef MATRIXMTFPROCESSORFACTORY_H_</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MATRIXMTFPROCESSORFACTORY_H_</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../processor_factory.h&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../processors/matrix_mtf_processor.h&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">using</span> std::to_string;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>Tools {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classTools_1_1MatrixMTFProcessorFactory.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTools_1_1MatrixMTFProcessorFactory.html">MatrixMTFProcessorFactory</a> : <span class="keyword">public</span> <a class="code" href="classTools_1_1ProcessorFactory.html">Tools::ProcessorFactory</a>{</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <a class="code" href="classTools_1_1MatrixMTFProcessorFactory.html">MatrixMTFProcessorFactory</a>(<span class="keywordtype">int</span> matrix_width = 2);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classTools_1_1MatrixMTFProcessorFactory.html">MatrixMTFProcessorFactory</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">virtual</span> shared_ptr&lt;Processor&gt; <a class="code" href="classTools_1_1MatrixMTFProcessorFactory.html#a5ddc563317ede13d07f506af24c18e1b">GenerateProcessor</a>(<span class="keywordtype">int</span> user_id);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;   <span class="keywordtype">string</span> algorithm_name_;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;   <span class="keywordtype">int</span> matrix_width_;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef MATRIXMTFPROCESSORFACTORY_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MATRIXMTFPROCESSORFACTORY_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../processor_factory.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../../headers/algorithms.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../../headers/elements.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../judges.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>Tools {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classTools_1_1MatrixMTFProcessorFactory.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTools_1_1MatrixMTFProcessorFactory.html">MatrixMTFProcessorFactory</a> : <span class="keyword">public</span> <a class="code" href="classTools_1_1ProcessorFactory.html">Tools::ProcessorFactory</a>{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="classTools_1_1MatrixMTFProcessorFactory.html#a3f78b095660bdc56b8a8fb4ccfb864ad">MatrixMTFProcessorFactory</a>(<span class="keywordtype">int</span> matrix_width = 2);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classTools_1_1MatrixMTFProcessorFactory.html">MatrixMTFProcessorFactory</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">virtual</span> shared_ptr&lt;Processor&gt; <a class="code" href="classTools_1_1MatrixMTFProcessorFactory.html#a5ddc563317ede13d07f506af24c18e1b">GenerateProcessor</a>(<span class="keywordtype">int</span> user_id);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;   <span class="keywordtype">int</span> matrix_width_;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;} <span class="comment">/* namespace Tools */</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;} <span class="comment">/* namespace Tools */</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* MATRIXMTFPROCESSORFACTORY_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* MATRIXMTFPROCESSORFACTORY_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="classTools_1_1ProcessorFactory_html"><div class="ttname"><a href="classTools_1_1ProcessorFactory.html">Tools::ProcessorFactory</a></div><div class="ttdef"><b>Definition:</b> processor_factory.h:26</div></div>
-<div class="ttc" id="classTools_1_1MatrixMTFProcessorFactory_html_a5ddc563317ede13d07f506af24c18e1b"><div class="ttname"><a href="classTools_1_1MatrixMTFProcessorFactory.html#a5ddc563317ede13d07f506af24c18e1b">Tools::MatrixMTFProcessorFactory::GenerateProcessor</a></div><div class="ttdeci">virtual shared_ptr&lt; Processor &gt; GenerateProcessor(int user_id)</div><div class="ttdef"><b>Definition:</b> matrix_mtf_processor_factory.cpp:20</div></div>
-<div class="ttc" id="classTools_1_1MatrixMTFProcessorFactory_html"><div class="ttname"><a href="classTools_1_1MatrixMTFProcessorFactory.html">Tools::MatrixMTFProcessorFactory</a></div><div class="ttdef"><b>Definition:</b> matrix_mtf_processor_factory.h:22</div></div>
+<div class="ttc" id="classTools_1_1MatrixMTFProcessorFactory_html_a5ddc563317ede13d07f506af24c18e1b"><div class="ttname"><a href="classTools_1_1MatrixMTFProcessorFactory.html#a5ddc563317ede13d07f506af24c18e1b">Tools::MatrixMTFProcessorFactory::GenerateProcessor</a></div><div class="ttdeci">virtual shared_ptr&lt; Processor &gt; GenerateProcessor(int user_id)</div><div class="ttdef"><b>Definition:</b> matrix_mtf_processor_factory.cpp:19</div></div>
+<div class="ttc" id="classTools_1_1MatrixMTFProcessorFactory_html_a3f78b095660bdc56b8a8fb4ccfb864ad"><div class="ttname"><a href="classTools_1_1MatrixMTFProcessorFactory.html#a3f78b095660bdc56b8a8fb4ccfb864ad">Tools::MatrixMTFProcessorFactory::MatrixMTFProcessorFactory</a></div><div class="ttdeci">MatrixMTFProcessorFactory(int matrix_width=2)</div><div class="ttdef"><b>Definition:</b> matrix_mtf_processor_factory.cpp:12</div></div>
+<div class="ttc" id="classTools_1_1MatrixMTFProcessorFactory_html"><div class="ttname"><a href="classTools_1_1MatrixMTFProcessorFactory.html">Tools::MatrixMTFProcessorFactory</a></div><div class="ttdef"><b>Definition:</b> matrix_mtf_processor_factory.h:16</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4eeb864c4eec08c7d6b9d3b0352cfdde.html">tools</a></li><li class="navelem"><a class="el" href="dir_379b3e8dd595c333dabfddafe875eef6.html">processor_factories</a></li><li class="navelem"><b>matrix_mtf_processor_factory.h</b></li>
-    <li class="footer">Generated on Sun Apr 27 2014 00:09:33 for MTFthesisstudies by
+    <li class="footer">Generated on Tue Apr 29 2014 02:24:00 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

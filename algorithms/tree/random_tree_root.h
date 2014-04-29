@@ -1,10 +1,3 @@
-/*
- * RandomTreeRoot.h
- *
- *  Created on: 3 mar 2014
- *      Author: Jakub Banaszewski
- */
-
 #ifndef RANDOMTREEROOT_H_
 #define RANDOMTREEROOT_H_
 
@@ -41,6 +34,16 @@ class RandomTreeRoot : public TreeRoot {
   using TreeRoot::HaveElement;
   virtual string AlgorithmName();
  protected:
+  /**
+   * Different mechanism that equivalent in TreeRoot.
+   * Every time element is about to move one level up
+   * algorithm draws if it happens or movement stops.
+   * Draw could be influence by difference between elements.
+   * @param position Start position of notified element to move up
+   *
+   * @see RandomTreeRoot::DIFF_INFLUENCE
+   * @see Element::Difference
+   */
   virtual void MoveFromPositionToFront(int position);
   using TreeRoot::SwapElementsOnPositions;
   using TreeRoot::SortElementToList;
@@ -49,11 +52,21 @@ class RandomTreeRoot : public TreeRoot {
   /** Name identifier for algorithm */
   static const string ALGORITHM_NAME;
 
-  // Random utilities
+  /** Generator of random decisions*/
   default_random_engine generator_;
+
+  /** Defines range of draw result*/
   uniform_real_distribution<double> distribution_;
+
+  /** Counter of number of notifications */
   int notification_counter_;
-  const double MOVING_UP_PROPABILITY;
+
+  /** Probability of moving element one more level up */
+  const double MOVING_UP_PROBABILITY;
+
+  /** Influence on decision of moving element up by difference between
+   * elements. If DIFF_INFLUENCE is large value element much bigger then
+   * notified one could stop moving up process */
   const double DIFF_INFLUENCE;
 };
 

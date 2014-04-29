@@ -1,10 +1,3 @@
-/*
- * MTFProcessorFactory.h
- *
- *  Created on: Mar 3, 2014
- *      Author: Jakub Banaszewski
- */
-
 #ifndef MTFPROCESSORFACTORY_H_
 #define MTFPROCESSORFACTORY_H_
 
@@ -15,7 +8,10 @@
 
 namespace Tools {
 /**
- * Factory for MTFProcessor class that uses classic Move To Front algorithm.
+ * Factory for MTFProcessor class that uses Move To Front algorithm with
+ * Tester judge.
+ * @see Algorithms::MoveToFront
+ * @see Tools::Tester
  */
 class MTFProcessorFactory : public Tools::ProcessorFactory {
  public:
