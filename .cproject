@@ -53,7 +53,7 @@
 						<entry excluding="elements|data_managment|move_to_front|matrix|Processors|tools|algorithms|tree|processor_factories|main_test.cpp|headers|processors|judges|exceptions" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 						<entry excluding="move_to_front|matrix|tree" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms"/>
 						<entry excluding="mtf_matrix_test.cpp|MTFMatrix_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms/matrix"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms/move_to_front"/>
+						<entry excluding="move_to_front_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms/move_to_front"/>
 						<entry excluding="tree_root_test.cpp|TreeRoot_test.cpp|TreeFactory_test.cpp|Root_test.cpp|Node_test.cpp|LTree_test.cpp|FTree_test.cpp|TreeFaktory_test.cpp|Leaf_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms/tree"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="data_managment"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="elements"/>
@@ -110,7 +110,7 @@
 						<entry excluding="move_to_front|Processors|matrix|tools|algorithms|tree|processor_factories|main_test.cpp|headers|processors|judges|exceptions" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 						<entry excluding="move_to_front|matrix|tree" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms"/>
 						<entry excluding="mtf_matrix_test.cpp|MTFMatrix_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms/matrix"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms/move_to_front"/>
+						<entry excluding="move_to_front_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms/move_to_front"/>
 						<entry excluding="tree_root_test.cpp|TreeRoot_test.cpp|Root_test.cpp|TreeFactory_test.cpp|Node_test.cpp|LTree_test.cpp|FTree_test.cpp|Leaf_test.cpp|TreeFaktory_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms/tree"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="exceptions"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="headers"/>

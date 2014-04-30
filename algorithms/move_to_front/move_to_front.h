@@ -61,7 +61,7 @@ class MoveToFront : public Algorithm {
   vector<shared_ptr<Base::Element> > algorithm_elements_;
 
   /** Map to locate element's position by it's id */
-  map<int, int> element_postion_;
+  map<int, int> element_position_;
 
   /** Generator of new elements (new added to algorithm) */
   shared_ptr<Base::Element> element_prototype_;

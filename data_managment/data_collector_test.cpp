@@ -41,7 +41,7 @@ BOOST_AUTO_TEST_CASE(DataCollectorTreeProcessor) {
   shared_ptr<Tools::ProcessorFactory> processors_shared_ptr(processor);
   data_collector.AddProccessorFactory(processors_shared_ptr);
   //test
-  int result = RunTurnsAndReturnPenalty(23, data_collector);
+  int result = RunTurnsAndReturnPenalty(22, data_collector);
   BOOST_CHECK_EQUAL(result, 1);
 }
 
@@ -59,7 +59,7 @@ BOOST_AUTO_TEST_CASE(DataCollectorMTFProcessor) {
   data_collector.AddProccessorFactory(processors_shared_ptr);
 
   //test
-  int result = RunTurnsAndReturnPenalty(24, data_collector);
+  int result = RunTurnsAndReturnPenalty(23, data_collector);
   BOOST_CHECK_EQUAL(result, 1);
 }
 
