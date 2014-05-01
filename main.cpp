@@ -31,12 +31,21 @@ int main(int argc, char** argv) {
       Base::DataOutputBuilder::GetInstance();
   data_output_builder->SetCsvOutputFormat('|');
   Base::DataCollector dc(file_data_provider, data_output_builder->Generate());
+
+  /* Set processor section */
   Tools::ProcessorFactory* proc_fact = new Tools::TreeProcessorFactory();
   dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
 
-  proc_fact = new Tools::RandomTreeProcessorFactory(0, 0);
+  proc_fact = new Tools::RandomTreeProcessorFactory(0.2, 1);
   dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
 
+  proc_fact = new Tools::MatrixMTFProcessorFactory(2);
+  dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
+
+  proc_fact = new Tools::MTFProcessorFactory();
+  dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
+
+  /* End of processors section */
   dc.RunTurns(learn_runs, true);
 
   for (int i = 0; i < test_runs / step_size; i++) {

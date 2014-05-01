@@ -17,8 +17,8 @@ RandomTreeRoot::~RandomTreeRoot() {
 }
 
 string RandomTreeRoot::AlgorithmName() {
-  return RandomTreeRoot::ALGORITHM_NAME + " " + to_string(MOVING_UP_PROBABILITY) + " "
-      + to_string(DIFF_INFLUENCE);
+  return RandomTreeRoot::ALGORITHM_NAME + " " + (to_string(MOVING_UP_PROBABILITY)).substr(0,4) + " "
+      + (to_string(DIFF_INFLUENCE)).substr(0,4);
 }
 
 void RandomTreeRoot::MoveFromPositionToFront(int position) {
