@@ -7,7 +7,7 @@
 
 #include "data_collector.h"
 #include "file_data_provider.h"
-#include "data_output_builder.h"
+#include "data_outputs.h"
 
 #include "../headers/tools.h"
 #include "../headers/exceptions.h"

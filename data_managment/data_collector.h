@@ -3,7 +3,7 @@
 
 #include "data_provider.h"
 #include "database.h"
-#include "data_output.h"
+#include "data_outputs.h"
 #include "../headers/tools.h"
 
 #include <sstream>
