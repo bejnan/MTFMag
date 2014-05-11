@@ -1,21 +1,14 @@
-/*
- * file_program_runner.cpp
- *
- *  Created on: May 2, 2014
- *      Author: kuba
- */
-
 #include "file_program_runner.h"
 
 namespace Base {
 
-FileProgramRunner::FileProgramRunner() {
+FileProgramRunner::FileProgramRunner(string file_path) {
   // TODO Auto-generated constructor stub
 
 }
 
 FileProgramRunner::~FileProgramRunner() {
-  // TODO Auto-generated destructor stub
+
 }
 
 void FileProgramRunner::SetProgram() {

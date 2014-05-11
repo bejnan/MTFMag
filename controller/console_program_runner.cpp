@@ -34,7 +34,7 @@ void ConsoleProgramRunner::SetTestTurns(int turn_amount) {
 
 }
 
-void ConsoleProgramRunner::SetResultFrequency(int period) {
+void ConsoleProgramRunner::SetResultOutputFrequency(int period) {
 
 }
 

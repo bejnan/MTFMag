@@ -44,5 +44,9 @@ var hierarchy =
       [ "Tools::MTFProcessorFactory", "classTools_1_1MTFProcessorFactory.html", null ],
       [ "Tools::RandomTreeProcessorFactory", "classTools_1_1RandomTreeProcessorFactory.html", null ],
       [ "Tools::TreeProcessorFactory", "classTools_1_1TreeProcessorFactory.html", null ]
+    ] ],
+    [ "Base::ProgramRunner", "classBase_1_1ProgramRunner.html", [
+      [ "Base::ConsoleProgramRunner", "classBase_1_1ConsoleProgramRunner.html", null ],
+      [ "Base::FileProgramRunner", "classBase_1_1FileProgramRunner.html", null ]
     ] ]
 ];

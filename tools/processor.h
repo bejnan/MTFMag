@@ -47,6 +47,7 @@ class Processor {
    * source of notification the same as Processor represent.
    * @param learn Flag for penalty counter. Algorithm could have time to
    * "learn" user choices and then no penalty is given.
+   * @see Tools::Processor::Proceed
    */
   virtual void Proceed(int user_id, bool learn = false);
 

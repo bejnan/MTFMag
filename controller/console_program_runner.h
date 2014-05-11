@@ -1,10 +1,3 @@
-/*
- * ConsoleProgramRunner.h
- *
- *  Created on: May 2, 2014
- *      Author: kuba
- */
-
 #ifndef CONSOLEPROGRAMRUNNER_H_
 #define CONSOLEPROGRAMRUNNER_H_
 
@@ -12,6 +5,12 @@
 
 namespace Base {
 
+/**
+ * Aim of class is to read and prepare configuration
+ * by console interaction with user. For more details
+ * see base class.
+ * @see ProgramRunner
+ */
 class ConsoleProgramRunner : public ProgramRunner {
  public:
   ConsoleProgramRunner();
@@ -28,7 +27,7 @@ class ConsoleProgramRunner : public ProgramRunner {
 
   virtual void SetTestTurns(int turn_amount);
 
-  virtual void SetResultFrequency(int period);
+  virtual void SetResultOutputFrequency(int period);
 
   virtual void SetResultDetails(int value);
 

@@ -1,10 +1,3 @@
-/*
- * file_program_runner.h
- *
- *  Created on: May 2, 2014
- *      Author: kuba
- */
-
 #ifndef FILE_PROGRAM_RUNNER_H_
 #define FILE_PROGRAM_RUNNER_H_
 
@@ -12,9 +5,15 @@
 
 namespace Base {
 
+/**
+ * Reads configuration of all elements from file given by path.
+ * Sets all elements needed to run program and run it.
+ * Configuration file is only interaction with user. After
+ * reading file program should work independently.
+ */
 class FileProgramRunner : public ProgramRunner {
  public:
-  FileProgramRunner();
+  FileProgramRunner(string file_path);
   virtual ~FileProgramRunner();
 
   virtual void SetProgram();
