@@ -52,6 +52,8 @@ class Tester : public Judge {
    */
   virtual list<pair<int, int> > PenaltyDetails();
 
+  virtual shared_ptr<Judge> Clone();
+
  private:
   unsigned int first_page_list_size_; /**< Size of first page
    (with no penalty)      */

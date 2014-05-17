@@ -8,6 +8,7 @@
 #include "database.h"
 #include "../headers/tools.h"
 #include "../headers/exceptions.h"
+#include "../headers/algorithms.h"
 
 #define BOOST_TEST_DYN_LINK
 
@@ -23,7 +24,12 @@ BOOST_AUTO_TEST_SUITE(Database)
 //Check if simple add to Database works
 BOOST_AUTO_TEST_CASE(AddToBase) {
   Base::Database base;
-  Tools::TreeProcessorFactory tree_factory;
+  Algorithms::Algorithm* algorithm = new Algorithms::MoveToFront(
+      Base::SimpleElement::GetPrototype());
+  Tools::Judge* judge = new Tools::Tester(20, 20);
+  shared_ptr<Algorithms::Algorithm> algorithm_ptr(algorithm);
+  shared_ptr<Tools::Judge> judge_ptr(judge);
+  Tools::ProcessorFactory tree_factory(algorithm_ptr, judge_ptr);
 
   shared_ptr<Tools::Processor> processor_ptr = tree_factory.GenerateProcessor(
       1);
@@ -48,8 +54,17 @@ BOOST_AUTO_TEST_CASE(ExistFalse) {
 //Check if Exists works (harder test)
 BOOST_AUTO_TEST_CASE(Exist2) {
   Base::Database base;
-  Tools::TreeProcessorFactory tree_factory;
-  Tools::MTFProcessorFactory mtf_factory;
+  Algorithms::Algorithm* algorithm = new Algorithms::TreeRoot(
+      Base::SimpleElement::GetPrototype());
+  Tools::Judge* judge = new Tools::Tester(20, 20);
+  shared_ptr<Algorithms::Algorithm> algorithm_ptr(algorithm);
+  shared_ptr<Tools::Judge> judge_ptr(judge);
+  Tools::ProcessorFactory tree_factory(algorithm_ptr, judge_ptr);
+
+  algorithm = new Algorithms::MoveToFront(Base::SimpleElement::GetPrototype());
+
+  shared_ptr<Algorithms::Algorithm> mtf_algorithm_ptr(algorithm);
+  Tools::ProcessorFactory mtf_factory(mtf_algorithm_ptr, judge_ptr);
 
   shared_ptr<Tools::Processor> processor_ptr = tree_factory.GenerateProcessor(
       1);
@@ -66,8 +81,17 @@ BOOST_AUTO_TEST_CASE(Exist2) {
 //Check QueryKeys method
 BOOST_AUTO_TEST_CASE(QueryKeys) {
   Base::Database base;
-  Tools::TreeProcessorFactory tree_factory;
-  Tools::MTFProcessorFactory mtf_factory;
+  Algorithms::Algorithm* algorithm = new Algorithms::TreeRoot(
+      Base::SimpleElement::GetPrototype());
+  Tools::Judge* judge = new Tools::Tester(20, 20);
+  shared_ptr<Algorithms::Algorithm> algorithm_ptr(algorithm);
+  shared_ptr<Tools::Judge> judge_ptr(judge);
+  Tools::ProcessorFactory tree_factory(algorithm_ptr, judge_ptr);
+
+  algorithm = new Algorithms::MoveToFront(Base::SimpleElement::GetPrototype());
+
+  shared_ptr<Algorithms::Algorithm> mtf_algorithm_ptr(algorithm);
+  Tools::ProcessorFactory mtf_factory(mtf_algorithm_ptr, judge_ptr);
 
   // list of expected elements
   list<string> expected_processors;
@@ -94,13 +118,22 @@ BOOST_AUTO_TEST_CASE(QueryKeys) {
 //Check QueryKeys method (more complex example)
 BOOST_AUTO_TEST_CASE(QueryKeys2) {
   Base::Database base;
-  Tools::TreeProcessorFactory factory;
-  Tools::MTFProcessorFactory mtf_factory;
+  Algorithms::Algorithm* algorithm = new Algorithms::TreeRoot(
+      Base::SimpleElement::GetPrototype());
+  Tools::Judge* judge = new Tools::Tester(20, 20);
+  shared_ptr<Algorithms::Algorithm> algorithm_ptr(algorithm);
+  shared_ptr<Tools::Judge> judge_ptr(judge);
+  Tools::ProcessorFactory tree_factory(algorithm_ptr, judge_ptr);
+
+  algorithm = new Algorithms::MoveToFront(Base::SimpleElement::GetPrototype());
+  shared_ptr<Algorithms::Algorithm> mtf_algorithm_ptr(algorithm);
+  Tools::ProcessorFactory mtf_factory(mtf_algorithm_ptr, judge_ptr);
 
   list<string> expected_processors;
   vector<string> queried_processors;
 
-  shared_ptr<Tools::Processor> processor_ptr = factory.GenerateProcessor(1);
+  shared_ptr<Tools::Processor> processor_ptr = tree_factory.GenerateProcessor(
+      1);
   base.AddToBase(processor_ptr);
   expected_processors.push_front(processor_ptr->AlgorithmName());
 
@@ -111,7 +144,7 @@ BOOST_AUTO_TEST_CASE(QueryKeys2) {
   processor_ptr = mtf_factory.GenerateProcessor(2);
   base.AddToBase(processor_ptr);
 
-  processor_ptr = factory.GenerateProcessor(2);
+  processor_ptr = tree_factory.GenerateProcessor(2);
   base.AddToBase(processor_ptr);
 
   queried_processors = base.QueryAlgorithmNames();
@@ -125,10 +158,26 @@ BOOST_AUTO_TEST_CASE(QueryKeys2) {
 // Test Query method (by id)
 BOOST_AUTO_TEST_CASE(QueryById) {
   Base::Database base;
-  Tools::TreeProcessorFactory tree_factory;
-  Tools::MTFProcessorFactory mtf_factory;
-  Tools::MatrixMTFProcessorFactory matrix_factory;
-  Tools::RandomTreeProcessorFactory random_tree_factory;
+  Algorithms::Algorithm* algorithm = new Algorithms::TreeRoot(
+      Base::SimpleElement::GetPrototype());
+  Tools::Judge* judge = new Tools::Tester(20, 20);
+  shared_ptr<Algorithms::Algorithm> algorithm_ptr(algorithm);
+  shared_ptr<Tools::Judge> judge_ptr(judge);
+  Tools::ProcessorFactory tree_factory(algorithm_ptr, judge_ptr);
+
+  algorithm = new Algorithms::MoveToFront(Base::SimpleElement::GetPrototype());
+  shared_ptr<Algorithms::Algorithm> mtf_algorithm_ptr(algorithm);
+  Tools::ProcessorFactory mtf_factory(mtf_algorithm_ptr, judge_ptr);
+
+  algorithm = new Algorithms::MTFMatrix(Base::SimpleElement::GetPrototype());
+  shared_ptr<Algorithms::Algorithm> matrix_algorithm_ptr(algorithm);
+  Tools::ProcessorFactory matrix_factory(matrix_algorithm_ptr, judge_ptr);
+
+  algorithm = new Algorithms::RandomTreeRoot(
+      Base::SimpleElement::GetPrototype());
+  shared_ptr<Algorithms::Algorithm> random_tree_algorithm_ptr(algorithm);
+  Tools::ProcessorFactory random_tree_factory(random_tree_algorithm_ptr,
+                                              judge_ptr);
 
   list<shared_ptr<Tools::Processor> > expected_processors;
   vector<shared_ptr<Tools::Processor> > queried_processors;
@@ -160,7 +209,12 @@ BOOST_AUTO_TEST_CASE(QueryById) {
 //Test Query method (by string)
 BOOST_AUTO_TEST_CASE(QueryByName) {
   Base::Database base;
-  Tools::TreeProcessorFactory tree_factory;
+  Algorithms::Algorithm* algorithm = new Algorithms::TreeRoot(
+      Base::SimpleElement::GetPrototype());
+  Tools::Judge* judge = new Tools::Tester(20, 20);
+  shared_ptr<Algorithms::Algorithm> algorithm_ptr(algorithm);
+  shared_ptr<Tools::Judge> judge_ptr(judge);
+  Tools::ProcessorFactory tree_factory(algorithm_ptr, judge_ptr);
 
   list<shared_ptr<Tools::Processor> > expected_processors;
   vector<shared_ptr<Tools::Processor> > queried_processors;

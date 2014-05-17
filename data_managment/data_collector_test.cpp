@@ -11,6 +11,7 @@
 
 #include "../headers/tools.h"
 #include "../headers/exceptions.h"
+#include "../headers/algorithms.h"
 
 #define BOOST_TEST_DYN_LINK
 
@@ -37,7 +38,13 @@ BOOST_AUTO_TEST_CASE(DataCollectorTreeProcessor) {
   data_output_builder->SetCsvOutputFormat('|');
   Base::DataCollector data_collector(file_data_provider,
                                      data_output_builder->Generate());
-  Tools::ProcessorFactory* processor = new Tools::TreeProcessorFactory();
+  Algorithms::Algorithm* algorithm = new Algorithms::TreeRoot(
+      Base::SimpleElement::GetPrototype());
+  Tools::Judge* judge = new Tools::Tester(20, 20);
+  shared_ptr<Algorithms::Algorithm> algorithm_ptr(algorithm);
+  shared_ptr<Tools::Judge> judge_ptr(judge);
+  Tools::ProcessorFactory* processor = new Tools::ProcessorFactory(
+      algorithm_ptr, judge_ptr);
   shared_ptr<Tools::ProcessorFactory> processors_shared_ptr(processor);
   data_collector.AddProccessorFactory(processors_shared_ptr);
   //test
@@ -54,7 +61,14 @@ BOOST_AUTO_TEST_CASE(DataCollectorMTFProcessor) {
   data_output_builder->SetCsvOutputFormat('|');
   Base::DataCollector data_collector(file_data_provider,
                                      data_output_builder->Generate());
-  Tools::ProcessorFactory* processor = new Tools::MTFProcessorFactory();
+  Algorithms::Algorithm* algorithm = new Algorithms::MoveToFront(
+      Base::SimpleElement::GetPrototype());
+  Tools::Judge* judge = new Tools::Tester(20, 20);
+  shared_ptr<Algorithms::Algorithm> algorithm_ptr(algorithm);
+  shared_ptr<Tools::Judge> judge_ptr(judge);
+  Tools::ProcessorFactory* processor = new Tools::ProcessorFactory(
+      algorithm_ptr, judge_ptr);
+
   shared_ptr<Tools::ProcessorFactory> processors_shared_ptr(processor);
   data_collector.AddProccessorFactory(processors_shared_ptr);
 
@@ -73,7 +87,14 @@ BOOST_AUTO_TEST_CASE(DataCollectorMTFMatrixProcessor) {
   Base::DataCollector data_collector(file_data_provider,
                                      data_output_builder->Generate());
 
-  Tools::ProcessorFactory* processor = new Tools::MatrixMTFProcessorFactory(2);
+  Algorithms::Algorithm* algorithm = new Algorithms::MTFMatrix(
+      Base::SimpleElement::GetPrototype());
+  Tools::Judge* judge = new Tools::Tester(20, 20);
+  shared_ptr<Algorithms::Algorithm> algorithm_ptr(algorithm);
+  shared_ptr<Tools::Judge> judge_ptr(judge);
+  Tools::ProcessorFactory* processor = new Tools::ProcessorFactory(
+      algorithm_ptr, judge_ptr);
+
   shared_ptr<Tools::ProcessorFactory> processors_shared_ptr(processor);
   data_collector.AddProccessorFactory(processors_shared_ptr);
 

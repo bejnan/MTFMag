@@ -33,6 +33,7 @@ class RandomTreeRoot : public TreeRoot {
   using TreeRoot::AddElement;
   using TreeRoot::HaveElement;
   virtual string AlgorithmName();
+  virtual shared_ptr<Algorithm> Clone();
  protected:
   /**
    * Different mechanism that equivalent in TreeRoot.
@@ -48,6 +49,7 @@ class RandomTreeRoot : public TreeRoot {
   using TreeRoot::SwapElementsOnPositions;
   using TreeRoot::SortElementToList;
   using TreeRoot::CompareElementsOnPositions;
+  using TreeRoot::element_prototype;
  private :
   /** Name identifier for algorithm */
   static const string ALGORITHM_NAME;

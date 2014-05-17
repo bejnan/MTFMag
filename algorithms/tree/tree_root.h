@@ -53,6 +53,8 @@ class TreeRoot : public Algorithm {
 
   virtual string AlgorithmName();
 
+  virtual shared_ptr<Algorithm> Clone();
+
  protected:
   /**
    * Moves element to root of the tree in the was shown
@@ -69,6 +71,11 @@ class TreeRoot : public Algorithm {
   int CompareElementsOnPositions(int position1, int position2);
 
   double DifferenceBetweenElementsOnPosition(int position1, int position2);
+
+  shared_ptr<Base::Element> element_prototype() {
+    return element_prototype_;
+  }
+
  private:
   /** Tree implemented by array (parent is on child's position div 2) */
   vector<shared_ptr<Base::Element> > tree_list_;

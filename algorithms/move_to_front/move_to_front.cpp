@@ -48,6 +48,11 @@ string MoveToFront::AlgorithmName() {
   return MoveToFront::ALGORITHM_NAME;
 }
 
+shared_ptr<Algorithm> MoveToFront::Clone() {
+  Algorithm* new_algorithm_instance = new MoveToFront(element_prototype_);
+  return shared_ptr<Algorithm>(new_algorithm_instance);
+}
+
 void MoveToFront::MoveFromPositionToFront(int position) {
   shared_ptr<Base::Element> tmp_element;
   for (int iterator = position; iterator > 0; iterator--) {

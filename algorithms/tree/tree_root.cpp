@@ -59,6 +59,11 @@ string TreeRoot::AlgorithmName() {
   return TreeRoot::ALGORITHM_NAME;
 }
 
+shared_ptr<Algorithm> TreeRoot::Clone() {
+  Algorithm* new_algorithm_instance = new TreeRoot(element_prototype_);
+  return shared_ptr<Algorithm>(new_algorithm_instance);
+}
+
 void TreeRoot::MoveFromPositionToFront(int position) {
   while (position > 1) {
     SwapElementsOnPositions(position, position / 2);

@@ -3,7 +3,9 @@
 
 #include <list>
 #include <utility>
+#include <memory>
 
+using std::shared_ptr;
 using std::pair;
 using std::list;
 
@@ -49,6 +51,13 @@ class Judge {
    * represents time index.
    */
   virtual list<pair<int, int> > PenaltyDetails() = 0;
+
+  /**
+   * Implementation of Prototype patter to clone instance of Judge
+   * for ProcessorFactory.
+   * @see ProcessorFactory
+   */
+  virtual shared_ptr<Judge> Clone() = 0;
 };
 
 } /* namespace tools */

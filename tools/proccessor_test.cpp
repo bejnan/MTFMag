@@ -6,7 +6,9 @@
  */
 
 #include "processor.h"
-#include "processor_factories.h"
+#include "processor_factory.h"
+#include "../headers/algorithms.h"
+#include "../headers/elements.h"
 #include "../headers/exceptions.h"
 
 #define BOOST_TEST_DYN_LINK
@@ -21,8 +23,15 @@ BOOST_AUTO_TEST_SUITE(Proccessor)
 
 //Test to check TreeProcessor correctness
 BOOST_AUTO_TEST_CASE(TreeProcessorProceedTest) {
-  Tools::TreeProcessorFactory factory;
-  shared_ptr<Tools::Processor>  processor = factory.GenerateProcessor(0);
+  Algorithms::Algorithm* algorithm = new Algorithms::TreeRoot(
+      Base::SimpleElement::GetPrototype());
+  Tools::Judge* judge = new Tools::Tester(20, 20);
+  shared_ptr<Algorithms::Algorithm> algorithm_ptr(algorithm);
+  shared_ptr<Tools::Judge> judge_ptr(judge);
+
+  Tools::ProcessorFactory factory(algorithm_ptr,judge_ptr);
+
+  shared_ptr<Tools::Processor> processor = factory.GenerateProcessor(0);
   for (int i = 0; i < 20; i++) {
     processor->Proceed(i);
   }
@@ -32,14 +41,21 @@ BOOST_AUTO_TEST_CASE(TreeProcessorProceedTest) {
   // shows increase of penalty
   for (int i = 20; i >= 0; i--) {
     processor->Proceed(i);
-    BOOST_TEST_MESSAGE(i << " " << processor->GetPenalty() );
+    BOOST_TEST_MESSAGE(i << " " << processor->GetPenalty());
   }
 }
 
 //Test to check RandomTreeProcessor correctness
 BOOST_AUTO_TEST_CASE(RandomTreeProcessorProceedTest) {
-  Tools::RandomTreeProcessorFactory factory;
-  shared_ptr<Tools::Processor>  processor = factory.GenerateProcessor(0);
+  Algorithms::Algorithm* algorithm = new Algorithms::RandomTreeRoot(
+      Base::SimpleElement::GetPrototype());
+  Tools::Judge* judge = new Tools::Tester(20, 20);
+  shared_ptr<Algorithms::Algorithm> algorithm_ptr(algorithm);
+  shared_ptr<Tools::Judge> judge_ptr(judge);
+
+  Tools::ProcessorFactory factory(algorithm_ptr,judge_ptr);
+
+  shared_ptr<Tools::Processor> processor = factory.GenerateProcessor(0);
   for (int i = 0; i < 20; i++) {
     processor->Proceed(i);
   }
@@ -49,14 +65,21 @@ BOOST_AUTO_TEST_CASE(RandomTreeProcessorProceedTest) {
   // shows increase of penalty
   for (int i = 20; i >= 0; i--) {
     processor->Proceed(i);
-    BOOST_TEST_MESSAGE(i << " " << processor->GetPenalty() );
+    BOOST_TEST_MESSAGE(i << " " << processor->GetPenalty());
   }
 }
 
 //Test to check MTFMatrixProcessor correctness
 BOOST_AUTO_TEST_CASE(MTFMatrixProcessorProceedTest) {
-  Tools::MatrixMTFProcessorFactory factory;
-  shared_ptr<Tools::Processor>  processor = factory.GenerateProcessor(0);
+  Algorithms::Algorithm* algorithm = new Algorithms::MTFMatrix(
+      Base::SimpleElement::GetPrototype());
+  Tools::Judge* judge = new Tools::Tester(20, 20);
+  shared_ptr<Algorithms::Algorithm> algorithm_ptr(algorithm);
+  shared_ptr<Tools::Judge> judge_ptr(judge);
+
+  Tools::ProcessorFactory factory(algorithm_ptr,judge_ptr);
+
+  shared_ptr<Tools::Processor> processor = factory.GenerateProcessor(0);
   for (int i = 0; i < 20; i++) {
     processor->Proceed(i);
   }
@@ -66,7 +89,7 @@ BOOST_AUTO_TEST_CASE(MTFMatrixProcessorProceedTest) {
   // shows increase of penalty
   for (int i = 20; i >= 0; i--) {
     processor->Proceed(i);
-    BOOST_TEST_MESSAGE(i << " " << processor->GetPenalty() );
+    BOOST_TEST_MESSAGE(i << " " << processor->GetPenalty());
   }
 }
 

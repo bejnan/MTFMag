@@ -14,6 +14,7 @@
 #include <iostream>
 #include "headers/data_managment.h"
 #include "headers/tools.h"
+#include "headers/algorithms.h"
 
 using std::string;
 using std::stringstream;
@@ -44,14 +45,29 @@ BOOST_AUTO_TEST_CASE(True_test) {
       Base::DataOutputBuilder::GetInstance();
   data_output_builder->SetCsvOutputFormat('|');
   Base::DataCollector dc(file_data_provider, data_output_builder->Generate());
-  Tools::ProcessorFactory* proc_fact = new Tools::TreeProcessorFactory();
-  dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
+  Algorithms::Algorithm* algorithm = new Algorithms::TreeRoot(
+      Base::SimpleElement::GetPrototype());
+  Tools::Judge* judge = new Tools::Tester(20, 20);
+  shared_ptr<Algorithms::Algorithm> algorithm_ptr(algorithm);
+  shared_ptr<Tools::Judge> judge_ptr(judge);
+  Tools::ProcessorFactory* tree_factory = new Tools::ProcessorFactory(
+      algorithm_ptr, judge_ptr);
 
-  proc_fact = new Tools::MTFProcessorFactory();
-  dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
+  dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(tree_factory));
 
-  proc_fact = new Tools::RandomTreeProcessorFactory();
-  dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
+  algorithm = new Algorithms::MoveToFront(Base::SimpleElement::GetPrototype());
+  shared_ptr<Algorithms::Algorithm> mtf_algorithm_ptr(algorithm);
+  Tools::ProcessorFactory* mtf_factory = new Tools::ProcessorFactory(
+      mtf_algorithm_ptr, judge_ptr);
+  dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(mtf_factory));
+
+  algorithm = new Algorithms::RandomTreeRoot(
+      Base::SimpleElement::GetPrototype());
+  shared_ptr<Algorithms::Algorithm> random_tree_algorithm_ptr(algorithm);
+  Tools::ProcessorFactory* random_tree_factory = new Tools::ProcessorFactory(
+      random_tree_algorithm_ptr, judge_ptr);
+  dc.AddProccessorFactory(
+      shared_ptr<Tools::ProcessorFactory>(random_tree_factory));
 
   dc.RunTurns(learn_runs, true);
   vector<int> results;

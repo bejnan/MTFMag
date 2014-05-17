@@ -26,6 +26,10 @@ int Processor::GetPenalty() {
   return (penalty_judge_)->OveralPenalty();
 }
 
+list<pair< int,int > > Processor::GetPenaltyDetails() {
+  return (penalty_judge_)->PenaltyDetails();
+}
+
 string Processor::AlgorithmName() {
   return (algorithm_)->AlgorithmName();
 }

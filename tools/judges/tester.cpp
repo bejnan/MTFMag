@@ -40,4 +40,9 @@ list<pair<int, int> > Tester::PenaltyDetails() {
   return penalties_;
 }
 
+shared_ptr<Judge> Tester::Clone() {
+  Judge* new_judge_instance = new Tester(first_page_list_size_,second_page_list_size_);
+  return shared_ptr<Judge>(new_judge_instance);
+}
+
 } /* namespace Tools */

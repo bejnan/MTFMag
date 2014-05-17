@@ -16,23 +16,29 @@ using std::shared_ptr;
 
 namespace Tools {
 /**
- * Interface for creators of Processors for simple users (sources of notifications).
- * Every user that is source of notification should be represent by
- * Processor and ProcessorFactory creates that Processors.
- * It is used in DataCollector when user from input data doesn't
- * have Processor representation.
+ * Creator of Processors for simple users (sources of notifications).
+ * Every user that is a source of notification should be represent by
+ * Processor. ProcessorFactory creates that Processors for DataCollector.
+ * It is used to give every user from input representation as Processor.
  * @see Base::DataCollector
+ * @see Tools::Processor
  */
+
 class ProcessorFactory {
  public:
-  virtual ~ProcessorFactory() {   }
-  /**
+  ProcessorFactory(shared_ptr<Algorithms::Algorithm> algorithm_prototype, shared_ptr<Judge> judge_prototype);
+   ~ProcessorFactory();
+
+   /**
    * Generates Processor for given user by its identifier.
    * Child classes defines details about what algorithm and judge to use
    * @param user_id Identifier of user
    * @return Instance of Processor for given user
    */
-  virtual shared_ptr<Processor> GenerateProcessor(int user_id) = 0;
+  shared_ptr<Processor> GenerateProcessor(int user_id);
+ private :
+  shared_ptr<Algorithms::Algorithm> algorithm_prototype_;
+  shared_ptr<Judge> judge_prototype_;
 };
 
 } /* namespace Tools */

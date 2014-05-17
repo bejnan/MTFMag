@@ -36,6 +36,8 @@ class MoveToFront : public Algorithm {
 
   string AlgorithmName();
 
+  shared_ptr<Algorithm> Clone();
+
  protected:
   /**
    * Moves element from it's position to first one moving

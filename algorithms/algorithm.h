@@ -77,6 +77,14 @@ class Algorithm {
    */
   virtual string AlgorithmName() = 0;
 
+  /**
+   * Implementation of Prototype pattern. Creates new empty instance of
+   * algorithm.
+   * @return New empty instance of algorithm implementation (the same
+   * as called one).
+   */
+  virtual shared_ptr<Algorithm> Clone() = 0;
+
  protected:
   /**
    * Method to move element from given position to front (depends on algorithm).

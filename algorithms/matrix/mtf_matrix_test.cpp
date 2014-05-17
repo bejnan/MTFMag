@@ -1,10 +1,9 @@
 #define BOOST_TEST_DYN_LINK
 
 #include <boost/test/unit_test.hpp>
-#include "matrix_builder.h"
 #include "mtf_matrix.h"
+#include "../../headers/elements.h"
 
-using Algorithms::MatrixBuilder;
 using Algorithms::MTFMatrix;
 
 BOOST_AUTO_TEST_SUITE(MTFMatrix_Test)
@@ -12,8 +11,9 @@ BOOST_AUTO_TEST_SUITE(MTFMatrix_Test)
 //check correctness of adding elements to MTFMatrix
 BOOST_AUTO_TEST_CASE(AddingElement) {
   //initialization
-  shared_ptr<MatrixBuilder> builder = MatrixBuilder::GetInstance();
-  shared_ptr<MTFMatrix> matrix = builder->WithMatrixWidth(2).Generate();
+  MTFMatrix* matrix_instance = new MTFMatrix(
+      Base::Element::GetPrototype(), 2);
+  shared_ptr<MTFMatrix> matrix(matrix_instance);
   shared_ptr<Base::Element> element;
   for (int i = 1; i < 6; i++) {
     matrix->AddElement(i);
@@ -28,10 +28,9 @@ BOOST_AUTO_TEST_CASE(AddingElement) {
 //check correctness of adding elements to MTFMatrix with simple notification
 BOOST_AUTO_TEST_CASE(MTFMatrixNotifiaction) {
   //initialization
-  shared_ptr<MatrixBuilder> builder = MatrixBuilder::GetInstance();
-  shared_ptr<MTFMatrix> matrix =
-      builder->WithMatrixWidth(2).SetElementPrototype(
-          Base::Element::GetPrototype()).Generate();
+  MTFMatrix* matrix_instance = new MTFMatrix(
+      Base::Element::GetPrototype(), 2);
+  shared_ptr<MTFMatrix> matrix(matrix_instance);
 
   shared_ptr<Base::Element> element;
   for (int i = 1; i < 6; i++) {
@@ -50,10 +49,9 @@ BOOST_AUTO_TEST_CASE(MTFMatrixNotifiaction) {
 
 BOOST_AUTO_TEST_CASE(MTFMatrixTwoNotifiactions) {
   //initialization
-  shared_ptr<MatrixBuilder> builder = MatrixBuilder::GetInstance();
-  shared_ptr<MTFMatrix> matrix =
-      builder->WithMatrixWidth(2).SetElementPrototype(
-          Base::Element::GetPrototype()).Generate();
+  MTFMatrix* matrix_instance = new MTFMatrix(
+      Base::Element::GetPrototype(), 2);
+  shared_ptr<MTFMatrix> matrix(matrix_instance);
 
   shared_ptr<Base::Element> element;
   for (int i = 1; i < 6; i++) {

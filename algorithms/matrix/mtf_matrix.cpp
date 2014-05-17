@@ -2,7 +2,7 @@
 
 namespace Algorithms {
 
-MTFMatrix::MTFMatrix(int row_size, shared_ptr<Base::Element> element_prototype)
+MTFMatrix::MTFMatrix(shared_ptr<Base::Element> element_prototype, int row_size)
     : row_size_(row_size),
       element_prototype_(element_prototype) {
 }
@@ -50,6 +50,13 @@ int MTFMatrix::GetContentPosition(int user_id) {
 string MTFMatrix::AlgorithmName() {
   return ALGORITHM_NAME;
 }
+
+shared_ptr<Algorithm> MTFMatrix::Clone() {
+  Algorithm* new_algorithm_instance = new MTFMatrix(element_prototype_, row_size_);
+  return shared_ptr<Algorithm>(new_algorithm_instance);
+}
+
+
 
 void MTFMatrix::MoveFromPositionToFront(int position) {
   int min_position;

@@ -17,8 +17,16 @@ RandomTreeRoot::~RandomTreeRoot() {
 }
 
 string RandomTreeRoot::AlgorithmName() {
-  return RandomTreeRoot::ALGORITHM_NAME + " " + (to_string(MOVING_UP_PROBABILITY)).substr(0,4) + " "
-      + (to_string(DIFF_INFLUENCE)).substr(0,4);
+  return RandomTreeRoot::ALGORITHM_NAME + " "
+      + (to_string(MOVING_UP_PROBABILITY)).substr(0, 4) + " "
+      + (to_string(DIFF_INFLUENCE)).substr(0, 4);
+}
+
+shared_ptr<Algorithm> RandomTreeRoot::Clone() {
+  Algorithm* new_algorithm_instance = new RandomTreeRoot(element_prototype(),
+                                                         MOVING_UP_PROBABILITY,
+                                                         DIFF_INFLUENCE);
+  return shared_ptr<Algorithm>(new_algorithm_instance);
 }
 
 void RandomTreeRoot::MoveFromPositionToFront(int position) {

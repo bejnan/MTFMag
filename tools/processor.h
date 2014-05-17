@@ -61,6 +61,16 @@ class Processor {
    */
   virtual int GetPenalty();
 
+
+
+  /**
+   * Returns description of counted penalty. Details depends on
+   * implementation, but idea is to use first element of pair as
+   * time marker and second as measure of penalty change.
+   * @return List of pairs with time marker and penalty change
+   */
+  virtual list<pair <int,int> > GetPenaltyDetails();
+
   /**
    * Getter of algorithm name
    * @return Name of algorithm Processor represents

@@ -73,7 +73,7 @@ class MTFMatrix : public Algorithm {
    * @param row_size size of row to store elements
    * @param element_prototype Prototype to generate new elements
    */
-  MTFMatrix(int row_size, shared_ptr<Base::Element> element_prototype);
+  MTFMatrix(shared_ptr<Base::Element> element_prototype, int row_size = 2);
 
   /**
    * Default destructor. Nothing to handle.
@@ -91,6 +91,8 @@ class MTFMatrix : public Algorithm {
   int GetContentPosition(int user_id);
 
   string AlgorithmName();
+
+  virtual shared_ptr<Algorithm> Clone();
 
  protected:
   /**
