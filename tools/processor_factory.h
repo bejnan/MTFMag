@@ -9,6 +9,8 @@
 #define PROCESSORFACTORY_H_
 
 #include "processor.h"
+#include "../headers/algorithms.h"
+#include "judges.h"
 
 #include <memory>
 
@@ -36,6 +38,7 @@ class ProcessorFactory {
    * @return Instance of Processor for given user
    */
   shared_ptr<Processor> GenerateProcessor(int user_id);
+
  private :
   shared_ptr<Algorithms::Algorithm> algorithm_prototype_;
   shared_ptr<Judge> judge_prototype_;
