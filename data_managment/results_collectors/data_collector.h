@@ -1,10 +1,10 @@
 #ifndef DATACOLLECTOR_H_
 #define DATACOLLECTOR_H_
 
-#include "data_provider.h"
-#include "database.h"
-#include "data_outputs.h"
-#include "../headers/tools.h"
+#include "../data_provider.h"
+#include "../database.h"
+#include "../data_outputs.h"
+#include "../../headers/tools.h"
 
 #include <sstream>
 #include <algorithm>

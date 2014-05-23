@@ -6,12 +6,12 @@
  */
 
 #include "data_collector.h"
-#include "file_data_provider.h"
-#include "data_outputs.h"
+#include "../file_data_provider.h"
+#include "../data_outputs.h"
 
-#include "../headers/tools.h"
-#include "../headers/exceptions.h"
-#include "../headers/algorithms.h"
+#include "../../headers/tools.h"
+#include "../../headers/exceptions.h"
+#include "../../headers/algorithms.h"
 
 #define BOOST_TEST_DYN_LINK
 

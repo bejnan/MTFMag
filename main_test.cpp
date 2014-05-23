@@ -72,7 +72,7 @@ BOOST_AUTO_TEST_CASE(True_test) {
   dc.RunTurns(learn_runs, true);
   vector<int> results;
   stringstream ss;
-  //TODO!!!
+
   for (int i = 0; i < test_runs / step_size; i++) {
     dc.RunTurns(step_size);
     results = dc.GetResultsSum();

@@ -33,16 +33,39 @@ int main(int argc, char** argv) {
   Base::DataCollector dc(file_data_provider, data_output_builder->Generate());
 
   /* Set processor section */
-  Tools::ProcessorFactory* proc_fact = new Tools::TreeProcessorFactory();
+  Algorithms::Algorithm* algorithm = new Algorithms::TreeRoot(
+      Base::SimpleElement::GetPrototype());
+  Tools::Judge* judge = new Tools::Tester(20, 20);
+  shared_ptr<Algorithms::Algorithm> algorithm_ptr(algorithm);
+  shared_ptr<Tools::Judge> judge_ptr(judge);
+  Tools::ProcessorFactory* proc_fact = new Tools::ProcessorFactory(
+      algorithm_ptr, judge_ptr);
+
   dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
 
-  proc_fact = new Tools::RandomTreeProcessorFactory(0.2, 1);
+  algorithm = new Algorithms::RandomTreeRoot(
+      Base::SimpleElement::GetPrototype(), 0.2, 1);
+  judge = new Tools::Tester(20, 20);
+  algorithm_ptr = shared_ptr<Algorithms::Algorithm>(algorithm);
+  judge_ptr = shared_ptr<Tools::Judge>(judge);
+  proc_fact = new Tools::ProcessorFactory(algorithm_ptr, judge_ptr);
+
   dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
 
-  proc_fact = new Tools::MatrixMTFProcessorFactory(2);
+  algorithm = new Algorithms::MTFMatrix(Base::SimpleElement::GetPrototype());
+  judge = new Tools::Tester(20, 20);
+  algorithm_ptr = shared_ptr<Algorithms::Algorithm>(algorithm);
+  judge_ptr = shared_ptr<Tools::Judge>(judge);
+  proc_fact = new Tools::ProcessorFactory(algorithm_ptr, judge_ptr);
+
   dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
 
-  proc_fact = new Tools::MTFProcessorFactory();
+  algorithm = new Algorithms::MoveToFront(Base::SimpleElement::GetPrototype());
+  judge = new Tools::Tester(20, 20);
+  algorithm_ptr = shared_ptr<Algorithms::Algorithm>(algorithm);
+  judge_ptr = shared_ptr<Tools::Judge>(judge);
+  proc_fact = new Tools::ProcessorFactory(algorithm_ptr, judge_ptr);
+
   dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(proc_fact));
 
   /* End of processors section */
