@@ -2,6 +2,7 @@
 #define TREEROOT_H_
 
 #include "../../headers/elements.h"
+#include "../../headers/exceptions.h"
 #include "../algorithm.h"
 #include <vector>
 #include <map>

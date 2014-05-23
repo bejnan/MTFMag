@@ -17,12 +17,18 @@ MoveToFront::~MoveToFront() {
 }
 
 void MoveToFront::NotifyContent(int user_id) {
+  if (!HaveElement(user_id)) {
+      throw new Exception::NonExistingElement(user_id);
+    }
   int position = element_position_[user_id];
   algorithm_elements_[position]->Notify();
   MoveFromPositionToFront(position);
 }
 
 void MoveToFront::NotifyContent(int user_id, int notification_counter) {
+  if (!HaveElement(user_id)) {
+      throw new Exception::NonExistingElement(user_id);
+    }
   int position = element_position_[user_id];
   algorithm_elements_[position]->Notify(notification_counter);
   MoveFromPositionToFront(position);
@@ -37,6 +43,9 @@ void MoveToFront::AddElement(int user_id) {
     int position = algorithm_elements_.size();
     algorithm_elements_.push_back((element_prototype_)->Clone(user_id));
     element_position_[user_id] = position;
+  }
+  else {
+    throw new Exception::ElementAlreadyExists(user_id);
   }
 }
 

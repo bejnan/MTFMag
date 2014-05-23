@@ -2,6 +2,7 @@
 #define MOVE_TO_FRONT_H_
 
 #include "../algorithm.h"
+#include "../../headers/exceptions.h"
 
 #include <vector>
 #include <memory>

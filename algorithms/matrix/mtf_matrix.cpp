@@ -20,16 +20,24 @@ void MTFMatrix::AddElement(int user_id) {
     element_list_.push_back(new_element);
     sorted_element_list_.push_back(user_id);
     id_position_[user_id] = element_list_.size() - 1;
+  } else {
+    throw new Exception::ElementAlreadyExists(user_id);
   }
 }
 
 void MTFMatrix::NotifyContent(int user_id) {
+  if (!HaveElement(user_id)) {
+    throw new Exception::NonExistingElement(user_id);
+  }
   int position = id_position_.at(user_id);
   element_list_[position]->Notify();
   MoveFromPositionToFront(position);
 }
 
 void MTFMatrix::NotifyContent(int user_id, int notification_count) {
+  if (!HaveElement(user_id)) {
+    throw new Exception::NonExistingElement(user_id);
+  }
   int position = id_position_.at(user_id);
   element_list_[position]->Notify(notification_count);
   MoveFromPositionToFront(position);
@@ -52,11 +60,10 @@ string MTFMatrix::AlgorithmName() {
 }
 
 shared_ptr<Algorithm> MTFMatrix::Clone() {
-  Algorithm* new_algorithm_instance = new MTFMatrix(element_prototype_, row_size_);
+  Algorithm* new_algorithm_instance = new MTFMatrix(element_prototype_,
+                                                    row_size_);
   return shared_ptr<Algorithm>(new_algorithm_instance);
 }
-
-
 
 void MTFMatrix::MoveFromPositionToFront(int position) {
   int min_position;

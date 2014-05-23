@@ -21,6 +21,9 @@ TreeRoot::~TreeRoot() {
 }
 
 void TreeRoot::NotifyContent(int user_id) {
+  if (!HaveElement(user_id)) {
+    throw new Exception::NonExistingElement(user_id);
+  }
   int position = id_position_.at(user_id);
   tree_list_[position]->Notify();
   MoveFromPositionToFront(position);
@@ -28,6 +31,9 @@ void TreeRoot::NotifyContent(int user_id) {
 }
 
 void TreeRoot::NotifyContent(int user_id, int notification_counter) {
+  if (!HaveElement(user_id)) {
+    throw new Exception::NonExistingElement(user_id);
+  }
   int position = id_position_.at(user_id);
   tree_list_[position]->Notify(notification_counter);
   MoveFromPositionToFront(position);
@@ -48,6 +54,8 @@ void TreeRoot::AddElement(int user_id) {
     tree_list_.push_back(new_element);
     sorted_content_list_.push_back(user_id);
     id_position_[user_id] = tree_list_.size() - 1;
+  } else {
+    throw new Exception::ElementAlreadyExists(user_id);
   }
 }
 
@@ -116,7 +124,7 @@ int TreeRoot::CompareElementsOnPositions(int position1, int position2) {
 }
 
 double TreeRoot::DifferenceBetweenElementsOnPosition(int position1,
-                                                      int position2) {
+                                                     int position2) {
   return tree_list_[position1]->Difference(*tree_list_[position2]);
 }
 

@@ -14,5 +14,7 @@
 #include "../exceptions/file_path_exception.h"
 #include "../exceptions/invalid_index_exception.h"
 #include "../exceptions/invalid_name_exception.h"
+#include "../exceptions/element_already_exists.h"
+#include "../exceptions/non_existing_element.h"
 
 #endif /* EXCEPTIONS_H_ */
