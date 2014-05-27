@@ -29,10 +29,12 @@ namespace Base {
  */
 class Database {
  public:
-  /**
-   * Default constructor
-   */
-  Database();
+
+  static Database& GetInstance() {
+    static Database database_instance;
+    return database_instance;
+  }
+
   /**
    * Default destructor
    */
@@ -79,7 +81,19 @@ class Database {
    * @return True if there is processor for user with given id
    */
   bool Exists(int id);
+
+  /**
+   * Clears Database to make it like new instance.
+   * Used mainly for testing.
+   */
+  void ClearDatabase();
+
  private:
+
+  /**
+   * Default constructor
+   */
+  Database();
 
   /**
    * Data storage of all Processor

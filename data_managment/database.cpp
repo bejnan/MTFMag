@@ -13,11 +13,11 @@ using std::make_pair;
 
 namespace Base {
 
-Database::Database() {
+Database::~Database() {
 
 }
 
-Database::~Database() {
+Database::Database() {
 
 }
 
@@ -64,8 +64,14 @@ vector<string> Database::QueryAlgorithmNames() {
   return names;
 }
 
-bool Database::Exists(int id){
+bool Database::Exists(int id) {
   return (id_table_.find(id) != id_table_.end());
+}
+
+void Database::ClearDatabase() {
+   table_.clear();
+   id_table_.clear();
+   name_table_.clear();
 }
 
 } /* namespace Base */

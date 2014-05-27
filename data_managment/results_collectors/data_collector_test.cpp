@@ -50,6 +50,7 @@ BOOST_AUTO_TEST_CASE(DataCollectorTreeProcessor) {
   //test
   int result = RunTurnsAndReturnPenalty(22, data_collector);
   BOOST_CHECK_EQUAL(result, 1);
+  Base::Database::GetInstance().ClearDatabase();
 }
 
 //Test cooperation between DataCollector object and MTFProcessor
@@ -75,6 +76,7 @@ BOOST_AUTO_TEST_CASE(DataCollectorMTFProcessor) {
   //test
   int result = RunTurnsAndReturnPenalty(23, data_collector);
   BOOST_CHECK_EQUAL(result, 1);
+  Base::Database::GetInstance().ClearDatabase();
 }
 
 //Test cooperation between DataCollector object and MTFMatrixProcessor
@@ -101,6 +103,7 @@ BOOST_AUTO_TEST_CASE(DataCollectorMTFMatrixProcessor) {
   //test
   int result = RunTurnsAndReturnPenalty(23, data_collector);
   BOOST_CHECK_EQUAL(result, 1);
+  Base::Database::GetInstance().ClearDatabase();
 }
 
 BOOST_AUTO_TEST_SUITE_END()

@@ -1,10 +1,3 @@
-/*
- * DataCollector.cpp
- *
- *  Created on: Feb 13, 2014
- *      Author: Jakub Banaszewski
- */
-
 #include "data_collector.h"
 
 namespace Base {
@@ -22,6 +15,11 @@ DataCollector::~DataCollector() {
 void DataCollector::AddProccessorFactory(
     shared_ptr<Tools::ProcessorFactory> proc) {
   processor_factories_.push_back(proc);
+}
+
+
+void DataCollector::AddAlgorithm(shared_ptr<Algorithms::Algorithm> algorithm_ptr) {
+
 }
 
 void DataCollector::RunTurns(int turn_amount, bool learn) {
@@ -49,7 +47,7 @@ void DataCollector::PrintActualResults() {
 }
 
 vector<int> DataCollector::GetResult(int user_id) {
-  vector<shared_ptr<Tools::Processor> >& processors = processors_base_.Query(
+  vector<shared_ptr<Tools::Processor> >& processors = Database::GetInstance().Query(
       user_id);
   vector<shared_ptr<Tools::Processor> >::const_iterator processor_iterator;
   vector<int> results;
@@ -65,13 +63,14 @@ int SumPenalties(int acc, shared_ptr<Tools::Processor> processor) {
 }
 
 vector<int> DataCollector::GetResultsSum() {
-  vector<string> names = processors_base_.QueryAlgorithmNames();
+  vector<string> names = Database::GetInstance().QueryAlgorithmNames();
   vector<shared_ptr<Tools::Processor> > results;
   vector<int> resultsSum;
   int algorithms_sum = 0;
   for (vector<string>::const_iterator names_iterator = names.begin();
       names_iterator != names.end(); names_iterator++) {
-    results = processors_base_.Query(*names_iterator);
+    results = Database::GetInstance().Query(*names_iterator);
+
     algorithms_sum = accumulate(results.begin(), results.end(), 0,
                                 SumPenalties);
     resultsSum.push_back(algorithms_sum);
@@ -80,15 +79,15 @@ vector<int> DataCollector::GetResultsSum() {
 }
 
 vector<string> DataCollector::GetAlgorithmsNames() {
-  return processors_base_.QueryAlgorithmNames();
+  return Database::GetInstance().QueryAlgorithmNames();
 }
 
 void DataCollector::RunProcessor(int user_sender_id, int user_receiver_id,
                                  bool learn) {
-  if (!processors_base_.Exists(user_sender_id)) {
+  if (!Database::GetInstance().Exists(user_sender_id)) {
     AddProcessorsFromFactories(user_sender_id);
   }
-  vector<shared_ptr<Tools::Processor> >& processors = processors_base_.Query(
+  vector<shared_ptr<Tools::Processor> >& processors = Database::GetInstance().Query(
       user_sender_id);
   vector<shared_ptr<Tools::Processor> >::const_iterator processor_iterator;
   for (processor_iterator = processors.begin();
@@ -103,8 +102,8 @@ void DataCollector::AddProcessorsFromFactories(int user_id) {
   for (factory_iterator = processor_factories_.begin();
       factory_iterator != processor_factories_.end(); factory_iterator++) {
     new_processor = (*factory_iterator)->GenerateProcessor(user_id);
-    processors_base_.AddToBase(new_processor);
+    Database::GetInstance().AddToBase(new_processor);
   }
 }
 
-} /* namespace Tree */
+} /* namespace Base */

@@ -5,6 +5,7 @@
 #include "../database.h"
 #include "../data_outputs.h"
 #include "../../headers/tools.h"
+#include "../../headers/algorithms.h"
 
 #include <sstream>
 #include <algorithm>
@@ -79,6 +80,12 @@ class DataCollector {
   virtual void AddProccessorFactory(shared_ptr<Tools::ProcessorFactory> procesor_factory_ptr);
 
   /**
+   * Method to add Algorithm to judge
+   * @param algorithm_ptr
+   */
+  virtual void AddAlgorithm(shared_ptr<Algorithms::Algorithm> algorithm_ptr);
+
+  /**
    * Method to run Processors. Every turn means one line of input is read
    * and proceed by Processors.
    * @param turn_amount   Number of input line to proceed
@@ -135,7 +142,6 @@ class DataCollector {
 
   DataProvider& data_input_;                  /**< Source of data to proceed */
   shared_ptr<DataOutput> data_output_;        /**< Pointer to result printer */
-  Database processors_base_;                  /**< Collector of Processors   */
 
   vector<shared_ptr<Tools::ProcessorFactory> >
                         processor_factories_; /**< Container with

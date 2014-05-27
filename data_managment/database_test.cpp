@@ -1,5 +1,5 @@
 /*
- * Database_test.cpp
+ * Base::Database_test.cpp
  *
  *  Created on: Feb 13, 2014
  *      Author: Jakub Banaszewski
@@ -21,9 +21,8 @@ using std::list;
 
 BOOST_AUTO_TEST_SUITE(Database)
 
-//Check if simple add to Database works
+//Check if simple add to Base::Database works
 BOOST_AUTO_TEST_CASE(AddToBase) {
-  Base::Database base;
   Algorithms::Algorithm* algorithm = new Algorithms::MoveToFront(
       Base::SimpleElement::GetPrototype());
   Tools::Judge* judge = new Tools::Tester(20, 20);
@@ -33,27 +32,30 @@ BOOST_AUTO_TEST_CASE(AddToBase) {
 
   shared_ptr<Tools::Processor> processor_ptr = tree_factory.GenerateProcessor(
       1);
-  base.AddToBase(processor_ptr);
+  Base::Database::GetInstance().AddToBase(processor_ptr);
 
-  BOOST_CHECK_EQUAL(base.Query(1).front(), processor_ptr);
+  BOOST_CHECK_EQUAL(Base::Database::GetInstance().Query(1).front(),
+                    processor_ptr);
+  Base::Database::GetInstance().ClearDatabase();
 }
 
 //Check if exceptions works
 BOOST_AUTO_TEST_CASE(AddToBaseControl) {
-  Base::Database base;
-  BOOST_CHECK_THROW(base.Query(3), Exception::InvalidIndexException);
-  BOOST_CHECK_THROW(base.Query("Tester"), Exception::InvalidNameException);
+  BOOST_CHECK_THROW(Base::Database::GetInstance().Query(3),
+                    Exception::InvalidIndexException);
+  BOOST_CHECK_THROW(Base::Database::GetInstance().Query("Tester"),
+                    Exception::InvalidNameException);
+  Base::Database::GetInstance().ClearDatabase();
 }
 
 //Check if Exists works
 BOOST_AUTO_TEST_CASE(ExistFalse) {
-  Base::Database base;
-  BOOST_CHECK_EQUAL(base.Exists(1), false);
+  BOOST_CHECK_EQUAL(Base::Database::GetInstance().Exists(1), false);
+  Base::Database::GetInstance().ClearDatabase();
 }
 
 //Check if Exists works (harder test)
 BOOST_AUTO_TEST_CASE(Exist2) {
-  Base::Database base;
   Algorithms::Algorithm* algorithm = new Algorithms::TreeRoot(
       Base::SimpleElement::GetPrototype());
   Tools::Judge* judge = new Tools::Tester(20, 20);
@@ -68,19 +70,18 @@ BOOST_AUTO_TEST_CASE(Exist2) {
 
   shared_ptr<Tools::Processor> processor_ptr = tree_factory.GenerateProcessor(
       1);
-  base.AddToBase(processor_ptr);
-  BOOST_CHECK_EQUAL(base.Exists(1), true);
+  Base::Database::GetInstance().AddToBase(processor_ptr);
+  BOOST_CHECK_EQUAL(Base::Database::GetInstance().Exists(1), true);
 
   processor_ptr = mtf_factory.GenerateProcessor(1);
-  base.AddToBase(processor_ptr);
-  BOOST_CHECK_EQUAL(base.Exists(1), true);
-  BOOST_CHECK_EQUAL(base.Exists(2), false);
-
+  Base::Database::GetInstance().AddToBase(processor_ptr);
+  BOOST_CHECK_EQUAL(Base::Database::GetInstance().Exists(1), true);
+  BOOST_CHECK_EQUAL(Base::Database::GetInstance().Exists(2), false);
+  Base::Database::GetInstance().ClearDatabase();
 }
 
 //Check QueryKeys method
 BOOST_AUTO_TEST_CASE(QueryKeys) {
-  Base::Database base;
   Algorithms::Algorithm* algorithm = new Algorithms::TreeRoot(
       Base::SimpleElement::GetPrototype());
   Tools::Judge* judge = new Tools::Tester(20, 20);
@@ -95,29 +96,29 @@ BOOST_AUTO_TEST_CASE(QueryKeys) {
 
   // list of expected elements
   list<string> expected_processors;
-  // list of elements returned by Database object
+  // list of elements returned by Base::Database object
   vector<string> queried_processors;
 
   shared_ptr<Tools::Processor> processor_ptr = tree_factory.GenerateProcessor(
       1);
-  base.AddToBase(processor_ptr);
+  Base::Database::GetInstance().AddToBase(processor_ptr);
   expected_processors.push_front(processor_ptr->AlgorithmName());
 
   processor_ptr = mtf_factory.GenerateProcessor(1);
-  base.AddToBase(processor_ptr);
+  Base::Database::GetInstance().AddToBase(processor_ptr);
   expected_processors.push_front(processor_ptr->AlgorithmName());
 
-  queried_processors = base.QueryAlgorithmNames();
+  queried_processors = Base::Database::GetInstance().QueryAlgorithmNames();
 
   BOOST_CHECK_EQUAL_COLLECTIONS(expected_processors.begin(),
                                 expected_processors.end(),
                                 queried_processors.begin(),
                                 queried_processors.end());
+  Base::Database::GetInstance().ClearDatabase();
 }
 
 //Check QueryKeys method (more complex example)
 BOOST_AUTO_TEST_CASE(QueryKeys2) {
-  Base::Database base;
   Algorithms::Algorithm* algorithm = new Algorithms::TreeRoot(
       Base::SimpleElement::GetPrototype());
   Tools::Judge* judge = new Tools::Tester(20, 20);
@@ -134,30 +135,30 @@ BOOST_AUTO_TEST_CASE(QueryKeys2) {
 
   shared_ptr<Tools::Processor> processor_ptr = tree_factory.GenerateProcessor(
       1);
-  base.AddToBase(processor_ptr);
+  Base::Database::GetInstance().AddToBase(processor_ptr);
   expected_processors.push_front(processor_ptr->AlgorithmName());
 
   processor_ptr = mtf_factory.GenerateProcessor(1);
-  base.AddToBase(processor_ptr);
+  Base::Database::GetInstance().AddToBase(processor_ptr);
   expected_processors.push_front(processor_ptr->AlgorithmName());
 
   processor_ptr = mtf_factory.GenerateProcessor(2);
-  base.AddToBase(processor_ptr);
+  Base::Database::GetInstance().AddToBase(processor_ptr);
 
   processor_ptr = tree_factory.GenerateProcessor(2);
-  base.AddToBase(processor_ptr);
+  Base::Database::GetInstance().AddToBase(processor_ptr);
 
-  queried_processors = base.QueryAlgorithmNames();
+  queried_processors = Base::Database::GetInstance().QueryAlgorithmNames();
 
   BOOST_CHECK_EQUAL_COLLECTIONS(expected_processors.begin(),
                                 expected_processors.end(),
                                 queried_processors.begin(),
                                 queried_processors.end());
+  Base::Database::GetInstance().ClearDatabase();
 }
 
 // Test Query method (by id)
 BOOST_AUTO_TEST_CASE(QueryById) {
-  Base::Database base;
   Algorithms::Algorithm* algorithm = new Algorithms::TreeRoot(
       Base::SimpleElement::GetPrototype());
   Tools::Judge* judge = new Tools::Tester(20, 20);
@@ -184,31 +185,31 @@ BOOST_AUTO_TEST_CASE(QueryById) {
 
   shared_ptr<Tools::Processor> processor_ptr = tree_factory.GenerateProcessor(
       1);
-  base.AddToBase(processor_ptr);
+  Base::Database::GetInstance().AddToBase(processor_ptr);
   expected_processors.push_back(processor_ptr);
 
   processor_ptr = mtf_factory.GenerateProcessor(1);
-  base.AddToBase(processor_ptr);
+  Base::Database::GetInstance().AddToBase(processor_ptr);
   expected_processors.push_back(processor_ptr);
 
   processor_ptr = matrix_factory.GenerateProcessor(1);
-  base.AddToBase(processor_ptr);
+  Base::Database::GetInstance().AddToBase(processor_ptr);
   expected_processors.push_back(processor_ptr);
 
   processor_ptr = random_tree_factory.GenerateProcessor(1);
-  base.AddToBase(processor_ptr);
+  Base::Database::GetInstance().AddToBase(processor_ptr);
   expected_processors.push_back(processor_ptr);
 
-  queried_processors = base.Query(1);
+  queried_processors = Base::Database::GetInstance().Query(1);
   BOOST_CHECK_EQUAL_COLLECTIONS(expected_processors.begin(),
                                 expected_processors.end(),
                                 queried_processors.begin(),
                                 queried_processors.end());
+  Base::Database::GetInstance().ClearDatabase();
 }
 
 //Test Query method (by string)
 BOOST_AUTO_TEST_CASE(QueryByName) {
-  Base::Database base;
   Algorithms::Algorithm* algorithm = new Algorithms::TreeRoot(
       Base::SimpleElement::GetPrototype());
   Tools::Judge* judge = new Tools::Tester(20, 20);
@@ -221,26 +222,27 @@ BOOST_AUTO_TEST_CASE(QueryByName) {
 
   shared_ptr<Tools::Processor> processor_ptr = tree_factory.GenerateProcessor(
       1);
-  base.AddToBase(processor_ptr);
+  Base::Database::GetInstance().AddToBase(processor_ptr);
   expected_processors.push_back(processor_ptr);
 
   processor_ptr = tree_factory.GenerateProcessor(2);
-  base.AddToBase(processor_ptr);
+  Base::Database::GetInstance().AddToBase(processor_ptr);
   expected_processors.push_back(processor_ptr);
 
   processor_ptr = tree_factory.GenerateProcessor(3);
-  base.AddToBase(processor_ptr);
+  Base::Database::GetInstance().AddToBase(processor_ptr);
   expected_processors.push_back(processor_ptr);
 
   processor_ptr = tree_factory.GenerateProcessor(4);
-  base.AddToBase(processor_ptr);
+  Base::Database::GetInstance().AddToBase(processor_ptr);
   expected_processors.push_back(processor_ptr);
 
-  queried_processors = base.Query("TreeMTF");
+  queried_processors = Base::Database::GetInstance().Query("TreeMTF");
   BOOST_CHECK_EQUAL_COLLECTIONS(expected_processors.begin(),
                                 expected_processors.end(),
                                 queried_processors.begin(),
                                 queried_processors.end());
+  Base::Database::GetInstance().ClearDatabase();
 }
 
 BOOST_AUTO_TEST_SUITE_END()

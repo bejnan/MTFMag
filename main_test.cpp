@@ -93,6 +93,7 @@ BOOST_AUTO_TEST_CASE(True_test) {
     }
     BOOST_TEST_MESSAGE(ss.str());
   }
+  Base::Database::GetInstance().ClearDatabase();
 }
 
 BOOST_AUTO_TEST_SUITE_END()
