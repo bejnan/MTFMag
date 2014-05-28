@@ -32,7 +32,12 @@ class RandomTreeRoot : public TreeRoot {
   using TreeRoot::GetContentPosition;
   using TreeRoot::AddElement;
   using TreeRoot::HaveElement;
-  virtual string AlgorithmName();
+
+  /**
+   * Return name of algorithm to identify method.
+   * @return Name of method used as algorithm
+   */
+  static string AlgorithmName();
   virtual shared_ptr<Algorithm> Clone();
  protected:
   /**
@@ -50,7 +55,7 @@ class RandomTreeRoot : public TreeRoot {
   using TreeRoot::SortElementToList;
   using TreeRoot::CompareElementsOnPositions;
   using TreeRoot::element_prototype;
- private :
+ private:
   /** Name identifier for algorithm */
   static const string ALGORITHM_NAME;
 

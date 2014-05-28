@@ -90,7 +90,11 @@ class MTFMatrix : public Algorithm {
 
   int GetContentPosition(int user_id);
 
-  string AlgorithmName();
+  /**
+   * Return name of algorithm to identify method.
+   * @return Name of method used as algorithm
+   */
+  static string AlgorithmName();
 
   virtual shared_ptr<Algorithm> Clone();
 

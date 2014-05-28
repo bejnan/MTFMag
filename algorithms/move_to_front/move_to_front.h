@@ -35,7 +35,11 @@ class MoveToFront : public Algorithm {
 
   bool HaveElement(int user_id);
 
-  string AlgorithmName();
+  /**
+   * Return name of algorithm to identify method.
+   * @return Name of method used as algorithm
+   */
+  static string AlgorithmName();
 
   shared_ptr<Algorithm> Clone();
 

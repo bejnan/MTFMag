@@ -21,8 +21,20 @@ class JudgeCollector {
   virtual ~JudgeCollector();
 
   virtual void AddAlgorithm(shared_ptr<Algorithms::Algorithm> new_algorithm);
-  virtual void AnaliseNotification(int timestamp, int sender_user_id,
+
+  virtual void AnaliseNotification(int timsestamp, int sender_user_id,
                                    int receiver_user_id);
+
+  /**
+     * Method to add ProcessorFactory to generate new Processors
+     * @see Tools::ProcessorFactory
+     * @see Tools::Processor
+     * @param procesor_factory_ptr Pointer to ProcessorFactory which will be
+     * added to processor_factories_ vector
+     */
+    virtual void AddProccessorFactory(shared_ptr<Tools::ProcessorFactory> procesor_factory_ptr);
+
+
   /**
    * Method to get penalty for one user. Every position on vector represents penalty
    * counted for corresponding algorithm

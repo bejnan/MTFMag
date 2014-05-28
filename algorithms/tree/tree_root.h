@@ -52,7 +52,11 @@ class TreeRoot : public Algorithm {
 
   virtual bool HaveElement(int user_id);
 
-  virtual string AlgorithmName();
+  /**
+   * Return name of algorithm to identify method.
+   * @return Name of method used as algorithm
+   */
+  static string AlgorithmName();
 
   virtual shared_ptr<Algorithm> Clone();
 

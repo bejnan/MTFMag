@@ -11,7 +11,9 @@
 #include "../headers/elements.h"
 
 #include <memory>
+#include <map>
 
+using std::map;
 using std::shared_ptr;
 using std::string;
 
@@ -24,6 +26,7 @@ namespace Algorithms {
  */
 class Algorithm {
  public:
+
   virtual ~Algorithm() {
   }
   ;
@@ -70,12 +73,6 @@ class Algorithm {
    * false otherwise
    */
   virtual bool HaveElement(int user_id) = 0;
-
-  /**
-   * Return name of algorithm to identify method.
-   * @return Name of method used as algorithm
-   */
-  virtual string AlgorithmName() = 0;
 
   /**
    * Implementation of Prototype pattern. Creates new empty instance of
