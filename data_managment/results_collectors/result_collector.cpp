@@ -9,13 +9,35 @@
 
 namespace Base {
 
-ResultCollector::ResultCollector() {
-  // TODO Auto-generated constructor stub
+ResultCollector::ResultCollector(shared_ptr<DataCollector> data_collector, shared_ptr<JudgeCollector> judge_collector) :
+  data_collector_(data_collector),
+  judge_collector_(judge_collector),
+  learn_turns_(0),
+  test_turns_(0),
+  turns_between_results_(0),
+  was_already_run(false) {
 
 }
 
 ResultCollector::~ResultCollector() {
-  // TODO Auto-generated destructor stub
+}
+
+void ResultCollector::SetTurns(int learn_turns, int test_turns) {
+  learn_turns_ = learn_turns;
+  test_turns_ = test_turns;
+}
+
+void ResultCollector::SetResultFrequency(int turn_count) {
+  turns_between_results_ = turn_count;
+}
+
+void ResultCollector::Run() {
+  if (!was_already_run)
+  {
+
+  }
+  else
+    return;
 }
 
 } /* namespace Base */

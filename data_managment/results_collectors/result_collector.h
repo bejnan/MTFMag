@@ -24,36 +24,23 @@ class ResultCollector {
   ResultCollector(shared_ptr<DataCollector> data_collector, shared_ptr<JudgeCollector> judge_collector);
   virtual ~ResultCollector();
 
-  /**
-   * Method to run Processors. Every turn means one line of input is read
-   * and proceed by Processors.
-   * @param turn_amount   Number of input line to proceed
-   * @param learn         If true then no penalty is added.
-   */
-  virtual void RunTurns(int turn_amount, bool learn = false);
+  void SetTurns(int learn_turns, int test_turns);
+
+  void SetResultFrequency(int turn_count);
+
+  void SetResultsDetails();
+
+  virtual void Run();
 
  private :
-  /**
-    * Method used by RunTurns to run Processors from Database
-    * @param user_id       Id of contact which sends message
-    * @param receiver_id   Id of receiver of message
-    * @param learn         If learn is true no penalty is counted
-    * @see Tools::Processor
-    * @see Database
-    */
-   void RunProcessor(int user_id, int receiver_id, bool learn = false);
-
-   /**
-    * If sender of massage is new then DataCollector have to create new
-    * Processors for this user using ProcessorFactories from
-    * processor_factories_ vector;
-    * @param user_id Id of user to create
-    */
-   void AddProcessorsFromFactories(int user_id);
-
    DataCollector data_collector_;
    JudgeCollector judge_collector_;
 
+   int learn_turns_;
+   int test_turns_;
+   int turns_between_results_;
+
+   bool was_already_run;
 };
 
 } /* namespace Base */
