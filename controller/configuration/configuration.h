@@ -22,30 +22,35 @@ using std::initializer_list;
 namespace Base {
 
 /**
- * Class containing configuration of program. Changes input flags, text, data to
- * objects needed to run program.
+ * Class containing configuration of program. Changes input data to
+ * flags, objects or instructions to run program.
  */
 class Configuration {
  public:
 
   enum DataInput {
     ConsoleDataInput = 1,
-    CSVDataInput,
-    CSVFileDataInput
+    FileDataInput
   };
 
   enum DataOutput {
     ConsoleDataOutput,
-    FileDataOoutput
+    CSVFileDataOoutput,
   };
+
+
   Configuration();
   virtual ~Configuration();
 
   void AddAlgorithms(initializer_list<string> algorithms);
 
-  void SetDataInput(DataInput dataInputMethod);
+  void SetDataInput(DataInput data_iput_method);
 
-  void SetDataOutput();
+  void SetDataOutput(DataOutput data_output_method);
+
+  void SetDataInputFilePath(string path);
+
+  void SetDataOutputFilePath(string path);
 
   void Run();
 

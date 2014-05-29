@@ -21,7 +21,7 @@ using std::ofstream;
 namespace Base {
 
 /**
- * Role of this class (partly interface) is to provide output stream which write to file and
+ * Role of this virtual class (not all methods are implemented) is to provide output stream which write to file and
  * take care of it.
  * It doesn't provide implementation for print methods from DataOutput
  * @see DataOutput
