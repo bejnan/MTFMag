@@ -15,8 +15,10 @@
 
 #include <map>
 #include <memory>
+#include <vector>
 
 using std::map;
+using std::vector;
 using std::shared_ptr;
 
 namespace Algorithms {
@@ -45,8 +47,23 @@ static map<string, shared_ptr<Algorithm> > GetAllAlgorithms(
 }
 
 /**
- * Easy Algorithm instance generator
- * @return
+ * Static method to get all available algorithms names.
+ * Helps with creating program configuration.
+ * @return Vector of all implemented algorithms
+ */
+static vector<string> AvailableAlgorithms() {
+  static vector<string> algorithms;
+  algorithms.push_back(MTFMatrix::AlgorithmName());
+  algorithms.push_back(MoveToFront::AlgorithmName());
+  algorithms.push_back(TreeRoot::AlgorithmName());
+  algorithms.push_back(RandomTreeRoot::AlgorithmName());
+  return algorithms;
+}
+
+
+/**
+ * Easy template algorithm instance generator
+ * @return Algorithm with default parameters
  */
 template <class Method, class Element>
 shared_ptr<Algorithm> GetSpecificAlgorithm() {

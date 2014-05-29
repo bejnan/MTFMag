@@ -63,7 +63,7 @@ class DataCollector {
    * @param data_input  Data input to proceed
    * @param data_output Output for results
    */
-  DataCollector(DataProvider& data_input, shared_ptr<DataOutput> data_output);
+  DataCollector(shared_ptr<DataProvider> data_input, shared_ptr<DataOutput> data_output);
 
   /**
    * Default destructor. No object need to be deleted or handled in special way.

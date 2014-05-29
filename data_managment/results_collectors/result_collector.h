@@ -9,14 +9,19 @@
 #define RESULT_COLLECTOR_H_
 
 #include "data_collector.h"
-#include "../database.h"
 #include "judge_collector.h"
+
+#include "../database.h"
+
+#include <memory>
+
+using std::shared_ptr;
 
 namespace Base {
 
 class ResultCollector {
  public:
-  ResultCollector();
+  ResultCollector(shared_ptr<DataCollector> data_collector, shared_ptr<JudgeCollector> judge_collector);
   virtual ~ResultCollector();
 
   /**
@@ -46,7 +51,9 @@ class ResultCollector {
     */
    void AddProcessorsFromFactories(int user_id);
 
-   DataCollector
+   DataCollector data_collector_;
+   JudgeCollector judge_collector_;
+
 };
 
 } /* namespace Base */
