@@ -36,7 +36,7 @@ void Tester::CountPenalty(unsigned int element_position) {
   penalties_.push_back(penalty_pair);
 }
 
-list<pair<int, int> > Tester::PenaltyDetails() {
+vector <pair<int, int> > Tester::PenaltyDetails() {
   return penalties_;
 }
 

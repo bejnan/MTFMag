@@ -50,7 +50,7 @@ class Tester : public Judge {
    * Returns all given penalties on FIFO order.
    * @return List with pairs of penalties and counter of CountPenalties calls.
    */
-  virtual list<pair<int, int> > PenaltyDetails();
+  virtual vector<pair<int, int> > PenaltyDetails();
 
   virtual shared_ptr<Judge> Clone();
 
@@ -68,7 +68,7 @@ class Tester : public Judge {
 
   unsigned long penalty_sum_;        /**< Sum of all penalties */
 
-  list<pair <int, int> > penalties_; /**< List of all penaties */
+  vector<pair <int, int> > penalties_; /**< List of all penaties */
 };
 
 } /* namespace Tree */

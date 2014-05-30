@@ -1,13 +1,12 @@
 #ifndef PENALTY_COUNTER_H_
 #define PENALTY_COUNTER_H_
 
-#include <list>
-#include <utility>
+#include <vector>
 #include <memory>
 
 using std::shared_ptr;
 using std::pair;
-using std::list;
+using std::vector;
 
 namespace Tools {
 
@@ -50,7 +49,7 @@ class Judge {
    * time between penalties. First element of pair represents penalty, second
    * represents time index.
    */
-  virtual list<pair<int, int> > PenaltyDetails() = 0;
+  virtual vector<pair<int, int> > PenaltyDetails() = 0;
 
   /**
    * Implementation of Prototype patter to clone instance of Judge

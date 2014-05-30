@@ -22,8 +22,10 @@ JudgeCollector::~JudgeCollector() {
 }
 
 void JudgeCollector::AddAlgorithm(
-    shared_ptr<Algorithms::Algorithm> new_algorithm) {
-
+    shared_ptr<Algorithms::Algorithm> new_algorithm_ptr) {
+  processor_factories_.push_back(
+      GenerateProcessorFactory(new_algorithm_ptr,
+                               judge_prototype_for_processors_));
 }
 
 void JudgeCollector::AnaliseNotification(int timestamp, int sender_user_id,
@@ -38,19 +40,22 @@ void JudgeCollector::AnaliseNotification(int timestamp, int sender_user_id,
       processor_iterator != processors.end(); processor_iterator++) {
     (*processor_iterator)->Proceed(receiver_user_id, learn_mode);
   }
-
 }
 
-vector<int> JudgeCollector::GetResult(int user_id) {
-  return vector<int>();
-}
+vector<Result> JudgeCollector::GetResult(int user_id) {
+  vector<Tools::Processor> processors = Database::GetInstance().Query(user_id);
+  vector<Tools::Processor>::const_iterator processor_iterator;
 
-vector<int> JudgeCollector::GetResultsSum() {
-  return vector<int>();
+  vector<Result> results;
+  for (processor_iterator = processors.begin();
+      processor_iterator != processors.end(); processor_iterator++) {
+      results.push_back(Result(*processor_iterator,last_timestamp));
+  }
+  return results;
 }
 
 vector<string> JudgeCollector::GetAlgorithmsNames() {
-  return vector<string>();
+  return Database::GetInstance().QueryAlgorithmNames();
 }
 
 void JudgeCollector::AddProcessorsFromFactories(int user_id) {
@@ -61,6 +66,14 @@ void JudgeCollector::AddProcessorsFromFactories(int user_id) {
     new_processor = (*factory_iterator)->GenerateProcessor(user_id);
     Database::GetInstance().AddToBase(new_processor);
   }
+}
+
+shared_ptr<Tools::ProcessorFactory> JudgeCollector::GenerateProcessorFactory(
+    shared_ptr<Algorithms::Algorithm> algorithm,
+    shared_ptr<Tools::Judge> judge) {
+  Tools::ProcessorFactory* new_processor_factory = new Tools::ProcessorFactory(
+      algorithm, judge);
+  return shared_ptr<Tools::ProcessorFactory>(new_processor_factory);
 }
 
 } /* namespace Base */

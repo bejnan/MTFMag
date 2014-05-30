@@ -3,6 +3,7 @@
 
 #include "../../headers/algorithms.h"
 #include "../../headers/tools.h"
+#include "../results.h"
 #include "../database.h"
 
 #include <memory>
@@ -26,17 +27,17 @@ class JudgeCollector {
   virtual void AnaliseNotification(int timsestamp, int sender_user_id,
                                    int receiver_user_id);
 
-  virtual void AddProccessorFactory(shared_ptr<Tools::ProcessorFactory> procesor_factory_ptr);
-
-  virtual vector<int> GetResult(int user_id);
-
-  virtual vector<int> GetResultsSum();
+  virtual vector<Result> GetResult(int user_id);
 
   virtual vector<string> GetAlgorithmsNames();
 
  private:
 
   void AddProcessorsFromFactories(int user_id);
+
+  shared_ptr<Tools::ProcessorFactory> GenerateProcessorFactory(
+      shared_ptr<Algorithms::Algorithm> algorithm,
+      shared_ptr<Tools::Judge> judge);
 
   vector<shared_ptr<Tools::ProcessorFactory> > processor_factories_;
   shared_ptr<Tools::Judge> judge_prototype_for_processors_;
