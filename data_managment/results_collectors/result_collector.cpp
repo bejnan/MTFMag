@@ -15,7 +15,7 @@ ResultCollector::ResultCollector(shared_ptr<DataCollector> data_collector, share
   learn_turns_(0),
   test_turns_(0),
   turns_between_results_(0),
-  was_already_run(false) {
+  was_already_run_(false) {
 
 }
 
@@ -32,7 +32,7 @@ void ResultCollector::SetResultFrequency(int turn_count) {
 }
 
 void ResultCollector::Run() {
-  if (!was_already_run)
+  if (!was_already_run_)
   {
 
   }

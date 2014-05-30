@@ -9,7 +9,8 @@
 
 namespace Base {
 
-Result::Result(int overal_penalty, shared_ptr<vector<int> > penalty_history, int timestamp, string comment)
+Result::Result(int overal_penalty, shared_ptr<vector<pair<int, int> > > penalty_history,
+               int timestamp, string comment)
     : overal_penalty_(overal_penalty),
       penalty_history_(penalty_history),
       timestamp_(timestamp),
@@ -26,13 +27,13 @@ Result::Result(shared_ptr<Tools::Processor> processor_ptr, int timestamp,
 
 Result::~Result() {
 }
+
 string Result::HeaderLine() {
-  return "timestamp    penalty\n";
+  return "timestamp    penalty";
 }
 
 string Result::ToString() {
-  string result = to_string(timestamp_) + "    " + to_string(overal_penalty_)
-      + "\n";
+  string result = to_string(timestamp_) + "    " + to_string(overal_penalty_);
   return result;
 }
 

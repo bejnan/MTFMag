@@ -28,19 +28,19 @@ class ResultCollector {
 
   void SetResultFrequency(int turn_count);
 
-  void SetResultsDetails();
+  //void SetResultsDetails();
 
   virtual void Run();
 
  private :
-   DataCollector data_collector_;
-   JudgeCollector judge_collector_;
+   shared_ptr<DataCollector> data_collector_;
+   shared_ptr<JudgeCollector> judge_collector_;
 
    int learn_turns_;
    int test_turns_;
    int turns_between_results_;
 
-   bool was_already_run;
+   bool was_already_run_;
 };
 
 } /* namespace Base */

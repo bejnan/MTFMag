@@ -27,26 +27,14 @@ class DataOutput {
   /**
    * Print single line of results.
    * @param turns_count   First column of output, number of passed turns(tests)
-   * @param results       Vector of
+   * @param results       Vector of results
    */
-  virtual void PrintLine(int turns_count, vector<int> results) = 0;
+  virtual void PrintLine(int turns_count, vector<string> results) = 0;
 
   /**
    * Print titles of columns
    */
   virtual void PrintColumnTitles() = 0;
-
-  /**
-   * Setter for titles_names_
-   * @param titles Titles which replaces titles_names_
-   */
-  virtual void SetColumnTitles(vector<string> titles) = 0;
-
-  /**
-   * Getter for are_titles_printed
-   * @return True if method PrintColumnTitles() was used before, false otherwise
-   */
-  virtual bool AreTitlesPrinted() = 0;
 
  protected:
   /**

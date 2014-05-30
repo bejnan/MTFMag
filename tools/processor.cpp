@@ -26,12 +26,10 @@ int Processor::GetPenalty() {
   return (penalty_judge_)->OveralPenalty();
 }
 
-list<pair< int,int > > Processor::GetPenaltyDetails() {
-  return (penalty_judge_)->PenaltyDetails();
-}
-
-string Processor::AlgorithmName() {
-  return (algorithm_)->AlgorithmName();
+shared_ptr< vector<pair<int, int> > > Processor::GetPenaltyDetails() {
+  vector<pair<int, int> > * penalties = new vector<pair<int, int> >(
+      (penalty_judge_)->PenaltyDetails());
+  return shared_ptr<vector<pair<int, int> > >(penalties);
 }
 
 } /* Namespace Tools */

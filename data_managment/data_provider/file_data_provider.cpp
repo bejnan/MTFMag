@@ -6,7 +6,7 @@
  */
 
 #include "file_data_provider.h"
-#include "../headers/exceptions.h"
+#include "../../headers/exceptions.h"
 
 namespace Base {
 
@@ -15,7 +15,7 @@ FileDataProvider::FileDataProvider(string file_path)
       actual_line_(""),
       line_before_("") {
   input_file_ = fopen(file_path_.c_str(), "rt");
-  if (!input_file_ )
+  if (!input_file_)
     throw Exception::FilePathException(file_path);
 }
 

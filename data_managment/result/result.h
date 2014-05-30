@@ -23,15 +23,27 @@ namespace Base {
 
 class Result {
  public:
-  Result(int overal_penalty, shared_ptr<vector<int> > penalty_history, int timestamp, string comment = "");
-  Result(shared_ptr<Tools::Processor> processor_ptr, int timestamp, string comment = "");
+
+  Result(int overal_penalty, shared_ptr<vector<pair<int,int > > > penalty_history,
+         int timestamp, string comment = "");
+
+  Result(shared_ptr<Tools::Processor> processor_ptr, int timestamp,
+         string comment = "");
+
   virtual ~Result();
+
   virtual string ToString();
+
   virtual string HeaderLine();
+
  private:
+
   int overal_penalty_;
-  shared_ptr< vector<pair< int, int> > > penalty_history_;
+
+  shared_ptr<vector<pair<int, int> > > penalty_history_;
+
   int timestamp_;
+
   string comment_;
 
 };

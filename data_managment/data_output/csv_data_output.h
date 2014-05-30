@@ -34,25 +34,15 @@ class CsvDataOutput : public virtual DataOutput {
    */
   virtual ~CsvDataOutput();
 
-  virtual void PrintLine(int turns_count, vector<int> results);
+  virtual void PrintLine(int turns_count, vector<string> results);
 
   virtual void PrintColumnTitles();
-
-  virtual void SetColumnTitles(vector<string> titles);
-
-  virtual bool AreTitlesPrinted() {
-    return are_titles_printed_;
-  }
 
  protected:
   using DataOutput::GetOutputStream;
 
  private:
-  vector<string> titles_names_; /**< names of titles of columns
-                                   (algorithm names) */
-  bool are_titles_printed_; /**< Bool to remember decision
-                                 if PrintColumnTitles was used*/
-  const char SEPARATOR;     /**< Separator of result columns */
+  const char SEPARATOR; /**< Separator of result columns */
 };
 
 } /* namespace Base */

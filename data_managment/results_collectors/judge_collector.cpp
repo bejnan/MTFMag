@@ -43,8 +43,8 @@ void JudgeCollector::AnaliseNotification(int timestamp, int sender_user_id,
 }
 
 vector<Result> JudgeCollector::GetResult(int user_id) {
-  vector<Tools::Processor> processors = Database::GetInstance().Query(user_id);
-  vector<Tools::Processor>::const_iterator processor_iterator;
+  vector<shared_ptr<Tools::Processor> > processors = Database::GetInstance().Query(user_id);
+  vector<shared_ptr<Tools::Processor> >::const_iterator processor_iterator;
 
   vector<Result> results;
   for (processor_iterator = processors.begin();
