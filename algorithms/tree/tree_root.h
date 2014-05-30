@@ -58,6 +58,8 @@ class TreeRoot : public Algorithm {
    */
   static string AlgorithmName();
 
+  string GetAlgorithmName();
+
   virtual shared_ptr<Algorithm> Clone();
 
  protected:

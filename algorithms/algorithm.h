@@ -75,6 +75,12 @@ class Algorithm {
   virtual bool HaveElement(int user_id) = 0;
 
   /**
+   * Gives name of algorithm uses in class instance
+   * @return Name of algorithm used in implementation
+   */
+  virtual string GetAlgorithmName() = 0;
+
+  /**
    * Implementation of Prototype pattern. Creates new empty instance of
    * algorithm.
    * @return New empty instance of algorithm implementation (the same

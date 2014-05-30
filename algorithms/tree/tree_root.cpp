@@ -67,6 +67,9 @@ string TreeRoot::AlgorithmName() {
   return TreeRoot::ALGORITHM_NAME;
 }
 
+string TreeRoot::GetAlgorithmName() {
+  return TreeRoot::ALGORITHM_NAME;
+}
 shared_ptr<Algorithm> TreeRoot::Clone() {
   Algorithm* new_algorithm_instance = new TreeRoot(element_prototype_);
   return shared_ptr<Algorithm>(new_algorithm_instance);

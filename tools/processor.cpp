@@ -32,5 +32,9 @@ shared_ptr< vector<pair<int, int> > > Processor::GetPenaltyDetails() {
   return shared_ptr<vector<pair<int, int> > >(penalties);
 }
 
+string Processor::AlgorithmName() {
+  return algorithm_->GetAlgorithmName();
+}
+
 } /* Namespace Tools */
 

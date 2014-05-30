@@ -41,6 +41,8 @@ class MoveToFront : public Algorithm {
    */
   static string AlgorithmName();
 
+  string GetAlgorithmName();
+
   shared_ptr<Algorithm> Clone();
 
  protected:

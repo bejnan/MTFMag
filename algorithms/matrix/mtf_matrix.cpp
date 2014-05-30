@@ -59,6 +59,10 @@ string MTFMatrix::AlgorithmName() {
   return ALGORITHM_NAME;
 }
 
+string MTFMatrix::GetAlgorithmName() {
+  return MTFMatrix::ALGORITHM_NAME;
+}
+
 shared_ptr<Algorithm> MTFMatrix::Clone() {
   Algorithm* new_algorithm_instance = new MTFMatrix(element_prototype_,
                                                     row_size_);

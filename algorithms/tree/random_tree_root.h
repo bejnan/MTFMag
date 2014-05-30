@@ -38,6 +38,10 @@ class RandomTreeRoot : public TreeRoot {
    * @return Name of method used as algorithm
    */
   static string AlgorithmName();
+
+
+  string GetAlgorithmName();
+
   virtual shared_ptr<Algorithm> Clone();
  protected:
   /**

@@ -77,6 +77,8 @@ class Processor {
     return user_id_;
   }
 
+  string AlgorithmName();
+
  private:
   /** Identifier of user */
   const int user_id_;
@@ -84,6 +86,7 @@ class Processor {
   const shared_ptr<Judge> penalty_judge_;
   /** Algorithm to test */
   const shared_ptr<Algorithms::Algorithm> algorithm_;
+
 };
 
 } /* namespace Tools */

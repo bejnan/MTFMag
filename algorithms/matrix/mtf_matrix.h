@@ -96,6 +96,8 @@ class MTFMatrix : public Algorithm {
    */
   static string AlgorithmName();
 
+  string GetAlgorithmName();
+
   virtual shared_ptr<Algorithm> Clone();
 
  protected:
@@ -125,6 +127,7 @@ class MTFMatrix : public Algorithm {
    * @return Count of elements stored in class instance
    */
   unsigned int ElementCount();
+
  private:
 
   /**  size of row in matrix  */
