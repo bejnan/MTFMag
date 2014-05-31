@@ -109,7 +109,7 @@ shared_ptr<Tools::Judge> ResultCollectorBuilder::GenerateJudge(
   return judge_ptr;
 }
 
-shared_ptr<JudgeCollector> GenerateJudgeCollector(
+shared_ptr<JudgeCollector> ResultCollectorBuilder::GenerateJudgeCollector(
     shared_ptr<Tools::Judge> judge_ptr) {
   JudgeCollector* new_judge_collector = new JudgeCollector(judge_ptr);
   shared_ptr<JudgeCollector> judge_collector_ptr(new_judge_collector);

@@ -30,13 +30,13 @@
 								<option id="gnu.cpp.compiler.exe.debug.option.optimization.level.330592743" name="Optimization Level" superClass="gnu.cpp.compiler.exe.debug.option.optimization.level" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.exe.debug.option.debugging.level.842456779" name="Debug Level" superClass="gnu.cpp.compiler.exe.debug.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.other.other.2017894195" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0 -std=c++11" valueType="string"/>
-								<option id="gnu.cpp.compiler.option.dialect.std.406813304" superClass="gnu.cpp.compiler.option.dialect.std" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.dialect.std.406813304" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1315812608" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1696965066" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.debug">
 								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.exe.debug.option.optimization.level.138234192" name="Optimization Level" superClass="gnu.c.compiler.exe.debug.option.optimization.level" valueType="enumerated"/>
 								<option id="gnu.c.compiler.exe.debug.option.debugging.level.1956919280" name="Debug Level" superClass="gnu.c.compiler.exe.debug.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
-								<option id="gnu.c.compiler.option.dialect.std.1234573493" superClass="gnu.c.compiler.option.dialect.std" value="gnu.c.compiler.dialect.default" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.dialect.std.1234573493" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" value="gnu.c.compiler.dialect.default" valueType="enumerated"/>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1137773587" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.exe.debug.1010179231" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.debug"/>
@@ -57,8 +57,8 @@
 						<entry excluding="mtf_matrix_test.cpp|MTFMatrix_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms/matrix"/>
 						<entry excluding="move_to_front_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms/move_to_front"/>
 						<entry excluding="tree_root_test.cpp|TreeRoot_test.cpp|TreeFactory_test.cpp|Root_test.cpp|Node_test.cpp|LTree_test.cpp|FTree_test.cpp|TreeFaktory_test.cpp|Leaf_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms/tree"/>
-						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="controller"/>
-						<entry excluding="results_collectors|data_collector_test.cpp|file_data_provider_test.cpp|data_output|database_test.cpp" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="data_managment"/>
+						<entry excluding="program_runner_test.cpp" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="controller"/>
+						<entry excluding="data_provider/file_data_provider_test.cpp|results_collectors|data_collector_test.cpp|file_data_provider_test.cpp|data_output|database_test.cpp" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="data_managment"/>
 						<entry excluding="csv_data_output_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="data_managment/data_output"/>
 						<entry excluding="data_collector_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="data_managment/results_collectors"/>
 						<entry excluding="element_test.cpp" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="elements"/>
@@ -112,7 +112,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="data_managment/database_test.cpp|Processors|matrix|elements/element_test.cpp|data_output|data_managment/data_output|controller|processors|judges|data_managment/data_collector_test.cpp|results_collectors|tools|data_managment/results_collectors|algorithms|tree|processor_factories|main_test.cpp|headers|data_managment/file_data_provider_test.cpp|move_to_front|exceptions" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="data_managment/data_provider/file_data_provider_test.cpp|data_managment/database_test.cpp|Processors|matrix|elements/element_test.cpp|data_output|data_managment/data_output|controller|processors|judges|data_managment/data_collector_test.cpp|results_collectors|tools|data_managment/results_collectors|algorithms|tree|processor_factories|main_test.cpp|headers|data_managment/file_data_provider_test.cpp|move_to_front|exceptions" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 						<entry excluding="matrix|tree|move_to_front" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms"/>
 						<entry excluding="mtf_matrix_test.cpp|MTFMatrix_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms/matrix"/>
 						<entry excluding="move_to_front_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms/move_to_front"/>

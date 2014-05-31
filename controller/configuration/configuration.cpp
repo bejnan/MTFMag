@@ -14,11 +14,36 @@ Configuration::Configuration()
       data_output_method_(CSVConsoleDataOutput),
       judge_selection_(Tester),
       judge_free_position_range_(0),
-      judge_small_penalty_position_range_(0)
-{
+      judge_small_penalty_position_range_(0),
+      learn_turns_(0),
+      run_turns_(0) {
 }
 
 Configuration::~Configuration() {
+}
+
+void Configuration::AddAlgorithm(string algorithm_name) {
+  algorithms_.push_back(
+      Algorithms::GetAllAlgorithms(element_prototype_)[algorithm_name]);
+}
+
+void Configuration::SetAlgorithms(vector<string> algorithms) {
+  algorithms_.clear();
+  vector<string>::iterator names_iterator;
+  for (names_iterator = algorithms.begin(); names_iterator != algorithms.end();
+      names_iterator++) {
+    algorithms_.push_back(
+        Algorithms::GetAllAlgorithms(element_prototype_)[*(names_iterator)]);
+  }
+}
+
+shared_ptr<Base::Element> Configuration::GetElementPrototype() {
+  return element_prototype_;
+}
+
+void Configuration::SetElementPrototype(
+    shared_ptr<Base::Element> element_prototype) {
+  element_prototype_ = element_prototype;
 }
 
 Configuration::DataInput Configuration::GetDataInputMethod() const {
@@ -62,6 +87,22 @@ void Configuration::SetJudgeSmallPenaltyPositionRange(
   judge_small_penalty_position_range_ = judge_small_penalty_position_range;
 }
 
+int Configuration::GetLearnTurns() const {
+  return learn_turns_;
+}
+
+void Configuration::SetLearnTurns(int learn_turns) {
+  this->learn_turns_ = learn_turns;
+}
+
+int Configuration::GetRunTurns() const {
+  return run_turns_;
+}
+
+void Configuration::SetRunTurns(int run_turns) {
+  this->run_turns_ = run_turns;
+}
+
 const string& Configuration::GetDataInputFile() const {
   return data_input_file_;
 }
@@ -69,7 +110,6 @@ const string& Configuration::GetDataInputFile() const {
 void Configuration::SetDataInputFile(const string& data_input_file) {
   data_input_file_ = data_input_file;
 }
-
 
 const string& Configuration::GetDataOutputFile() const {
   return data_output_file_;
