@@ -14,14 +14,17 @@
 #include "../database.h"
 
 #include <memory>
+#include <vector>
 
 using std::shared_ptr;
+using std::vector;
 
 namespace Base {
 
 class ResultCollector {
  public:
-  ResultCollector(shared_ptr<DataCollector> data_collector, shared_ptr<JudgeCollector> judge_collector);
+  ResultCollector(shared_ptr<DataCollector> data_collector,
+                  shared_ptr<JudgeCollector> judge_collector);
   virtual ~ResultCollector();
 
   void SetTurns(int learn_turns, int test_turns);
@@ -32,15 +35,21 @@ class ResultCollector {
 
   virtual void Run();
 
- private :
-   shared_ptr<DataCollector> data_collector_;
-   shared_ptr<JudgeCollector> judge_collector_;
+ private:
 
-   int learn_turns_;
-   int test_turns_;
-   int turns_between_results_;
+  void RunLearnTurns();
+  void RunTestTurns();
+  void RunDataSet(shared_ptr<vector<DataCollector::DataInputLine> > input_lines);
 
-   bool was_already_run_;
+  shared_ptr<DataCollector> data_collector_;
+  shared_ptr<JudgeCollector> judge_collector_;
+
+  int learn_turns_;
+  int test_turns_;
+  int turns_between_results_;
+  int turns_counter;
+
+  bool was_already_run_;
 };
 
 } /* namespace Base */

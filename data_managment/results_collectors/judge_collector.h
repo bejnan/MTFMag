@@ -5,6 +5,7 @@
 #include "../../headers/tools.h"
 #include "../results.h"
 #include "../database.h"
+#include "data_collector.h"
 
 #include <memory>
 #include <vector>
@@ -27,9 +28,13 @@ class JudgeCollector {
   virtual void AnaliseNotification(int timsestamp, int sender_user_id,
                                    int receiver_user_id);
 
-  virtual vector<Result> GetResult(int user_id);
+  virtual void AnaliseNotification(DataCollector::DataInputLine input_line);
+
+  virtual shared_ptr<vector<Result> >  GetResult(int user_id);
 
   virtual vector<string> GetAlgorithmsNames();
+
+  virtual void SetLearnMode(bool learn);
 
  private:
 

@@ -42,20 +42,29 @@ void JudgeCollector::AnaliseNotification(int timestamp, int sender_user_id,
   }
 }
 
-vector<Result> JudgeCollector::GetResult(int user_id) {
+void JudgeCollector::AnaliseNotification(DataCollector::DataInputLine input_line) {
+  AnaliseNotification(input_line.timestamp_,input_line.sender_id_,input_line.receiver_id_);
+}
+
+shared_ptr<vector<Result> >  JudgeCollector::GetResult(int user_id) {
   vector<shared_ptr<Tools::Processor> > processors = Database::GetInstance().Query(user_id);
   vector<shared_ptr<Tools::Processor> >::const_iterator processor_iterator;
 
-  vector<Result> results;
+  vector<Result>* new_results = new vector<Result>();
+  shared_ptr<vector<Result> > results_ptr(new_results);
   for (processor_iterator = processors.begin();
       processor_iterator != processors.end(); processor_iterator++) {
-      results.push_back(Result(*processor_iterator,last_timestamp));
+      results_ptr->push_back(Result(*processor_iterator,last_timestamp));
   }
-  return results;
+  return results_ptr;
 }
 
 vector<string> JudgeCollector::GetAlgorithmsNames() {
   return Database::GetInstance().QueryAlgorithmNames();
+}
+
+void JudgeCollector::SetLearnMode(bool learn) {
+  learn_mode = learn;
 }
 
 void JudgeCollector::AddProcessorsFromFactories(int user_id) {
