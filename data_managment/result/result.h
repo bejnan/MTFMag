@@ -24,7 +24,7 @@ namespace Base {
 class Result {
  public:
 
-  Result(int overal_penalty, shared_ptr<vector<pair<int,int > > > penalty_history,
+  Result(string algorithm_name, int source_id, int overal_penalty,
          int timestamp, string comment = "");
 
   Result(shared_ptr<Tools::Processor> processor_ptr, int timestamp,
@@ -32,15 +32,28 @@ class Result {
 
   virtual ~Result();
 
+  virtual string HeaderLine();
+
   virtual string ToString();
 
-  virtual string HeaderLine();
+ protected:
+  const string& GetAlgorithmName() const;
+
+  const string& GetComment() const;
+
+  int GetOveralPenalty() const;
+
+  int GetSourceId() const;
+
+  int GetTimestamp() const;
 
  private:
 
-  int overal_penalty_;
+  string algorithm_name_;
 
-  shared_ptr<vector<pair<int, int> > > penalty_history_;
+  int source_id_;
+
+  int overal_penalty_;
 
   int timestamp_;
 

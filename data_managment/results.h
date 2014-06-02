@@ -10,6 +10,7 @@
 
 
 #include "result/result.h"
+#include "result/overall_result.h"
 
 
 #endif /* RESULTS_H_ */

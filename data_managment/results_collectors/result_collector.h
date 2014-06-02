@@ -1,10 +1,3 @@
-/*
- * result_collector.h
- *
- *  Created on: May 28, 2014
- *      Author: kuba
- */
-
 #ifndef RESULT_COLLECTOR_H_
 #define RESULT_COLLECTOR_H_
 
@@ -40,6 +33,9 @@ class ResultCollector {
   void RunLearnTurns();
   void RunTestTurns();
   void RunDataSet(shared_ptr<vector<DataCollector::DataInputLine> > input_lines);
+  void PrintOverallResults(int turn_amount, int timestamp);
+  int GetOverallAlgorithmPenalty(vector<shared_ptr<Tools::Processor> > algorithms_processors);
+  shared_ptr<Result> CreateOverallResult(string algorithm_name, int overall_penalty , int timestamp);
 
   shared_ptr<DataCollector> data_collector_;
   shared_ptr<JudgeCollector> judge_collector_;
