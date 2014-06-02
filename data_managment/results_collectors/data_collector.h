@@ -57,9 +57,15 @@ class DataCollector {
 
   void PrintResults(int turn_amount, shared_ptr<vector<Result> > results);
 
+  void PrintResultsFromPointers(
+      int turn_amount, shared_ptr<vector<shared_ptr<Result> > > results);
+
+  void SetPrintZeroResult(bool zero_result_flag);
+
  private:
   shared_ptr<DataProvider> data_input_; /**< Source of data to proceed */
   shared_ptr<DataOutput> data_output_; /**< Pointer to result printer */
+  bool print_zero_result;
 
 };
 

@@ -36,12 +36,12 @@ class Result {
 
   virtual string ToString();
 
+  int GetOveralPenalty() const;
+
  protected:
   const string& GetAlgorithmName() const;
 
   const string& GetComment() const;
-
-  int GetOveralPenalty() const;
 
   int GetSourceId() const;
 

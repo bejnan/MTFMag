@@ -113,6 +113,14 @@ shared_ptr<JudgeCollector> ResultCollectorBuilder::GenerateJudgeCollector(
     shared_ptr<Tools::Judge> judge_ptr) {
   JudgeCollector* new_judge_collector = new JudgeCollector(judge_ptr);
   shared_ptr<JudgeCollector> judge_collector_ptr(new_judge_collector);
+  vector<shared_ptr<Algorithms::Algorithm> > available_algorithms =
+      actual_config_.algorithm();
+  vector<shared_ptr<Algorithms::Algorithm> >::iterator algorithms_iterator;
+  for (algorithms_iterator = available_algorithms.begin();
+      algorithms_iterator != available_algorithms.end();
+      algorithms_iterator++) {
+    judge_collector_ptr->AddAlgorithm(*algorithms_iterator);
+  }
   return judge_collector_ptr;
 }
 

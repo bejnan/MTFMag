@@ -39,13 +39,13 @@ void ResultCollector::Run() {
 
 void ResultCollector::RunLearnTurns() {
   RunDataSet(data_collector_->ReadInputLines(learn_turns_));
-  turns_counter = learn_turns_;
+  turns_counter = learn_turns_ + 1;
 }
 
 void ResultCollector::RunTestTurns() {
   int turns;
   shared_ptr<DataCollector::DataInputLine> input_line_ptr;
-  for (turns = 0; turns < test_turns_; turns++) {
+  for (turns = 1; turns <= test_turns_; ++turns) {
     input_line_ptr = data_collector_->ReadInputLine();
     RunData(input_line_ptr);
     data_collector_->PrintResults(
@@ -73,16 +73,19 @@ void ResultCollector::RunData(
 void ResultCollector::PrintOverallResults(int turn_amount, int timestamp) {
   vector<string> algorithms_name =
       Database::GetInstance().QueryAlgorithmNames();
-  vector<shared_ptr<Result> > result_vector;
-  for (vector<string>::iterator name_iterator = algorithms_name.begin();
-      name_iterator != algorithms_name.end(); name_iterator++) {
-    result_vector.push_back(
+  vector<shared_ptr<Result> >* new_result_vector =
+      new vector<shared_ptr<Result> >();
+  shared_ptr<vector<shared_ptr<Result> > > result_vector_ptr(new_result_vector);
+  for (vector<string>::reverse_iterator name_iterator = algorithms_name.rbegin();
+      name_iterator != algorithms_name.rend(); name_iterator++) {
+    result_vector_ptr->push_back(
         CreateOverallResult(
             *name_iterator,
             GetOverallAlgorithmPenalty(
                 Database::GetInstance().Query(*name_iterator)),
             timestamp));
   }
+  data_collector_->PrintResultsFromPointers(turn_amount, result_vector_ptr);
 }
 
 int ResultCollector::GetOverallAlgorithmPenalty(
