@@ -31,12 +31,25 @@ shared_ptr<vector<DataCollector::DataInputLine> > DataCollector::ReadInputLines(
   return shared_ptr<vector<DataCollector::DataInputLine> >(input_lines_data);
 }
 
+shared_ptr<DataCollector::DataInputLine> DataCollector::ReadInputLine() {
+  string line;
+  stringstream input_line_stream;
+  unsigned int interaction, timestamp, sender_id, receiver_id;
+  data_input_->GoToNextLine();
+  line = data_input_->GetActualLine();
+  input_line_stream.str(line);
+  input_line_stream >> interaction >> timestamp >> sender_id >> receiver_id;
+  DataInputLine* new_input_line = new DataInputLine(interaction, timestamp,
+                                                   sender_id, receiver_id);
+  return shared_ptr<DataInputLine> (new_input_line);
+}
 
-void DataCollector::PrintResults(int turn_amount, shared_ptr<vector < Result > > results) {
+void DataCollector::PrintResults(int turn_amount,
+                                 shared_ptr<vector<Result> > results) {
   vector<Result>::iterator result_iterator;
   vector<string> results_text;
-  for (result_iterator = results->begin(); result_iterator != results->end(); result_iterator++)
-  {
+  for (result_iterator = results->begin(); result_iterator != results->end();
+      result_iterator++) {
     results_text.push_back(result_iterator->ToString());
   }
   data_output_->PrintLine(turn_amount, results_text);

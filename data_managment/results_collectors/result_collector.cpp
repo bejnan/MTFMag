@@ -43,18 +43,16 @@ void ResultCollector::RunLearnTurns() {
 }
 
 void ResultCollector::RunTestTurns() {
-  int sets;
-  for (sets = 0; sets < test_turns_ / turns_between_results_; sets++) {
-    RunDataSet(data_collector_->ReadInputLines(turns_between_results_));
-    data_collector_->PrintResults(turns_counter,
-                                  judge_collector_->GetResult(1));  //TODO!!
-    turns_counter += turns_between_results_;
-  }
-  if (turns_counter < test_turns_ + learn_turns_) {
-    RunDataSet(
-        data_collector_->ReadInputLines(
-            test_turns_ + learn_turns_ - turns_counter));
-    turns_counter = test_turns_ + learn_turns_;
+  int turns;
+  shared_ptr<DataCollector::DataInputLine> input_line_ptr;
+  for (turns = 0; turns < test_turns_; turns++) {
+    input_line_ptr = data_collector_->ReadInputLine();
+    RunData(input_line_ptr);
+    data_collector_->PrintResults(
+        turns_counter, judge_collector_->GetResult(input_line_ptr->sender_id_));
+    if (turns % turns_between_results_ == 0)
+      PrintOverallResults(turns_counter, input_line_ptr->timestamp_);
+    ++turns_counter;
   }
 }
 
@@ -65,6 +63,11 @@ void ResultCollector::RunDataSet(
       single_line_iterator != input_lines->end(); single_line_iterator++) {
     judge_collector_->AnaliseNotification(*single_line_iterator);
   }
+}
+
+void ResultCollector::RunData(
+    shared_ptr<DataCollector::DataInputLine> input_line) {
+  judge_collector_->AnaliseNotification(*input_line);
 }
 
 void ResultCollector::PrintOverallResults(int turn_amount, int timestamp) {

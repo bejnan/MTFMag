@@ -53,6 +53,8 @@ class DataCollector {
 
   shared_ptr<vector<DataInputLine> > ReadInputLines(int turn_amount);
 
+  shared_ptr<DataInputLine> ReadInputLine();
+
   void PrintResults(int turn_amount, shared_ptr<vector<Result> > results);
 
  private:
