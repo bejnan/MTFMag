@@ -3,8 +3,6 @@
 namespace Base {
 
 FileProgramRunner::FileProgramRunner(string file_path) {
-  // TODO Auto-generated constructor stub
-
 }
 
 FileProgramRunner::~FileProgramRunner() {
@@ -35,8 +33,7 @@ void FileProgramRunner::SetResultDetails(int value) {
 
 }
 
-void FileProgramRunner::SetAlgorithmsToTest(
-    vector<shared_ptr<Tools::ProcessorFactory> > processor_factories) {
+void FileProgramRunner::SetAlgorithmsToTest(vector<string> algorithm_names) {
 
 }
 

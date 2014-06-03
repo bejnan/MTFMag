@@ -6,6 +6,7 @@
 namespace Base {
 
 /**
+ * TODO Now it is empty class
  * Reads configuration of all elements from file given by path.
  * Sets all elements needed to run program and run it.
  * Configuration file is only interaction with user. After
@@ -31,7 +32,7 @@ class FileProgramRunner : public ProgramRunner {
   virtual void SetResultDetails(int value);
 
   virtual void SetAlgorithmsToTest(
-      vector<shared_ptr<Tools::ProcessorFactory> > processor_factories);
+        vector<string> algorithm_names) = 0;
 
 };
 

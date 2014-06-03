@@ -56,23 +56,26 @@ class ProgramRunner {
 
   /**
    * Sets number of turns after which part result should be given to output
-   * @param period Number of turns after which part result should be given to output
+   * @param period Number of turns after which part result should be given
+   * to output
    */
   virtual void SetResultOutputFrequency(int period) = 0;
 
   /**
+   * TODO Decide how implement flag (enum?)
    * Method to set amount of details from Judge instance that will be printed
    * during program run
    * @param value Flag defining number of details from Judge
    */
-  virtual void SetResultDetails(int value) = 0;  // TODO!
+  virtual void SetResultDetails(int value) = 0;
 
   /**
    * Sets list of pointers to ProcessorFactory instances to DataCollector
-   * @param processor_factories ProcessorFactory instances that will be user in DataCollector during run
+   * @param processor_factories ProcessorFactory instances that will be user
+   * in DataCollector during run
    */
   virtual void SetAlgorithmsToTest(
-      vector<shared_ptr<Tools::ProcessorFactory> > processor_factories) = 0;
+      vector<string> algorithm_names) = 0;
 };
 
 } /* namespace Base */

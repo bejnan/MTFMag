@@ -6,6 +6,7 @@
 namespace Base {
 
 /**
+ * TODO Now it is empty class
  * Aim of class is to read and prepare configuration
  * by console interaction with user. For more details
  * see base class.
@@ -32,7 +33,7 @@ class ConsoleProgramRunner : public ProgramRunner {
   virtual void SetResultDetails(int value);
 
   virtual void SetAlgorithmsToTest(
-      vector<shared_ptr<Tools::ProcessorFactory> > processor_factories);
+        vector<string> algorithm_names) = 0;
 
 };
 
