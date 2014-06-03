@@ -20,7 +20,6 @@ using std::max;
 namespace Algorithms {
 
 /**
- * Aim of class is to organize elements in linear order.
  * Class implements algorithm similar to MTF (Move to front), but elements are
  * organized in rows with constant width and creates matrix. When element is
  * notified it is moved to first row moving by path
@@ -142,6 +141,7 @@ class MTFMatrix : public Algorithm {
   /** map to show position of node with given id */
   map<int, int> id_position_;
 
+  /** Prototype used to create new Base::Element instances when needed */
   shared_ptr<Base::Element> element_prototype_;
 
   /** Name identifier for algorithm */

@@ -24,7 +24,7 @@ Configuration::~Configuration() {
 
 void Configuration::AddAlgorithm(string algorithm_name) {
   algorithms_.push_back(
-      Algorithms::GetAllAlgorithms(element_prototype_)[algorithm_name]);
+      Algorithms::GetAllAlgorithms(element_prototype_)[algorithm_name]->Clone());
 }
 
 void Configuration::SetAlgorithms(vector<string> algorithms) {
@@ -33,7 +33,7 @@ void Configuration::SetAlgorithms(vector<string> algorithms) {
   for (names_iterator = algorithms.begin(); names_iterator != algorithms.end();
       names_iterator++) {
     algorithms_.push_back(
-        Algorithms::GetAllAlgorithms(element_prototype_)[*(names_iterator)]);
+        Algorithms::GetAllAlgorithms(element_prototype_)[*(names_iterator)]->Clone());
   }
 }
 

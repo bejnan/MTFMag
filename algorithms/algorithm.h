@@ -34,7 +34,7 @@ class Algorithm {
   /**
    * Main method of algorithm. Notify element with given id.
    * After notification of element (Base::Element::Notify method)
-   * it moves element to front. Details of movement depends on algorithm.
+   * algorithm moves element up. Details of movement depends on algorithm.
    * @param user_id Identifier of element to notify
    */
   virtual void NotifyContent(int user_id) = 0;
@@ -42,9 +42,9 @@ class Algorithm {
   /**
    * As version with one parameter notify element with given id.
    * After notification of element (Base::Element::Notify method)
-   * it moves element to front. Details of movement depends on algorithm.
+   * it moves element up. Details of movement depends on algorithm.
    * notification_count can be used in Element::Notify method to
-   * measure actuality of element.
+   * measure distance between notification of given element and others.
    * @param user_id Identifier of element to notify
    * @param notification_count Timestamp or notification_count, measure to determine
    * moment in time of element notification.
@@ -62,6 +62,7 @@ class Algorithm {
    * Adds new element to algorithm's collection if no element with given identifier
    * is already added.
    * @param user_id Identifier of new element.
+   * @throws Exception::ElementAlreadyExists if elements exists in algorithm
    */
   virtual void AddElement(int user_id) = 0;
 
@@ -90,7 +91,7 @@ class Algorithm {
 
  protected:
   /**
-   * Method to move element from given position to front (depends on algorithm).
+   * Method to move element up(depends on algorithm).
    * @param position Position of element to move
    */
   virtual void MoveFromPositionToFront(int position) = 0;
@@ -104,7 +105,7 @@ class Algorithm {
 
   /**
    * Sorts elements in row to restore linear order.
-   * Used after notification
+   * Used after notification.
    */
   virtual void SortElementToList() = 0;
 

@@ -33,7 +33,7 @@ namespace Algorithms {
  *  4 2 6 7
  * </pre>
  *
- * After moving element to front linear order is : <br>
+ * Now linear order is : <br>
  * 5 3 1 7 6 4 2 <br>
  */
 class TreeRoot : public Algorithm {

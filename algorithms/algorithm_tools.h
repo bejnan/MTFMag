@@ -24,9 +24,8 @@ using std::shared_ptr;
 namespace Algorithms {
 
 /**
- * Static method to get access to all algorithms.
- * Make ResultCollector easier to configurable.
- * There is no need to use only this method.
+ * Easy way to get algorithm instance by it's name.
+ * IMPORTANT!! Returned instances of algorithm should be used only as Prototype!
  * @param element_prototype Prototype of element to use in algorithms.
  * @return Dictionary of algorithms with their names as key.
  */
@@ -48,8 +47,8 @@ static map<string, shared_ptr<Algorithm> > GetAllAlgorithms(
 
 /**
  * Static method to get all available algorithms names.
- * Helps with creating program configuration.
- * @return Vector of all implemented algorithms
+ * Helps with creating program from configuration.
+ * @return Vector of all implemented algorithms names
  */
 static vector<string> AvailableAlgorithms() {
   static vector<string> algorithms;
@@ -62,7 +61,7 @@ static vector<string> AvailableAlgorithms() {
 
 
 /**
- * Easy template algorithm instance generator
+ * Easy template to generate algorithm instance
  * @return Algorithm with default parameters
  */
 template <class Method, class Element>
