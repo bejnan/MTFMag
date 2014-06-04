@@ -44,7 +44,7 @@ void ResultCollector::RunLearnTurns() {
 
 void ResultCollector::RunTestTurns() {
   int turns;
-  shared_ptr<DataCollector::DataInputLine> input_line_ptr;
+  shared_ptr<DataProvider::DataInputLine> input_line_ptr;
   for (turns = 1; turns <= test_turns_; ++turns) {
     input_line_ptr = data_collector_->ReadInputLine();
     RunData(input_line_ptr);
@@ -57,8 +57,8 @@ void ResultCollector::RunTestTurns() {
 }
 
 void ResultCollector::RunDataSet(
-    shared_ptr<vector<DataCollector::DataInputLine> > input_lines) {
-  vector<DataCollector::DataInputLine>::iterator single_line_iterator;
+    shared_ptr<vector<DataProvider::DataInputLine> > input_lines) {
+  vector<DataProvider::DataInputLine>::iterator single_line_iterator;
   for (single_line_iterator = input_lines->begin();
       single_line_iterator != input_lines->end(); single_line_iterator++) {
     judge_collector_->AnaliseNotification(*single_line_iterator);
@@ -66,7 +66,7 @@ void ResultCollector::RunDataSet(
 }
 
 void ResultCollector::RunData(
-    shared_ptr<DataCollector::DataInputLine> input_line) {
+    shared_ptr<DataProvider::DataInputLine> input_line) {
   judge_collector_->AnaliseNotification(*input_line);
 }
 

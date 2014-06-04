@@ -23,12 +23,24 @@ FileDataProvider::~FileDataProvider() {
   fclose(input_file_);
 }
 
-string FileDataProvider::GetActualLine() {
-  return actual_line_;
+const DataProvider::DataInputLine FileDataProvider::GetActualLine() {
+  int interaction, timestamp, sender_id, receiver_id;
+  stringstream input_line_stream;
+  input_line_stream.str(actual_line_);
+  input_line_stream >> interaction >> timestamp >> sender_id >> receiver_id;
+  DataProvider::DataInputLine actual_line_data(interaction, timestamp,
+                                                sender_id, receiver_id);
+  return actual_line_data;
 }
 
-string FileDataProvider::GetLineBefore() {
-  return line_before_;
+const DataProvider::DataInputLine FileDataProvider::GetLineBefore() {
+  int interaction, timestamp, sender_id, receiver_id;
+  stringstream input_line_stream;
+  input_line_stream.str(line_before_);
+  input_line_stream >> interaction >> timestamp >> sender_id >> receiver_id;
+  DataProvider::DataInputLine line_before_data(interaction, timestamp,
+                                                sender_id, receiver_id);
+  return line_before_data;
 }
 
 void FileDataProvider::GoToNextLine() {

@@ -11,6 +11,9 @@
 #include "data_provider.h"
 #include<cstdio>
 #include<cstring>
+#include<sstream>
+
+using std::stringstream;
 
 namespace Base {
 /**
@@ -34,15 +37,15 @@ class FileDataProvider : public DataProvider {
    * Default destructor closes file.
    */
   virtual ~FileDataProvider();
-  virtual string GetActualLine();
-  virtual string GetLineBefore();
+  virtual const DataProvider::DataInputLine GetActualLine();
+  virtual const DataProvider::DataInputLine GetLineBefore();
   virtual void GoToNextLine();
 
- private :
+ private:
   const string file_path_; /**< Path to source file    */
-  string actual_line_;     /**< Last read line         */
-  string line_before_;     /**< Line read before       */
-  FILE* input_file_;       /**< Pointer to opened file */
+  string actual_line_; /**< Last read line         */
+  string line_before_; /**< Line read before       */
+  FILE* input_file_; /**< Pointer to opened file */
 };
 
 } /* namespace Tree */

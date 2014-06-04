@@ -31,29 +31,14 @@ namespace Base {
 class DataCollector {
  public:
 
-  struct DataInputLine {
-    const int interaction_type_;
-    const int timestamp_;
-    const int sender_id_;
-    const int receiver_id_;
-
-    DataInputLine(int interaction_type, int timestamp, int sender_id,
-                  int receiver_id)
-        : interaction_type_(interaction_type),
-          timestamp_(timestamp),
-          sender_id_(sender_id),
-          receiver_id_(receiver_id) {
-    }
-  };
-
   DataCollector(shared_ptr<DataProvider> data_input,
                 shared_ptr<DataOutput> data_output);
 
   ~DataCollector();
 
-  shared_ptr<vector<DataInputLine> > ReadInputLines(int turn_amount);
+  shared_ptr<vector<DataProvider::DataInputLine> > ReadInputLines(int turn_amount);
 
-  shared_ptr<DataInputLine> ReadInputLine();
+  shared_ptr<DataProvider::DataInputLine> ReadInputLine();
 
   void PrintResults(int turn_amount, shared_ptr<vector<Result> > results);
 

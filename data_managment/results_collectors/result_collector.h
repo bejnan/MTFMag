@@ -32,8 +32,8 @@ class ResultCollector {
 
   void RunLearnTurns();
   void RunTestTurns();
-  void RunDataSet(shared_ptr<vector<DataCollector::DataInputLine> > input_lines);
-  void RunData(shared_ptr<DataCollector::DataInputLine>  input_line);
+  void RunDataSet(shared_ptr<vector<DataProvider::DataInputLine> > input_lines);
+  void RunData(shared_ptr<DataProvider::DataInputLine>  input_line);
   void PrintOverallResults(int turn_amount, int timestamp);
   int GetOverallAlgorithmPenalty(vector<shared_ptr<Tools::Processor> > algorithms_processors);
   shared_ptr<Result> CreateOverallResult(string algorithm_name, int overall_penalty , int timestamp);

@@ -42,7 +42,7 @@ void JudgeCollector::AnaliseNotification(int timestamp, int sender_user_id,
   }
 }
 
-void JudgeCollector::AnaliseNotification(DataCollector::DataInputLine input_line) {
+void JudgeCollector::AnaliseNotification(DataProvider::DataInputLine input_line) {
   AnaliseNotification(input_line.timestamp_,input_line.sender_id_,input_line.receiver_id_);
 }
 

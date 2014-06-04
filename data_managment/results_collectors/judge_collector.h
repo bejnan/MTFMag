@@ -28,7 +28,7 @@ class JudgeCollector {
   virtual void AnaliseNotification(int timsestamp, int sender_user_id,
                                    int receiver_user_id);
 
-  virtual void AnaliseNotification(DataCollector::DataInputLine input_line);
+  virtual void AnaliseNotification(DataProvider::DataInputLine input_line);
 
   virtual shared_ptr<vector<Result> >  GetResult(int user_id);
 

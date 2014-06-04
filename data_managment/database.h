@@ -1,10 +1,3 @@
-/*
- * Database.h
- *
- *  Created on: Feb 13, 2014
- *      Author: Jakub Banaszewski
- */
-
 #ifndef DATABASE_H_
 #define DATABASE_H_
 #include <map>
@@ -18,18 +11,18 @@ using std::shared_ptr;
 
 namespace Base {
 /**
- * This class split responsibility of storage Processors
- * with using Processor. User of Processors is DataCollector.
- * Database store, manages and gives access to Processor for DataCollector
- * by id or algorithms name.
- * ProcessorFactory classes responsible for creating Processors are stored
- * in DataCollector. Important! Database class have no outside memory. All it
- * stores is put there during runtime. After runtime all elements are removed
- * from memory. There should be only one instance of class in program.
+ * Tools::Processor storage that pretends to be a database.
+ * Used as singleton with static access to class instance.
+ * Helps to add, manage and get access to specific Processors by Query methods.
+ * Used mainly in JudgeCollector to run chosen by user Processors.
  */
 class Database {
  public:
 
+  /**
+   * One instance of Database available by public.
+   * @return Reference to Database instance
+   */
   static Database& GetInstance() {
     static Database database_instance;
     return database_instance;
@@ -41,7 +34,7 @@ class Database {
   virtual ~Database();
 
   /**
-   * Method to add new Processor into "Database", in this case private vector.
+   * Method to add new Processor into "Database", in this case vector.
    * There should be no other processor with the same id AND algorithms name.
    * @param processor Pointer to Processor to add
    */
