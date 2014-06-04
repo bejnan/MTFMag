@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MTFthesisstudies
-   &#160;<span id="projectnumber">version0.79</span>
+   &#160;<span id="projectnumber">version0.82</span>
    </div>
   </td>
  </tr>
@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('classBase_1_1FileProgramRunner.html','
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -111,7 +111,7 @@ $(document).ready(function(){initNavTree('classBase_1_1FileProgramRunner.html','
 <p>This is the complete list of members for <a class="el" href="classBase_1_1FileProgramRunner.html">Base::FileProgramRunner</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classBase_1_1FileProgramRunner.html#a780e7ab3c6c1594e85ae0cdabe206a3e">RunProgram</a>()</td><td class="entry"><a class="el" href="classBase_1_1FileProgramRunner.html">Base::FileProgramRunner</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classBase_1_1FileProgramRunner.html#a211c2ee73e9fb4f49072bf7bbf1394ea">SetAlgorithmsToTest</a>(vector&lt; shared_ptr&lt; Tools::ProcessorFactory &gt; &gt; processor_factories)</td><td class="entry"><a class="el" href="classBase_1_1FileProgramRunner.html">Base::FileProgramRunner</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classBase_1_1FileProgramRunner.html#ae177d75e9d7dcda16f8897be132f98d7">SetAlgorithmsToTest</a>(vector&lt; string &gt; algorithm_names)=0</td><td class="entry"><a class="el" href="classBase_1_1FileProgramRunner.html">Base::FileProgramRunner</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classBase_1_1FileProgramRunner.html#adf6895343447890e339f94e6a3b3de49">SetLearnTurns</a>(int turn_amount)</td><td class="entry"><a class="el" href="classBase_1_1FileProgramRunner.html">Base::FileProgramRunner</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classBase_1_1FileProgramRunner.html#ac35c27821a790d03ca9e0d1e92356b16">SetProgram</a>()</td><td class="entry"><a class="el" href="classBase_1_1FileProgramRunner.html">Base::FileProgramRunner</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classBase_1_1FileProgramRunner.html#a60f6b82dc44b77b396fc60b39f8c2190">SetResultDetails</a>(int value)</td><td class="entry"><a class="el" href="classBase_1_1FileProgramRunner.html">Base::FileProgramRunner</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
@@ -122,7 +122,7 @@ $(document).ready(function(){initNavTree('classBase_1_1FileProgramRunner.html','
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun May 11 2014 02:36:02 for MTFthesisstudies by
+    <li class="footer">Generated on Thu Jun 5 2014 01:05:06 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

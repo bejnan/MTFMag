@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MTFthesisstudies
-   &#160;<span id="projectnumber">version0.79</span>
+   &#160;<span id="projectnumber">version0.82</span>
    </div>
   </td>
  </tr>
@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('classAlgorithms_1_1MoveToFront.html','
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -105,6 +105,7 @@ $(document).ready(function(){initNavTree('classAlgorithms_1_1MoveToFront.html','
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classAlgorithms_1_1MoveToFront-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -140,7 +141,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa62dff6c6b3d27eaab6ceb8ee2bb9b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4994db9cdc96a9e0137081d30c838b20"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithms_1_1MoveToFront.html#a4994db9cdc96a9e0137081d30c838b20">HaveElement</a> (int user_id)</td></tr>
 <tr class="separator:a4994db9cdc96a9e0137081d30c838b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a516edb1a8d5f387ab5c142472abf8389"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithms_1_1MoveToFront.html#a516edb1a8d5f387ab5c142472abf8389">AlgorithmName</a> ()</td></tr>
+<tr class="memitem:a1b50d1b3893a83da80cb75217d1c46f0"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithms_1_1MoveToFront.html#a1b50d1b3893a83da80cb75217d1c46f0">GetAlgorithmName</a> ()</td></tr>
+<tr class="separator:a1b50d1b3893a83da80cb75217d1c46f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37ecbe69bdefec4032a28ef2097dfc35"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithm</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithms_1_1MoveToFront.html#a37ecbe69bdefec4032a28ef2097dfc35">Clone</a> ()</td></tr>
+<tr class="separator:a37ecbe69bdefec4032a28ef2097dfc35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a516edb1a8d5f387ab5c142472abf8389"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithms_1_1MoveToFront.html#a516edb1a8d5f387ab5c142472abf8389">AlgorithmName</a> ()</td></tr>
 <tr class="separator:a516edb1a8d5f387ab5c142472abf8389"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
@@ -187,6 +195,12 @@ Protected Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception::ElementAlreadyExists</td><td>if elements exists in algorithm </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="classAlgorithms_1_1Algorithm.html#aa448cae80d174538afa5c422f03314c4">Algorithms::Algorithm</a>.</p>
 
@@ -195,7 +209,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAlgorithms_1_1MoveToFront_aa62dff6c6b3d27eaab6ceb8ee2bb9b30_cgraph.png" border="0" usemap="#classAlgorithms_1_1MoveToFront_aa62dff6c6b3d27eaab6ceb8ee2bb9b30_cgraph" alt=""/></div>
 <map name="classAlgorithms_1_1MoveToFront_aa62dff6c6b3d27eaab6ceb8ee2bb9b30_cgraph" id="classAlgorithms_1_1MoveToFront_aa62dff6c6b3d27eaab6ceb8ee2bb9b30_cgraph">
-<area shape="rect" id="node2" href="classAlgorithms_1_1MoveToFront.html#a4994db9cdc96a9e0137081d30c838b20" title="Algorithms::MoveToFront\l::HaveElement" alt="" coords="232,5,411,46"/></map>
+<area shape="rect" id="node2" href="classAlgorithms_1_1MoveToFront.html#a4994db9cdc96a9e0137081d30c838b20" title="Algorithms::MoveToFront\l::HaveElement" alt="" coords="232,5,411,46"/><area shape="rect" id="node3" href="classAlgorithms_1_1MoveToFront.html#a37ecbe69bdefec4032a28ef2097dfc35" title="Algorithms::MoveToFront\l::Clone" alt="" coords="232,70,411,111"/></map>
 </div>
 </p>
 
@@ -217,14 +231,39 @@ Here is the call graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>Return name of algorithm to identify method. </p>
 <dl class="section return"><dt>Returns</dt><dd>Name of method used as algorithm </dd></dl>
 
-<p>Implements <a class="el" href="classAlgorithms_1_1Algorithm.html#a3f2643c496bf2db3c623abd04372ae9e">Algorithms::Algorithm</a>.</p>
+</div>
+</div>
+<a class="anchor" id="a37ecbe69bdefec4032a28ef2097dfc35"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">shared_ptr&lt; <a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithm</a> &gt; Algorithms::MoveToFront::Clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Implementation of Prototype pattern. Creates new empty instance of algorithm. </p>
+<dl class="section return"><dt>Returns</dt><dd>New empty instance of algorithm implementation (the same as called one). </dd></dl>
+
+<p>Implements <a class="el" href="classAlgorithms_1_1Algorithm.html#aa90f2b22ff52b623ca34b17acad66c3f">Algorithms::Algorithm</a>.</p>
 
 </div>
 </div>
@@ -317,6 +356,33 @@ Here is the call graph for this function:</div>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classBase_1_1Element.html#aa4469ee3158e1fc2302a022581153dda">Base::Element::Difference</a> </dd></dl>
 
 <p>Implements <a class="el" href="classAlgorithms_1_1Algorithm.html#a5b27859d8e42c28f1f3de1ae31ff22e0">Algorithms::Algorithm</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1b50d1b3893a83da80cb75217d1c46f0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Algorithms::MoveToFront::GetAlgorithmName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gives name of algorithm uses in class instance </p>
+<dl class="section return"><dt>Returns</dt><dd>Name of algorithm used in implementation </dd></dl>
+
+<p>Implements <a class="el" href="classAlgorithms_1_1Algorithm.html#a5a4c36da3ae4e912678f408805b8012f">Algorithms::Algorithm</a>.</p>
 
 </div>
 </div>
@@ -451,7 +517,7 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Main method of algorithm. Notify element with given id. After notification of element (<a class="el" href="classBase_1_1Element.html#afbf18a93271bdeba8a5ced434b518711">Base::Element::Notify</a> method) it moves element to front. Details of movement depends on algorithm. </p>
+<p>Main method of algorithm. Notify element with given id. After notification of element (<a class="el" href="classBase_1_1Element.html#afbf18a93271bdeba8a5ced434b518711">Base::Element::Notify</a> method) algorithm moves element up. Details of movement depends on algorithm. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">user_id</td><td>Identifier of element to notify </td></tr>
@@ -466,7 +532,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAlgorithms_1_1MoveToFront_ab0adbbe4f0ce5f787b51deadcb3ae8f7_cgraph.png" border="0" usemap="#classAlgorithms_1_1MoveToFront_ab0adbbe4f0ce5f787b51deadcb3ae8f7_cgraph" alt=""/></div>
 <map name="classAlgorithms_1_1MoveToFront_ab0adbbe4f0ce5f787b51deadcb3ae8f7_cgraph" id="classAlgorithms_1_1MoveToFront_ab0adbbe4f0ce5f787b51deadcb3ae8f7_cgraph">
-<area shape="rect" id="node2" href="classAlgorithms_1_1MoveToFront.html#af5df5c7f9375c0c91d4c139563802087" title="Algorithms::MoveToFront\l::MoveFromPositionToFront" alt="" coords="232,5,427,46"/><area shape="rect" id="node3" href="classAlgorithms_1_1MoveToFront.html#a26cfd9d70b5a744874902590e4e53fc9" title="Algorithms::MoveToFront\l::SwapElementsOnPositions" alt="" coords="475,5,672,46"/></map>
+<area shape="rect" id="node2" href="classAlgorithms_1_1MoveToFront.html#a4994db9cdc96a9e0137081d30c838b20" title="Algorithms::MoveToFront\l::HaveElement" alt="" coords="240,5,419,46"/><area shape="rect" id="node3" href="classAlgorithms_1_1MoveToFront.html#af5df5c7f9375c0c91d4c139563802087" title="Algorithms::MoveToFront\l::MoveFromPositionToFront" alt="" coords="232,70,427,111"/><area shape="rect" id="node4" href="classAlgorithms_1_1MoveToFront.html#a26cfd9d70b5a744874902590e4e53fc9" title="Algorithms::MoveToFront\l::SwapElementsOnPositions" alt="" coords="475,70,672,111"/></map>
 </div>
 </p>
 
@@ -503,7 +569,7 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>As version with one parameter notify element with given id. After notification of element (<a class="el" href="classBase_1_1Element.html#afbf18a93271bdeba8a5ced434b518711">Base::Element::Notify</a> method) it moves element to front. Details of movement depends on algorithm. notification_count can be used in Element::Notify method to measure actuality of element. </p>
+<p>As version with one parameter notify element with given id. After notification of element (<a class="el" href="classBase_1_1Element.html#afbf18a93271bdeba8a5ced434b518711">Base::Element::Notify</a> method) it moves element up. Details of movement depends on algorithm. notification_count can be used in Element::Notify method to measure distance between notification of given element and others. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">user_id</td><td>Identifier of element to notify </td></tr>
@@ -519,7 +585,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAlgorithms_1_1MoveToFront_ad3edf0688f9998d5a6e8ba1f961ac167_cgraph.png" border="0" usemap="#classAlgorithms_1_1MoveToFront_ad3edf0688f9998d5a6e8ba1f961ac167_cgraph" alt=""/></div>
 <map name="classAlgorithms_1_1MoveToFront_ad3edf0688f9998d5a6e8ba1f961ac167_cgraph" id="classAlgorithms_1_1MoveToFront_ad3edf0688f9998d5a6e8ba1f961ac167_cgraph">
-<area shape="rect" id="node2" href="classAlgorithms_1_1MoveToFront.html#af5df5c7f9375c0c91d4c139563802087" title="Algorithms::MoveToFront\l::MoveFromPositionToFront" alt="" coords="232,5,427,46"/><area shape="rect" id="node3" href="classAlgorithms_1_1MoveToFront.html#a26cfd9d70b5a744874902590e4e53fc9" title="Algorithms::MoveToFront\l::SwapElementsOnPositions" alt="" coords="475,5,672,46"/></map>
+<area shape="rect" id="node2" href="classAlgorithms_1_1MoveToFront.html#a4994db9cdc96a9e0137081d30c838b20" title="Algorithms::MoveToFront\l::HaveElement" alt="" coords="240,5,419,46"/><area shape="rect" id="node3" href="classAlgorithms_1_1MoveToFront.html#af5df5c7f9375c0c91d4c139563802087" title="Algorithms::MoveToFront\l::MoveFromPositionToFront" alt="" coords="232,70,427,111"/><area shape="rect" id="node4" href="classAlgorithms_1_1MoveToFront.html#a26cfd9d70b5a744874902590e4e53fc9" title="Algorithms::MoveToFront\l::SwapElementsOnPositions" alt="" coords="475,70,672,111"/></map>
 </div>
 </p>
 
@@ -606,7 +672,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>Algorithms</b></li><li class="navelem"><a class="el" href="classAlgorithms_1_1MoveToFront.html">MoveToFront</a></li>
-    <li class="footer">Generated on Sun May 11 2014 02:36:02 for MTFthesisstudies by
+    <li class="footer">Generated on Thu Jun 5 2014 01:05:06 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

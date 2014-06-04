@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MTFthesisstudies
-   &#160;<span id="projectnumber">version0.79</span>
+   &#160;<span id="projectnumber">version0.82</span>
    </div>
   </td>
  </tr>
@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('classBase_1_1CsvDataOutput.html','');}
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -110,12 +110,10 @@ $(document).ready(function(){initNavTree('classBase_1_1CsvDataOutput.html','');}
 
 <p>This is the complete list of members for <a class="el" href="classBase_1_1CsvDataOutput.html">Base::CsvDataOutput</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classBase_1_1CsvDataOutput.html#aaa4e604ce1d06ee002889b2604faf4e4">AreTitlesPrinted</a>()</td><td class="entry"><a class="el" href="classBase_1_1CsvDataOutput.html">Base::CsvDataOutput</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classBase_1_1CsvDataOutput.html#acbedd47083f64caaafc2a33336bef869">CsvDataOutput</a>(char separator= '|')</td><td class="entry"><a class="el" href="classBase_1_1CsvDataOutput.html">Base::CsvDataOutput</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classBase_1_1DataOutput.html#adea8f6af278e2e8ace25ba64d9bf9a57">GetOutputStream</a>()</td><td class="entry"><a class="el" href="classBase_1_1DataOutput.html">Base::DataOutput</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classBase_1_1CsvDataOutput.html#aa54484865cd138cf49b5aa5b9ef813d5">PrintColumnTitles</a>()</td><td class="entry"><a class="el" href="classBase_1_1CsvDataOutput.html">Base::CsvDataOutput</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classBase_1_1CsvDataOutput.html#a88994527237735d1d6a05cec3b222ba7">PrintLine</a>(int turns_count, vector&lt; int &gt; results)</td><td class="entry"><a class="el" href="classBase_1_1CsvDataOutput.html">Base::CsvDataOutput</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classBase_1_1CsvDataOutput.html#a9302a89524b164d440280bc1c90c90d3">SetColumnTitles</a>(vector&lt; string &gt; titles)</td><td class="entry"><a class="el" href="classBase_1_1CsvDataOutput.html">Base::CsvDataOutput</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classBase_1_1CsvDataOutput.html#acbedd47083f64caaafc2a33336bef869">CsvDataOutput</a>(char separator= '|')</td><td class="entry"><a class="el" href="classBase_1_1CsvDataOutput.html">Base::CsvDataOutput</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classBase_1_1DataOutput.html#adea8f6af278e2e8ace25ba64d9bf9a57">GetOutputStream</a>()</td><td class="entry"><a class="el" href="classBase_1_1DataOutput.html">Base::DataOutput</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classBase_1_1CsvDataOutput.html#aa54484865cd138cf49b5aa5b9ef813d5">PrintColumnTitles</a>()</td><td class="entry"><a class="el" href="classBase_1_1CsvDataOutput.html">Base::CsvDataOutput</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classBase_1_1CsvDataOutput.html#a972d6073d8c9e7d87e16a9cefb9ab732">PrintLine</a>(int turns_count, vector&lt; string &gt; results)</td><td class="entry"><a class="el" href="classBase_1_1CsvDataOutput.html">Base::CsvDataOutput</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classBase_1_1CsvDataOutput.html#ac1fbaa916fb293fea40e772397450b5f">~CsvDataOutput</a>()</td><td class="entry"><a class="el" href="classBase_1_1CsvDataOutput.html">Base::CsvDataOutput</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classBase_1_1DataOutput.html#afbf4de9aafb25ccc5a9a1565b29565ec">~DataOutput</a>()</td><td class="entry"><a class="el" href="classBase_1_1DataOutput.html">Base::DataOutput</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
@@ -123,7 +121,7 @@ $(document).ready(function(){initNavTree('classBase_1_1CsvDataOutput.html','');}
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun May 11 2014 02:36:02 for MTFthesisstudies by
+    <li class="footer">Generated on Thu Jun 5 2014 01:05:06 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

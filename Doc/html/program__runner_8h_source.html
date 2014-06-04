@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MTFthesisstudies
-   &#160;<span id="projectnumber">version0.79</span>
+   &#160;<span id="projectnumber">version0.82</span>
    </div>
   </td>
  </tr>
@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('program__runner_8h_source.html','');})
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -132,22 +132,22 @@ $(document).ready(function(){initNavTree('program__runner_8h_source.html','');})
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classBase_1_1ProgramRunner.html#a83bd69161327645f44a09743a9f168d7">SetTestTurns</a>(<span class="keywordtype">int</span> turn_amount) = 0;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classBase_1_1ProgramRunner.html#a060b39c6cd532262b7d6eb7b186c30fe">SetResultOutputFrequency</a>(<span class="keywordtype">int</span> period) = 0;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classBase_1_1ProgramRunner.html#aa50e2331ee8da695c88d6a42299e3ec7">SetResultDetails</a>(<span class="keywordtype">int</span> value) = 0;  <span class="comment">// TODO!</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classBase_1_1ProgramRunner.html#adedb0e7e40407823d5d8423e99461ad9">SetAlgorithmsToTest</a>(</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      vector&lt;shared_ptr&lt;Tools::ProcessorFactory&gt; &gt; processor_factories) = 0;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;};</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;} <span class="comment">/* namespace Base */</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* PROGRAM_RUNNER_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classBase_1_1ProgramRunner.html#a060b39c6cd532262b7d6eb7b186c30fe">SetResultOutputFrequency</a>(<span class="keywordtype">int</span> period) = 0;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classBase_1_1ProgramRunner.html#aa50e2331ee8da695c88d6a42299e3ec7">SetResultDetails</a>(<span class="keywordtype">int</span> value) = 0;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classBase_1_1ProgramRunner.html#affb9b9ecbc5469c1a147b838f2a01988">SetAlgorithmsToTest</a>(</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      vector&lt;string&gt; algorithm_names) = 0;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;} <span class="comment">/* namespace Base */</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* PROGRAM_RUNNER_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="classBase_1_1ProgramRunner_html_a83bd69161327645f44a09743a9f168d7"><div class="ttname"><a href="classBase_1_1ProgramRunner.html#a83bd69161327645f44a09743a9f168d7">Base::ProgramRunner::SetTestTurns</a></div><div class="ttdeci">virtual void SetTestTurns(int turn_amount)=0</div></div>
 <div class="ttc" id="classBase_1_1ProgramRunner_html_aa50e2331ee8da695c88d6a42299e3ec7"><div class="ttname"><a href="classBase_1_1ProgramRunner.html#aa50e2331ee8da695c88d6a42299e3ec7">Base::ProgramRunner::SetResultDetails</a></div><div class="ttdeci">virtual void SetResultDetails(int value)=0</div></div>
 <div class="ttc" id="classBase_1_1ProgramRunner_html_a104f614491024d5c928199234cd65ab8"><div class="ttname"><a href="classBase_1_1ProgramRunner.html#a104f614491024d5c928199234cd65ab8">Base::ProgramRunner::SetLearnTurns</a></div><div class="ttdeci">virtual void SetLearnTurns(int turn_amount)=0</div></div>
 <div class="ttc" id="classBase_1_1ProgramRunner_html_a060b39c6cd532262b7d6eb7b186c30fe"><div class="ttname"><a href="classBase_1_1ProgramRunner.html#a060b39c6cd532262b7d6eb7b186c30fe">Base::ProgramRunner::SetResultOutputFrequency</a></div><div class="ttdeci">virtual void SetResultOutputFrequency(int period)=0</div></div>
-<div class="ttc" id="classBase_1_1ProgramRunner_html_adedb0e7e40407823d5d8423e99461ad9"><div class="ttname"><a href="classBase_1_1ProgramRunner.html#adedb0e7e40407823d5d8423e99461ad9">Base::ProgramRunner::SetAlgorithmsToTest</a></div><div class="ttdeci">virtual void SetAlgorithmsToTest(vector&lt; shared_ptr&lt; Tools::ProcessorFactory &gt; &gt; processor_factories)=0</div></div>
+<div class="ttc" id="classBase_1_1ProgramRunner_html_affb9b9ecbc5469c1a147b838f2a01988"><div class="ttname"><a href="classBase_1_1ProgramRunner.html#affb9b9ecbc5469c1a147b838f2a01988">Base::ProgramRunner::SetAlgorithmsToTest</a></div><div class="ttdeci">virtual void SetAlgorithmsToTest(vector&lt; string &gt; algorithm_names)=0</div></div>
 <div class="ttc" id="classBase_1_1ProgramRunner_html_a3d55a80abf5bc5e0395aed6e351d945a"><div class="ttname"><a href="classBase_1_1ProgramRunner.html#a3d55a80abf5bc5e0395aed6e351d945a">Base::ProgramRunner::SetProgram</a></div><div class="ttdeci">virtual void SetProgram()=0</div></div>
 <div class="ttc" id="classBase_1_1ProgramRunner_html"><div class="ttname"><a href="classBase_1_1ProgramRunner.html">Base::ProgramRunner</a></div><div class="ttdef"><b>Definition:</b> program_runner.h:23</div></div>
 <div class="ttc" id="classBase_1_1ProgramRunner_html_a8fd3499d51a851ef07f63fd23e79c003"><div class="ttname"><a href="classBase_1_1ProgramRunner.html#a8fd3499d51a851ef07f63fd23e79c003">Base::ProgramRunner::RunProgram</a></div><div class="ttdeci">virtual void RunProgram()=0</div></div>
@@ -157,7 +157,7 @@ $(document).ready(function(){initNavTree('program__runner_8h_source.html','');})
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d3bff1ab3a40b4e5d0775c67ace1b0da.html">controller</a></li><li class="navelem"><b>program_runner.h</b></li>
-    <li class="footer">Generated on Sun May 11 2014 02:36:02 for MTFthesisstudies by
+    <li class="footer">Generated on Thu Jun 5 2014 01:05:06 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MTFthesisstudies
-   &#160;<span id="projectnumber">version0.79</span>
+   &#160;<span id="projectnumber">version0.82</span>
    </div>
   </td>
  </tr>
@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('classAlgorithms_1_1Algorithm.html','')
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -111,22 +111,23 @@ $(document).ready(function(){initNavTree('classAlgorithms_1_1Algorithm.html','')
 <p>This is the complete list of members for <a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithms::Algorithm</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html#aa448cae80d174538afa5c422f03314c4">AddElement</a>(int user_id)=0</td><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithms::Algorithm</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html#a3f2643c496bf2db3c623abd04372ae9e">AlgorithmName</a>()=0</td><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithms::Algorithm</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html#aa90f2b22ff52b623ca34b17acad66c3f">Clone</a>()=0</td><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithms::Algorithm</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html#a5caa6b3806833aae4e8350aa6a0cd076">CompareElementsOnPositions</a>(int position1, int position2)=0</td><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithms::Algorithm</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html#a5b27859d8e42c28f1f3de1ae31ff22e0">DifferenceBetweenElementsOnPosition</a>(int position1, int position2)=0</td><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithms::Algorithm</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html#a6e09676b9c4993b10687e6a1b42998ab">GetContentPosition</a>(int user_id)=0</td><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithms::Algorithm</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html#ac60df21001af13442bdcabe7a585f2dc">HaveElement</a>(int user_id)=0</td><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithms::Algorithm</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html#ae2f19a59bbf94e645e437e5af1b1a3ed">MoveFromPositionToFront</a>(int position)=0</td><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithms::Algorithm</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html#a7518f25c52360dbc9da868a48b528716">NotifyContent</a>(int user_id)=0</td><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithms::Algorithm</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html#acfdf044361edd64601bc5d681a960dd9">NotifyContent</a>(int user_id, int notification_count)=0</td><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithms::Algorithm</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html#a24c4aa45ee71c51ae3d40d7f3a617f35">SortElementToList</a>()=0</td><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithms::Algorithm</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html#ab8ccc42fea17568fabaa4a8aec86af74">SwapElementsOnPositions</a>(int position1, int position2)=0</td><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithms::Algorithm</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html#a5a4c36da3ae4e912678f408805b8012f">GetAlgorithmName</a>()=0</td><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithms::Algorithm</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html#a6e09676b9c4993b10687e6a1b42998ab">GetContentPosition</a>(int user_id)=0</td><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithms::Algorithm</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html#ac60df21001af13442bdcabe7a585f2dc">HaveElement</a>(int user_id)=0</td><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithms::Algorithm</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html#ae2f19a59bbf94e645e437e5af1b1a3ed">MoveFromPositionToFront</a>(int position)=0</td><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithms::Algorithm</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html#a7518f25c52360dbc9da868a48b528716">NotifyContent</a>(int user_id)=0</td><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithms::Algorithm</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html#acfdf044361edd64601bc5d681a960dd9">NotifyContent</a>(int user_id, int notification_count)=0</td><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithms::Algorithm</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html#a24c4aa45ee71c51ae3d40d7f3a617f35">SortElementToList</a>()=0</td><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithms::Algorithm</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html#ab8ccc42fea17568fabaa4a8aec86af74">SwapElementsOnPositions</a>(int position1, int position2)=0</td><td class="entry"><a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithms::Algorithm</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun May 11 2014 02:36:02 for MTFthesisstudies by
+    <li class="footer">Generated on Thu Jun 5 2014 01:05:06 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

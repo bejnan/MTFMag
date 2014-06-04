@@ -1,9 +1,10 @@
 var classAlgorithms_1_1Algorithm =
 [
     [ "AddElement", "classAlgorithms_1_1Algorithm.html#aa448cae80d174538afa5c422f03314c4", null ],
-    [ "AlgorithmName", "classAlgorithms_1_1Algorithm.html#a3f2643c496bf2db3c623abd04372ae9e", null ],
+    [ "Clone", "classAlgorithms_1_1Algorithm.html#aa90f2b22ff52b623ca34b17acad66c3f", null ],
     [ "CompareElementsOnPositions", "classAlgorithms_1_1Algorithm.html#a5caa6b3806833aae4e8350aa6a0cd076", null ],
     [ "DifferenceBetweenElementsOnPosition", "classAlgorithms_1_1Algorithm.html#a5b27859d8e42c28f1f3de1ae31ff22e0", null ],
+    [ "GetAlgorithmName", "classAlgorithms_1_1Algorithm.html#a5a4c36da3ae4e912678f408805b8012f", null ],
     [ "GetContentPosition", "classAlgorithms_1_1Algorithm.html#a6e09676b9c4993b10687e6a1b42998ab", null ],
     [ "HaveElement", "classAlgorithms_1_1Algorithm.html#ac60df21001af13442bdcabe7a585f2dc", null ],
     [ "MoveFromPositionToFront", "classAlgorithms_1_1Algorithm.html#ae2f19a59bbf94e645e437e5af1b1a3ed", null ],

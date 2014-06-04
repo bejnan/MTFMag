@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MTFthesisstudies
-   &#160;<span id="projectnumber">version0.79</span>
+   &#160;<span id="projectnumber">version0.82</span>
    </div>
   </td>
  </tr>
@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('classBase_1_1DataOutput.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -125,14 +125,10 @@ Inheritance diagram for Base::DataOutput:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:afbf4de9aafb25ccc5a9a1565b29565ec"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1DataOutput.html#afbf4de9aafb25ccc5a9a1565b29565ec">~DataOutput</a> ()</td></tr>
 <tr class="separator:afbf4de9aafb25ccc5a9a1565b29565ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdb91464e7559dedf69c56c1b862a216"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1DataOutput.html#afdb91464e7559dedf69c56c1b862a216">PrintLine</a> (int turns_count, vector&lt; int &gt; results)=0</td></tr>
-<tr class="separator:afdb91464e7559dedf69c56c1b862a216"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49ba79d35363f4741a0bf9022f15d697"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1DataOutput.html#a49ba79d35363f4741a0bf9022f15d697">PrintLine</a> (int turns_count, vector&lt; string &gt; results)=0</td></tr>
+<tr class="separator:a49ba79d35363f4741a0bf9022f15d697"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f1a6127945492d692629120575e7f82"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1DataOutput.html#a0f1a6127945492d692629120575e7f82">PrintColumnTitles</a> ()=0</td></tr>
 <tr class="separator:a0f1a6127945492d692629120575e7f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a368f0c022e828cd3f29085e10e70b113"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1DataOutput.html#a368f0c022e828cd3f29085e10e70b113">SetColumnTitles</a> (vector&lt; string &gt; titles)=0</td></tr>
-<tr class="separator:a368f0c022e828cd3f29085e10e70b113"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa201a3a18e148803cc3384af60acda60"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1DataOutput.html#aa201a3a18e148803cc3384af60acda60">AreTitlesPrinted</a> ()=0</td></tr>
-<tr class="separator:aa201a3a18e148803cc3384af60acda60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -141,6 +137,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interface for printing results. Used in <a class="el" href="classBase_1_1DataCollector.html">DataCollector</a> for creating output of tested algorithms. </p>
+<dl class="section see"><dt>See Also</dt><dd>DataCollector::PrintResults </dd>
+<dd>
+DataCollector::PrintResultsFromPointers </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="afbf4de9aafb25ccc5a9a1565b29565ec"></a>
 <div class="memitem">
@@ -167,33 +166,6 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aa201a3a18e148803cc3384af60acda60"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool Base::DataOutput::AreTitlesPrinted </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Getter for are_titles_printed </p>
-<dl class="section return"><dt>Returns</dt><dd>True if method <a class="el" href="classBase_1_1DataOutput.html#a0f1a6127945492d692629120575e7f82">PrintColumnTitles()</a> was used before, false otherwise </dd></dl>
-
-<p>Implemented in <a class="el" href="classBase_1_1CsvDataOutput.html#aaa4e604ce1d06ee002889b2604faf4e4">Base::CsvDataOutput</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="adea8f6af278e2e8ace25ba64d9bf9a57"></a>
 <div class="memitem">
 <div class="memproto">
@@ -247,7 +219,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afdb91464e7559dedf69c56c1b862a216"></a>
+<a class="anchor" id="a49ba79d35363f4741a0bf9022f15d697"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -263,7 +235,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">vector&lt; int &gt;&#160;</td>
+          <td class="paramtype">vector&lt; string &gt;&#160;</td>
           <td class="paramname"><em>results</em>&#160;</td>
         </tr>
         <tr>
@@ -282,45 +254,12 @@ Protected Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">turns_count</td><td>First column of output, number of passed turns(tests) </td></tr>
-    <tr><td class="paramname">results</td><td>Vector of </td></tr>
+    <tr><td class="paramname">results</td><td>Vector of results </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classBase_1_1CsvDataOutput.html#a88994527237735d1d6a05cec3b222ba7">Base::CsvDataOutput</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a368f0c022e828cd3f29085e10e70b113"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Base::DataOutput::SetColumnTitles </td>
-          <td>(</td>
-          <td class="paramtype">vector&lt; string &gt;&#160;</td>
-          <td class="paramname"><em>titles</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Setter for titles_names_ </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">titles</td><td>Titles which replaces titles_names_ </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implemented in <a class="el" href="classBase_1_1CsvDataOutput.html#a9302a89524b164d440280bc1c90c90d3">Base::CsvDataOutput</a>.</p>
+<p>Implemented in <a class="el" href="classBase_1_1CsvDataOutput.html#a972d6073d8c9e7d87e16a9cefb9ab732">Base::CsvDataOutput</a>.</p>
 
 </div>
 </div>
@@ -333,7 +272,7 @@ Protected Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>Base</b></li><li class="navelem"><a class="el" href="classBase_1_1DataOutput.html">DataOutput</a></li>
-    <li class="footer">Generated on Sun May 11 2014 02:36:02 for MTFthesisstudies by
+    <li class="footer">Generated on Thu Jun 5 2014 01:05:06 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

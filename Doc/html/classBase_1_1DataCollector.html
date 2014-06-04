@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MTFthesisstudies
-   &#160;<span id="projectnumber">version0.79</span>
+   &#160;<span id="projectnumber">version0.82</span>
    </div>
   </td>
  </tr>
@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('classBase_1_1DataCollector.html','');}
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -104,7 +104,6 @@ $(document).ready(function(){initNavTree('classBase_1_1DataCollector.html','');}
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classBase_1_1DataCollector-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Base::DataCollector Class Reference</div>  </div>
@@ -112,329 +111,11 @@ $(document).ready(function(){initNavTree('classBase_1_1DataCollector.html','');}
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="data__collector_8h_source.html">data_collector.h</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a3f64da07dd97a418061c7f6e24dd422c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1DataCollector.html#a3f64da07dd97a418061c7f6e24dd422c">DataCollector</a> (<a class="el" href="classBase_1_1DataProvider.html">DataProvider</a> &amp;data_input, shared_ptr&lt; <a class="el" href="classBase_1_1DataOutput.html">DataOutput</a> &gt; data_output)</td></tr>
-<tr class="separator:a3f64da07dd97a418061c7f6e24dd422c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7deb91a435cbd42091e560e152609ab"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1DataCollector.html#aa7deb91a435cbd42091e560e152609ab">~DataCollector</a> ()</td></tr>
-<tr class="separator:aa7deb91a435cbd42091e560e152609ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa882730336c5d171acfaab053698fe7f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1DataCollector.html#aa882730336c5d171acfaab053698fe7f">AddProccessorFactory</a> (shared_ptr&lt; <a class="el" href="classTools_1_1ProcessorFactory.html">Tools::ProcessorFactory</a> &gt; procesor_factory_ptr)</td></tr>
-<tr class="separator:aa882730336c5d171acfaab053698fe7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f82cf1aa48981c36cb2e0eba944c148"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1DataCollector.html#a5f82cf1aa48981c36cb2e0eba944c148">RunTurns</a> (int turn_amount, bool learn=false)</td></tr>
-<tr class="separator:a5f82cf1aa48981c36cb2e0eba944c148"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb1d46273c24e3e1fdefba6b730ebf28"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1DataCollector.html#afb1d46273c24e3e1fdefba6b730ebf28">PrintActualResults</a> ()</td></tr>
-<tr class="separator:afb1d46273c24e3e1fdefba6b730ebf28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afaacb5f36d09faf5e6633a03aa26fdae"><td class="memItemLeft" align="right" valign="top">virtual vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1DataCollector.html#afaacb5f36d09faf5e6633a03aa26fdae">GetResult</a> (int user_id)</td></tr>
-<tr class="separator:afaacb5f36d09faf5e6633a03aa26fdae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab300045605fb48a975be8c93f7e93b6f"><td class="memItemLeft" align="right" valign="top">virtual vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1DataCollector.html#ab300045605fb48a975be8c93f7e93b6f">GetResultsSum</a> ()</td></tr>
-<tr class="separator:ab300045605fb48a975be8c93f7e93b6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52bf3c7c4a610191acd56fa8628ac758"><td class="memItemLeft" align="right" valign="top">virtual vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1DataCollector.html#a52bf3c7c4a610191acd56fa8628ac758">GetAlgorithmsNames</a> ()</td></tr>
-<tr class="separator:a52bf3c7c4a610191acd56fa8628ac758"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class to connect all parts of algorithms. </p>
-<div align="center">
-<img src="dot_inline_dotgraph_1.png" alt="dot_inline_dotgraph_1.png" border="0" usemap="#dot_inline_dotgraph_1.map"/>
-<map name="dot_inline_dotgraph_1.map" id="dot_inline_dotgraph_1.map"></map>
-</div>
-<p> It provides data to Processors and print penalties. It also generates Processors for every user, object, contact (id) that comes from <a class="el" href="classBase_1_1DataProvider.html">DataProvider</a>. </p>
-<div align="center">
-<img src="dot_inline_dotgraph_2.png" alt="dot_inline_dotgraph_2.png" border="0" usemap="#dot_inline_dotgraph_2.map"/>
-<map name="dot_inline_dotgraph_2.map" id="dot_inline_dotgraph_2.map"></map>
-</div>
-<p> ProcessorFactiories are needed to generate Processors for every user (user_id) that comes from <a class="el" href="classBase_1_1DataProvider.html">DataProvider</a>. Every ProcessorFactiory represents one algorithm. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a3f64da07dd97a418061c7f6e24dd422c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Base::DataCollector::DataCollector </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classBase_1_1DataProvider.html">DataProvider</a> &amp;&#160;</td>
-          <td class="paramname"><em>data_input</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">shared_ptr&lt; <a class="el" href="classBase_1_1DataOutput.html">DataOutput</a> &gt;&#160;</td>
-          <td class="paramname"><em>data_output</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Constructor responsible for initialization all connected objects except objects given as parameters </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">data_input</td><td>Data input to proceed </td></tr>
-    <tr><td class="paramname">data_output</td><td>Output for results </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="aa7deb91a435cbd42091e560e152609ab"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Base::DataCollector::~DataCollector </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Default destructor. No object need to be deleted or handled in special way. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aa882730336c5d171acfaab053698fe7f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Base::DataCollector::AddProccessorFactory </td>
-          <td>(</td>
-          <td class="paramtype">shared_ptr&lt; <a class="el" href="classTools_1_1ProcessorFactory.html">Tools::ProcessorFactory</a> &gt;&#160;</td>
-          <td class="paramname"><em>procesor_factory_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Method to add ProcessorFactory to generate new Processors </p>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classTools_1_1ProcessorFactory.html">Tools::ProcessorFactory</a> </dd>
-<dd>
-<a class="el" href="classTools_1_1Processor.html">Tools::Processor</a> </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">procesor_factory_ptr</td><td>Pointer to ProcessorFactory which will be added to processor_factories_ vector </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a52bf3c7c4a610191acd56fa8628ac758"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">vector&lt; string &gt; Base::DataCollector::GetAlgorithmsNames </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Method to get names of algorithms put by ProcessorFatories to processor_factories_ vector; </p>
-<dl class="section return"><dt>Returns</dt><dd>Algorithm names placed in <a class="el" href="classBase_1_1DataCollector.html">DataCollector</a> </dd></dl>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classBase_1_1DataCollector_a52bf3c7c4a610191acd56fa8628ac758_cgraph.png" border="0" usemap="#classBase_1_1DataCollector_a52bf3c7c4a610191acd56fa8628ac758_cgraph" alt=""/></div>
-<map name="classBase_1_1DataCollector_a52bf3c7c4a610191acd56fa8628ac758_cgraph" id="classBase_1_1DataCollector_a52bf3c7c4a610191acd56fa8628ac758_cgraph">
-<area shape="rect" id="node2" href="classBase_1_1Database.html#a8e7191f1c4c56db540cc3787a51fb0bc" title="Base::Database::QueryAlgorithm\lNames" alt="" coords="217,5,439,46"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="afaacb5f36d09faf5e6633a03aa26fdae"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">vector&lt; int &gt; Base::DataCollector::GetResult </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>user_id</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Method to get penalty for one user. Every position on vector represents penalty counted for corresponding algorithm </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">user_id</td><td>Choosen user </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Vector of results for given algorithms </dd></dl>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classBase_1_1DataCollector_afaacb5f36d09faf5e6633a03aa26fdae_cgraph.png" border="0" usemap="#classBase_1_1DataCollector_afaacb5f36d09faf5e6633a03aa26fdae_cgraph" alt=""/></div>
-<map name="classBase_1_1DataCollector_afaacb5f36d09faf5e6633a03aa26fdae_cgraph" id="classBase_1_1DataCollector_afaacb5f36d09faf5e6633a03aa26fdae_cgraph">
-<area shape="rect" id="node2" href="classBase_1_1Database.html#addb40ac264523f60e4fbcd3797803221" title="Base::Database::Query" alt="" coords="201,12,365,39"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="ab300045605fb48a975be8c93f7e93b6f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">vector&lt; int &gt; Base::DataCollector::GetResultsSum </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Method to get penalty sum of every user for every algorithm. Every position on vector represents penalty counted for corresponding algorithm. </p>
-<dl class="section return"><dt>Returns</dt><dd>Vector of sum results for given algorithms </dd></dl>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classBase_1_1DataCollector_ab300045605fb48a975be8c93f7e93b6f_cgraph.png" border="0" usemap="#classBase_1_1DataCollector_ab300045605fb48a975be8c93f7e93b6f_cgraph" alt=""/></div>
-<map name="classBase_1_1DataCollector_ab300045605fb48a975be8c93f7e93b6f_cgraph" id="classBase_1_1DataCollector_ab300045605fb48a975be8c93f7e93b6f_cgraph">
-<area shape="rect" id="node2" href="classBase_1_1Database.html#a8e7191f1c4c56db540cc3787a51fb0bc" title="Base::Database::QueryAlgorithm\lNames" alt="" coords="201,5,423,46"/><area shape="rect" id="node3" href="classBase_1_1Database.html#addb40ac264523f60e4fbcd3797803221" title="Base::Database::Query" alt="" coords="230,71,394,97"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="afb1d46273c24e3e1fdefba6b730ebf28"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Base::DataCollector::PrintActualResults </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Method prints one line of results using <a class="el" href="classBase_1_1DataOutput.html">DataOutput</a> instance </p>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classBase_1_1DataOutput.html">DataOutput</a> </dd></dl>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classBase_1_1DataCollector_afb1d46273c24e3e1fdefba6b730ebf28_cgraph.png" border="0" usemap="#classBase_1_1DataCollector_afb1d46273c24e3e1fdefba6b730ebf28_cgraph" alt=""/></div>
-<map name="classBase_1_1DataCollector_afb1d46273c24e3e1fdefba6b730ebf28_cgraph" id="classBase_1_1DataCollector_afb1d46273c24e3e1fdefba6b730ebf28_cgraph">
-<area shape="rect" id="node2" href="classBase_1_1DataCollector.html#a52bf3c7c4a610191acd56fa8628ac758" title="Base::DataCollector\l::GetAlgorithmsNames" alt="" coords="201,5,362,46"/><area shape="rect" id="node3" href="classBase_1_1DataCollector.html#ab300045605fb48a975be8c93f7e93b6f" title="Base::DataCollector\l::GetResultsSum" alt="" coords="208,70,355,111"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a5f82cf1aa48981c36cb2e0eba944c148"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Base::DataCollector::RunTurns </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>turn_amount</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>learn</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Method to run Processors. Every turn means one line of input is read and proceed by Processors. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">turn_amount</td><td>Number of input line to proceed </td></tr>
-    <tr><td class="paramname">learn</td><td>If true then no penalty is added. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classBase_1_1DataCollector_a5f82cf1aa48981c36cb2e0eba944c148_cgraph.png" border="0" usemap="#classBase_1_1DataCollector_a5f82cf1aa48981c36cb2e0eba944c148_cgraph" alt=""/></div>
-<map name="classBase_1_1DataCollector_a5f82cf1aa48981c36cb2e0eba944c148_cgraph" id="classBase_1_1DataCollector_a5f82cf1aa48981c36cb2e0eba944c148_cgraph">
-<area shape="rect" id="node2" href="classBase_1_1DataProvider.html#abb41c42389ba1f6875b8927edd8fbf44" title="Base::DataProvider\l::GoToNextLine" alt="" coords="201,5,343,46"/><area shape="rect" id="node3" href="classBase_1_1DataProvider.html#aa0732191de813f04ef15e71dc38a2a2a" title="Base::DataProvider\l::GetActualLine" alt="" coords="201,70,343,111"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>data_managment/<a class="el" href="data__collector_8h_source.html">data_collector.h</a></li>
-<li>data_managment/data_collector.cpp</li>
+<div class="textblock"><p>Class responsible for flow of data. Supports processors (algorithms in <a class="el" href="classBase_1_1JudgeCollector.html">JudgeCollector</a>) with data and print results. </p>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
+<li>data_managment/results_collectors/<a class="el" href="data__collector_8h_source.html">data_collector.h</a></li>
+<li>data_managment/results_collectors/data_collector.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -442,7 +123,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>Base</b></li><li class="navelem"><a class="el" href="classBase_1_1DataCollector.html">DataCollector</a></li>
-    <li class="footer">Generated on Sun May 11 2014 02:36:02 for MTFthesisstudies by
+    <li class="footer">Generated on Thu Jun 5 2014 01:05:06 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

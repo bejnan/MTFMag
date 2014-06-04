@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MTFthesisstudies
-   &#160;<span id="projectnumber">version0.79</span>
+   &#160;<span id="projectnumber">version0.82</span>
    </div>
   </td>
  </tr>
@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('classAlgorithms_1_1Algorithm.html','')
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -133,8 +133,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa448cae80d174538afa5c422f03314c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac60df21001af13442bdcabe7a585f2dc"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithms_1_1Algorithm.html#ac60df21001af13442bdcabe7a585f2dc">HaveElement</a> (int user_id)=0</td></tr>
 <tr class="separator:ac60df21001af13442bdcabe7a585f2dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f2643c496bf2db3c623abd04372ae9e"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithms_1_1Algorithm.html#a3f2643c496bf2db3c623abd04372ae9e">AlgorithmName</a> ()=0</td></tr>
-<tr class="separator:a3f2643c496bf2db3c623abd04372ae9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a4c36da3ae4e912678f408805b8012f"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithms_1_1Algorithm.html#a5a4c36da3ae4e912678f408805b8012f">GetAlgorithmName</a> ()=0</td></tr>
+<tr class="separator:a5a4c36da3ae4e912678f408805b8012f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa90f2b22ff52b623ca34b17acad66c3f"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithm</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithms_1_1Algorithm.html#aa90f2b22ff52b623ca34b17acad66c3f">Clone</a> ()=0</td></tr>
+<tr class="separator:aa90f2b22ff52b623ca34b17acad66c3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -180,12 +182,18 @@ Protected Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception::ElementAlreadyExists</td><td>if elements exists in algorithm </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implemented in <a class="el" href="classAlgorithms_1_1MTFMatrix.html#a07ac80442af79b9875b12817a6863482">Algorithms::MTFMatrix</a>, <a class="el" href="classAlgorithms_1_1TreeRoot.html#a03e7442127a0fd46d07f5f6181d4c54c">Algorithms::TreeRoot</a>, and <a class="el" href="classAlgorithms_1_1MoveToFront.html#aa62dff6c6b3d27eaab6ceb8ee2bb9b30">Algorithms::MoveToFront</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3f2643c496bf2db3c623abd04372ae9e"></a>
+<a class="anchor" id="aa90f2b22ff52b623ca34b17acad66c3f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -193,7 +201,7 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual string Algorithms::Algorithm::AlgorithmName </td>
+          <td class="memname">virtual shared_ptr&lt;<a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithm</a>&gt; Algorithms::Algorithm::Clone </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -205,10 +213,10 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Return name of algorithm to identify method. </p>
-<dl class="section return"><dt>Returns</dt><dd>Name of method used as algorithm </dd></dl>
+<p>Implementation of Prototype pattern. Creates new empty instance of algorithm. </p>
+<dl class="section return"><dt>Returns</dt><dd>New empty instance of algorithm implementation (the same as called one). </dd></dl>
 
-<p>Implemented in <a class="el" href="classAlgorithms_1_1MTFMatrix.html#a4517d2d4bd0327090ddeb1faa1047e44">Algorithms::MTFMatrix</a>, <a class="el" href="classAlgorithms_1_1TreeRoot.html#a0553b76a871d2c125e4dbe677c598e9b">Algorithms::TreeRoot</a>, <a class="el" href="classAlgorithms_1_1MoveToFront.html#a516edb1a8d5f387ab5c142472abf8389">Algorithms::MoveToFront</a>, and <a class="el" href="classAlgorithms_1_1RandomTreeRoot.html#a2406eb96b18e1d6b1e811eb0a0e26906">Algorithms::RandomTreeRoot</a>.</p>
+<p>Implemented in <a class="el" href="classAlgorithms_1_1MTFMatrix.html#ab46c7f938eb58d971241549f5aee3372">Algorithms::MTFMatrix</a>, <a class="el" href="classAlgorithms_1_1TreeRoot.html#ad0480f2e99b81c1392fc9e51fc6f1544">Algorithms::TreeRoot</a>, <a class="el" href="classAlgorithms_1_1MoveToFront.html#a37ecbe69bdefec4032a28ef2097dfc35">Algorithms::MoveToFront</a>, and <a class="el" href="classAlgorithms_1_1RandomTreeRoot.html#a653bd9b7fba1172a16e1a5d40d1074bc">Algorithms::RandomTreeRoot</a>.</p>
 
 </div>
 </div>
@@ -304,6 +312,33 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a5a4c36da3ae4e912678f408805b8012f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual string Algorithms::Algorithm::GetAlgorithmName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gives name of algorithm uses in class instance </p>
+<dl class="section return"><dt>Returns</dt><dd>Name of algorithm used in implementation </dd></dl>
+
+<p>Implemented in <a class="el" href="classAlgorithms_1_1MTFMatrix.html#ac12ad7cb46719e18f2038f73402a8603">Algorithms::MTFMatrix</a>, <a class="el" href="classAlgorithms_1_1TreeRoot.html#a6d46e4fc8ce8f86e56e21c97a2396c1a">Algorithms::TreeRoot</a>, <a class="el" href="classAlgorithms_1_1MoveToFront.html#a1b50d1b3893a83da80cb75217d1c46f0">Algorithms::MoveToFront</a>, and <a class="el" href="classAlgorithms_1_1RandomTreeRoot.html#a9378b926383025f0234444a459e2200b">Algorithms::RandomTreeRoot</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a6e09676b9c4993b10687e6a1b42998ab"></a>
 <div class="memitem">
 <div class="memproto">
@@ -393,7 +428,7 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Method to move element from given position to front (depends on algorithm). </p>
+<p>Method to move element up(depends on algorithm). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">position</td><td>Position of element to move </td></tr>
@@ -426,7 +461,7 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Main method of algorithm. Notify element with given id. After notification of element (<a class="el" href="classBase_1_1Element.html#afbf18a93271bdeba8a5ced434b518711">Base::Element::Notify</a> method) it moves element to front. Details of movement depends on algorithm. </p>
+<p>Main method of algorithm. Notify element with given id. After notification of element (<a class="el" href="classBase_1_1Element.html#afbf18a93271bdeba8a5ced434b518711">Base::Element::Notify</a> method) algorithm moves element up. Details of movement depends on algorithm. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">user_id</td><td>Identifier of element to notify </td></tr>
@@ -469,7 +504,7 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>As version with one parameter notify element with given id. After notification of element (<a class="el" href="classBase_1_1Element.html#afbf18a93271bdeba8a5ced434b518711">Base::Element::Notify</a> method) it moves element to front. Details of movement depends on algorithm. notification_count can be used in Element::Notify method to measure actuality of element. </p>
+<p>As version with one parameter notify element with given id. After notification of element (<a class="el" href="classBase_1_1Element.html#afbf18a93271bdeba8a5ced434b518711">Base::Element::Notify</a> method) it moves element up. Details of movement depends on algorithm. notification_count can be used in Element::Notify method to measure distance between notification of given element and others. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">user_id</td><td>Identifier of element to notify </td></tr>
@@ -502,7 +537,7 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Sorts elements in row to restore linear order. Used after notification </p>
+<p>Sorts elements in row to restore linear order. Used after notification. </p>
 
 <p>Implemented in <a class="el" href="classAlgorithms_1_1MTFMatrix.html#a7be4ab89408688363453337137f5c236">Algorithms::MTFMatrix</a>, <a class="el" href="classAlgorithms_1_1TreeRoot.html#a9c6ca52000c858de064b48a8c0e0c46b">Algorithms::TreeRoot</a>, and <a class="el" href="classAlgorithms_1_1MoveToFront.html#ad0111789cb548b8a30377069ee1f451f">Algorithms::MoveToFront</a>.</p>
 
@@ -561,7 +596,7 @@ Protected Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>Algorithms</b></li><li class="navelem"><a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithm</a></li>
-    <li class="footer">Generated on Sun May 11 2014 02:36:02 for MTFthesisstudies by
+    <li class="footer">Generated on Thu Jun 5 2014 01:05:06 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

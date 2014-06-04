@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MTFthesisstudies
-   &#160;<span id="projectnumber">version0.79</span>
+   &#160;<span id="projectnumber">version0.82</span>
    </div>
   </td>
  </tr>
@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('processor_8h_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -113,11 +113,11 @@ $(document).ready(function(){initNavTree('processor_8h_source.html','');});
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using</span> std::string;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">using</span> std::shared_ptr;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using</span> std::list;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using</span> std::vector;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>Tools {</div>
 <div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classTools_1_1Processor.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTools_1_1Processor.html">Processor</a> {</div>
@@ -131,27 +131,30 @@ $(document).ready(function(){initNavTree('processor_8h_source.html','');});
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classTools_1_1Processor.html#a09f7c38bed07f23524a7b5952fb813c4">GetPenalty</a>();</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordtype">string</span> <a class="code" href="classTools_1_1Processor.html#aa8e26d3d0e53a25bfc87460f84ce7ba7">AlgorithmName</a>();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classTools_1_1Processor.html#ae84109b1fd7e48786903b30f4316b9a7">   74</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classTools_1_1Processor.html#ae84109b1fd7e48786903b30f4316b9a7">user_id</a>() {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">return</span> user_id_;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> user_id_;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keyword">const</span> shared_ptr&lt;Judge&gt; penalty_judge_;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keyword">const</span> shared_ptr&lt;Algorithms::Algorithm&gt; algorithm_;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;} <span class="comment">/* namespace Tools */</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* ABSTRACTPROCESSOR_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keyword">virtual</span> shared_ptr&lt;vector&lt;pair&lt;int, int&gt; &gt; &gt; <a class="code" href="classTools_1_1Processor.html#a4275ee6ceac5702dab10fd7b0a1ebeac">GetPenaltyDetails</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classTools_1_1Processor.html#ae84109b1fd7e48786903b30f4316b9a7">   76</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classTools_1_1Processor.html#ae84109b1fd7e48786903b30f4316b9a7">user_id</a>() {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span> user_id_;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordtype">string</span> AlgorithmName();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> user_id_;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keyword">const</span> shared_ptr&lt;Judge&gt; penalty_judge_;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keyword">const</span> shared_ptr&lt;Algorithms::Algorithm&gt; algorithm_;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;};</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;} <span class="comment">/* namespace Tools */</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* ABSTRACTPROCESSOR_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="classTools_1_1Processor_html_a3402187cac3f5c0f14465d73e4429047"><div class="ttname"><a href="classTools_1_1Processor.html#a3402187cac3f5c0f14465d73e4429047">Tools::Processor::Processor</a></div><div class="ttdeci">Processor(int user_id, shared_ptr&lt; Judge &gt; judge, shared_ptr&lt; Algorithms::Algorithm &gt; algorithm)</div><div class="ttdef"><b>Definition:</b> processor.cpp:4</div></div>
+<div class="ttc" id="classTools_1_1Processor_html_a4275ee6ceac5702dab10fd7b0a1ebeac"><div class="ttname"><a href="classTools_1_1Processor.html#a4275ee6ceac5702dab10fd7b0a1ebeac">Tools::Processor::GetPenaltyDetails</a></div><div class="ttdeci">virtual shared_ptr&lt; vector&lt; pair&lt; int, int &gt; &gt; &gt; GetPenaltyDetails()</div><div class="ttdef"><b>Definition:</b> processor.cpp:29</div></div>
 <div class="ttc" id="classTools_1_1Processor_html"><div class="ttname"><a href="classTools_1_1Processor.html">Tools::Processor</a></div><div class="ttdef"><b>Definition:</b> processor.h:23</div></div>
 <div class="ttc" id="classTools_1_1Processor_html_a6790858e073f93e041e837ef23f3ec76"><div class="ttname"><a href="classTools_1_1Processor.html#a6790858e073f93e041e837ef23f3ec76">Tools::Processor::Proceed</a></div><div class="ttdeci">virtual void Proceed(int user_id, bool learn=false)</div><div class="ttdef"><b>Definition:</b> processor.cpp:14</div></div>
 <div class="ttc" id="classTools_1_1Processor_html_a57b9849b5dfe7a239d67588d2ebf1ff2"><div class="ttname"><a href="classTools_1_1Processor.html#a57b9849b5dfe7a239d67588d2ebf1ff2">Tools::Processor::~Processor</a></div><div class="ttdeci">virtual ~Processor()</div><div class="ttdef"><b>Definition:</b> processor.cpp:11</div></div>
-<div class="ttc" id="classTools_1_1Processor_html_aa8e26d3d0e53a25bfc87460f84ce7ba7"><div class="ttname"><a href="classTools_1_1Processor.html#aa8e26d3d0e53a25bfc87460f84ce7ba7">Tools::Processor::AlgorithmName</a></div><div class="ttdeci">string AlgorithmName()</div><div class="ttdef"><b>Definition:</b> processor.cpp:29</div></div>
-<div class="ttc" id="classTools_1_1Processor_html_ae84109b1fd7e48786903b30f4316b9a7"><div class="ttname"><a href="classTools_1_1Processor.html#ae84109b1fd7e48786903b30f4316b9a7">Tools::Processor::user_id</a></div><div class="ttdeci">int user_id()</div><div class="ttdef"><b>Definition:</b> processor.h:74</div></div>
+<div class="ttc" id="classTools_1_1Processor_html_ae84109b1fd7e48786903b30f4316b9a7"><div class="ttname"><a href="classTools_1_1Processor.html#ae84109b1fd7e48786903b30f4316b9a7">Tools::Processor::user_id</a></div><div class="ttdeci">int user_id()</div><div class="ttdef"><b>Definition:</b> processor.h:76</div></div>
 <div class="ttc" id="classTools_1_1Processor_html_a09f7c38bed07f23524a7b5952fb813c4"><div class="ttname"><a href="classTools_1_1Processor.html#a09f7c38bed07f23524a7b5952fb813c4">Tools::Processor::GetPenalty</a></div><div class="ttdeci">virtual int GetPenalty()</div><div class="ttdef"><b>Definition:</b> processor.cpp:25</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -159,7 +162,7 @@ $(document).ready(function(){initNavTree('processor_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4eeb864c4eec08c7d6b9d3b0352cfdde.html">tools</a></li><li class="navelem"><b>processor.h</b></li>
-    <li class="footer">Generated on Sun May 11 2014 02:36:02 for MTFthesisstudies by
+    <li class="footer">Generated on Thu Jun 5 2014 01:05:06 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

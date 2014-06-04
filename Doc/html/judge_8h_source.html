@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MTFthesisstudies
-   &#160;<span id="projectnumber">version0.79</span>
+   &#160;<span id="projectnumber">version0.82</span>
    </div>
   </td>
  </tr>
@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('judge_8h_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -107,32 +107,36 @@ $(document).ready(function(){initNavTree('judge_8h_source.html','');});
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PENALTY_COUNTER_H_</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PENALTY_COUNTER_H_</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using</span> std::pair;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using</span> std::list;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>Tools {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classTools_1_1Judge.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTools_1_1Judge.html">Judge</a> {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classTools_1_1Judge.html#a304f06edb408cbac0ee8245dc967ce00">   27</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classTools_1_1Judge.html#a304f06edb408cbac0ee8245dc967ce00">~Judge</a>() { }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classTools_1_1Judge.html#a03f7dbf5350051ce22d0acf5352e7f1c">CountPenalty</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> element_position)  = 0;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classTools_1_1Judge.html#a3984d634cc8f04eea2cae889fb2a5628">OveralPenalty</a>() = 0;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">virtual</span> list&lt;pair&lt;int, int&gt; &gt; <a class="code" href="classTools_1_1Judge.html#a5ce7247e230dcfae58457099fd1534b2">PenaltyDetails</a>() = 0;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using</span> std::shared_ptr;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using</span> std::pair;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using</span> std::vector;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span>Tools {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classTools_1_1Judge.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTools_1_1Judge.html">Judge</a> {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classTools_1_1Judge.html#a304f06edb408cbac0ee8245dc967ce00">   28</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classTools_1_1Judge.html#a304f06edb408cbac0ee8245dc967ce00">~Judge</a>() { }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classTools_1_1Judge.html#a03f7dbf5350051ce22d0acf5352e7f1c">CountPenalty</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> element_position)  = 0;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classTools_1_1Judge.html#a3984d634cc8f04eea2cae889fb2a5628">OveralPenalty</a>() = 0;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">virtual</span> vector&lt;pair&lt;int, int&gt; &gt; <a class="code" href="classTools_1_1Judge.html#a15876de56c41aeaa1719b68ef9d60ec8">PenaltyDetails</a>() = 0;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;} <span class="comment">/* namespace tools */</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* PENALTY_COUNTER_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="classTools_1_1Judge_html_a5ce7247e230dcfae58457099fd1534b2"><div class="ttname"><a href="classTools_1_1Judge.html#a5ce7247e230dcfae58457099fd1534b2">Tools::Judge::PenaltyDetails</a></div><div class="ttdeci">virtual list&lt; pair&lt; int, int &gt; &gt; PenaltyDetails()=0</div></div>
-<div class="ttc" id="classTools_1_1Judge_html_a304f06edb408cbac0ee8245dc967ce00"><div class="ttname"><a href="classTools_1_1Judge.html#a304f06edb408cbac0ee8245dc967ce00">Tools::Judge::~Judge</a></div><div class="ttdeci">virtual ~Judge()</div><div class="ttdef"><b>Definition:</b> judge.h:27</div></div>
-<div class="ttc" id="classTools_1_1Judge_html"><div class="ttname"><a href="classTools_1_1Judge.html">Tools::Judge</a></div><div class="ttdef"><b>Definition:</b> judge.h:21</div></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keyword">virtual</span> shared_ptr&lt;Judge&gt; <a class="code" href="classTools_1_1Judge.html#a42bcc3c25ce089c453f47e8ec1861e1f">Clone</a>() = 0;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;} <span class="comment">/* namespace tools */</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* PENALTY_COUNTER_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="classTools_1_1Judge_html_a42bcc3c25ce089c453f47e8ec1861e1f"><div class="ttname"><a href="classTools_1_1Judge.html#a42bcc3c25ce089c453f47e8ec1861e1f">Tools::Judge::Clone</a></div><div class="ttdeci">virtual shared_ptr&lt; Judge &gt; Clone()=0</div></div>
+<div class="ttc" id="classTools_1_1Judge_html_a304f06edb408cbac0ee8245dc967ce00"><div class="ttname"><a href="classTools_1_1Judge.html#a304f06edb408cbac0ee8245dc967ce00">Tools::Judge::~Judge</a></div><div class="ttdeci">virtual ~Judge()</div><div class="ttdef"><b>Definition:</b> judge.h:28</div></div>
+<div class="ttc" id="classTools_1_1Judge_html"><div class="ttname"><a href="classTools_1_1Judge.html">Tools::Judge</a></div><div class="ttdef"><b>Definition:</b> judge.h:22</div></div>
+<div class="ttc" id="classTools_1_1Judge_html_a15876de56c41aeaa1719b68ef9d60ec8"><div class="ttname"><a href="classTools_1_1Judge.html#a15876de56c41aeaa1719b68ef9d60ec8">Tools::Judge::PenaltyDetails</a></div><div class="ttdeci">virtual vector&lt; pair&lt; int, int &gt; &gt; PenaltyDetails()=0</div></div>
 <div class="ttc" id="classTools_1_1Judge_html_a03f7dbf5350051ce22d0acf5352e7f1c"><div class="ttname"><a href="classTools_1_1Judge.html#a03f7dbf5350051ce22d0acf5352e7f1c">Tools::Judge::CountPenalty</a></div><div class="ttdeci">virtual void CountPenalty(unsigned int element_position)=0</div></div>
 <div class="ttc" id="classTools_1_1Judge_html_a3984d634cc8f04eea2cae889fb2a5628"><div class="ttname"><a href="classTools_1_1Judge.html#a3984d634cc8f04eea2cae889fb2a5628">Tools::Judge::OveralPenalty</a></div><div class="ttdeci">virtual int OveralPenalty()=0</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -141,7 +145,7 @@ $(document).ready(function(){initNavTree('judge_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4eeb864c4eec08c7d6b9d3b0352cfdde.html">tools</a></li><li class="navelem"><a class="el" href="dir_fe3de19395950321da226a8185892ad6.html">judges</a></li><li class="navelem"><b>judge.h</b></li>
-    <li class="footer">Generated on Sun May 11 2014 02:36:02 for MTFthesisstudies by
+    <li class="footer">Generated on Thu Jun 5 2014 01:05:06 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

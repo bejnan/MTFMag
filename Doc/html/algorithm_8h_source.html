@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MTFthesisstudies
-   &#160;<span id="projectnumber">version0.79</span>
+   &#160;<span id="projectnumber">version0.82</span>
    </div>
   </td>
  </tr>
@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('algorithm_8h_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -117,55 +117,61 @@ $(document).ready(function(){initNavTree('algorithm_8h_source.html','');});
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../headers/elements.h&quot;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">using</span> std::shared_ptr;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using</span> std::string;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span>Algorithms {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using</span> std::map;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">using</span> std::shared_ptr;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">using</span> std::string;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1Algorithm.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="classAlgorithms_1_1Algorithm.html">Algorithm</a> {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classAlgorithms_1_1Algorithm.html">Algorithm</a>() {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  }</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  ;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classAlgorithms_1_1Algorithm.html#a7518f25c52360dbc9da868a48b528716">NotifyContent</a>(<span class="keywordtype">int</span> user_id) = 0;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classAlgorithms_1_1Algorithm.html#a7518f25c52360dbc9da868a48b528716">NotifyContent</a>(<span class="keywordtype">int</span> user_id, <span class="keywordtype">int</span> notification_count) = 0;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classAlgorithms_1_1Algorithm.html#a6e09676b9c4993b10687e6a1b42998ab">GetContentPosition</a>(<span class="keywordtype">int</span> user_id) = 0;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classAlgorithms_1_1Algorithm.html#aa448cae80d174538afa5c422f03314c4">AddElement</a>(<span class="keywordtype">int</span> user_id) = 0;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classAlgorithms_1_1Algorithm.html#ac60df21001af13442bdcabe7a585f2dc">HaveElement</a>(<span class="keywordtype">int</span> user_id) = 0;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">string</span> <a class="code" href="classAlgorithms_1_1Algorithm.html#a3f2643c496bf2db3c623abd04372ae9e">AlgorithmName</a>() = 0;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classAlgorithms_1_1Algorithm.html#ae2f19a59bbf94e645e437e5af1b1a3ed">MoveFromPositionToFront</a>(<span class="keywordtype">int</span> position) = 0;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classAlgorithms_1_1Algorithm.html#ab8ccc42fea17568fabaa4a8aec86af74">SwapElementsOnPositions</a>(<span class="keywordtype">int</span> position1, <span class="keywordtype">int</span> position2) = 0;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classAlgorithms_1_1Algorithm.html#a24c4aa45ee71c51ae3d40d7f3a617f35">SortElementToList</a>() = 0;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classAlgorithms_1_1Algorithm.html#a5caa6b3806833aae4e8350aa6a0cd076">CompareElementsOnPositions</a>(<span class="keywordtype">int</span> position1, <span class="keywordtype">int</span> position2) = 0;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classAlgorithms_1_1Algorithm.html#a5b27859d8e42c28f1f3de1ae31ff22e0">DifferenceBetweenElementsOnPosition</a>(<span class="keywordtype">int</span> position1,</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                                                     <span class="keywordtype">int</span> position2) = 0;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;};</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* ALGORITHM_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="classAlgorithms_1_1Algorithm_html_a3f2643c496bf2db3c623abd04372ae9e"><div class="ttname"><a href="classAlgorithms_1_1Algorithm.html#a3f2643c496bf2db3c623abd04372ae9e">Algorithms::Algorithm::AlgorithmName</a></div><div class="ttdeci">virtual string AlgorithmName()=0</div></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span>Algorithms {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classAlgorithms_1_1Algorithm.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classAlgorithms_1_1Algorithm.html">Algorithm</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classAlgorithms_1_1Algorithm.html">Algorithm</a>() {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  ;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classAlgorithms_1_1Algorithm.html#a7518f25c52360dbc9da868a48b528716">NotifyContent</a>(<span class="keywordtype">int</span> user_id) = 0;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classAlgorithms_1_1Algorithm.html#a7518f25c52360dbc9da868a48b528716">NotifyContent</a>(<span class="keywordtype">int</span> user_id, <span class="keywordtype">int</span> notification_count) = 0;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classAlgorithms_1_1Algorithm.html#a6e09676b9c4993b10687e6a1b42998ab">GetContentPosition</a>(<span class="keywordtype">int</span> user_id) = 0;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classAlgorithms_1_1Algorithm.html#aa448cae80d174538afa5c422f03314c4">AddElement</a>(<span class="keywordtype">int</span> user_id) = 0;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classAlgorithms_1_1Algorithm.html#ac60df21001af13442bdcabe7a585f2dc">HaveElement</a>(<span class="keywordtype">int</span> user_id) = 0;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">string</span> <a class="code" href="classAlgorithms_1_1Algorithm.html#a5a4c36da3ae4e912678f408805b8012f">GetAlgorithmName</a>() = 0;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keyword">virtual</span> shared_ptr&lt;Algorithm&gt; <a class="code" href="classAlgorithms_1_1Algorithm.html#aa90f2b22ff52b623ca34b17acad66c3f">Clone</a>() = 0;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classAlgorithms_1_1Algorithm.html#ae2f19a59bbf94e645e437e5af1b1a3ed">MoveFromPositionToFront</a>(<span class="keywordtype">int</span> position) = 0;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classAlgorithms_1_1Algorithm.html#ab8ccc42fea17568fabaa4a8aec86af74">SwapElementsOnPositions</a>(<span class="keywordtype">int</span> position1, <span class="keywordtype">int</span> position2) = 0;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classAlgorithms_1_1Algorithm.html#a24c4aa45ee71c51ae3d40d7f3a617f35">SortElementToList</a>() = 0;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classAlgorithms_1_1Algorithm.html#a5caa6b3806833aae4e8350aa6a0cd076">CompareElementsOnPositions</a>(<span class="keywordtype">int</span> position1, <span class="keywordtype">int</span> position2) = 0;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classAlgorithms_1_1Algorithm.html#a5b27859d8e42c28f1f3de1ae31ff22e0">DifferenceBetweenElementsOnPosition</a>(<span class="keywordtype">int</span> position1,</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                                                     <span class="keywordtype">int</span> position2) = 0;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;};</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* ALGORITHM_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="classAlgorithms_1_1Algorithm_html_ab8ccc42fea17568fabaa4a8aec86af74"><div class="ttname"><a href="classAlgorithms_1_1Algorithm.html#ab8ccc42fea17568fabaa4a8aec86af74">Algorithms::Algorithm::SwapElementsOnPositions</a></div><div class="ttdeci">virtual void SwapElementsOnPositions(int position1, int position2)=0</div></div>
 <div class="ttc" id="classAlgorithms_1_1Algorithm_html_a24c4aa45ee71c51ae3d40d7f3a617f35"><div class="ttname"><a href="classAlgorithms_1_1Algorithm.html#a24c4aa45ee71c51ae3d40d7f3a617f35">Algorithms::Algorithm::SortElementToList</a></div><div class="ttdeci">virtual void SortElementToList()=0</div></div>
 <div class="ttc" id="classAlgorithms_1_1Algorithm_html_aa448cae80d174538afa5c422f03314c4"><div class="ttname"><a href="classAlgorithms_1_1Algorithm.html#aa448cae80d174538afa5c422f03314c4">Algorithms::Algorithm::AddElement</a></div><div class="ttdeci">virtual void AddElement(int user_id)=0</div></div>
 <div class="ttc" id="classAlgorithms_1_1Algorithm_html_a7518f25c52360dbc9da868a48b528716"><div class="ttname"><a href="classAlgorithms_1_1Algorithm.html#a7518f25c52360dbc9da868a48b528716">Algorithms::Algorithm::NotifyContent</a></div><div class="ttdeci">virtual void NotifyContent(int user_id)=0</div></div>
 <div class="ttc" id="classAlgorithms_1_1Algorithm_html_ae2f19a59bbf94e645e437e5af1b1a3ed"><div class="ttname"><a href="classAlgorithms_1_1Algorithm.html#ae2f19a59bbf94e645e437e5af1b1a3ed">Algorithms::Algorithm::MoveFromPositionToFront</a></div><div class="ttdeci">virtual void MoveFromPositionToFront(int position)=0</div></div>
+<div class="ttc" id="classAlgorithms_1_1Algorithm_html_aa90f2b22ff52b623ca34b17acad66c3f"><div class="ttname"><a href="classAlgorithms_1_1Algorithm.html#aa90f2b22ff52b623ca34b17acad66c3f">Algorithms::Algorithm::Clone</a></div><div class="ttdeci">virtual shared_ptr&lt; Algorithm &gt; Clone()=0</div></div>
 <div class="ttc" id="classAlgorithms_1_1Algorithm_html_a5b27859d8e42c28f1f3de1ae31ff22e0"><div class="ttname"><a href="classAlgorithms_1_1Algorithm.html#a5b27859d8e42c28f1f3de1ae31ff22e0">Algorithms::Algorithm::DifferenceBetweenElementsOnPosition</a></div><div class="ttdeci">virtual double DifferenceBetweenElementsOnPosition(int position1, int position2)=0</div></div>
-<div class="ttc" id="classAlgorithms_1_1Algorithm_html"><div class="ttname"><a href="classAlgorithms_1_1Algorithm.html">Algorithms::Algorithm</a></div><div class="ttdef"><b>Definition:</b> algorithm.h:25</div></div>
+<div class="ttc" id="classAlgorithms_1_1Algorithm_html_a5a4c36da3ae4e912678f408805b8012f"><div class="ttname"><a href="classAlgorithms_1_1Algorithm.html#a5a4c36da3ae4e912678f408805b8012f">Algorithms::Algorithm::GetAlgorithmName</a></div><div class="ttdeci">virtual string GetAlgorithmName()=0</div></div>
+<div class="ttc" id="classAlgorithms_1_1Algorithm_html"><div class="ttname"><a href="classAlgorithms_1_1Algorithm.html">Algorithms::Algorithm</a></div><div class="ttdef"><b>Definition:</b> algorithm.h:27</div></div>
 <div class="ttc" id="classAlgorithms_1_1Algorithm_html_a6e09676b9c4993b10687e6a1b42998ab"><div class="ttname"><a href="classAlgorithms_1_1Algorithm.html#a6e09676b9c4993b10687e6a1b42998ab">Algorithms::Algorithm::GetContentPosition</a></div><div class="ttdeci">virtual int GetContentPosition(int user_id)=0</div></div>
 <div class="ttc" id="classAlgorithms_1_1Algorithm_html_a5caa6b3806833aae4e8350aa6a0cd076"><div class="ttname"><a href="classAlgorithms_1_1Algorithm.html#a5caa6b3806833aae4e8350aa6a0cd076">Algorithms::Algorithm::CompareElementsOnPositions</a></div><div class="ttdeci">virtual int CompareElementsOnPositions(int position1, int position2)=0</div></div>
 <div class="ttc" id="classAlgorithms_1_1Algorithm_html_ac60df21001af13442bdcabe7a585f2dc"><div class="ttname"><a href="classAlgorithms_1_1Algorithm.html#ac60df21001af13442bdcabe7a585f2dc">Algorithms::Algorithm::HaveElement</a></div><div class="ttdeci">virtual bool HaveElement(int user_id)=0</div></div>
@@ -175,7 +181,7 @@ $(document).ready(function(){initNavTree('algorithm_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_c0ce462e37efe0a8d60c01d75f78f8a0.html">algorithms</a></li><li class="navelem"><b>algorithm.h</b></li>
-    <li class="footer">Generated on Sun May 11 2014 02:36:01 for MTFthesisstudies by
+    <li class="footer">Generated on Thu Jun 5 2014 01:05:06 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

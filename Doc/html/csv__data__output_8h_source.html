@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MTFthesisstudies
-   &#160;<span id="projectnumber">version0.79</span>
+   &#160;<span id="projectnumber">version0.82</span>
    </div>
   </td>
  </tr>
@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('csv__data__output_8h_source.html','');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -127,36 +127,26 @@ $(document).ready(function(){initNavTree('csv__data__output_8h_source.html','');
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classBase_1_1CsvDataOutput.html#ac1fbaa916fb293fea40e772397450b5f">~CsvDataOutput</a>();</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classBase_1_1CsvDataOutput.html#a88994527237735d1d6a05cec3b222ba7">PrintLine</a>(<span class="keywordtype">int</span> turns_count, vector&lt;int&gt; results);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classBase_1_1CsvDataOutput.html#a972d6073d8c9e7d87e16a9cefb9ab732">PrintLine</a>(<span class="keywordtype">int</span> turns_count, vector&lt;string&gt; results);</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classBase_1_1CsvDataOutput.html#aa54484865cd138cf49b5aa5b9ef813d5">PrintColumnTitles</a>();</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classBase_1_1CsvDataOutput.html#a9302a89524b164d440280bc1c90c90d3">SetColumnTitles</a>(vector&lt;string&gt; titles);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classBase_1_1CsvDataOutput.html#aaa4e604ce1d06ee002889b2604faf4e4">   43</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classBase_1_1CsvDataOutput.html#aaa4e604ce1d06ee002889b2604faf4e4">AreTitlesPrinted</a>() {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> are_titles_printed_;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">using</span> <a class="code" href="classBase_1_1DataOutput.html#adea8f6af278e2e8ace25ba64d9bf9a57">DataOutput::GetOutputStream</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">using</span> <a class="code" href="classBase_1_1DataOutput.html#adea8f6af278e2e8ace25ba64d9bf9a57">DataOutput::GetOutputStream</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> SEPARATOR; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;} <span class="comment">/* namespace Base */</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  vector&lt;string&gt; titles_names_; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">bool</span> are_titles_printed_; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> SEPARATOR;     </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;} <span class="comment">/* namespace Base */</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* CSVDATAOUTPUT_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="classBase_1_1CsvDataOutput_html_a9302a89524b164d440280bc1c90c90d3"><div class="ttname"><a href="classBase_1_1CsvDataOutput.html#a9302a89524b164d440280bc1c90c90d3">Base::CsvDataOutput::SetColumnTitles</a></div><div class="ttdeci">virtual void SetColumnTitles(vector&lt; string &gt; titles)</div><div class="ttdef"><b>Definition:</b> csv_data_output.cpp:34</div></div>
-<div class="ttc" id="classBase_1_1DataOutput_html"><div class="ttname"><a href="classBase_1_1DataOutput.html">Base::DataOutput</a></div><div class="ttdef"><b>Definition:</b> data_output.h:19</div></div>
-<div class="ttc" id="classBase_1_1CsvDataOutput_html_ac1fbaa916fb293fea40e772397450b5f"><div class="ttname"><a href="classBase_1_1CsvDataOutput.html#ac1fbaa916fb293fea40e772397450b5f">Base::CsvDataOutput::~CsvDataOutput</a></div><div class="ttdeci">virtual ~CsvDataOutput()</div><div class="ttdef"><b>Definition:</b> csv_data_output.cpp:38</div></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* CSVDATAOUTPUT_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="classBase_1_1DataOutput_html"><div class="ttname"><a href="classBase_1_1DataOutput.html">Base::DataOutput</a></div><div class="ttdef"><b>Definition:</b> data_output.h:21</div></div>
+<div class="ttc" id="classBase_1_1CsvDataOutput_html_ac1fbaa916fb293fea40e772397450b5f"><div class="ttname"><a href="classBase_1_1CsvDataOutput.html#ac1fbaa916fb293fea40e772397450b5f">Base::CsvDataOutput::~CsvDataOutput</a></div><div class="ttdeci">virtual ~CsvDataOutput()</div><div class="ttdef"><b>Definition:</b> csv_data_output.cpp:23</div></div>
+<div class="ttc" id="classBase_1_1CsvDataOutput_html_a972d6073d8c9e7d87e16a9cefb9ab732"><div class="ttname"><a href="classBase_1_1CsvDataOutput.html#a972d6073d8c9e7d87e16a9cefb9ab732">Base::CsvDataOutput::PrintLine</a></div><div class="ttdeci">virtual void PrintLine(int turns_count, vector&lt; string &gt; results)</div><div class="ttdef"><b>Definition:</b> csv_data_output.cpp:9</div></div>
 <div class="ttc" id="classBase_1_1CsvDataOutput_html_acbedd47083f64caaafc2a33336bef869"><div class="ttname"><a href="classBase_1_1CsvDataOutput.html#acbedd47083f64caaafc2a33336bef869">Base::CsvDataOutput::CsvDataOutput</a></div><div class="ttdeci">CsvDataOutput(char separator= '|')</div><div class="ttdef"><b>Definition:</b> csv_data_output.cpp:5</div></div>
-<div class="ttc" id="classBase_1_1CsvDataOutput_html_aaa4e604ce1d06ee002889b2604faf4e4"><div class="ttname"><a href="classBase_1_1CsvDataOutput.html#aaa4e604ce1d06ee002889b2604faf4e4">Base::CsvDataOutput::AreTitlesPrinted</a></div><div class="ttdeci">virtual bool AreTitlesPrinted()</div><div class="ttdef"><b>Definition:</b> csv_data_output.h:43</div></div>
-<div class="ttc" id="classBase_1_1DataOutput_html_adea8f6af278e2e8ace25ba64d9bf9a57"><div class="ttname"><a href="classBase_1_1DataOutput.html#adea8f6af278e2e8ace25ba64d9bf9a57">Base::DataOutput::GetOutputStream</a></div><div class="ttdeci">virtual ostream &amp; GetOutputStream()</div><div class="ttdef"><b>Definition:</b> data_output.h:56</div></div>
-<div class="ttc" id="classBase_1_1CsvDataOutput_html_aa54484865cd138cf49b5aa5b9ef813d5"><div class="ttname"><a href="classBase_1_1CsvDataOutput.html#aa54484865cd138cf49b5aa5b9ef813d5">Base::CsvDataOutput::PrintColumnTitles</a></div><div class="ttdeci">virtual void PrintColumnTitles()</div><div class="ttdef"><b>Definition:</b> csv_data_output.cpp:21</div></div>
-<div class="ttc" id="classBase_1_1CsvDataOutput_html_a88994527237735d1d6a05cec3b222ba7"><div class="ttname"><a href="classBase_1_1CsvDataOutput.html#a88994527237735d1d6a05cec3b222ba7">Base::CsvDataOutput::PrintLine</a></div><div class="ttdeci">virtual void PrintLine(int turns_count, vector&lt; int &gt; results)</div><div class="ttdef"><b>Definition:</b> csv_data_output.cpp:10</div></div>
+<div class="ttc" id="classBase_1_1DataOutput_html_adea8f6af278e2e8ace25ba64d9bf9a57"><div class="ttname"><a href="classBase_1_1DataOutput.html#adea8f6af278e2e8ace25ba64d9bf9a57">Base::DataOutput::GetOutputStream</a></div><div class="ttdeci">virtual ostream &amp; GetOutputStream()</div><div class="ttdef"><b>Definition:</b> data_output.h:46</div></div>
+<div class="ttc" id="classBase_1_1CsvDataOutput_html_aa54484865cd138cf49b5aa5b9ef813d5"><div class="ttname"><a href="classBase_1_1CsvDataOutput.html#aa54484865cd138cf49b5aa5b9ef813d5">Base::CsvDataOutput::PrintColumnTitles</a></div><div class="ttdeci">virtual void PrintColumnTitles()</div><div class="ttdef"><b>Definition:</b> csv_data_output.cpp:20</div></div>
 <div class="ttc" id="classBase_1_1CsvDataOutput_html"><div class="ttname"><a href="classBase_1_1CsvDataOutput.html">Base::CsvDataOutput</a></div><div class="ttdef"><b>Definition:</b> csv_data_output.h:23</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -164,7 +154,7 @@ $(document).ready(function(){initNavTree('csv__data__output_8h_source.html','');
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_f0e6881722a589d71e14e9eaa0b61330.html">data_managment</a></li><li class="navelem"><a class="el" href="dir_858ae75beb3f92bd29cce1c111b4cbf0.html">data_output</a></li><li class="navelem"><b>csv_data_output.h</b></li>
-    <li class="footer">Generated on Sun May 11 2014 02:36:02 for MTFthesisstudies by
+    <li class="footer">Generated on Thu Jun 5 2014 01:05:06 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

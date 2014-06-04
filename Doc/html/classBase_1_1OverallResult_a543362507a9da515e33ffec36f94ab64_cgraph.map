@@ -1,0 +1,5 @@
+<map id="Base::OverallResult::ToString" name="Base::OverallResult::ToString">
+<area shape="rect" id="node2" href="$classBase_1_1Result.html#a221f51bbe0a5215c2a24e3d3b0580f85" title="Base::Result::GetAlgorithmName" alt="" coords="197,5,421,32"/>
+<area shape="rect" id="node3" href="$classBase_1_1Result.html#a681261182e3f1f180b4fbd7e2d8ec6a8" title="Base::Result::GetTimestamp" alt="" coords="211,56,408,83"/>
+<area shape="rect" id="node4" href="$classBase_1_1Result.html#a4816c473f3858da5d379b0b7f34a13fd" title="Base::Result::GetOverall\lPenalty" alt="" coords="223,107,396,149"/>
+</map>

@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MTFthesisstudies
-   &#160;<span id="projectnumber">version0.79</span>
+   &#160;<span id="projectnumber">version0.82</span>
    </div>
   </td>
  </tr>
@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('database_8h_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -104,58 +104,62 @@ $(document).ready(function(){initNavTree('database_8h_source.html','');});
 <div class="title">database.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Database.h</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *  Created on: Feb 13, 2014</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *      Author: Jakub Banaszewski</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> */</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef DATABASE_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define DATABASE_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../headers/tools.h&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef DATABASE_H_</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define DATABASE_H_</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;map&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../headers/tools.h&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">using</span> std::map;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using</span> std::vector;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">using</span> std::shared_ptr;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span>Base {</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classBase_1_1Database.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBase_1_1Database.html">Database</a> {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <a class="code" href="classBase_1_1Database.html#af626cd9abf18d3cfe1817d50c2b3253c">Database</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classBase_1_1Database.html#aa6a3304e10861f362f9d2f55ff666c15">~Database</a>();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBase_1_1Database.html#a97279bf88fcd1a60fe35afe473557032">AddToBase</a>(shared_ptr&lt;Tools::Processor&gt; processor);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  vector&lt;shared_ptr&lt;Tools::Processor&gt; &gt;&amp; <a class="code" href="classBase_1_1Database.html#a73adc4520286deee33179d45edadd065">Query</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  vector&lt;shared_ptr&lt;Tools::Processor&gt; &gt;&amp; <a class="code" href="classBase_1_1Database.html#a73adc4520286deee33179d45edadd065">Query</a>(<span class="keywordtype">string</span> algorithm_name);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  vector&lt;shared_ptr&lt;Tools::Processor&gt; &gt;&amp; <a class="code" href="classBase_1_1Database.html#a73adc4520286deee33179d45edadd065">Query</a>();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  vector&lt;string&gt; <a class="code" href="classBase_1_1Database.html#a8e7191f1c4c56db540cc3787a51fb0bc">QueryAlgorithmNames</a>();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classBase_1_1Database.html#a1ba1bb48416bf9d28576764e523e16cd">Exists</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using</span> std::map;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using</span> std::vector;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">using</span> std::shared_ptr;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span>Base {</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classBase_1_1Database.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBase_1_1Database.html">Database</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classBase_1_1Database.html#ad02ccde7598533fbf6def527dcc87f17">   26</a></span>&#160;  <span class="keyword">static</span> <a class="code" href="classBase_1_1Database.html">Database</a>&amp; <a class="code" href="classBase_1_1Database.html#ad02ccde7598533fbf6def527dcc87f17">GetInstance</a>() {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">static</span> <a class="code" href="classBase_1_1Database.html">Database</a> database_instance;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">return</span> database_instance;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classBase_1_1Database.html#aa6a3304e10861f362f9d2f55ff666c15">~Database</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBase_1_1Database.html#a97279bf88fcd1a60fe35afe473557032">AddToBase</a>(shared_ptr&lt;Tools::Processor&gt; processor);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  vector&lt;shared_ptr&lt;Tools::Processor&gt; &gt;&amp; <a class="code" href="classBase_1_1Database.html#a73adc4520286deee33179d45edadd065">Query</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  vector&lt;shared_ptr&lt;Tools::Processor&gt; &gt;&amp; <a class="code" href="classBase_1_1Database.html#a73adc4520286deee33179d45edadd065">Query</a>(<span class="keywordtype">string</span> algorithm_name);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  vector&lt;shared_ptr&lt;Tools::Processor&gt; &gt;&amp; <a class="code" href="classBase_1_1Database.html#a73adc4520286deee33179d45edadd065">Query</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  vector&lt;string&gt; <a class="code" href="classBase_1_1Database.html#a8e7191f1c4c56db540cc3787a51fb0bc">QueryAlgorithmNames</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classBase_1_1Database.html#a1ba1bb48416bf9d28576764e523e16cd">Exists</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBase_1_1Database.html#a98e15a3b09d4a4971308e890ee60e002">ClearDatabase</a>();</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  vector&lt;shared_ptr&lt;Tools::Processor&gt; &gt; table_;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  map&lt;int, vector&lt;shared_ptr&lt;Tools::Processor&gt; &gt; &gt; id_table_;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  map&lt;string, vector&lt;shared_ptr&lt;Tools::Processor&gt; &gt; &gt; name_table_;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;};</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <a class="code" href="classBase_1_1Database.html">Database</a>();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  vector&lt;shared_ptr&lt;Tools::Processor&gt; &gt; table_;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  map&lt;int, vector&lt;shared_ptr&lt;Tools::Processor&gt; &gt; &gt; id_table_;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;} <span class="comment">/* namespace Base */</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DATABASE_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  map&lt;string, vector&lt;shared_ptr&lt;Tools::Processor&gt; &gt; &gt; name_table_;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;};</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;} <span class="comment">/* namespace Base */</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DATABASE_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="classBase_1_1Database_html_ad02ccde7598533fbf6def527dcc87f17"><div class="ttname"><a href="classBase_1_1Database.html#ad02ccde7598533fbf6def527dcc87f17">Base::Database::GetInstance</a></div><div class="ttdeci">static Database &amp; GetInstance()</div><div class="ttdef"><b>Definition:</b> database.h:26</div></div>
 <div class="ttc" id="classBase_1_1Database_html_a8e7191f1c4c56db540cc3787a51fb0bc"><div class="ttname"><a href="classBase_1_1Database.html#a8e7191f1c4c56db540cc3787a51fb0bc">Base::Database::QueryAlgorithmNames</a></div><div class="ttdeci">vector&lt; string &gt; QueryAlgorithmNames()</div><div class="ttdef"><b>Definition:</b> database.cpp:57</div></div>
-<div class="ttc" id="classBase_1_1Database_html"><div class="ttname"><a href="classBase_1_1Database.html">Base::Database</a></div><div class="ttdef"><b>Definition:</b> database.h:30</div></div>
+<div class="ttc" id="classBase_1_1Database_html"><div class="ttname"><a href="classBase_1_1Database.html">Base::Database</a></div><div class="ttdef"><b>Definition:</b> database.h:19</div></div>
 <div class="ttc" id="classBase_1_1Database_html_a73adc4520286deee33179d45edadd065"><div class="ttname"><a href="classBase_1_1Database.html#a73adc4520286deee33179d45edadd065">Base::Database::Query</a></div><div class="ttdeci">vector&lt; shared_ptr&lt; Tools::Processor &gt; &gt; &amp; Query()</div><div class="ttdef"><b>Definition:</b> database.cpp:53</div></div>
-<div class="ttc" id="classBase_1_1Database_html_af626cd9abf18d3cfe1817d50c2b3253c"><div class="ttname"><a href="classBase_1_1Database.html#af626cd9abf18d3cfe1817d50c2b3253c">Base::Database::Database</a></div><div class="ttdeci">Database()</div><div class="ttdef"><b>Definition:</b> database.cpp:16</div></div>
-<div class="ttc" id="classBase_1_1Database_html_aa6a3304e10861f362f9d2f55ff666c15"><div class="ttname"><a href="classBase_1_1Database.html#aa6a3304e10861f362f9d2f55ff666c15">Base::Database::~Database</a></div><div class="ttdeci">virtual ~Database()</div><div class="ttdef"><b>Definition:</b> database.cpp:20</div></div>
+<div class="ttc" id="classBase_1_1Database_html_a98e15a3b09d4a4971308e890ee60e002"><div class="ttname"><a href="classBase_1_1Database.html#a98e15a3b09d4a4971308e890ee60e002">Base::Database::ClearDatabase</a></div><div class="ttdeci">void ClearDatabase()</div><div class="ttdef"><b>Definition:</b> database.cpp:71</div></div>
+<div class="ttc" id="classBase_1_1Database_html_aa6a3304e10861f362f9d2f55ff666c15"><div class="ttname"><a href="classBase_1_1Database.html#aa6a3304e10861f362f9d2f55ff666c15">Base::Database::~Database</a></div><div class="ttdeci">virtual ~Database()</div><div class="ttdef"><b>Definition:</b> database.cpp:16</div></div>
 <div class="ttc" id="classBase_1_1Database_html_a97279bf88fcd1a60fe35afe473557032"><div class="ttname"><a href="classBase_1_1Database.html#a97279bf88fcd1a60fe35afe473557032">Base::Database::AddToBase</a></div><div class="ttdeci">void AddToBase(shared_ptr&lt; Tools::Processor &gt; processor)</div><div class="ttdef"><b>Definition:</b> database.cpp:24</div></div>
 <div class="ttc" id="classBase_1_1Database_html_a1ba1bb48416bf9d28576764e523e16cd"><div class="ttname"><a href="classBase_1_1Database.html#a1ba1bb48416bf9d28576764e523e16cd">Base::Database::Exists</a></div><div class="ttdeci">bool Exists(int id)</div><div class="ttdef"><b>Definition:</b> database.cpp:67</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -164,7 +168,7 @@ $(document).ready(function(){initNavTree('database_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_f0e6881722a589d71e14e9eaa0b61330.html">data_managment</a></li><li class="navelem"><b>database.h</b></li>
-    <li class="footer">Generated on Sun May 11 2014 02:36:02 for MTFthesisstudies by
+    <li class="footer">Generated on Thu Jun 5 2014 01:05:06 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

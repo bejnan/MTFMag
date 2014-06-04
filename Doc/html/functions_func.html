@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MTFthesisstudies
-   &#160;<span id="projectnumber">version0.79</span>
+   &#160;<span id="projectnumber">version0.82</span>
    </div>
   </td>
  </tr>
@@ -77,6 +77,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="functions.html"><span>All</span></a></li>
       <li class="current"><a href="functions_func.html"><span>Functions</span></a></li>
+      <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
+      <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
@@ -98,7 +100,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_s"><span>s</span></a></li>
       <li><a href="#index_t"><span>t</span></a></li>
       <li><a href="#index_u"><span>u</span></a></li>
-      <li><a href="#index_w"><span>w</span></a></li>
       <li class="current"><a href="#index_~"><span>~</span></a></li>
     </ul>
   </div>
@@ -122,7 +123,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -135,38 +136,45 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 &#160;
 
 <h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
+<li>AddAlgorithm()
+: <a class="el" href="classBase_1_1Configuration.html#a7b75c3e1c557cf4523468db47f9f8f57">Base::Configuration</a>
+</li>
 <li>AddElement()
 : <a class="el" href="classAlgorithms_1_1Algorithm.html#aa448cae80d174538afa5c422f03314c4">Algorithms::Algorithm</a>
 , <a class="el" href="classAlgorithms_1_1MoveToFront.html#aa62dff6c6b3d27eaab6ceb8ee2bb9b30">Algorithms::MoveToFront</a>
 , <a class="el" href="classAlgorithms_1_1MTFMatrix.html#a07ac80442af79b9875b12817a6863482">Algorithms::MTFMatrix</a>
 , <a class="el" href="classAlgorithms_1_1TreeRoot.html#a03e7442127a0fd46d07f5f6181d4c54c">Algorithms::TreeRoot</a>
 </li>
-<li>AddProccessorFactory()
-: <a class="el" href="classBase_1_1DataCollector.html#aa882730336c5d171acfaab053698fe7f">Base::DataCollector</a>
-</li>
 <li>AddToBase()
 : <a class="el" href="classBase_1_1Database.html#a97279bf88fcd1a60fe35afe473557032">Base::Database</a>
 </li>
+<li>algorithm()
+: <a class="el" href="classBase_1_1Configuration.html#ad82550af8866c3415d6d023fe7d3ce74">Base::Configuration</a>
+</li>
 <li>AlgorithmName()
-: <a class="el" href="classAlgorithms_1_1Algorithm.html#a3f2643c496bf2db3c623abd04372ae9e">Algorithms::Algorithm</a>
-, <a class="el" href="classAlgorithms_1_1MoveToFront.html#a516edb1a8d5f387ab5c142472abf8389">Algorithms::MoveToFront</a>
+: <a class="el" href="classAlgorithms_1_1MoveToFront.html#a516edb1a8d5f387ab5c142472abf8389">Algorithms::MoveToFront</a>
 , <a class="el" href="classAlgorithms_1_1MTFMatrix.html#a4517d2d4bd0327090ddeb1faa1047e44">Algorithms::MTFMatrix</a>
 , <a class="el" href="classAlgorithms_1_1RandomTreeRoot.html#a2406eb96b18e1d6b1e811eb0a0e26906">Algorithms::RandomTreeRoot</a>
 , <a class="el" href="classAlgorithms_1_1TreeRoot.html#a0553b76a871d2c125e4dbe677c598e9b">Algorithms::TreeRoot</a>
-, <a class="el" href="classTools_1_1Processor.html#aa8e26d3d0e53a25bfc87460f84ce7ba7">Tools::Processor</a>
-</li>
-<li>AreTitlesPrinted()
-: <a class="el" href="classBase_1_1CsvDataOutput.html#aaa4e604ce1d06ee002889b2604faf4e4">Base::CsvDataOutput</a>
-, <a class="el" href="classBase_1_1DataOutput.html#aa201a3a18e148803cc3384af60acda60">Base::DataOutput</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
+<li>ClearDatabase()
+: <a class="el" href="classBase_1_1Database.html#a98e15a3b09d4a4971308e890ee60e002">Base::Database</a>
+</li>
 <li>Clone()
-: <a class="el" href="classBase_1_1ComplexDifferenceElement.html#a6aeeb7eac0b145c8a000aa59369254cd">Base::ComplexDifferenceElement</a>
+: <a class="el" href="classAlgorithms_1_1Algorithm.html#aa90f2b22ff52b623ca34b17acad66c3f">Algorithms::Algorithm</a>
+, <a class="el" href="classAlgorithms_1_1MoveToFront.html#a37ecbe69bdefec4032a28ef2097dfc35">Algorithms::MoveToFront</a>
+, <a class="el" href="classAlgorithms_1_1MTFMatrix.html#ab46c7f938eb58d971241549f5aee3372">Algorithms::MTFMatrix</a>
+, <a class="el" href="classAlgorithms_1_1RandomTreeRoot.html#a653bd9b7fba1172a16e1a5d40d1074bc">Algorithms::RandomTreeRoot</a>
+, <a class="el" href="classAlgorithms_1_1TreeRoot.html#ad0480f2e99b81c1392fc9e51fc6f1544">Algorithms::TreeRoot</a>
+, <a class="el" href="classBase_1_1ComplexDifferenceElement.html#a6aeeb7eac0b145c8a000aa59369254cd">Base::ComplexDifferenceElement</a>
 , <a class="el" href="classBase_1_1Element.html#a62e1190b566a9ebd3bc289be64e47579">Base::Element</a>
 , <a class="el" href="classBase_1_1SimpleElement.html#a37f8f62ac37af39a0fcde45f67c92ee0">Base::SimpleElement</a>
+, <a class="el" href="classTools_1_1Judge.html#a42bcc3c25ce089c453f47e8ec1861e1f">Tools::Judge</a>
+, <a class="el" href="classTools_1_1Tester.html#a88b62615561fac312a2b8f1c1098e5d3">Tools::Tester</a>
 </li>
 <li>Compare()
 : <a class="el" href="classBase_1_1ComplexDifferenceElement.html#a31787b2362f6970a6cdb4ff21cf3e01e">Base::ComplexDifferenceElement</a>
@@ -182,6 +190,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>ComplexDifferenceElement()
 : <a class="el" href="classBase_1_1ComplexDifferenceElement.html#ad8b835528b8b5a6051c6405af99e48f3">Base::ComplexDifferenceElement</a>
 </li>
+<li>Configuration()
+: <a class="el" href="classBase_1_1Configuration.html#a8f20db9821665a7bea19ccc858571a30">Base::Configuration</a>
+</li>
 <li>CountPenalty()
 : <a class="el" href="classTools_1_1Judge.html#a03f7dbf5350051ce22d0acf5352e7f1c">Tools::Judge</a>
 , <a class="el" href="classTools_1_1Tester.html#a56bd9ab5b4b86a9c1d693b91076ac411">Tools::Tester</a>
@@ -196,12 +207,6 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 
 <h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
-<li>Database()
-: <a class="el" href="classBase_1_1Database.html#af626cd9abf18d3cfe1817d50c2b3253c">Base::Database</a>
-</li>
-<li>DataCollector()
-: <a class="el" href="classBase_1_1DataCollector.html#a3f64da07dd97a418061c7f6e24dd422c">Base::DataCollector</a>
-</li>
 <li>Difference()
 : <a class="el" href="classBase_1_1ComplexDifferenceElement.html#a0587d9e21c012c8c424f5ac5c5a5328f">Base::ComplexDifferenceElement</a>
 , <a class="el" href="classBase_1_1Element.html#aa4469ee3158e1fc2302a022581153dda">Base::Element</a>
@@ -244,22 +249,25 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 <h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
 <li>Generate()
-: <a class="el" href="classAlgorithms_1_1MatrixBuilder.html#a438490ef5cb21f215ff0b465e84131ad">Algorithms::MatrixBuilder</a>
-, <a class="el" href="classBase_1_1DataOutputBuilder.html#a00f565346533b666eb3fa74c155370e6">Base::DataOutputBuilder</a>
+: <a class="el" href="classBase_1_1DataOutputBuilder.html#a00f565346533b666eb3fa74c155370e6">Base::DataOutputBuilder</a>
 </li>
 <li>GenerateProcessor()
-: <a class="el" href="classTools_1_1MatrixMTFProcessorFactory.html#a5ddc563317ede13d07f506af24c18e1b">Tools::MatrixMTFProcessorFactory</a>
-, <a class="el" href="classTools_1_1MTFProcessorFactory.html#aec59257db73a0fbd943db2e191bfed29">Tools::MTFProcessorFactory</a>
-, <a class="el" href="classTools_1_1ProcessorFactory.html#a56008a0558473aa5ace05bc2b23202d5">Tools::ProcessorFactory</a>
-, <a class="el" href="classTools_1_1RandomTreeProcessorFactory.html#a7c9621404aa9431bd6b8336e6bac88f8">Tools::RandomTreeProcessorFactory</a>
-, <a class="el" href="classTools_1_1TreeProcessorFactory.html#a1666c5e86254369972d37d9509ef0ade">Tools::TreeProcessorFactory</a>
+: <a class="el" href="classTools_1_1ProcessorFactory.html#a68ec839a9f788cbb31bc5d9df5e236bd">Tools::ProcessorFactory</a>
 </li>
 <li>GetActualLine()
-: <a class="el" href="classBase_1_1DataProvider.html#aa0732191de813f04ef15e71dc38a2a2a">Base::DataProvider</a>
-, <a class="el" href="classBase_1_1FileDataProvider.html#a8b00f1577294defc0cca9fbe97aae3ec">Base::FileDataProvider</a>
+: <a class="el" href="classBase_1_1DataProvider.html#a81221970cd969f62b6af35784e2e8b60">Base::DataProvider</a>
+, <a class="el" href="classBase_1_1FileDataProvider.html#a2d542bc2c95fdf6b63f8877f3257561c">Base::FileDataProvider</a>
 </li>
-<li>GetAlgorithmsNames()
-: <a class="el" href="classBase_1_1DataCollector.html#a52bf3c7c4a610191acd56fa8628ac758">Base::DataCollector</a>
+<li>GetAlgorithmName()
+: <a class="el" href="classAlgorithms_1_1Algorithm.html#a5a4c36da3ae4e912678f408805b8012f">Algorithms::Algorithm</a>
+, <a class="el" href="classAlgorithms_1_1MoveToFront.html#a1b50d1b3893a83da80cb75217d1c46f0">Algorithms::MoveToFront</a>
+, <a class="el" href="classAlgorithms_1_1MTFMatrix.html#ac12ad7cb46719e18f2038f73402a8603">Algorithms::MTFMatrix</a>
+, <a class="el" href="classAlgorithms_1_1RandomTreeRoot.html#a9378b926383025f0234444a459e2200b">Algorithms::RandomTreeRoot</a>
+, <a class="el" href="classAlgorithms_1_1TreeRoot.html#a6d46e4fc8ce8f86e56e21c97a2396c1a">Algorithms::TreeRoot</a>
+, <a class="el" href="classBase_1_1Result.html#a221f51bbe0a5215c2a24e3d3b0580f85">Base::Result</a>
+</li>
+<li>GetComment()
+: <a class="el" href="classBase_1_1Result.html#a89d0501c0d353729b8eb920d987c21e3">Base::Result</a>
 </li>
 <li>GetContentPosition()
 : <a class="el" href="classAlgorithms_1_1Algorithm.html#a6e09676b9c4993b10687e6a1b42998ab">Algorithms::Algorithm</a>
@@ -267,31 +275,67 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 , <a class="el" href="classAlgorithms_1_1MTFMatrix.html#a9190cc11484d0521660857af9e84e0e9">Algorithms::MTFMatrix</a>
 , <a class="el" href="classAlgorithms_1_1TreeRoot.html#ac6021c5b3b8f486519a47363fcebc64e">Algorithms::TreeRoot</a>
 </li>
+<li>GetDataInputFile()
+: <a class="el" href="classBase_1_1Configuration.html#af3f7cad10983963222a2df6b4cb1c81c">Base::Configuration</a>
+</li>
+<li>GetDataInputMethod()
+: <a class="el" href="classBase_1_1Configuration.html#ae95a2b0a3ec80c979c6c8e99274451e0">Base::Configuration</a>
+</li>
+<li>GetDataOutputFile()
+: <a class="el" href="classBase_1_1Configuration.html#a3b385c24cfcce42268ccbabb33a64163">Base::Configuration</a>
+</li>
+<li>GetDataOutputMethod()
+: <a class="el" href="classBase_1_1Configuration.html#a0dbd52dfdd2ff77b1b3256949f7dbb70">Base::Configuration</a>
+</li>
+<li>GetElementPrototype()
+: <a class="el" href="classBase_1_1Configuration.html#abf4f29a0e547406b68a19d5212c60d6e">Base::Configuration</a>
+</li>
 <li>GetInstance()
-: <a class="el" href="classAlgorithms_1_1MatrixBuilder.html#af7598e5ed132585506334ee8eb7f0513">Algorithms::MatrixBuilder</a>
+: <a class="el" href="classBase_1_1Database.html#ad02ccde7598533fbf6def527dcc87f17">Base::Database</a>
 , <a class="el" href="classBase_1_1DataOutputBuilder.html#ac539cb418e81584a12c261604996e41e">Base::DataOutputBuilder</a>
 </li>
+<li>GetJudgeFreePositionRange()
+: <a class="el" href="classBase_1_1Configuration.html#a0ba61d50b24a8866821da2bd672fca9c">Base::Configuration</a>
+</li>
+<li>GetJudgeSelection()
+: <a class="el" href="classBase_1_1Configuration.html#a25a3812c8ff89d7ae11a20f60afe0326">Base::Configuration</a>
+</li>
+<li>GetJudgeSmallPenaltyPositionRange()
+: <a class="el" href="classBase_1_1Configuration.html#aefef666dbddf73a52a2052d81c00e389">Base::Configuration</a>
+</li>
+<li>GetLearnTurns()
+: <a class="el" href="classBase_1_1Configuration.html#aeeb9e33a2d3d4de12a765785ff3d9428">Base::Configuration</a>
+</li>
 <li>GetLineBefore()
-: <a class="el" href="classBase_1_1DataProvider.html#a227994454180db3976fcd1b59733bac9">Base::DataProvider</a>
-, <a class="el" href="classBase_1_1FileDataProvider.html#aac3943e304dd964298a387355784dbfa">Base::FileDataProvider</a>
+: <a class="el" href="classBase_1_1DataProvider.html#a6d2c76ac037427b9444a1e7dddc51d8b">Base::DataProvider</a>
+, <a class="el" href="classBase_1_1FileDataProvider.html#ad5c7b5ef6a43ff19ad58e586bb9130d0">Base::FileDataProvider</a>
 </li>
 <li>GetOutputStream()
 : <a class="el" href="classBase_1_1DataOutput.html#adea8f6af278e2e8ace25ba64d9bf9a57">Base::DataOutput</a>
 , <a class="el" href="classBase_1_1FileDataOutput.html#ae541a6775f2a1641b85e47f610618cd0">Base::FileDataOutput</a>
 </li>
+<li>GetOverallPenalty()
+: <a class="el" href="classBase_1_1Result.html#a4816c473f3858da5d379b0b7f34a13fd">Base::Result</a>
+</li>
 <li>GetPenalty()
 : <a class="el" href="classTools_1_1Processor.html#a09f7c38bed07f23524a7b5952fb813c4">Tools::Processor</a>
+</li>
+<li>GetPenaltyDetails()
+: <a class="el" href="classTools_1_1Processor.html#a4275ee6ceac5702dab10fd7b0a1ebeac">Tools::Processor</a>
 </li>
 <li>GetPrototype()
 : <a class="el" href="classBase_1_1ComplexDifferenceElement.html#a35687b61e32355d4c6e90d7ec42cea2d">Base::ComplexDifferenceElement</a>
 , <a class="el" href="classBase_1_1Element.html#a6471e7c5b954dded91f07ba22f867c22">Base::Element</a>
 , <a class="el" href="classBase_1_1SimpleElement.html#a3c77bcd528f49dab6b2c776550c279e5">Base::SimpleElement</a>
 </li>
-<li>GetResult()
-: <a class="el" href="classBase_1_1DataCollector.html#afaacb5f36d09faf5e6633a03aa26fdae">Base::DataCollector</a>
+<li>GetRunTurns()
+: <a class="el" href="classBase_1_1Configuration.html#aa9525beac0b9df565fa0e1b1300f96ca">Base::Configuration</a>
 </li>
-<li>GetResultsSum()
-: <a class="el" href="classBase_1_1DataCollector.html#ab300045605fb48a975be8c93f7e93b6f">Base::DataCollector</a>
+<li>GetSourceId()
+: <a class="el" href="classBase_1_1Result.html#addd73ecbf5855ce8707a4edac1fddb20">Base::Result</a>
+</li>
+<li>GetTimestamp()
+: <a class="el" href="classBase_1_1Result.html#a681261182e3f1f180b4fbd7e2d8ec6a8">Base::Result</a>
 </li>
 <li>GoToNextLine()
 : <a class="el" href="classBase_1_1DataProvider.html#abb41c42389ba1f6875b8927edd8fbf44">Base::DataProvider</a>
@@ -307,6 +351,10 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 , <a class="el" href="classAlgorithms_1_1MTFMatrix.html#aa759869b9f85d07ec62aa8294cfd618d">Algorithms::MTFMatrix</a>
 , <a class="el" href="classAlgorithms_1_1TreeRoot.html#a838986d4c05be2712ae7239d2a7eb678">Algorithms::TreeRoot</a>
 </li>
+<li>HeaderLine()
+: <a class="el" href="classBase_1_1OverallResult.html#a909a996fe2f2031e9e38b669c3a441a3">Base::OverallResult</a>
+, <a class="el" href="classBase_1_1Result.html#a634d21d98b2c5c589147500b91ec21c5">Base::Result</a>
+</li>
 </ul>
 
 
@@ -321,12 +369,6 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
-<li>MatrixBuilder()
-: <a class="el" href="classAlgorithms_1_1MatrixBuilder.html#a0e68391811fdb1c27227103fd6010d4f">Algorithms::MatrixBuilder</a>
-</li>
-<li>MatrixMTFProcessorFactory()
-: <a class="el" href="classTools_1_1MatrixMTFProcessorFactory.html#a3f78b095660bdc56b8a8fb4ccfb864ad">Tools::MatrixMTFProcessorFactory</a>
-</li>
 <li>MoveFromPositionToFront()
 : <a class="el" href="classAlgorithms_1_1Algorithm.html#ae2f19a59bbf94e645e437e5af1b1a3ed">Algorithms::Algorithm</a>
 , <a class="el" href="classAlgorithms_1_1MoveToFront.html#af5df5c7f9375c0c91d4c139563802087">Algorithms::MoveToFront</a>
@@ -335,7 +377,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 , <a class="el" href="classAlgorithms_1_1TreeRoot.html#afbfe5cd43e8007c598b006efd881f710">Algorithms::TreeRoot</a>
 </li>
 <li>MTFMatrix()
-: <a class="el" href="classAlgorithms_1_1MTFMatrix.html#af224fd4c95d2d9ed77bb885de511123f">Algorithms::MTFMatrix</a>
+: <a class="el" href="classAlgorithms_1_1MTFMatrix.html#acb547cca9d44fd67797f88e5e3062daf">Algorithms::MTFMatrix</a>
 </li>
 </ul>
 
@@ -348,8 +390,8 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 </li>
 <li>NotifyContent()
 : <a class="el" href="classAlgorithms_1_1Algorithm.html#a7518f25c52360dbc9da868a48b528716">Algorithms::Algorithm</a>
-, <a class="el" href="classAlgorithms_1_1MoveToFront.html#ab0adbbe4f0ce5f787b51deadcb3ae8f7">Algorithms::MoveToFront</a>
-, <a class="el" href="classAlgorithms_1_1MTFMatrix.html#ae55b9b0b8d6057d989099f8c315da140">Algorithms::MTFMatrix</a>
+, <a class="el" href="classAlgorithms_1_1MoveToFront.html#ad3edf0688f9998d5a6e8ba1f961ac167">Algorithms::MoveToFront</a>
+, <a class="el" href="classAlgorithms_1_1MTFMatrix.html#a181a83000b34c24930dae329ccb61480">Algorithms::MTFMatrix</a>
 , <a class="el" href="classAlgorithms_1_1TreeRoot.html#a5461cb3168d66319a8008b818db16dfe">Algorithms::TreeRoot</a>
 </li>
 </ul>
@@ -365,19 +407,16 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 <h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
 <li>PenaltyDetails()
-: <a class="el" href="classTools_1_1Judge.html#a5ce7247e230dcfae58457099fd1534b2">Tools::Judge</a>
-, <a class="el" href="classTools_1_1Tester.html#af06a42e0ef1ba97f00a257ec69f1a79b">Tools::Tester</a>
-</li>
-<li>PrintActualResults()
-: <a class="el" href="classBase_1_1DataCollector.html#afb1d46273c24e3e1fdefba6b730ebf28">Base::DataCollector</a>
+: <a class="el" href="classTools_1_1Judge.html#a15876de56c41aeaa1719b68ef9d60ec8">Tools::Judge</a>
+, <a class="el" href="classTools_1_1Tester.html#a4bc158264e58c6dbb6629efae1ce0f71">Tools::Tester</a>
 </li>
 <li>PrintColumnTitles()
 : <a class="el" href="classBase_1_1CsvDataOutput.html#aa54484865cd138cf49b5aa5b9ef813d5">Base::CsvDataOutput</a>
 , <a class="el" href="classBase_1_1DataOutput.html#a0f1a6127945492d692629120575e7f82">Base::DataOutput</a>
 </li>
 <li>PrintLine()
-: <a class="el" href="classBase_1_1CsvDataOutput.html#a88994527237735d1d6a05cec3b222ba7">Base::CsvDataOutput</a>
-, <a class="el" href="classBase_1_1DataOutput.html#afdb91464e7559dedf69c56c1b862a216">Base::DataOutput</a>
+: <a class="el" href="classBase_1_1CsvDataOutput.html#a972d6073d8c9e7d87e16a9cefb9ab732">Base::CsvDataOutput</a>
+, <a class="el" href="classBase_1_1DataOutput.html#a49ba79d35363f4741a0bf9022f15d697">Base::DataOutput</a>
 </li>
 <li>Proceed()
 : <a class="el" href="classTools_1_1Processor.html#a6790858e073f93e041e837ef23f3ec76">Tools::Processor</a>
@@ -399,41 +438,56 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 
 <h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
-<li>RandomTreeProcessorFactory()
-: <a class="el" href="classTools_1_1RandomTreeProcessorFactory.html#aa50b51e813c7c4d262b5ead54e0c4451">Tools::RandomTreeProcessorFactory</a>
-</li>
-<li>ResetSetting()
-: <a class="el" href="classAlgorithms_1_1MatrixBuilder.html#aad18a9829406492da82b39d8abe036ab">Algorithms::MatrixBuilder</a>
+<li>Result()
+: <a class="el" href="classBase_1_1Result.html#a053b4cdafe2337eca9d8d6102a9bad66">Base::Result</a>
 </li>
 <li>RunProgram()
 : <a class="el" href="classBase_1_1ConsoleProgramRunner.html#af1d3c31ac70578ca956342f2bdcca14b">Base::ConsoleProgramRunner</a>
 , <a class="el" href="classBase_1_1FileProgramRunner.html#a780e7ab3c6c1594e85ae0cdabe206a3e">Base::FileProgramRunner</a>
 , <a class="el" href="classBase_1_1ProgramRunner.html#a8fd3499d51a851ef07f63fd23e79c003">Base::ProgramRunner</a>
 </li>
-<li>RunTurns()
-: <a class="el" href="classBase_1_1DataCollector.html#a5f82cf1aa48981c36cb2e0eba944c148">Base::DataCollector</a>
-</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
-<li>SetAlgorithmsToTest()
-: <a class="el" href="classBase_1_1ConsoleProgramRunner.html#a04bf19b509343bedfed8b68f87ce6dfd">Base::ConsoleProgramRunner</a>
-, <a class="el" href="classBase_1_1FileProgramRunner.html#a211c2ee73e9fb4f49072bf7bbf1394ea">Base::FileProgramRunner</a>
-, <a class="el" href="classBase_1_1ProgramRunner.html#adedb0e7e40407823d5d8423e99461ad9">Base::ProgramRunner</a>
+<li>SetAlgorithms()
+: <a class="el" href="classBase_1_1Configuration.html#a7d3c4f584509cea2a61c9534fd83d9b2">Base::Configuration</a>
 </li>
-<li>SetColumnTitles()
-: <a class="el" href="classBase_1_1CsvDataOutput.html#a9302a89524b164d440280bc1c90c90d3">Base::CsvDataOutput</a>
-, <a class="el" href="classBase_1_1DataOutput.html#a368f0c022e828cd3f29085e10e70b113">Base::DataOutput</a>
+<li>SetAlgorithmsToTest()
+: <a class="el" href="classBase_1_1ConsoleProgramRunner.html#a53f5c9ec7df321778a364b0ddcd716c9">Base::ConsoleProgramRunner</a>
+, <a class="el" href="classBase_1_1FileProgramRunner.html#ae177d75e9d7dcda16f8897be132f98d7">Base::FileProgramRunner</a>
+, <a class="el" href="classBase_1_1ProgramRunner.html#affb9b9ecbc5469c1a147b838f2a01988">Base::ProgramRunner</a>
 </li>
 <li>SetCsvOutputFormat()
 : <a class="el" href="classBase_1_1DataOutputBuilder.html#aa810b27e23dee1c035e61947c96ef628">Base::DataOutputBuilder</a>
 </li>
+<li>SetDataInputFile()
+: <a class="el" href="classBase_1_1Configuration.html#a977705560a9faa4a39c07949e7e4f12a">Base::Configuration</a>
+</li>
+<li>SetDataInputMethod()
+: <a class="el" href="classBase_1_1Configuration.html#a977c0c18830c2904cfaaba7bcde72db1">Base::Configuration</a>
+</li>
+<li>SetDataOutputFile()
+: <a class="el" href="classBase_1_1Configuration.html#af9d1cf68090c5d22c4f5d8b3c4fe1d0b">Base::Configuration</a>
+</li>
+<li>SetDataOutputMethod()
+: <a class="el" href="classBase_1_1Configuration.html#ae825dd446bb04e18596219e61cad6e9e">Base::Configuration</a>
+</li>
 <li>SetElementPrototype()
-: <a class="el" href="classAlgorithms_1_1MatrixBuilder.html#a142ebd22d233501079b8830b3b176ce3">Algorithms::MatrixBuilder</a>
+: <a class="el" href="classBase_1_1Configuration.html#aa2d5fcb310f060e0d71b7cecec0fb3bf">Base::Configuration</a>
+</li>
+<li>SetJudgeFreePositionRange()
+: <a class="el" href="classBase_1_1Configuration.html#a5f95bc9dfd2525f2e4462bf5f01a60af">Base::Configuration</a>
+</li>
+<li>SetJudgeSelection()
+: <a class="el" href="classBase_1_1Configuration.html#acb80e5d985e72c062a8f2ff1a780e660">Base::Configuration</a>
+</li>
+<li>SetJudgeSmallPenaltyPositionRange()
+: <a class="el" href="classBase_1_1Configuration.html#a18077b287ae4de52dc2bc60fb33b0b0b">Base::Configuration</a>
 </li>
 <li>SetLearnTurns()
-: <a class="el" href="classBase_1_1ConsoleProgramRunner.html#a41de047f5a8ffb81f89f8c20ec5ec860">Base::ConsoleProgramRunner</a>
+: <a class="el" href="classBase_1_1Configuration.html#a90f02ec1c6e1bae67e5ad75148ddfa7e">Base::Configuration</a>
+, <a class="el" href="classBase_1_1ConsoleProgramRunner.html#a41de047f5a8ffb81f89f8c20ec5ec860">Base::ConsoleProgramRunner</a>
 , <a class="el" href="classBase_1_1FileProgramRunner.html#adf6895343447890e339f94e6a3b3de49">Base::FileProgramRunner</a>
 , <a class="el" href="classBase_1_1ProgramRunner.html#a104f614491024d5c928199234cd65ab8">Base::ProgramRunner</a>
 </li>
@@ -450,6 +504,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>SetResultOutputFrequency()
 : <a class="el" href="classBase_1_1ConsoleProgramRunner.html#ae6512d7fdb90bad55cc6641c0752cd98">Base::ConsoleProgramRunner</a>
 , <a class="el" href="classBase_1_1ProgramRunner.html#a060b39c6cd532262b7d6eb7b186c30fe">Base::ProgramRunner</a>
+</li>
+<li>SetRunTurns()
+: <a class="el" href="classBase_1_1Configuration.html#a72e8ea0c84a0805c23b0f25b34320963">Base::Configuration</a>
 </li>
 <li>SetTestTurns()
 : <a class="el" href="classBase_1_1ConsoleProgramRunner.html#a6de040c3cf809f6bad2a5d1f1274296c">Base::ConsoleProgramRunner</a>
@@ -478,6 +535,10 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>Tester()
 : <a class="el" href="classTools_1_1Tester.html#ab8eccea02f6dc5713a57b90c13a207df">Tools::Tester</a>
 </li>
+<li>ToString()
+: <a class="el" href="classBase_1_1OverallResult.html#a543362507a9da515e33ffec36f94ab64">Base::OverallResult</a>
+, <a class="el" href="classBase_1_1Result.html#a719b97fcab97c790f6510c67414c6984">Base::Result</a>
+</li>
 </ul>
 
 
@@ -492,25 +553,18 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 </ul>
 
 
-<h3><a class="anchor" id="index_w"></a>- w -</h3><ul>
-<li>WithMatrixWidth()
-: <a class="el" href="classAlgorithms_1_1MatrixBuilder.html#adc10d2e16ac38e9fb1c9088fab6c6d32">Algorithms::MatrixBuilder</a>
-</li>
-</ul>
-
-
 <h3><a class="anchor" id="index_~"></a>- ~ -</h3><ul>
 <li>~ComplexDifferenceElement()
 : <a class="el" href="classBase_1_1ComplexDifferenceElement.html#a02193b0a599099bdbcb85f96ff5c404b">Base::ComplexDifferenceElement</a>
+</li>
+<li>~Configuration()
+: <a class="el" href="classBase_1_1Configuration.html#a6e3e7d3dec0a57c41053da1c640e093b">Base::Configuration</a>
 </li>
 <li>~CsvDataOutput()
 : <a class="el" href="classBase_1_1CsvDataOutput.html#ac1fbaa916fb293fea40e772397450b5f">Base::CsvDataOutput</a>
 </li>
 <li>~Database()
 : <a class="el" href="classBase_1_1Database.html#aa6a3304e10861f362f9d2f55ff666c15">Base::Database</a>
-</li>
-<li>~DataCollector()
-: <a class="el" href="classBase_1_1DataCollector.html#aa7deb91a435cbd42091e560e152609ab">Base::DataCollector</a>
 </li>
 <li>~DataOutput()
 : <a class="el" href="classBase_1_1DataOutput.html#afbf4de9aafb25ccc5a9a1565b29565ec">Base::DataOutput</a>
@@ -533,14 +587,14 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>~Judge()
 : <a class="el" href="classTools_1_1Judge.html#a304f06edb408cbac0ee8245dc967ce00">Tools::Judge</a>
 </li>
-<li>~MatrixBuilder()
-: <a class="el" href="classAlgorithms_1_1MatrixBuilder.html#a110a018848b449fbf3dffd53dde7a928">Algorithms::MatrixBuilder</a>
-</li>
 <li>~MTFMatrix()
 : <a class="el" href="classAlgorithms_1_1MTFMatrix.html#a47bf4d6b94bf5c14b05fae08e5eb59b5">Algorithms::MTFMatrix</a>
 </li>
 <li>~Processor()
 : <a class="el" href="classTools_1_1Processor.html#a57b9849b5dfe7a239d67588d2ebf1ff2">Tools::Processor</a>
+</li>
+<li>~Result()
+: <a class="el" href="classBase_1_1Result.html#ade0750bfeabe82489c9ce043f783f7b0">Base::Result</a>
 </li>
 <li>~SimpleElement()
 : <a class="el" href="classBase_1_1SimpleElement.html#a4580b6f8e363c12459a2947749c26226">Base::SimpleElement</a>
@@ -554,7 +608,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun May 11 2014 02:36:03 for MTFthesisstudies by
+    <li class="footer">Generated on Thu Jun 5 2014 01:05:07 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

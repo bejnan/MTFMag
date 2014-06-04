@@ -1,7 +1,7 @@
 var classBase_1_1ProgramRunner =
 [
     [ "RunProgram", "classBase_1_1ProgramRunner.html#a8fd3499d51a851ef07f63fd23e79c003", null ],
-    [ "SetAlgorithmsToTest", "classBase_1_1ProgramRunner.html#adedb0e7e40407823d5d8423e99461ad9", null ],
+    [ "SetAlgorithmsToTest", "classBase_1_1ProgramRunner.html#affb9b9ecbc5469c1a147b838f2a01988", null ],
     [ "SetLearnTurns", "classBase_1_1ProgramRunner.html#a104f614491024d5c928199234cd65ab8", null ],
     [ "SetProgram", "classBase_1_1ProgramRunner.html#a3d55a80abf5bc5e0395aed6e351d945a", null ],
     [ "SetResultDetails", "classBase_1_1ProgramRunner.html#aa50e2331ee8da695c88d6a42299e3ec7", null ],

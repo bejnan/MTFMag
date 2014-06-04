@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MTFthesisstudies
-   &#160;<span id="projectnumber">version0.79</span>
+   &#160;<span id="projectnumber">version0.82</span>
    </div>
   </td>
  </tr>
@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('classBase_1_1Database.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -111,19 +111,20 @@ $(document).ready(function(){initNavTree('classBase_1_1Database.html','');});
 <p>This is the complete list of members for <a class="el" href="classBase_1_1Database.html">Base::Database</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classBase_1_1Database.html#a97279bf88fcd1a60fe35afe473557032">AddToBase</a>(shared_ptr&lt; Tools::Processor &gt; processor)</td><td class="entry"><a class="el" href="classBase_1_1Database.html">Base::Database</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classBase_1_1Database.html#af626cd9abf18d3cfe1817d50c2b3253c">Database</a>()</td><td class="entry"><a class="el" href="classBase_1_1Database.html">Base::Database</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classBase_1_1Database.html#a98e15a3b09d4a4971308e890ee60e002">ClearDatabase</a>()</td><td class="entry"><a class="el" href="classBase_1_1Database.html">Base::Database</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classBase_1_1Database.html#a1ba1bb48416bf9d28576764e523e16cd">Exists</a>(int id)</td><td class="entry"><a class="el" href="classBase_1_1Database.html">Base::Database</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classBase_1_1Database.html#addb40ac264523f60e4fbcd3797803221">Query</a>(int id)</td><td class="entry"><a class="el" href="classBase_1_1Database.html">Base::Database</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classBase_1_1Database.html#a7bce7a9611612614195a5bea2ebcd2ae">Query</a>(string algorithm_name)</td><td class="entry"><a class="el" href="classBase_1_1Database.html">Base::Database</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classBase_1_1Database.html#a73adc4520286deee33179d45edadd065">Query</a>()</td><td class="entry"><a class="el" href="classBase_1_1Database.html">Base::Database</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classBase_1_1Database.html#a8e7191f1c4c56db540cc3787a51fb0bc">QueryAlgorithmNames</a>()</td><td class="entry"><a class="el" href="classBase_1_1Database.html">Base::Database</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classBase_1_1Database.html#aa6a3304e10861f362f9d2f55ff666c15">~Database</a>()</td><td class="entry"><a class="el" href="classBase_1_1Database.html">Base::Database</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classBase_1_1Database.html#ad02ccde7598533fbf6def527dcc87f17">GetInstance</a>()</td><td class="entry"><a class="el" href="classBase_1_1Database.html">Base::Database</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classBase_1_1Database.html#addb40ac264523f60e4fbcd3797803221">Query</a>(int id)</td><td class="entry"><a class="el" href="classBase_1_1Database.html">Base::Database</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classBase_1_1Database.html#a7bce7a9611612614195a5bea2ebcd2ae">Query</a>(string algorithm_name)</td><td class="entry"><a class="el" href="classBase_1_1Database.html">Base::Database</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classBase_1_1Database.html#a73adc4520286deee33179d45edadd065">Query</a>()</td><td class="entry"><a class="el" href="classBase_1_1Database.html">Base::Database</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classBase_1_1Database.html#a8e7191f1c4c56db540cc3787a51fb0bc">QueryAlgorithmNames</a>()</td><td class="entry"><a class="el" href="classBase_1_1Database.html">Base::Database</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classBase_1_1Database.html#aa6a3304e10861f362f9d2f55ff666c15">~Database</a>()</td><td class="entry"><a class="el" href="classBase_1_1Database.html">Base::Database</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun May 11 2014 02:36:02 for MTFthesisstudies by
+    <li class="footer">Generated on Thu Jun 5 2014 01:05:06 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

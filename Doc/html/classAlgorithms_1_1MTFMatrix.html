@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MTFthesisstudies
-   &#160;<span id="projectnumber">version0.79</span>
+   &#160;<span id="projectnumber">version0.82</span>
    </div>
   </td>
  </tr>
@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('classAlgorithms_1_1MTFMatrix.html','')
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -105,6 +105,7 @@ $(document).ready(function(){initNavTree('classAlgorithms_1_1MTFMatrix.html','')
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classAlgorithms_1_1MTFMatrix-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -130,8 +131,8 @@ Collaboration diagram for Algorithms::MTFMatrix:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af224fd4c95d2d9ed77bb885de511123f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithms_1_1MTFMatrix.html#af224fd4c95d2d9ed77bb885de511123f">MTFMatrix</a> (int row_size, shared_ptr&lt; <a class="el" href="classBase_1_1Element.html">Base::Element</a> &gt; element_prototype)</td></tr>
-<tr class="separator:af224fd4c95d2d9ed77bb885de511123f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb547cca9d44fd67797f88e5e3062daf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithms_1_1MTFMatrix.html#acb547cca9d44fd67797f88e5e3062daf">MTFMatrix</a> (shared_ptr&lt; <a class="el" href="classBase_1_1Element.html">Base::Element</a> &gt; element_prototype, int row_size=2)</td></tr>
+<tr class="separator:acb547cca9d44fd67797f88e5e3062daf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47bf4d6b94bf5c14b05fae08e5eb59b5"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithms_1_1MTFMatrix.html#a47bf4d6b94bf5c14b05fae08e5eb59b5">~MTFMatrix</a> ()</td></tr>
 <tr class="separator:a47bf4d6b94bf5c14b05fae08e5eb59b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa759869b9f85d07ec62aa8294cfd618d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithms_1_1MTFMatrix.html#aa759869b9f85d07ec62aa8294cfd618d">HaveElement</a> (int user_id)</td></tr>
@@ -144,7 +145,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae55b9b0b8d6057d989099f8c315da140"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9190cc11484d0521660857af9e84e0e9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithms_1_1MTFMatrix.html#a9190cc11484d0521660857af9e84e0e9">GetContentPosition</a> (int user_id)</td></tr>
 <tr class="separator:a9190cc11484d0521660857af9e84e0e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4517d2d4bd0327090ddeb1faa1047e44"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithms_1_1MTFMatrix.html#a4517d2d4bd0327090ddeb1faa1047e44">AlgorithmName</a> ()</td></tr>
+<tr class="memitem:ac12ad7cb46719e18f2038f73402a8603"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithms_1_1MTFMatrix.html#ac12ad7cb46719e18f2038f73402a8603">GetAlgorithmName</a> ()</td></tr>
+<tr class="separator:ac12ad7cb46719e18f2038f73402a8603"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab46c7f938eb58d971241549f5aee3372"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithm</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithms_1_1MTFMatrix.html#ab46c7f938eb58d971241549f5aee3372">Clone</a> ()</td></tr>
+<tr class="separator:ab46c7f938eb58d971241549f5aee3372"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a4517d2d4bd0327090ddeb1faa1047e44"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithms_1_1MTFMatrix.html#a4517d2d4bd0327090ddeb1faa1047e44">AlgorithmName</a> ()</td></tr>
 <tr class="separator:a4517d2d4bd0327090ddeb1faa1047e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
@@ -163,7 +171,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a5a804095ad78fc55b3a7c016ae94c433"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Aim of class is to organize elements in linear order. Class implements algorithm similar to MTF (Move to front), but elements are organized in rows with constant width and creates matrix. When element is notified it is moved to first row moving by path of smallest elements (using Element::Compare method) . For example (let row size be 3) :</p>
+<div class="textblock"><p>Class implements algorithm similar to MTF (Move to front), but elements are organized in rows with constant width and creates matrix. When element is notified it is moved to first row moving by path of smallest elements (using Element::Compare method) . For example (let row size be 3) :</p>
 <p>Before notification (elements identifier) : <br/>
  1 2 3 (let elements be in order 1 &lt; 2 &lt; 3) <br/>
  4 5 6 (let elements be in order 4 &lt; 5 &lt; 6) <br/>
@@ -193,21 +201,21 @@ Protected Member Functions</h2></td></tr>
 <p>Position of element in ordered way can be read by MTFMatrix::GetContentPosiotion method</p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classBase_1_1Element.html#a733a4dc99291ab66d805d798cf664599">Base::Element::Compare</a> to understand order between elements in row </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="af224fd4c95d2d9ed77bb885de511123f"></a>
+<a class="anchor" id="acb547cca9d44fd67797f88e5e3062daf"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">Algorithms::MTFMatrix::MTFMatrix </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>row_size</em>, </td>
+          <td class="paramtype">shared_ptr&lt; <a class="el" href="classBase_1_1Element.html">Base::Element</a> &gt;&#160;</td>
+          <td class="paramname"><em>element_prototype</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">shared_ptr&lt; <a class="el" href="classBase_1_1Element.html">Base::Element</a> &gt;&#160;</td>
-          <td class="paramname"><em>element_prototype</em>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>row_size</em> = <code>2</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -280,6 +288,12 @@ Protected Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception::ElementAlreadyExists</td><td>if elements exists in algorithm </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="classAlgorithms_1_1Algorithm.html#aa448cae80d174538afa5c422f03314c4">Algorithms::Algorithm</a>.</p>
 
@@ -310,14 +324,48 @@ Here is the call graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>Return name of algorithm to identify method. </p>
 <dl class="section return"><dt>Returns</dt><dd>Name of method used as algorithm </dd></dl>
 
-<p>Implements <a class="el" href="classAlgorithms_1_1Algorithm.html#a3f2643c496bf2db3c623abd04372ae9e">Algorithms::Algorithm</a>.</p>
+</div>
+</div>
+<a class="anchor" id="ab46c7f938eb58d971241549f5aee3372"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">shared_ptr&lt; <a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithm</a> &gt; Algorithms::MTFMatrix::Clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Implementation of Prototype pattern. Creates new empty instance of algorithm. </p>
+<dl class="section return"><dt>Returns</dt><dd>New empty instance of algorithm implementation (the same as called one). </dd></dl>
+
+<p>Implements <a class="el" href="classAlgorithms_1_1Algorithm.html#aa90f2b22ff52b623ca34b17acad66c3f">Algorithms::Algorithm</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAlgorithms_1_1MTFMatrix_ab46c7f938eb58d971241549f5aee3372_cgraph.png" border="0" usemap="#classAlgorithms_1_1MTFMatrix_ab46c7f938eb58d971241549f5aee3372_cgraph" alt=""/></div>
+<map name="classAlgorithms_1_1MTFMatrix_ab46c7f938eb58d971241549f5aee3372_cgraph" id="classAlgorithms_1_1MTFMatrix_ab46c7f938eb58d971241549f5aee3372_cgraph">
+<area shape="rect" id="node2" href="classAlgorithms_1_1MTFMatrix.html#acb547cca9d44fd67797f88e5e3062daf" title="Algorithms::MTFMatrix\l::MTFMatrix" alt="" coords="216,5,379,46"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -435,6 +483,33 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>Returns count of elements stored in class instance </p>
 <dl class="section return"><dt>Returns</dt><dd>Count of elements stored in class instance </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac12ad7cb46719e18f2038f73402a8603"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Algorithms::MTFMatrix::GetAlgorithmName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gives name of algorithm uses in class instance </p>
+<dl class="section return"><dt>Returns</dt><dd>Name of algorithm used in implementation </dd></dl>
+
+<p>Implements <a class="el" href="classAlgorithms_1_1Algorithm.html#a5a4c36da3ae4e912678f408805b8012f">Algorithms::Algorithm</a>.</p>
 
 </div>
 </div>
@@ -578,7 +653,7 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Main method of algorithm. Notify element with given id. After notification of element (<a class="el" href="classBase_1_1Element.html#afbf18a93271bdeba8a5ced434b518711">Base::Element::Notify</a> method) it moves element to front. Details of movement depends on algorithm. </p>
+<p>Main method of algorithm. Notify element with given id. After notification of element (<a class="el" href="classBase_1_1Element.html#afbf18a93271bdeba8a5ced434b518711">Base::Element::Notify</a> method) algorithm moves element up. Details of movement depends on algorithm. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">user_id</td><td>Identifier of element to notify </td></tr>
@@ -593,7 +668,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAlgorithms_1_1MTFMatrix_a181a83000b34c24930dae329ccb61480_cgraph.png" border="0" usemap="#classAlgorithms_1_1MTFMatrix_a181a83000b34c24930dae329ccb61480_cgraph" alt=""/></div>
 <map name="classAlgorithms_1_1MTFMatrix_a181a83000b34c24930dae329ccb61480_cgraph" id="classAlgorithms_1_1MTFMatrix_a181a83000b34c24930dae329ccb61480_cgraph">
-<area shape="rect" id="node2" href="classAlgorithms_1_1MTFMatrix.html#ac4d4285a5c07d075ae0a2968aa838b9d" title="Algorithms::MTFMatrix\l::MoveFromPositionToFront" alt="" coords="216,70,411,111"/><area shape="rect" id="node3" href="classAlgorithms_1_1MTFMatrix.html#afc6cba6439a616cc32763be120064fbc" title="Algorithms::MTFMatrix\l::CompareElementsOnPositions" alt="" coords="459,5,679,46"/><area shape="rect" id="node4" href="classAlgorithms_1_1MTFMatrix.html#a8834e1c0cfe1d57342b61f7ef15c1d80" title="Algorithms::MTFMatrix\l::SwapElementsOnPositions" alt="" coords="471,70,668,111"/><area shape="rect" id="node5" href="classAlgorithms_1_1MTFMatrix.html#a7be4ab89408688363453337137f5c236" title="Algorithms::MTFMatrix\l::SortElementToList" alt="" coords="488,135,651,177"/></map>
+<area shape="rect" id="node2" href="classAlgorithms_1_1MTFMatrix.html#aa759869b9f85d07ec62aa8294cfd618d" title="Algorithms::MTFMatrix\l::HaveElement" alt="" coords="232,5,395,46"/><area shape="rect" id="node3" href="classAlgorithms_1_1MTFMatrix.html#ac4d4285a5c07d075ae0a2968aa838b9d" title="Algorithms::MTFMatrix\l::MoveFromPositionToFront" alt="" coords="216,70,411,111"/><area shape="rect" id="node4" href="classAlgorithms_1_1MTFMatrix.html#afc6cba6439a616cc32763be120064fbc" title="Algorithms::MTFMatrix\l::CompareElementsOnPositions" alt="" coords="459,5,679,46"/><area shape="rect" id="node5" href="classAlgorithms_1_1MTFMatrix.html#a8834e1c0cfe1d57342b61f7ef15c1d80" title="Algorithms::MTFMatrix\l::SwapElementsOnPositions" alt="" coords="471,70,668,111"/><area shape="rect" id="node6" href="classAlgorithms_1_1MTFMatrix.html#a7be4ab89408688363453337137f5c236" title="Algorithms::MTFMatrix\l::SortElementToList" alt="" coords="488,135,651,177"/></map>
 </div>
 </p>
 
@@ -630,7 +705,7 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>As version with one parameter notify element with given id. After notification of element (<a class="el" href="classBase_1_1Element.html#afbf18a93271bdeba8a5ced434b518711">Base::Element::Notify</a> method) it moves element to front. Details of movement depends on algorithm. notification_count can be used in Element::Notify method to measure actuality of element. </p>
+<p>As version with one parameter notify element with given id. After notification of element (<a class="el" href="classBase_1_1Element.html#afbf18a93271bdeba8a5ced434b518711">Base::Element::Notify</a> method) it moves element up. Details of movement depends on algorithm. notification_count can be used in Element::Notify method to measure distance between notification of given element and others. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">user_id</td><td>Identifier of element to notify </td></tr>
@@ -646,7 +721,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAlgorithms_1_1MTFMatrix_ae55b9b0b8d6057d989099f8c315da140_cgraph.png" border="0" usemap="#classAlgorithms_1_1MTFMatrix_ae55b9b0b8d6057d989099f8c315da140_cgraph" alt=""/></div>
 <map name="classAlgorithms_1_1MTFMatrix_ae55b9b0b8d6057d989099f8c315da140_cgraph" id="classAlgorithms_1_1MTFMatrix_ae55b9b0b8d6057d989099f8c315da140_cgraph">
-<area shape="rect" id="node2" href="classAlgorithms_1_1MTFMatrix.html#ac4d4285a5c07d075ae0a2968aa838b9d" title="Algorithms::MTFMatrix\l::MoveFromPositionToFront" alt="" coords="216,70,411,111"/><area shape="rect" id="node3" href="classAlgorithms_1_1MTFMatrix.html#afc6cba6439a616cc32763be120064fbc" title="Algorithms::MTFMatrix\l::CompareElementsOnPositions" alt="" coords="459,5,679,46"/><area shape="rect" id="node4" href="classAlgorithms_1_1MTFMatrix.html#a8834e1c0cfe1d57342b61f7ef15c1d80" title="Algorithms::MTFMatrix\l::SwapElementsOnPositions" alt="" coords="471,70,668,111"/><area shape="rect" id="node5" href="classAlgorithms_1_1MTFMatrix.html#a7be4ab89408688363453337137f5c236" title="Algorithms::MTFMatrix\l::SortElementToList" alt="" coords="488,135,651,177"/></map>
+<area shape="rect" id="node2" href="classAlgorithms_1_1MTFMatrix.html#aa759869b9f85d07ec62aa8294cfd618d" title="Algorithms::MTFMatrix\l::HaveElement" alt="" coords="232,5,395,46"/><area shape="rect" id="node3" href="classAlgorithms_1_1MTFMatrix.html#ac4d4285a5c07d075ae0a2968aa838b9d" title="Algorithms::MTFMatrix\l::MoveFromPositionToFront" alt="" coords="216,70,411,111"/><area shape="rect" id="node4" href="classAlgorithms_1_1MTFMatrix.html#afc6cba6439a616cc32763be120064fbc" title="Algorithms::MTFMatrix\l::CompareElementsOnPositions" alt="" coords="459,5,679,46"/><area shape="rect" id="node5" href="classAlgorithms_1_1MTFMatrix.html#a8834e1c0cfe1d57342b61f7ef15c1d80" title="Algorithms::MTFMatrix\l::SwapElementsOnPositions" alt="" coords="471,70,668,111"/><area shape="rect" id="node6" href="classAlgorithms_1_1MTFMatrix.html#a7be4ab89408688363453337137f5c236" title="Algorithms::MTFMatrix\l::SortElementToList" alt="" coords="488,135,651,177"/></map>
 </div>
 </p>
 
@@ -732,7 +807,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>Algorithms</b></li><li class="navelem"><a class="el" href="classAlgorithms_1_1MTFMatrix.html">MTFMatrix</a></li>
-    <li class="footer">Generated on Sun May 11 2014 02:36:02 for MTFthesisstudies by
+    <li class="footer">Generated on Thu Jun 5 2014 01:05:06 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

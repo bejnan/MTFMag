@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MTFthesisstudies
-   &#160;<span id="projectnumber">version0.79</span>
+   &#160;<span id="projectnumber">version0.82</span>
    </div>
   </td>
  </tr>
@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('classBase_1_1ProgramRunner.html','');}
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -138,8 +138,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a060b39c6cd532262b7d6eb7b186c30fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa50e2331ee8da695c88d6a42299e3ec7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1ProgramRunner.html#aa50e2331ee8da695c88d6a42299e3ec7">SetResultDetails</a> (int value)=0</td></tr>
 <tr class="separator:aa50e2331ee8da695c88d6a42299e3ec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adedb0e7e40407823d5d8423e99461ad9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1ProgramRunner.html#adedb0e7e40407823d5d8423e99461ad9">SetAlgorithmsToTest</a> (vector&lt; shared_ptr&lt; <a class="el" href="classTools_1_1ProcessorFactory.html">Tools::ProcessorFactory</a> &gt; &gt; processor_factories)=0</td></tr>
-<tr class="separator:adedb0e7e40407823d5d8423e99461ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affb9b9ecbc5469c1a147b838f2a01988"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1ProgramRunner.html#affb9b9ecbc5469c1a147b838f2a01988">SetAlgorithmsToTest</a> (vector&lt; string &gt; algorithm_names)=0</td></tr>
+<tr class="separator:affb9b9ecbc5469c1a147b838f2a01988"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interface for program to: </p>
@@ -180,7 +180,7 @@ Run program for given amount of turn (input lines) </li>
 
 </div>
 </div>
-<a class="anchor" id="adedb0e7e40407823d5d8423e99461ad9"></a>
+<a class="anchor" id="affb9b9ecbc5469c1a147b838f2a01988"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -190,8 +190,8 @@ Run program for given amount of turn (input lines) </li>
         <tr>
           <td class="memname">virtual void Base::ProgramRunner::SetAlgorithmsToTest </td>
           <td>(</td>
-          <td class="paramtype">vector&lt; shared_ptr&lt; <a class="el" href="classTools_1_1ProcessorFactory.html">Tools::ProcessorFactory</a> &gt; &gt;&#160;</td>
-          <td class="paramname"><em>processor_factories</em></td><td>)</td>
+          <td class="paramtype">vector&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>algorithm_names</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -209,7 +209,7 @@ Run program for given amount of turn (input lines) </li>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classBase_1_1ConsoleProgramRunner.html#a04bf19b509343bedfed8b68f87ce6dfd">Base::ConsoleProgramRunner</a>, and <a class="el" href="classBase_1_1FileProgramRunner.html#a211c2ee73e9fb4f49072bf7bbf1394ea">Base::FileProgramRunner</a>.</p>
+<p>Implemented in <a class="el" href="classBase_1_1ConsoleProgramRunner.html#a53f5c9ec7df321778a364b0ddcd716c9">Base::ConsoleProgramRunner</a>, and <a class="el" href="classBase_1_1FileProgramRunner.html#ae177d75e9d7dcda16f8897be132f98d7">Base::FileProgramRunner</a>.</p>
 
 </div>
 </div>
@@ -294,7 +294,7 @@ Run program for given amount of turn (input lines) </li>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Method to set amount of details from Judge instance that will be printed during program run </p>
+<p>TODO Decide how implement flag (enum?) Method to set amount of details from Judge instance that will be printed during program run </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">value</td><td>Flag defining number of details from Judge </td></tr>
@@ -382,7 +382,7 @@ Run program for given amount of turn (input lines) </li>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>Base</b></li><li class="navelem"><a class="el" href="classBase_1_1ProgramRunner.html">ProgramRunner</a></li>
-    <li class="footer">Generated on Sun May 11 2014 02:36:02 for MTFthesisstudies by
+    <li class="footer">Generated on Thu Jun 5 2014 01:05:06 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MTFthesisstudies
-   &#160;<span id="projectnumber">version0.79</span>
+   &#160;<span id="projectnumber">version0.82</span>
    </div>
   </td>
  </tr>
@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('classTools_1_1ProcessorFactory.html','
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -107,48 +107,35 @@ $(document).ready(function(){initNavTree('classTools_1_1ProcessorFactory.html','
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classTools_1_1ProcessorFactory-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Tools::ProcessorFactory Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">Tools::ProcessorFactory Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="processor__factory_8h_source.html">processor_factory.h</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for Tools::ProcessorFactory:</div>
-<div class="dyncontent">
-<div class="center"><img src="classTools_1_1ProcessorFactory__inherit__graph.png" border="0" usemap="#Tools_1_1ProcessorFactory_inherit__map" alt="Inheritance graph"/></div>
-<map name="Tools_1_1ProcessorFactory_inherit__map" id="Tools_1_1ProcessorFactory_inherit__map">
-<area shape="rect" id="node2" href="classTools_1_1MatrixMTFProcessorFactory.html" title="Tools::MatrixMTFProcessor\lFactory" alt="" coords="237,5,432,46"/><area shape="rect" id="node3" href="classTools_1_1MTFProcessorFactory.html" title="Tools::MTFProcessorFactory" alt="" coords="233,71,436,97"/><area shape="rect" id="node4" href="classTools_1_1RandomTreeProcessorFactory.html" title="Tools::RandomTreeProcessor\lFactory" alt="" coords="229,122,440,163"/><area shape="rect" id="node5" href="classTools_1_1TreeProcessorFactory.html" title="Tools::TreeProcessorFactory" alt="" coords="233,188,437,215"/></map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a56008a0558473aa5ace05bc2b23202d5"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classTools_1_1Processor.html">Processor</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTools_1_1ProcessorFactory.html#a56008a0558473aa5ace05bc2b23202d5">GenerateProcessor</a> (int user_id)=0</td></tr>
-<tr class="separator:a56008a0558473aa5ace05bc2b23202d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68ec839a9f788cbb31bc5d9df5e236bd"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classTools_1_1Processor.html">Processor</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTools_1_1ProcessorFactory.html#a68ec839a9f788cbb31bc5d9df5e236bd">GenerateProcessor</a> (int user_id)</td></tr>
+<tr class="separator:a68ec839a9f788cbb31bc5d9df5e236bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Interface for creators of Processors for simple users (sources of notifications). Every user that is source of notification should be represent by <a class="el" href="classTools_1_1Processor.html">Processor</a> and <a class="el" href="classTools_1_1ProcessorFactory.html">ProcessorFactory</a> creates that Processors. It is used in DataCollector when user from input data doesn't have <a class="el" href="classTools_1_1Processor.html">Processor</a> representation. </p>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classBase_1_1DataCollector.html">Base::DataCollector</a> </dd></dl>
+<div class="textblock"><p>Creator of Processors for simple users (sources of notifications). Every user that is a source of notification should be represent by <a class="el" href="classTools_1_1Processor.html">Processor</a>. <a class="el" href="classTools_1_1ProcessorFactory.html">ProcessorFactory</a> creates that Processors for DataCollector. It is used to give every user from input representation as <a class="el" href="classTools_1_1Processor.html">Processor</a>. </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classBase_1_1DataCollector.html">Base::DataCollector</a> </dd>
+<dd>
+<a class="el" href="classTools_1_1Processor.html">Tools::Processor</a> </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a56008a0558473aa5ace05bc2b23202d5"></a>
+<a class="anchor" id="a68ec839a9f788cbb31bc5d9df5e236bd"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual shared_ptr&lt;<a class="el" href="classTools_1_1Processor.html">Processor</a>&gt; Tools::ProcessorFactory::GenerateProcessor </td>
+          <td class="memname">shared_ptr&lt; <a class="el" href="classTools_1_1Processor.html">Processor</a> &gt; Tools::ProcessorFactory::GenerateProcessor </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>user_id</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Generates <a class="el" href="classTools_1_1Processor.html">Processor</a> for given user by its identifier. Child classes defines details about what algorithm and judge to use </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -159,12 +146,11 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Instance of <a class="el" href="classTools_1_1Processor.html">Processor</a> for given user </dd></dl>
 
-<p>Implemented in <a class="el" href="classTools_1_1RandomTreeProcessorFactory.html#a7c9621404aa9431bd6b8336e6bac88f8">Tools::RandomTreeProcessorFactory</a>, <a class="el" href="classTools_1_1TreeProcessorFactory.html#a1666c5e86254369972d37d9509ef0ade">Tools::TreeProcessorFactory</a>, <a class="el" href="classTools_1_1MatrixMTFProcessorFactory.html#a5ddc563317ede13d07f506af24c18e1b">Tools::MatrixMTFProcessorFactory</a>, and <a class="el" href="classTools_1_1MTFProcessorFactory.html#aec59257db73a0fbd943db2e191bfed29">Tools::MTFProcessorFactory</a>.</p>
-
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>tools/<a class="el" href="processor__factory_8h_source.html">processor_factory.h</a></li>
+<li>tools/processor_factory.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -172,7 +158,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>Tools</b></li><li class="navelem"><a class="el" href="classTools_1_1ProcessorFactory.html">ProcessorFactory</a></li>
-    <li class="footer">Generated on Sun May 11 2014 02:36:03 for MTFthesisstudies by
+    <li class="footer">Generated on Thu Jun 5 2014 01:05:07 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

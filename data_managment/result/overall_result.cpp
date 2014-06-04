@@ -23,7 +23,7 @@ string OverallResult::HeaderLine() {
 
 string OverallResult::ToString() {
   return GetAlgorithmName() + "    " + to_string(GetTimestamp()) + "    "
-      + to_string(GetOveralPenalty());
+      + to_string(GetOverallPenalty());
 }
 
 } /* namespace Base */

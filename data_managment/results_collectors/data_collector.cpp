@@ -39,7 +39,7 @@ void DataCollector::PrintResults(int turn_amount,
   for (result_iterator = results->begin(); result_iterator != results->end();
       result_iterator++) {
     results_text.push_back(result_iterator->ToString());
-    result_counter += result_iterator->GetOveralPenalty();
+    result_counter += result_iterator->GetOverallPenalty();
   }
   if (print_zero_result || (result_counter > 0)) {
     data_output_->PrintLine(turn_amount, results_text);

@@ -1,5 +1,6 @@
 <map id="Algorithms::TreeRoot::NotifyContent" name="Algorithms::TreeRoot::NotifyContent">
-<area shape="rect" id="node2" href="$classAlgorithms_1_1TreeRoot.html#afbfe5cd43e8007c598b006efd881f710" title="Algorithms::TreeRoot\l::MoveFromPositionToFront" alt="" coords="208,5,403,46"/>
-<area shape="rect" id="node4" href="$classAlgorithms_1_1TreeRoot.html#a9c6ca52000c858de064b48a8c0e0c46b" title="Algorithms::TreeRoot\l::SortElementToList" alt="" coords="228,70,383,111"/>
-<area shape="rect" id="node3" href="$classAlgorithms_1_1TreeRoot.html#ab4e31292b12dcac9992f11446513499a" title="Algorithms::TreeRoot\l::SwapElementsOnPositions" alt="" coords="451,5,648,46"/>
+<area shape="rect" id="node2" href="$classAlgorithms_1_1TreeRoot.html#a838986d4c05be2712ae7239d2a7eb678" title="Algorithms::TreeRoot\l::HaveElement" alt="" coords="228,5,383,46"/>
+<area shape="rect" id="node3" href="$classAlgorithms_1_1TreeRoot.html#afbfe5cd43e8007c598b006efd881f710" title="Algorithms::TreeRoot\l::MoveFromPositionToFront" alt="" coords="208,70,403,111"/>
+<area shape="rect" id="node5" href="$classAlgorithms_1_1TreeRoot.html#a9c6ca52000c858de064b48a8c0e0c46b" title="Algorithms::TreeRoot\l::SortElementToList" alt="" coords="228,135,383,177"/>
+<area shape="rect" id="node4" href="$classAlgorithms_1_1TreeRoot.html#ab4e31292b12dcac9992f11446513499a" title="Algorithms::TreeRoot\l::SwapElementsOnPositions" alt="" coords="451,70,648,111"/>
 </map>

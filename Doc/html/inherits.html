@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MTFthesisstudies
-   &#160;<span id="projectnumber">version0.79</span>
+   &#160;<span id="projectnumber">version0.82</span>
    </div>
   </td>
  </tr>
@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -114,9 +114,9 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
 <map name="Algorithms_1_1Algorithm" id="Algorithms_1_1Algorithm">
 <area shape="rect" id="node1" href="classAlgorithms_1_1Algorithm.html" title="Algorithms::Algorithm" alt="" coords="6,56,159,83"/><area shape="rect" id="node2" href="classAlgorithms_1_1MoveToFront.html" title="Algorithms::MoveToFront" alt="" coords="208,5,387,32"/><area shape="rect" id="node3" href="classAlgorithms_1_1MTFMatrix.html" title="Algorithms::MTFMatrix" alt="" coords="216,56,379,83"/><area shape="rect" id="node4" href="classAlgorithms_1_1TreeRoot.html" title="Algorithms::TreeRoot" alt="" coords="220,107,375,133"/><area shape="rect" id="node5" href="classAlgorithms_1_1RandomTreeRoot.html" title="Algorithms::RandomTreeRoot" alt="" coords="435,107,642,133"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_1.png" border="0" alt="" usemap="#Algorithms_1_1MatrixBuilder"/>
-<map name="Algorithms_1_1MatrixBuilder" id="Algorithms_1_1MatrixBuilder">
-<area shape="rect" id="node1" href="classAlgorithms_1_1MatrixBuilder.html" title="Algorithms::MatrixBuilder" alt="" coords="5,5,181,32"/></map>
+<tr><td><img src="inherit_graph_1.png" border="0" alt="" usemap="#Base_1_1Configuration"/>
+<map name="Base_1_1Configuration" id="Base_1_1Configuration">
+<area shape="rect" id="node1" href="classBase_1_1Configuration.html" title="Base::Configuration" alt="" coords="5,5,149,32"/></map>
 </td></tr>
 <tr><td><img src="inherit_graph_2.png" border="0" alt="" usemap="#Base_1_1Database"/>
 <map name="Base_1_1Database" id="Base_1_1Database">
@@ -138,33 +138,45 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
 <map name="Base_1_1DataProvider" id="Base_1_1DataProvider">
 <area shape="rect" id="node1" href="classBase_1_1DataProvider.html" title="Base::DataProvider" alt="" coords="6,5,149,32"/><area shape="rect" id="node2" href="classBase_1_1FileDataProvider.html" title="Base::FileDataProvider" alt="" coords="197,5,363,32"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_7.png" border="0" alt="" usemap="#Base_1_1Element"/>
+<tr><td><img src="inherit_graph_7.png" border="0" alt="" usemap="#Base_1_1DataProvider_1_1DataInputLine"/>
+<map name="Base_1_1DataProvider_1_1DataInputLine" id="Base_1_1DataProvider_1_1DataInputLine">
+<area shape="rect" id="node1" href="structBase_1_1DataProvider_1_1DataInputLine.html" title="Base::DataProvider\l::DataInputLine" alt="" coords="6,5,149,46"/></map>
+</td></tr>
+<tr><td><img src="inherit_graph_8.png" border="0" alt="" usemap="#Base_1_1Element"/>
 <map name="Base_1_1Element" id="Base_1_1Element">
 <area shape="rect" id="node1" href="classBase_1_1Element.html" title="Base::Element" alt="" coords="6,5,117,32"/><area shape="rect" id="node2" href="classBase_1_1SimpleElement.html" title="Base::SimpleElement" alt="" coords="166,5,319,32"/><area shape="rect" id="node3" href="classBase_1_1ComplexDifferenceElement.html" title="Base::ComplexDifferenceElement" alt="" coords="369,5,599,32"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_8.png" border="0" alt="" usemap="#Base_1_1ProgramRunner"/>
+<tr><td><img src="inherit_graph_9.png" border="0" alt="" usemap="#Base_1_1JudgeCollector"/>
+<map name="Base_1_1JudgeCollector" id="Base_1_1JudgeCollector">
+<area shape="rect" id="node1" href="classBase_1_1JudgeCollector.html" title="Base::JudgeCollector" alt="" coords="5,5,160,32"/></map>
+</td></tr>
+<tr><td><img src="inherit_graph_10.png" border="0" alt="" usemap="#Base_1_1ProgramRunner"/>
 <map name="Base_1_1ProgramRunner" id="Base_1_1ProgramRunner">
 <area shape="rect" id="node1" href="classBase_1_1ProgramRunner.html" title="Base::ProgramRunner" alt="" coords="5,31,165,57"/><area shape="rect" id="node2" href="classBase_1_1ConsoleProgramRunner.html" title="Base::ConsoleProgramRunner" alt="" coords="214,5,426,32"/><area shape="rect" id="node3" href="classBase_1_1FileProgramRunner.html" title="Base::FileProgramRunner" alt="" coords="229,56,411,83"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_9.png" border="0" alt="" usemap="#Exception_1_1DatabaseException"/>
+<tr><td><img src="inherit_graph_11.png" border="0" alt="" usemap="#Base_1_1Result"/>
+<map name="Base_1_1Result" id="Base_1_1Result">
+<area shape="rect" id="node1" href="classBase_1_1Result.html" title="Base::Result" alt="" coords="5,5,104,32"/><area shape="rect" id="node2" href="classBase_1_1OverallResult.html" title="Base::OverallResult" alt="" coords="152,5,296,32"/></map>
+</td></tr>
+<tr><td><img src="inherit_graph_12.png" border="0" alt="" usemap="#Exception_1_1DatabaseException"/>
 <map name="Exception_1_1DatabaseException" id="Exception_1_1DatabaseException">
 <area shape="rect" id="node1" href="classException_1_1DatabaseException.html" title="Exception::DatabaseException" alt="" coords="6,31,218,57"/><area shape="rect" id="node2" href="classException_1_1InvalidIndexException.html" title="Exception::InvalidIndexException" alt="" coords="269,5,497,32"/><area shape="rect" id="node3" href="classException_1_1InvalidNameException.html" title="Exception::InvalidNameException" alt="" coords="267,56,498,83"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_10.png" border="0" alt="" usemap="#Exception_1_1DataProviderException"/>
+<tr><td><img src="inherit_graph_13.png" border="0" alt="" usemap="#Exception_1_1DataProviderException"/>
 <map name="Exception_1_1DataProviderException" id="Exception_1_1DataProviderException">
 <area shape="rect" id="node1" href="classException_1_1DataProviderException.html" title="Exception::DataProviderException" alt="" coords="5,31,240,57"/><area shape="rect" id="node2" href="classException_1_1EndOfFileException.html" title="Exception::EndOfFileException" alt="" coords="289,5,503,32"/><area shape="rect" id="node3" href="classException_1_1FilePathException.html" title="Exception::FilePathException" alt="" coords="295,56,497,83"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_11.png" border="0" alt="" usemap="#Tools_1_1Judge"/>
+<tr><td><img src="inherit_graph_14.png" border="0" alt="" usemap="#Tools_1_1Judge"/>
 <map name="Tools_1_1Judge" id="Tools_1_1Judge">
 <area shape="rect" id="node1" href="classTools_1_1Judge.html" title="Tools::Judge" alt="" coords="5,5,107,32"/><area shape="rect" id="node2" href="classTools_1_1Tester.html" title="Tools::Tester" alt="" coords="155,5,259,32"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_12.png" border="0" alt="" usemap="#Tools_1_1Processor"/>
+<tr><td><img src="inherit_graph_15.png" border="0" alt="" usemap="#Tools_1_1Processor"/>
 <map name="Tools_1_1Processor" id="Tools_1_1Processor">
 <area shape="rect" id="node1" href="classTools_1_1Processor.html" title="Tools::Processor" alt="" coords="6,5,133,32"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_13.png" border="0" alt="" usemap="#Tools_1_1ProcessorFactory"/>
+<tr><td><img src="inherit_graph_16.png" border="0" alt="" usemap="#Tools_1_1ProcessorFactory"/>
 <map name="Tools_1_1ProcessorFactory" id="Tools_1_1ProcessorFactory">
-<area shape="rect" id="node1" href="classTools_1_1ProcessorFactory.html" title="Tools::ProcessorFactory" alt="" coords="6,100,181,127"/><area shape="rect" id="node2" href="classTools_1_1MatrixMTFProcessorFactory.html" title="Tools::MatrixMTFProcessor\lFactory" alt="" coords="237,5,432,46"/><area shape="rect" id="node3" href="classTools_1_1MTFProcessorFactory.html" title="Tools::MTFProcessorFactory" alt="" coords="233,71,436,97"/><area shape="rect" id="node4" href="classTools_1_1RandomTreeProcessorFactory.html" title="Tools::RandomTreeProcessor\lFactory" alt="" coords="229,122,440,163"/><area shape="rect" id="node5" href="classTools_1_1TreeProcessorFactory.html" title="Tools::TreeProcessorFactory" alt="" coords="233,188,437,215"/></map>
+<area shape="rect" id="node1" href="classTools_1_1ProcessorFactory.html" title="Tools::ProcessorFactory" alt="" coords="6,5,181,32"/></map>
 </td></tr>
 </table>
 </div><!-- contents -->
@@ -172,7 +184,7 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun May 11 2014 02:36:03 for MTFthesisstudies by
+    <li class="footer">Generated on Thu Jun 5 2014 01:05:07 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

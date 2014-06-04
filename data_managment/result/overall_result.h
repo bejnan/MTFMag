@@ -12,6 +12,11 @@
 
 namespace Base {
 
+/**
+ * This class gathers results of all user for one algorithm.
+ * There is no information about source of last notification, only
+ * about moment in which happened (timestamp)
+ */
 class OverallResult : public Result {
  public:
 
@@ -20,8 +25,19 @@ class OverallResult : public Result {
 
   virtual ~OverallResult();
 
+  /**
+   * In header line is no source id column
+   * @return Header for all columns of results
+   */
   virtual string HeaderLine();
 
+  /**
+   * Returns result similar to one in base class, but
+   * there is no source id and overall penalty is sum
+   * of penalties for all users counted by the same algorithm
+   * @return Line of text with result and its description
+   * @see Base::Result::ToString
+   */
   virtual string ToString();
 
 };

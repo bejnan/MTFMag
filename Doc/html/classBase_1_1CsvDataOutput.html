@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MTFthesisstudies
-   &#160;<span id="projectnumber">version0.79</span>
+   &#160;<span id="projectnumber">version0.82</span>
    </div>
   </td>
  </tr>
@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('classBase_1_1CsvDataOutput.html','');}
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -133,14 +133,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acbedd47083f64caaafc2a33336bef869"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1fbaa916fb293fea40e772397450b5f"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1CsvDataOutput.html#ac1fbaa916fb293fea40e772397450b5f">~CsvDataOutput</a> ()</td></tr>
 <tr class="separator:ac1fbaa916fb293fea40e772397450b5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88994527237735d1d6a05cec3b222ba7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1CsvDataOutput.html#a88994527237735d1d6a05cec3b222ba7">PrintLine</a> (int turns_count, vector&lt; int &gt; results)</td></tr>
-<tr class="separator:a88994527237735d1d6a05cec3b222ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a972d6073d8c9e7d87e16a9cefb9ab732"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1CsvDataOutput.html#a972d6073d8c9e7d87e16a9cefb9ab732">PrintLine</a> (int turns_count, vector&lt; string &gt; results)</td></tr>
+<tr class="separator:a972d6073d8c9e7d87e16a9cefb9ab732"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa54484865cd138cf49b5aa5b9ef813d5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1CsvDataOutput.html#aa54484865cd138cf49b5aa5b9ef813d5">PrintColumnTitles</a> ()</td></tr>
 <tr class="separator:aa54484865cd138cf49b5aa5b9ef813d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9302a89524b164d440280bc1c90c90d3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1CsvDataOutput.html#a9302a89524b164d440280bc1c90c90d3">SetColumnTitles</a> (vector&lt; string &gt; titles)</td></tr>
-<tr class="separator:a9302a89524b164d440280bc1c90c90d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa4e604ce1d06ee002889b2604faf4e4"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1CsvDataOutput.html#aaa4e604ce1d06ee002889b2604faf4e4">AreTitlesPrinted</a> ()</td></tr>
-<tr class="separator:aaa4e604ce1d06ee002889b2604faf4e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classBase_1_1DataOutput"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classBase_1_1DataOutput')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classBase_1_1DataOutput.html">Base::DataOutput</a></td></tr>
 <tr class="memitem:afbf4de9aafb25ccc5a9a1565b29565ec inherit pub_methods_classBase_1_1DataOutput"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1DataOutput.html#afbf4de9aafb25ccc5a9a1565b29565ec">~DataOutput</a> ()</td></tr>
 <tr class="separator:afbf4de9aafb25ccc5a9a1565b29565ec inherit pub_methods_classBase_1_1DataOutput"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -204,33 +200,6 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aaa4e604ce1d06ee002889b2604faf4e4"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool Base::CsvDataOutput::AreTitlesPrinted </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Getter for are_titles_printed </p>
-<dl class="section return"><dt>Returns</dt><dd>True if method <a class="el" href="classBase_1_1CsvDataOutput.html#aa54484865cd138cf49b5aa5b9ef813d5">PrintColumnTitles()</a> was used before, false otherwise </dd></dl>
-
-<p>Implements <a class="el" href="classBase_1_1DataOutput.html#aa201a3a18e148803cc3384af60acda60">Base::DataOutput</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="aa54484865cd138cf49b5aa5b9ef813d5"></a>
 <div class="memitem">
 <div class="memproto">
@@ -255,18 +224,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classBase_1_1DataOutput.html#a0f1a6127945492d692629120575e7f82">Base::DataOutput</a>.</p>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classBase_1_1CsvDataOutput_aa54484865cd138cf49b5aa5b9ef813d5_cgraph.png" border="0" usemap="#classBase_1_1CsvDataOutput_aa54484865cd138cf49b5aa5b9ef813d5_cgraph" alt=""/></div>
-<map name="classBase_1_1CsvDataOutput_aa54484865cd138cf49b5aa5b9ef813d5_cgraph" id="classBase_1_1CsvDataOutput_aa54484865cd138cf49b5aa5b9ef813d5_cgraph">
-<area shape="rect" id="node2" href="classBase_1_1DataOutput.html#adea8f6af278e2e8ace25ba64d9bf9a57" title="Base::DataOutput::GetOutput\lStream" alt="" coords="209,5,410,46"/></map>
-</div>
-</p>
-
 </div>
 </div>
-<a class="anchor" id="a88994527237735d1d6a05cec3b222ba7"></a>
+<a class="anchor" id="a972d6073d8c9e7d87e16a9cefb9ab732"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -282,7 +242,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">vector&lt; int &gt;&#160;</td>
+          <td class="paramtype">vector&lt; string &gt;&#160;</td>
           <td class="paramname"><em>results</em>&#160;</td>
         </tr>
         <tr>
@@ -301,54 +261,21 @@ Here is the call graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">turns_count</td><td>First column of output, number of passed turns(tests) </td></tr>
-    <tr><td class="paramname">results</td><td>Vector of </td></tr>
+    <tr><td class="paramname">results</td><td>Vector of results </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classBase_1_1DataOutput.html#afdb91464e7559dedf69c56c1b862a216">Base::DataOutput</a>.</p>
+<p>Implements <a class="el" href="classBase_1_1DataOutput.html#a49ba79d35363f4741a0bf9022f15d697">Base::DataOutput</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classBase_1_1CsvDataOutput_a88994527237735d1d6a05cec3b222ba7_cgraph.png" border="0" usemap="#classBase_1_1CsvDataOutput_a88994527237735d1d6a05cec3b222ba7_cgraph" alt=""/></div>
-<map name="classBase_1_1CsvDataOutput_a88994527237735d1d6a05cec3b222ba7_cgraph" id="classBase_1_1CsvDataOutput_a88994527237735d1d6a05cec3b222ba7_cgraph">
+<div class="center"><img src="classBase_1_1CsvDataOutput_a972d6073d8c9e7d87e16a9cefb9ab732_cgraph.png" border="0" usemap="#classBase_1_1CsvDataOutput_a972d6073d8c9e7d87e16a9cefb9ab732_cgraph" alt=""/></div>
+<map name="classBase_1_1CsvDataOutput_a972d6073d8c9e7d87e16a9cefb9ab732_cgraph" id="classBase_1_1CsvDataOutput_a972d6073d8c9e7d87e16a9cefb9ab732_cgraph">
 <area shape="rect" id="node2" href="classBase_1_1DataOutput.html#adea8f6af278e2e8ace25ba64d9bf9a57" title="Base::DataOutput::GetOutput\lStream" alt="" coords="209,5,410,46"/></map>
 </div>
 </p>
-
-</div>
-</div>
-<a class="anchor" id="a9302a89524b164d440280bc1c90c90d3"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Base::CsvDataOutput::SetColumnTitles </td>
-          <td>(</td>
-          <td class="paramtype">vector&lt; string &gt;&#160;</td>
-          <td class="paramname"><em>titles</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Setter for titles_names_ </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">titles</td><td>Titles which replaces titles_names_ </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implements <a class="el" href="classBase_1_1DataOutput.html#a368f0c022e828cd3f29085e10e70b113">Base::DataOutput</a>.</p>
 
 </div>
 </div>
@@ -362,7 +289,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>Base</b></li><li class="navelem"><a class="el" href="classBase_1_1CsvDataOutput.html">CsvDataOutput</a></li>
-    <li class="footer">Generated on Sun May 11 2014 02:36:02 for MTFthesisstudies by
+    <li class="footer">Generated on Thu Jun 5 2014 01:05:06 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

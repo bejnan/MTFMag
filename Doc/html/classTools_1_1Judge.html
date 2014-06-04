@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MTFthesisstudies
-   &#160;<span id="projectnumber">version0.79</span>
+   &#160;<span id="projectnumber">version0.82</span>
    </div>
   </td>
  </tr>
@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('classTools_1_1Judge.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -128,8 +128,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a03f7dbf5350051ce22d0acf5352e7f1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3984d634cc8f04eea2cae889fb2a5628"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTools_1_1Judge.html#a3984d634cc8f04eea2cae889fb2a5628">OveralPenalty</a> ()=0</td></tr>
 <tr class="separator:a3984d634cc8f04eea2cae889fb2a5628"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ce7247e230dcfae58457099fd1534b2"><td class="memItemLeft" align="right" valign="top">virtual list&lt; pair&lt; int, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTools_1_1Judge.html#a5ce7247e230dcfae58457099fd1534b2">PenaltyDetails</a> ()=0</td></tr>
-<tr class="separator:a5ce7247e230dcfae58457099fd1534b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15876de56c41aeaa1719b68ef9d60ec8"><td class="memItemLeft" align="right" valign="top">virtual vector&lt; pair&lt; int, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTools_1_1Judge.html#a15876de56c41aeaa1719b68ef9d60ec8">PenaltyDetails</a> ()=0</td></tr>
+<tr class="separator:a15876de56c41aeaa1719b68ef9d60ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42bcc3c25ce089c453f47e8ec1861e1f"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classTools_1_1Judge.html">Judge</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTools_1_1Judge.html#a42bcc3c25ce089c453f47e8ec1861e1f">Clone</a> ()=0</td></tr>
+<tr class="separator:a42bcc3c25ce089c453f47e8ec1861e1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interface for algorithm judges. <a class="el" href="classTools_1_1Judge.html">Judge</a> compares user choices (element notifications) with list of friends prepared by algorithm. Further the chosen friend is on algorithm list bigger penalty should be given.Implementations should deliver mechanism to count penalty and get it overall value. Details are not required but recommended. </p>
@@ -159,6 +161,33 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a42bcc3c25ce089c453f47e8ec1861e1f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual shared_ptr&lt;<a class="el" href="classTools_1_1Judge.html">Judge</a>&gt; Tools::Judge::Clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Implementation of Prototype patter to clone instance of <a class="el" href="classTools_1_1Judge.html">Judge</a> for <a class="el" href="classTools_1_1ProcessorFactory.html">ProcessorFactory</a>. </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classTools_1_1ProcessorFactory.html">ProcessorFactory</a> </dd></dl>
+
+<p>Implemented in <a class="el" href="classTools_1_1Tester.html#a88b62615561fac312a2b8f1c1098e5d3">Tools::Tester</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a03f7dbf5350051ce22d0acf5352e7f1c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -219,7 +248,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5ce7247e230dcfae58457099fd1534b2"></a>
+<a class="anchor" id="a15876de56c41aeaa1719b68ef9d60ec8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -227,7 +256,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual list&lt;pair&lt;int, int&gt; &gt; Tools::Judge::PenaltyDetails </td>
+          <td class="memname">virtual vector&lt;pair&lt;int, int&gt; &gt; Tools::Judge::PenaltyDetails </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -242,7 +271,7 @@ Public Member Functions</h2></td></tr>
 <p>Returns details of overall penalty. Should remember every simple given penalty and time marker. </p>
 <dl class="section return"><dt>Returns</dt><dd>List of penalties with marker that allows to read linear order in time between penalties. First element of pair represents penalty, second represents time index. </dd></dl>
 
-<p>Implemented in <a class="el" href="classTools_1_1Tester.html#af06a42e0ef1ba97f00a257ec69f1a79b">Tools::Tester</a>.</p>
+<p>Implemented in <a class="el" href="classTools_1_1Tester.html#a4bc158264e58c6dbb6629efae1ce0f71">Tools::Tester</a>.</p>
 
 </div>
 </div>
@@ -255,7 +284,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>Tools</b></li><li class="navelem"><a class="el" href="classTools_1_1Judge.html">Judge</a></li>
-    <li class="footer">Generated on Sun May 11 2014 02:36:02 for MTFthesisstudies by
+    <li class="footer">Generated on Thu Jun 5 2014 01:05:07 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>MTFthesisstudies: data_managment/data_provider.h Source File</title>
+<title>MTFthesisstudies: data_managment/data_provider/data_provider.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MTFthesisstudies
-   &#160;<span id="projectnumber">version0.79</span>
+   &#160;<span id="projectnumber">version0.82</span>
    </div>
   </td>
  </tr>
@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('data__provider_8h_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -113,31 +113,48 @@ $(document).ready(function(){initNavTree('data__provider_8h_source.html','');});
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span>Base {</div>
 <div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classBase_1_1DataProvider.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBase_1_1DataProvider.html">DataProvider</a> {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; <span class="keyword">public</span> :</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classBase_1_1DataProvider.html#a1ae03428914cc0a386e9f42955a1454f">   24</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classBase_1_1DataProvider.html#a1ae03428914cc0a386e9f42955a1454f">~DataProvider</a>() {}</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">string</span> <a class="code" href="classBase_1_1DataProvider.html#aa0732191de813f04ef15e71dc38a2a2a">GetActualLine</a>() = 0;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">string</span> <a class="code" href="classBase_1_1DataProvider.html#a227994454180db3976fcd1b59733bac9">GetLineBefore</a>() = 0;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classBase_1_1DataProvider.html#abb41c42389ba1f6875b8927edd8fbf44">GoToNextLine</a>() = 0;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classBase_1_1DataProvider_html_aa0732191de813f04ef15e71dc38a2a2a"><div class="ttname"><a href="classBase_1_1DataProvider.html#aa0732191de813f04ef15e71dc38a2a2a">Base::DataProvider::GetActualLine</a></div><div class="ttdeci">virtual string GetActualLine()=0</div></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structBase_1_1DataProvider_1_1DataInputLine.html">   28</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structBase_1_1DataProvider_1_1DataInputLine.html">DataInputLine</a> {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> interaction_type_;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> timestamp_;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> sender_id_;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> receiver_id_;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="structBase_1_1DataProvider_1_1DataInputLine.html">DataInputLine</a>(<span class="keywordtype">int</span> interaction_type, <span class="keywordtype">int</span> timestamp, <span class="keywordtype">int</span> sender_id,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                  <span class="keywordtype">int</span> receiver_id)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        : interaction_type_(interaction_type),</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;          timestamp_(timestamp),</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;          sender_id_(sender_id),</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;          receiver_id_(receiver_id) {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  };</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classBase_1_1DataProvider.html#a1ae03428914cc0a386e9f42955a1454f">   45</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classBase_1_1DataProvider.html#a1ae03428914cc0a386e9f42955a1454f">~DataProvider</a>() {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keyword">virtual</span> <span class="keyword">const</span> DataInputLine <a class="code" href="classBase_1_1DataProvider.html#a81221970cd969f62b6af35784e2e8b60">GetActualLine</a>() = 0;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keyword">virtual</span> <span class="keyword">const</span> DataInputLine <a class="code" href="classBase_1_1DataProvider.html#a6d2c76ac037427b9444a1e7dddc51d8b">GetLineBefore</a>() = 0;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classBase_1_1DataProvider.html#abb41c42389ba1f6875b8927edd8fbf44">GoToNextLine</a>() = 0;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;};</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classBase_1_1DataProvider_html_a81221970cd969f62b6af35784e2e8b60"><div class="ttname"><a href="classBase_1_1DataProvider.html#a81221970cd969f62b6af35784e2e8b60">Base::DataProvider::GetActualLine</a></div><div class="ttdeci">virtual const DataInputLine GetActualLine()=0</div></div>
+<div class="ttc" id="classBase_1_1DataProvider_html_a6d2c76ac037427b9444a1e7dddc51d8b"><div class="ttname"><a href="classBase_1_1DataProvider.html#a6d2c76ac037427b9444a1e7dddc51d8b">Base::DataProvider::GetLineBefore</a></div><div class="ttdeci">virtual const DataInputLine GetLineBefore()=0</div></div>
 <div class="ttc" id="classBase_1_1DataProvider_html_abb41c42389ba1f6875b8927edd8fbf44"><div class="ttname"><a href="classBase_1_1DataProvider.html#abb41c42389ba1f6875b8927edd8fbf44">Base::DataProvider::GoToNextLine</a></div><div class="ttdeci">virtual void GoToNextLine()=0</div></div>
-<div class="ttc" id="classBase_1_1DataProvider_html_a227994454180db3976fcd1b59733bac9"><div class="ttname"><a href="classBase_1_1DataProvider.html#a227994454180db3976fcd1b59733bac9">Base::DataProvider::GetLineBefore</a></div><div class="ttdeci">virtual string GetLineBefore()=0</div></div>
+<div class="ttc" id="structBase_1_1DataProvider_1_1DataInputLine_html"><div class="ttname"><a href="structBase_1_1DataProvider_1_1DataInputLine.html">Base::DataProvider::DataInputLine</a></div><div class="ttdef"><b>Definition:</b> data_provider.h:28</div></div>
 <div class="ttc" id="classBase_1_1DataProvider_html"><div class="ttname"><a href="classBase_1_1DataProvider.html">Base::DataProvider</a></div><div class="ttdef"><b>Definition:</b> data_provider.h:19</div></div>
-<div class="ttc" id="classBase_1_1DataProvider_html_a1ae03428914cc0a386e9f42955a1454f"><div class="ttname"><a href="classBase_1_1DataProvider.html#a1ae03428914cc0a386e9f42955a1454f">Base::DataProvider::~DataProvider</a></div><div class="ttdeci">virtual ~DataProvider()</div><div class="ttdef"><b>Definition:</b> data_provider.h:24</div></div>
+<div class="ttc" id="classBase_1_1DataProvider_html_a1ae03428914cc0a386e9f42955a1454f"><div class="ttname"><a href="classBase_1_1DataProvider.html#a1ae03428914cc0a386e9f42955a1454f">Base::DataProvider::~DataProvider</a></div><div class="ttdeci">virtual ~DataProvider()</div><div class="ttdef"><b>Definition:</b> data_provider.h:45</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_f0e6881722a589d71e14e9eaa0b61330.html">data_managment</a></li><li class="navelem"><b>data_provider.h</b></li>
-    <li class="footer">Generated on Sun May 11 2014 02:36:02 for MTFthesisstudies by
+    <li class="navelem"><a class="el" href="dir_f0e6881722a589d71e14e9eaa0b61330.html">data_managment</a></li><li class="navelem"><a class="el" href="dir_6d9e88f74aa5fdb0e3ab9996e49e9997.html">data_provider</a></li><li class="navelem"><b>data_provider.h</b></li>
+    <li class="footer">Generated on Thu Jun 5 2014 01:05:06 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
