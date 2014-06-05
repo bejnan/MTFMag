@@ -85,7 +85,7 @@ void ResultCollector::PrintOverallResults(int turn_amount, int timestamp) {
                 Database::GetInstance().Query(*name_iterator)),
             timestamp));
   }
-  data_collector_->PrintResultsFromPointers(turn_amount, result_vector_ptr);
+  data_collector_->PrintResults(turn_amount, result_vector_ptr);
 }
 
 int ResultCollector::GetOverallAlgorithmPenalty(

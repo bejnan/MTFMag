@@ -27,7 +27,8 @@ shared_ptr<vector<DataProvider::DataInputLine> > DataCollector::ReadInputLines(
 }
 
 shared_ptr<DataProvider::DataInputLine> DataCollector::ReadInputLine() {
-  DataProvider::DataInputLine* input_line_data = new DataProvider::DataInputLine(data_input_->GetActualLine());
+  DataProvider::DataInputLine* input_line_data =
+      new DataProvider::DataInputLine(data_input_->GetActualLine());
   return shared_ptr<DataProvider::DataInputLine>(input_line_data);
 }
 
@@ -46,7 +47,7 @@ void DataCollector::PrintResults(int turn_amount,
   }
 }
 
-void DataCollector::PrintResultsFromPointers(
+void DataCollector::PrintResults(
     int turn_amount, shared_ptr<vector<shared_ptr<Result> > > results) {
   vector<shared_ptr<Result> >::iterator result_iterator;
   vector<string> results_text;
