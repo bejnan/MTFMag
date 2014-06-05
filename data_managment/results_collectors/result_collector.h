@@ -14,8 +14,19 @@ using std::vector;
 
 namespace Base {
 
+/**
+ * Main controller and connector. Switches data between DataCollector and JudgeCollector.
+ * Run program for given amount of turns and prints results of algorithms work.
+ */
 class ResultCollector {
  public:
+
+  /**
+   * Constructor initializes DataCollector and JudgeCollector instances.
+   * This instances are in use during all program work.
+   * @param data_collector Pointer to DataCollector
+   * @param judge_collector
+   */
   ResultCollector(shared_ptr<DataCollector> data_collector,
                   shared_ptr<JudgeCollector> judge_collector);
   virtual ~ResultCollector();

@@ -61,13 +61,13 @@ void ResultCollector::RunDataSet(
   vector<DataProvider::DataInputLine>::iterator single_line_iterator;
   for (single_line_iterator = input_lines->begin();
       single_line_iterator != input_lines->end(); single_line_iterator++) {
-    judge_collector_->AnaliseNotification(*single_line_iterator);
+    judge_collector_->AnalyseNotification(*single_line_iterator);
   }
 }
 
 void ResultCollector::RunData(
     shared_ptr<DataProvider::DataInputLine> input_line) {
-  judge_collector_->AnaliseNotification(*input_line);
+  judge_collector_->AnalyseNotification(*input_line);
 }
 
 void ResultCollector::PrintOverallResults(int turn_amount, int timestamp) {

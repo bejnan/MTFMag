@@ -92,7 +92,7 @@ class DataCollector {
  private:
   const shared_ptr<DataProvider> data_input_; /**< Source of data to proceed */
   const shared_ptr<DataOutput> data_output_; /**< Pointer to result printer */
-  bool print_zero_result;
+  bool print_zero_result; /**<  Flag deciding if result with no penalty should be printed */
 
 };
 
