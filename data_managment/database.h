@@ -11,7 +11,7 @@ using std::shared_ptr;
 
 namespace Base {
 /**
- * Tools::Processor storage that pretends to be a database.
+ * Tools::Processor instances storage that works similar to a database.
  * Used as singleton with static access to class instance.
  * Helps to add, manage and get access to specific Processors by Query methods.
  * Used mainly in JudgeCollector to run chosen by user Processors.
@@ -34,19 +34,19 @@ class Database {
   virtual ~Database();
 
   /**
-   * Method to add new Processor into "Database", in this case vector.
+   * Method to add new Processor into "Database".
    * There should be no other processor with the same id AND algorithms name.
-   * @param processor Pointer to Processor to add
+   * @param processor Pointer to Tools::Processor to add
    */
   void AddToBase(shared_ptr<Tools::Processor> processor);
 
   /**
    * Return Processors for users with given id.
    * Every processor should represent different algorithm.
-   * @param id Identifier of requested user
+   * @param user_id Identifier of requested user
    * @return Collection of pointers to Processor with given user identifier
    */
-  vector<shared_ptr<Tools::Processor> >& Query(int id);
+  vector<shared_ptr<Tools::Processor> >& Query(int user_id);
 
   /**
    * Returns Processors for algorithm with given name.
@@ -70,10 +70,10 @@ class Database {
 
   /**
    * Checker of user existence in instance of class
-   * @param id Identifier of user
+   * @param user_id Identifier of user
    * @return True if there is processor for user with given id
    */
-  bool Exists(int id);
+  bool Exists(int user_id);
 
   /**
    * Clears Database to make it like new instance.

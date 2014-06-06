@@ -29,14 +29,13 @@ void JudgeCollector::AddAlgorithm(
 void JudgeCollector::AnalyseNotification(
     DataProvider::DataInputLine input_line) {
   if (!Database::GetInstance().Exists(input_line.sender_id_)) {
-    AddProcessorsFromFactories (sender_user_id);
-  }
-  vector<shared_ptr<Tools::Processor> >& processors = Database::GetInstance()
-      .Query(input_line.sender_id_);
-  vector<shared_ptr<Tools::Processor> >::const_iterator processor_iterator;
-  for (processor_iterator = processors.begin();
-      processor_iterator != processors.end(); processor_iterator++) {
-    (*processor_iterator)->Proceed(input_line.receiver_id_, learn_mode);
+    vector<shared_ptr<Tools::Processor> >& processors = Database::GetInstance()
+        .Query(input_line.sender_id_);
+    vector<shared_ptr<Tools::Processor> >::const_iterator processor_iterator;
+    for (processor_iterator = processors.begin();
+        processor_iterator != processors.end(); processor_iterator++) {
+      (*processor_iterator)->Proceed(input_line.receiver_id_, learn_mode);
+    }
   }
 }
 

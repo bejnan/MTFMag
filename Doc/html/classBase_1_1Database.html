@@ -120,9 +120,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa6a3304e10861f362f9d2f55ff666c15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97279bf88fcd1a60fe35afe473557032"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1Database.html#a97279bf88fcd1a60fe35afe473557032">AddToBase</a> (shared_ptr&lt; <a class="el" href="classTools_1_1Processor.html">Tools::Processor</a> &gt; processor)</td></tr>
 <tr class="separator:a97279bf88fcd1a60fe35afe473557032"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addb40ac264523f60e4fbcd3797803221"><td class="memItemLeft" align="right" valign="top">vector&lt; shared_ptr<br class="typebreak"/>
-&lt; <a class="el" href="classTools_1_1Processor.html">Tools::Processor</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1Database.html#addb40ac264523f60e4fbcd3797803221">Query</a> (int id)</td></tr>
-<tr class="separator:addb40ac264523f60e4fbcd3797803221"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee8c48a89771cb874ede794fb5ba777b"><td class="memItemLeft" align="right" valign="top">vector&lt; shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="classTools_1_1Processor.html">Tools::Processor</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1Database.html#aee8c48a89771cb874ede794fb5ba777b">Query</a> (int user_id)</td></tr>
+<tr class="separator:aee8c48a89771cb874ede794fb5ba777b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bce7a9611612614195a5bea2ebcd2ae"><td class="memItemLeft" align="right" valign="top">vector&lt; shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classTools_1_1Processor.html">Tools::Processor</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1Database.html#a7bce7a9611612614195a5bea2ebcd2ae">Query</a> (string algorithm_name)</td></tr>
 <tr class="separator:a7bce7a9611612614195a5bea2ebcd2ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,8 +131,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a73adc4520286deee33179d45edadd065"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e7191f1c4c56db540cc3787a51fb0bc"><td class="memItemLeft" align="right" valign="top">vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1Database.html#a8e7191f1c4c56db540cc3787a51fb0bc">QueryAlgorithmNames</a> ()</td></tr>
 <tr class="separator:a8e7191f1c4c56db540cc3787a51fb0bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ba1bb48416bf9d28576764e523e16cd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1Database.html#a1ba1bb48416bf9d28576764e523e16cd">Exists</a> (int id)</td></tr>
-<tr class="separator:a1ba1bb48416bf9d28576764e523e16cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3ee62fcb4f285660fcf73c78a1bbe07"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1Database.html#ac3ee62fcb4f285660fcf73c78a1bbe07">Exists</a> (int user_id)</td></tr>
+<tr class="separator:ac3ee62fcb4f285660fcf73c78a1bbe07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98e15a3b09d4a4971308e890ee60e002"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1Database.html#a98e15a3b09d4a4971308e890ee60e002">ClearDatabase</a> ()</td></tr>
 <tr class="separator:a98e15a3b09d4a4971308e890ee60e002"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -142,7 +142,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:ad02ccde7598533fbf6def527dcc87f17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classTools_1_1Processor.html">Tools::Processor</a> storage that pretends to be a database. Used as singleton with static access to class instance. Helps to add, manage and get access to specific Processors by Query methods. Used mainly in <a class="el" href="classBase_1_1JudgeCollector.html">JudgeCollector</a> to run chosen by user Processors. </p>
+<div class="textblock"><p><a class="el" href="classTools_1_1Processor.html">Tools::Processor</a> instances storage that works similar to a database. Used as singleton with static access to class instance. Helps to add, manage and get access to specific Processors by Query methods. Used mainly in <a class="el" href="classBase_1_1JudgeCollector.html">JudgeCollector</a> to run chosen by user Processors. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aa6a3304e10861f362f9d2f55ff666c15"></a>
 <div class="memitem">
@@ -182,10 +182,10 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Method to add new Processor into "Database", in this case vector. There should be no other processor with the same id AND algorithms name. </p>
+<p>Method to add new Processor into "Database". There should be no other processor with the same id AND algorithms name. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">processor</td><td>Pointer to Processor to add </td></tr>
+    <tr><td class="paramname">processor</td><td>Pointer to <a class="el" href="classTools_1_1Processor.html">Tools::Processor</a> to add </td></tr>
   </table>
   </dd>
 </dl>
@@ -208,7 +208,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1ba1bb48416bf9d28576764e523e16cd"></a>
+<a class="anchor" id="ac3ee62fcb4f285660fcf73c78a1bbe07"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -216,7 +216,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="memname">bool Base::Database::Exists </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
+          <td class="paramname"><em>user_id</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -224,7 +224,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Checker of user existence in instance of class </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td>Identifier of user </td></tr>
+    <tr><td class="paramname">user_id</td><td>Identifier of user </td></tr>
   </table>
   </dd>
 </dl>
@@ -257,7 +257,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="addb40ac264523f60e4fbcd3797803221"></a>
+<a class="anchor" id="aee8c48a89771cb874ede794fb5ba777b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -265,7 +265,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="memname">vector&lt; shared_ptr&lt; <a class="el" href="classTools_1_1Processor.html">Tools::Processor</a> &gt; &gt; &amp; Base::Database::Query </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
+          <td class="paramname"><em>user_id</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -273,7 +273,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Return Processors for users with given id. Every processor should represent different algorithm. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td>Identifier of requested user </td></tr>
+    <tr><td class="paramname">user_id</td><td>Identifier of requested user </td></tr>
   </table>
   </dd>
 </dl>
@@ -349,7 +349,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>Base</b></li><li class="navelem"><a class="el" href="classBase_1_1Database.html">Database</a></li>
-    <li class="footer">Generated on Fri Jun 6 2014 17:03:32 for MTFthesisstudies by
+    <li class="footer">Generated on Fri Jun 6 2014 19:08:18 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
