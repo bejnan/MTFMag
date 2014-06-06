@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['result',['Result',['../classBase_1_1Result.html#a053b4cdafe2337eca9d8d6102a9bad66',1,'Base::Result::Result(string algorithm_name, int source_id, int overall_penalty, int timestamp, string comment=&quot;&quot;)'],['../classBase_1_1Result.html#a8dfa9f0000bc1ca45d9d018b45477388',1,'Base::Result::Result(shared_ptr&lt; Tools::Processor &gt; processor_ptr, int timestamp, string comment=&quot;&quot;)']]],
-  ['runprogram',['RunProgram',['../classBase_1_1ConsoleProgramRunner.html#af1d3c31ac70578ca956342f2bdcca14b',1,'Base::ConsoleProgramRunner::RunProgram()'],['../classBase_1_1FileProgramRunner.html#a780e7ab3c6c1594e85ae0cdabe206a3e',1,'Base::FileProgramRunner::RunProgram()'],['../classBase_1_1ProgramRunner.html#a8fd3499d51a851ef07f63fd23e79c003',1,'Base::ProgramRunner::RunProgram()']]]
+  ['query',['Query',['../classBase_1_1Database.html#addb40ac264523f60e4fbcd3797803221',1,'Base::Database::Query(int id)'],['../classBase_1_1Database.html#a7bce7a9611612614195a5bea2ebcd2ae',1,'Base::Database::Query(string algorithm_name)'],['../classBase_1_1Database.html#a73adc4520286deee33179d45edadd065',1,'Base::Database::Query()']]],
+  ['queryalgorithmnames',['QueryAlgorithmNames',['../classBase_1_1Database.html#a8e7191f1c4c56db540cc3787a51fb0bc',1,'Base::Database']]]
 ];

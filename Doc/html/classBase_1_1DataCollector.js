@@ -1,11 +1,9 @@
 var classBase_1_1DataCollector =
 [
-    [ "DataCollector", "classBase_1_1DataCollector.html#a3f64da07dd97a418061c7f6e24dd422c", null ],
-    [ "~DataCollector", "classBase_1_1DataCollector.html#aa7deb91a435cbd42091e560e152609ab", null ],
-    [ "AddProccessorFactory", "classBase_1_1DataCollector.html#aa882730336c5d171acfaab053698fe7f", null ],
-    [ "GetAlgorithmsNames", "classBase_1_1DataCollector.html#a52bf3c7c4a610191acd56fa8628ac758", null ],
-    [ "GetResult", "classBase_1_1DataCollector.html#afaacb5f36d09faf5e6633a03aa26fdae", null ],
-    [ "GetResultsSum", "classBase_1_1DataCollector.html#ab300045605fb48a975be8c93f7e93b6f", null ],
-    [ "PrintActualResults", "classBase_1_1DataCollector.html#afb1d46273c24e3e1fdefba6b730ebf28", null ],
-    [ "RunTurns", "classBase_1_1DataCollector.html#a5f82cf1aa48981c36cb2e0eba944c148", null ]
+    [ "DataCollector", "classBase_1_1DataCollector.html#a3e05d3648e204ecdbd41a5b13e67d515", null ],
+    [ "PrintResults", "classBase_1_1DataCollector.html#a2e9037833d46c609bc9e4f30d8fb367f", null ],
+    [ "PrintResults", "classBase_1_1DataCollector.html#a4807fc1d9e0b3378d7e160890e49b60f", null ],
+    [ "ReadInputLine", "classBase_1_1DataCollector.html#a6d25432f5714ea1a74daae19389078e2", null ],
+    [ "ReadInputLines", "classBase_1_1DataCollector.html#aad479da5e6901e7ad9dbb6317c08b2c0", null ],
+    [ "SetPrintZeroResult", "classBase_1_1DataCollector.html#a709689a4172751d6933746e4224f97db", null ]
 ];

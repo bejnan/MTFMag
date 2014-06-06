@@ -2,11 +2,12 @@ var searchData=
 [
   ['database',['Database',['../classBase_1_1Database.html',1,'Base']]],
   ['databaseexception',['DatabaseException',['../classException_1_1DatabaseException.html',1,'Exception']]],
+  ['datacollector',['DataCollector',['../classBase_1_1DataCollector.html#a3e05d3648e204ecdbd41a5b13e67d515',1,'Base::DataCollector']]],
   ['datacollector',['DataCollector',['../classBase_1_1DataCollector.html',1,'Base']]],
   ['datainput',['DataInput',['../classBase_1_1Configuration.html#a189a8a4b1d8d611b6e76e2834e7f8a80',1,'Base::Configuration']]],
   ['datainputline',['DataInputLine',['../structBase_1_1DataProvider_1_1DataInputLine.html',1,'Base::DataProvider']]],
-  ['dataoutput',['DataOutput',['../classBase_1_1Configuration.html#aa2184d2062ad10dc676a7e6a3de593f5',1,'Base::Configuration']]],
   ['dataoutput',['DataOutput',['../classBase_1_1DataOutput.html',1,'Base']]],
+  ['dataoutput',['DataOutput',['../classBase_1_1Configuration.html#aa2184d2062ad10dc676a7e6a3de593f5',1,'Base::Configuration']]],
   ['dataoutputbuilder',['DataOutputBuilder',['../classBase_1_1DataOutputBuilder.html',1,'Base']]],
   ['dataprovider',['DataProvider',['../classBase_1_1DataProvider.html',1,'Base']]],
   ['dataproviderexception',['DataProviderException',['../classException_1_1DataProviderException.html',1,'Exception']]],

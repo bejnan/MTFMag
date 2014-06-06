@@ -48,5 +48,6 @@ var hierarchy =
     ] ],
     [ "Base::Result", "classBase_1_1Result.html", [
       [ "Base::OverallResult", "classBase_1_1OverallResult.html", null ]
-    ] ]
+    ] ],
+    [ "Base::ResultCollector", "classBase_1_1ResultCollector.html", null ]
 ];

@@ -114,58 +114,56 @@ $(document).ready(function(){initNavTree('data__collector_8h_source.html','');})
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../../headers/tools.h&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../../headers/algorithms.h&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using</span> std::accumulate;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">using</span> std::stringstream;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">using</span> std::stringbuf;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">using</span> std::vector;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">using</span> std::shared_ptr;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">using</span> std::pair;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">using</span> std::make_pair;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span>Base {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classBase_1_1DataCollector.html">   31</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBase_1_1DataCollector.html">DataCollector</a> {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="classBase_1_1DataCollector.html">DataCollector</a>(shared_ptr&lt;DataProvider&gt; data_input,</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                shared_ptr&lt;DataOutput&gt; data_output);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  ~<a class="code" href="classBase_1_1DataCollector.html">DataCollector</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  shared_ptr&lt;vector&lt;DataProvider::DataInputLine&gt; &gt; ReadInputLines(<span class="keywordtype">int</span> turn_amount);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  shared_ptr&lt;DataProvider::DataInputLine&gt; ReadInputLine();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">void</span> PrintResults(<span class="keywordtype">int</span> turn_amount, shared_ptr&lt;vector&lt;Result&gt; &gt; results);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordtype">void</span> PrintResultsFromPointers(</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      <span class="keywordtype">int</span> turn_amount, shared_ptr&lt;vector&lt;shared_ptr&lt;Result&gt; &gt; &gt; results);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">void</span> SetPrintZeroResult(<span class="keywordtype">bool</span> zero_result_flag);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  shared_ptr&lt;DataProvider&gt; data_input_; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  shared_ptr&lt;DataOutput&gt; data_output_; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">bool</span> print_zero_result;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;};</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;} <span class="comment">/* namespace Tree */</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DATACOLLECTOR_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="classBase_1_1DataCollector_html"><div class="ttname"><a href="classBase_1_1DataCollector.html">Base::DataCollector</a></div><div class="ttdef"><b>Definition:</b> data_collector.h:31</div></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using</span> std::vector;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">using</span> std::shared_ptr;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>Base {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classBase_1_1DataCollector.html">   33</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBase_1_1DataCollector.html">DataCollector</a> {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="classBase_1_1DataCollector.html#a3e05d3648e204ecdbd41a5b13e67d515">DataCollector</a>(shared_ptr&lt;DataProvider&gt; data_input,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                shared_ptr&lt;DataOutput&gt; data_output);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  ~<a class="code" href="classBase_1_1DataCollector.html">DataCollector</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  shared_ptr&lt;vector&lt;DataProvider::DataInputLine&gt; &gt; <a class="code" href="classBase_1_1DataCollector.html#aad479da5e6901e7ad9dbb6317c08b2c0">ReadInputLines</a>(</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      <span class="keywordtype">int</span> turn_amount);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  shared_ptr&lt;DataProvider::DataInputLine&gt; <a class="code" href="classBase_1_1DataCollector.html#a6d25432f5714ea1a74daae19389078e2">ReadInputLine</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBase_1_1DataCollector.html#a2e9037833d46c609bc9e4f30d8fb367f">PrintResults</a>(<span class="keywordtype">int</span> turn_amount, shared_ptr&lt;vector&lt;Result&gt; &gt; results);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBase_1_1DataCollector.html#a2e9037833d46c609bc9e4f30d8fb367f">PrintResults</a>(<span class="keywordtype">int</span> turn_amount,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                    shared_ptr&lt;vector&lt;shared_ptr&lt;Result&gt; &gt; &gt; results);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBase_1_1DataCollector.html#a709689a4172751d6933746e4224f97db">SetPrintZeroResult</a>(<span class="keywordtype">bool</span> zero_result_flag);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keyword">const</span> shared_ptr&lt;DataProvider&gt; data_input_; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keyword">const</span> shared_ptr&lt;DataOutput&gt; data_output_; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keywordtype">bool</span> print_zero_result; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;};</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;} <span class="comment">/* namespace Tree */</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DATACOLLECTOR_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="classBase_1_1DataCollector_html"><div class="ttname"><a href="classBase_1_1DataCollector.html">Base::DataCollector</a></div><div class="ttdef"><b>Definition:</b> data_collector.h:33</div></div>
+<div class="ttc" id="classBase_1_1DataCollector_html_a2e9037833d46c609bc9e4f30d8fb367f"><div class="ttname"><a href="classBase_1_1DataCollector.html#a2e9037833d46c609bc9e4f30d8fb367f">Base::DataCollector::PrintResults</a></div><div class="ttdeci">void PrintResults(int turn_amount, shared_ptr&lt; vector&lt; Result &gt; &gt; results)</div><div class="ttdef"><b>Definition:</b> data_collector.cpp:35</div></div>
+<div class="ttc" id="classBase_1_1DataCollector_html_aad479da5e6901e7ad9dbb6317c08b2c0"><div class="ttname"><a href="classBase_1_1DataCollector.html#aad479da5e6901e7ad9dbb6317c08b2c0">Base::DataCollector::ReadInputLines</a></div><div class="ttdeci">shared_ptr&lt; vector&lt; DataProvider::DataInputLine &gt; &gt; ReadInputLines(int turn_amount)</div><div class="ttdef"><b>Definition:</b> data_collector.cpp:16</div></div>
+<div class="ttc" id="classBase_1_1DataCollector_html_a3e05d3648e204ecdbd41a5b13e67d515"><div class="ttname"><a href="classBase_1_1DataCollector.html#a3e05d3648e204ecdbd41a5b13e67d515">Base::DataCollector::DataCollector</a></div><div class="ttdeci">DataCollector(shared_ptr&lt; DataProvider &gt; data_input, shared_ptr&lt; DataOutput &gt; data_output)</div><div class="ttdef"><b>Definition:</b> data_collector.cpp:5</div></div>
+<div class="ttc" id="classBase_1_1DataCollector_html_a709689a4172751d6933746e4224f97db"><div class="ttname"><a href="classBase_1_1DataCollector.html#a709689a4172751d6933746e4224f97db">Base::DataCollector::SetPrintZeroResult</a></div><div class="ttdeci">void SetPrintZeroResult(bool zero_result_flag)</div><div class="ttdef"><b>Definition:</b> data_collector.cpp:61</div></div>
+<div class="ttc" id="classBase_1_1DataCollector_html_a6d25432f5714ea1a74daae19389078e2"><div class="ttname"><a href="classBase_1_1DataCollector.html#a6d25432f5714ea1a74daae19389078e2">Base::DataCollector::ReadInputLine</a></div><div class="ttdeci">shared_ptr&lt; DataProvider::DataInputLine &gt; ReadInputLine()</div><div class="ttdef"><b>Definition:</b> data_collector.cpp:29</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_f0e6881722a589d71e14e9eaa0b61330.html">data_managment</a></li><li class="navelem"><a class="el" href="dir_c85bdabba1ea1c458befe72d55866569.html">results_collectors</a></li><li class="navelem"><b>data_collector.h</b></li>
-    <li class="footer">Generated on Thu Jun 5 2014 01:05:06 for MTFthesisstudies by
+    <li class="footer">Generated on Fri Jun 6 2014 17:03:32 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

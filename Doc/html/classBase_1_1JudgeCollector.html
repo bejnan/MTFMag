@@ -104,6 +104,7 @@ $(document).ready(function(){initNavTree('classBase_1_1JudgeCollector.html','');
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classBase_1_1JudgeCollector-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Base::JudgeCollector Class Reference</div>  </div>
@@ -111,9 +112,255 @@ $(document).ready(function(){initNavTree('classBase_1_1JudgeCollector.html','');
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="judge__collector_8h_source.html">judge_collector.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a1893c9eee33b1dfcf77c8da4bfa2a009"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1JudgeCollector.html#a1893c9eee33b1dfcf77c8da4bfa2a009">JudgeCollector</a> (shared_ptr&lt; <a class="el" href="classTools_1_1Judge.html">Tools::Judge</a> &gt; judge_ptr)</td></tr>
+<tr class="separator:a1893c9eee33b1dfcf77c8da4bfa2a009"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac30a3bdf98666986442ec4249f67a916"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1JudgeCollector.html#ac30a3bdf98666986442ec4249f67a916">~JudgeCollector</a> ()</td></tr>
+<tr class="separator:ac30a3bdf98666986442ec4249f67a916"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f0bed392b5a1f17915f26fc195617a9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1JudgeCollector.html#a9f0bed392b5a1f17915f26fc195617a9">AddAlgorithm</a> (shared_ptr&lt; <a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithms::Algorithm</a> &gt; new_algorithm)</td></tr>
+<tr class="separator:a9f0bed392b5a1f17915f26fc195617a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade16760a3cf8cb1e13a2896ef8ae704b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1JudgeCollector.html#ade16760a3cf8cb1e13a2896ef8ae704b">AnalyseNotification</a> (<a class="el" href="structBase_1_1DataProvider_1_1DataInputLine.html">DataProvider::DataInputLine</a> input_line)</td></tr>
+<tr class="separator:ade16760a3cf8cb1e13a2896ef8ae704b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c5627ffbf4549ad473c51ed6ff2ed78"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; vector<br class="typebreak"/>
+&lt; <a class="el" href="classBase_1_1Result.html">Result</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1JudgeCollector.html#a7c5627ffbf4549ad473c51ed6ff2ed78">GetResult</a> (int user_id)</td></tr>
+<tr class="separator:a7c5627ffbf4549ad473c51ed6ff2ed78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64483633d8b0b4c1a54a389e3ed3513d"><td class="memItemLeft" align="right" valign="top">virtual vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1JudgeCollector.html#a64483633d8b0b4c1a54a389e3ed3513d">GetAlgorithmsNames</a> ()</td></tr>
+<tr class="separator:a64483633d8b0b4c1a54a389e3ed3513d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae751c84b87de7989a724e62b75765730"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1JudgeCollector.html#ae751c84b87de7989a724e62b75765730">SetLearnMode</a> (bool learn)</td></tr>
+<tr class="separator:ae751c84b87de7989a724e62b75765730"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Collects details of tested algorithm's penalties. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<div class="textblock"><p>Tests algorithms with given data and count penalties for every notification (user choice). With <a class="el" href="classBase_1_1DataCollector.html">DataCollector</a> line of input is provided to AnalyseNotification function which run selected Processors from <a class="el" href="classBase_1_1Database.html">Database</a>. Another responsibility of this class is exchanging data with <a class="el" href="classBase_1_1Database.html">Database</a> instance. <a class="el" href="classBase_1_1JudgeCollector.html">JudgeCollector</a> adds new algorithms for every user and manage then, including getting their results (GetResult method). </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a1893c9eee33b1dfcf77c8da4bfa2a009"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Base::JudgeCollector::JudgeCollector </td>
+          <td>(</td>
+          <td class="paramtype">shared_ptr&lt; <a class="el" href="classTools_1_1Judge.html">Tools::Judge</a> &gt;&#160;</td>
+          <td class="paramname"><em>judge_ptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constructor initializes <a class="el" href="classTools_1_1Judge.html">Tools::Judge</a> prototype for every algorithm added to test. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">judge_ptr</td><td>Pointer to <a class="el" href="classTools_1_1Judge.html">Tools::Judge</a> instance that will count penalties for all algorithms. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac30a3bdf98666986442ec4249f67a916"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Base::JudgeCollector::~JudgeCollector </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Empty destructor (nothing to handle) </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a9f0bed392b5a1f17915f26fc195617a9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Base::JudgeCollector::AddAlgorithm </td>
+          <td>(</td>
+          <td class="paramtype">shared_ptr&lt; <a class="el" href="classAlgorithms_1_1Algorithm.html">Algorithms::Algorithm</a> &gt;&#160;</td>
+          <td class="paramname"><em>new_algorithm</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Method to add new algorithms to analyse. Should be used before first call of AnalyseNotification method.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">new_algorithm</td><td>Pointer to Algorithm instance to analyse </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ade16760a3cf8cb1e13a2896ef8ae704b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Base::JudgeCollector::AnalyseNotification </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structBase_1_1DataProvider_1_1DataInputLine.html">DataProvider::DataInputLine</a>&#160;</td>
+          <td class="paramname"><em>input_line</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Heart of testing algorithms. DataInputLine passes necessary arguments to find source of notification (sender of message), run for him all algorithms and judge their results. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input_line</td><td>Set of informations (interaction type, source id, receiver id, timestamp) read from input </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBase_1_1JudgeCollector_ade16760a3cf8cb1e13a2896ef8ae704b_cgraph.png" border="0" usemap="#classBase_1_1JudgeCollector_ade16760a3cf8cb1e13a2896ef8ae704b_cgraph" alt=""/></div>
+<map name="classBase_1_1JudgeCollector_ade16760a3cf8cb1e13a2896ef8ae704b_cgraph" id="classBase_1_1JudgeCollector_ade16760a3cf8cb1e13a2896ef8ae704b_cgraph">
+<area shape="rect" id="node2" href="classBase_1_1Database.html#ad02ccde7598533fbf6def527dcc87f17" title="Base::Database::GetInstance" alt="" coords="208,5,411,32"/><area shape="rect" id="node3" href="classBase_1_1Database.html#addb40ac264523f60e4fbcd3797803221" title="Base::Database::Query" alt="" coords="227,56,391,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a64483633d8b0b4c1a54a389e3ed3513d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; string &gt; Base::JudgeCollector::GetAlgorithmsNames </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Method to get names of all algorithms that will be (are) judged </p>
+<dl class="section return"><dt>Returns</dt><dd>Vector of string representing algorithms names </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classAlgorithms_1_1Algorithm.html#a5a4c36da3ae4e912678f408805b8012f">Algorithms::Algorithm::GetAlgorithmName</a> </dd></dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBase_1_1JudgeCollector_a64483633d8b0b4c1a54a389e3ed3513d_cgraph.png" border="0" usemap="#classBase_1_1JudgeCollector_a64483633d8b0b4c1a54a389e3ed3513d_cgraph" alt=""/></div>
+<map name="classBase_1_1JudgeCollector_a64483633d8b0b4c1a54a389e3ed3513d_cgraph" id="classBase_1_1JudgeCollector_a64483633d8b0b4c1a54a389e3ed3513d_cgraph">
+<area shape="rect" id="node2" href="classBase_1_1Database.html#ad02ccde7598533fbf6def527dcc87f17" title="Base::Database::GetInstance" alt="" coords="227,5,429,32"/><area shape="rect" id="node3" href="classBase_1_1Database.html#a8e7191f1c4c56db540cc3787a51fb0bc" title="Base::Database::QueryAlgorithm\lNames" alt="" coords="217,57,439,98"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7c5627ffbf4549ad473c51ed6ff2ed78"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">shared_ptr&lt; vector&lt; <a class="el" href="classBase_1_1Result.html">Result</a> &gt; &gt; Base::JudgeCollector::GetResult </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>user_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Vector of results for given user. Method used after every notification to record increase of penalty. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user_id</td><td>User for which methods return results </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector of results for all algorithms that support user's choices </dd></dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBase_1_1JudgeCollector_a7c5627ffbf4549ad473c51ed6ff2ed78_cgraph.png" border="0" usemap="#classBase_1_1JudgeCollector_a7c5627ffbf4549ad473c51ed6ff2ed78_cgraph" alt=""/></div>
+<map name="classBase_1_1JudgeCollector_a7c5627ffbf4549ad473c51ed6ff2ed78_cgraph" id="classBase_1_1JudgeCollector_a7c5627ffbf4549ad473c51ed6ff2ed78_cgraph">
+<area shape="rect" id="node2" href="classBase_1_1Database.html#ad02ccde7598533fbf6def527dcc87f17" title="Base::Database::GetInstance" alt="" coords="208,5,411,32"/><area shape="rect" id="node3" href="classBase_1_1Database.html#addb40ac264523f60e4fbcd3797803221" title="Base::Database::Query" alt="" coords="227,56,391,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae751c84b87de7989a724e62b75765730"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Base::JudgeCollector::SetLearnMode </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>learn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>If program is in learn mode (learn flag is set to yes) no penalty is added for algorithm. Default program is NOT in learn mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">learn</td><td>New value of learn flag. "Yes" means learn mode, "No" opposite. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>data_managment/results_collectors/<a class="el" href="judge__collector_8h_source.html">judge_collector.h</a></li>
 <li>data_managment/results_collectors/judge_collector.cpp</li>
 </ul>
@@ -123,7 +370,7 @@ $(document).ready(function(){initNavTree('classBase_1_1JudgeCollector.html','');
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>Base</b></li><li class="navelem"><a class="el" href="classBase_1_1JudgeCollector.html">JudgeCollector</a></li>
-    <li class="footer">Generated on Thu Jun 5 2014 01:05:06 for MTFthesisstudies by
+    <li class="footer">Generated on Fri Jun 6 2014 17:03:32 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

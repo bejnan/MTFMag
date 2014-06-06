@@ -120,51 +120,66 @@ $(document).ready(function(){initNavTree('result__collector_8h_source.html','');
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>Base {</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">class </span>ResultCollector {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  ResultCollector(shared_ptr&lt;DataCollector&gt; data_collector,</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                  shared_ptr&lt;JudgeCollector&gt; judge_collector);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keyword">virtual</span> ~ResultCollector();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordtype">void</span> SetTurns(<span class="keywordtype">int</span> learn_turns, <span class="keywordtype">int</span> test_turns);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">void</span> SetResultFrequency(<span class="keywordtype">int</span> turn_count);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="comment">//void SetResultsDetails();</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> Run();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">void</span> RunLearnTurns();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">void</span> RunTestTurns();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">void</span> RunDataSet(shared_ptr&lt;vector&lt;DataProvider::DataInputLine&gt; &gt; input_lines);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordtype">void</span> RunData(shared_ptr&lt;DataProvider::DataInputLine&gt;  input_line);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordtype">void</span> PrintOverallResults(<span class="keywordtype">int</span> turn_amount, <span class="keywordtype">int</span> timestamp);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">int</span> GetOverallAlgorithmPenalty(vector&lt;shared_ptr&lt;Tools::Processor&gt; &gt; algorithms_processors);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  shared_ptr&lt;Result&gt; CreateOverallResult(<span class="keywordtype">string</span> algorithm_name, <span class="keywordtype">int</span> overall_penalty , <span class="keywordtype">int</span> timestamp);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  shared_ptr&lt;DataCollector&gt; data_collector_;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  shared_ptr&lt;JudgeCollector&gt; judge_collector_;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">int</span> learn_turns_;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordtype">int</span> test_turns_;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">int</span> turns_between_results_;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">int</span> turns_counter;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordtype">bool</span> was_already_run_;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;} <span class="comment">/* namespace Base */</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* RESULT_COLLECTOR_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classBase_1_1ResultCollector.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBase_1_1ResultCollector.html">ResultCollector</a> {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <a class="code" href="classBase_1_1ResultCollector.html#acbf732d3f84a2db3e6fdf67ad307df98">ResultCollector</a>(shared_ptr&lt;DataCollector&gt; data_collector,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                  shared_ptr&lt;JudgeCollector&gt; judge_collector);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classBase_1_1ResultCollector.html#aee49d2f267808a3dd92729a4e6e4f7cd">~ResultCollector</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBase_1_1ResultCollector.html#a809c54f8c0437b966828d1283730c1c8">SetTurns</a>(<span class="keywordtype">int</span> learn_turns, <span class="keywordtype">int</span> test_turns);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBase_1_1ResultCollector.html#ab13adf8de44de34c84a16d1432a40d87">SetResultFrequency</a>(<span class="keywordtype">int</span> turn_count);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="comment">//void SetResultsDetails();</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classBase_1_1ResultCollector.html#a6aefb8ca109dc9fcc9d0620b62914c90">Run</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordtype">void</span> RunLearnTurns();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordtype">void</span> RunTestTurns();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordtype">void</span> RunDataSet(shared_ptr&lt;vector&lt;DataProvider::DataInputLine&gt; &gt; input_lines);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordtype">void</span> RunData(shared_ptr&lt;DataProvider::DataInputLine&gt; input_line);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordtype">void</span> PrintOverallResults(<span class="keywordtype">int</span> turn_amount, <span class="keywordtype">int</span> timestamp);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keywordtype">int</span> GetOverallAlgorithmPenalty(</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      vector&lt;shared_ptr&lt;Tools::Processor&gt; &gt; algorithms_processors);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  shared_ptr&lt;Result&gt; CreateOverallResult(<span class="keywordtype">string</span> algorithm_name,</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                                         <span class="keywordtype">int</span> overall_penalty, <span class="keywordtype">int</span> timestamp);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keyword">const</span> shared_ptr&lt;DataCollector&gt; data_collector_;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keyword">const</span> shared_ptr&lt;JudgeCollector&gt; judge_collector_;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordtype">int</span> learn_turns_;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordtype">int</span> test_turns_;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keywordtype">int</span> turns_between_results_;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordtype">int</span> turns_counter;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keywordtype">bool</span> was_already_run_;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;};</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;} <span class="comment">/* namespace Base */</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* RESULT_COLLECTOR_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="classBase_1_1ResultCollector_html_aee49d2f267808a3dd92729a4e6e4f7cd"><div class="ttname"><a href="classBase_1_1ResultCollector.html#aee49d2f267808a3dd92729a4e6e4f7cd">Base::ResultCollector::~ResultCollector</a></div><div class="ttdeci">virtual ~ResultCollector()</div><div class="ttdef"><b>Definition:</b> result_collector.cpp:17</div></div>
+<div class="ttc" id="classBase_1_1ResultCollector_html_a6aefb8ca109dc9fcc9d0620b62914c90"><div class="ttname"><a href="classBase_1_1ResultCollector.html#a6aefb8ca109dc9fcc9d0620b62914c90">Base::ResultCollector::Run</a></div><div class="ttdeci">virtual void Run()</div><div class="ttdef"><b>Definition:</b> result_collector.cpp:29</div></div>
+<div class="ttc" id="classBase_1_1ResultCollector_html_ab13adf8de44de34c84a16d1432a40d87"><div class="ttname"><a href="classBase_1_1ResultCollector.html#ab13adf8de44de34c84a16d1432a40d87">Base::ResultCollector::SetResultFrequency</a></div><div class="ttdeci">void SetResultFrequency(int turn_count)</div><div class="ttdef"><b>Definition:</b> result_collector.cpp:25</div></div>
+<div class="ttc" id="classBase_1_1ResultCollector_html"><div class="ttname"><a href="classBase_1_1ResultCollector.html">Base::ResultCollector</a></div><div class="ttdef"><b>Definition:</b> result_collector.h:21</div></div>
+<div class="ttc" id="classBase_1_1ResultCollector_html_acbf732d3f84a2db3e6fdf67ad307df98"><div class="ttname"><a href="classBase_1_1ResultCollector.html#acbf732d3f84a2db3e6fdf67ad307df98">Base::ResultCollector::ResultCollector</a></div><div class="ttdeci">ResultCollector(shared_ptr&lt; DataCollector &gt; data_collector, shared_ptr&lt; JudgeCollector &gt; judge_collector)</div><div class="ttdef"><b>Definition:</b> result_collector.cpp:5</div></div>
+<div class="ttc" id="classBase_1_1ResultCollector_html_a809c54f8c0437b966828d1283730c1c8"><div class="ttname"><a href="classBase_1_1ResultCollector.html#a809c54f8c0437b966828d1283730c1c8">Base::ResultCollector::SetTurns</a></div><div class="ttdeci">void SetTurns(int learn_turns, int test_turns)</div><div class="ttdef"><b>Definition:</b> result_collector.cpp:20</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_f0e6881722a589d71e14e9eaa0b61330.html">data_managment</a></li><li class="navelem"><a class="el" href="dir_c85bdabba1ea1c458befe72d55866569.html">results_collectors</a></li><li class="navelem"><b>result_collector.h</b></li>
-    <li class="footer">Generated on Thu Jun 5 2014 01:05:06 for MTFthesisstudies by
+    <li class="footer">Generated on Fri Jun 6 2014 17:03:32 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

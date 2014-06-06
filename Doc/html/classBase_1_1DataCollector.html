@@ -104,6 +104,7 @@ $(document).ready(function(){initNavTree('classBase_1_1DataCollector.html','');}
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classBase_1_1DataCollector-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Base::DataCollector Class Reference</div>  </div>
@@ -111,9 +112,212 @@ $(document).ready(function(){initNavTree('classBase_1_1DataCollector.html','');}
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="data__collector_8h_source.html">data_collector.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a3e05d3648e204ecdbd41a5b13e67d515"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1DataCollector.html#a3e05d3648e204ecdbd41a5b13e67d515">DataCollector</a> (shared_ptr&lt; <a class="el" href="classBase_1_1DataProvider.html">DataProvider</a> &gt; data_input, shared_ptr&lt; <a class="el" href="classBase_1_1DataOutput.html">DataOutput</a> &gt; data_output)</td></tr>
+<tr class="separator:a3e05d3648e204ecdbd41a5b13e67d515"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad479da5e6901e7ad9dbb6317c08b2c0"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; vector<br class="typebreak"/>
+&lt; <a class="el" href="structBase_1_1DataProvider_1_1DataInputLine.html">DataProvider::DataInputLine</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1DataCollector.html#aad479da5e6901e7ad9dbb6317c08b2c0">ReadInputLines</a> (int turn_amount)</td></tr>
+<tr class="separator:aad479da5e6901e7ad9dbb6317c08b2c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d25432f5714ea1a74daae19389078e2"><td class="memItemLeft" align="right" valign="top">shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="structBase_1_1DataProvider_1_1DataInputLine.html">DataProvider::DataInputLine</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1DataCollector.html#a6d25432f5714ea1a74daae19389078e2">ReadInputLine</a> ()</td></tr>
+<tr class="separator:a6d25432f5714ea1a74daae19389078e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e9037833d46c609bc9e4f30d8fb367f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1DataCollector.html#a2e9037833d46c609bc9e4f30d8fb367f">PrintResults</a> (int turn_amount, shared_ptr&lt; vector&lt; <a class="el" href="classBase_1_1Result.html">Result</a> &gt; &gt; results)</td></tr>
+<tr class="separator:a2e9037833d46c609bc9e4f30d8fb367f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4807fc1d9e0b3378d7e160890e49b60f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1DataCollector.html#a4807fc1d9e0b3378d7e160890e49b60f">PrintResults</a> (int turn_amount, shared_ptr&lt; vector&lt; shared_ptr&lt; <a class="el" href="classBase_1_1Result.html">Result</a> &gt; &gt; &gt; results)</td></tr>
+<tr class="separator:a4807fc1d9e0b3378d7e160890e49b60f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a709689a4172751d6933746e4224f97db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBase_1_1DataCollector.html#a709689a4172751d6933746e4224f97db">SetPrintZeroResult</a> (bool zero_result_flag)</td></tr>
+<tr class="separator:a709689a4172751d6933746e4224f97db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class responsible for flow of data. Supports processors (algorithms in <a class="el" href="classBase_1_1JudgeCollector.html">JudgeCollector</a>) with data and print results. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<div class="textblock"><p>Connects algorithms with data in both ways. It delivers data from input to algorithms and puts results to output. Input and output depends on <a class="el" href="classBase_1_1DataProvider.html">DataProvider</a> and <a class="el" href="classBase_1_1DataOutput.html">DataOutput</a> implementations. This class in part of 4 class mechanism responsible for running program : </p>
+<ul>
+<li>
+<a class="el" href="classBase_1_1DataCollector.html">DataCollector</a> - controls data flow </li>
+<li>
+<a class="el" href="classBase_1_1JudgeCollector.html">JudgeCollector</a> - tests algorithms </li>
+<li>
+<a class="el" href="classBase_1_1ResultCollector.html">ResultCollector</a> - manage all mechanisms </li>
+<li>
+<a class="el" href="classBase_1_1Database.html">Database</a> - collects algorithms and manage them </li>
+</ul>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classBase_1_1DataProvider.html">DataProvider</a> </dd>
+<dd>
+<a class="el" href="classBase_1_1DataOutput.html">DataOutput</a> </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a3e05d3648e204ecdbd41a5b13e67d515"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Base::DataCollector::DataCollector </td>
+          <td>(</td>
+          <td class="paramtype">shared_ptr&lt; <a class="el" href="classBase_1_1DataProvider.html">DataProvider</a> &gt;&#160;</td>
+          <td class="paramname"><em>data_input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">shared_ptr&lt; <a class="el" href="classBase_1_1DataOutput.html">DataOutput</a> &gt;&#160;</td>
+          <td class="paramname"><em>data_output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialize input and output source. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data_input</td><td>Pointer to <a class="el" href="classBase_1_1DataProvider.html">DataProvider</a> instance </td></tr>
+    <tr><td class="paramname">data_output</td><td>Pointer to <a class="el" href="classBase_1_1DataOutput.html">DataOutput</a> instance </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a2e9037833d46c609bc9e4f30d8fb367f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Base::DataCollector::PrintResults </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>turn_amount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">shared_ptr&lt; vector&lt; <a class="el" href="classBase_1_1Result.html">Result</a> &gt; &gt;&#160;</td>
+          <td class="paramname"><em>results</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Prints results given by <a class="el" href="classBase_1_1JudgeCollector.html">JudgeCollector</a>. Results could be overall or includes only one user. Details depends on <a class="el" href="classBase_1_1Result.html">Result</a> class implementation. Range of results is not imposed, but their have to be most recent. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">turn_amount</td><td>Number of turns already analysed </td></tr>
+    <tr><td class="paramname">results</td><td>Pointer to vector of results </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classBase_1_1Result.html">Result</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4807fc1d9e0b3378d7e160890e49b60f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Base::DataCollector::PrintResults </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>turn_amount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">shared_ptr&lt; vector&lt; shared_ptr&lt; <a class="el" href="classBase_1_1Result.html">Result</a> &gt; &gt; &gt;&#160;</td>
+          <td class="paramname"><em>results</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Prints results given by <a class="el" href="classBase_1_1JudgeCollector.html">JudgeCollector</a>. Results could be overall or includes only one user. Details depends on <a class="el" href="classBase_1_1Result.html">Result</a> class implementation. Range of results is not imposed, but their have to be most recent. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">turn_amount</td><td>Number of turns already analysed </td></tr>
+    <tr><td class="paramname">results</td><td>Pointer to vector with pointers to results to print </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classBase_1_1Result.html">Result</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6d25432f5714ea1a74daae19389078e2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">shared_ptr&lt; <a class="el" href="structBase_1_1DataProvider_1_1DataInputLine.html">DataProvider::DataInputLine</a> &gt; Base::DataCollector::ReadInputLine </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns pointer to single line of input </p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to DataInputLine's structure representing line of input </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="structBase_1_1DataProvider_1_1DataInputLine.html">DataProvider::DataInputLine</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aad479da5e6901e7ad9dbb6317c08b2c0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">shared_ptr&lt; vector&lt; <a class="el" href="structBase_1_1DataProvider_1_1DataInputLine.html">DataProvider::DataInputLine</a> &gt; &gt; Base::DataCollector::ReadInputLines </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>turn_amount</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns pointer to vector with input lines </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">turn_amount</td><td>Amount of lines to read </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to vector with DataInputLine's structures representing lines of input </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="structBase_1_1DataProvider_1_1DataInputLine.html">DataProvider::DataInputLine</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a709689a4172751d6933746e4224f97db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Base::DataCollector::SetPrintZeroResult </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>zero_result_flag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Setter of flag deciding if result with no penalty will be printed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">zero_result_flag</td><td>- New value of flag </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>data_managment/results_collectors/<a class="el" href="data__collector_8h_source.html">data_collector.h</a></li>
 <li>data_managment/results_collectors/data_collector.cpp</li>
 </ul>
@@ -123,7 +327,7 @@ $(document).ready(function(){initNavTree('classBase_1_1DataCollector.html','');}
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>Base</b></li><li class="navelem"><a class="el" href="classBase_1_1DataCollector.html">DataCollector</a></li>
-    <li class="footer">Generated on Thu Jun 5 2014 01:05:06 for MTFthesisstudies by
+    <li class="footer">Generated on Fri Jun 6 2014 17:03:32 for MTFthesisstudies by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

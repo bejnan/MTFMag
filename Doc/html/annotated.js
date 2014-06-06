@@ -22,8 +22,9 @@ var annotated =
       [ "Database", "classBase_1_1Database.html", "classBase_1_1Database" ],
       [ "OverallResult", "classBase_1_1OverallResult.html", "classBase_1_1OverallResult" ],
       [ "Result", "classBase_1_1Result.html", "classBase_1_1Result" ],
-      [ "DataCollector", "classBase_1_1DataCollector.html", null ],
-      [ "JudgeCollector", "classBase_1_1JudgeCollector.html", null ],
+      [ "DataCollector", "classBase_1_1DataCollector.html", "classBase_1_1DataCollector" ],
+      [ "JudgeCollector", "classBase_1_1JudgeCollector.html", "classBase_1_1JudgeCollector" ],
+      [ "ResultCollector", "classBase_1_1ResultCollector.html", "classBase_1_1ResultCollector" ],
       [ "ComplexDifferenceElement", "classBase_1_1ComplexDifferenceElement.html", "classBase_1_1ComplexDifferenceElement" ],
       [ "Element", "classBase_1_1Element.html", "classBase_1_1Element" ],
       [ "SimpleElement", "classBase_1_1SimpleElement.html", "classBase_1_1SimpleElement" ]
