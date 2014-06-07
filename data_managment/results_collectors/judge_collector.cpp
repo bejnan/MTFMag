@@ -1,10 +1,3 @@
-/*
- * JudgeCollector.cpp
- *
- *  Created on: May 23, 2014
- *      Author: kuba
- */
-
 #include "judge_collector.h"
 
 namespace Base {
@@ -29,13 +22,14 @@ void JudgeCollector::AddAlgorithm(
 void JudgeCollector::AnalyseNotification(
     DataProvider::DataInputLine input_line) {
   if (!Database::GetInstance().Exists(input_line.sender_id_)) {
-    vector<shared_ptr<Tools::Processor> >& processors = Database::GetInstance()
-        .Query(input_line.sender_id_);
-    vector<shared_ptr<Tools::Processor> >::const_iterator processor_iterator;
-    for (processor_iterator = processors.begin();
-        processor_iterator != processors.end(); processor_iterator++) {
-      (*processor_iterator)->Proceed(input_line.receiver_id_, learn_mode);
-    }
+    AddProcessorsFromFactories (input_line.sender_id_);
+  }
+  vector<shared_ptr<Tools::Processor> >& processors = Database::GetInstance()
+      .Query(input_line.sender_id_);
+  vector<shared_ptr<Tools::Processor> >::const_iterator processor_iterator;
+  for (processor_iterator = processors.begin();
+      processor_iterator != processors.end(); processor_iterator++) {
+    (*processor_iterator)->Proceed(input_line.receiver_id_, learn_mode);
   }
 }
 
@@ -51,10 +45,6 @@ shared_ptr<vector<Result> > JudgeCollector::GetResult(int user_id) {
     results_ptr->push_back(Result(*processor_iterator, last_timestamp));
   }
   return results_ptr;
-}
-
-vector<string> JudgeCollector::GetAlgorithmsNames() {
-  return Database::GetInstance().QueryAlgorithmNames();
 }
 
 void JudgeCollector::SetLearnMode(bool learn) {

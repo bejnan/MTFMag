@@ -40,59 +40,35 @@ BOOST_AUTO_TEST_CASE(True_test) {
   int learn_runs = 0;
   int test_runs = 1000;
 
-  Base::FileDataProvider file_data_provider(path);
-  shared_ptr<Base::DataOutputBuilder> data_output_builder =
-      Base::DataOutputBuilder::GetInstance();
-  data_output_builder->SetCsvOutputFormat('|');
-  Base::DataCollector dc(file_data_provider, data_output_builder->Generate());
-  Algorithms::Algorithm* algorithm = new Algorithms::TreeRoot(
-      Base::SimpleElement::GetPrototype());
-  Tools::Judge* judge = new Tools::Tester(20, 20);
-  shared_ptr<Algorithms::Algorithm> algorithm_ptr(algorithm);
-  shared_ptr<Tools::Judge> judge_ptr(judge);
-  Tools::ProcessorFactory* tree_factory = new Tools::ProcessorFactory(
-      algorithm_ptr, judge_ptr);
+  Base::Configuration configuration;
 
-  dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(tree_factory));
+  configuration.SetElementPrototype(SimpleElement::GetPrototype());
 
-  algorithm = new Algorithms::MoveToFront(Base::SimpleElement::GetPrototype());
-  shared_ptr<Algorithms::Algorithm> mtf_algorithm_ptr(algorithm);
-  Tools::ProcessorFactory* mtf_factory = new Tools::ProcessorFactory(
-      mtf_algorithm_ptr, judge_ptr);
-  dc.AddProccessorFactory(shared_ptr<Tools::ProcessorFactory>(mtf_factory));
+  configuration.SetDataInputMethod(Configuration::DataInput::FileDataInput);
+  configuration.SetDataInputFile(path);
+  configuration.SetDataOutputMethod(
+      Configuration::DataOutput::CSVConsoleDataOutput);
+  configuration.SetJudgeFreePositionRange(20);
+  configuration.SetJudgeSmallPenaltyPositionRange(20);
+  configuration.SetLearnTurns(learn_runs);
+  configuration.SetRunTurns(test_runs);
 
-  algorithm = new Algorithms::RandomTreeRoot(
-      Base::SimpleElement::GetPrototype());
-  shared_ptr<Algorithms::Algorithm> random_tree_algorithm_ptr(algorithm);
-  Tools::ProcessorFactory* random_tree_factory = new Tools::ProcessorFactory(
-      random_tree_algorithm_ptr, judge_ptr);
-  dc.AddProccessorFactory(
-      shared_ptr<Tools::ProcessorFactory>(random_tree_factory));
+  configuration.AddAlgorithm(Algorithms::TreeRoot::AlgorithmName());
+  configuration.AddAlgorithm(Algorithms::RandomTreeRoot::AlgorithmName());
+  configuration.AddAlgorithm(Algorithms::MoveToFront::AlgorithmName());
+  configuration.AddAlgorithm(Algorithms::MTFMatrix::AlgorithmName());
 
-  dc.RunTurns(learn_runs, true);
-  vector<int> results;
-  stringstream ss;
+  Base::ResultCollectorBuilder result_builder;
 
-  for (int i = 0; i < test_runs / step_size; i++) {
-    dc.RunTurns(step_size);
-    results = dc.GetResultsSum();
-    ss << i * step_size << " ";
-    for (vector<int>::iterator results_iter = results.begin();
-        results_iter != results.end(); results_iter++) {
-      ss << (*results_iter) << "  ";
-    }
-    BOOST_TEST_MESSAGE(ss.str());
-    ss.str("");
-  }
-  int rest = test_runs - (test_runs / step_size) * step_size;
-  if (rest > 0) {
-    dc.RunTurns(rest);
-    for (vector<int>::iterator results_iter = results.begin();
-        results_iter != results.end(); results_iter++) {
-      ss << (*results_iter) << " ";
-    }
-    BOOST_TEST_MESSAGE(ss.str());
-  }
+  result_builder.SetConfig(configuration);
+
+  shared_ptr<Base::ResultCollector> result_collector = result_builder
+      .GenerateResultCollector();
+  result_collector->SetTurns(learn_runs, test_runs);
+  result_collector->SetResultFrequency(step_size);
+
+  result_collector->Run();
+
   Base::Database::GetInstance().ClearDatabase();
 }
 

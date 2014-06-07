@@ -64,13 +64,6 @@ class JudgeCollector {
   virtual shared_ptr<vector<Result> > GetResult(int user_id);
 
   /**
-   * Method to get names of all algorithms that will be (are) judged
-   * @return Vector of string representing algorithms names
-   * @see Algorithms::Algorithm::GetAlgorithmName
-   */
-  virtual vector<string> GetAlgorithmsNames();
-
-  /**
    * If program is in learn mode (learn flag is set to yes) no penalty is added for algorithm.
    * Default program is NOT in learn mode.
    * @param learn New value of learn flag. "Yes" means learn mode, "No" opposite.

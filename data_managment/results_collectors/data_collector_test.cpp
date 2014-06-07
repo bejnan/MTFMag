@@ -1,12 +1,5 @@
-/*
- * DataCollector_test.cpp
- *
- *  Created on: Feb 13, 2014
- *      Author: Jakub Banaszewski
- */
-
 #include "data_collector.h"
-#include "../file_data_provider.h"
+#include "../data_providers.h"
 #include "../data_outputs.h"
 
 #include "../../headers/tools.h"
@@ -20,90 +13,54 @@
 
 using std::shared_ptr;
 
-int RunTurnsAndReturnPenalty(int turns, Base::DataCollector& data_collector) {
-  data_collector.RunTurns(turns);
-  vector<int> results = data_collector.GetResultsSum();
-  int result = results.front();
-  return result;
-}
-
 BOOST_AUTO_TEST_SUITE(DataCollector)
 
-//Test cooperation between DataCollector object and TreeProcessor
-BOOST_AUTO_TEST_CASE(DataCollectorTreeProcessor) {
+//Test single line reader
+BOOST_AUTO_TEST_CASE(DataCollector_ReadInputLine) {
   //initialization
-  Base::FileDataProvider file_data_provider("test_input.txt");
-  shared_ptr<Base::DataOutputBuilder> data_output_builder =
-      Base::DataOutputBuilder::GetInstance();
-  data_output_builder->SetCsvOutputFormat('|');
-  Base::DataCollector data_collector(file_data_provider,
-                                     data_output_builder->Generate());
-  Algorithms::Algorithm* algorithm = new Algorithms::TreeRoot(
-      Base::SimpleElement::GetPrototype());
-  Tools::Judge* judge = new Tools::Tester(20, 20);
-  shared_ptr<Algorithms::Algorithm> algorithm_ptr(algorithm);
-  shared_ptr<Tools::Judge> judge_ptr(judge);
-  Tools::ProcessorFactory* processor = new Tools::ProcessorFactory(
-      algorithm_ptr, judge_ptr);
-  shared_ptr<Tools::ProcessorFactory> processors_shared_ptr(processor);
-  data_collector.AddProccessorFactory(processors_shared_ptr);
+  Base::DataProvider* file_data_provider = new Base::FileDataProvider(
+      "test_input.txt");
+  shared_ptr<Base::DataProvider> data_provider_ptr(file_data_provider);
+  Base::DataOutput* console_data_output = new Base::CsvDataOutput('|');
+  shared_ptr<Base::DataOutput> data_output_ptr(console_data_output);
+  Base::DataCollector data_collector(data_provider_ptr, data_output_ptr);
+
   //test
-  int result = RunTurnsAndReturnPenalty(22, data_collector);
-  BOOST_CHECK_EQUAL(result, 1);
-  Base::Database::GetInstance().ClearDatabase();
+  shared_ptr<Base::DataProvider::DataInputLine> input_line = data_collector
+      .ReadInputLine();
+  BOOST_CHECK_EQUAL(input_line->interaction_type_, 18);
+  BOOST_CHECK_EQUAL(input_line->sender_id_, 0);
+  BOOST_CHECK_EQUAL(input_line->receiver_id_, 1);
+  BOOST_CHECK_EQUAL(input_line->timestamp_, 1000000);
 }
 
-//Test cooperation between DataCollector object and MTFProcessor
-BOOST_AUTO_TEST_CASE(DataCollectorMTFProcessor) {
+//Test multiple lines reader
+BOOST_AUTO_TEST_CASE(DataCollector_ReadInputLines) {
   //initialization
-  Base::FileDataProvider file_data_provider("test_input.txt");
-  shared_ptr<Base::DataOutputBuilder> data_output_builder =
-      Base::DataOutputBuilder::GetInstance();
-  data_output_builder->SetCsvOutputFormat('|');
-  Base::DataCollector data_collector(file_data_provider,
-                                     data_output_builder->Generate());
-  Algorithms::Algorithm* algorithm = new Algorithms::MoveToFront(
-      Base::SimpleElement::GetPrototype());
-  Tools::Judge* judge = new Tools::Tester(20, 20);
-  shared_ptr<Algorithms::Algorithm> algorithm_ptr(algorithm);
-  shared_ptr<Tools::Judge> judge_ptr(judge);
-  Tools::ProcessorFactory* processor = new Tools::ProcessorFactory(
-      algorithm_ptr, judge_ptr);
-
-  shared_ptr<Tools::ProcessorFactory> processors_shared_ptr(processor);
-  data_collector.AddProccessorFactory(processors_shared_ptr);
+  Base::DataProvider* file_data_provider = new Base::FileDataProvider(
+      "test_input.txt");
+  shared_ptr<Base::DataProvider> data_provider_ptr(file_data_provider);
+  Base::DataOutput* console_data_output = new Base::CsvDataOutput('|');
+  shared_ptr<Base::DataOutput> data_output_ptr(console_data_output);
+  Base::DataCollector data_collector(data_provider_ptr, data_output_ptr);
 
   //test
-  int result = RunTurnsAndReturnPenalty(23, data_collector);
-  BOOST_CHECK_EQUAL(result, 1);
-  Base::Database::GetInstance().ClearDatabase();
-}
+  shared_ptr<vector<Base::DataProvider::DataInputLine> > input_lines =
+      data_collector.ReadInputLines(2);
 
-//Test cooperation between DataCollector object and MTFMatrixProcessor
-BOOST_AUTO_TEST_CASE(DataCollectorMTFMatrixProcessor) {
-  //initialization
-  Base::FileDataProvider file_data_provider("test_input.txt");
-  shared_ptr<Base::DataOutputBuilder> data_output_builder =
-      Base::DataOutputBuilder::GetInstance();
-  data_output_builder->SetCsvOutputFormat('|');
-  Base::DataCollector data_collector(file_data_provider,
-                                     data_output_builder->Generate());
+  Base::DataProvider::DataInputLine input_line = (*input_lines)[0];
 
-  Algorithms::Algorithm* algorithm = new Algorithms::MTFMatrix(
-      Base::SimpleElement::GetPrototype());
-  Tools::Judge* judge = new Tools::Tester(20, 20);
-  shared_ptr<Algorithms::Algorithm> algorithm_ptr(algorithm);
-  shared_ptr<Tools::Judge> judge_ptr(judge);
-  Tools::ProcessorFactory* processor = new Tools::ProcessorFactory(
-      algorithm_ptr, judge_ptr);
+  BOOST_CHECK_EQUAL(input_line.interaction_type_, 18);
+  BOOST_CHECK_EQUAL(input_line.sender_id_, 0);
+  BOOST_CHECK_EQUAL(input_line.receiver_id_, 1);
+  BOOST_CHECK_EQUAL(input_line.timestamp_, 1000000);
 
-  shared_ptr<Tools::ProcessorFactory> processors_shared_ptr(processor);
-  data_collector.AddProccessorFactory(processors_shared_ptr);
+  Base::DataProvider::DataInputLine second_input_line = (*input_lines)[1];
 
-  //test
-  int result = RunTurnsAndReturnPenalty(23, data_collector);
-  BOOST_CHECK_EQUAL(result, 1);
-  Base::Database::GetInstance().ClearDatabase();
+  BOOST_CHECK_EQUAL(second_input_line.interaction_type_, 18);
+  BOOST_CHECK_EQUAL(second_input_line.sender_id_, 0);
+  BOOST_CHECK_EQUAL(second_input_line.receiver_id_, 2);
+  BOOST_CHECK_EQUAL(second_input_line.timestamp_, 1000000);
 }
 
 BOOST_AUTO_TEST_SUITE_END()

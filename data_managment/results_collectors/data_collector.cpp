@@ -27,6 +27,7 @@ shared_ptr<vector<DataProvider::DataInputLine> > DataCollector::ReadInputLines(
 }
 
 shared_ptr<DataProvider::DataInputLine> DataCollector::ReadInputLine() {
+  data_input_->GoToNextLine();
   DataProvider::DataInputLine* input_line_data =
       new DataProvider::DataInputLine(data_input_->GetActualLine());
   return shared_ptr<DataProvider::DataInputLine>(input_line_data);
