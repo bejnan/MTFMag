@@ -29,7 +29,7 @@ BOOST_AUTO_TEST_CASE(DataCollector_ReadInputLine) {
   shared_ptr<Base::DataProvider::DataInputLine> input_line = data_collector
       .ReadInputLine();
   BOOST_CHECK_EQUAL(input_line->interaction_type_, 18);
-  BOOST_CHECK_EQUAL(input_line->sender_id_, 0);
+  BOOST_CHECK_EQUAL(input_line->sender_id_,  10);
   BOOST_CHECK_EQUAL(input_line->receiver_id_, 1);
   BOOST_CHECK_EQUAL(input_line->timestamp_, 1000000);
 }
@@ -51,14 +51,14 @@ BOOST_AUTO_TEST_CASE(DataCollector_ReadInputLines) {
   Base::DataProvider::DataInputLine input_line = (*input_lines)[0];
 
   BOOST_CHECK_EQUAL(input_line.interaction_type_, 18);
-  BOOST_CHECK_EQUAL(input_line.sender_id_, 0);
+  BOOST_CHECK_EQUAL(input_line.sender_id_, 10);
   BOOST_CHECK_EQUAL(input_line.receiver_id_, 1);
   BOOST_CHECK_EQUAL(input_line.timestamp_, 1000000);
 
   Base::DataProvider::DataInputLine second_input_line = (*input_lines)[1];
 
   BOOST_CHECK_EQUAL(second_input_line.interaction_type_, 18);
-  BOOST_CHECK_EQUAL(second_input_line.sender_id_, 0);
+  BOOST_CHECK_EQUAL(second_input_line.sender_id_, 10);
   BOOST_CHECK_EQUAL(second_input_line.receiver_id_, 2);
   BOOST_CHECK_EQUAL(second_input_line.timestamp_, 1000000);
 }

@@ -80,7 +80,7 @@ BOOST_AUTO_TEST_CASE(ResultCollectionCorrectness) {
   result_collector.SetTurns(0, 3);
   result_collector.Run();
 
-  Base::Result result = judge_collector_ptr->GetResult(0)->front();
+  Base::Result result = judge_collector_ptr->GetResult(10)->front();
 
   BOOST_CHECK_EQUAL(result.GetOverallPenalty(), 1);
 

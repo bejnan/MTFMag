@@ -14,7 +14,7 @@ BOOST_AUTO_TEST_CASE(SimpleFile) {
   data.GoToNextLine();
   Base::DataProvider::DataInputLine actual_line = data.GetActualLine();
   BOOST_CHECK_EQUAL(actual_line.interaction_type_, 18);
-  BOOST_CHECK_EQUAL(actual_line.sender_id_, 0);
+  BOOST_CHECK_EQUAL(actual_line.sender_id_, 10);
   BOOST_CHECK_EQUAL(actual_line.receiver_id_, 1);
   BOOST_CHECK_EQUAL(actual_line.timestamp_, 1000000);
 
@@ -23,12 +23,12 @@ BOOST_AUTO_TEST_CASE(SimpleFile) {
   Base::DataProvider::DataInputLine new_actual_line = data.GetActualLine();
   Base::DataProvider::DataInputLine line_before = data.GetLineBefore();
   BOOST_CHECK_EQUAL(new_actual_line.interaction_type_, 18);
-  BOOST_CHECK_EQUAL(new_actual_line.sender_id_, 0);
+  BOOST_CHECK_EQUAL(new_actual_line.sender_id_, 10);
   BOOST_CHECK_EQUAL(new_actual_line.receiver_id_, 2);
   BOOST_CHECK_EQUAL(new_actual_line.timestamp_, 1000000);
 
   BOOST_CHECK_EQUAL(line_before.interaction_type_, 18);
-  BOOST_CHECK_EQUAL(line_before.sender_id_, 0);
+  BOOST_CHECK_EQUAL(line_before.sender_id_, 10);
   BOOST_CHECK_EQUAL(line_before.receiver_id_, 1);
   BOOST_CHECK_EQUAL(line_before.timestamp_, 1000000);
 
