@@ -75,6 +75,8 @@ BOOST_AUTO_TEST_CASE(ResultCollectionCorrectness) {
       Base::SimpleElement::GetPrototype());
   shared_ptr<Algorithms::Algorithm> algorithm_ptr(new_algorithm);
 
+  judge_collector_ptr->AddAlgorithm(algorithm_ptr);
+
   ResultCollector result_collector(data_collector_ptr, judge_collector_ptr);
 
   result_collector.SetTurns(0, 3);
@@ -107,6 +109,8 @@ BOOST_AUTO_TEST_CASE(ResultCollectionSetTurnTest) {
       Base::SimpleElement::GetPrototype());
   shared_ptr<Algorithms::Algorithm> algorithm_ptr(new_algorithm);
 
+  judge_collector_ptr->AddAlgorithm(algorithm_ptr);
+
   ResultCollector result_collector(data_collector_ptr, judge_collector_ptr);
 
   result_collector.SetTurns(3, 0);
@@ -114,7 +118,7 @@ BOOST_AUTO_TEST_CASE(ResultCollectionSetTurnTest) {
   //test
   result_collector.Run();
 
-  Base::Result result = judge_collector_ptr->GetResult(0)->front();
+  Base::Result result = judge_collector_ptr->GetResult(10)->front();
 
   BOOST_CHECK_EQUAL(result.GetOverallPenalty(), 0);
 
