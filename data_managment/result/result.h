@@ -2,6 +2,7 @@
 #define RESULT_H_
 
 #include "../../headers/tools.h"
+#include "../../utils/utils.h"
 
 #include<vector>
 #include<memory>

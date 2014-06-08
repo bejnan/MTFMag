@@ -2,12 +2,11 @@
 #define RANDOMTREEROOT_H_
 
 #include "tree_root.h"
-
+#include "../../utils/utils.h"
 #include <random>
 
 using std::default_random_engine;
 using std::uniform_real_distribution;
-using std::to_string;
 
 namespace Algorithms {
 /**

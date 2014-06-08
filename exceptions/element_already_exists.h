@@ -11,6 +11,8 @@
 #include <exception>
 #include <string>
 
+#include "../utils/utils.h"
+
 using std::string;
 using std::exception;
 

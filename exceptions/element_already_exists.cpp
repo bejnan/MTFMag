@@ -14,7 +14,7 @@ ElementAlreadyExists::ElementAlreadyExists(int id)
     : message_("Duplicate identifier exception") {
   if (id != 0)
   {
-    message_ += " " + to_string(id);
+    message_ += " " + Utils::ToString(id);
   }
 }
 

@@ -6,6 +6,8 @@
 #include <exception>
 #include <string>
 
+#include "../utils/utils.h"
+
 using std::exception;
 using std::string;
 

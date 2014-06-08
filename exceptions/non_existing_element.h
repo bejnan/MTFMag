@@ -1,15 +1,10 @@
-/*
- * non_existing_element.h
- *
- *  Created on: May 22, 2014
- *      Author: kuba
- */
-
 #ifndef NON_EXISTING_ELEMENT_H_
 #define NON_EXISTING_ELEMENT_H_
 
 #include <exception>
 #include <string>
+
+#include "../utils/utils.h"
 
 using std::string;
 using std::exception;

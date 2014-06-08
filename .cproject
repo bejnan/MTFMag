@@ -52,7 +52,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="matrix|Processors|data_output|elements|controller|processors|judges|data_managment|results_collectors|tools|algorithms|tree|processor_factories|main_test.cpp|headers|move_to_front|exceptions" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="utils/utils_test.cpp|matrix|Processors|data_output|elements|controller|processors|judges|data_managment|results_collectors|tools|algorithms|tree|processor_factories|main_test.cpp|headers|move_to_front|exceptions" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 						<entry excluding="matrix|tree|move_to_front" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms"/>
 						<entry excluding="mtf_matrix_test.cpp|MTFMatrix_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms/matrix"/>
 						<entry excluding="move_to_front_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms/move_to_front"/>
@@ -112,7 +112,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="data_managment/data_provider/file_data_provider_test.cpp|data_managment/database_test.cpp|Processors|matrix|elements/element_test.cpp|data_output|data_managment/data_output|controller|processors|judges|data_managment/data_collector_test.cpp|results_collectors|tools|data_managment/results_collectors|algorithms|tree|processor_factories|main_test.cpp|headers|data_managment/file_data_provider_test.cpp|move_to_front|exceptions" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="utils/utils_test.cpp|data_managment/data_provider/file_data_provider_test.cpp|data_managment/database_test.cpp|Processors|matrix|elements/element_test.cpp|data_output|data_managment/data_output|controller|processors|judges|data_managment/data_collector_test.cpp|results_collectors|tools|data_managment/results_collectors|algorithms|tree|processor_factories|main_test.cpp|headers|data_managment/file_data_provider_test.cpp|move_to_front|exceptions" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 						<entry excluding="matrix|tree|move_to_front" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms"/>
 						<entry excluding="mtf_matrix_test.cpp|MTFMatrix_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms/matrix"/>
 						<entry excluding="move_to_front_test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="algorithms/move_to_front"/>

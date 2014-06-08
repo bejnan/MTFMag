@@ -29,8 +29,8 @@ string Result::HeaderLine() {
 }
 
 string Result::ToString() {
-  string result = algorithm_name_ + "    " + to_string(source_id_) + "    "
-      + to_string(timestamp_) + "    " + to_string(overall_penalty_);
+  string result = algorithm_name_ + "    " + Utils::ToString(source_id_) + "    "
+      + Utils::ToString(timestamp_) + "    " + Utils::ToString(overall_penalty_);
   return result;
 }
 

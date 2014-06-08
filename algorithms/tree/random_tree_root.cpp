@@ -22,8 +22,8 @@ string RandomTreeRoot::AlgorithmName() {
 
 string RandomTreeRoot::GetAlgorithmName() {
   return RandomTreeRoot::ALGORITHM_NAME + " "
-      + (to_string(MOVING_UP_PROBABILITY)).substr(0, 4) + " "
-      + (to_string(DIFF_INFLUENCE)).substr(0, 4);
+      + (Utils::ToString(MOVING_UP_PROBABILITY)).substr(0, 4) + " "
+      + (Utils::ToString(DIFF_INFLUENCE)).substr(0, 4);
 }
 
 shared_ptr<Algorithm> RandomTreeRoot::Clone() {

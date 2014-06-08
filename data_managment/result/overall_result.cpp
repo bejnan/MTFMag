@@ -22,8 +22,8 @@ string OverallResult::HeaderLine() {
 }
 
 string OverallResult::ToString() {
-  return GetAlgorithmName() + "    " + to_string(GetTimestamp()) + "    "
-      + to_string(GetOverallPenalty());
+  return GetAlgorithmName() + "    " + Utils::ToString(GetTimestamp()) + "    "
+      + Utils::ToString(GetOverallPenalty());
 }
 
 } /* namespace Base */
