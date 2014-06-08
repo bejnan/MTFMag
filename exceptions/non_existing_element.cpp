@@ -1,6 +1,5 @@
 #include "non_existing_element.h"
 
-using std::to_string;
 namespace Exception {
 
 NonExistingElement::NonExistingElement(int id)

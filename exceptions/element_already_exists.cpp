@@ -7,7 +7,6 @@
 
 #include "element_already_exists.h"
 
-using std::to_string;
 namespace Exception {
 
 ElementAlreadyExists::ElementAlreadyExists(int id)
