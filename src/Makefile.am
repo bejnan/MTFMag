@@ -1,4 +1,4 @@
 bin_PROGRAMS = mtfmag
+mtfmag_CPPFLAGS = -std=c++11 -Wall -Wextra
+mtfmag_LDADD = tools\libtools.a data_managment\libdatamanagment.a controller\libconfiguration.a
 mtfmag_SOURCES = main.cpp
-AM_CXXFLAGS = -std=c++11 -Wall -Wextra
-SUBDIRS = algorithms controller data_managment elements headers tools utils

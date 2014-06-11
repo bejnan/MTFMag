@@ -1,5 +1,6 @@
-#ifndef CONFIG_H_
-#define CONFIG_H_
+#ifndef CONFIGURATION_H_
+#define CONFIGURATION_H_
+
 #include <vector>
 #include <memory>
 #include <initializer_list>
