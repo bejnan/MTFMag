@@ -1,6 +1,9 @@
 AM_CXXFLAGS = -std=c++11 -Wall -Wextra
 
-LDADD = ../elements/libelement.a \
+
+noinst_LIBRARIES = libdatamanagment.a
+
+libdatamanagment_a_LIBADD = ../elements/libelement.a \
 		../algorithms/libalgorithms.a \
 		../controller/libcontroller.a \
 		../exceptions/libexception.a \
