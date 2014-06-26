@@ -1,12 +1,5 @@
-/*
- * configuration.h
- *
- *  Created on: May 29, 2014
- *      Author: kuba
- */
-
-#ifndef CONFIGURATION_H_
-#define CONFIGURATION_H_
+#ifndef CONTROLLER_H
+#define CONTROLLER_H
 
 
 #include "../controller/configurations.h"
@@ -15,4 +8,4 @@
 #include "../controller/program_runner.h"
 
 
-#endif /* CONFIGURATION_H_ */
+#endif /*CONTROLLER_H*/

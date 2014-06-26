@@ -247,4 +247,4 @@ class Configuration {
 
 } /* namespace Base */
 
-#endif /* CONFIG_H_ */
+#endif /* CONFIGURATION_H_ */

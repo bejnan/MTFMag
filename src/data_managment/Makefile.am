@@ -2,6 +2,7 @@ AM_CXXFLAGS = -std=c++11 -Wall -Wextra
 
 
 noinst_LIBRARIES = libdatamanagment.a
+noinst_HEADERS = $(top_srcdir)/headers/data_managment.h
 
 libdatamanagment_a_LIBADD = ../elements/libelement.a \
 		../algorithms/libalgorithms.a \
