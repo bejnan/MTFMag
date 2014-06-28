@@ -1,7 +1,7 @@
 AC_INIT([mtfmag], [1.0], [Jakub Banaszewski<jakub.banaszewski@gmail.com>])
-AM_INIT_AUTOMAKE([-Wall -Werror foreign subdir-objects])
 AC_PROG_CXX
-AC_PROG_RANLIB
+AC_CONFIG_MACRO_DIR([m4])
+AM_INIT_AUTOMAKE([-Wall -Werror foreign subdir-objects])
 AM_PROG_AR
 
 AC_CONFIG_FILES([
