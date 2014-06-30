@@ -2,14 +2,14 @@ AM_CXXFLAGS = -std=c++11 -Wall -Wextra
 
 
 noinst_LIBRARIES = libdatamanagment.a
-noinst_HEADERS = $(top_srcdir)/headers/data_managment.h
+#noinst_HEADERS = $(top_srcdir)/headers/data_managment.h
 
 libdatamanagment_a_LIBADD = ../elements/libelement.a \
-		../algorithms/libalgorithms.a \
-		../controller/libcontroller.a \
-		../exceptions/libexception.a \
-		../tools/libtools.a \
-		../utils/libutils.a \
+		$(top_srcdir)/src/algorithms/libalgorithms.a \
+		$(top_srcdir)/src/controller/libcontroller.a \
+		$(top_srcdir)/src/exceptions/libexception.a \
+		$(top_srcdir)/src/tools/libtools.a \
+		$(top_srcdir)/src/utils/libutils.a \
 		 data_output/libdataoutput.a \
 		 data_provider/libdataprovider.a \
 		 result/libresult.a
