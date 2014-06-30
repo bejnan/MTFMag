@@ -18,6 +18,7 @@ AC_CONFIG_FILES([
  src/data_managment/Makefile
  src/elements/Makefile
  src/exceptions/Makefile
+ src/headers/Makefile
  src/tools/judges/Makefile
  src/tools/Makefile
  src/utils/Makefile

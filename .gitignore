@@ -17,6 +17,7 @@ ar-lib
 /ltmain.sh
 /src/mtfmag  
 /m4
+mtfmag-*
 missing
 .dirstamp
 *.o
