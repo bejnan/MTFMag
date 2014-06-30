@@ -1,6 +1,6 @@
 ACLOCAL_AMFLAGS = -I m4
 bin_PROGRAMS = mtfmag
-mtfmag_SUBDIRS = algorithms controller data_managment elements exceptions tools utils
+SUBDIRS = elements exceptions algorithms utils controller tools data_managment
 mtfmag_CPPFLAGS = -std=c++11 -Wall -Wextra
 mtfmag_LDADD = $(top_srcdir)/src/algorithms/libalgorithms.a \
 			 $(top_srcdir)/src/algorithms/matrix/libmatrix.a \

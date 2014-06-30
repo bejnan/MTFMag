@@ -1,5 +1,7 @@
 AM_CXXFLAGS = -std=c++11 -Wall -Wextra
 
+SUBDIRS = judges
+
 noinst_LIBRARIES = libtools.a
 #noinst_HEADERS = $(top_srcdir)/src/headers/tools.h
 

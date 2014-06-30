@@ -3,8 +3,7 @@
 namespace Algorithms {
 
 map<string, shared_ptr<Algorithm> > GetAllAlgorithms(
-    shared_ptr<Base::Element> element_prototype =
-        Base::SimpleElement::GetPrototype()) {
+    shared_ptr<Base::Element> element_prototype) {
   static map<string, shared_ptr<Algorithm> > algorithms;
   algorithms[MTFMatrix::AlgorithmName()] = shared_ptr<Algorithm>(
       new MTFMatrix(element_prototype));

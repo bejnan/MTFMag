@@ -22,7 +22,8 @@ namespace Algorithms {
  * @param element_prototype Prototype of element to use in algorithms.
  * @return Dictionary of algorithms with their names as key.d
  */
-map<string, shared_ptr<Algorithm> > GetAllAlgorithms();
+map<string, shared_ptr<Algorithm> > GetAllAlgorithms(shared_ptr<Base::Element> element_prototype =
+    Base::SimpleElement::GetPrototype());
 
 } /* namespace Algorithms */
 
