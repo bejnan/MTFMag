@@ -27,7 +27,6 @@ class FilePathException : public Exception::DataProviderException {
    * @param path Path to non-existing file, that cause exception
    */
   FilePathException(string path = "");
-  virtual ~FilePathException();
   const char * what() const throw () {
     return message_.c_str();
   }

@@ -9,8 +9,4 @@ NonExistingElement::NonExistingElement(int id)
   }
 }
 
-NonExistingElement::~NonExistingElement() {
-
-}
-
 } /* namespace Exception */

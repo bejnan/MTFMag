@@ -17,8 +17,4 @@ ElementAlreadyExists::ElementAlreadyExists(int id)
   }
 }
 
-ElementAlreadyExists::~ElementAlreadyExists() {
-
-}
-
 } /* namespace Exception */

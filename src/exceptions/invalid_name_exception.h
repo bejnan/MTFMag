@@ -23,7 +23,6 @@ class InvalidNameException : public DatabaseException {
    * @param search_name Non-existing name
    */
   InvalidNameException(string search_name = "");
-  virtual ~InvalidNameException();
 
   const char * what() const throw () {
     return message_.c_str();

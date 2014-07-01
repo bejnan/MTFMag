@@ -27,7 +27,6 @@ class InvalidIndexException : public DatabaseException{
    * @param id Non-existing identifier
    */
   InvalidIndexException(int id = -1);
-  virtual ~InvalidIndexException();
 
   const char * what() const throw () {
     return message_.c_str();

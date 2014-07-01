@@ -13,7 +13,6 @@ namespace Exception {
 class EndOfFileException : public Exception::DataProviderException {
  public:
   EndOfFileException();
-  virtual ~EndOfFileException();
   const char * what() const throw () {
     return message_.c_str();
   }

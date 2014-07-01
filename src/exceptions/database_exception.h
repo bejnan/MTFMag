@@ -24,7 +24,6 @@ namespace Exception {
 class DatabaseException : public exception {
  public:
   DatabaseException();
-  virtual ~DatabaseException();
 
   const char * what() const throw () {
     return message_.c_str();

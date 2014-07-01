@@ -13,7 +13,4 @@ DatabaseException::DatabaseException() :
 		message_("Database exception") {
 }
 
-DatabaseException::~DatabaseException() {
-}
-
 } /* namespace Base */

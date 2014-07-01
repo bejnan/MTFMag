@@ -16,7 +16,4 @@ InvalidIndexException::InvalidIndexException(int id)
     message_+= " " + Utils::ToString(id);
 }
 
-InvalidIndexException::~InvalidIndexException() {
-}
-
 } /* namespace Exception */

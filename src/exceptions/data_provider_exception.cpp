@@ -12,7 +12,4 @@ namespace Exception {
 DataProviderException::DataProviderException() : message_("Data provider exception\n") {
 }
 
-DataProviderException::~DataProviderException() {
-}
-
 } /* namespace Exception */

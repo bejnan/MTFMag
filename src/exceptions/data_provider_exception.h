@@ -15,7 +15,6 @@ namespace Exception {
 class DataProviderException : public std::exception {
  public:
   DataProviderException();
-  virtual ~DataProviderException();
   const char * what() const throw () {
     return message_.c_str();
   }

@@ -21,7 +21,6 @@ namespace Exception {
 class ElementAlreadyExists : public std::exception {
  public:
   ElementAlreadyExists(int id = 0);
-  virtual ~ElementAlreadyExists();
 
   const char * what() const throw () {
     return message_.c_str();

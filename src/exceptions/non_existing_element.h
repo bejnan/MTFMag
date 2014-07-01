@@ -14,7 +14,6 @@ namespace Exception {
 class NonExistingElement : public std::exception {
  public:
   NonExistingElement(int id  = 0);
-  virtual ~NonExistingElement();
 
   const char * what() const throw () {
       return message_.c_str();

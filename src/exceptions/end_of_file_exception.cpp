@@ -12,7 +12,4 @@ namespace Exception {
 EndOfFileException::EndOfFileException() : message_("Meet end of fine") {
 }
 
-EndOfFileException::~EndOfFileException() {
-}
-
 } /* namespace Exception */
