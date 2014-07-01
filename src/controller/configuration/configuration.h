@@ -3,7 +3,6 @@
 
 #include <vector>
 #include <memory>
-#include <initializer_list>
 
 #include "../../headers/algorithms.h"
 #include "../../headers/tools.h"

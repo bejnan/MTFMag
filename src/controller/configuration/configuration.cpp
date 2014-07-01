@@ -26,7 +26,8 @@ void Configuration::SetAlgorithms(vector<string> algorithms) {
   for (names_iterator = algorithms.begin(); names_iterator != algorithms.end();
       names_iterator++) {
     algorithms_.push_back(
-        Algorithms::GetAllAlgorithms(element_prototype_)[*(names_iterator)]->Clone());
+        Algorithms::GetAllAlgorithms(element_prototype_)[*(names_iterator)]
+            ->Clone());
   }
 }
 
@@ -111,6 +112,5 @@ const string& Configuration::GetDataOutputFile() const {
 void Configuration::SetDataOutputFile(const string& data_output_file) {
   data_output_file_ = data_output_file;
 }
-
 
 } /* namespace Base */
