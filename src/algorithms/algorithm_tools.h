@@ -2,8 +2,10 @@
 #define ALGORITHM_TOOLS_H_
 
 #include "algorithm.h"
-#include "matrix.h"
-#include "tree.h"
+#include "matrix_algorithms.h"
+#include "tree_algorithms.h"
+#include "move_to_front_algorithms.h"
+
 #include "../headers/elements.h"
 
 #include <map>

@@ -6,7 +6,7 @@ mtfmag_LDADD = $(top_srcdir)/src/algorithms/libalgorithms.a \
 			 $(top_srcdir)/src/algorithms/matrix/libmatrix.a \
 			 $(top_srcdir)/src/algorithms/tree/libtree.a \
 			 $(top_srcdir)/src/algorithms/move_to_front/libmovetofront.a \
-			 $(top_srcdir)/src/controller/libconfiguration.a \
+			 $(top_srcdir)/src/controller/libcontroller.a \
 			 $(top_srcdir)/src/data_managment/libdatamanagment.a \
 			 $(top_srcdir)/src/data_managment/result/libresult.a \
 			 $(top_srcdir)/src/data_managment/data_output/libdataoutput.a \

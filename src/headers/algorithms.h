@@ -8,9 +8,9 @@
 #ifndef ALGORITHMS_H_
 #define ALGORITHMS_H_
 
-#include "../algorithms/tree.h"
-#include "../algorithms/matrix.h"
-#include "../algorithms/move_to_front/move_to_front.h"
+#include "../algorithms/tree_algorithms.h"
+#include "../algorithms/matrix_algorithms.h"
+#include "../algorithms/move_to_front_algorithms.h"
 #include "../algorithms/algorithm_tools.h"
 
 #endif /* ALGORITHMS_H_ */
