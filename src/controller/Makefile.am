@@ -8,4 +8,4 @@ LDADD = $(top_srcdir)/src/elements/libelement.a \
 noinst_LIBRARIES = libcontroller.a
 #noinst_HEADERS = $(top_srcdir)/headers/controller.h
 
-libcontroller_a_SOURCES = configuration/configuration.h configuration/configuration.cpp
+libcontroller_a_SOURCES = configuration/configuration.cpp

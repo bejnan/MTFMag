@@ -1,6 +1,6 @@
 AM_CXXFLAGS = -std=c++11 -Wall -Wextra
 
-LDADD = ../../elements/libelement.a ../../exceptions/libexception.a
+LDADD = $(top_srcdir)/src/elements/libelement.a $(top_srcdir)/src/exceptions/libexception.a
 
 noinst_LIBRARIES = libtree.a
 

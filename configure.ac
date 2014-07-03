@@ -1,12 +1,13 @@
 AC_INIT([mtfmag], [1.0], [Jakub Banaszewski<jakub.banaszewski@gmail.com>])
 AC_PROG_CXX
 AC_CONFIG_MACRO_DIR([m4])
+AC_PROG_LN_S
 AM_INIT_AUTOMAKE([-Wall -Werror foreign subdir-objects])
 
 AM_PROG_AR
 AC_PROG_RANLIB
 
-m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
+#m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
 
 AC_CONFIG_FILES([
  src/algorithms/matrix/Makefile
