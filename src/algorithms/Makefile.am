@@ -8,4 +8,4 @@ LDADD = $(top_srcdir)/src/elements/libelement.a matrix/libmatrix.a move_to_front
 noinst_LIBRARIES = libalgorithms.a
 
 
-libalgorithms_a_SOURCES = algorithm_tools.cpp
+libalgorithms_a_SOURCES = algorithm_container.cpp

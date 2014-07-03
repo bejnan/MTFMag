@@ -18,19 +18,24 @@ using std::shared_ptr;
 
 namespace Algorithms {
 
+/**
+ * Class to point algorithm prototype using it's name
+ */
+
 class AlgorithmContainer {
  public:
 
-  static shared_ptr<AlgorithmContainer> getInstance();
+  static AlgorithmContainer& GetInstance();
 
-  void AddAlgorithm(shared_ptr<Algorithm> algorithm);
+  shared_ptr<Algorithm> GetAlgorithm(string algorithm_name);
 
  private:
 
   AlgorithmContainer();
 
+  void AddAlgorithm(shared_ptr<Algorithm> algorithm);
+
   map<string, shared_ptr<Algorithm> > _algorithms_set;
-  shared_ptr<AlgorithmContainer> instance;
 
 };
 
