@@ -7,7 +7,7 @@ AM_INIT_AUTOMAKE([-Wall -Werror foreign subdir-objects])
 AM_PROG_AR
 AC_PROG_RANLIB
 
-#m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
+m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
 
 AC_CONFIG_FILES([
  src/algorithms/matrix/Makefile
