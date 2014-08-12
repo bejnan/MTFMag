@@ -1,8 +1,9 @@
 #define BOOST_TEST_DYN_LINK
 
 #include <boost/test/unit_test.hpp>
-#include "mtf_matrix.h"
-#include "../../headers/elements.h"
+
+#include "../headers/algorithms.h"
+#include "../headers/elements.h"
 
 using Algorithms::MTFMatrix;
 

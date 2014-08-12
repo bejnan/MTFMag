@@ -5,9 +5,8 @@
  *      Author: Jakub Banaszewski
  */
 
-#include "tree_root.h"
-#include "random_tree_root.h"
-#include "../../headers/elements.h"
+#include "../headers/elements.h"
+#include "../headers/algorithms.h"
 
 #include <vector>
 #include <algorithm>

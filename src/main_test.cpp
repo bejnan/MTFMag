@@ -27,7 +27,7 @@ using namespace std;
 BOOST_AUTO_TEST_SUITE(mainSuite)
 
 BOOST_AUTO_TEST_CASE(True_test) {
-  int step_size = 100;
+/*  int step_size = 100;
 
   int argc = boost::unit_test::framework::master_test_suite().argc;
   char ** argv = boost::unit_test::framework::master_test_suite().argv;
@@ -70,6 +70,7 @@ BOOST_AUTO_TEST_CASE(True_test) {
   result_collector->Run();
 
   Base::Database::GetInstance().ClearDatabase();
+  */
 }
 
 BOOST_AUTO_TEST_SUITE_END()

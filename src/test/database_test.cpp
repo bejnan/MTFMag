@@ -5,7 +5,7 @@
  *      Author: Jakub Banaszewski
  */
 
-#include "database.h"
+#include "../headers/data_managment.h"
 #include "../headers/tools.h"
 #include "../headers/exceptions.h"
 #include "../headers/algorithms.h"

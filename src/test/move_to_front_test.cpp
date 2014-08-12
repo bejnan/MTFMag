@@ -1,7 +1,8 @@
 #define BOOST_TEST_DYN_LINK
 
+#include "../headers/algorithms.h"
+
 #include <boost/test/unit_test.hpp>
-#include "move_to_front.h"
 
 #include <memory>
 

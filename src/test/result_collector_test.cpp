@@ -1,8 +1,6 @@
-#include "result_collector_builder.h"
-#include "data_collector.h"
-#include "judge_collector.h"
 
-#include "../database.h"
+#include "../headers/data_managment.h"
+#include "../headers/controller.h"
 
 #include <memory>
 #include <vector>

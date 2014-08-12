@@ -1,7 +1,7 @@
-#include "judge_collector.h"
 
-#include "../../headers/tools.h"
-#include "../../headers/algorithms.h"
+#include "../headers/tools.h"
+#include "../headers/algorithms.h"
+#include "../headers/data_managment.h"
 
 #define BOOST_TEST_DYN_LINK
 

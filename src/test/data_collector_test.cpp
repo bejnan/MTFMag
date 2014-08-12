@@ -1,10 +1,7 @@
-#include "data_collector.h"
-#include "../data_providers.h"
-#include "../data_outputs.h"
-
-#include "../../headers/tools.h"
-#include "../../headers/exceptions.h"
-#include "../../headers/algorithms.h"
+#include "../headers/tools.h"
+#include "../headers/exceptions.h"
+#include "../headers/algorithms.h"
+#include "../headers/data_managment.h"
 
 #define BOOST_TEST_DYN_LINK
 

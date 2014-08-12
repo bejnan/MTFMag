@@ -10,5 +10,6 @@
 
 #include "../elements/element.h"
 #include "../elements/simple_element.h"
+#include "../elements/complex_difference_element.h"
 
 #endif /* ELEMENTS_H_ */
