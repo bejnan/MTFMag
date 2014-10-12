@@ -9,9 +9,7 @@ ResultCollector::ResultCollector(shared_ptr<DataCollector> data_collector,
       learn_turns_(0),
       test_turns_(0),
       turns_between_results_(1),
-      turns_counter(0),
-      was_already_run_(false) {
-
+      turns_counter(0) {
 }
 
 ResultCollector::~ResultCollector() {
@@ -27,14 +25,16 @@ void ResultCollector::SetResultFrequency(int turn_count) {
 }
 
 void ResultCollector::Run() {
-  if (!was_already_run_) {
-    was_already_run_ = true;
-    judge_collector_->SetLearnMode(true);
-    RunLearnTurns();
-    judge_collector_->SetLearnMode(false);
-    RunTestTurns();
-  } else
-    return;
+  data_collector_->PrintHeader();
+  judge_collector_->SetLearnMode(true);
+  RunLearnTurns();
+  judge_collector_->SetLearnMode(false);
+  RunTestTurns();
+}
+
+void ResultCollector::handleEvent(Base::Result result)
+{
+	//TODO
 }
 
 void ResultCollector::RunLearnTurns() {
@@ -48,8 +48,7 @@ void ResultCollector::RunTestTurns() {
   for (turns = 1; turns <= test_turns_; ++turns) {
     input_line_ptr = data_collector_->ReadInputLine();
     RunData(input_line_ptr);
-    data_collector_->PrintResults(
-        turns_counter, judge_collector_->GetResult(input_line_ptr->sender_id_));
+    //data_collector_->PrintResults(); TODO
     if (turns % turns_between_results_ == 0)
       PrintOverallResults(turns_counter, input_line_ptr->timestamp_);
     ++turns_counter;
@@ -76,8 +75,9 @@ void ResultCollector::PrintOverallResults(int turn_amount, int timestamp) {
   vector<shared_ptr<Result> >* new_result_vector =
       new vector<shared_ptr<Result> >();
   shared_ptr<vector<shared_ptr<Result> > > result_vector_ptr(new_result_vector);
-  for (vector<string>::reverse_iterator name_iterator = algorithms_name.rbegin();
-      name_iterator != algorithms_name.rend(); name_iterator++) {
+  for (vector<string>::reverse_iterator name_iterator =
+      algorithms_name.rbegin(); name_iterator != algorithms_name.rend();
+      name_iterator++) {
     result_vector_ptr->push_back(
         CreateOverallResult(
             *name_iterator,

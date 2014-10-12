@@ -40,7 +40,7 @@ class Judge {
    * Method to get overall penalty given by Judge.
    * @return Sum of all penalties
    */
-  virtual int OveralPenalty() = 0;
+  virtual unsigned long OveralPenalty() = 0;
 
   /**
    * Returns details of overall penalty.

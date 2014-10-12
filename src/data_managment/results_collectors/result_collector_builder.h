@@ -34,7 +34,7 @@ class ResultCollectorBuilder {
 
  private:
   shared_ptr<DataProvider> GenerateDataProvider(
-      Configuration::DataInput data_input, string file_path);
+      Configuration::DataProvider data_input, string file_path);
   shared_ptr<DataOutput> GenerateDataOutput(
       Configuration::DataOutput data_output, string file_path);
   shared_ptr<DataCollector> GenerateDataCollector(

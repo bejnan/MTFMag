@@ -26,7 +26,7 @@ class Configuration {
    * Every value referees to DataProvider subclass
    * @see DataCollector
    */
-  enum DataInput {
+  enum DataProvider {
     ConsoleDataInput = 1,  //!< ConsoleDataInput - TODO Implementation doesn't exists
     FileDataInput        //!< FileDataInput - Referees to FileDataProvider
   };
@@ -95,15 +95,15 @@ class Configuration {
 
   /**
    * Getter of chosen input method for program
-   * @return DataInput value
+   * @return DataProvider value
    */
-  DataInput GetDataInputMethod() const;
+  DataProvider GetDataInputMethod() const;
 
   /**
    * Setter of input method for program
-   * @param data_input_method DataInput value describing input
+   * @param data_input_method DataProvider value describing input
    */
-  void SetDataInputMethod(DataInput data_input_method);
+  void SetDataInputMethod(DataProvider data_input_method);
 
   /**
    * Getter of output method for program.
@@ -184,14 +184,14 @@ class Configuration {
 
   /**
    * Getter of path to file with input data (if there is any).
-   * Use of file depends if DataInput indicates DataProvider instance that uses file.
+   * Use of file depends if DataProvider indicates DataProvider instance that uses file.
    * @return Path to file with input data
    */
   const string& GetDataInputFile() const;
 
   /**
    * Setter of path to input file (if there is any).
-   * Use of file depends if DataInput indicates DataProvider instance that uses file.
+   * Use of file depends if DataProvider indicates DataProvider instance that uses file.
    * @param data_input_file Path to input file
    */
   void SetDataInputFile(const string& data_input_file);
@@ -219,7 +219,7 @@ class Configuration {
   shared_ptr<Base::Element> element_prototype_;
 
   /** Property with chosen method of providing data for program   */
-  DataInput data_input_method_;
+  DataProvider data_input_method_;
 
   /** Property with chosen method of data output */
   DataOutput data_output_method_;

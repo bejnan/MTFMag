@@ -1,12 +1,4 @@
-/*
- * file_data_output.h
- *
- *  Created on: Apr 7, 2014
- *      Author: kuba
- */
-
-#ifndef FILE_DATA_OUTPUT_H_
-#define FILE_DATA_OUTPUT_H_
+#pragma once
 
 #include "data_output.h"
 
@@ -27,7 +19,7 @@ namespace Base {
  * @see DataOutput
  */
 
-class FileDataOutput : public virtual Base::DataOutput {
+class FileDataOutput : public virtual DataOutput {
  public:
   /**
    * Contructor opens file and stream for output.
@@ -58,5 +50,3 @@ class FileDataOutput : public virtual Base::DataOutput {
 };
 
 } /* namespace Base */
-
-#endif /* FILE_DATA_OUTPUT_H_ */

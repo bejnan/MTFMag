@@ -22,6 +22,7 @@ class CsvFileDataOutput : public Base::FileDataOutput,
   CsvFileDataOutput(string file_path, char separator='|');
   ~CsvFileDataOutput();
   using CsvDataOutput::PrintLine;
+  using CsvDataOutput::PrintResult;
   using CsvDataOutput::PrintColumnTitles;
  protected:
   using FileDataOutput::GetOutputStream;

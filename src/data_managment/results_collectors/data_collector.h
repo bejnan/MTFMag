@@ -1,5 +1,4 @@
-#ifndef DATACOLLECTOR_H_
-#define DATACOLLECTOR_H_
+#pragma once
 
 #include "../data_providers.h"
 #include "../database.h"
@@ -60,6 +59,12 @@ class DataCollector {
    */
   shared_ptr<DataProvider::DataInputLine> ReadInputLine();
 
+
+  /**
+   * Prints names for columns
+   */
+  void PrintHeader();
+
   /**
    * Prints results given by JudgeCollector. Results could be
    * overall or includes only one user. Details depends on
@@ -69,7 +74,7 @@ class DataCollector {
    * @param results Pointer to vector of results
    * @see Result
    */
-  void PrintResults(int turn_amount, shared_ptr<vector<Result> > results);
+  void PrintResult(int turn_amount, Result results);
 
   /**
    * Prints results given by JudgeCollector. Results could be
@@ -82,6 +87,8 @@ class DataCollector {
    */
   void PrintResults(int turn_amount,
                     shared_ptr<vector<shared_ptr<Result> > > results);
+
+  void PrintResults(int turn_amount, Result result);
 
   /**
    * Setter of flag deciding if result with no penalty will be printed.
@@ -97,5 +104,3 @@ class DataCollector {
 };
 
 } /* namespace Tree */
-
-#endif /* DATACOLLECTOR_H_ */

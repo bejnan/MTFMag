@@ -34,16 +34,16 @@ shared_ptr<ResultCollector> ResultCollectorBuilder::GenerateResultCollector() {
 }
 
 shared_ptr<DataProvider> ResultCollectorBuilder::GenerateDataProvider(
-    Configuration::DataInput data_input, string file_path) {
+    Configuration::DataProvider data_input, string file_path) {
 
   DataProvider* new_data_provider;
 
   switch (data_input) {
 
-    case Configuration::DataInput::ConsoleDataInput:
+    case Configuration::DataProvider::ConsoleDataInput:
       break;  //TODO ConsoleDataInput !!
 
-    case Configuration::DataInput::FileDataInput:
+    case Configuration::DataProvider::FileDataInput:
       new_data_provider = new FileDataProvider(file_path);
       break;
 

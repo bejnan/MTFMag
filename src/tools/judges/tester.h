@@ -42,7 +42,7 @@ class Tester : public Judge {
    * Getter of overall penalty
    * @return Sum of all counted penalties
    */
-  virtual int OveralPenalty() {
+  virtual unsigned long OveralPenalty() {
     return penalty_sum_;
   }
 

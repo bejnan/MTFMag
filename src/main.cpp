@@ -26,7 +26,7 @@ int main(int argc, char** argv) {
 
   configuration.SetElementPrototype(SimpleElement::GetPrototype());
 
-  configuration.SetDataInputMethod(Configuration::DataInput::FileDataInput);
+  configuration.SetDataInputMethod(Configuration::DataProvider::FileDataInput);
   configuration.SetDataInputFile(path);
   configuration.SetDataOutputMethod(
       Configuration::DataOutput::CSVConsoleDataOutput);

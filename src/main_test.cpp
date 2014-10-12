@@ -44,7 +44,7 @@ BOOST_AUTO_TEST_CASE(True_test) {
 
   configuration.SetElementPrototype(SimpleElement::GetPrototype());
 
-  configuration.SetDataInputMethod(Configuration::DataInput::FileDataInput);
+  configuration.SetDataInputMethod(Configuration::DataProvider::FileDataInput);
   configuration.SetDataInputFile(path);
   configuration.SetDataOutputMethod(
       Configuration::DataOutput::CSVConsoleDataOutput);

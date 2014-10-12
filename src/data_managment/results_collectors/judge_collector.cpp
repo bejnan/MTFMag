@@ -42,7 +42,7 @@ shared_ptr<vector<Result> > JudgeCollector::GetResult(int user_id) {
   shared_ptr<vector<Result> > results_ptr(new_results);
   for (processor_iterator = processors.begin();
       processor_iterator != processors.end(); processor_iterator++) {
-    results_ptr->push_back(Result(*processor_iterator, last_timestamp));
+    //results_ptr->push_back(Result(*processor_iterator, last_timestamp)); TODO!
   }
   return results_ptr;
 }

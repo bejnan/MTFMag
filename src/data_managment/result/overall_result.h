@@ -17,11 +17,10 @@ namespace Base {
  * There is no information about source of last notification, only
  * about moment in which happened (timestamp)
  */
-class OverallResult : public Result {
- public:
+struct OverallResult: public Result {
 
-  OverallResult(string algorithm_name, int overal_penalty,
-                int timestamp, string comment = "");
+  OverallResult(string algorithm_name, int overal_penalty, int timestamp,
+      string comment = "");
 
   virtual ~OverallResult();
 

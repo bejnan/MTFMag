@@ -1,5 +1,5 @@
-#ifndef CSVDATAOUTPUT_H_
-#define CSVDATAOUTPUT_H_
+
+#pragma once
 
 #include "data_output.h"
 
@@ -29,13 +29,10 @@ class CsvDataOutput : public virtual DataOutput {
    */
   CsvDataOutput(char separator = '|');
 
-  /**
-   * Default destructor
-   */
   virtual ~CsvDataOutput();
 
-  virtual void PrintLine(int turns_count, vector<string> results);
-
+  virtual void PrintLine(string);
+  virtual void PrintResult(Result);
   virtual void PrintColumnTitles();
 
  protected:
@@ -47,4 +44,3 @@ class CsvDataOutput : public virtual DataOutput {
 
 } /* namespace Base */
 
-#endif /* CSVDATAOUTPUT_H_ */

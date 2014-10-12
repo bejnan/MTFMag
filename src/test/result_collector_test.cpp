@@ -20,7 +20,7 @@ void BuildAndRun() {
 
   configuration.SetElementPrototype(SimpleElement::GetPrototype());
 
-  configuration.SetDataInputMethod(Configuration::DataInput::FileDataInput);
+  configuration.SetDataInputMethod(Configuration::DataProvider::FileDataInput);
   configuration.SetDataInputFile("test_input.txt");
   configuration.SetDataOutputMethod(
       Configuration::DataOutput::CSVConsoleDataOutput);
@@ -82,7 +82,7 @@ BOOST_AUTO_TEST_CASE(ResultCollectionCorrectness) {
 
   Base::Result result = judge_collector_ptr->GetResult(10)->front();
 
-  BOOST_CHECK_EQUAL(result.GetOverallPenalty(), 1);
+  BOOST_CHECK_EQUAL(result.GetPenalty(), 1);
 
   Base::Database::GetInstance().ClearDatabase();
 }
@@ -118,7 +118,7 @@ BOOST_AUTO_TEST_CASE(ResultCollectionSetTurnTest) {
 
   Base::Result result = judge_collector_ptr->GetResult(10)->front();
 
-  BOOST_CHECK_EQUAL(result.GetOverallPenalty(), 0);
+  BOOST_CHECK_EQUAL(result.GetPenalty(), 0);
 
   Base::Database::GetInstance().ClearDatabase();
 }

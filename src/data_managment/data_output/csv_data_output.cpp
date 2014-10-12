@@ -6,15 +6,12 @@ CsvDataOutput::CsvDataOutput(char seperator)
     : SEPARATOR(seperator) {
 }
 
-void CsvDataOutput::PrintLine(int turns_count, vector<string> results) {
-  vector<string>::iterator result_iterator;
-  GetOutputStream() << turns_count << SEPARATOR;
+void CsvDataOutput::PrintLine(string line_to_print) {
+  GetOutputStream() << line_to_print << "\n";
+}
 
-  for (result_iterator = results.begin(); result_iterator != results.end();
-      result_iterator++) {
-    GetOutputStream() << (*result_iterator) << SEPARATOR;
-  }
-  GetOutputStream() << "\n";
+void CsvDataOutput::PrintResult(Result result) {
+  GetOutputStream() << result.ToString() << SEPARATOR;
 }
 
 void CsvDataOutput::PrintColumnTitles() {

@@ -5,6 +5,7 @@
 #include "judge_collector.h"
 
 #include "../database.h"
+#include "../../headers/utils.h"
 
 #include <memory>
 #include <vector>
@@ -18,7 +19,7 @@ namespace Base {
  * Main controller and connector. Switches data between DataCollector and JudgeCollector.
  * Run program for given amount of turns and prints results of algorithms work.
  */
-class ResultCollector {
+class ResultCollector : Utils::EventListener{
  public:
 
   /**
@@ -61,6 +62,8 @@ class ResultCollector {
    * parameters have to be set on proper values.
    */
   virtual void Run();
+
+  virtual void handleEvent(Base::Result result);
 
  private:
 
@@ -117,9 +120,6 @@ class ResultCollector {
   /** Counter of turns that was analysed */
   int turns_counter;
 
-  /** Run method could be called only once. If it happened this flag is set to
-   *  true to block next calls */
-  bool was_already_run_;
 };
 
 } /* namespace Base */

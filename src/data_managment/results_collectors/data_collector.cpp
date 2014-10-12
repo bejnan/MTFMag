@@ -33,30 +33,12 @@ shared_ptr<DataProvider::DataInputLine> DataCollector::ReadInputLine() {
   return shared_ptr<DataProvider::DataInputLine>(input_line_data);
 }
 
-void DataCollector::PrintResults(int turn_amount,
-                                 shared_ptr<vector<Result> > results) {
-  vector<Result>::iterator result_iterator;
-  vector<string> results_text;
-  int result_counter = 0;
-  for (result_iterator = results->begin(); result_iterator != results->end();
-      result_iterator++) {
-    results_text.push_back(result_iterator->ToString());
-    result_counter += result_iterator->GetOverallPenalty();
-  }
-  if (print_zero_result || (result_counter > 0)) {
-    data_output_->PrintLine(turn_amount, results_text);
-  }
+void DataCollector::PrintHeader() {
+  data_output_->PrintColumnTitles();
 }
 
-void DataCollector::PrintResults(
-    int turn_amount, shared_ptr<vector<shared_ptr<Result> > > results) {
-  vector<shared_ptr<Result> >::iterator result_iterator;
-  vector<string> results_text;
-  for (result_iterator = results->begin(); result_iterator != results->end();
-      result_iterator++) {
-    results_text.push_back((*result_iterator)->ToString());
-  }
-  data_output_->PrintLine(turn_amount, results_text);
+void DataCollector::PrintResult(int turn_amount, Result result) {
+    data_output_->PrintLine(Utils::ToString(turn_amount) + result.ToString());
 }
 
 void DataCollector::SetPrintZeroResult(bool zero_result_flag) {

@@ -40,11 +40,11 @@ void Configuration::SetElementPrototype(
   element_prototype_ = element_prototype;
 }
 
-Configuration::DataInput Configuration::GetDataInputMethod() const {
+Configuration::DataProvider Configuration::GetDataInputMethod() const {
   return data_input_method_;
 }
 
-void Configuration::SetDataInputMethod(DataInput data_input_method) {
+void Configuration::SetDataInputMethod(DataProvider data_input_method) {
   data_input_method_ = data_input_method;
 }
 

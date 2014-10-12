@@ -1,6 +1,6 @@
 var classBase_1_1Configuration =
 [
-    [ "DataInput", "classBase_1_1Configuration.html#a189a8a4b1d8d611b6e76e2834e7f8a80", [
+    [ "DataProvider", "classBase_1_1Configuration.html#a189a8a4b1d8d611b6e76e2834e7f8a80", [
       [ "ConsoleDataInput", "classBase_1_1Configuration.html#a189a8a4b1d8d611b6e76e2834e7f8a80a3eefeb4d953d25dfbb3c60e148d6cd79", null ],
       [ "FileDataInput", "classBase_1_1Configuration.html#a189a8a4b1d8d611b6e76e2834e7f8a80ae07472bbb3aa17d265a4295e4a34b614", null ]
     ] ],
