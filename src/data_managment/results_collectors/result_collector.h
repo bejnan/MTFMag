@@ -1,5 +1,4 @@
-#ifndef RESULT_COLLECTOR_H_
-#define RESULT_COLLECTOR_H_
+#pragma once
 
 #include "data_collector.h"
 #include "judge_collector.h"
@@ -123,5 +122,3 @@ class ResultCollector : Utils::EventListener{
 };
 
 } /* namespace Base */
-
-#endif /* RESULT_COLLECTOR_H_ */

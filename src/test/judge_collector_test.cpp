@@ -62,7 +62,7 @@ BOOST_AUTO_TEST_CASE(AnalyseNotificationAndGetResult) {
 
   Base::Result result = judge_collector.GetResult(10)->front();
 
-  BOOST_CHECK_EQUAL(result.GetPenalty(), 3);
+  BOOST_CHECK_EQUAL(result.overall_penalty_, 3);
 
   Base::Database::GetInstance().ClearDatabase();
 }
@@ -93,7 +93,7 @@ BOOST_AUTO_TEST_CASE(LearnSetTrue) {
 
   Base::Result result = judge_collector.GetResult(10)->front();
 
-  BOOST_CHECK_EQUAL(result.GetPenalty(), 0);
+  BOOST_CHECK_EQUAL(result.overall_penalty_, 0);
 
   Base::Database::GetInstance().ClearDatabase();
 }
@@ -124,7 +124,7 @@ BOOST_AUTO_TEST_CASE(LearnSetFalse) {
 
   Base::Result result = judge_collector.GetResult(10)->front();
 
-  BOOST_CHECK_EQUAL(result.GetPenalty(), 1);
+  BOOST_CHECK_EQUAL(result.overall_penalty_, 1);
 
   Base::Database::GetInstance().ClearDatabase();
 }

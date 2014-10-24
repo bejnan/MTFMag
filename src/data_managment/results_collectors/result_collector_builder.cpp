@@ -1,6 +1,7 @@
 #include "result_collector_builder.h"
 
 namespace Base {
+
 void ResultCollectorBuilder::SetConfig(Configuration config) {
   actual_config_ = config;
 }
