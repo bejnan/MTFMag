@@ -1,4 +1,9 @@
 #include "result_collector.h"
+#include <memory>
+#include <numeric>
+
+using std::make_shared;
+using std::accumulate;
 
 namespace Base {
 
@@ -70,22 +75,27 @@ void ResultCollector::RunData(
 }
 
 void ResultCollector::PrintOverallResults(int turn_amount, int timestamp) {
-  vector<string> algorithms_name =
-      Database::GetInstance().QueryAlgorithmNames();
-  vector<shared_ptr<Result> >* new_result_vector =
-      new vector<shared_ptr<Result> >();
-  shared_ptr<vector<shared_ptr<Result> > > result_vector_ptr(new_result_vector);
-  for (vector<string>::reverse_iterator name_iterator =
-      algorithms_name.rbegin(); name_iterator != algorithms_name.rend();
-      name_iterator++) {
-    result_vector_ptr->push_back(
-        CreateOverallResult(
-            *name_iterator,
-            GetOverallAlgorithmPenalty(
-                Database::GetInstance().Query(*name_iterator)),
-            timestamp));
+  vector<shared_ptr<Result> > results = extractResultsFromDatabase(timestamp);
+
+  for (auto iterator : results)
+  {
+    data_collector_->PrintResult(turn_amount, *iterator);
   }
-  data_collector_->PrintResults(turn_amount, result_vector_ptr);
+}
+
+vector<shared_ptr<Result>> ResultCollector::extractResultsFromDatabase(int timestamp)
+{
+	auto penaltySum = [](int acc, shared_ptr<Tools::Processor> p) {return (p->GetPenalty() + acc);};
+	vector<shared_ptr<Result> > results;
+
+	for (auto algorithmName : Database::GetInstance().QueryAlgorithmNames())
+	{
+		auto processor_list = Database::GetInstance().Query(algorithmName);
+		int overall_penalty = 0;
+		accumulate(processor_list.begin(),processor_list.end(), overall_penalty, penaltySum);
+		results.push_back(CreateOverallResult(algorithmName,overall_penalty,timestamp));
+	}
+	return results;
 }
 
 int ResultCollector::GetOverallAlgorithmPenalty(
@@ -102,9 +112,7 @@ int ResultCollector::GetOverallAlgorithmPenalty(
 shared_ptr<Result> ResultCollector::CreateOverallResult(string algorithm_name,
                                                         int overall_penalty,
                                                         int timestamp) {
-  Result* new_overall_result = new OverallResult(algorithm_name,
-                                                 overall_penalty, timestamp);
-  return shared_ptr<Result>(new_overall_result);
+  return make_shared<Result>(OverallResult(algorithm_name,overall_penalty, timestamp));
 }
 
 } /* namespace Base */

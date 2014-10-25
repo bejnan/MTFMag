@@ -105,6 +105,8 @@ class ResultCollector : Utils::EventListener{
   shared_ptr<Result> CreateOverallResult(string algorithm_name,
                                          int overall_penalty, int timestamp);
 
+  vector<shared_ptr<Result>> extractResultsFromDatabase(int timestamp);
+
   /** Pointer to source of data */
   const shared_ptr<DataCollector> data_collector_;
   /** Pointer to main mechanism analysing algorithms*/

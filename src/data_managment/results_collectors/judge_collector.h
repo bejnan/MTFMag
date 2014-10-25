@@ -56,14 +56,6 @@ class JudgeCollector {
   virtual void AnalyseNotification(DataProvider::DataInputLine input_line);
 
   /**
-   * Vector of results for given user. Method used after every notification to record
-   * increase of penalty.
-   * @param user_id User for which methods return results
-   * @return Vector of results for all algorithms that support user's choices
-   */
-  virtual shared_ptr<vector<Result> > GetResult(int user_id);
-
-  /**
    * If program is in learn mode (learn flag is set to yes) no penalty is added for algorithm.
    * Default program is NOT in learn mode.
    * @param learn New value of learn flag. "Yes" means learn mode, "No" opposite.

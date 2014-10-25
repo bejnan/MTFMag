@@ -77,20 +77,6 @@ class DataCollector {
   void PrintResult(int turn_amount, Result results);
 
   /**
-   * Prints results given by JudgeCollector. Results could be
-   * overall or includes only one user. Details depends on
-   * Result class implementation. Range of results is not
-   * imposed, but their have to be most recent.
-   * @param turn_amount Number of turns already analysed
-   * @param results Pointer to vector with pointers to results to print
-   * @see Result
-   */
-  void PrintResults(int turn_amount,
-                    shared_ptr<vector<shared_ptr<Result> > > results);
-
-  void PrintResults(int turn_amount, Result result);
-
-  /**
    * Setter of flag deciding if result with no penalty will be printed.
    * @param zero_result_flag - New value of flag
    */
