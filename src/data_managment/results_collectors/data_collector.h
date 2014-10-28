@@ -49,15 +49,14 @@ class DataCollector {
    * representing lines of input
    * @see DataProvider::DataInputLine
    */
-  shared_ptr<vector<DataProvider::DataInputLine> > ReadInputLines(
-      int turn_amount);
+  vector<DataProvider::DataInputLine> ReadInputLines(int turn_amount);
 
   /**
    * Returns pointer to single line of input
    * @return Pointer to DataInputLine's structure representing line of input
    * @see DataProvider::DataInputLine
    */
-  shared_ptr<DataProvider::DataInputLine> ReadInputLine();
+  DataProvider::DataInputLine ReadInputLine();
 
 
   /**

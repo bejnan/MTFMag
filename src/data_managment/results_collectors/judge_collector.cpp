@@ -20,7 +20,7 @@ void JudgeCollector::AddAlgorithm(
 }
 
 void JudgeCollector::AnalyseNotification(
-    DataProvider::DataInputLine input_line) {
+    DataProvider::DataInputLine& input_line) {
   if (!Database::GetInstance().Exists(input_line.sender_id_)) {
     AddProcessorsFromFactories (input_line.sender_id_);
   }

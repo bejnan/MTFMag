@@ -53,7 +53,7 @@ class JudgeCollector {
    * and judge their results.
    * @param input_line Set of informations (interaction type, source id, receiver id, timestamp) read from input
    */
-  virtual void AnalyseNotification(DataProvider::DataInputLine input_line);
+  virtual void AnalyseNotification(DataProvider::DataInputLine& input_line);
 
   /**
    * If program is in learn mode (learn flag is set to yes) no penalty is added for algorithm.

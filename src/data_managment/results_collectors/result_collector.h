@@ -80,13 +80,13 @@ class ResultCollector : Utils::EventListener{
    * Runs part of input stored in vector (every element is single line of input)
    * @param input_lines pointer to vector with input data
    */
-  void RunDataSet(shared_ptr<vector<DataProvider::DataInputLine> > input_lines);
+  void RunDataSet(vector<DataProvider::DataInputLine>& input_lines);
 
   /**
    * Runs single turn with given input line
    * @param input_line pointer to line of input
    */
-  void RunData(shared_ptr<DataProvider::DataInputLine> input_line);
+  void RunData(DataProvider::DataInputLine& input_line);
 
   /**
    * Collects overall results for all users in one algorithms and prints accumulated results for every algorithm.
@@ -100,17 +100,25 @@ class ResultCollector : Utils::EventListener{
    * @param algorithms_processors Processor handling algorithm
    * @return Sum of algorithm penalties
    */
-  int GetOverallAlgorithmPenalty(
-      vector<shared_ptr<Tools::Processor> > algorithms_processors);
-  shared_ptr<Result> CreateOverallResult(string algorithm_name,
-                                         int overall_penalty, int timestamp);
+  int GetOverallAlgorithmPenalty(vector<shared_ptr<Tools::Processor> > algorithms_processors);
 
-  vector<shared_ptr<Result>> extractResultsFromDatabase(int timestamp);
+  vector<Result> extractResultsFromDatabase(int timestamp);
+
+  void flushResults(int turn_amount)
+  {
+	  for (Result r : listOfResults)
+	  {
+		  data_collector_->PrintResult(turn_amount,r);
+	  }
+	  listOfResults.clear();
+  }
 
   /** Pointer to source of data */
   const shared_ptr<DataCollector> data_collector_;
   /** Pointer to main mechanism analysing algorithms*/
   const shared_ptr<JudgeCollector> judge_collector_;
+
+  vector<Result> listOfResults;
 
   /** Number of turns Run method will count no penalty */
   int learn_turns_;
