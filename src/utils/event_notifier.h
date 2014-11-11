@@ -7,10 +7,9 @@ namespace Utils {
 
 class EventNotifier {
 public:
-	EventNotifier();
 	void addListener(std::shared_ptr<EventListener> notifier);
 	void removeListener(std::shared_ptr<EventListener> notifier);
-	virtual ~EventNotifier();
+	void notify(Base::Result result);
 private :
 	std::vector<std::shared_ptr<EventListener> > listeners;
 };

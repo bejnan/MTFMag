@@ -61,6 +61,8 @@ struct Result {
 
   const string comment_;
 
+  bool operator == (const Result& result);
+
 };
 
 } /* namespace Base */

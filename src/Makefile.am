@@ -52,4 +52,5 @@ mtfmagtest_SOURCES = main_test.cpp \
  test/result_collector_test.cpp \
  test/tester_test.cpp \
  test/tree_root_test.cpp \
- test/utils_test.cpp
+ test/utils_test.cpp \
+ test/event_notifier_test.cpp

@@ -104,14 +104,7 @@ class ResultCollector : Utils::EventListener{
 
   vector<Result> extractResultsFromDatabase(int timestamp);
 
-  void flushResults(int turn_amount)
-  {
-	  for (Result r : listOfResults)
-	  {
-		  data_collector_->PrintResult(turn_amount,r);
-	  }
-	  listOfResults.clear();
-  }
+  void flushResults(int turn_amount);
 
   /** Pointer to source of data */
   const shared_ptr<DataCollector> data_collector_;

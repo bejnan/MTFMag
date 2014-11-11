@@ -24,4 +24,14 @@ string Result::ToString() {
   return result;
 }
 
+bool Result::operator == (const Result& result)
+{
+	return
+			algorithm_name_ == result.algorithm_name_ &&
+			source_id_ 		== result.source_id_ 	  &&
+			timestamp_ 		== result.timestamp_ 	  &&
+			overall_penalty_== result.overall_penalty_&&
+			comment_ 		== result.comment_;
+}
+
 } /* namespace Base */

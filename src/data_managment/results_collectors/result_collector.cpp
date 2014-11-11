@@ -46,7 +46,8 @@ void ResultCollector::RunLearnTurns() {
 void ResultCollector::RunTestTurns() {
 	int turns;
 	for (turns = 1; turns <= test_turns_; ++turns) {
-		DataProvider::DataInputLine input_line = data_collector_->ReadInputLine();
+		DataProvider::DataInputLine input_line =
+				data_collector_->ReadInputLine();
 		RunData(input_line);
 		flushResults(turns);
 		if (turns % turns_between_results_ == 0)
@@ -74,17 +75,16 @@ void ResultCollector::PrintOverallResults(int turn_amount, int timestamp) {
 	}
 }
 
-vector<Result> ResultCollector::extractResultsFromDatabase(
-		int timestamp) {
-	auto penaltySum = [](int acc, shared_ptr<Tools::Processor> p) {return (p->GetPenalty() + acc);};
+vector<Result> ResultCollector::extractResultsFromDatabase(int timestamp) {
+	auto penaltySum =
+			[](int acc, shared_ptr<Tools::Processor> p) {return (p->GetPenalty() + acc);};
 	vector<Result> results;
 
 	for (auto algorithmName : Database::GetInstance().QueryAlgorithmNames()) {
 		auto processor_list = Database::GetInstance().Query(algorithmName);
 		int overall_penalty = 0;
-		accumulate(processor_list.begin(), processor_list.end(),
-				overall_penalty, penaltySum);
-		results.push_back(std::move(OverallResult(algorithmName, overall_penalty, timestamp)));
+		accumulate(processor_list.begin(), processor_list.end(),overall_penalty, penaltySum);
+		results.push_back(std::move(OverallResult(algorithmName, overall_penalty,timestamp)));
 	}
 	return results;
 }
@@ -99,6 +99,13 @@ int ResultCollector::GetOverallAlgorithmPenalty(
 		sum += (*processor_iterator)->GetPenalty();
 	}
 	return sum;
+}
+
+void ResultCollector::flushResults(int turn_amount) {
+	for (Result r : listOfResults) {
+		data_collector_->PrintResult(turn_amount, r);
+	}
+	listOfResults.clear();
 }
 
 } /* namespace Base */

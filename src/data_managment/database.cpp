@@ -56,11 +56,8 @@ vector<shared_ptr<Tools::Processor> >& Database::Query() {
 
 vector<string> Database::QueryAlgorithmNames() {
   vector<string> names;
-  map<string, vector<shared_ptr<Tools::Processor> > >::iterator name_iterator;
-  for (name_iterator = name_table_.begin(); name_iterator != name_table_.end();
-      name_iterator++) {
-    names.push_back(name_iterator->first);
-  }
+  auto filler = [&names](pair<const string, vector<shared_ptr<Tools::Processor> > > name) {names.push_back(name.first);};
+  std::for_each(name_table_.begin(), name_table_.end(), filler);
   return names;
 }
 
