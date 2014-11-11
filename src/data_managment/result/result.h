@@ -1,7 +1,5 @@
-#ifndef RESULT_H_
-#define RESULT_H_
+#pragma once
 
-#include "../../headers/tools.h"
 #include "../../utils/utils.h"
 
 #include<vector>
@@ -66,5 +64,3 @@ struct Result {
 };
 
 } /* namespace Base */
-
-#endif /* RESULT_H_ */

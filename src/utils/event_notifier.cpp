@@ -1,4 +1,5 @@
 #include "event_notifier.h"
+#include <algorithm>
 
 namespace Utils {
 
@@ -17,7 +18,7 @@ void EventNotifier::removeListener(std::shared_ptr<EventListener> listener)
 void EventNotifier::notify(Base::Result result)
 {
 	auto notifier = [&result](std::shared_ptr<EventListener> listener) {listener->handleEvent(result);};
-	for_each(listeners.begin(), listeners.end(), notifier);
+	std::for_each(listeners.begin(), listeners.end(), notifier);
 }
 
 } /* namespace Utils */

@@ -49,9 +49,8 @@ void JudgeCollector::AddProcessorsFromFactories(int user_id) {
 
 shared_ptr<Tools::ProcessorFactory> JudgeCollector::GenerateProcessorFactory(
     shared_ptr<Algorithms::Algorithm> algorithm) {
-  Tools::ProcessorFactory* new_processor_factory = new Tools::ProcessorFactory(
+  return std::make_shared<Tools::ProcessorFactory>(
       algorithm, judge_prototype_for_processors_->Clone());
-  return shared_ptr<Tools::ProcessorFactory>(new_processor_factory);
 }
 
 } /* namespace Base */

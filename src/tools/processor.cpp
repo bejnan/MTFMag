@@ -18,22 +18,22 @@ void Processor::Proceed(int user_id, bool learn) {
   if (!learn) {
     int position = (algorithm_)->GetContentPosition(user_id);
     (penalty_judge_)->CountPenalty(position);
+    notify(createResult(user_id));
   }
   algorithm_->NotifyContent(user_id);
 }
 
-int Processor::GetPenalty() {
-  return (penalty_judge_)->OveralPenalty();
-}
-
-shared_ptr< vector<pair<int, int> > > Processor::GetPenaltyDetails() {
-  vector<pair<int, int> > * penalties = new vector<pair<int, int> >(
-      (penalty_judge_)->PenaltyDetails());
-  return shared_ptr<vector<pair<int, int> > >(penalties);
-}
-
 string Processor::AlgorithmName() {
   return algorithm_->GetAlgorithmName();
+}
+
+int Processor::GetPenalty()
+{
+	return penalty_judge_->OveralPenalty();
+}
+
+Base::Result Processor::createResult(int user_id) {
+	return Base::Result(AlgorithmName(),user_id, penalty_judge_->OveralPenalty(), 0 /*TODO*/);
 }
 
 } /* Namespace Tools */

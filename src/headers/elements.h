@@ -5,11 +5,8 @@
  *      Author: Jakub Banaszewski
  */
 
-#ifndef ELEMENTS_H_
-#define ELEMENTS_H_
+#pragma once
 
 #include "../elements/element.h"
 #include "../elements/simple_element.h"
 #include "../elements/complex_difference_element.h"
-
-#endif /* ELEMENTS_H_ */

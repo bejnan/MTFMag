@@ -95,19 +95,18 @@ shared_ptr<Tools::Judge> ResultCollectorBuilder::GenerateJudge(
     Configuration::JudgeSelection selected_judge, int free_position_range,
     int small_penalty_range) {
 
-  Tools::Judge* new_judge;
+  shared_ptr<Tools::Judge> new_judge;
 
   switch (actual_config_.GetJudgeSelection()) {
     case Configuration::JudgeSelection::Tester: {
-      new_judge = new Tools::Tester(free_position_range, small_penalty_range);
+      new_judge = std::make_shared<Tools::Tester>(free_position_range, small_penalty_range);
       break;
     }
     default:
       break;
 
   }
-  shared_ptr<Tools::Judge> judge_ptr(new_judge);
-  return judge_ptr;
+  return new_judge;
 }
 
 shared_ptr<JudgeCollector> ResultCollectorBuilder::GenerateJudgeCollector(

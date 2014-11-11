@@ -1,9 +1,9 @@
-#ifndef PROCESSOR_H_
-#define PROCESSOR_H_
+#pragma once
 
 #include "judges.h"
 #include "../algorithms/algorithm.h"
 #include "../headers/elements.h"
+#include "../headers/utils.h"
 
 #include <memory>
 #include <algorithm>
@@ -20,7 +20,7 @@ namespace Tools {
  * make algorithm useful to process notifications coded in data input.
  * @see Base::DataCollector
  */
-class Processor {
+class Processor : public Utils::EventNotifier {
  public:
   /**
    * Initialize user identifier (source of notifications) and algorithm
@@ -52,24 +52,6 @@ class Processor {
   virtual void Proceed(int user_id, bool learn = false);
 
   /**
-   * Returns penalty "earned" by algorithm. Details depends on penalty
-   * counter, but main idea is that penalty is as big as far is user
-   * on friend list (algorithm ordered list of elements).
-   * @see Tester
-   * @see Algorithms::Algorithm
-   * @return Sum of all penalties given to algorithm
-   */
-  virtual int GetPenalty();
-
-  /**
-   * Returns description of counted penalty. Details depends on
-   * implementation, but idea is to use first element of pair as
-   * time marker and second as measure of penalty change.
-   * @return List of pairs with time marker and penalty change
-   */
-  virtual shared_ptr<vector<pair<int, int> > > GetPenaltyDetails();
-
-  /**
    * Getter of user identifier whose choices Processor "analyze"
    * @return Identifier of user (source of notifications)
    */
@@ -79,6 +61,8 @@ class Processor {
 
   string AlgorithmName();
 
+  int GetPenalty();
+
  private:
   /** Identifier of user */
   const int user_id_;
@@ -87,8 +71,8 @@ class Processor {
   /** Algorithm to test */
   const shared_ptr<Algorithms::Algorithm> algorithm_;
 
+  Base::Result createResult(int user_id);
+
 };
 
 } /* namespace Tools */
-
-#endif /* ABSTRACTPROCESSOR_H_ */

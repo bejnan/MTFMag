@@ -114,13 +114,13 @@ class ResultCollector : Utils::EventListener{
   vector<Result> listOfResults;
 
   /** Number of turns Run method will count no penalty */
-  int learn_turns_;
+  int learn_turns_ = 0;
   /** Number of turns Run method will proceed */
-  int test_turns_;
+  int test_turns_ = 0;
   /** Number of turn distance between printing overall algorithms results */
-  int turns_between_results_;
+  int turns_between_results_ = 1;
   /** Counter of turns that was analysed */
-  int turns_counter;
+  int turns_counter = 0;
 
 };
 

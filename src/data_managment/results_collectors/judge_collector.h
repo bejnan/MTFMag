@@ -1,8 +1,8 @@
-#ifndef JUDGECOLLECTOR_H_
-#define JUDGECOLLECTOR_H_
+#pragma once
 
 #include "../../headers/algorithms.h"
 #include "../../headers/tools.h"
+#include "../../headers/utils.h"
 #include "../results.h"
 #include "../database.h"
 #include "data_collector.h"
@@ -89,9 +89,6 @@ class JudgeCollector {
   int start_timestamp;
   int last_timestamp;
   bool learn_mode;
-
 };
 
 } /* namespace Base */
-
-#endif /* JUDGECOLLECTOR_H_ */

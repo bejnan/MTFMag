@@ -9,8 +9,7 @@ namespace Base {
 
 ResultCollector::ResultCollector(shared_ptr<DataCollector> data_collector,
 		shared_ptr<JudgeCollector> judge_collector) :
-		data_collector_(data_collector), judge_collector_(judge_collector), learn_turns_(
-				0), test_turns_(0), turns_between_results_(1), turns_counter(0) {
+		data_collector_(data_collector), judge_collector_(judge_collector) {
 }
 
 ResultCollector::~ResultCollector() {

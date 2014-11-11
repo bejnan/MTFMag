@@ -1,12 +1,4 @@
-/*
- * ProcessorFactory.h
- *
- *  Created on: Feb 28, 2014
- *      Author: Jakub Banaszewski
- */
-
-#ifndef PROCESSORFACTORY_H_
-#define PROCESSORFACTORY_H_
+#pragma once
 
 #include "processor.h"
 #include "../headers/algorithms.h"
@@ -45,5 +37,3 @@ class ProcessorFactory {
 };
 
 } /* namespace Tools */
-
-#endif /* PROCESSORFACTORY_H_ */

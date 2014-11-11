@@ -1,5 +1,6 @@
-#ifndef PENALTY_COUNTER_H_
-#define PENALTY_COUNTER_H_
+#pragma once
+
+#include "../../data_managment/results.h"
 
 #include <vector>
 #include <memory>
@@ -57,8 +58,7 @@ class Judge {
    * @see ProcessorFactory
    */
   virtual shared_ptr<Judge> Clone() = 0;
+
 };
 
 } /* namespace tools */
-
-#endif /* PENALTY_COUNTER_H_ */
