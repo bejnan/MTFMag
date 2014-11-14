@@ -5,7 +5,7 @@
 #include <iostream>
 #include <string>
 
-#include "../results.h"
+#include "../../results/results.h"
 
 using std::ostream;
 using std::vector;

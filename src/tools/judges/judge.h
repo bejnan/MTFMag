@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../../data_managment/results.h"
+#include "../../results/results.h"
 
 #include <vector>
 #include <memory>

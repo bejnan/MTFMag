@@ -1,6 +1,9 @@
 AM_CXXFLAGS = -std=c++11 -Wall -Wextra
 
 noinst_LIBRARIES = libexception.a
+
+libexception_a_LIBADD = $(top_builddir)/src/utils/libutils.a 
+
 noinst_HEADERS = data_provider_exception.h \
 	database_exception.h \
 	element_already_exists.h \

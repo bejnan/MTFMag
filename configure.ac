@@ -18,13 +18,14 @@ AC_CONFIG_FILES([
  src/controller/Makefile
  src/data_managment/data_output/Makefile
  src/data_managment/data_provider/Makefile
- src/data_managment/result/Makefile
  src/data_managment/Makefile
  src/elements/Makefile
+ src/events/Makefile
  src/exceptions/Makefile
  src/headers/Makefile
  src/tools/judges/Makefile
  src/tools/Makefile
+ src/results/Makefile
  src/utils/Makefile
  src/test/Makefile
  src/Makefile

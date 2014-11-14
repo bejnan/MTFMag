@@ -40,14 +40,12 @@ int main(int argc, char** argv) {
   configuration.AddAlgorithm(Algorithms::MoveToFront::AlgorithmName());
   configuration.AddAlgorithm(Algorithms::MTFMatrix::AlgorithmName());
 
-  Base::ResultCollectorBuilder result_builder;
-
-  result_builder.SetConfig(configuration);
-
+/*
   shared_ptr<Base::ResultCollector> result_collector = result_builder.GenerateResultCollector();
   result_collector->SetTurns(learn_runs,test_runs);
   result_collector->SetResultFrequency(step_size);
 
   result_collector->Run();
 
+*/
 }

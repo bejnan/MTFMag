@@ -3,7 +3,7 @@
 #include "../../headers/algorithms.h"
 #include "../../headers/tools.h"
 #include "../../headers/utils.h"
-#include "../results.h"
+#include "../../results/results.h"
 #include "../database.h"
 #include "data_collector.h"
 

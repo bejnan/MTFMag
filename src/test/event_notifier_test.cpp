@@ -1,7 +1,7 @@
 #define BOOST_TEST_DYN_LINK
 
 #include <boost/test/unit_test.hpp>
-#include "../utils/event_notifier.h"
+#include "../events/event_notifier.h"
 #include <stdexcept>
 
 class EventListenerStub : public Utils::EventListener {

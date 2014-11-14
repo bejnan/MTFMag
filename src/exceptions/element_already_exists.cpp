@@ -6,6 +6,7 @@
  */
 
 #include "element_already_exists.h"
+#include "../utils/utils.h"
 
 namespace Exception {
 

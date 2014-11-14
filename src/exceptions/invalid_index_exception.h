@@ -1,5 +1,4 @@
-#ifndef INVALIDINDEXEXCEPTION_H_
-#define INVALIDINDEXEXCEPTION_H_
+#pragma once
 
 #include "database_exception.h"
 
@@ -39,4 +38,3 @@ class InvalidIndexException : public DatabaseException{
 
 } /* namespace Exception */
 
-#endif /* INVALIDINDEXEXCEPTION_H_ */

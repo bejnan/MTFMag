@@ -4,6 +4,7 @@
 #include "../algorithms/algorithm.h"
 #include "../headers/elements.h"
 #include "../headers/utils.h"
+#include "../events/event_notifier.h"
 
 #include <memory>
 #include <algorithm>
